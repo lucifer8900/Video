@@ -5,3 +5,4 @@ This repository contains design notes for a Steam-targeted AI-generated cinemati
 Current archive:
 
 - `docs/superpowers/specs/2026-07-09-ai-video-interactive-game-conversation-archive.md`
+- `docs/superpowers/specs/2026-07-09-ai-video-interactive-game-full-session.md`
