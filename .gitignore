@@ -1,1 +1,38 @@
 .superpowers/
+# Paid cloud generation tooling remains local until explicitly authorized.
+/tools/gemini/
+
+# Internal source-to-game mappings must not enter the public repository.
+/content/originalization/name-change-crosswalk.csv
+/content/originalization/source-to-game-name-map.json
+/tools/migration/apply-originalization.ps1
+
+# Unity generated folders
+unity/RedMistVerticalSlice/[Ll]ibrary/
+unity/RedMistVerticalSlice/[Tt]emp/
+unity/RedMistVerticalSlice/[Oo]bj/
+unity/RedMistVerticalSlice/[Ll]ogs/
+unity/RedMistVerticalSlice/[Uu]ser[Ss]ettings/
+unity/RedMistVerticalSlice/[Mm]emoryCaptures/
+unity/RedMistVerticalSlice/Builds/
+unity/RedMistVerticalSlice/*.csproj
+unity/RedMistVerticalSlice/*.sln
+unity/RedMistVerticalSlice/*.suo
+unity/RedMistVerticalSlice/*.user
+unity/RedMistVerticalSlice/.vs/
+unity/RedMistVerticalSlice/*.log
+unity/RedMistVerticalSlice/test-results*.xml
+
+# Generated video and duplicate image sources stay outside Git.
+/unity/RedMistVerticalSlice/Assets/StreamingAssets/Media/*.mp4
+/unity/RedMistVerticalSlice/Assets/StreamingAssets/Media/*.mp4.meta
+/unity/RedMistVerticalSlice/GeneratedSource/
+
+# .NET generated folders
+**/[Bb]in/
+**/[Oo]bj/
+**/[Tt]est[Rr]esults/
+
+# Root-level Unity build and test diagnostics
+/unity-*.log
+/unity-*-test-results*.xml

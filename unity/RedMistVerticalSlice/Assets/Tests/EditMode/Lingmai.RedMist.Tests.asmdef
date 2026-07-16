@@ -1,0 +1,23 @@
+{
+  "name": "Lingmai.RedMist.Tests",
+  "rootNamespace": "Lingmai.RedMist.Tests",
+  "references": [
+    "Lingmai.RedMist.Runtime"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

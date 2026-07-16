@@ -1,0 +1,4 @@
+# Unity serializes empty YAML scalar values with trailing spaces.
+*.meta -whitespace
+*.asset -whitespace
+*.unity -whitespace
