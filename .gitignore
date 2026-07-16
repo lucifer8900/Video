@@ -28,6 +28,10 @@ unity/RedMistVerticalSlice/test-results*.xml
 /unity/RedMistVerticalSlice/Assets/StreamingAssets/Media/*.mp4.meta
 /unity/RedMistVerticalSlice/GeneratedSource/
 
+# Rejected concept images remain local review artifacts.
+/unity/RedMistVerticalSlice/Docs/RejectedConcepts/*.png
+/unity/RedMistVerticalSlice/Docs/RejectedConcepts/*.png.meta
+
 # .NET generated folders
 **/[Bb]in/
 **/[Oo]bj/
