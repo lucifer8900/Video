@@ -12,17 +12,35 @@ public sealed class AssociationEntityRegistry
     private readonly HashSet<string> _chapterIds;
     private readonly HashSet<string> _clueIds;
     private readonly HashSet<string> _branchIds;
+    private readonly HashSet<string> _entityIds;
 
     public AssociationEntityRegistry(
         IEnumerable<string> factIds,
         IEnumerable<string> chapterIds,
         IEnumerable<string> clueIds,
         IEnumerable<string> branchIds)
+        : this(factIds, chapterIds, clueIds, branchIds, Array.Empty<string>())
+    {
+    }
+
+    public AssociationEntityRegistry(
+        IEnumerable<string> factIds,
+        IEnumerable<string> chapterIds,
+        IEnumerable<string> clueIds,
+        IEnumerable<string> branchIds,
+        IEnumerable<string> entityIds)
     {
         _factIds = CreateBucket(factIds, nameof(factIds));
         _chapterIds = CreateBucket(chapterIds, nameof(chapterIds));
         _clueIds = CreateBucket(clueIds, nameof(clueIds));
         _branchIds = CreateBucket(branchIds, nameof(branchIds));
+        HashSet<string> additionalEntityIds = CreateBucket(entityIds, nameof(entityIds));
+        _entityIds = CreateUnifiedEntityBucket(
+            _factIds,
+            _chapterIds,
+            _clueIds,
+            _branchIds,
+            additionalEntityIds);
     }
 
     public bool ContainsFact(string value) => _factIds.Contains(value);
@@ -32,6 +50,8 @@ public sealed class AssociationEntityRegistry
     public bool ContainsClue(string value) => _clueIds.Contains(value);
 
     public bool ContainsBranch(string value) => _branchIds.Contains(value);
+
+    public bool ContainsEntity(string value) => _entityIds.Contains(value);
 
     private static HashSet<string> CreateBucket(IEnumerable<string> values, string parameterName)
     {
@@ -52,6 +72,36 @@ public sealed class AssociationEntityRegistry
                 throw new ArgumentException(
                     "Registry entries must not contain case-fold collisions.",
                     parameterName);
+            }
+        }
+
+        return result;
+    }
+
+    private static HashSet<string> CreateUnifiedEntityBucket(
+        params IReadOnlySet<string>[] buckets)
+    {
+        var result = new HashSet<string>(StringComparer.Ordinal);
+        var canonicalByCasing = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        foreach (IReadOnlySet<string> bucket in buckets)
+        {
+            foreach (string value in bucket)
+            {
+                if (result.Contains(value))
+                {
+                    continue;
+                }
+
+                if (canonicalByCasing.TryGetValue(value, out string? canonical) &&
+                    !string.Equals(canonical, value, StringComparison.Ordinal))
+                {
+                    throw new ArgumentException(
+                        "Registry entries must not contain cross-bucket case-fold collisions.",
+                        "entityIds");
+                }
+
+                canonicalByCasing.Add(value, value);
+                result.Add(value);
             }
         }
 

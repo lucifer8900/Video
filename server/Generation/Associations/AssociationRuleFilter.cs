@@ -16,7 +16,13 @@ public sealed class AssociationRuleFilter
 
     public IReadOnlyList<AssociationRuleCandidate> Filter(
         AssociationDecisionRequest request,
-        IReadOnlyList<ApprovedAssociationTemplate> templates)
+        IReadOnlyList<ApprovedAssociationTemplate> templates) =>
+        Filter(request, templates, rejectionObserver: null);
+
+    internal IReadOnlyList<AssociationRuleCandidate> Filter(
+        AssociationDecisionRequest request,
+        IReadOnlyList<ApprovedAssociationTemplate> templates,
+        Action<AssociationConsistencyRejectionReason>? rejectionObserver)
     {
         ArgumentNullException.ThrowIfNull(request);
         ArgumentNullException.ThrowIfNull(templates);
@@ -32,9 +38,17 @@ public sealed class AssociationRuleFilter
                      .OrderBy(item => item.Template.TemplateId, StringComparer.Ordinal)
                      .ThenBy(item => item.SourcePath, StringComparer.Ordinal))
         {
-            if (TryCreateCandidate(request, approved, out AssociationRuleCandidate? candidate))
+            if (TryCreateCandidate(
+                    request,
+                    approved,
+                    out AssociationRuleCandidate? candidate,
+                    out AssociationConsistencyRejectionReason? rejectionReason))
             {
                 candidates.Add(candidate);
+            }
+            else if (rejectionReason.HasValue)
+            {
+                rejectionObserver?.Invoke(rejectionReason.Value);
             }
         }
 
@@ -56,9 +70,11 @@ public sealed class AssociationRuleFilter
     private static bool TryCreateCandidate(
         AssociationDecisionRequest request,
         ApprovedAssociationTemplate approved,
-        [NotNullWhen(true)] out AssociationRuleCandidate? candidate)
+        [NotNullWhen(true)] out AssociationRuleCandidate? candidate,
+        out AssociationConsistencyRejectionReason? rejectionReason)
     {
         candidate = null;
+        rejectionReason = null;
         AssociationTemplateContract template = approved.Template;
         if (!string.Equals(template.ApprovalStatus, "approved", StringComparison.Ordinal) ||
             template.Preconditions is null ||
@@ -69,12 +85,43 @@ public sealed class AssociationRuleFilter
             template.ParameterSlots is null ||
             template.InjectionPoints is null ||
             !template.Preconditions.ChapterWindow.Contains(request.Chapter, StringComparer.Ordinal) ||
-            !AllowsMediaPolicy(template.MediaPolicy, request.EffectiveRuntimePolicy) ||
-            !AllowsTriggerHistory(template, request) ||
-            !TryResolveInjectionPoint(template.InjectionPoints, request.Route.AllowedInjectionPoints, out string? injectionPoint) ||
-            !TryMatchAllLedgerRequirements(template.Preconditions.RequiresLedger, request, out NarrativeLedgerEntry? primaryEvidence) ||
-            !TryResolveParameters(template.ParameterSlots, request.Route, primaryEvidence, out IReadOnlyDictionary<string, string>? parameters) ||
-            HasForbiddenFact(template.Preconditions.ForbidsFacts, request.ActiveFactIds, parameters))
+            !AllowsMediaPolicy(template.MediaPolicy, request.EffectiveRuntimePolicy))
+        {
+            return false;
+        }
+
+        if (!TryResolveInjectionPoint(
+                template.InjectionPoints,
+                request.Route.AllowedInjectionPoints,
+                out string? injectionPoint) ||
+            !TryMatchAllLedgerRequirements(
+                template.Preconditions.RequiresLedger,
+                request,
+                out NarrativeLedgerEntry? primaryEvidence) ||
+            !TryResolveParameters(
+                template.ParameterSlots,
+                request.Route,
+                primaryEvidence,
+                out IReadOnlyDictionary<string, string>? parameters))
+        {
+            return false;
+        }
+
+        if (HasForbiddenFact(
+                template.Preconditions.ForbidsFacts,
+                request.ActiveFactIds,
+                parameters,
+                out bool matchedActiveFact))
+        {
+            if (matchedActiveFact)
+            {
+                rejectionReason = AssociationConsistencyRejectionReason.ForbiddenFact;
+            }
+
+            return false;
+        }
+
+        if (!AllowsTriggerHistory(template, request, out rejectionReason))
         {
             return false;
         }
@@ -105,8 +152,10 @@ public sealed class AssociationRuleFilter
 
     private static bool AllowsTriggerHistory(
         AssociationTemplateContract template,
-        AssociationDecisionRequest request)
+        AssociationDecisionRequest request,
+        out AssociationConsistencyRejectionReason? rejectionReason)
     {
+        rejectionReason = null;
         if (template.CooldownWorldClock < 0 || template.MaxTriggersPerPlayer <= 0)
         {
             return false;
@@ -140,11 +189,18 @@ public sealed class AssociationRuleFilter
             long elapsed = request.WorldClock - history.LastTriggeredWorldClock;
             if (elapsed < template.CooldownWorldClock)
             {
+                rejectionReason = AssociationConsistencyRejectionReason.CooldownActive;
                 return false;
             }
         }
 
-        return totalTriggers < template.MaxTriggersPerPlayer;
+        if (totalTriggers >= template.MaxTriggersPerPlayer)
+        {
+            rejectionReason = AssociationConsistencyRejectionReason.TriggerLimitReached;
+            return false;
+        }
+
+        return true;
     }
 
     private static bool TryResolveInjectionPoint(
@@ -278,14 +334,21 @@ public sealed class AssociationRuleFilter
     private static bool HasForbiddenFact(
         IReadOnlyList<string> forbiddenPatterns,
         IReadOnlyList<string> activeFacts,
-        IReadOnlyDictionary<string, string> parameters)
+        IReadOnlyDictionary<string, string> parameters,
+        out bool matchedActiveFact)
     {
+        matchedActiveFact = false;
         var facts = new HashSet<string>(activeFacts, StringComparer.Ordinal);
         foreach (string pattern in forbiddenPatterns)
         {
-            if (!TryResolvePattern(pattern, parameters, out string? forbiddenFact) ||
-                facts.Contains(forbiddenFact))
+            if (!TryResolvePattern(pattern, parameters, out string? forbiddenFact))
             {
+                return true;
+            }
+
+            if (facts.Contains(forbiddenFact))
+            {
+                matchedActiveFact = true;
                 return true;
             }
         }

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/association-consistency-review.schema.json",
+  "title": "AssociationConsistencyReview",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "decision",
+    "reasonCode"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "reject"
+      ]
+    },
+    "reasonCode": {
+      "type": "string",
+      "enum": [
+        "none",
+        "fact_conflict",
+        "character_conflict",
+        "chapter_tone_conflict"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "pass"
+          }
+        },
+        "required": [
+          "decision"
+        ]
+      },
+      "then": {
+        "properties": {
+          "reasonCode": {
+            "const": "none"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "reject"
+          }
+        },
+        "required": [
+          "decision"
+        ]
+      },
+      "then": {
+        "properties": {
+          "reasonCode": {
+            "enum": [
+              "fact_conflict",
+              "character_conflict",
+              "chapter_tone_conflict"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -109,19 +109,54 @@ public sealed class AssociationDecisionServiceTests
         Assert.Equal(1, ranker.CallCount);
     }
 
-    private static AssociationDecisionService CreateService(IAssociationRanker ranker) =>
-        new(
+    private static AssociationDecisionService CreateService(IAssociationRanker ranker)
+    {
+        ApprovedTextVariantRegistry variants = ApprovedTextVariantRegistry.CreateForTests(new[]
+        {
+            new ApprovedTextVariantFixture(
+                "assoc.enemy.echo.v1",
+                "var.mention.controlled",
+                StoryThreadInjectionPoints.NpcMention,
+                "[approved-test-variant]",
+                new[] { "cue.approved.ambient" }),
+        });
+        var guard = new AssociationConsistencyGuard(
+            new AssociationEntityRegistry(
+                Array.Empty<string>(),
+                new[] { "chapter.red_mist" },
+                new[] { "clue.known" },
+                Array.Empty<string>(),
+                new[]
+                {
+                    "assoc.enemy.echo.v1",
+                    "char.player",
+                    "npc.known",
+                    "loc.next",
+                    "node.next",
+                    "node.previous",
+                    "cue.approved.ambient",
+                    "assoc.fallback.default.v1",
+                    "cue.approved.fallback",
+                }),
+            variants,
+            new FixedAssociationWorldStateProvider(new AssociationWorldSnapshot(
+                "snapshot.service-tests.1",
+                new[]
+                {
+                    new AssociationNpcWorldState(
+                        "npc.known",
+                        AssociationNpcLifeState.Alive,
+                        "loc.next"),
+                },
+                new[] { "loc.next" })),
+            new MockAssociationConsistencyReviewer(Array.Empty<string?>()),
+            AssociationConsistencyReviewOptions.Disabled,
+            new AssociationRejectionMetrics(),
+            new InMemoryAssociationTriggerGate());
+        return new AssociationDecisionService(
             new AssociationRuleFilter(),
             ranker,
-            ApprovedTextVariantRegistry.CreateForTests(new[]
-            {
-                new ApprovedTextVariantFixture(
-                    "assoc.enemy.echo.v1",
-                    "var.mention.controlled",
-                    StoryThreadInjectionPoints.NpcMention,
-                    "[approved-test-variant]",
-                    new[] { "cue.approved.ambient" }),
-            }),
+            variants,
             ApprovedFallbackStoryThreadCatalog.CreateForTests(new[]
             {
                 new ApprovedFallbackStoryThreadFixture(
@@ -131,8 +166,10 @@ public sealed class AssociationDecisionServiceTests
                     Array.Empty<StoryThreadEffectContract>(),
                     new[] { "cue.approved.fallback" }),
             }),
+            guard,
             new SequenceAssociationDecisionIdFactory("thr.test", "genjob.test"),
             new FixedTimeProvider(FixedNow));
+    }
 
     private static AssociationDecisionRequest Request() => new(
         PlayerId: "p.known",

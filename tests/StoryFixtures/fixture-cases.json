@@ -828,6 +828,50 @@
       "expectedPath": "/allowedEffects/0/field"
     },
     {
+      "name": "valid association consistency pass review",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "valid/association-consistency-review.pass.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid association consistency reject review",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "valid/association-consistency-review.reject.json",
+      "expectedValid": true
+    },
+    {
+      "name": "association consistency pass requires none reason",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "invalid/association-consistency-review.pass-with-reject-reason.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/reasonCode"
+    },
+    {
+      "name": "association consistency reject forbids none reason",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "invalid/association-consistency-review.reject-with-none.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/reasonCode"
+    },
+    {
+      "name": "association consistency review rejects unknown reason",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "invalid/association-consistency-review.unknown-reason.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/reasonCode"
+    },
+    {
+      "name": "association consistency review rejects additional properties",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "invalid/association-consistency-review.additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/detail"
+    },
+    {
       "name": "valid technical StoryThread instance",
       "schemaFile": "story-thread.schema.json",
       "instanceFile": "valid/story-thread.json",

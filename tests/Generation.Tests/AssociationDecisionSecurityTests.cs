@@ -784,7 +784,7 @@ public sealed class AssociationDecisionSecurityTests
     }
 
     [Fact]
-    public void ProductionAssemblyShipsOnlyMockAssociationRankerAndNoPublicContentFactory()
+    public void ProductionAssemblyShipsOnlyMockAssociationProvidersAndNoPublicContentFactory()
     {
         Type interfaceType = typeof(IAssociationRanker);
         Type[] implementations = typeof(AssociationDecisionService).Assembly.GetTypes()
@@ -795,10 +795,19 @@ public sealed class AssociationDecisionSecurityTests
             .ToArray();
 
         Assert.Equal(new[] { typeof(MockAssociationRanker) }, implementations);
+        Type reviewInterface = typeof(IAssociationConsistencyReviewer);
+        Type[] reviewImplementations = typeof(AssociationDecisionService).Assembly.GetTypes()
+            .Where(type =>
+                !type.IsAbstract &&
+                !type.IsInterface &&
+                reviewInterface.IsAssignableFrom(type))
+            .ToArray();
+        Assert.Equal(new[] { typeof(MockAssociationConsistencyReviewer) }, reviewImplementations);
         Assert.Empty(typeof(ApprovedTextVariantRegistry).GetConstructors(BindingFlags.Public | BindingFlags.Instance));
         Assert.Empty(typeof(ApprovedFallbackStoryThreadCatalog).GetConstructors(BindingFlags.Public | BindingFlags.Instance));
         Assert.Empty(typeof(AssociationRuntimePolicy).GetConstructors(BindingFlags.Public | BindingFlags.Instance));
         Assert.False(AssociationRuntimePolicy.ReuseOnly.AllowRuntimeGeneration);
+        Assert.False(AssociationConsistencyReviewOptions.Disabled.EnableModelReview);
     }
 
     private static AssociationDecisionService Service(
@@ -806,14 +815,63 @@ public sealed class AssociationDecisionSecurityTests
         ApprovedTextVariantRegistry variants,
         ApprovedFallbackStoryThreadCatalog? fallbacks = null,
         TimeProvider? timeProvider = null,
-        IAssociationDecisionIdFactory? idFactory = null) =>
-        new(
+        IAssociationDecisionIdFactory? idFactory = null)
+    {
+        ApprovedFallbackStoryThreadCatalog actualFallbacks =
+            fallbacks ?? Fallbacks(
+                Array.Empty<StoryThreadEffectContract>(),
+                new[] { "cue.approved.fallback" });
+        string[] registeredEntities = variants.Entries
+            .SelectMany(variant => variant.MediaRefs.Prepend(variant.TemplateId))
+            .Concat(actualFallbacks.Entries.SelectMany(fallback =>
+                fallback.MediaRefs.Prepend(fallback.ThreadId)))
+            .Concat(new[]
+            {
+                "assoc.a.v1",
+                "assoc.b.v1",
+                "char.player",
+                "npc.known",
+                "loc.next",
+                "node.next",
+                "node.previous",
+                "cue.approved.fallback",
+                "cue.original",
+                "cue.mutated",
+                "cue.injected",
+            })
+            .Distinct(StringComparer.Ordinal)
+            .ToArray();
+        var guard = new AssociationConsistencyGuard(
+            new AssociationEntityRegistry(
+                new[] { "fact.same" },
+                new[] { "chapter.red_mist" },
+                new[] { "clue.known", "clue.original", "clue.wrong", "clue.injected" },
+                new[] { "branch.wrong", "branch.mutated" },
+                registeredEntities),
+            variants,
+            new FixedAssociationWorldStateProvider(new AssociationWorldSnapshot(
+                "snapshot.security-tests.1",
+                new[]
+                {
+                    new AssociationNpcWorldState(
+                        "npc.known",
+                        AssociationNpcLifeState.Alive,
+                        "loc.next"),
+                },
+                new[] { "loc.next" })),
+            new MockAssociationConsistencyReviewer(Array.Empty<string?>()),
+            AssociationConsistencyReviewOptions.Disabled,
+            new AssociationRejectionMetrics(),
+            new InMemoryAssociationTriggerGate());
+        return new AssociationDecisionService(
             new AssociationRuleFilter(),
             ranker,
             variants,
-            fallbacks ?? Fallbacks(Array.Empty<StoryThreadEffectContract>(), new[] { "cue.approved.fallback" }),
+            actualFallbacks,
+            guard,
             idFactory ?? new SequenceAssociationDecisionIdFactory("thr.security", "genjob.security"),
             timeProvider ?? TimeProvider.System);
+    }
 
     private static AssociationDecisionRequest Request() => new(
         "p.known",

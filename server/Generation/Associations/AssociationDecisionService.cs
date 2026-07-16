@@ -48,6 +48,7 @@ public sealed class AssociationDecisionService
     private readonly IAssociationRanker _ranker;
     private readonly ApprovedTextVariantRegistry _variants;
     private readonly ApprovedFallbackStoryThreadCatalog _fallbacks;
+    private readonly AssociationConsistencyGuard _consistencyGuard;
     private readonly IAssociationDecisionIdFactory _idFactory;
     private readonly TimeProvider _timeProvider;
 
@@ -56,6 +57,7 @@ public sealed class AssociationDecisionService
         IAssociationRanker ranker,
         ApprovedTextVariantRegistry variants,
         ApprovedFallbackStoryThreadCatalog fallbacks,
+        AssociationConsistencyGuard consistencyGuard,
         IAssociationDecisionIdFactory idFactory,
         TimeProvider timeProvider)
     {
@@ -63,6 +65,7 @@ public sealed class AssociationDecisionService
         _ranker = ranker ?? throw new ArgumentNullException(nameof(ranker));
         _variants = variants ?? throw new ArgumentNullException(nameof(variants));
         _fallbacks = fallbacks ?? throw new ArgumentNullException(nameof(fallbacks));
+        _consistencyGuard = consistencyGuard ?? throw new ArgumentNullException(nameof(consistencyGuard));
         _idFactory = idFactory ?? throw new ArgumentNullException(nameof(idFactory));
         _timeProvider = timeProvider ?? throw new ArgumentNullException(nameof(timeProvider));
     }
@@ -92,7 +95,10 @@ public sealed class AssociationDecisionService
 
         cancellationToken.ThrowIfCancellationRequested();
 
-        IReadOnlyList<AssociationRuleCandidate> filtered = _ruleFilter.Filter(request, templates);
+        IReadOnlyList<AssociationRuleCandidate> filtered = _ruleFilter.Filter(
+            request,
+            templates,
+            _consistencyGuard.RecordRejection);
         CandidateBinding[] bindings = filtered
             .OrderBy(item => item.Template.Template.TemplateId, StringComparer.Ordinal)
             .Select(CreateBinding)
@@ -102,6 +108,13 @@ public sealed class AssociationDecisionService
             .Select((item, index) => item with { CandidateToken = $"cand.{index:D4}" })
             .ToArray();
         if (bindings.Length == 0)
+        {
+            return CreateFallback(request, cancellationToken);
+        }
+
+        if (!_consistencyGuard.TryCaptureWorldSnapshot(
+                request,
+                out AssociationWorldSnapshot worldSnapshot))
         {
             return CreateFallback(request, cancellationToken);
         }
@@ -130,18 +143,123 @@ public sealed class AssociationDecisionService
             }
 
             candidateFallbackThreadId ??= binding.Candidate.Template.Template.FallbackThreadId;
-            if (!TryMaterialize(
+            if (!TryMaterializeDraft(
                     request,
                     binding,
                     proposal,
                     cancellationToken,
-                    out StoryThreadContract? thread))
+                    out AssociationThreadDraft? draft,
+                    out AssociationConsistencyRejectionReason? materializationRejection))
+            {
+                if (materializationRejection.HasValue)
+                {
+                    _consistencyGuard.RecordRejection(materializationRejection.Value);
+                }
+
+                continue;
+            }
+
+            var consistencyInput = new AssociationConsistencyInput(
+                request,
+                binding.Candidate,
+                draft!,
+                worldSnapshot);
+            AssociationConsistencyResult deterministic =
+                _consistencyGuard.Evaluate(consistencyInput);
+            if (!deterministic.Passed)
             {
                 continue;
             }
 
+            AssociationConsistencyResult review = await _consistencyGuard.ReviewAsync(
+                consistencyInput,
+                startedTimestamp,
+                HardTimeout,
+                _timeProvider,
+                cancellationToken).ConfigureAwait(false);
+            if (!review.Passed)
+            {
+                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+            }
+
+            if (!_consistencyGuard.TryCaptureWorldSnapshot(
+                    request,
+                    out AssociationWorldSnapshot signingSnapshot))
+            {
+                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+            }
+
+            AssociationConsistencyInput signingInput =
+                consistencyInput with { World = signingSnapshot };
+            AssociationConsistencyResult signingCheck =
+                _consistencyGuard.Evaluate(signingInput);
+            if (!signingCheck.Passed)
+            {
+                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+            }
+
+            AssociationConsistencyResult reviewContext =
+                _consistencyGuard.ValidateReviewContext(
+                    consistencyInput,
+                    signingInput);
+            if (!reviewContext.Passed)
+            {
+                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+            }
+
             cancellationToken.ThrowIfCancellationRequested();
-            return thread!;
+            if (SafeElapsed(startedTimestamp) >= HardTimeout)
+            {
+                _consistencyGuard.RecordRejection(
+                    AssociationConsistencyRejectionReason.ModelTimeout);
+                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+            }
+
+            AssociationConsistencyResult triggerReservation =
+                _consistencyGuard.TryReserveTrigger(
+                    signingInput,
+                    out AssociationTriggerReservation? reservation);
+            if (!triggerReservation.Passed)
+            {
+                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+            }
+
+            AssociationTriggerReservation activeReservation = reservation!;
+            using (activeReservation)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+                if (SafeElapsed(startedTimestamp) >= HardTimeout)
+                {
+                    _consistencyGuard.RecordRejection(
+                        AssociationConsistencyRejectionReason.ModelTimeout);
+                    return CreateFallback(
+                        request,
+                        cancellationToken,
+                        candidateFallbackThreadId);
+                }
+
+                StoryThreadContract thread = CreateThread(
+                    draft!.TemplateId,
+                    request.PlayerId,
+                    draft.ResolvedParameters,
+                    new[] { draft.Injection },
+                    draft.MediaRefs,
+                    fallbackUsed: false,
+                    cancellationToken);
+                cancellationToken.ThrowIfCancellationRequested();
+                if (SafeElapsed(startedTimestamp) >= HardTimeout)
+                {
+                    _consistencyGuard.RecordRejection(
+                        AssociationConsistencyRejectionReason.ModelTimeout);
+                    return CreateFallback(
+                        request,
+                        cancellationToken,
+                        candidateFallbackThreadId);
+                }
+
+                activeReservation.Commit();
+                return thread;
+            }
         }
 
         return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
@@ -265,22 +383,33 @@ public sealed class AssociationDecisionService
         }
     }
 
-    private bool TryMaterialize(
+    private bool TryMaterializeDraft(
         AssociationDecisionRequest request,
         CandidateBinding binding,
         AssociationRankerProposal proposal,
         CancellationToken cancellationToken,
-        out StoryThreadContract? thread)
+        out AssociationThreadDraft? draft,
+        out AssociationConsistencyRejectionReason? rejectionReason)
     {
-        thread = null;
+        draft = null;
+        rejectionReason = null;
         ApprovedTextVariant? variant = binding.Variants.SingleOrDefault(item =>
             string.Equals(item.VariantToken, proposal.VariantToken, StringComparison.Ordinal));
         if (variant is null ||
-            !string.Equals(variant.InjectionPoint, binding.Candidate.InjectionPoint, StringComparison.Ordinal) ||
-            !TryMaterializeEffects(
+            !string.Equals(
+                variant.InjectionPoint,
+                binding.Candidate.InjectionPoint,
+                StringComparison.Ordinal))
+        {
+            rejectionReason = AssociationConsistencyRejectionReason.UnapprovedTextVariant;
+            return false;
+        }
+
+        if (!TryMaterializeEffects(
                 binding.Candidate,
                 proposal.EffectSelections,
-                out IReadOnlyList<StoryThreadEffectContract> effects))
+                out IReadOnlyList<StoryThreadEffectContract> effects,
+                out rejectionReason))
         {
             return false;
         }
@@ -298,44 +427,55 @@ public sealed class AssociationDecisionService
                 injections,
                 variant.MediaRefs))
         {
+            rejectionReason = AssociationConsistencyRejectionReason.UnapprovedTextVariant;
             return false;
         }
 
         cancellationToken.ThrowIfCancellationRequested();
-        thread = CreateThread(
+        draft = new AssociationThreadDraft(
             binding.Candidate.Template.Template.TemplateId,
-            request.PlayerId,
+            variant.VariantToken,
             binding.Candidate.ResolvedParameters,
-            injections,
-            variant.MediaRefs,
-            fallbackUsed: false,
-            cancellationToken);
+            injection,
+            variant.MediaRefs);
         return true;
     }
 
     private static bool TryMaterializeEffects(
         AssociationRuleCandidate candidate,
         IReadOnlyList<AssociationRankerEffectSelection> selections,
-        out IReadOnlyList<StoryThreadEffectContract> effects)
+        out IReadOnlyList<StoryThreadEffectContract> effects,
+        out AssociationConsistencyRejectionReason? rejectionReason)
     {
         effects = Array.Empty<StoryThreadEffectContract>();
+        rejectionReason = null;
         IReadOnlyList<AssociationAllowedEffectContract> allowed =
             candidate.Template.Template.AllowedEffects;
         var result = new List<StoryThreadEffectContract>(selections.Count);
         foreach (AssociationRankerEffectSelection selection in selections)
         {
-            if (selection.EffectIndex < 0 || selection.EffectIndex >= allowed.Count) return false;
+            if (selection.EffectIndex < 0 || selection.EffectIndex >= allowed.Count)
+            {
+                rejectionReason = AssociationConsistencyRejectionReason.EffectNotAllowed;
+                return false;
+            }
+
             AssociationAllowedEffectContract source = allowed[selection.EffectIndex];
             if (source.Op == AssociationEffectOperations.Relationship)
             {
                 if (selection.RelationshipDelta is not double delta ||
                     !double.IsFinite(delta) ||
                     source.Range is not { Count: 2 } ||
-                    delta < source.Range[0] ||
-                    delta > source.Range[1] ||
                     source.Field is null ||
                     !candidate.ResolvedParameters.TryGetValue("target", out string? target))
                 {
+                    rejectionReason = AssociationConsistencyRejectionReason.EffectNotAllowed;
+                    return false;
+                }
+
+                if (delta < source.Range[0] || delta > source.Range[1])
+                {
+                    rejectionReason = AssociationConsistencyRejectionReason.EffectOutOfRange;
                     return false;
                 }
 
@@ -348,15 +488,30 @@ public sealed class AssociationDecisionService
                 continue;
             }
 
-            if (selection.RelationshipDelta is not null || source.Value is null) return false;
+            if (selection.RelationshipDelta is not null || source.Value is null)
+            {
+                rejectionReason = AssociationConsistencyRejectionReason.EffectNotAllowed;
+                return false;
+            }
+
             string? value = ResolveTemplateReference(source.Value, candidate.ResolvedParameters);
-            if (!ApprovedAssociationContentValidation.IsId(value)) return false;
+            if (!ApprovedAssociationContentValidation.IsId(value))
+            {
+                rejectionReason = AssociationConsistencyRejectionReason.EffectNotAllowed;
+                return false;
+            }
+
             string operation = source.Op == AssociationEffectOperations.Clue
                 ? StoryThreadEffectOperations.Clue
                 : source.Op == AssociationEffectOperations.BranchUnlock
                     ? StoryThreadEffectOperations.BranchUnlock
                     : string.Empty;
-            if (operation.Length == 0) return false;
+            if (operation.Length == 0)
+            {
+                rejectionReason = AssociationConsistencyRejectionReason.EffectNotAllowed;
+                return false;
+            }
+
             result.Add(new StoryThreadEffectContract(operation, null, null, null, value));
         }
 
@@ -372,7 +527,8 @@ public sealed class AssociationDecisionService
         cancellationToken.ThrowIfCancellationRequested();
         string fallbackThreadId = candidateFallbackThreadId ?? request.DefaultFallbackThreadId;
         if (!_fallbacks.TryGet(fallbackThreadId, out ApprovedFallbackStoryThread? fallback) ||
-            !request.Route.AllowedInjectionPoints.Contains(fallback.InjectionPoint, StringComparer.Ordinal))
+            !request.Route.AllowedInjectionPoints.Contains(fallback.InjectionPoint, StringComparer.Ordinal) ||
+            !_consistencyGuard.IsApprovedFallbackSafe(request, fallback))
         {
             throw new AssociationDecisionConfigurationException();
         }
