@@ -64,7 +64,13 @@ namespace Lingmai.RedMist
                 throw new ArgumentException("剧情包哈希不能为空。", nameof(storyBundleIdentity));
             }
 
+            if (!IsDefinedRoute(state.route))
+                throw new InvalidOperationException(
+                    "The player route is invalid and cannot be saved.");
             state.Clamp();
+            if (!StateEffectAtomicChannel.IsPersistedStateValid(state))
+                throw new InvalidOperationException(
+                    "StoryThread state is invalid and cannot be saved.");
             var envelope = new SaveEnvelope
             {
                 version = SaveEnvelope.CurrentVersion,
@@ -175,13 +181,30 @@ namespace Lingmai.RedMist
                 return SaveLoadResult.Corrupt("存档已损坏：缺少游戏状态。原文件会被保留。");
             }
 
+            if (!IsDefinedRoute(envelope.state.route))
+            {
+                return SaveLoadResult.Corrupt(
+                    "存档中的角色路线无效，无法安全继续；原文件会被保留。");
+            }
             envelope.state.Clamp();
+            if (!StateEffectAtomicChannel.IsPersistedStateValid(envelope.state))
+            {
+                return SaveLoadResult.Corrupt(
+                    "存档中的关联剧情状态无效，无法安全继续；原文件会被保留。");
+            }
             if (nodeExists != null && !nodeExists(envelope.state.currentNodeId))
             {
                 return SaveLoadResult.Corrupt(
                     "存档引用的剧情节点已不存在，无法安全继续；原文件会被保留。");
             }
             return SaveLoadResult.Success(envelope.state);
+        }
+
+        private static bool IsDefinedRoute(PlayerRoute route)
+        {
+            return route == PlayerRoute.None ||
+                   route == PlayerRoute.ShenYan ||
+                   route == PlayerRoute.ChuMingqi;
         }
     }
 

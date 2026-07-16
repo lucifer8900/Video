@@ -72,6 +72,15 @@ namespace Lingmai.RedMist.Tests
 
             Assert.AreEqual(21, choiceEdges);
             Assert.AreEqual(25, transitionEdges);
+            CollectionAssert.AreEqual(
+                new[] { "node_intro" },
+                StoryCatalog.Get("prologue").injectionPoints);
+            CollectionAssert.AreEqual(
+                new[] { "travel_event" },
+                StoryCatalog.Get("flight").injectionPoints);
+            CollectionAssert.AreEqual(
+                new[] { "npc_mention" },
+                StoryCatalog.Get("shijun").injectionPoints);
         }
 
         [Test]

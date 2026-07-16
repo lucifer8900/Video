@@ -7,6 +7,25 @@ using UnityEngine;
 
 namespace Lingmai.RedMist
 {
+    [Serializable]
+    public sealed class StoryRelationshipState
+    {
+        public string targetRef = "";
+        public string field = "";
+        public double value;
+
+        public StoryRelationshipState()
+        {
+        }
+
+        public StoryRelationshipState(string targetRef, string field, double value)
+        {
+            this.targetRef = targetRef ?? "";
+            this.field = field ?? "";
+            this.value = value;
+        }
+    }
+
     public enum PlayerRoute
     {
         None,
@@ -66,8 +85,38 @@ namespace Lingmai.RedMist
         public List<string> discoveries = new List<string>();
         public List<string> watchedCinematics = new List<string>();
         public List<string> choiceHistory = new List<string>();
+        public List<StoryRelationshipState> storyRelationships = new List<StoryRelationshipState>();
+        public List<string> storyClueIds = new List<string>();
+        public List<string> storyBranchIds = new List<string>();
+        public List<string> appliedStoryThreadReceipts = new List<string>();
 
         public string RouteName => route == PlayerRoute.ShenYan ? "沈砚线" : route == PlayerRoute.ChuMingqi ? "楚明绮线" : "未选择";
+
+        public bool HasStoryClue(string clueId)
+        {
+            return storyClueIds != null && storyClueIds.Contains(clueId);
+        }
+
+        public bool IsStoryBranchUnlocked(string branchId)
+        {
+            return storyBranchIds != null && storyBranchIds.Contains(branchId);
+        }
+
+        public double GetStoryRelationship(string targetRef, string field)
+        {
+            if (storyRelationships == null) return 0d;
+            for (int index = 0; index < storyRelationships.Count; index++)
+            {
+                StoryRelationshipState relationship = storyRelationships[index];
+                if (relationship != null &&
+                    string.Equals(relationship.targetRef, targetRef, StringComparison.Ordinal) &&
+                    string.Equals(relationship.field, field, StringComparison.Ordinal))
+                {
+                    return relationship.value;
+                }
+            }
+            return 0d;
+        }
 
         public void Clamp()
         {
@@ -88,6 +137,10 @@ namespace Lingmai.RedMist
             discoveries ??= new List<string>();
             watchedCinematics ??= new List<string>();
             choiceHistory ??= new List<string>();
+            storyRelationships ??= new List<StoryRelationshipState>();
+            storyClueIds ??= new List<string>();
+            storyBranchIds ??= new List<string>();
+            appliedStoryThreadReceipts ??= new List<string>();
         }
     }
 
@@ -202,6 +255,7 @@ namespace Lingmai.RedMist
         public readonly List<StoryTransitionDefinition> transitions = new List<StoryTransitionDefinition>();
         public readonly List<string> voiceIntentRefs = new List<string>();
         public readonly List<string> npcResponseRefs = new List<string>();
+        public readonly List<string> injectionPoints = new List<string>();
         public readonly Dictionary<StoryInvalidInputKind, string> invalidInputRules =
             new Dictionary<StoryInvalidInputKind, string>();
 

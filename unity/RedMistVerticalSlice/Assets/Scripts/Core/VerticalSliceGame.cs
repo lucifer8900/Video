@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -80,6 +82,9 @@ namespace Lingmai.RedMist
         private MediaDirector _media;
         private GenerationRuntimeBootstrap _generationRuntime;
         private LedgerRuntimeContext _ledgerRuntime;
+        private AssociationRuntimeContext _associationRuntime;
+        private StoryThreadWeaver _storyThreadWeaver;
+        private StoryThread _activeStoryThread;
         private MinigameSuite _minigames;
         private SanctuaryPreview _storyStage;
         private bool _exploring;
@@ -90,6 +95,8 @@ namespace Lingmai.RedMist
         private bool _qaHadSave;
         private string _qaSaveSnapshot;
         private bool _fatalContentError;
+        private readonly StoryThreadChapterLifetime _associationChapterLifetime =
+            new StoryThreadChapterLifetime();
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void EnsureRuntime()
@@ -126,6 +133,7 @@ namespace Lingmai.RedMist
             _generationRuntime = gameObject.AddComponent<GenerationRuntimeBootstrap>();
             _generationRuntime.Initialize(_media);
             InitializeLedgerRuntime();
+            InitializeAssociationRuntime(bundleResult.Bundle);
             _media.SetVolume(_state.cinematicVolume);
             _media.SourceDimensionsChanged += (_, __) => _videoCrop?.Refresh(true);
             _minigames = gameObject.AddComponent<MinigameSuite>();
@@ -167,6 +175,34 @@ namespace Lingmai.RedMist
                 _ledgerRuntime = null;
                 Debug.LogWarning(
                     "Ledger runtime is unavailable; offline gameplay remains enabled (" +
+                    error.GetType().Name + ").");
+            }
+        }
+
+        private void InitializeAssociationRuntime(StoryBundle bundle)
+        {
+            _storyThreadWeaver = new StoryThreadWeaver(new StateEffectAtomicChannel());
+            try
+            {
+                string playerId = _ledgerRuntime != null
+                    ? _ledgerRuntime.PlayerId
+                    : StoryThreadDefaults.OfflinePlayerId;
+                _associationRuntime = AssociationRuntimeBootstrap.Initialize(
+                    gameObject,
+                    playerId,
+                    bundle);
+            }
+            catch (Exception error) when (
+                error is AssociationRuntimeConfigurationException ||
+                error is StoryThreadContractException ||
+                error is ArgumentException ||
+                error is InvalidOperationException ||
+                error is IOException ||
+                error is UnauthorizedAccessException)
+            {
+                _associationRuntime = null;
+                Debug.LogWarning(
+                    "StoryThread runtime is unavailable; baseline offline gameplay remains enabled (" +
                     error.GetType().Name + ").");
             }
         }
@@ -773,7 +809,7 @@ namespace Lingmai.RedMist
             _cinematic.SetReducedMotion(false);
             _titleRoot.SetActive(false);
             _storyRoot.SetActive(true);
-            ShowNode(StoryCatalog.EntryNodeId);
+            BeginChapterPresentation(StoryCatalog.EntryNodeId, true, true);
         }
 
         private void ContinueGame()
@@ -792,7 +828,110 @@ namespace Lingmai.RedMist
             _cinematic.SetReducedMotion(_state.reducedMotion);
             _titleRoot.SetActive(false);
             _storyRoot.SetActive(true);
-            ShowNode(string.IsNullOrWhiteSpace(_state.currentNodeId) ? StoryCatalog.EntryNodeId : _state.currentNodeId, false);
+            BeginChapterPresentation(
+                string.IsNullOrWhiteSpace(_state.currentNodeId)
+                    ? StoryCatalog.EntryNodeId
+                    : _state.currentNodeId,
+                false,
+                true);
+        }
+
+        private void BeginChapterPresentation(
+            string nodeId,
+            bool autosave,
+            bool allowCinematic)
+        {
+            long token = _associationChapterLifetime.Begin();
+            _activeStoryThread = null;
+            if (_associationRuntime == null || _state.route == PlayerRoute.None)
+            {
+                ShowNode(nodeId, autosave, allowCinematic);
+                return;
+            }
+
+            _associationRuntime.ExpireChapter();
+            try
+            {
+                _activeStoryThread = _associationRuntime.GetDefault(
+                    _state.route,
+                    nodeId);
+            }
+            catch (Exception error) when (
+                error is StoryThreadContractException ||
+                error is ArgumentException ||
+                error is InvalidOperationException ||
+                error is IOException ||
+                error is UnauthorizedAccessException)
+            {
+                Debug.LogWarning(
+                    "The reviewed default StoryThread is unavailable; baseline node will be shown (" +
+                    error.GetType().Name + ").");
+                _activeStoryThread = null;
+            }
+
+            Task<StoryThread> prefetch;
+            try
+            {
+                prefetch = _associationRuntime.PrefetchAsync(
+                    _state.route,
+                    nodeId,
+                    CancellationToken.None);
+            }
+            catch (Exception error) when (
+                error is AssociationTransportException ||
+                error is StoryThreadContractException ||
+                error is ArgumentException ||
+                error is InvalidOperationException)
+            {
+                Debug.LogWarning(
+                    "StoryThread prefetch could not start; reviewed default remains active (" +
+                    error.GetType().Name + ").");
+                ShowNode(nodeId, autosave, allowCinematic);
+                return;
+            }
+
+            // Rendering never waits for the optional network enhancement. The reviewed default
+            // is available immediately, while a validated online result may replace it only for
+            // nodes the player has not presented yet.
+            ShowNode(nodeId, autosave, allowCinematic);
+            if (prefetch.IsCompleted)
+            {
+                CompleteChapterPrefetch(prefetch, token);
+                return;
+            }
+            StartCoroutine(AwaitChapterPrefetch(prefetch, token));
+        }
+
+        private IEnumerator AwaitChapterPrefetch(
+            Task<StoryThread> prefetch,
+            long token)
+        {
+            while (!prefetch.IsCompleted && _associationChapterLifetime.IsCurrent(token))
+                yield return null;
+            CompleteChapterPrefetch(prefetch, token);
+        }
+
+        private void CompleteChapterPrefetch(
+            Task<StoryThread> prefetch,
+            long token)
+        {
+            if (!_associationChapterLifetime.IsCurrent(token)) return;
+            try
+            {
+                StoryThread result = prefetch.GetAwaiter().GetResult();
+                if (result != null) _activeStoryThread = result;
+            }
+            catch (Exception error) when (
+                error is AssociationTransportException ||
+                error is StoryThreadContractException ||
+                error is ArgumentException ||
+                error is InvalidOperationException ||
+                error is OperationCanceledException)
+            {
+                Debug.LogWarning(
+                    "StoryThread prefetch failed; reviewed default remains active (" +
+                    error.GetType().Name + ").");
+            }
         }
 
         private void ShowNode(string id, bool autosave = true, bool allowCinematic = true)
@@ -838,9 +977,21 @@ namespace Lingmai.RedMist
             SetStoryCinematicMode(onRetainedCinematic);
             _storyRoot.SetActive(true);
             BuildNodeChoices(node);
-            string narrative = node.TextFor(_state.route);
-            BeginText(narrative);
-            if (autosave) SaveSystem.Save(_state);
+            StoryThreadPresentation presentation = _storyThreadWeaver == null
+                ? new StoryThreadPresentation(node.TextFor(_state.route), false)
+                : _storyThreadWeaver.Present(
+                    node,
+                    _state.route,
+                    _state,
+                    _activeStoryThread);
+            if (node.kind == NodeKind.Ending)
+            {
+                _associationChapterLifetime.End();
+                _associationRuntime?.ExpireChapter();
+                _activeStoryThread = null;
+            }
+            BeginText(presentation.Narrative);
+            if (autosave || presentation.Injected) SaveSystem.Save(_state);
         }
 
         private void BeginNodeCinematic(StoryNode node, CinematicCueDefinition intro)

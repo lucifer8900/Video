@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "id": "chapter.red_mist",
   "entryNodeId": "prologue",
-  "contentHash": "sha256:4f8c962873d49df97d20c8eb4cf1f5129b220e7613f59190c8f0b04fd46d7e38",
+  "contentHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
   "approvalStatus": "approved",
   "distributionStatus": "internal_prototype_only",
   "localizations": {
@@ -229,7 +229,9 @@
           "npcResponseRef": "npc.invalid.calm.low_confidence"
         }
       },
-      "injectionPoints": [],
+      "injectionPoints": [
+        "node_intro"
+      ],
       "terminal": false,
       "approvalStatus": "approved"
     },
@@ -450,7 +452,9 @@
           "npcResponseRef": "npc.invalid.system.low_confidence"
         }
       },
-      "injectionPoints": [],
+      "injectionPoints": [
+        "travel_event"
+      ],
       "terminal": false,
       "approvalStatus": "approved"
     },
@@ -742,7 +746,9 @@
           "npcResponseRef": "npc.invalid.hostile.low_confidence"
         }
       },
-      "injectionPoints": [],
+      "injectionPoints": [
+        "npc_mention"
+      ],
       "terminal": false,
       "approvalStatus": "approved"
     },

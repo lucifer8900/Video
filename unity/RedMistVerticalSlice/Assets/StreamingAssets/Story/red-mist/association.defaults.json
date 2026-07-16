@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "threadId": "thr.default.red_mist.v1",
+  "templateId": "assoc.default.red_mist.v1",
+  "playerId": "p.offline",
+  "resolvedParams": {
+    "bundleId": "chapter.red_mist",
+    "bundleVersion": "1.0.0",
+    "bundleContentHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1"
+  },
+  "injections": [
+    {
+      "nodeId": "prologue",
+      "point": "node_intro",
+      "text": "赤雾沿石阶缓缓回卷，雾门开启前，营地里的交谈声一层层低了下去。",
+      "effects": []
+    },
+    {
+      "nodeId": "flight",
+      "point": "travel_event",
+      "text": "一阵横风切过狭隘，低空雾流骤然翻卷，飞行队形被迫收紧。",
+      "effects": []
+    },
+    {
+      "nodeId": "shijun",
+      "point": "npc_mention",
+      "text": "石峻瞥了一眼来路，又把目光落回阵钉上，像是在等你先暴露判断。",
+      "effects": []
+    }
+  ],
+  "mediaRefs": [],
+  "expiresAtChapterEnd": true,
+  "auditRef": "genjob.default.red_mist.v1",
+  "fallbackUsed": true
+}

@@ -588,7 +588,11 @@ namespace Lingmai.RedMist
                     RequireEmptyArray(RequireKind(onEnter, StoryJsonKind.Array, path + "/onEnterEffects"), path + "/onEnterEffects");
                 if (item.TryGetProperty("onExitEffects", out StoryJsonValue onExit))
                     RequireEmptyArray(RequireKind(onExit, StoryJsonKind.Array, path + "/onExitEffects"), path + "/onExitEffects");
-                ValidateInjectionPoints(RequiredArray(item, "injectionPoints", path + "/injectionPoints"), path + "/injectionPoints");
+                StoryJsonValue injectionPoints = RequiredArray(
+                    item,
+                    "injectionPoints",
+                    path + "/injectionPoints");
+                ValidateInjectionPoints(injectionPoints, path + "/injectionPoints");
                 bool terminal = RequiredBoolean(item, "terminal", path + "/terminal");
                 RequireExactString(item, "approvalStatus", "approved", path + "/approvalStatus");
                 if (terminal != (kind == NodeKind.Ending))
@@ -636,6 +640,8 @@ namespace Lingmai.RedMist
                         node.npcResponseRefs.Add(responseId);
                     }
                 }
+                foreach (StoryJsonValue injectionPoint in injectionPoints.ArrayValue)
+                    node.injectionPoints.Add(injectionPoint.StringValue);
                 if (item.TryGetProperty("invalid_input_rules", out StoryJsonValue invalidRulesValue))
                 {
                     StoryJsonValue invalidRules = RequireKind(invalidRulesValue, StoryJsonKind.Object, path + "/invalid_input_rules");

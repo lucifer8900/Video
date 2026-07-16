@@ -65,7 +65,9 @@
         "silence": { "npcResponseRef": "npc.invalid.calm.silence" },
         "low_confidence": { "npcResponseRef": "npc.invalid.calm.low_confidence" }
       },
-      "injectionPoints": [],
+      "injectionPoints": [
+        "node_intro"
+      ],
       "terminal": false,
       "approvalStatus": "approved"
     },
@@ -247,7 +249,9 @@
         "silence": { "npcResponseRef": "npc.invalid.system.silence" },
         "low_confidence": { "npcResponseRef": "npc.invalid.system.low_confidence" }
       },
-      "injectionPoints": [],
+      "injectionPoints": [
+        "travel_event"
+      ],
       "terminal": false,
       "approvalStatus": "approved"
     },
@@ -487,7 +491,9 @@
         "silence": { "npcResponseRef": "npc.invalid.hostile.silence" },
         "low_confidence": { "npcResponseRef": "npc.invalid.hostile.low_confidence" }
       },
-      "injectionPoints": [],
+      "injectionPoints": [
+        "npc_mention"
+      ],
       "terminal": false,
       "approvalStatus": "approved"
     },

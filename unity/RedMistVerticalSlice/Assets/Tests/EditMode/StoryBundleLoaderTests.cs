@@ -24,6 +24,21 @@ namespace Lingmai.RedMist.Tests
             Assert.AreEqual("prologue", result.Bundle.EntryNodeId);
             Assert.AreEqual(14, result.Bundle.Nodes.Count);
             Assert.AreEqual(11, result.Bundle.MediaAssets.Count);
+            CollectionAssert.AreEqual(
+                new[] { "node_intro" },
+                result.Bundle.Nodes["prologue"].injectionPoints);
+            CollectionAssert.AreEqual(
+                new[] { "travel_event" },
+                result.Bundle.Nodes["flight"].injectionPoints);
+            CollectionAssert.AreEqual(
+                new[] { "npc_mention" },
+                result.Bundle.Nodes["shijun"].injectionPoints);
+            foreach (StoryNode node in result.Bundle.Nodes.Values)
+            {
+                if (node.id == "prologue" || node.id == "flight" || node.id == "shijun")
+                    continue;
+                CollectionAssert.IsEmpty(node.injectionPoints, node.id);
+            }
         }
 
         [Test]

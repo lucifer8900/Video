@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0.0",
+  "enabled": false,
+  "hardTimeoutSeconds": 8,
+  "maxResponseBytes": 65536
+}
