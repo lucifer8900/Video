@@ -1,0 +1,1872 @@
+{
+  "schemaVersion": "1.0.0",
+  "manifestId": "shot-manifest.chapter.red_mist",
+  "sourceBundleId": "chapter.red_mist",
+  "sourceBundleContentHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+  "language": "zh-CN",
+  "currency": "USD",
+  "approvalStatus": "needs_review",
+  "shotDispatchAllowed": false,
+  "responseRequirements": [
+    {
+      "responseId": "npc.invalid.calm.abuse",
+      "sourceNodeIds": [
+        "prologue",
+        "camp",
+        "herb_route",
+        "corpse_signs",
+        "aftermath",
+        "ending"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.calm.abuse",
+        "text": "\u8A00\u8BED\u518D\u91CD\u4E5F\u4E0D\u4F1A\u6539\u53D8\u96FE\u4E2D\u7684\u5C40\u52BF\u3002\u82E5\u8981\u7EE7\u7EED\uFF0C\u5C31\u8BF4\u6E05\u4F60\u51C6\u5907\u600E\u4E48\u505A\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.stern",
+        "text": "\u51B7\u5389"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.calm.irrelevant",
+      "sourceNodeIds": [
+        "prologue",
+        "camp",
+        "herb_route",
+        "corpse_signs",
+        "aftermath",
+        "ending"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.calm.irrelevant",
+        "text": "\u90A3\u4EF6\u4E8B\u4E0E\u773C\u524D\u7684\u9669\u5883\u65E0\u5173\u3002\u5148\u770B\u6E05\u6B64\u5730\uFF0C\u518D\u51B3\u5B9A\u4E0B\u4E00\u6B65\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.focused",
+        "text": "\u4E13\u6CE8"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.calm.too_long",
+      "sourceNodeIds": [
+        "prologue",
+        "camp",
+        "herb_route",
+        "corpse_signs",
+        "aftermath",
+        "ending"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.calm.too_long",
+        "text": "\u96FE\u52BF\u6B63\u5728\u53D8\u5316\u3002\u628A\u8BDD\u6536\u77ED\uFF0C\u53EA\u8BF4\u4F60\u6B64\u523B\u8981\u505A\u4EC0\u4E48\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.urgent",
+        "text": "\u6025\u8FEB"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.calm.silence",
+      "sourceNodeIds": [
+        "prologue",
+        "camp",
+        "herb_route",
+        "corpse_signs",
+        "aftermath",
+        "ending"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.calm.silence",
+        "text": "\u4E0D\u5FC5\u4ED3\u4FC3\u5F00\u53E3\u3002\u5148\u770B\u6E05\u7EBF\u7D22\uFF0C\u60F3\u597D\u540E\u518D\u4F5C\u9009\u62E9\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.patient",
+        "text": "\u514B\u5236"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.calm.low_confidence",
+      "sourceNodeIds": [
+        "prologue",
+        "camp",
+        "herb_route",
+        "corpse_signs",
+        "aftermath",
+        "ending"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.calm.low_confidence",
+        "text": "\u8FD9\u53E5\u8BDD\u6CA1\u6709\u542C\u6E05\u3002\u6362\u4E2A\u7B80\u77ED\u8BF4\u6CD5\uFF0C\u6216\u76F4\u63A5\u9009\u62E9\u773C\u524D\u7684\u65B9\u6848\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.uncertain",
+        "text": "\u7591\u95EE"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.ally.abuse",
+      "sourceNodeIds": [
+        "alliance",
+        "rescue"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.ally.abuse",
+        "text": "\u82E5\u8FDE\u540C\u884C\u8005\u90FD\u53EA\u5269\u6076\u8A00\uFF0C\u8FD9\u6761\u8DEF\u4FBF\u8D70\u4E0D\u8FDC\u3002\u8BF4\u51FA\u4F60\u7684\u5224\u65AD\uFF0C\u522B\u628A\u529B\u6C14\u6D6A\u8D39\u5728\u4E89\u5435\u4E0A\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.stern",
+        "text": "\u51B7\u5389"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.ally.irrelevant",
+      "sourceNodeIds": [
+        "alliance",
+        "rescue"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.ally.irrelevant",
+        "text": "\u90A3\u4EF6\u4E8B\u53EF\u4EE5\u4EE5\u540E\u518D\u8C08\u3002\u5165\u53E3\u548C\u540C\u4F34\u90FD\u5728\u7B49\u6211\u4EEC\u51B3\u5B9A\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.focused",
+        "text": "\u4E13\u6CE8"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.ally.too_long",
+      "sourceNodeIds": [
+        "alliance",
+        "rescue"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.ally.too_long",
+        "text": "\u6CA1\u6709\u65F6\u95F4\u542C\u5B8C\u6574\u6BB5\u7F18\u7531\u3002\u544A\u8BC9\u6211\u7ED3\u8BBA\uFF1A\u524D\u8FDB\u3001\u89C2\u5BDF\uFF0C\u8FD8\u662F\u64A4\u56DE\uFF1F"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.urgent",
+        "text": "\u6025\u8FEB"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.ally.silence",
+      "sourceNodeIds": [
+        "alliance",
+        "rescue"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.ally.silence",
+        "text": "\u4F60\u8FD8\u5728\u6743\u8861\uFF0C\u6211\u660E\u767D\u3002\u6211\u4F1A\u5B88\u4F4F\u8FD9\u4E00\u4FA7\uFF0C\u4F46\u51B3\u5B9A\u5FC5\u987B\u7531\u4F60\u4F5C\u51FA\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.patient",
+        "text": "\u514B\u5236"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.ally.low_confidence",
+      "sourceNodeIds": [
+        "alliance",
+        "rescue"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.ally.low_confidence",
+        "text": "\u6211\u6CA1\u542C\u6E05\u4F60\u7684\u610F\u601D\u3002\u518D\u8BF4\u4E00\u904D\uFF0C\u6216\u6307\u660E\u4F60\u652F\u6301\u54EA\u4E2A\u65B9\u6848\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.uncertain",
+        "text": "\u7591\u95EE"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.system.abuse",
+      "sourceNodeIds": [
+        "flight",
+        "formation",
+        "combat_one",
+        "combat_two"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.system.abuse",
+        "text": "\u65E0\u6548\u8A00\u8BED\u4E0D\u4F1A\u6539\u53D8\u7ED3\u7B97\u3002\u8BF7\u7ED9\u51FA\u53EF\u6267\u884C\u6307\u4EE4\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.stern",
+        "text": "\u51B7\u5389"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "dragon_attack-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.system.irrelevant",
+      "sourceNodeIds": [
+        "flight",
+        "formation",
+        "combat_one",
+        "combat_two"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.system.irrelevant",
+        "text": "\u8F93\u5165\u4E0E\u5F53\u524D\u76EE\u6807\u65E0\u5173\u3002\u8BF7\u56F4\u7ED5\u8DEF\u7EBF\u3001\u9635\u773C\u6216\u6218\u672F\u4F5C\u7B54\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.focused",
+        "text": "\u4E13\u6CE8"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "dragon_attack-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.system.too_long",
+      "sourceNodeIds": [
+        "flight",
+        "formation",
+        "combat_one",
+        "combat_two"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.system.too_long",
+        "text": "\u6307\u4EE4\u8FC7\u957F\uFF0C\u65E0\u6CD5\u5B89\u5168\u5224\u5B9A\u3002\u8BF7\u7F29\u51CF\u4E3A\u4E00\u4E2A\u660E\u786E\u52A8\u4F5C\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.urgent",
+        "text": "\u6025\u8FEB"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "dragon_attack-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.system.silence",
+      "sourceNodeIds": [
+        "flight",
+        "formation",
+        "combat_one",
+        "combat_two"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.system.silence",
+        "text": "\u672A\u6536\u5230\u6709\u6548\u6307\u4EE4\u3002\u573A\u666F\u4ECD\u5728\u7B49\u5F85\uFF0C\u56FA\u5B9A\u65B9\u6848\u4FDD\u6301\u53EF\u7528\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.patient",
+        "text": "\u514B\u5236"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "dragon_attack-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.system.low_confidence",
+      "sourceNodeIds": [
+        "flight",
+        "formation",
+        "combat_one",
+        "combat_two"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.system.low_confidence",
+        "text": "\u6307\u4EE4\u7F6E\u4FE1\u5EA6\u4E0D\u8DB3\u3002\u8BF7\u91CD\u65B0\u8868\u8FF0\uFF0C\u6216\u4F7F\u7528\u56FA\u5B9A\u65B9\u6848\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.uncertain",
+        "text": "\u7591\u95EE"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "dragon_attack-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.hostile.abuse",
+      "sourceNodeIds": [
+        "shijun"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.hostile.abuse",
+        "text": "\u9A82\u5F97\u518D\u54CD\uFF0C\u4E5F\u6362\u4E0D\u6765\u4E00\u6761\u771F\u8DEF\u3002\u62FF\u51FA\u7B79\u7801\uFF0C\u6216\u8005\u8BA9\u5F00\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.stern",
+        "text": "\u51B7\u5389"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "shi_jun-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:06751100f14462ba0166c1a896ff11836bf91809eff617a822224e25832b6fab",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.hostile.irrelevant",
+      "sourceNodeIds": [
+        "shijun"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.hostile.irrelevant",
+        "text": "\u5C11\u7ED5\u5F2F\u5B50\u3002\u6B64\u523B\u53EA\u8C08\u9635\u9489\u3001\u7075\u836F\u548C\u8C01\u5148\u8BA9\u8DEF\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.focused",
+        "text": "\u4E13\u6CE8"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "shi_jun-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:06751100f14462ba0166c1a896ff11836bf91809eff617a822224e25832b6fab",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.hostile.too_long",
+      "sourceNodeIds": [
+        "shijun"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.hostile.too_long",
+        "text": "\u6211\u6CA1\u5174\u81F4\u542C\u4F60\u94FA\u9648\u6765\u5386\u3002\u7528\u4E00\u53E5\u8BDD\u62A5\u51FA\u6761\u4EF6\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.urgent",
+        "text": "\u6025\u8FEB"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "shi_jun-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:06751100f14462ba0166c1a896ff11836bf91809eff617a822224e25832b6fab",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.hostile.silence",
+      "sourceNodeIds": [
+        "shijun"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.hostile.silence",
+        "text": "\u6C89\u9ED8\u4E5F\u662F\u4EF7\u7801\uFF0C\u53EA\u662F\u901A\u5E38\u6700\u8D35\u3002\u60F3\u597D\u4E86\u5C31\u5F00\u53E3\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.patient",
+        "text": "\u514B\u5236"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "shi_jun-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:06751100f14462ba0166c1a896ff11836bf91809eff617a822224e25832b6fab",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.hostile.low_confidence",
+      "sourceNodeIds": [
+        "shijun"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.hostile.low_confidence",
+        "text": "\u4F60\u8FD9\u53E5\u8BDD\u542B\u7CCA\u5F97\u5F88\u3002\u518D\u8BF4\u6E05\u695A\uFF0C\u514D\u5F97\u6211\u6309\u6700\u574F\u7684\u610F\u601D\u7406\u89E3\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.uncertain",
+        "text": "\u7591\u95EE"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "shi_jun-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:06751100f14462ba0166c1a896ff11836bf91809eff617a822224e25832b6fab",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.encounter.abuse",
+      "sourceNodeIds": [
+        "underground"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.encounter.abuse",
+        "text": "\u9ED1\u6CE5\u4E0B\u7684\u4E1C\u897F\u4E0D\u4F1A\u7B49\u6211\u4EEC\u5435\u5B8C\u3002\u6536\u8D77\u654C\u610F\uFF0C\u5148\u51B3\u5B9A\u5982\u4F55\u6D3B\u7740\u79BB\u5F00\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.stern",
+        "text": "\u51B7\u5389"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.encounter.irrelevant",
+      "sourceNodeIds": [
+        "underground"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.encounter.irrelevant",
+        "text": "\u5B9D\u5323\u3001\u9000\u8DEF\u548C\u58A8\u86DF\u624D\u662F\u773C\u524D\u4E8B\u5B9E\u3002\u522B\u8BA9\u65E0\u5173\u7684\u8BDD\u66B4\u9732\u6211\u4EEC\u7684\u7A7A\u9699\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.focused",
+        "text": "\u4E13\u6CE8"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.encounter.too_long",
+      "sourceNodeIds": [
+        "underground"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.encounter.too_long",
+        "text": "\u9635\u67F1\u6B63\u5728\u65AD\u88C2\u3002\u628A\u8BA1\u5212\u538B\u6210\u4E00\u53E5\uFF0C\u6211\u53EA\u9700\u8981\u53EF\u6267\u884C\u7684\u90E8\u5206\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.urgent",
+        "text": "\u6025\u8FEB"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.encounter.silence",
+      "sourceNodeIds": [
+        "underground"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.encounter.silence",
+        "text": "\u4F60\u4E0D\u8868\u6001\uFF0C\u6211\u4FBF\u6309\u6700\u4FDD\u5B88\u7684\u65B9\u5F0F\u5B88\u4F4F\u9000\u8DEF\u3002\u4ECD\u53EF\u5728\u58A8\u86DF\u6251\u51FA\u524D\u6539\u53D8\u51B3\u5B9A\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.patient",
+        "text": "\u514B\u5236"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.invalid.encounter.low_confidence",
+      "sourceNodeIds": [
+        "underground"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.voice.encounter.low_confidence",
+        "text": "\u96FE\u58F0\u76D6\u4F4F\u4E86\u4F60\u7684\u8BDD\u3002\u518D\u8BF4\u5F97\u660E\u786E\u4E9B\uFF0C\u6216\u8005\u76F4\u63A5\u9009\u5B9A\u884C\u52A8\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.uncertain",
+        "text": "\u7591\u95EE"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    }
+  ],
+  "shots": [
+    {
+      "shotId": "shot.prologue.primary",
+      "nodeId": "prologue",
+      "nodeKind": "Narrative",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/0",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.prologue.male_text",
+          "text": "\u7B2C\u4E09\u65E5\u7684\u949F\u58F0\u8FD8\u6CA1\u6709\u54CD\uFF0C\u5C71\u8179\u4E2D\u7684\u8D64\u96FE\u5DF2\u7ECF\u50CF\u6F6E\u6C34\u4E00\u6837\u8D77\u4F0F\u3002\u4E03\u6D3E\u5F1F\u5B50\u90FD\u5728\u7B49\u90A3\u9053\u53EA\u5F00\u542F\u7247\u523B\u7684\u88C2\u9699\u3002\u6C88\u781A\u7AD9\u5728\u4EBA\u7FA4\u6700\u540E\uFF0C\u5148\u770B\u9000\u8DEF\uFF0C\u518D\u770B\u540C\u4F34\uFF0C\u6700\u540E\u624D\u770B\u8FDC\u5904\u88AB\u96FE\u541E\u6CA1\u7684\u836F\u8C37\u3002\u8FDB\u5165\u79D8\u82D1\u7684\u4EBA\u90FD\u8BF4\u81EA\u5DF1\u6765\u6C42\u7B51\u57FA\u7075\u836F\uFF0C\u53EF\u771F\u6B63\u5E26\u8FDB\u5C71\u91CC\u7684\uFF0C\u8FD8\u6709\u503A\u3001\u79D8\u5BC6\u548C\u6740\u5FC3\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.prologue.female_text",
+          "text": "\u7B2C\u4E09\u65E5\u7684\u949F\u58F0\u8FD8\u6CA1\u6709\u54CD\uFF0C\u5C71\u8179\u4E2D\u7684\u8D64\u96FE\u5DF2\u7ECF\u50CF\u6F6E\u6C34\u4E00\u6837\u8D77\u4F0F\u3002\u853D\u6708\u5BAB\u5F1F\u5B50\u5217\u6210\u6708\u8F6E\u9635\uFF0C\u6240\u6709\u4EBA\u90FD\u5728\u7B49\u695A\u660E\u7EEE\u4E0B\u4EE4\u3002\u5979\u7684\u771F\u5B9E\u5883\u754C\u4E0E\u773C\u524D\u53EF\u8C03\u7528\u7684\u6CD5\u529B\u5E76\u4E0D\u76F8\u540C\uFF1B\u82E5\u8FC7\u65E9\u66B4\u9732\u8D64\u9E3E\u7130\u73AF\uFF0C\u95E8\u4EBA\u53EF\u4EE5\u5C11\u6B7B\u51E0\u4E2A\uFF0C\u4F46\u5404\u5B97\u957F\u8001\u4E5F\u4F1A\u7ACB\u523B\u91CD\u65B0\u4F30\u91CF\u5979\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "red_mist_weather",
+        "portraitMediaRef": null,
+        "introMediaRef": "fmv_gate_arrival",
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": {
+        "mediaRef": "fmv_gate_arrival",
+        "assetVersion": "1",
+        "contentHash": "sha256:757915a75443e5d490415392f952c77657498ae2b4c7d3eb6ff93ff8abc4a7d5",
+        "mediaType": "video"
+      },
+      "generationTier": "reuse_only",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "needs_review",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "human_review.required",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.camp.primary",
+      "nodeId": "camp",
+      "nodeKind": "Narrative",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/1",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.camp.male_text",
+          "text": "\u706B\u5806\u65C1\u6446\u7740\u4E24\u5F20\u533F\u606F\u7B26\u3001\u4E00\u74F6\u56DE\u6C14\u6563\u548C\u4E00\u679A\u5C1A\u672A\u5B8C\u5168\u6478\u6E05\u7981\u5236\u7684\u91D1\u8709\u8FDE\u73AF\u5203\u3002\u5168\u90E8\u5E26\u8D70\u6700\u7A33\u59A5\uFF0C\u5374\u4F1A\u8BA9\u7EB3\u7269\u56CA\u81C3\u80BF\uFF1B\u5C11\u5E26\u4E00\u6837\uFF0C\u98DE\u9041\u548C\u64A4\u9000\u4FBF\u80FD\u591A\u7559\u51E0\u5206\u4F59\u5730\u3002\u987E\u60CA\u96E8\u538B\u4F4E\u58F0\u97F3\u63D0\u9192\uFF1A\u5165\u53E3\u9644\u8FD1\u5DF2\u6709\u964C\u751F\u795E\u8BC6\u626B\u8FC7\u4E24\u6B21\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.camp.female_text",
+          "text": "\u4E09\u540D\u5E74\u8F7B\u5F1F\u5B50\u7684\u6CD5\u529B\u90FD\u672A\u6062\u590D\uFF0C\u4F24\u5458\u8FD8\u5728\u53D1\u70ED\u3002\u695A\u660E\u7EEE\u53EF\u4EE5\u628A\u5B97\u95E8\u62A4\u7B26\u5206\u7ED9\u961F\u4F0D\uFF0C\u4E5F\u53EF\u4EE5\u628A\u7075\u529B\u7559\u7ED9\u7EF4\u6301\u8EAB\u4EFD\u4F2A\u88C5\u3002\u957F\u8001\u7684\u4F20\u8BAF\u53EA\u6709\u4E00\u53E5\uFF1A\u4E3B\u836F\u5FC5\u987B\u5E26\u56DE\u3002\u5979\u5374\u6E05\u695A\uFF0C\u6D3B\u7740\u56DE\u53BB\u7684\u5F1F\u5B50\u540C\u6837\u4F1A\u6210\u4E3A\u5B97\u95E8\u672A\u6765\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "red_mist_modules",
+        "portraitMediaRef": null,
+        "introMediaRef": null,
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "red_mist_modules",
+        "assetVersion": "1",
+        "contentHash": "sha256:d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "red_mist_modules",
+        "assetVersion": "1",
+        "contentHash": "sha256:d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": null,
+      "generationTier": "blocked_pending_g2",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "red_mist_modules",
+        "assetVersion": "1",
+        "contentHash": "sha256:d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "generation.g2_blocked",
+        "human_review.required",
+        "primary_video.missing",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.alliance.primary",
+      "nodeId": "alliance",
+      "nodeKind": "Narrative",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/2",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.alliance.male_text",
+          "text": "\u987E\u60CA\u96E8\u613F\u610F\u540C\u884C\uFF0C\u5374\u4F1A\u56E0\u6B64\u770B\u89C1\u66F4\u591A\u5E95\u724C\u3002\u53E6\u4E00\u540D\u540C\u95E8\u63D0\u51FA\u4EA4\u6362\u60C5\u62A5\uFF1A\u4ED6\u77E5\u9053\u4E00\u6761\u907F\u5F00\u6B63\u95E8\u4F0F\u51FB\u7684\u65E7\u517D\u5F84\uFF0C\u4F46\u8981\u6C42\u4E8B\u540E\u5206\u5F97\u4E00\u682A\u4E3B\u836F\u3002\u6C88\u781A\u65E0\u6CD5\u9A8C\u8BC1\u60C5\u62A5\u771F\u5047\uFF0C\u53EA\u80FD\u4ECE\u5BF9\u65B9\u9774\u5E95\u7684\u65B0\u6CE5\u548C\u8896\u53E3\u7684\u65AD\u4E1D\u5224\u65AD\uFF0C\u4ED6\u786E\u5B9E\u521A\u4ECE\u90A3\u6761\u8DEF\u9000\u56DE\u6765\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.alliance.female_text",
+          "text": "\u4E24\u540D\u5916\u5B97\u5F1F\u5B50\u8BF7\u6C42\u5E76\u5165\u961F\u4F0D\u3002\u4ED6\u4EEC\u58F0\u79F0\u613F\u610F\u542C\u4ECE\u6307\u6325\uFF0C\u76EE\u5149\u5374\u4E00\u76F4\u505C\u5728\u853D\u6708\u5BAB\u7684\u9635\u65D7\u4E0A\u3002\u5E74\u8F7B\u95E8\u4EBA\u7B49\u5F85\u695A\u660E\u7EEE\u8868\u6001\uFF1A\u63A5\u7EB3\u4ED6\u4EEC\u80FD\u6269\u5927\u4FA6\u5BDF\u9762\uFF0C\u4E5F\u53EF\u80FD\u628A\u961F\u4F0D\u7684\u865A\u5B9E\u4EA4\u7ED9\u522B\u5B97\u3002\u62D2\u7EDD\u6700\u5B89\u5168\uFF0C\u5374\u4F1A\u5728\u79D8\u82D1\u91CC\u591A\u51FA\u4E00\u7FA4\u5FC3\u6000\u4E0D\u6EE1\u7684\u65C1\u89C2\u8005\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "red_mist_establishing",
+        "portraitMediaRef": null,
+        "introMediaRef": null,
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.ally.abuse",
+        "npc.invalid.ally.irrelevant",
+        "npc.invalid.ally.too_long",
+        "npc.invalid.ally.silence",
+        "npc.invalid.ally.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": null,
+      "generationTier": "blocked_pending_g2",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "generation.g2_blocked",
+        "human_review.required",
+        "primary_video.missing",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.flight.primary",
+      "nodeId": "flight",
+      "nodeKind": "Flight",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/3",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.flight.male_text",
+          "text": "\u5C71\u9698\u4E24\u4FA7\u9669\u5CF0\u5939\u6210\u7A84\u7F1D\uFF0C\u5730\u9762\u4E1D\u7EBF\u4E0E\u7126\u75D5\u8BF4\u660E\u4F0F\u51FB\u8005\u5DF2\u5C01\u4F4F\u6B65\u884C\u8DEF\u7EBF\u3002\u77ED\u7A0B\u5FA1\u5668\u53EF\u4EE5\u62A2\u5728\u96FE\u95E8\u95ED\u5408\u524D\u62B5\u8FBE\u4E2D\u5FC3\u533A\uFF0C\u4F46\u98DE\u5F97\u8D8A\u9AD8\u8D8A\u5BB9\u6613\u6210\u4E3A\u9776\u5B50\u3002\u4FDD\u6301\u4F4E\u7A7A\u3001\u501F\u96FE\u906E\u853D\uFF0C\u5E76\u6536\u96C6\u6CBF\u9014\u6563\u9038\u7075\u6C14\uFF0C\u624D\u80FD\u4E3A\u64A4\u9000\u4FDD\u7559\u6CD5\u529B\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.flight.female_text",
+          "text": "\u77F3\u58C1\u95F4\u7684\u98CE\u6B63\u5728\u6539\u53D8\u3002\u961F\u4F0D\u82E5\u6CBF\u8C37\u5E95\u524D\u8FDB\uFF0C\u5F88\u53EF\u80FD\u9519\u8FC7\u5165\u53E3\uFF1B\u82E5\u7ED3\u9635\u98DE\u8D8A\uFF0C\u4F24\u5458\u4F1A\u62D6\u6162\u6240\u6709\u4EBA\u3002\u695A\u660E\u7EEE\u5FC5\u987B\u5728\u4F4E\u7A7A\u9886\u822A\uFF0C\u907F\u5F00\u4E71\u6D41\u4E0E\u4FA6\u6D4B\u5149\uFF0C\u540C\u65F6\u7528\u6700\u5C11\u6CD5\u529B\u4E3A\u5F1F\u5B50\u6253\u5F00\u5B89\u5168\u822A\u7EBF\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "flight_sky-v2",
+        "portraitMediaRef": null,
+        "introMediaRef": "fmv_celestial_flight",
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse",
+        "npc.invalid.system.irrelevant",
+        "npc.invalid.system.too_long",
+        "npc.invalid.system.silence",
+        "npc.invalid.system.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "flight_sky-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:a0f9a817adc0fbc64baee43e9c210a1553c310aabe80964db156713c482201a2",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "flight_sky-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:a0f9a817adc0fbc64baee43e9c210a1553c310aabe80964db156713c482201a2",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": {
+        "mediaRef": "fmv_celestial_flight",
+        "assetVersion": "1",
+        "contentHash": "sha256:75efb1c2dc7e79877a485d5ec7111de3008a252f737d3dd1b27b9a6231e2de21",
+        "mediaType": "video"
+      },
+      "generationTier": "reuse_only",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "flight_sky-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:a0f9a817adc0fbc64baee43e9c210a1553c310aabe80964db156713c482201a2",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "needs_review",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "human_review.required",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.herb_route.primary",
+      "nodeId": "herb_route",
+      "nodeKind": "HerbGathering",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/4",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.herb_route.male_text",
+          "text": "\u96FE\u6563\u7684\u4E00\u523B\uFF0C\u56DB\u79CD\u7075\u690D\u540C\u65F6\u663E\u9732\u3002\u771F\u6B63\u7684\u7389\u9AD3\u829D\u5E94\u5F53\u6839\u987B\u85CF\u767D\u3001\u53F6\u80CC\u6709\u51B7\u9732\uFF0C\u9644\u8FD1\u5374\u6CA1\u6709\u5B88\u836F\u5996\u517D\u7559\u4E0B\u7684\u8DB3\u8FF9\u3002\u6709\u4EBA\u6545\u610F\u79FB\u683D\u4E86\u8D5D\u54C1\uFF0C\u4E5F\u6709\u4EBA\u5728\u771F\u836F\u5468\u56F4\u5E03\u4E0B\u5F15\u517D\u7C89\u3002\u9009\u9519\u5E76\u975E\u53EA\u635F\u5931\u65F6\u95F4\uFF0C\u8FD8\u4F1A\u628A\u85CF\u5728\u96FE\u540E\u7684\u4E1C\u897F\u5F15\u6765\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.herb_route.female_text",
+          "text": "\u836F\u8C37\u91CC\u56DB\u5904\u90FD\u662F\u88AB\u7FFB\u52A8\u8FC7\u7684\u6CE5\u571F\u3002\u5F1F\u5B50\u8BA4\u51FA\u4E86\u7D2B\u7334\u82B1\uFF0C\u5374\u6CA1\u6709\u6CE8\u610F\u82B1\u830E\u4E0A\u7684\u70ED\u6591\u3002\u695A\u660E\u7EEE\u5FC5\u987B\u8BA9\u961F\u4F0D\u5728\u4E89\u836F\u6B32\u671B\u538B\u8FC7\u7EAA\u5F8B\u524D\u505C\u4E0B\u6765\uFF1A\u5148\u8FA8\u8BA4\u3001\u518D\u91C7\u96C6\u3001\u6700\u540E\u6E05\u7406\u6C14\u5473\uFF0C\u4EFB\u4F55\u4E00\u6B65\u7701\u7565\u90FD\u53EF\u80FD\u8BA9\u6574\u961F\u66B4\u9732\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "red_mist_establishing",
+        "portraitMediaRef": null,
+        "introMediaRef": "fmv_herb_courtyard",
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": {
+        "mediaRef": "fmv_herb_courtyard",
+        "assetVersion": "1",
+        "contentHash": "sha256:75d156438fa91f4a35f02ac0370253079f87484e2e73b0454cc1b7ce58f02553",
+        "mediaType": "video"
+      },
+      "generationTier": "reuse_only",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "needs_review",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "human_review.required",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.corpse_signs.primary",
+      "nodeId": "corpse_signs",
+      "nodeKind": "DivineSense",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/5",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.corpse_signs.male_text",
+          "text": "\u6EAA\u6C34\u65C1\u8EBA\u7740\u4E00\u540D\u5916\u5B97\u5F1F\u5B50\uFF0C\u7EB3\u7269\u56CA\u8FD8\u5728\uFF0C\u81F4\u547D\u4F24\u5374\u4E0D\u662F\u5996\u517D\u9020\u6210\u3002\u6811\u76AE\u4E0A\u6709\u4E09\u9053\u6781\u7EC6\u7684\u5272\u75D5\uFF0C\u6CE5\u4E2D\u8FD8\u6B8B\u7559\u88AB\u706B\u70E4\u5E72\u7684\u86DB\u4E1D\u3002\u653E\u51FA\u795E\u8BC6\u53EF\u4EE5\u590D\u539F\u88AD\u51FB\u65B9\u5411\uFF0C\u4E5F\u53EF\u80FD\u60CA\u52A8\u4ECD\u5728\u9644\u8FD1\u7684\u4EBA\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.corpse_signs.female_text",
+          "text": "\u5931\u8054\u5F1F\u5B50\u7684\u4F69\u5251\u63D2\u5728\u6EAA\u8FB9\uFF0C\u5251\u7A57\u671D\u5411\u4E0E\u5C38\u4F53\u5012\u4E0B\u7684\u65B9\u5411\u76F8\u53CD\u3002\u6709\u4EBA\u79FB\u52A8\u8FC7\u73B0\u573A\u3002\u695A\u660E\u7EEE\u82E5\u4EB2\u81EA\u63A2\u67E5\uFF0C\u4F2A\u88C5\u6CD5\u529B\u4F1A\u51FA\u73B0\u77ED\u6682\u6CE2\u52A8\uFF1B\u82E5\u8BA9\u5E74\u8F7B\u5F1F\u5B50\u641C\u7D22\uFF0C\u4ED6\u4EEC\u53EF\u80FD\u8E29\u4E2D\u4ECD\u672A\u89E3\u9664\u7684\u7B2C\u4E8C\u5C42\u9677\u9631\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "red_mist_modules",
+        "portraitMediaRef": null,
+        "introMediaRef": null,
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "red_mist_modules",
+        "assetVersion": "1",
+        "contentHash": "sha256:d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "red_mist_modules",
+        "assetVersion": "1",
+        "contentHash": "sha256:d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": null,
+      "generationTier": "blocked_pending_g2",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "red_mist_modules",
+        "assetVersion": "1",
+        "contentHash": "sha256:d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "generation.g2_blocked",
+        "human_review.required",
+        "primary_video.missing",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.rescue.primary",
+      "nodeId": "rescue",
+      "nodeKind": "Narrative",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/6",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.rescue.male_text",
+          "text": "\u96FE\u540E\u4F20\u6765\u4E24\u77ED\u4E00\u957F\u7684\u6572\u77F3\u58F0\u3002\u90A3\u662F\u4E03\u6D3E\u5171\u7528\u7684\u6C42\u63F4\u6697\u53F7\uFF0C\u4E5F\u53EF\u80FD\u662F\u4F0F\u51FB\u8005\u4ECE\u6B7B\u8005\u8EAB\u4E0A\u5B66\u6765\u7684\u8BF1\u9975\u3002\u5165\u53E3\u8FD8\u6709\u4E00\u523B\u949F\u5173\u95ED\uFF1B\u7ED5\u884C\u6700\u7A33\uFF0C\u6551\u4EBA\u4F1A\u5931\u53BB\u4E89\u836F\u5148\u673A\uFF0C\u800C\u987A\u52BF\u8BBE\u4F0F\u5219\u53EF\u80FD\u628A\u771F\u6B63\u7684\u4F24\u5458\u4E5F\u5F53\u6210\u68CB\u5B50\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.rescue.female_text",
+          "text": "\u6572\u77F3\u58F0\u6765\u81EA\u853D\u6708\u5BAB\u65E7\u6697\u53F7\uFF0C\u56DE\u5E94\u5374\u6162\u4E86\u534A\u62CD\u3002\u695A\u660E\u7EEE\u77E5\u9053\u5931\u8054\u95E8\u4EBA\u5C31\u5728\u9644\u8FD1\uFF0C\u4E5F\u77E5\u9053\u654C\u4EBA\u53EF\u80FD\u6B63\u501F\u5979\u7684\u8D23\u4EFB\u8BBE\u5C40\u3002\u5B97\u95E8\u9886\u961F\u6700\u96BE\u7684\u9009\u62E9\u4ECE\u6765\u4E0D\u662F\u6551\u4E0D\u6551\uFF0C\u800C\u662F\u613F\u610F\u8BA9\u591A\u5C11\u4EBA\u5171\u540C\u627F\u62C5\u8FD9\u6B21\u6551\u63F4\u7684\u4EE3\u4EF7\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "red_mist_weather",
+        "portraitMediaRef": null,
+        "introMediaRef": null,
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.ally.abuse",
+        "npc.invalid.ally.irrelevant",
+        "npc.invalid.ally.too_long",
+        "npc.invalid.ally.silence",
+        "npc.invalid.ally.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": null,
+      "generationTier": "blocked_pending_g2",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "generation.g2_blocked",
+        "human_review.required",
+        "primary_video.missing",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.shijun.primary",
+      "nodeId": "shijun",
+      "nodeKind": "Narrative",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/7",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.shijun.male_text",
+          "text": "\u77F3\u5CFB\u4ECE\u94DC\u95E8\u9634\u5F71\u4E2D\u73B0\u8EAB\uFF0C\u624B\u91CC\u8F6C\u7740\u4E00\u679A\u67D3\u8840\u9635\u9489\u3002\u4ED6\u6CA1\u6709\u7ACB\u523B\u653B\u51FB\uFF0C\u53EA\u63D0\u51FA\u4EA4\u6362\uFF1A\u4EA4\u51FA\u521A\u91C7\u5230\u7684\u7075\u836F\uFF0C\u4ED6\u4FBF\u8BF4\u51FA\u5730\u4E0B\u5165\u53E3\u7684\u4F4D\u7F6E\u3002\u6C88\u781A\u6CE8\u610F\u5230\u9635\u9489\u4E0A\u7684\u6CE5\u4ECD\u5728\u5192\u70ED\u6C14\u2014\u2014\u5BF9\u65B9\u521A\u4ECE\u5730\u4E0B\u8D25\u9000\uFF0C\u6240\u8C13\u60C5\u62A5\u5F88\u53EF\u80FD\u53EA\u662F\u4E00\u6B21\u501F\u5200\u6740\u4EBA\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.shijun.female_text",
+          "text": "\u77F3\u5CFB\u62E6\u4F4F\u961F\u4F0D\uFF0C\u58F0\u79F0\u5931\u8054\u5F1F\u5B50\u5DF2\u7ECF\u8FDB\u5165\u5730\u4E0B\uFF0C\u8FD8\u5C55\u793A\u4E00\u679A\u853D\u6708\u5BAB\u8170\u724C\u3002\u8170\u724C\u662F\u771F\u7684\uFF0C\u8BDD\u5374\u672A\u5FC5\u3002\u4ED6\u5728\u7B49\u5F85\u695A\u660E\u7EEE\u56E0\u7126\u6025\u800C\u66B4\u9732\u4FEE\u4E3A\uFF1B\u53EA\u8981\u5979\u5148\u52A8\u624B\uFF0C\u5176\u4ED6\u5B97\u95E8\u4FBF\u4F1A\u628A\u51B2\u7A81\u8BB0\u6210\u853D\u6708\u5BAB\u5F3A\u593A\u5165\u53E3\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "red_mist_modules",
+        "portraitMediaRef": "shi_jun-v1",
+        "introMediaRef": null,
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.hostile.abuse",
+        "npc.invalid.hostile.irrelevant",
+        "npc.invalid.hostile.too_long",
+        "npc.invalid.hostile.silence",
+        "npc.invalid.hostile.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "red_mist_modules",
+        "assetVersion": "1",
+        "contentHash": "sha256:d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "red_mist_modules",
+        "assetVersion": "1",
+        "contentHash": "sha256:d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": null,
+      "generationTier": "blocked_pending_g2",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "red_mist_modules",
+        "assetVersion": "1",
+        "contentHash": "sha256:d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "generation.g2_blocked",
+        "human_review.required",
+        "primary_video.missing",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.formation.primary",
+      "nodeId": "formation",
+      "nodeKind": "Formation",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/8",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.formation.male_text",
+          "text": "\u56DB\u9053\u94DC\u95E8\u5E76\u4E0D\u5BF9\u5E94\u56DB\u6761\u8DEF\u3002\u6708\u9633\u5B9D\u73E0\u7684\u5149\u4F9D\u6B21\u843D\u5728\u65E7\u94DC\u3001\u9752\u77F3\u3001\u836F\u53F6\u548C\u6C34\u9762\u4E0A\uFF0C\u5F62\u6210\u4E00\u6761\u4E0D\u65AD\u91CD\u590D\u7684\u7075\u6C14\u56DE\u8DEF\u3002\u6309\u9519\u8BEF\u987A\u5E8F\u89E6\u78B0\u9635\u773C\u4F1A\u5524\u9192\u5B88\u836F\u517D\uFF1B\u5F3A\u653B\u5219\u4F1A\u6D88\u8017\u672C\u5E94\u7528\u4E8E\u58A8\u86DF\u6218\u7684\u6CD5\u529B\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.formation.female_text",
+          "text": "\u9635\u6CD5\u6B8B\u7F3A\uFF0C\u5374\u4ECD\u5728\u6309\u7167\u65E7\u65E5\u5DE1\u884C\u89C4\u5F8B\u8F6C\u52A8\u3002\u695A\u660E\u7EEE\u770B\u51FA\u56DB\u4E2A\u9635\u773C\u4E2D\u53EA\u6709\u4E09\u4E2A\u9700\u8981\u6FC0\u6D3B\uFF0C\u6700\u540E\u4E00\u4E2A\u5FC5\u987B\u4FDD\u6301\u6C89\u5BC2\uFF0C\u624D\u80FD\u4E3A\u961F\u4F0D\u7559\u4E0B\u64A4\u9000\u7F3A\u53E3\u3002\u5E74\u8F7B\u5F1F\u5B50\u5DF2\u7ECF\u4E3E\u8D77\u9635\u65D7\uFF0C\u7B49\u5F85\u5979\u7ED9\u51FA\u987A\u5E8F\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "red_mist_weather",
+        "portraitMediaRef": null,
+        "introMediaRef": null,
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse",
+        "npc.invalid.system.irrelevant",
+        "npc.invalid.system.too_long",
+        "npc.invalid.system.silence",
+        "npc.invalid.system.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": null,
+      "generationTier": "blocked_pending_g2",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "generation.g2_blocked",
+        "human_review.required",
+        "primary_video.missing",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.underground.primary",
+      "nodeId": "underground",
+      "nodeKind": "Narrative",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/9",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.underground.male_text",
+          "text": "\u9752\u77F3\u6BBF\u4E0B\u65B9\u5E76\u4E0D\u662F\u5730\u5BAB\uFF0C\u800C\u662F\u4E00\u7247\u65B9\u5706\u6570\u91CC\u7684\u9ED1\u6CE5\u6CBC\u6CFD\u3002\u70ED\u6C14\u4ECE\u6CE5\u6CE1\u4E2D\u55B7\u51FA\uFF0C\u767D\u7389\u5C0F\u4EAD\u60AC\u5728\u4E2D\u592E\uFF0C\u6697\u91D1\u7BB1\u5323\u6D6E\u4E8E\u4EAD\u4E0A\u3002\u695A\u660E\u7EEE\u7AD9\u5728\u53E6\u4E00\u4FA7\u7389\u680F\u540E\uFF0C\u8EAB\u8FB9\u8FD8\u6709\u4E00\u540D\u8D1F\u4F24\u5F1F\u5B50\u3002\u4E24\u4EBA\u5C1A\u672A\u5F00\u53E3\uFF0C\u6CE5\u9762\u5DF2\u7ECF\u51FA\u73B0\u7B2C\u4E8C\u9053\u6D9F\u6F2A\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.underground.female_text",
+          "text": "\u5730\u4E0B\u70ED\u98CE\u626F\u52A8\u9762\u7EB1\u3002\u5BF9\u9762\u90A3\u4E2A\u6CD5\u529B\u4E0D\u9AD8\u7684\u9752\u8863\u4FEE\u58EB\u6CA1\u6709\u62A2\u5148\u9760\u8FD1\u91D1\u7BB1\uFF0C\u53CD\u800C\u5148\u5728\u9ED1\u571F\u5806\u95F4\u6807\u51FA\u4E09\u6761\u64A4\u9000\u7EBF\u3002\u695A\u660E\u7EEE\u8BA4\u51FA\u8FD9\u79CD\u8C28\u614E\uFF0C\u4E5F\u770B\u89C1\u58A8\u86DF\u6B63\u4ECE\u4ED6\u7684\u76F2\u533A\u6F5C\u8FD1\u3002\u53CC\u65B9\u82E5\u4E0D\u80FD\u5728\u7B2C\u4E00\u51FB\u524D\u5EFA\u7ACB\u6700\u4F4E\u9650\u5EA6\u7684\u4FE1\u4EFB\uFF0C\u4EFB\u4F55\u5B9D\u7269\u90FD\u53EA\u4F1A\u6210\u4E3A\u8BF1\u9975\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "dragon_cavern-v2",
+        "portraitMediaRef": null,
+        "introMediaRef": "fmv_sword_vault",
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.encounter.abuse",
+        "npc.invalid.encounter.irrelevant",
+        "npc.invalid.encounter.too_long",
+        "npc.invalid.encounter.silence",
+        "npc.invalid.encounter.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": {
+        "mediaRef": "fmv_sword_vault",
+        "assetVersion": "1",
+        "contentHash": "sha256:e8309c400513ea613b42752315a7da7f1819c3a546101ab408cde5598ffdbad2",
+        "mediaType": "video"
+      },
+      "generationTier": "reuse_only",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "needs_review",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "human_review.required",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.combat_one.primary",
+      "nodeId": "combat_one",
+      "nodeKind": "CombatOne",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/10",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.combat_one.male_text",
+          "text": "\u58A8\u86DF\u7834\u6CE5\u800C\u51FA\uFF0C\u9CDE\u7247\u628A\u6708\u5149\u77F3\u53CD\u5C04\u6210\u788E\u767D\u3002\u5B83\u6CA1\u6709\u7ACB\u523B\u6251\u5411\u6700\u8FD1\u7684\u4EBA\uFF0C\u800C\u662F\u4EE5\u957F\u5C3E\u5C01\u4F4F\u72ED\u9053\u3002\u6C88\u781A\u5FC5\u987B\u51B3\u5B9A\u7B2C\u4E00\u8F6E\u76EE\u6807\uFF1A\u9650\u5236\u86DF\u5C3E\u3001\u4FDD\u62A4\u4F24\u5458\u3001\u8BD5\u63A2\u9CDE\u7532\u5F31\u70B9\uFF0C\u6216\u8D81\u64A4\u9000\u7A97\u53E3\u5C1A\u5728\u65F6\u79BB\u5F00\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.combat_one.female_text",
+          "text": "\u58A8\u86DF\u7684\u7B2C\u4E00\u51FB\u4E0D\u662F\u51B2\u649E\uFF0C\u800C\u662F\u628A\u6EDA\u70EB\u9ED1\u6CE5\u6380\u5411\u853D\u6708\u5BAB\u5F1F\u5B50\u3002\u695A\u660E\u7EEE\u53EF\u4EE5\u63A7\u5236\u533A\u57DF\u3001\u7EC4\u7EC7\u64A4\u79BB\uFF0C\u4E5F\u53EF\u4EE5\u77ED\u6682\u91CA\u653E\u8D64\u9E3E\u706B\u538B\u5236\u5996\u86DF\uFF1B\u8D8A\u5F3A\u7684\u624B\u6BB5\u8D8A\u80FD\u6551\u4EBA\uFF0C\u4E5F\u8D8A\u96BE\u7EE7\u7EED\u9690\u85CF\u771F\u5B9E\u72B6\u6001\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "dragon_attack-v1",
+        "portraitMediaRef": null,
+        "introMediaRef": null,
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse",
+        "npc.invalid.system.irrelevant",
+        "npc.invalid.system.too_long",
+        "npc.invalid.system.silence",
+        "npc.invalid.system.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "dragon_attack-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "dragon_attack-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": null,
+      "generationTier": "blocked_pending_g2",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "dragon_attack-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "generation.g2_blocked",
+        "human_review.required",
+        "primary_video.missing",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.combat_two.primary",
+      "nodeId": "combat_two",
+      "nodeKind": "CombatTwo",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/11",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.combat_two.male_text",
+          "text": "\u58A8\u86DF\u88AB\u903C\u79BB\u6CE5\u9762\uFF0C\u5374\u5F00\u59CB\u649E\u51FB\u652F\u6491\u767D\u7389\u4EAD\u7684\u9635\u67F1\u3002\u518D\u62D6\u4E00\u8F6E\uFF0C\u91D1\u7BB1\u4E0E\u7075\u836F\u90FD\u4F1A\u6C89\u5165\u9ED1\u6CE5\u3002\u6C88\u781A\u53EF\u4EE5\u53D1\u52A8\u91D1\u8709\u8FDE\u73AF\u5203\u3001\u5F15\u7206\u9884\u7F6E\u7B26\u7B93\u3001\u5229\u7528\u84B8\u6C7D\u906E\u6321\u5408\u51FB\uFF0C\u6216\u4FDD\u7559\u6700\u540E\u6CD5\u529B\u5E26\u4EBA\u64A4\u9000\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.combat_two.female_text",
+          "text": "\u9635\u67F1\u6B63\u5728\u65AD\u88C2\uFF0C\u8D1F\u4F24\u5F1F\u5B50\u5DF2\u7ECF\u65E0\u6CD5\u81EA\u884C\u79BB\u5F00\u3002\u695A\u660E\u7EEE\u53EF\u4EE5\u516C\u5F00\u8D64\u9E3E\u7130\u73AF\u5B8C\u6210\u538B\u5236\uFF0C\u4E5F\u53EF\u4EE5\u501F\u6C88\u781A\u7684\u7B26\u9635\u628A\u706B\u5149\u4F2A\u88C5\u6210\u73AF\u5883\u5F02\u53D8\u3002\u524D\u8005\u66F4\u7A33\uFF0C\u540E\u8005\u9700\u8981\u771F\u6B63\u4FE1\u4EFB\u4E00\u4E2A\u521A\u8BA4\u8BC6\u7684\u4EBA\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "dragon_attack-v1",
+        "portraitMediaRef": null,
+        "introMediaRef": null,
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse",
+        "npc.invalid.system.irrelevant",
+        "npc.invalid.system.too_long",
+        "npc.invalid.system.silence",
+        "npc.invalid.system.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "dragon_attack-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "dragon_attack-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": null,
+      "generationTier": "blocked_pending_g2",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "dragon_attack-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "generation.g2_blocked",
+        "human_review.required",
+        "primary_video.missing",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.aftermath.primary",
+      "nodeId": "aftermath",
+      "nodeKind": "Narrative",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/12",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.aftermath.male_text",
+          "text": "\u58A8\u86DF\u9000\u5165\u9ED1\u6CE5\uFF0C\u6216\u7EC8\u4E8E\u4E0D\u518D\u52A8\u5F39\u3002\u91D1\u7BB1\u7981\u5236\u4ECD\u672A\u5B8C\u5168\u89E3\u9664\uFF0C\u51FA\u53E3\u5374\u5728\u6536\u7F29\u3002\u6B64\u523B\u62FF\u8D70\u4EC0\u4E48\u3001\u6551\u4E0B\u8C01\u3001\u662F\u5426\u8FFD\u51FB\uFF0C\u4EE5\u53CA\u613F\u4E0D\u613F\u610F\u66FF\u4E34\u65F6\u76DF\u53CB\u9690\u7792\u5E95\u724C\uFF0C\u6BD4\u6218\u6597\u672C\u8EAB\u66F4\u80FD\u51B3\u5B9A\u4E24\u6761\u4FEE\u4ED9\u8DEF\u65E5\u540E\u7684\u5F62\u72B6\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.aftermath.female_text",
+          "text": "\u6CE5\u9762\u6062\u590D\u5E73\u9759\u53EA\u662F\u6682\u65F6\u7684\u3002\u5F1F\u5B50\u3001\u91D1\u7BB1\u3001\u58A8\u86DF\u6750\u6599\u548C\u540C\u76DF\u8005\u7684\u79D8\u5BC6\uFF0C\u4E0D\u53EF\u80FD\u5168\u90E8\u5E26\u8D70\u3002\u695A\u660E\u7EEE\u5FC5\u987B\u4F5C\u51FA\u9886\u961F\u7684\u6700\u540E\u51B3\u5B9A\uFF0C\u5E76\u63A5\u53D7\u56DE\u5230\u5B97\u95E8\u540E\u6709\u4EBA\u4F1A\u8FFD\u95EE\u6BCF\u4E00\u5904\u7F3A\u5931\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "dragon_cavern-v2",
+        "portraitMediaRef": null,
+        "introMediaRef": null,
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": null,
+      "generationTier": "blocked_pending_g2",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "generation.g2_blocked",
+        "human_review.required",
+        "primary_video.missing",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    },
+    {
+      "shotId": "shot.ending.primary",
+      "nodeId": "ending",
+      "nodeKind": "Ending",
+      "source": {
+        "sourceId": "chapter.red_mist",
+        "locator": "/sceneNodes/13",
+        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.red_mist.node.ending.male_text",
+          "text": "\u96FE\u95E8\u5728\u8EAB\u540E\u5408\u62E2\u3002\u6709\u4EBA\u5E26\u56DE\u4E3B\u836F\uFF0C\u6709\u4EBA\u5E26\u56DE\u4F24\u8005\uFF0C\u4E5F\u6709\u4EBA\u53EA\u5E26\u56DE\u4E00\u6761\u4EE5\u540E\u7EDD\u4E0D\u4F1A\u518D\u8D70\u9519\u7684\u9000\u8DEF\u3002\u6C88\u781A\u6CA1\u6709\u5F97\u5230\u6240\u6709\u4E1C\u897F\uFF0C\u5374\u786E\u8BA4\u4E86\u4E00\u4EF6\u66F4\u91CD\u8981\u7684\u4E8B\uFF1A\u771F\u6B63\u7684\u5E95\u724C\u4E0D\u662F\u67D0\u4EF6\u6CD5\u5668\uFF0C\u800C\u662F\u5728\u522B\u4EBA\u90FD\u88AB\u5B9D\u7269\u5438\u5F15\u65F6\uFF0C\u4ECD\u80FD\u5224\u65AD\u81EA\u5DF1\u613F\u610F\u4ED8\u51FA\u4EC0\u4E48\u3002"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.red_mist.node.ending.female_text",
+          "text": "\u96FE\u95E8\u5728\u8EAB\u540E\u5408\u62E2\u3002\u5F1F\u5B50\u5F00\u59CB\u6E05\u70B9\u4F24\u4EA1\uFF0C\u957F\u8001\u7684\u4F20\u8BAF\u4E5F\u5DF2\u7ECF\u62B5\u8FBE\u3002\u695A\u660E\u7EEE\u77E5\u9053\u5B97\u95E8\u4F1A\u8BC4\u4EF7\u5979\u5E26\u56DE\u591A\u5C11\u8D44\u6E90\uFF0C\u5374\u65E0\u6CD5\u66FF\u5979\u5B9A\u4E49\u8FD9\u6B21\u9009\u62E9\u3002\u5979\u4FDD\u4F4F\u6216\u66B4\u9732\u7684\u529B\u91CF\u3001\u6551\u4E0B\u6216\u653E\u5F03\u7684\u4EBA\uFF0C\u90FD\u4F1A\u5728\u4E0B\u4E00\u6B21\u547D\u4EE4\u5230\u6765\u65F6\u7AD9\u5728\u5979\u8EAB\u8FB9\u3002"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "red_mist_establishing",
+        "portraitMediaRef": null,
+        "introMediaRef": null,
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": null,
+      "generationTier": "blocked_pending_g2",
+      "maximumCostMicros": 0,
+      "fallbackMedia": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image"
+      },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "character_state.missing",
+        "duration.missing",
+        "frame.background_placeholder",
+        "generation.g2_blocked",
+        "human_review.required",
+        "primary_video.missing",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    }
+  ],
+  "contentHash": "sha256:f1b2ea03d432565a00723b5c88513ef8feec673b993b08db85406df5a3e2ebf5"
+}

@@ -1,0 +1,729 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/shot-manifest.schema.json",
+  "title": "ShotManifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "manifestId",
+    "sourceBundleId",
+    "sourceBundleContentHash",
+    "language",
+    "currency",
+    "approvalStatus",
+    "shotDispatchAllowed",
+    "responseRequirements",
+    "shots",
+    "contentHash"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "manifestId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "sourceBundleId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "sourceBundleContentHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "language": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 35,
+      "pattern": "^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+    },
+    "currency": {
+      "type": "string",
+      "enum": [
+        "CNY",
+        "USD",
+        "EUR",
+        "GBP",
+        "JPY",
+        "HKD"
+      ]
+    },
+    "approvalStatus": {
+      "$ref": "common.schema.json#/$defs/status"
+    },
+    "shotDispatchAllowed": {
+      "type": "boolean"
+    },
+    "responseRequirements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/responseRequirement"
+      }
+    },
+    "shots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/shot"
+      }
+    },
+    "contentHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    }
+  },
+  "$defs": {
+    "nullableMediaRef": {
+      "oneOf": [
+        {
+          "$ref": "common.schema.json#/$defs/mediaRef"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "mediaPin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mediaRef",
+        "assetVersion",
+        "contentHash",
+        "mediaType"
+      ],
+      "properties": {
+        "mediaRef": {
+          "$ref": "common.schema.json#/$defs/mediaRef"
+        },
+        "assetVersion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "contentHash": {
+          "$ref": "common.schema.json#/$defs/sha256"
+        },
+        "mediaType": {
+          "type": "string",
+          "enum": [
+            "video",
+            "audio",
+            "image",
+            "animation",
+            "subtitle"
+          ]
+        }
+      }
+    },
+    "nullableMediaPin": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/mediaPin"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "localizedValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "localizationKey",
+        "text"
+      ],
+      "properties": {
+        "localizationKey": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096,
+          "pattern": "^(?=.*\\S)[^\\u0000-\\u001F\\u007F-\\u009F\\u00AD\\u061C\\u200E\\u200F\\u2028-\\u202E\\u2066-\\u2069\\uFEFF]*$"
+        }
+      }
+    },
+    "dialogueVariant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "route",
+        "localizationKey",
+        "text"
+      ],
+      "properties": {
+        "route": {
+          "type": "string",
+          "enum": [
+            "male",
+            "female"
+          ]
+        },
+        "localizationKey": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096,
+          "pattern": "^(?=.*\\S)[^\\u0000-\\u001F\\u007F-\\u009F\\u00AD\\u061C\\u200E\\u200F\\u2028-\\u202E\\u2066-\\u2069\\uFEFF]*$"
+        }
+      }
+    },
+    "frameReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mediaRef",
+        "assetVersion",
+        "contentHash",
+        "mediaType",
+        "origin"
+      ],
+      "properties": {
+        "mediaRef": {
+          "$ref": "common.schema.json#/$defs/mediaRef"
+        },
+        "assetVersion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "contentHash": {
+          "$ref": "common.schema.json#/$defs/sha256"
+        },
+        "mediaType": {
+          "const": "image"
+        },
+        "origin": {
+          "type": "string",
+          "enum": [
+            "approved_frame",
+            "background_placeholder"
+          ]
+        }
+      }
+    },
+    "mediaRoles": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "backgroundMediaRef",
+        "portraitMediaRef",
+        "introMediaRef",
+        "explicitFallbackMediaRef",
+        "auxiliaryMediaRefs"
+      ],
+      "properties": {
+        "backgroundMediaRef": {
+          "$ref": "common.schema.json#/$defs/mediaRef"
+        },
+        "portraitMediaRef": {
+          "$ref": "#/$defs/nullableMediaRef"
+        },
+        "introMediaRef": {
+          "$ref": "#/$defs/nullableMediaRef"
+        },
+        "explicitFallbackMediaRef": {
+          "$ref": "#/$defs/nullableMediaRef"
+        },
+        "auxiliaryMediaRefs": {
+          "$ref": "common.schema.json#/$defs/idArray"
+        }
+      }
+    },
+    "responseRequirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "responseId",
+        "sourceNodeIds",
+        "text",
+        "emotion",
+        "lipSyncMedia",
+        "audioMedia",
+        "fallbackMedia",
+        "readinessStatus",
+        "issueCodes"
+      ],
+      "properties": {
+        "responseId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "sourceNodeIds": {
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/idArray"
+            },
+            {
+              "minItems": 1
+            }
+          ]
+        },
+        "text": {
+          "$ref": "#/$defs/localizedValue"
+        },
+        "emotion": {
+          "$ref": "#/$defs/localizedValue"
+        },
+        "lipSyncMedia": {
+          "$ref": "#/$defs/mediaPin"
+        },
+        "audioMedia": {
+          "$ref": "#/$defs/nullableMediaPin"
+        },
+        "fallbackMedia": {
+          "$ref": "#/$defs/nullableMediaPin"
+        },
+        "readinessStatus": {
+          "type": "string",
+          "enum": [
+            "ready",
+            "needs_review",
+            "blocked"
+          ]
+        },
+        "issueCodes": {
+          "$ref": "common.schema.json#/$defs/idArray"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "readinessStatus": {
+                "const": "ready"
+              }
+            },
+            "required": [
+              "readinessStatus"
+            ]
+          },
+          "then": {
+            "properties": {
+              "lipSyncMedia": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/mediaPin"
+                  },
+                  {
+                    "properties": {
+                      "mediaType": {
+                        "enum": [
+                          "video",
+                          "animation"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "audioMedia": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/mediaPin"
+                  },
+                  {
+                    "properties": {
+                      "mediaType": {
+                        "const": "audio"
+                      }
+                    }
+                  }
+                ]
+              },
+              "fallbackMedia": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/mediaPin"
+                  },
+                  {
+                    "properties": {
+                      "mediaType": {
+                        "enum": [
+                          "video",
+                          "animation",
+                          "image"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "issueCodes": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "shot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "shotId",
+        "nodeId",
+        "nodeKind",
+        "source",
+        "dialogueVariants",
+        "dialogueBinding",
+        "mediaRoles",
+        "npcResponseRefs",
+        "targetDurationMilliseconds",
+        "firstFrame",
+        "lastFrame",
+        "primaryMedia",
+        "generationTier",
+        "maximumCostMicros",
+        "fallbackMedia",
+        "fallbackOrigin",
+        "characterStateRefs",
+        "readinessStatus",
+        "issueCodes",
+        "dispatchAllowed"
+      ],
+      "properties": {
+        "shotId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "nodeId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "nodeKind": {
+          "type": "string",
+          "enum": [
+            "Narrative",
+            "Flight",
+            "DivineSense",
+            "HerbGathering",
+            "Formation",
+            "CombatOne",
+            "CombatTwo",
+            "Ending"
+          ]
+        },
+        "source": {
+          "$ref": "common.schema.json#/$defs/sourceRef"
+        },
+        "dialogueVariants": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "$ref": "#/$defs/dialogueVariant"
+          },
+          "allOf": [
+            {
+              "contains": {
+                "properties": {
+                  "route": {
+                    "const": "male"
+                  }
+                },
+                "required": [
+                  "route"
+                ]
+              },
+              "minContains": 1,
+              "maxContains": 1
+            },
+            {
+              "contains": {
+                "properties": {
+                  "route": {
+                    "const": "female"
+                  }
+                },
+                "required": [
+                  "route"
+                ]
+              },
+              "minContains": 1,
+              "maxContains": 1
+            }
+          ]
+        },
+        "dialogueBinding": {
+          "type": "string",
+          "enum": [
+            "unbound_node_text",
+            "bound_to_primary_media"
+          ]
+        },
+        "mediaRoles": {
+          "$ref": "#/$defs/mediaRoles"
+        },
+        "npcResponseRefs": {
+          "$ref": "common.schema.json#/$defs/idArray"
+        },
+        "targetDurationMilliseconds": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 600000
+        },
+        "firstFrame": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/frameReference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lastFrame": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/frameReference"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "primaryMedia": {
+          "$ref": "#/$defs/nullableMediaPin"
+        },
+        "generationTier": {
+          "type": "string",
+          "enum": [
+            "reuse_only",
+            "blocked_pending_g2",
+            "preview_fast",
+            "final_quality"
+          ]
+        },
+        "maximumCostMicros": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9223372036854775807
+        },
+        "fallbackMedia": {
+          "$ref": "#/$defs/mediaPin"
+        },
+        "fallbackOrigin": {
+          "type": "string",
+          "enum": [
+            "explicit",
+            "media_asset_fallback",
+            "background_placeholder"
+          ]
+        },
+        "characterStateRefs": {
+          "$ref": "common.schema.json#/$defs/idArray"
+        },
+        "readinessStatus": {
+          "type": "string",
+          "enum": [
+            "ready",
+            "needs_review",
+            "blocked"
+          ]
+        },
+        "issueCodes": {
+          "$ref": "common.schema.json#/$defs/idArray"
+        },
+        "dispatchAllowed": {
+          "type": "boolean"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "generationTier": {
+                "enum": [
+                  "reuse_only",
+                  "blocked_pending_g2"
+                ]
+              }
+            },
+            "required": [
+              "generationTier"
+            ]
+          },
+          "then": {
+            "properties": {
+              "maximumCostMicros": {
+                "const": 0
+              },
+              "dispatchAllowed": {
+                "const": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "dispatchAllowed": {
+                "const": true
+              }
+            },
+            "required": [
+              "dispatchAllowed"
+            ]
+          },
+          "then": {
+            "properties": {
+              "source": {
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/$defs/sourceRef"
+                  },
+                  {
+                    "required": [
+                      "needsReview"
+                    ],
+                    "properties": {
+                      "needsReview": {
+                        "const": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "dialogueBinding": {
+                "const": "bound_to_primary_media"
+              },
+              "targetDurationMilliseconds": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "firstFrame": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/frameReference"
+                  },
+                  {
+                    "properties": {
+                      "origin": {
+                        "const": "approved_frame"
+                      }
+                    }
+                  }
+                ]
+              },
+              "lastFrame": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/frameReference"
+                  },
+                  {
+                    "properties": {
+                      "origin": {
+                        "const": "approved_frame"
+                      }
+                    }
+                  }
+                ]
+              },
+              "primaryMedia": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/mediaPin"
+                  },
+                  {
+                    "properties": {
+                      "mediaType": {
+                        "enum": [
+                          "video",
+                          "animation"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "generationTier": {
+                "enum": [
+                  "preview_fast",
+                  "final_quality"
+                ]
+              },
+              "maximumCostMicros": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "fallbackMedia": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/mediaPin"
+                  },
+                  {
+                    "properties": {
+                      "mediaType": {
+                        "enum": [
+                          "video",
+                          "animation",
+                          "image"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "characterStateRefs": {
+                "minItems": 1
+              },
+              "readinessStatus": {
+                "const": "ready"
+              },
+              "issueCodes": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "shotDispatchAllowed": {
+            "const": true
+          }
+        },
+        "required": [
+          "shotDispatchAllowed"
+        ]
+      },
+      "then": {
+        "properties": {
+          "approvalStatus": {
+            "const": "approved"
+          },
+          "shots": {
+            "items": {
+              "properties": {
+                "dispatchAllowed": {
+                  "const": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "shots": {
+            "items": {
+              "properties": {
+                "dispatchAllowed": {
+                  "const": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

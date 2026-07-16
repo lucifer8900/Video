@@ -984,6 +984,106 @@
       "expectedValid": false,
       "expectedCode": "schema.minItems",
       "expectedPath": "/injections"
+    },
+    {
+      "name": "valid needs-review shot manifest",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "valid/shot-manifest.needs-review.json",
+      "expectedValid": true
+    },
+    {
+      "name": "shot manifest rejects additional properties",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/providerApiKey"
+    },
+    {
+      "name": "dispatchable shot requires a first frame",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-missing-frame.json",
+      "expectedValid": false,
+      "expectedCode": "schema.type",
+      "expectedPath": "/shots/0/firstFrame"
+    },
+    {
+      "name": "reuse-only shot cannot reserve generation cost",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.reuse-nonzero-cost.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/shots/0/maximumCostMicros"
+    },
+    {
+      "name": "valid ready shot manifest",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "valid/shot-manifest.ready.json",
+      "expectedValid": true
+    },
+    {
+      "name": "blocked manifest rejects dispatchable child shot",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.root-blocked-shot-dispatch.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/shots/0/dispatchAllowed"
+    },
+    {
+      "name": "dispatchable shot rejects placeholder first frame",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-placeholder-frame.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/shots/0/firstFrame/origin"
+    },
+    {
+      "name": "dispatchable shot requires target duration",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-missing-duration.json",
+      "expectedValid": false,
+      "expectedCode": "schema.type",
+      "expectedPath": "/shots/0/targetDurationMilliseconds"
+    },
+    {
+      "name": "shot manifest requires cost currency",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.missing-currency.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/currency"
+    },
+    {
+      "name": "ready response rejects image lip sync media",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.response-ready-image-lipsync.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/responseRequirements/0/lipSyncMedia/mediaType"
+    },
+    {
+      "name": "dispatchable shot rejects image primary media",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-image-primary.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/shots/0/primaryMedia/mediaType"
+    },
+    {
+      "name": "shot frame rejects video media type",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-video-frame.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/shots/0/firstFrame/mediaType"
+    },
+    {
+      "name": "dispatchable shot rejects audio fallback",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-audio-fallback.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/shots/0/fallbackMedia/mediaType"
     }
   ]
 }

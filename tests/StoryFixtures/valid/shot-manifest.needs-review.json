@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0.0",
+  "manifestId": "shot-manifest.chapter.fixture",
+  "sourceBundleId": "chapter.fixture",
+  "sourceBundleContentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "language": "zh-CN",
+  "currency": "USD",
+  "approvalStatus": "needs_review",
+  "shotDispatchAllowed": false,
+  "responseRequirements": [],
+  "shots": [
+    {
+      "shotId": "shot.fixture.primary",
+      "nodeId": "fixture",
+      "nodeKind": "Narrative",
+      "source": {
+        "sourceId": "chapter.fixture",
+        "locator": "/sceneNodes/0",
+        "evidenceHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+        "needsReview": true
+      },
+      "dialogueVariants": [
+        {
+          "route": "male",
+          "localizationKey": "story.fixture.male_text",
+          "text": "男线测试台词"
+        },
+        {
+          "route": "female",
+          "localizationKey": "story.fixture.female_text",
+          "text": "女线测试台词"
+        }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "fixture-background",
+        "portraitMediaRef": null,
+        "introMediaRef": null,
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [],
+      "targetDurationMilliseconds": null,
+      "firstFrame": {
+        "mediaRef": "fixture-background",
+        "assetVersion": "v1",
+        "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "lastFrame": {
+        "mediaRef": "fixture-background",
+        "assetVersion": "v1",
+        "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+        "mediaType": "image",
+        "origin": "background_placeholder"
+      },
+      "primaryMedia": null,
+      "generationTier": "blocked_pending_g2",
+      "maximumCostMicros": 0,
+      "fallbackMedia": { "mediaRef": "fixture-background", "assetVersion": "v1", "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222", "mediaType": "image" },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "duration.missing",
+        "frame.background_placeholder",
+        "generation.g2_blocked",
+        "primary_video.missing",
+        "source.original_missing"
+      ],
+      "dispatchAllowed": false
+    }
+  ],
+  "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+}

@@ -27,6 +27,18 @@ internal static class CompilerProcessHarness
             outputDirectory);
     }
 
+    public static async Task<ProcessResult> RunShotManifestGeneratorAsync(
+        string outputDirectory,
+        string? bundlePath = null)
+    {
+        var compilerDll = ToolDll("NarrativeCompiler");
+        return await RunDotNetAsync(
+            compilerDll,
+            "shot-manifest",
+            bundlePath ?? Path.Combine(SourceDirectory, "story.bundle.json"),
+            outputDirectory);
+    }
+
     public static async Task<ProcessResult> RunValidatorAsync(string bundleDirectory)
     {
         var validatorDll = ToolDll("StoryValidator");

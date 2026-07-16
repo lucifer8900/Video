@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "manifestId": "shot-manifest.chapter.fixture",
+  "sourceBundleId": "chapter.fixture",
+  "sourceBundleContentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "language": "zh-CN",
+  "currency": "USD",
+  "approvalStatus": "approved",
+  "shotDispatchAllowed": true,
+  "responseRequirements": [
+    {
+      "responseId": "response.fixture.ready",
+      "sourceNodeIds": ["fixture"],
+      "text": { "localizationKey": "story.fixture.response", "text": "审核通过的回应" },
+      "emotion": { "localizationKey": "story.fixture.emotion", "text": "平静" },
+      "lipSyncMedia": { "mediaRef": "fixture-lipsync", "assetVersion": "v1", "contentHash": "sha256:5555555555555555555555555555555555555555555555555555555555555555", "mediaType": "video" },
+      "audioMedia": { "mediaRef": "fixture-audio", "assetVersion": "v1", "contentHash": "sha256:6666666666666666666666666666666666666666666666666666666666666666", "mediaType": "audio" },
+      "fallbackMedia": { "mediaRef": "fixture-fallback", "assetVersion": "v1", "contentHash": "sha256:7777777777777777777777777777777777777777777777777777777777777777", "mediaType": "video" },
+      "readinessStatus": "ready",
+      "issueCodes": []
+    }
+  ],
+  "shots": [
+    {
+      "shotId": "shot.fixture.primary",
+      "nodeId": "fixture",
+      "nodeKind": "Narrative",
+      "source": {
+        "sourceId": "chapter.fixture",
+        "locator": "/sceneNodes/0",
+        "evidenceHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+        "needsReview": false
+      },
+      "dialogueVariants": [
+        { "route": "male", "localizationKey": "story.fixture.male_text", "text": "男线测试台词" },
+        { "route": "female", "localizationKey": "story.fixture.female_text", "text": "女线测试台词" }
+      ],
+      "dialogueBinding": "bound_to_primary_media",
+      "mediaRoles": {
+        "backgroundMediaRef": "fixture-background",
+        "portraitMediaRef": null,
+        "introMediaRef": "fixture-video",
+        "explicitFallbackMediaRef": "fixture-background",
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [],
+      "targetDurationMilliseconds": 8000,
+      "firstFrame": {
+        "mediaRef": "fixture-first-frame",
+        "assetVersion": "v1",
+        "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+        "mediaType": "image",
+        "origin": "approved_frame"
+      },
+      "lastFrame": {
+        "mediaRef": "fixture-last-frame",
+        "assetVersion": "v1",
+        "contentHash": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+        "mediaType": "image",
+        "origin": "approved_frame"
+      },
+      "primaryMedia": { "mediaRef": "fixture-video", "assetVersion": "v1", "contentHash": "sha256:5555555555555555555555555555555555555555555555555555555555555555", "mediaType": "video" },
+      "generationTier": "final_quality",
+      "maximumCostMicros": 100,
+      "fallbackMedia": { "mediaRef": "fixture-background", "assetVersion": "v1", "contentHash": "sha256:6666666666666666666666666666666666666666666666666666666666666666", "mediaType": "image" },
+      "fallbackOrigin": "explicit",
+      "characterStateRefs": ["fixture-state"],
+      "readinessStatus": "ready",
+      "issueCodes": [],
+      "dispatchAllowed": true
+    }
+  ],
+  "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+}

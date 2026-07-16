@@ -23,6 +23,7 @@ public sealed class SchemaContractTests
         "encounter-definition.schema.json",
         "combat-resolution.schema.json",
         "media-asset.schema.json",
+        "shot-manifest.schema.json",
         "media-processing-result.schema.json",
         "media-download-ticket.schema.json",
         "budget-admission-result.schema.json",
@@ -60,6 +61,8 @@ public sealed class SchemaContractTests
         "valid/encounter-definition.json",
         "valid/combat-resolution.json",
         "valid/media-asset.json",
+        "valid/shot-manifest.needs-review.json",
+        "valid/shot-manifest.ready.json",
         "valid/media-processing-result.succeeded.json",
         "valid/media-processing-result.failed.json",
         "valid/media-download-ticket.json",
@@ -183,7 +186,101 @@ public sealed class SchemaContractTests
         "invalid/story-thread.relationship-with-value.json",
         "invalid/story-thread.invalid-thread-id.json",
         "invalid/story-thread.empty-injections.json",
+        "invalid/shot-manifest.additional-property.json",
+        "invalid/shot-manifest.dispatch-missing-frame.json",
+        "invalid/shot-manifest.reuse-nonzero-cost.json",
+        "invalid/shot-manifest.root-blocked-shot-dispatch.json",
+        "invalid/shot-manifest.dispatch-placeholder-frame.json",
+        "invalid/shot-manifest.dispatch-missing-duration.json",
+        "invalid/shot-manifest.missing-currency.json",
+        "invalid/shot-manifest.response-ready-image-lipsync.json",
+        "invalid/shot-manifest.dispatch-image-primary.json",
+        "invalid/shot-manifest.dispatch-video-frame.json",
+        "invalid/shot-manifest.dispatch-audio-fallback.json",
     ];
+
+    [Fact]
+    public void ShotManifestContractIsStrictAndFailClosed()
+    {
+        var repositoryRoot = FindRepositoryRoot();
+        var schemaPath = SchemaPath(repositoryRoot, "shot-manifest.schema.json");
+        Assert.True(File.Exists(schemaPath), "CX-501 shot manifest schema is missing.");
+
+        using var document = JsonDocument.Parse(File.ReadAllText(schemaPath));
+        JsonElement root = document.RootElement;
+        AssertStrictShape(
+            root,
+            [
+                "schemaVersion", "manifestId", "sourceBundleId", "sourceBundleContentHash",
+                "language", "currency", "approvalStatus", "shotDispatchAllowed",
+                "responseRequirements", "shots", "contentHash",
+            ]);
+        Assert.Equal(1, root.GetProperty("properties").GetProperty("shots").GetProperty("minItems").GetInt32());
+
+        JsonElement shot = root.GetProperty("$defs").GetProperty("shot");
+        AssertStrictShape(
+            shot,
+            [
+                "shotId", "nodeId", "nodeKind", "source", "dialogueVariants",
+                "dialogueBinding", "mediaRoles", "npcResponseRefs",
+                "targetDurationMilliseconds", "firstFrame", "lastFrame", "primaryMedia",
+                "generationTier", "maximumCostMicros", "fallbackMedia", "fallbackOrigin",
+                "characterStateRefs", "readinessStatus", "issueCodes", "dispatchAllowed",
+            ]);
+
+        JsonElement response = root.GetProperty("$defs").GetProperty("responseRequirement");
+        AssertStrictShape(
+            response,
+            [
+                "responseId", "sourceNodeIds", "text", "emotion", "lipSyncMedia",
+                "audioMedia", "fallbackMedia", "readinessStatus", "issueCodes",
+            ]);
+    }
+
+    [Fact]
+    public void ShotManifestFixturesEnforceTheRootDispatchGate()
+    {
+        var repositoryRoot = FindRepositoryRoot();
+        var validator = SchemaFixtureValidator.Load(repositoryRoot.FullName);
+        var fixtures = LoadFixtureCases(repositoryRoot)
+            .Where(fixture => string.Equals(
+                fixture.SchemaFile,
+                "shot-manifest.schema.json",
+                StringComparison.Ordinal))
+            .ToArray();
+
+        Assert.Contains(fixtures, fixture => fixture.Name == "valid ready shot manifest");
+        Assert.Contains(fixtures, fixture => fixture.Name == "blocked manifest rejects dispatchable child shot");
+        foreach (var fixture in fixtures)
+        {
+            var diagnostics = validator.Validate(fixture);
+            if (fixture.ExpectedValid)
+            {
+                Assert.Empty(diagnostics);
+            }
+            else
+            {
+                Assert.Contains(
+                    diagnostics,
+                    diagnostic => diagnostic.Code == fixture.ExpectedCode &&
+                                  diagnostic.Path == fixture.ExpectedPath);
+            }
+        }
+    }
+
+    [Fact]
+    public void ProductionShotManifestMatchesTheContract()
+    {
+        var repositoryRoot = FindRepositoryRoot();
+        var validator = SchemaFixtureValidator.Load(repositoryRoot.FullName);
+        var fixture = new FixtureCase(
+            "production red mist shot manifest",
+            "shot-manifest.schema.json",
+            "../../content/story/red-mist/shot-manifest.json",
+            ExpectedValid: true);
+
+        Assert.Empty(validator.Validate(fixture));
+    }
 
     [Fact]
     public void Cx101InventoryIsComplete()
