@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "idempotencyKey": "batch.preview.duplicate",
+  "sourceManifestId": "manifest.synthetic.approved",
+  "sourceManifestContentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "targetTier": "preview_fast",
+  "shotIds": [
+    "shot.001",
+    "shot.001"
+  ],
+  "sourcePreviewBatchRef": null
+}

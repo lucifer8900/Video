@@ -1084,6 +1084,64 @@
       "expectedValid": false,
       "expectedCode": "schema.enum",
       "expectedPath": "/shots/0/fallbackMedia/mediaType"
+    },
+    {
+      "name": "valid preview generation batch request",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "valid/generation-batch-request.preview.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid final generation batch request",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "valid/generation-batch-request.final.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid reviewed generation batch result",
+      "schemaFile": "generation-batch-result.schema.json",
+      "instanceFile": "valid/generation-batch-result.reviewed.json",
+      "expectedValid": true
+    },
+    {
+      "name": "generation batch request rejects more than twenty shots",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "invalid/generation-batch-request.21-shots.json",
+      "expectedValid": false,
+      "expectedCode": "schema.maxItems",
+      "expectedPath": "/shotIds"
+    },
+    {
+      "name": "generation batch request rejects duplicate shots",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "invalid/generation-batch-request.duplicate-shot.json",
+      "expectedValid": false,
+      "expectedCode": "schema.uniqueItems",
+      "expectedPath": "/shotIds"
+    },
+    {
+      "name": "generation batch request rejects provider selection",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "invalid/generation-batch-request.provider.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/provider"
+    },
+    {
+      "name": "final generation batch request requires preview source",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "invalid/generation-batch-request.final-missing-source.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/sourcePreviewBatchRef"
+    },
+    {
+      "name": "generation batch result rejects prompt leakage",
+      "schemaFile": "generation-batch-result.schema.json",
+      "instanceFile": "invalid/generation-batch-result.prompt.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/prompt"
     }
   ]
 }

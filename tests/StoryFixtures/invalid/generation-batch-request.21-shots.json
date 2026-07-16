@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0.0",
+  "idempotencyKey": "batch.preview.over-limit",
+  "sourceManifestId": "manifest.synthetic.approved",
+  "sourceManifestContentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "targetTier": "preview_fast",
+  "shotIds": [
+    "shot.001",
+    "shot.002",
+    "shot.003",
+    "shot.004",
+    "shot.005",
+    "shot.006",
+    "shot.007",
+    "shot.008",
+    "shot.009",
+    "shot.010",
+    "shot.011",
+    "shot.012",
+    "shot.013",
+    "shot.014",
+    "shot.015",
+    "shot.016",
+    "shot.017",
+    "shot.018",
+    "shot.019",
+    "shot.020",
+    "shot.021"
+  ],
+  "sourcePreviewBatchRef": null
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "requestId": "req.batch.prompt-leak",
+  "batchId": "3d26e967-2afc-4eb4-8d80-ff928a3b44a8",
+  "sourceManifestId": "manifest.synthetic.approved",
+  "sourceManifestContentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "targetTier": "preview_fast",
+  "sourcePreviewBatchRef": null,
+  "status": "reviewed",
+  "reasonCode": null,
+  "currency": "USD",
+  "items": [
+    {
+      "shotId": "shot.001",
+      "status": "adopted",
+      "generationJobRef": "29b3bb09-10e5-4c65-98d3-778e2a7fbd7e",
+      "attemptCount": 1,
+      "artifact": {
+        "mediaRef": "media.batch.shot.001",
+        "assetVersion": "v1",
+        "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "mediaType": "video"
+      },
+      "actualDurationMilliseconds": 6000,
+      "reviewStatus": "adopted",
+      "failureCode": null
+    }
+  ],
+  "metrics": {
+    "totalItemCount": 1,
+    "attemptedItemCount": 1,
+    "attemptCount": 1,
+    "retryCount": 0,
+    "reviewedCount": 1,
+    "adoptedCount": 1,
+    "rejectedCount": 0,
+    "adoptionRate": 1,
+    "averageRetryCount": 0,
+    "actualCostMicros": 0,
+    "adoptedDurationMilliseconds": 6000,
+    "unitCostPerFinishedSecondMicros": 0,
+    "costComplete": true
+  },
+  "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "prompt": "sensitive provider prompt must never cross this contract"
+}

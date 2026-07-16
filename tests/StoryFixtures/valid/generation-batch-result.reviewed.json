@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "requestId": "req.batch.reviewed.001",
+  "batchId": "3d26e967-2afc-4eb4-8d80-ff928a3b44a8",
+  "sourceManifestId": "manifest.synthetic.approved",
+  "sourceManifestContentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "targetTier": "preview_fast",
+  "sourcePreviewBatchRef": null,
+  "status": "reviewed",
+  "reasonCode": null,
+  "currency": "USD",
+  "items": [
+    {
+      "shotId": "shot.001",
+      "status": "adopted",
+      "generationJobRef": "29b3bb09-10e5-4c65-98d3-778e2a7fbd7e",
+      "attemptCount": 2,
+      "artifact": {
+        "mediaRef": "media.batch.shot.001",
+        "assetVersion": "v1",
+        "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "mediaType": "video"
+      },
+      "actualDurationMilliseconds": 6000,
+      "reviewStatus": "adopted",
+      "failureCode": null
+    },
+    {
+      "shotId": "shot.002",
+      "status": "rejected",
+      "generationJobRef": "5010e556-3731-4c09-af96-945403b81896",
+      "attemptCount": 1,
+      "artifact": {
+        "mediaRef": "media.batch.shot.002",
+        "assetVersion": "v1",
+        "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "mediaType": "video"
+      },
+      "actualDurationMilliseconds": 8000,
+      "reviewStatus": "rejected",
+      "failureCode": null
+    }
+  ],
+  "metrics": {
+    "totalItemCount": 2,
+    "attemptedItemCount": 2,
+    "attemptCount": 3,
+    "retryCount": 1,
+    "reviewedCount": 2,
+    "adoptedCount": 1,
+    "rejectedCount": 1,
+    "adoptionRate": 0.5,
+    "averageRetryCount": 0.5,
+    "actualCostMicros": 0,
+    "adoptedDurationMilliseconds": 6000,
+    "unitCostPerFinishedSecondMicros": 0,
+    "costComplete": true
+  },
+  "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+}
