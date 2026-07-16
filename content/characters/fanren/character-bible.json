@@ -1,0 +1,1040 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentStatus": "draft-needs-human-review",
+  "project": "AI Video Interactive Game",
+  "repository": "https://github.com/lucifer8900/Video.git",
+  "projectRole": "Project-bound narrative and character production data for the Video repository",
+  "work": "灵脉余烬",
+  "promptVersion": "lingmai-yujin-character-sheet-v2",
+  "namingLayer": "ADAPTATION-NAME; source names exist only in content/originalization/source-to-game-name-map.json and must not ship",
+  "source": {
+    "internalMapping": "content/originalization/source-to-game-name-map.json",
+    "encoding": "GB18030",
+    "mainEnding": "第两千四百四十六章（内部研究章节）",
+    "note": "只保存转化后的事实、短锚点和美术推断，不把完整正文复制进仓库。"
+  },
+  "artDirection": {
+    "medium": "真人影视感、写实东方古装修仙角色概念摄影",
+    "realism": "真实皮肤、真实织物、可信磨损；超自然效果克制",
+    "background": "中性暖灰无缝摄影棚背景",
+    "sheetLayout": [
+      "左：正面半身",
+      "中：严格90度侧面全身服装",
+      "右：正面全身服装"
+    ],
+    "globalInvariants": [
+      "三视图必须是同一个人、同一张脸、同一年龄、同一发型、同一套服装",
+      "不使用现实演员或名人脸",
+      "不出现文字、标签、水印、额外人物、现代物件",
+      "全身视图必须完整显示鞋和服装轮廓",
+      "避免动漫比例、塑料皮肤、网游荧光、夸张肩甲和无功能暴露服装"
+    ]
+  },
+  "characters": [
+    {
+      "id": "FR-MAIN-M-001",
+      "slug": "fr-main-m-001",
+      "nameZh": "沈砚",
+      "category": "主角",
+      "gender": "男",
+      "route": "男性主线",
+      "canonStatus": "CANON",
+      "phase": "筑基初期／赤雾秘苑后的青年形态",
+      "storyFunction": "以谨慎、准备、隐匿和撤退构成核心玩家循环。",
+      "personality": [
+        "谨慎",
+        "早熟",
+        "克制",
+        "务实",
+        "重承诺但不轻信"
+      ],
+      "background": "贫困山村出身，普通资质，从玄刃门和回春坞进入修仙道路。",
+      "sourceAnchors": [
+        {
+          "chapter": "第一章（内部研究章节）",
+          "line": 27,
+          "evidence": "深肤色、普通农家脸、早熟"
+        },
+        {
+          "chapter": "第一百七十二章（内部研究章节）",
+          "line": 6600,
+          "evidence": "栖枫谷青年阶段的低调外观"
+        },
+        {
+          "chapter": "第一千二百一十六章附近",
+          "line": 60135,
+          "evidence": "青色长衫、储物袋与驭兽囊"
+        }
+      ],
+      "visual": {
+        "apparentAge": "24–28",
+        "build": "中等身高，精瘦耐力型，不是健美英雄",
+        "face": "偏深肤色、普通耐看、窄而警觉的眼神，无贵公子感",
+        "hair": "黑发束起，少量风吹碎发",
+        "outfit": "炭黑与深靛层叠窄袖行装，外罩低饱和青色长衫，旧皮腰封和布靴",
+        "props": [
+          "小型深绿瓶",
+          "储物袋",
+          "驭兽囊",
+          "一柄收束的青竹剑匣"
+        ],
+        "palette": [
+          "charcoal",
+          "deep indigo",
+          "weathered blue-green",
+          "muted moss"
+        ],
+        "invariants": [
+          "普通脸",
+          "偏深肤色",
+          "不张扬",
+          "随时准备撤退的重心"
+        ],
+        "inference": "服装层次和剑匣为影视生产补完，需美术审核。"
+      },
+      "image": {
+        "file": "images/fr-main-m-001-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-MAIN-F-001",
+      "slug": "fr-main-f-001",
+      "nameZh": "楚明绮",
+      "category": "主角",
+      "gender": "女",
+      "route": "女性主线",
+      "canonStatus": "CANON + ADAPTATION-BRIDGE",
+      "phase": "结丹期真实成年形态／赤雾秘苑视觉基线",
+      "storyFunction": "从宗门责任、身份隐匿和个人自决角度构成平行主线。",
+      "personality": [
+        "清冷",
+        "镇静",
+        "有责任感",
+        "骄傲",
+        "情感克制"
+      ],
+      "background": "蔽月宫高阶修士；赤雾秘苑少女外观源于功法状态，不是真正未成年。",
+      "sourceAnchors": [
+        {
+          "chapter": "第二百零五章至第二百零八章",
+          "line": 8170,
+          "evidence": "赤鸾焰环与墨蛟战斗"
+        },
+        {
+          "chapter": "第二百零八章至第二百一十章",
+          "line": 8354,
+          "evidence": "雪白衣裙、成年华贵气质"
+        },
+        {
+          "chapter": "第二百一十章（内部研究章节）",
+          "line": 8444,
+          "evidence": "常年面纱、显露真容"
+        }
+      ],
+      "visual": {
+        "apparentAge": "25–30，明确成年",
+        "build": "修长、稳定、姿态端正",
+        "face": "清冷而非妖媚，细致骨相，沉静的深色眼睛",
+        "hair": "黑色长发，以冷银发簪低束",
+        "outfit": "月白与珍珠灰层叠长衣，窄袖战斗内层，暗朱腰封，冷银边饰，半透明面纱收在肩侧",
+        "props": [
+          "赤鸾焰环",
+          "蔽月宫储物袋"
+        ],
+        "palette": [
+          "moon white",
+          "pearl gray",
+          "cool silver",
+          "dark vermilion"
+        ],
+        "invariants": [
+          "成年",
+          "清冷",
+          "雪白衣",
+          "赤鸾焰环",
+          "不做妩媚妖女"
+        ],
+        "inference": "为规避返幼状态的误读，首张设定板固定为成年真身。"
+      },
+      "image": {
+        "file": "images/fr-main-f-001-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-VIL-001",
+      "slug": "fr-vil-001",
+      "nameZh": "陆百草",
+      "category": "主要反派",
+      "gender": "男",
+      "route": "男性主线早期",
+      "canonStatus": "CANON",
+      "phase": "回春坞末期",
+      "storyFunction": "把师徒、知识与身体控制变成沈砚第一次真正的生存陷阱。",
+      "personality": [
+        "枭雄",
+        "多疑",
+        "残酷",
+        "善于伪装",
+        "意志强"
+      ],
+      "background": "昔日江湖枭雄与名医，受伤后提前衰老，企图夺取沈砚身体。",
+      "sourceAnchors": [
+        {
+          "chapter": "第五章（内部研究章节）",
+          "line": 167,
+          "evidence": "咳嗽老医者与回春坞身份"
+        },
+        {
+          "chapter": "第二十九章（内部研究章节）",
+          "line": 986,
+          "evidence": "灰败病容、黑气与恶意"
+        },
+        {
+          "chapter": "第三十章（内部研究章节）",
+          "line": 1021,
+          "evidence": "真实年龄37却如六七十岁"
+        }
+      ],
+      "visual": {
+        "apparentAge": "外观65–70，实际37",
+        "build": "高瘦、轻度佝偻、长期病损",
+        "face": "焦黄灰败皮肤、深眼窝、锐利枭雄眼神",
+        "hair": "披肩灰白长发，干枯稀疏",
+        "outfit": "灰黑旧医袍，药渍袖口，暗褐腰带，便于藏针的内袋",
+        "props": [
+          "旧木药箱",
+          "银针卷",
+          "药杵"
+        ],
+        "palette": [
+          "ash gray",
+          "sickly ochre",
+          "dark brown",
+          "ink black"
+        ],
+        "invariants": [
+          "病弱外壳与危险眼神并存",
+          "医者与鬼手并存",
+          "不能画成仙风道骨"
+        ],
+        "inference": "银针与药箱是职业视觉化补完。"
+      },
+      "image": {
+        "file": "images/fr-vil-001-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-VIL-002",
+      "slug": "fr-vil-002",
+      "nameZh": "裴玄蜮",
+      "category": "主要反派",
+      "gender": "男",
+      "route": "南境魔道阶段",
+      "canonStatus": "CANON",
+      "phase": "幽魄门少主／栖雁堡阶段",
+      "storyFunction": "代表宗门血祭、门阀特权与追猎压力。",
+      "personality": [
+        "傲慢",
+        "残忍",
+        "占有欲强",
+        "好胜",
+        "善用宗门权力"
+      ],
+      "background": "幽魄门少主，幽道兵劫和栖雁堡事件的重要敌手。",
+      "sourceAnchors": [
+        {
+          "chapter": "第二百五十四章至第二百六十章",
+          "line": 10900,
+          "evidence": "绿袍、银色面具、碧绿巨叉与黑气"
+        },
+        {
+          "chapter": "第二百六十章（内部研究章节）",
+          "line": 10903,
+          "evidence": "面具缝中的血红兽性眼睛"
+        }
+      ],
+      "visual": {
+        "apparentAge": "25–30",
+        "build": "高挑、轻甲般紧致，动作有猎食感",
+        "face": "银色鬼面具固定遮面，只从眼缝露出血红眼睛",
+        "hair": "黑发束于面具后",
+        "outfit": "深绿黑边长袍、煤黑皮护臂、血褐腰封、灰银面具",
+        "props": [
+          "碧阴叉",
+          "血色符袋"
+        ],
+        "palette": [
+          "blackened green",
+          "coal black",
+          "ash silver",
+          "dried blood red"
+        ],
+        "invariants": [
+          "银面具",
+          "血红眼",
+          "绿黑服装",
+          "不能无面具帅哥化"
+        ],
+        "inference": "护臂和腰封为影视动作补完。"
+      },
+      "image": {
+        "file": "images/fr-vil-002-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-VIL-003",
+      "slug": "fr-vil-003",
+      "nameZh": "玄冥岛主",
+      "category": "主要反派",
+      "gender": "男",
+      "route": "碎辰海阶段",
+      "canonStatus": "CANON",
+      "phase": "空冥殿阶段",
+      "storyFunction": "以和气表象、禁制控制和尸火威胁制造不可靠同盟。",
+      "personality": [
+        "阴险",
+        "耐心",
+        "控制欲强",
+        "表面和气",
+        "记仇"
+      ],
+      "background": "碎辰海魔道老怪，擅长尸火、炼尸和禁神控制。",
+      "sourceAnchors": [
+        {
+          "chapter": "第四百零九章（内部研究章节）",
+          "line": 18768,
+          "evidence": "瘦小丑陋老者、眯眼"
+        },
+        {
+          "chapter": "第四百零九章（内部研究章节）",
+          "line": 18784,
+          "evidence": "禁神牌"
+        },
+        {
+          "chapter": "第四百零九章（内部研究章节）",
+          "line": 18792,
+          "evidence": "黑色尸火"
+        }
+      ],
+      "visual": {
+        "apparentAge": "65–75",
+        "build": "瘦小、略弓背，移动却轻快",
+        "face": "苍白皱缩、眯缝细眼、稀疏短须、虚假和气笑容",
+        "hair": "灰黑稀发，老式小冠",
+        "outfit": "层叠墨黑海岛修士袍，暗绿内衬，袖中藏禁神牌",
+        "props": [
+          "禁神牌",
+          "一团克制的黑色尸火"
+        ],
+        "palette": [
+          "ink black",
+          "corpse green",
+          "bone white",
+          "oxidized bronze"
+        ],
+        "invariants": [
+          "瘦小老者",
+          "眯眼笑",
+          "黑尸火",
+          "不能画成魁梧魔王"
+        ],
+        "inference": "服装纹样不采用现代哥特元素。"
+      },
+      "image": {
+        "file": "images/fr-vil-003-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-VIL-004",
+      "slug": "fr-vil-004",
+      "nameZh": "初烬魔祖",
+      "category": "主要反派",
+      "gender": "女",
+      "route": "镇岳山／跨界魔劫",
+      "canonStatus": "CANON + VISUAL-INTERPRETATION",
+      "phase": "圣祖真形的游戏视觉基线",
+      "storyFunction": "把个人器灵线索扩大为古魔入侵和界面级威胁。",
+      "personality": [
+        "冷酷",
+        "威严",
+        "计算精密",
+        "蔑视尘寰界秩序"
+      ],
+      "background": "古魔圣祖；曾以分魂、银狼宿主和女化身行动。首张设定板不借用月珞或瑶梦肉身。",
+      "sourceAnchors": [
+        {
+          "chapter": "第一千零二十章（内部研究章节）",
+          "line": 48238,
+          "evidence": "分魂与双首银狼宿主的区分"
+        },
+        {
+          "chapter": "第一千零四十三章（内部研究章节）",
+          "line": 49702,
+          "evidence": "黑袍女化身与玄风旗"
+        },
+        {
+          "chapter": "第一千零六十二章附近",
+          "line": 50910,
+          "evidence": "黑甲、魔首与短角真形线索"
+        }
+      ],
+      "visual": {
+        "apparentAge": "28–35",
+        "build": "高挑、收束、非人般稳定",
+        "face": "清秀但冷硬，紫色星点虹膜，绝不沿用月珞脸",
+        "hair": "乌黑长发向后束紧",
+        "outfit": "黑曜石片甲覆于深梅紫长袍，胸前双角魔首浮雕，成对短角，受控的短黑刺",
+        "props": [
+          "玄风旗"
+        ],
+        "palette": [
+          "obsidian",
+          "deep plum",
+          "cold violet",
+          "ash red"
+        ],
+        "invariants": [
+          "短角",
+          "紫色星眸",
+          "黑甲",
+          "玄风旗",
+          "与月珞完全不同脸型"
+        ],
+        "inference": "真容细节不足，属于明确标注的美术解释；不把宿主外形当成唯一真身。"
+      },
+      "image": {
+        "file": "images/fr-vil-004-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-SUP-001",
+      "slug": "fr-sup-001",
+      "nameZh": "顾惊雨",
+      "category": "主要配角",
+      "gender": "男",
+      "route": "玄刃门阶段",
+      "canonStatus": "CANON",
+      "phase": "玄刃门少年武者",
+      "storyFunction": "沈砚的凡人朋友与镜像：短促耀眼的江湖名声对照漫长仙路。",
+      "personality": [
+        "外冷内热",
+        "爽朗",
+        "好胜",
+        "重友情",
+        "渴望成名"
+      ],
+      "background": "玄刃门优秀弟子，为追求实力服用抽髓丸，与沈砚结下真实友情。",
+      "sourceAnchors": [
+        {
+          "chapter": "第十八章（内部研究章节）",
+          "line": 1150,
+          "evidence": "外冷内热、私下健谈"
+        },
+        {
+          "chapter": "第二十章（内部研究章节）",
+          "line": 1354,
+          "evidence": "求名与药物代价"
+        },
+        {
+          "chapter": "中后期玄刃门战斗",
+          "line": 2793,
+          "evidence": "披发、战损衣装"
+        }
+      ],
+      "visual": {
+        "apparentAge": "18–22",
+        "build": "轻捷而强健的刀客体态",
+        "face": "线条利落、锐利眼神，私下笑容真诚",
+        "hair": "高束黑发，几缕散发",
+        "outfit": "深灰玄刃门劲装，靛蓝包边，磨损皮护腕和轻布靴",
+        "props": [
+          "长刀",
+          "小药瓶"
+        ],
+        "palette": [
+          "slate gray",
+          "indigo",
+          "worn leather",
+          "iron"
+        ],
+        "invariants": [
+          "年轻武者",
+          "外冷内热",
+          "不做飘逸修仙公子"
+        ],
+        "inference": "刀型和门派剪裁为动作设计补完。"
+      },
+      "image": {
+        "file": "images/fr-sup-001-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-SUP-002",
+      "slug": "fr-sup-002",
+      "nameZh": "苏绛璃（商名：宁烟）",
+      "category": "主要配角",
+      "gender": "女",
+      "route": "女性主线接力／碎辰海",
+      "canonStatus": "CANON + ADAPTATION-BRIDGE",
+      "phase": "清弦阁主事阶段",
+      "storyFunction": "承担海外女性视角的复仇、门派责任与身份风险。",
+      "personality": [
+        "聪慧",
+        "坚韧",
+        "有领导力",
+        "善谈判",
+        "拒绝被占有"
+      ],
+      "background": "宁烟，清弦阁相关核心人物；常以术法或面纱隐藏真容。",
+      "sourceAnchors": [
+        {
+          "chapter": "第四百零三章（内部研究章节）",
+          "line": 18749,
+          "evidence": "紫衣与术法遮面"
+        },
+        {
+          "chapter": "中期真容揭示",
+          "line": 35264,
+          "evidence": "白衣真容与出众容貌"
+        },
+        {
+          "chapter": "中期真容揭示",
+          "line": 35266,
+          "evidence": "娇艳气质，与楚明绮区分"
+        }
+      ],
+      "visual": {
+        "apparentAge": "24–30",
+        "build": "修长、端正、善于控制社交距离",
+        "face": "清澈大眼、娇艳但不轻浮，骨相与楚明绮明显不同",
+        "hair": "乌黑长发，紫玉簪固定",
+        "outfit": "深紫海贸长衣、白色窄袖内层、银灰腰封，淡紫面纱降到肩侧",
+        "props": [
+          "清弦阁腰牌",
+          "折叠账册",
+          "小型玄雷竹匣"
+        ],
+        "palette": [
+          "deep violet",
+          "ivory",
+          "sea gray",
+          "silver"
+        ],
+        "invariants": [
+          "紫衣",
+          "双身份/遮面线索",
+          "领导者姿态",
+          "不与楚明绮混脸"
+        ],
+        "inference": "账册与腰牌把门派管理职责视觉化。"
+      },
+      "image": {
+        "file": "images/fr-sup-002-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-SUP-003",
+      "slug": "fr-sup-003",
+      "nameZh": "月珞（瑶梦）",
+      "category": "主要配角",
+      "gender": "女",
+      "route": "女性主线接力／器灵伙伴",
+      "canonStatus": "CANON + VISUAL-INTERPRETATION",
+      "phase": "人形器灵基线",
+      "storyFunction": "通过失忆、器灵依附与真实身份，讨论伙伴关系和自主性。",
+      "personality": [
+        "机敏",
+        "温柔",
+        "幽默",
+        "忠诚",
+        "渴望恢复身份"
+      ],
+      "background": "器灵与皓月狼庭身份交织，可化为女子或雪白灵狐。",
+      "sourceAnchors": [
+        {
+          "chapter": "第六百一十五章（内部研究章节）",
+          "line": 29190,
+          "evidence": "器灵与月珞狼身份"
+        },
+        {
+          "chapter": "中期同行章节",
+          "line": 30347,
+          "evidence": "艳丽女子化形"
+        },
+        {
+          "chapter": "中期同行章节",
+          "line": 30431,
+          "evidence": "优雅雪白灵狐形态"
+        }
+      ],
+      "visual": {
+        "apparentAge": "26–32",
+        "build": "优雅、轻盈、肩背放松",
+        "face": "成熟艳丽但机敏温柔，浅银灰眼睛",
+        "hair": "银白长发，低束，不使用动物耳朵",
+        "outfit": "白银色层叠长衣，浅灰窄袖内层，狐形玉扣和月纹腰带",
+        "props": [
+          "玉如意",
+          "白狐形玉佩"
+        ],
+        "palette": [
+          "silver white",
+          "moon gray",
+          "pale blue",
+          "jade"
+        ],
+        "invariants": [
+          "银白发",
+          "狼族眼神",
+          "无兽耳卖萌",
+          "不与初烬或楚明绮混脸"
+        ],
+        "inference": "银白发与人形服装为视觉统一解释；白狐另行制作形态板。"
+      },
+      "image": {
+        "file": "images/fr-sup-003-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-SUP-004",
+      "slug": "fr-sup-004",
+      "nameZh": "太衍君",
+      "category": "主要配角",
+      "gender": "男",
+      "route": "中宸国／傀儡导师阶段",
+      "canonStatus": "CANON + VISUAL-INTERPRETATION",
+      "phase": "仿生傀儡身体",
+      "storyFunction": "提供傀儡术、知识传承、傲慢天才和有限寿命的导师关系。",
+      "personality": [
+        "傲气",
+        "博学",
+        "尖刻",
+        "创造欲强",
+        "惜才"
+      ],
+      "background": "百机门祖师与傀儡术天才，元神长期寄于黄竹筒；固定肉身外貌不足。",
+      "sourceAnchors": [
+        {
+          "chapter": "第七百九十八章（内部研究章节）",
+          "line": 37152,
+          "evidence": "傀儡术天才与身份"
+        },
+        {
+          "chapter": "第七百九十八章前后",
+          "line": 37212,
+          "evidence": "元神寄居黄竹筒"
+        }
+      ],
+      "visual": {
+        "apparentAge": "45–55",
+        "build": "清瘦儒雅、动作精确得略显非人",
+        "face": "苍白仿生皮肤、冷光双眼、鬓角细微机关接缝",
+        "hair": "黑灰长发以木簪固定",
+        "outfit": "旧黄衫与墨色内袍，袖口藏青铜机关片，腰带悬小型工具",
+        "props": [
+          "黄竹筒",
+          "微型傀儡关节",
+          "玉简"
+        ],
+        "palette": [
+          "old yellow",
+          "ink black",
+          "aged bronze",
+          "pale jade"
+        ],
+        "invariants": [
+          "黄竹筒",
+          "傀儡细缝",
+          "学者而非仙风老者",
+          "冷光眼"
+        ],
+        "inference": "人脸与仿生傀儡体是游戏化视觉补完，必须保持标注。"
+      },
+      "image": {
+        "file": "images/fr-sup-004-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-MIN-001",
+      "slug": "fr-min-001",
+      "nameZh": "铁生",
+      "category": "一般配角",
+      "gender": "男",
+      "route": "玄刃门／回春坞",
+      "canonStatus": "CANON",
+      "phase": "回春坞少年，保留回魄阶段骨相",
+      "storyFunction": "以善良普通人的悲剧表现师徒控制和身体被物化的代价。",
+      "personality": [
+        "憨厚",
+        "善良",
+        "勤劳",
+        "信任他人"
+      ],
+      "background": "与沈砚一同成为墨大夫记名弟子，后遭遇悲剧并与回魄身份相连。",
+      "sourceAnchors": [
+        {
+          "chapter": "第五章（内部研究章节）",
+          "line": 167,
+          "evidence": "与沈砚同行入谷"
+        },
+        {
+          "chapter": "第六章（内部研究章节）",
+          "line": 196,
+          "evidence": "硕大脸孔、憨厚笑容"
+        },
+        {
+          "chapter": "第六十三章（内部研究章节）",
+          "line": 2200,
+          "evidence": "后续身体异化线索"
+        }
+      ],
+      "visual": {
+        "apparentAge": "16–20",
+        "build": "粗壮劳动体态，宽肩大手",
+        "face": "大脸、宽鼻、真诚眼神，骨相便于后期回魄识别",
+        "hair": "短束黑发，不精致",
+        "outfit": "洗旧青布衫、粗布裤、布绑腿、旧布鞋",
+        "props": [
+          "馒头布包",
+          "药园木桶"
+        ],
+        "palette": [
+          "faded blue",
+          "earth brown",
+          "linen gray"
+        ],
+        "invariants": [
+          "硕大憨厚脸",
+          "粗壮",
+          "同一骨相可延续到回魄阶段"
+        ],
+        "inference": "道具来自生活功能，不把悲剧角色怪物化。"
+      },
+      "image": {
+        "file": "images/fr-min-001-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-MIN-002",
+      "slug": "fr-min-002",
+      "nameZh": "洛清音",
+      "category": "一般配角",
+      "gender": "女",
+      "route": "南境阵法支线",
+      "canonStatus": "CANON",
+      "phase": "初见蓝衣阵法师",
+      "storyFunction": "以身体脆弱和智力强大并存的方式提供阵法、承诺与失去。",
+      "personality": [
+        "聪慧",
+        "从容",
+        "谨慎",
+        "重情",
+        "悲而不弱"
+      ],
+      "background": "精通阵法的女子，与云彻关系深厚，向沈砚留下重要阵法知识。",
+      "sourceAnchors": [
+        {
+          "chapter": "第二百七十七章（内部研究章节）",
+          "line": 11784,
+          "evidence": "白玉面、黑眸、端雅风姿"
+        },
+        {
+          "chapter": "第二百七十七章（内部研究章节）",
+          "line": 11787,
+          "evidence": "蓝衣、纤弱病体、清脆声音"
+        },
+        {
+          "chapter": "第三百五十二章（内部研究章节）",
+          "line": 15904,
+          "evidence": "后续白衣与阵法传承"
+        }
+      ],
+      "visual": {
+        "apparentAge": "22–28",
+        "build": "纤弱、病体，但坐姿与手势稳定",
+        "face": "并非夸张绝色；白玉肤色、会表达的黑眸、从容气质",
+        "hair": "黑发整齐低髻",
+        "outfit": "低饱和蓝色长衣、雪白内衫、简洁腰封，袖口便于布阵",
+        "props": [
+          "阵盘",
+          "玉简",
+          "细刻阵旗"
+        ],
+        "palette": [
+          "muted blue",
+          "snow white",
+          "dark ink",
+          "pale jade"
+        ],
+        "invariants": [
+          "聪慧眼神",
+          "纤弱但不无助",
+          "阵盘",
+          "蓝衣"
+        ],
+        "inference": "避免把病体做成苍白恐怖妆。"
+      },
+      "image": {
+        "file": "images/fr-min-002-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-MIN-003",
+      "slug": "fr-min-003",
+      "nameZh": "乔清倩",
+      "category": "一般配角",
+      "gender": "女",
+      "route": "栖枫谷情感与宗门支线",
+      "canonStatus": "CANON",
+      "phase": "筑基期栖枫谷弟子",
+      "storyFunction": "让宗门偏见、失忆、情感错位和战时选择具有具体人物后果。",
+      "personality": [
+        "外冷",
+        "敏感",
+        "有自尊",
+        "勇敢",
+        "受家族与宗门影响"
+      ],
+      "background": "栖枫谷陈氏修士，与沈砚在禁地和宗门战争中多次交错。",
+      "sourceAnchors": [
+        {
+          "chapter": "第二百七十三章（内部研究章节）",
+          "line": 11581,
+          "evidence": "冷漠、秀眉与宗门关系"
+        },
+        {
+          "chapter": "第三百一十五章（内部研究章节）",
+          "line": 13960,
+          "evidence": "外冷内敏感、战时互动"
+        }
+      ],
+      "visual": {
+        "apparentAge": "22–27",
+        "build": "婉约但具备实战训练",
+        "face": "冷艳明眸、秀眉、自然红唇，情绪收在眼神里",
+        "hair": "黑发高束，栖枫叶形发簪",
+        "outfit": "象牙白裙袍外叠赭黄短披肩和窄袖战斗内层，橄榄腰带",
+        "props": [
+          "红黄符宝",
+          "白菊小香囊"
+        ],
+        "palette": [
+          "ivory",
+          "ochre",
+          "olive",
+          "muted red"
+        ],
+        "invariants": [
+          "外冷内敏感",
+          "栖枫谷色",
+          "不做柔弱闺秀"
+        ],
+        "inference": "白菊为情绪意象，不替代战斗身份。"
+      },
+      "image": {
+        "file": "images/fr-min-003-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-STORY-001",
+      "slug": "fr-story-001",
+      "nameZh": "尹知微",
+      "category": "剧情人物",
+      "gender": "男",
+      "route": "尘寰界阶段转换",
+      "canonStatus": "CANON",
+      "phase": "赤雾秘苑伪装形态",
+      "storyFunction": "以伪弱身份揭示境界、观察和信息不对称；后期承担尘寰界天花板线索。",
+      "personality": [
+        "圆滑",
+        "耐心",
+        "会装弱",
+        "深不可测",
+        "善于观察"
+      ],
+      "background": "以低阶老修士身份混入赤雾秘苑，真实修为与目的远超旁人判断。",
+      "sourceAnchors": [
+        {
+          "chapter": "第一百七十四章（内部研究章节）",
+          "line": 6736,
+          "evidence": "苍老圆滑声音与主动接触"
+        },
+        {
+          "chapter": "第一百九十一章（内部研究章节）",
+          "line": 7521,
+          "evidence": "黄衫老者与油滑姿态"
+        },
+        {
+          "chapter": "第二百一十章（内部研究章节）",
+          "line": 8448,
+          "evidence": "不起眼老滑头形象"
+        }
+      ],
+      "visual": {
+        "apparentAge": "65–75（伪装）",
+        "build": "矮小、微弓背，看似体力普通",
+        "face": "不起眼苍老脸、小眼、稀疏胡须、笑嘻嘻的圆滑表情",
+        "hair": "灰白稀发，以普通木簪固定",
+        "outfit": "褪色黄褐旧长袍、补丁袖口、普通布鞋，内层只露极细紫色灵光",
+        "props": [
+          "旧储物袋",
+          "不起眼木杖"
+        ],
+        "palette": [
+          "faded ochre",
+          "dust brown",
+          "linen gray",
+          "hidden violet"
+        ],
+        "invariants": [
+          "伪弱",
+          "小眼笑",
+          "不起眼",
+          "不能提前画成华丽化神大能"
+        ],
+        "inference": "紫色灵光只能作为细小提示，不能泄底。"
+      },
+      "image": {
+        "file": "images/fr-story-001-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-NPC-001",
+      "slug": "fr-npc-001",
+      "nameZh": "雾萝坳游修药农",
+      "category": "路人NPC",
+      "gender": "男",
+      "route": "游修初市与坊市",
+      "canonStatus": "GAME-ORIGINAL",
+      "phase": "低阶散修日常",
+      "storyFunction": "提供药草价格、天气、山路和低阶修士生计信息，不掌握主线秘密。",
+      "personality": [
+        "谨慎",
+        "朴实",
+        "会讨价还价",
+        "畏惧宗门修士"
+      ],
+      "background": "依靠采药和小规模种植参与游修初市的低阶散修原型。",
+      "sourceAnchors": [
+        {
+          "chapter": "第一百二十六章（内部研究章节）",
+          "line": 4500,
+          "evidence": "雾萝坳环境与低阶修士生态"
+        },
+        {
+          "chapter": "第一百二十八章（内部研究章节）",
+          "line": 4600,
+          "evidence": "散修交易功能"
+        }
+      ],
+      "visual": {
+        "apparentAge": "40–50",
+        "build": "精瘦、长期负重和山行",
+        "face": "日晒皮肤、眼角风霜、对陌生人保持戒心",
+        "hair": "黑灰发用布带束起",
+        "outfit": "棕灰粗布短褐叠旧青内衫，绑腿和草泥布靴，防雨油布肩片",
+        "props": [
+          "药篓",
+          "短柄药锄",
+          "低阶护符"
+        ],
+        "palette": [
+          "earth brown",
+          "faded teal",
+          "mud gray",
+          "herb green"
+        ],
+        "invariants": [
+          "劳动者",
+          "手有泥",
+          "不能仙气华服",
+          "不能像宗门长老"
+        ],
+        "inference": "人物为世界原型，不对应原著具名角色。"
+      },
+      "image": {
+        "file": "images/fr-npc-001-character-sheet.png",
+        "status": "generated-draft"
+      }
+    },
+    {
+      "id": "FR-NPC-002",
+      "slug": "fr-npc-002",
+      "nameZh": "引辰岛海舟女通译",
+      "category": "路人NPC",
+      "gender": "女",
+      "route": "碎辰海港口与海舟",
+      "canonStatus": "GAME-ORIGINAL",
+      "phase": "引辰岛商旅日常",
+      "storyFunction": "连接凡人船工、外来修士、海图、物价和方言信息。",
+      "personality": [
+        "务实",
+        "眼快",
+        "擅长察言观色",
+        "不轻信高阶修士"
+      ],
+      "background": "在海舟与岛港之间做翻译、记账和小额交易的凡人商旅原型。",
+      "sourceAnchors": [
+        {
+          "chapter": "第三百六十五章（内部研究章节）",
+          "line": 16650,
+          "evidence": "海舟与岛民生活"
+        },
+        {
+          "chapter": "第三百六十六章（内部研究章节）",
+          "line": 16700,
+          "evidence": "海上商旅功能"
+        },
+        {
+          "chapter": "第三百八十九章（内部研究章节）",
+          "line": 17916,
+          "evidence": "碎辰海城市与交易秩序"
+        }
+      ],
+      "visual": {
+        "apparentAge": "28–38",
+        "build": "结实轻快，长期在船上保持平衡",
+        "face": "海风晒色、清醒锐利、不使用宗门仙子妆",
+        "hair": "实用束发，以铜簪和布带固定",
+        "outfit": "靛蓝防潮短衫、窄袖白灰内层、海盐磨损腰封、宽松裤与防滑软靴",
+        "props": [
+          "小账册",
+          "折叠海图",
+          "铜铃",
+          "防水钱袋"
+        ],
+        "palette": [
+          "indigo",
+          "salt gray",
+          "oxidized copper",
+          "shell white"
+        ],
+        "invariants": [
+          "凡人商旅",
+          "实用束发",
+          "海风磨损",
+          "不能画成宗门女仙"
+        ],
+        "inference": "人物为世界原型，不对应原著具名角色。"
+      },
+      "image": {
+        "file": "images/fr-npc-002-character-sheet.png",
+        "status": "generated-draft"
+      }
+    }
+  ]
+}

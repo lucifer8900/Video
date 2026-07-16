@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-13T23:27:28+08:00",
+  "repository": "https://github.com/lucifer8900/Video.git",
+  "projectRole": "Project-bound scene visual-bible and modular environment reference assets",
+  "work": "灵脉余烬",
+  "promptVersion": "lingmai-yujin-scene-pack-v2",
+  "namingLayer": "ADAPTATION-NAME",
+  "visualsRedrawnForRename": false,
+  "method": "built-in image_gen",
+  "promptFile": "content/scenes/fanren/scene-image-prompts.md",
+  "catalogFile": "content/scenes/fanren/scene-catalog.json",
+  "p0SceneCount": 6,
+  "canonicalAssetCount": 18,
+  "status": "generated-draft-needs-human-review",
+  "taskIdAvailability": "The built-in generator did not expose stable task IDs; file hashes are the authoritative asset identity.",
+  "validation": {
+    "allPngDecodable": true,
+    "allCanonicalFilesPresent": true,
+    "visualReviewCompleted": true,
+    "packageRule": "Each scene contains A establishing, B time/weather continuity, and C modular/activity assets.",
+    "referencePolicy": "B and C were generated from the approved prompt package with the corresponding A image supplied as the location reference where supported.",
+    "noReadableTextOrWatermark": true,
+    "noObviousModernObjects": true,
+    "humanArtReviewRequired": true,
+    "rightsReviewRequiredBeforeCommercialUse": true
+  },
+  "qaSummary": {
+    "conceptPass": ["FR-SC-004", "FR-SC-019", "FR-SC-023", "FR-SC-044"],
+    "revisionBeforeArtLock": ["FR-SC-008", "FR-SC-012"],
+    "rule": "A generated image never overrides CANON. Any flagged inference must be corrected or explicitly approved before it becomes a Unity or video continuity lock."
+  },
+  "scenes": [
+    {
+      "sceneId": "FR-SC-004",
+      "nameZh": "回春坞",
+      "sceneStateVersion": "FR-SC-004@concept-v1",
+      "qaStatus": "concept-pass",
+      "qaNotes": ["Enclosed valley, herb fields, medical buildings and rear stone chamber are readable.", "The final C revision uses an ancient open oil lamp; an earlier modern-looking glass-lantern draft was rejected and is not in the repository."],
+      "assets": [
+        { "asset": "A", "file": "content/scenes/fanren/images/p0/fr-sc-004/fr-sc-004-a-establishing.png", "width": 1672, "height": 941, "bytes": 3078290, "sha256": "b65e149a57155978e2b123e64fa6654124f6af1f498a671a20c2599fdc961df7" },
+        { "asset": "B", "file": "content/scenes/fanren/images/p0/fr-sc-004/fr-sc-004-b-weather-board.png", "width": 1672, "height": 941, "bytes": 2967677, "sha256": "866b593eba2febeaae7694313907bf7a6566931824dae74498acab1680fde431" },
+        { "asset": "C", "file": "content/scenes/fanren/images/p0/fr-sc-004/fr-sc-004-c-modules-activity.png", "width": 1672, "height": 941, "bytes": 2648612, "sha256": "24cd09584e80b60e18e6ccff20dee23a594ee782d960c70854a93549dbb20a35" }
+      ]
+    },
+    {
+      "sceneId": "FR-SC-008",
+      "nameZh": "游修初市",
+      "sceneStateVersion": "FR-SC-008@concept-v1",
+      "qaStatus": "needs-canon-correction",
+      "qaNotes": ["Market geometry, stalls, anonymous population and four time/weather states are usable.", "The left fog-gate in A and the standing-stone sample in C can read as a waterfall. Treat this as a generator error, not a canon feature, and remove it before art lock.", "The faint branch-like formation shimmer is an ART-INFERENCE and must remain non-symbolic."],
+      "assets": [
+        { "asset": "A", "file": "content/scenes/fanren/images/p0/fr-sc-008/fr-sc-008-a-establishing.png", "width": 1672, "height": 941, "bytes": 3005571, "sha256": "e1bd04555fa678a21169ea19a493ef6579c698a7ac6d87181d1cbf8aa1951b2c" },
+        { "asset": "B", "file": "content/scenes/fanren/images/p0/fr-sc-008/fr-sc-008-b-weather-board.png", "width": 1672, "height": 941, "bytes": 2912991, "sha256": "059c7bcb16b9cea492638e481fe1bf5ad30e393a46efae6b3212576c881567b9" },
+        { "asset": "C", "file": "content/scenes/fanren/images/p0/fr-sc-008/fr-sc-008-c-modules-activity.png", "width": 1536, "height": 1024, "bytes": 2907802, "sha256": "474ae1f82114baa3f7f0af99421a82816bfff2095544ed700fa3d712083f9cad" }
+      ]
+    },
+    {
+      "sceneId": "FR-SC-012",
+      "nameZh": "赤雾秘苑环形山／药谷",
+      "sceneStateVersion": "FR-SC-012@concept-v1",
+      "qaStatus": "needs-art-revision",
+      "qaNotes": ["Ring-mountain hierarchy, valleys, ruins, medicinal biomes and danger scale are readable.", "The concentric barrier/refraction lines and incidental water streams are more conspicuous than the restrained prompt and require a canon-focused art pass.", "C shows a complete guardian creature where the prompt primarily requested nest, tracks and shed scales; retain only if separately approved."],
+      "assets": [
+        { "asset": "A", "file": "content/scenes/fanren/images/p0/fr-sc-012/fr-sc-012-a-establishing.png", "width": 1672, "height": 941, "bytes": 2767344, "sha256": "52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131" },
+        { "asset": "B", "file": "content/scenes/fanren/images/p0/fr-sc-012/fr-sc-012-b-weather-board.png", "width": 1868, "height": 842, "bytes": 2632243, "sha256": "2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4" },
+        { "asset": "C", "file": "content/scenes/fanren/images/p0/fr-sc-012/fr-sc-012-c-modules-activity.png", "width": 1672, "height": 941, "bytes": 2573062, "sha256": "d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6" }
+      ]
+    },
+    {
+      "sceneId": "FR-SC-019",
+      "nameZh": "引辰岛大港",
+      "sceneStateVersion": "FR-SC-019@concept-v1",
+      "qaStatus": "concept-pass-with-minor-note",
+      "qaNotes": ["Harbor scale, salt-worn materials, fish-towed vessels, cargo handling and four weather states are readable.", "C includes the cart and labor population, but the driver loop should be made more explicit during animation blocking."],
+      "assets": [
+        { "asset": "A", "file": "content/scenes/fanren/images/p0/fr-sc-019/fr-sc-019-a-establishing.png", "width": 1672, "height": 941, "bytes": 2969834, "sha256": "d2b7519cbdf2e851110b9d89f4d57f60bcfe37805ba5e86ab373d776ec7921dc" },
+        { "asset": "B", "file": "content/scenes/fanren/images/p0/fr-sc-019/fr-sc-019-b-weather-board.png", "width": 1672, "height": 941, "bytes": 2719288, "sha256": "3eb3fbb77542c103b5ae52d442a0230ca9fc6f1a6c0f2af01883cb514bbaf8ae" },
+        { "asset": "C", "file": "content/scenes/fanren/images/p0/fr-sc-019/fr-sc-019-c-modules-activity.png", "width": 1672, "height": 941, "bytes": 2768659, "sha256": "d300627bf75bb19b6fc8d3204fc9c43ab2cf8e4495738f4f13a749e2b203ccab" }
+      ]
+    },
+    {
+      "sceneId": "FR-SC-023",
+      "nameZh": "空冥殿",
+      "sceneStateVersion": "FR-SC-023@concept-v1",
+      "qaStatus": "concept-pass-with-minor-note",
+      "qaNotes": ["Suspended white-jade megastructure, golden veil, cloud-sea states and human scale read consistently.", "C emphasizes scale and modular display; the residual-map cloth is intentionally blank and must not acquire generated writing."],
+      "assets": [
+        { "asset": "A", "file": "content/scenes/fanren/images/p0/fr-sc-023/fr-sc-023-a-establishing.png", "width": 1672, "height": 941, "bytes": 1860067, "sha256": "6cbf387cc7732e197ee6c1a708bbf08093ef4eca91e443020ac123b2399c994b" },
+        { "asset": "B", "file": "content/scenes/fanren/images/p0/fr-sc-023/fr-sc-023-b-weather-board.png", "width": 1672, "height": 941, "bytes": 2227447, "sha256": "e47c36eb73fc8719e60d7bc6e31cbc9a72ff094eda5ecfac4a6c558330799283" },
+        { "asset": "C", "file": "content/scenes/fanren/images/p0/fr-sc-023/fr-sc-023-c-modules-activity.png", "width": 1672, "height": 941, "bytes": 2295269, "sha256": "f2d8a56bc93f05d024bbecc8c7cb83e56877cd34dd02d737bb16c1a727610941" }
+      ]
+    },
+    {
+      "sceneId": "FR-SC-044",
+      "nameZh": "天堑城",
+      "sceneStateVersion": "FR-SC-044@concept-v1",
+      "qaStatus": "concept-pass-with-minor-note",
+      "qaNotes": ["The wilderness wall remains gate-less, the city hierarchy and human/demon partition are readable, and A contains exactly three suns plus four faint moon shadows.", "B follows 1+6 at dawn, 3+4 at midday, obscured bodies in the storm, and seven moons at night; the far-right celestial slot drifts slightly between states and should be locked in final sky compositing."],
+      "assets": [
+        { "asset": "A", "file": "content/scenes/fanren/images/p0/fr-sc-044/fr-sc-044-a-establishing.png", "width": 1672, "height": 941, "bytes": 2677177, "sha256": "816292079482d80f5d008e58e7509baaaf10054dc4b39baed62eda727de5e819" },
+        { "asset": "B", "file": "content/scenes/fanren/images/p0/fr-sc-044/fr-sc-044-b-weather-board.png", "width": 1672, "height": 941, "bytes": 2372107, "sha256": "2d4c64d2111147feaa53ca316ed64d42406a7e32c52d527356ae4f44cd0625c2" },
+        { "asset": "C", "file": "content/scenes/fanren/images/p0/fr-sc-044/fr-sc-044-c-modules-activity.png", "width": 1672, "height": 941, "bytes": 2697513, "sha256": "6e30dcf0c0138542c46ed03f7fc922e1b797379e1858ee12a4c8db58657c65e1" }
+      ]
+    }
+  ]
+}
