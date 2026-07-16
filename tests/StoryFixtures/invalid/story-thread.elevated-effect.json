@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "threadId": "thr.fixture.elevated",
+  "templateId": "assoc.fixture.v1",
+  "playerId": "p.fixture",
+  "resolvedParams": {},
+  "injections": [{ "nodeId": "node.fixture", "point": "node_intro", "text": "[TECHNICAL_PLACEHOLDER]", "effects": [{ "op": "quest_failure", "value": "quest.fixture" }] }],
+  "mediaRefs": [],
+  "expiresAtChapterEnd": true,
+  "auditRef": "genjob.fixture",
+  "fallbackUsed": false
+}
