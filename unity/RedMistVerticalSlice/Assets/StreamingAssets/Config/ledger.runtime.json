@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0.0",
+  "enabled": false,
+  "requestTimeoutSeconds": 10,
+  "maxResponseBytes": 262144,
+  "batchSize": 25,
+  "flushIntervalSeconds": 5,
+  "maxQueuedEvents": 4096
+}

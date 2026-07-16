@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "entryId": "led.wrong-payload",
+  "playerId": "p.8842",
+  "type": "item_gained",
+  "actors": ["char.shen_yan"],
+  "severity": 2,
+  "chapter": "chapter.red_mist",
+  "worldClock": 1500,
+  "sourceNodeId": "rescue",
+  "factRefs": [],
+  "payload": {
+    "debtKind": "spared_life"
+  }
+}
