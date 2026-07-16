@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/npc-response.schema.json",
+  "title": "NpcResponse",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "textKey",
+    "emotionKey",
+    "lipSyncMediaRef",
+    "effects"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "textKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "emotionKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "lipSyncMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "audioMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "fallbackMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/stateEffect"
+      }
+    },
+    "nextNodeId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "approvalStatus": {
+      "$ref": "common.schema.json#/$defs/status"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.encounter.primary",
+  "combatantIds": [
+    "fixture.combatant_state.primary"
+  ],
+  "enemyIds": [
+    "fixture.combatant_state.opponent"
+  ],
+  "terrainId": "fixture.terrain.primary",
+  "terrainTags": [
+    "fixture_terrain"
+  ],
+  "objectives": [
+    {
+      "id": "fixture.objective.primary",
+      "type": "successful_retreat",
+      "requiredForSuccess": true,
+      "successEffects": [],
+      "failureEffects": []
+    }
+  ],
+  "tacticalOptions": [
+    {
+      "id": "fixture.tactical_option.primary",
+      "phase": "preparation",
+      "intentId": "fixture.intent.primary",
+      "prerequisiteTags": [],
+      "resourceCosts": []
+    }
+  ],
+  "primaryMediaRef": "fixture.media.encounter.primary",
+  "fallbackMediaRef": "fixture.media.encounter.fallback"
+}

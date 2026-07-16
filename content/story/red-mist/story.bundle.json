@@ -1,0 +1,1561 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter.red_mist",
+  "entryNodeId": "prologue",
+  "contentHash": "sha256:4f8c962873d49df97d20c8eb4cf1f5129b220e7613f59190c8f0b04fd46d7e38",
+  "approvalStatus": "approved",
+  "distributionStatus": "internal_prototype_only",
+  "localizations": {
+    "zh-CN": {
+      "story.red_mist.voice.emotion.stern": "\u51B7\u5389",
+      "story.red_mist.voice.emotion.focused": "\u4E13\u6CE8",
+      "story.red_mist.voice.emotion.urgent": "\u6025\u8FEB",
+      "story.red_mist.voice.emotion.patient": "\u514B\u5236",
+      "story.red_mist.voice.emotion.uncertain": "\u7591\u95EE",
+      "story.red_mist.voice.calm.abuse": "\u8A00\u8BED\u518D\u91CD\u4E5F\u4E0D\u4F1A\u6539\u53D8\u96FE\u4E2D\u7684\u5C40\u52BF\u3002\u82E5\u8981\u7EE7\u7EED\uFF0C\u5C31\u8BF4\u6E05\u4F60\u51C6\u5907\u600E\u4E48\u505A\u3002",
+      "story.red_mist.voice.calm.irrelevant": "\u90A3\u4EF6\u4E8B\u4E0E\u773C\u524D\u7684\u9669\u5883\u65E0\u5173\u3002\u5148\u770B\u6E05\u6B64\u5730\uFF0C\u518D\u51B3\u5B9A\u4E0B\u4E00\u6B65\u3002",
+      "story.red_mist.voice.calm.too_long": "\u96FE\u52BF\u6B63\u5728\u53D8\u5316\u3002\u628A\u8BDD\u6536\u77ED\uFF0C\u53EA\u8BF4\u4F60\u6B64\u523B\u8981\u505A\u4EC0\u4E48\u3002",
+      "story.red_mist.voice.calm.silence": "\u4E0D\u5FC5\u4ED3\u4FC3\u5F00\u53E3\u3002\u5148\u770B\u6E05\u7EBF\u7D22\uFF0C\u60F3\u597D\u540E\u518D\u4F5C\u9009\u62E9\u3002",
+      "story.red_mist.voice.calm.low_confidence": "\u8FD9\u53E5\u8BDD\u6CA1\u6709\u542C\u6E05\u3002\u6362\u4E2A\u7B80\u77ED\u8BF4\u6CD5\uFF0C\u6216\u76F4\u63A5\u9009\u62E9\u773C\u524D\u7684\u65B9\u6848\u3002",
+      "story.red_mist.voice.ally.abuse": "\u82E5\u8FDE\u540C\u884C\u8005\u90FD\u53EA\u5269\u6076\u8A00\uFF0C\u8FD9\u6761\u8DEF\u4FBF\u8D70\u4E0D\u8FDC\u3002\u8BF4\u51FA\u4F60\u7684\u5224\u65AD\uFF0C\u522B\u628A\u529B\u6C14\u6D6A\u8D39\u5728\u4E89\u5435\u4E0A\u3002",
+      "story.red_mist.voice.ally.irrelevant": "\u90A3\u4EF6\u4E8B\u53EF\u4EE5\u4EE5\u540E\u518D\u8C08\u3002\u5165\u53E3\u548C\u540C\u4F34\u90FD\u5728\u7B49\u6211\u4EEC\u51B3\u5B9A\u3002",
+      "story.red_mist.voice.ally.too_long": "\u6CA1\u6709\u65F6\u95F4\u542C\u5B8C\u6574\u6BB5\u7F18\u7531\u3002\u544A\u8BC9\u6211\u7ED3\u8BBA\uFF1A\u524D\u8FDB\u3001\u89C2\u5BDF\uFF0C\u8FD8\u662F\u64A4\u56DE\uFF1F",
+      "story.red_mist.voice.ally.silence": "\u4F60\u8FD8\u5728\u6743\u8861\uFF0C\u6211\u660E\u767D\u3002\u6211\u4F1A\u5B88\u4F4F\u8FD9\u4E00\u4FA7\uFF0C\u4F46\u51B3\u5B9A\u5FC5\u987B\u7531\u4F60\u4F5C\u51FA\u3002",
+      "story.red_mist.voice.ally.low_confidence": "\u6211\u6CA1\u542C\u6E05\u4F60\u7684\u610F\u601D\u3002\u518D\u8BF4\u4E00\u904D\uFF0C\u6216\u6307\u660E\u4F60\u652F\u6301\u54EA\u4E2A\u65B9\u6848\u3002",
+      "story.red_mist.voice.system.abuse": "\u65E0\u6548\u8A00\u8BED\u4E0D\u4F1A\u6539\u53D8\u7ED3\u7B97\u3002\u8BF7\u7ED9\u51FA\u53EF\u6267\u884C\u6307\u4EE4\u3002",
+      "story.red_mist.voice.system.irrelevant": "\u8F93\u5165\u4E0E\u5F53\u524D\u76EE\u6807\u65E0\u5173\u3002\u8BF7\u56F4\u7ED5\u8DEF\u7EBF\u3001\u9635\u773C\u6216\u6218\u672F\u4F5C\u7B54\u3002",
+      "story.red_mist.voice.system.too_long": "\u6307\u4EE4\u8FC7\u957F\uFF0C\u65E0\u6CD5\u5B89\u5168\u5224\u5B9A\u3002\u8BF7\u7F29\u51CF\u4E3A\u4E00\u4E2A\u660E\u786E\u52A8\u4F5C\u3002",
+      "story.red_mist.voice.system.silence": "\u672A\u6536\u5230\u6709\u6548\u6307\u4EE4\u3002\u573A\u666F\u4ECD\u5728\u7B49\u5F85\uFF0C\u56FA\u5B9A\u65B9\u6848\u4FDD\u6301\u53EF\u7528\u3002",
+      "story.red_mist.voice.system.low_confidence": "\u6307\u4EE4\u7F6E\u4FE1\u5EA6\u4E0D\u8DB3\u3002\u8BF7\u91CD\u65B0\u8868\u8FF0\uFF0C\u6216\u4F7F\u7528\u56FA\u5B9A\u65B9\u6848\u3002",
+      "story.red_mist.voice.hostile.abuse": "\u9A82\u5F97\u518D\u54CD\uFF0C\u4E5F\u6362\u4E0D\u6765\u4E00\u6761\u771F\u8DEF\u3002\u62FF\u51FA\u7B79\u7801\uFF0C\u6216\u8005\u8BA9\u5F00\u3002",
+      "story.red_mist.voice.hostile.irrelevant": "\u5C11\u7ED5\u5F2F\u5B50\u3002\u6B64\u523B\u53EA\u8C08\u9635\u9489\u3001\u7075\u836F\u548C\u8C01\u5148\u8BA9\u8DEF\u3002",
+      "story.red_mist.voice.hostile.too_long": "\u6211\u6CA1\u5174\u81F4\u542C\u4F60\u94FA\u9648\u6765\u5386\u3002\u7528\u4E00\u53E5\u8BDD\u62A5\u51FA\u6761\u4EF6\u3002",
+      "story.red_mist.voice.hostile.silence": "\u6C89\u9ED8\u4E5F\u662F\u4EF7\u7801\uFF0C\u53EA\u662F\u901A\u5E38\u6700\u8D35\u3002\u60F3\u597D\u4E86\u5C31\u5F00\u53E3\u3002",
+      "story.red_mist.voice.hostile.low_confidence": "\u4F60\u8FD9\u53E5\u8BDD\u542B\u7CCA\u5F97\u5F88\u3002\u518D\u8BF4\u6E05\u695A\uFF0C\u514D\u5F97\u6211\u6309\u6700\u574F\u7684\u610F\u601D\u7406\u89E3\u3002",
+      "story.red_mist.voice.encounter.abuse": "\u9ED1\u6CE5\u4E0B\u7684\u4E1C\u897F\u4E0D\u4F1A\u7B49\u6211\u4EEC\u5435\u5B8C\u3002\u6536\u8D77\u654C\u610F\uFF0C\u5148\u51B3\u5B9A\u5982\u4F55\u6D3B\u7740\u79BB\u5F00\u3002",
+      "story.red_mist.voice.encounter.irrelevant": "\u5B9D\u5323\u3001\u9000\u8DEF\u548C\u58A8\u86DF\u624D\u662F\u773C\u524D\u4E8B\u5B9E\u3002\u522B\u8BA9\u65E0\u5173\u7684\u8BDD\u66B4\u9732\u6211\u4EEC\u7684\u7A7A\u9699\u3002",
+      "story.red_mist.voice.encounter.too_long": "\u9635\u67F1\u6B63\u5728\u65AD\u88C2\u3002\u628A\u8BA1\u5212\u538B\u6210\u4E00\u53E5\uFF0C\u6211\u53EA\u9700\u8981\u53EF\u6267\u884C\u7684\u90E8\u5206\u3002",
+      "story.red_mist.voice.encounter.silence": "\u4F60\u4E0D\u8868\u6001\uFF0C\u6211\u4FBF\u6309\u6700\u4FDD\u5B88\u7684\u65B9\u5F0F\u5B88\u4F4F\u9000\u8DEF\u3002\u4ECD\u53EF\u5728\u58A8\u86DF\u6251\u51FA\u524D\u6539\u53D8\u51B3\u5B9A\u3002",
+      "story.red_mist.voice.encounter.low_confidence": "\u96FE\u58F0\u76D6\u4F4F\u4E86\u4F60\u7684\u8BDD\u3002\u518D\u8BF4\u5F97\u660E\u786E\u4E9B\uFF0C\u6216\u8005\u76F4\u63A5\u9009\u5B9A\u884C\u52A8\u3002",
+      "story.red_mist.node.prologue.title": "\u96FE\u95E8\u5C06\u542F",
+      "story.red_mist.node.prologue.location": "\u8D64\u96FE\u79D8\u82D1\u5916\u73AF",
+      "story.red_mist.node.prologue.speaker": "\u65C1\u767D",
+      "story.red_mist.node.prologue.male_text": "\u7B2C\u4E09\u65E5\u7684\u949F\u58F0\u8FD8\u6CA1\u6709\u54CD\uFF0C\u5C71\u8179\u4E2D\u7684\u8D64\u96FE\u5DF2\u7ECF\u50CF\u6F6E\u6C34\u4E00\u6837\u8D77\u4F0F\u3002\u4E03\u6D3E\u5F1F\u5B50\u90FD\u5728\u7B49\u90A3\u9053\u53EA\u5F00\u542F\u7247\u523B\u7684\u88C2\u9699\u3002\u6C88\u781A\u7AD9\u5728\u4EBA\u7FA4\u6700\u540E\uFF0C\u5148\u770B\u9000\u8DEF\uFF0C\u518D\u770B\u540C\u4F34\uFF0C\u6700\u540E\u624D\u770B\u8FDC\u5904\u88AB\u96FE\u541E\u6CA1\u7684\u836F\u8C37\u3002\u8FDB\u5165\u79D8\u82D1\u7684\u4EBA\u90FD\u8BF4\u81EA\u5DF1\u6765\u6C42\u7B51\u57FA\u7075\u836F\uFF0C\u53EF\u771F\u6B63\u5E26\u8FDB\u5C71\u91CC\u7684\uFF0C\u8FD8\u6709\u503A\u3001\u79D8\u5BC6\u548C\u6740\u5FC3\u3002",
+      "story.red_mist.node.prologue.female_text": "\u7B2C\u4E09\u65E5\u7684\u949F\u58F0\u8FD8\u6CA1\u6709\u54CD\uFF0C\u5C71\u8179\u4E2D\u7684\u8D64\u96FE\u5DF2\u7ECF\u50CF\u6F6E\u6C34\u4E00\u6837\u8D77\u4F0F\u3002\u853D\u6708\u5BAB\u5F1F\u5B50\u5217\u6210\u6708\u8F6E\u9635\uFF0C\u6240\u6709\u4EBA\u90FD\u5728\u7B49\u695A\u660E\u7EEE\u4E0B\u4EE4\u3002\u5979\u7684\u771F\u5B9E\u5883\u754C\u4E0E\u773C\u524D\u53EF\u8C03\u7528\u7684\u6CD5\u529B\u5E76\u4E0D\u76F8\u540C\uFF1B\u82E5\u8FC7\u65E9\u66B4\u9732\u8D64\u9E3E\u7130\u73AF\uFF0C\u95E8\u4EBA\u53EF\u4EE5\u5C11\u6B7B\u51E0\u4E2A\uFF0C\u4F46\u5404\u5B97\u957F\u8001\u4E5F\u4F1A\u7ACB\u523B\u91CD\u65B0\u4F30\u91CF\u5979\u3002",
+      "story.red_mist.choice.prologue.to_camp.label": "\u8FDB\u5165\u4E34\u65F6\u8425\u5730\uFF0C\u68C0\u67E5\u884C\u88C5",
+      "story.red_mist.choice.prologue.to_camp.hint": "\u4FDD\u7559\u5B8C\u6574\u8865\u7ED9\u9009\u62E9",
+      "story.red_mist.choice.prologue.gate_scout.label": "\u6CBF\u6C34\u9762\u89C2\u5BDF\u96FE\u6D41\uFF0C\u7ED5\u5230\u4FA7\u95E8",
+      "story.red_mist.choice.prologue.gate_scout.hint": "\u6D88\u8017\u795E\u8BC6\uFF0C\u8DF3\u8FC7\u8425\u5730\u5E76\u63D0\u524D\u8BC6\u522B\u4F0F\u51FB\u75D5\u8FF9",
+      "story.red_mist.choice.prologue.gate_companion.label": "\u4E0E\u540C\u4F34\u5408\u6D41\u540E\u5171\u540C\u5165\u82D1",
+      "story.red_mist.choice.prologue.gate_companion.hint": "\u4FE1\u4EFB\u63D0\u5347\uFF0C\u518D\u8FDB\u5165\u8425\u5730\u51C6\u5907",
+      "story.red_mist.node.camp.title": "\u8425\u5730\u4E0E\u5E95\u724C",
+      "story.red_mist.node.camp.location": "\u5916\u73AF\u4E34\u65F6\u8425\u5730",
+      "story.red_mist.node.camp.speaker": "\u5185\u5FC3",
+      "story.red_mist.node.camp.male_text": "\u706B\u5806\u65C1\u6446\u7740\u4E24\u5F20\u533F\u606F\u7B26\u3001\u4E00\u74F6\u56DE\u6C14\u6563\u548C\u4E00\u679A\u5C1A\u672A\u5B8C\u5168\u6478\u6E05\u7981\u5236\u7684\u91D1\u8709\u8FDE\u73AF\u5203\u3002\u5168\u90E8\u5E26\u8D70\u6700\u7A33\u59A5\uFF0C\u5374\u4F1A\u8BA9\u7EB3\u7269\u56CA\u81C3\u80BF\uFF1B\u5C11\u5E26\u4E00\u6837\uFF0C\u98DE\u9041\u548C\u64A4\u9000\u4FBF\u80FD\u591A\u7559\u51E0\u5206\u4F59\u5730\u3002\u987E\u60CA\u96E8\u538B\u4F4E\u58F0\u97F3\u63D0\u9192\uFF1A\u5165\u53E3\u9644\u8FD1\u5DF2\u6709\u964C\u751F\u795E\u8BC6\u626B\u8FC7\u4E24\u6B21\u3002",
+      "story.red_mist.node.camp.female_text": "\u4E09\u540D\u5E74\u8F7B\u5F1F\u5B50\u7684\u6CD5\u529B\u90FD\u672A\u6062\u590D\uFF0C\u4F24\u5458\u8FD8\u5728\u53D1\u70ED\u3002\u695A\u660E\u7EEE\u53EF\u4EE5\u628A\u5B97\u95E8\u62A4\u7B26\u5206\u7ED9\u961F\u4F0D\uFF0C\u4E5F\u53EF\u4EE5\u628A\u7075\u529B\u7559\u7ED9\u7EF4\u6301\u8EAB\u4EFD\u4F2A\u88C5\u3002\u957F\u8001\u7684\u4F20\u8BAF\u53EA\u6709\u4E00\u53E5\uFF1A\u4E3B\u836F\u5FC5\u987B\u5E26\u56DE\u3002\u5979\u5374\u6E05\u695A\uFF0C\u6D3B\u7740\u56DE\u53BB\u7684\u5F1F\u5B50\u540C\u6837\u4F1A\u6210\u4E3A\u5B97\u95E8\u672A\u6765\u3002",
+      "story.red_mist.choice.camp.camp_retreat.label": "\u4FDD\u7559\u64A4\u9000\u6CD5\u529B\uFF0C\u8F7B\u88C5\u5165\u82D1",
+      "story.red_mist.choice.camp.camp_retreat.hint": "\u6CD5\u529B\u002B10\uFF0C\u62A4\u7B26\u8F83\u5C11",
+      "story.red_mist.choice.camp.camp_balanced.label": "\u5E26\u9F50\u7B26\u7B93\u4E0E\u56DE\u6C14\u6563",
+      "story.red_mist.choice.camp.camp_balanced.hint": "\u83B7\u5F97\u989D\u5916\u62A4\u7B26\uFF0C\u98DE\u884C\u8D1F\u62C5\u589E\u52A0",
+      "story.red_mist.choice.camp.camp_protect.label": "\u628A\u62A4\u7B26\u4EA4\u7ED9\u540C\u4F34",
+      "story.red_mist.choice.camp.camp_protect.hint": "\u4FE1\u4EFB\u63D0\u5347\uFF0C\u81EA\u8EAB\u9632\u62A4\u4E0B\u964D",
+      "story.red_mist.node.alliance.title": "\u4E34\u65F6\u540C\u884C",
+      "story.red_mist.node.alliance.location": "\u96FE\u95E8\u77F3\u9636",
+      "story.red_mist.node.alliance.speaker": "\u987E\u60CA\u96E8\uFF0F\u853D\u6708\u5BAB\u5F1F\u5B50",
+      "story.red_mist.node.alliance.male_text": "\u987E\u60CA\u96E8\u613F\u610F\u540C\u884C\uFF0C\u5374\u4F1A\u56E0\u6B64\u770B\u89C1\u66F4\u591A\u5E95\u724C\u3002\u53E6\u4E00\u540D\u540C\u95E8\u63D0\u51FA\u4EA4\u6362\u60C5\u62A5\uFF1A\u4ED6\u77E5\u9053\u4E00\u6761\u907F\u5F00\u6B63\u95E8\u4F0F\u51FB\u7684\u65E7\u517D\u5F84\uFF0C\u4F46\u8981\u6C42\u4E8B\u540E\u5206\u5F97\u4E00\u682A\u4E3B\u836F\u3002\u6C88\u781A\u65E0\u6CD5\u9A8C\u8BC1\u60C5\u62A5\u771F\u5047\uFF0C\u53EA\u80FD\u4ECE\u5BF9\u65B9\u9774\u5E95\u7684\u65B0\u6CE5\u548C\u8896\u53E3\u7684\u65AD\u4E1D\u5224\u65AD\uFF0C\u4ED6\u786E\u5B9E\u521A\u4ECE\u90A3\u6761\u8DEF\u9000\u56DE\u6765\u3002",
+      "story.red_mist.node.alliance.female_text": "\u4E24\u540D\u5916\u5B97\u5F1F\u5B50\u8BF7\u6C42\u5E76\u5165\u961F\u4F0D\u3002\u4ED6\u4EEC\u58F0\u79F0\u613F\u610F\u542C\u4ECE\u6307\u6325\uFF0C\u76EE\u5149\u5374\u4E00\u76F4\u505C\u5728\u853D\u6708\u5BAB\u7684\u9635\u65D7\u4E0A\u3002\u5E74\u8F7B\u95E8\u4EBA\u7B49\u5F85\u695A\u660E\u7EEE\u8868\u6001\uFF1A\u63A5\u7EB3\u4ED6\u4EEC\u80FD\u6269\u5927\u4FA6\u5BDF\u9762\uFF0C\u4E5F\u53EF\u80FD\u628A\u961F\u4F0D\u7684\u865A\u5B9E\u4EA4\u7ED9\u522B\u5B97\u3002\u62D2\u7EDD\u6700\u5B89\u5168\uFF0C\u5374\u4F1A\u5728\u79D8\u82D1\u91CC\u591A\u51FA\u4E00\u7FA4\u5FC3\u6000\u4E0D\u6EE1\u7684\u65C1\u89C2\u8005\u3002",
+      "story.red_mist.choice.alliance.ally_cautious.label": "\u63A5\u53D7\u540C\u884C\uFF0C\u4F46\u53EA\u5171\u4EAB\u8DEF\u7EBF",
+      "story.red_mist.choice.alliance.ally_cautious.hint": "\u4FE1\u4EFB\u5C0F\u5E45\u63D0\u5347\uFF0C\u79D8\u5BC6\u4ECD\u53D7\u4FDD\u62A4",
+      "story.red_mist.choice.alliance.ally_open.label": "\u4EA4\u6362\u5B8C\u6574\u60C5\u62A5\u5E76\u5171\u540C\u8FDB\u9000",
+      "story.red_mist.choice.alliance.ally_open.hint": "\u4FE1\u4EFB\u63D0\u5347\uFF0C\u66B4\u9732\u98CE\u9669\u589E\u52A0",
+      "story.red_mist.choice.alliance.ally_refuse.label": "\u62D2\u7EDD\u7EC4\u961F\uFF0C\u4FDD\u6301\u8DDD\u79BB",
+      "story.red_mist.choice.alliance.ally_refuse.hint": "\u79D8\u5BC6\u5B89\u5168\uFF0C\u4F46\u540E\u7EED\u6551\u63F4\u66F4\u56F0\u96BE",
+      "story.red_mist.node.flight.title": "\u5FA1\u5668\u8D8A\u9698",
+      "story.red_mist.node.flight.location": "\u72ED\u5929\u9698\u4E0A\u7A7A",
+      "story.red_mist.node.flight.speaker": "\u7CFB\u7EDF",
+      "story.red_mist.node.flight.male_text": "\u5C71\u9698\u4E24\u4FA7\u9669\u5CF0\u5939\u6210\u7A84\u7F1D\uFF0C\u5730\u9762\u4E1D\u7EBF\u4E0E\u7126\u75D5\u8BF4\u660E\u4F0F\u51FB\u8005\u5DF2\u5C01\u4F4F\u6B65\u884C\u8DEF\u7EBF\u3002\u77ED\u7A0B\u5FA1\u5668\u53EF\u4EE5\u62A2\u5728\u96FE\u95E8\u95ED\u5408\u524D\u62B5\u8FBE\u4E2D\u5FC3\u533A\uFF0C\u4F46\u98DE\u5F97\u8D8A\u9AD8\u8D8A\u5BB9\u6613\u6210\u4E3A\u9776\u5B50\u3002\u4FDD\u6301\u4F4E\u7A7A\u3001\u501F\u96FE\u906E\u853D\uFF0C\u5E76\u6536\u96C6\u6CBF\u9014\u6563\u9038\u7075\u6C14\uFF0C\u624D\u80FD\u4E3A\u64A4\u9000\u4FDD\u7559\u6CD5\u529B\u3002",
+      "story.red_mist.node.flight.female_text": "\u77F3\u58C1\u95F4\u7684\u98CE\u6B63\u5728\u6539\u53D8\u3002\u961F\u4F0D\u82E5\u6CBF\u8C37\u5E95\u524D\u8FDB\uFF0C\u5F88\u53EF\u80FD\u9519\u8FC7\u5165\u53E3\uFF1B\u82E5\u7ED3\u9635\u98DE\u8D8A\uFF0C\u4F24\u5458\u4F1A\u62D6\u6162\u6240\u6709\u4EBA\u3002\u695A\u660E\u7EEE\u5FC5\u987B\u5728\u4F4E\u7A7A\u9886\u822A\uFF0C\u907F\u5F00\u4E71\u6D41\u4E0E\u4FA6\u6D4B\u5149\uFF0C\u540C\u65F6\u7528\u6700\u5C11\u6CD5\u529B\u4E3A\u5F1F\u5B50\u6253\u5F00\u5B89\u5168\u822A\u7EBF\u3002",
+      "story.red_mist.node.herb_route.title": "\u96FE\u4E2D\u836F\u5F84",
+      "story.red_mist.node.herb_route.location": "\u73AF\u5CB3\u836F\u8C37",
+      "story.red_mist.node.herb_route.speaker": "\u65C1\u767D",
+      "story.red_mist.node.herb_route.male_text": "\u96FE\u6563\u7684\u4E00\u523B\uFF0C\u56DB\u79CD\u7075\u690D\u540C\u65F6\u663E\u9732\u3002\u771F\u6B63\u7684\u7389\u9AD3\u829D\u5E94\u5F53\u6839\u987B\u85CF\u767D\u3001\u53F6\u80CC\u6709\u51B7\u9732\uFF0C\u9644\u8FD1\u5374\u6CA1\u6709\u5B88\u836F\u5996\u517D\u7559\u4E0B\u7684\u8DB3\u8FF9\u3002\u6709\u4EBA\u6545\u610F\u79FB\u683D\u4E86\u8D5D\u54C1\uFF0C\u4E5F\u6709\u4EBA\u5728\u771F\u836F\u5468\u56F4\u5E03\u4E0B\u5F15\u517D\u7C89\u3002\u9009\u9519\u5E76\u975E\u53EA\u635F\u5931\u65F6\u95F4\uFF0C\u8FD8\u4F1A\u628A\u85CF\u5728\u96FE\u540E\u7684\u4E1C\u897F\u5F15\u6765\u3002",
+      "story.red_mist.node.herb_route.female_text": "\u836F\u8C37\u91CC\u56DB\u5904\u90FD\u662F\u88AB\u7FFB\u52A8\u8FC7\u7684\u6CE5\u571F\u3002\u5F1F\u5B50\u8BA4\u51FA\u4E86\u7D2B\u7334\u82B1\uFF0C\u5374\u6CA1\u6709\u6CE8\u610F\u82B1\u830E\u4E0A\u7684\u70ED\u6591\u3002\u695A\u660E\u7EEE\u5FC5\u987B\u8BA9\u961F\u4F0D\u5728\u4E89\u836F\u6B32\u671B\u538B\u8FC7\u7EAA\u5F8B\u524D\u505C\u4E0B\u6765\uFF1A\u5148\u8FA8\u8BA4\u3001\u518D\u91C7\u96C6\u3001\u6700\u540E\u6E05\u7406\u6C14\u5473\uFF0C\u4EFB\u4F55\u4E00\u6B65\u7701\u7565\u90FD\u53EF\u80FD\u8BA9\u6574\u961F\u66B4\u9732\u3002",
+      "story.red_mist.node.corpse_signs.title": "\u65E0\u58F0\u7684\u4F0F\u51FB",
+      "story.red_mist.node.corpse_signs.location": "\u5BC6\u6797\u6EAA\u6DA7",
+      "story.red_mist.node.corpse_signs.speaker": "\u5185\u5FC3",
+      "story.red_mist.node.corpse_signs.male_text": "\u6EAA\u6C34\u65C1\u8EBA\u7740\u4E00\u540D\u5916\u5B97\u5F1F\u5B50\uFF0C\u7EB3\u7269\u56CA\u8FD8\u5728\uFF0C\u81F4\u547D\u4F24\u5374\u4E0D\u662F\u5996\u517D\u9020\u6210\u3002\u6811\u76AE\u4E0A\u6709\u4E09\u9053\u6781\u7EC6\u7684\u5272\u75D5\uFF0C\u6CE5\u4E2D\u8FD8\u6B8B\u7559\u88AB\u706B\u70E4\u5E72\u7684\u86DB\u4E1D\u3002\u653E\u51FA\u795E\u8BC6\u53EF\u4EE5\u590D\u539F\u88AD\u51FB\u65B9\u5411\uFF0C\u4E5F\u53EF\u80FD\u60CA\u52A8\u4ECD\u5728\u9644\u8FD1\u7684\u4EBA\u3002",
+      "story.red_mist.node.corpse_signs.female_text": "\u5931\u8054\u5F1F\u5B50\u7684\u4F69\u5251\u63D2\u5728\u6EAA\u8FB9\uFF0C\u5251\u7A57\u671D\u5411\u4E0E\u5C38\u4F53\u5012\u4E0B\u7684\u65B9\u5411\u76F8\u53CD\u3002\u6709\u4EBA\u79FB\u52A8\u8FC7\u73B0\u573A\u3002\u695A\u660E\u7EEE\u82E5\u4EB2\u81EA\u63A2\u67E5\uFF0C\u4F2A\u88C5\u6CD5\u529B\u4F1A\u51FA\u73B0\u77ED\u6682\u6CE2\u52A8\uFF1B\u82E5\u8BA9\u5E74\u8F7B\u5F1F\u5B50\u641C\u7D22\uFF0C\u4ED6\u4EEC\u53EF\u80FD\u8E29\u4E2D\u4ECD\u672A\u89E3\u9664\u7684\u7B2C\u4E8C\u5C42\u9677\u9631\u3002",
+      "story.red_mist.node.rescue.title": "\u96FE\u540E\u7684\u547C\u6551",
+      "story.red_mist.node.rescue.location": "\u77F3\u5899\u5916\u7F18",
+      "story.red_mist.node.rescue.speaker": "\u53D7\u4F24\u5F1F\u5B50",
+      "story.red_mist.node.rescue.male_text": "\u96FE\u540E\u4F20\u6765\u4E24\u77ED\u4E00\u957F\u7684\u6572\u77F3\u58F0\u3002\u90A3\u662F\u4E03\u6D3E\u5171\u7528\u7684\u6C42\u63F4\u6697\u53F7\uFF0C\u4E5F\u53EF\u80FD\u662F\u4F0F\u51FB\u8005\u4ECE\u6B7B\u8005\u8EAB\u4E0A\u5B66\u6765\u7684\u8BF1\u9975\u3002\u5165\u53E3\u8FD8\u6709\u4E00\u523B\u949F\u5173\u95ED\uFF1B\u7ED5\u884C\u6700\u7A33\uFF0C\u6551\u4EBA\u4F1A\u5931\u53BB\u4E89\u836F\u5148\u673A\uFF0C\u800C\u987A\u52BF\u8BBE\u4F0F\u5219\u53EF\u80FD\u628A\u771F\u6B63\u7684\u4F24\u5458\u4E5F\u5F53\u6210\u68CB\u5B50\u3002",
+      "story.red_mist.node.rescue.female_text": "\u6572\u77F3\u58F0\u6765\u81EA\u853D\u6708\u5BAB\u65E7\u6697\u53F7\uFF0C\u56DE\u5E94\u5374\u6162\u4E86\u534A\u62CD\u3002\u695A\u660E\u7EEE\u77E5\u9053\u5931\u8054\u95E8\u4EBA\u5C31\u5728\u9644\u8FD1\uFF0C\u4E5F\u77E5\u9053\u654C\u4EBA\u53EF\u80FD\u6B63\u501F\u5979\u7684\u8D23\u4EFB\u8BBE\u5C40\u3002\u5B97\u95E8\u9886\u961F\u6700\u96BE\u7684\u9009\u62E9\u4ECE\u6765\u4E0D\u662F\u6551\u4E0D\u6551\uFF0C\u800C\u662F\u613F\u610F\u8BA9\u591A\u5C11\u4EBA\u5171\u540C\u627F\u62C5\u8FD9\u6B21\u6551\u63F4\u7684\u4EE3\u4EF7\u3002",
+      "story.red_mist.choice.rescue.rescue_careful.label": "\u5E03\u7F6E\u63A9\u62A4\u540E\u6551\u63F4",
+      "story.red_mist.choice.rescue.rescue_careful.hint": "\u6D88\u8017\u65F6\u95F4\u548C\u62A4\u7B26\uFF0C\u8F83\u5B89\u5168",
+      "story.red_mist.choice.rescue.rescue_rush.label": "\u7ACB\u5373\u51B2\u5165\u96FE\u4E2D\u6551\u4EBA",
+      "story.red_mist.choice.rescue.rescue_rush.hint": "\u8282\u7701\u65F6\u95F4\uFF0C\u4F46\u5BB9\u6613\u8D1F\u4F24",
+      "story.red_mist.choice.rescue.rescue_skip.label": "\u8BB0\u5F55\u4F4D\u7F6E\uFF0C\u5148\u53BB\u5F00\u542F\u5165\u53E3",
+      "story.red_mist.choice.rescue.rescue_skip.hint": "\u4FDD\u7559\u8D44\u6E90\uFF0C\u5173\u7CFB\u4E0E\u5B97\u95E8\u8BC4\u4EF7\u4E0B\u964D",
+      "story.red_mist.node.shijun.title": "\u77F3\u5CFB\u7684\u4EF7\u7801",
+      "story.red_mist.node.shijun.location": "\u56DB\u94DC\u95E8\u524D",
+      "story.red_mist.node.shijun.speaker": "\u77F3\u5CFB",
+      "story.red_mist.node.shijun.male_text": "\u77F3\u5CFB\u4ECE\u94DC\u95E8\u9634\u5F71\u4E2D\u73B0\u8EAB\uFF0C\u624B\u91CC\u8F6C\u7740\u4E00\u679A\u67D3\u8840\u9635\u9489\u3002\u4ED6\u6CA1\u6709\u7ACB\u523B\u653B\u51FB\uFF0C\u53EA\u63D0\u51FA\u4EA4\u6362\uFF1A\u4EA4\u51FA\u521A\u91C7\u5230\u7684\u7075\u836F\uFF0C\u4ED6\u4FBF\u8BF4\u51FA\u5730\u4E0B\u5165\u53E3\u7684\u4F4D\u7F6E\u3002\u6C88\u781A\u6CE8\u610F\u5230\u9635\u9489\u4E0A\u7684\u6CE5\u4ECD\u5728\u5192\u70ED\u6C14\u2014\u2014\u5BF9\u65B9\u521A\u4ECE\u5730\u4E0B\u8D25\u9000\uFF0C\u6240\u8C13\u60C5\u62A5\u5F88\u53EF\u80FD\u53EA\u662F\u4E00\u6B21\u501F\u5200\u6740\u4EBA\u3002",
+      "story.red_mist.node.shijun.female_text": "\u77F3\u5CFB\u62E6\u4F4F\u961F\u4F0D\uFF0C\u58F0\u79F0\u5931\u8054\u5F1F\u5B50\u5DF2\u7ECF\u8FDB\u5165\u5730\u4E0B\uFF0C\u8FD8\u5C55\u793A\u4E00\u679A\u853D\u6708\u5BAB\u8170\u724C\u3002\u8170\u724C\u662F\u771F\u7684\uFF0C\u8BDD\u5374\u672A\u5FC5\u3002\u4ED6\u5728\u7B49\u5F85\u695A\u660E\u7EEE\u56E0\u7126\u6025\u800C\u66B4\u9732\u4FEE\u4E3A\uFF1B\u53EA\u8981\u5979\u5148\u52A8\u624B\uFF0C\u5176\u4ED6\u5B97\u95E8\u4FBF\u4F1A\u628A\u51B2\u7A81\u8BB0\u6210\u853D\u6708\u5BAB\u5F3A\u593A\u5165\u53E3\u3002",
+      "story.red_mist.choice.shijun.shijun_probe.label": "\u793A\u5F31\u5E76\u8FFD\u95EE\u5730\u4E0B\u7EC6\u8282",
+      "story.red_mist.choice.shijun.shijun_probe.hint": "\u53EF\u80FD\u8BC6\u7834\u8C0E\u8A00\uFF0C\u4FDD\u7559\u5E95\u724C",
+      "story.red_mist.choice.shijun.shijun_threat.label": "\u4EE5\u5883\u754C\u5A01\u6151\uFF0C\u903C\u4ED6\u8BA9\u8DEF",
+      "story.red_mist.choice.shijun.shijun_threat.hint": "\u5FEB\u901F\u901A\u8FC7\uFF0C\u4F46\u589E\u52A0\u66B4\u9732",
+      "story.red_mist.choice.shijun.shijun_trade.label": "\u4EA4\u51FA\u4E00\u682A\u6B21\u836F\u6362\u53D6\u9635\u9489",
+      "story.red_mist.choice.shijun.shijun_trade.hint": "\u635F\u5931\u8D44\u6E90\uFF0C\u83B7\u5F97\u7834\u9635\u4F18\u52BF",
+      "story.red_mist.node.formation.title": "\u56DB\u95E8\u7981\u5236",
+      "story.red_mist.node.formation.location": "\u4E2D\u5FC3\u533A\u53E4\u94DC\u95E8",
+      "story.red_mist.node.formation.speaker": "\u7CFB\u7EDF",
+      "story.red_mist.node.formation.male_text": "\u56DB\u9053\u94DC\u95E8\u5E76\u4E0D\u5BF9\u5E94\u56DB\u6761\u8DEF\u3002\u6708\u9633\u5B9D\u73E0\u7684\u5149\u4F9D\u6B21\u843D\u5728\u65E7\u94DC\u3001\u9752\u77F3\u3001\u836F\u53F6\u548C\u6C34\u9762\u4E0A\uFF0C\u5F62\u6210\u4E00\u6761\u4E0D\u65AD\u91CD\u590D\u7684\u7075\u6C14\u56DE\u8DEF\u3002\u6309\u9519\u8BEF\u987A\u5E8F\u89E6\u78B0\u9635\u773C\u4F1A\u5524\u9192\u5B88\u836F\u517D\uFF1B\u5F3A\u653B\u5219\u4F1A\u6D88\u8017\u672C\u5E94\u7528\u4E8E\u58A8\u86DF\u6218\u7684\u6CD5\u529B\u3002",
+      "story.red_mist.node.formation.female_text": "\u9635\u6CD5\u6B8B\u7F3A\uFF0C\u5374\u4ECD\u5728\u6309\u7167\u65E7\u65E5\u5DE1\u884C\u89C4\u5F8B\u8F6C\u52A8\u3002\u695A\u660E\u7EEE\u770B\u51FA\u56DB\u4E2A\u9635\u773C\u4E2D\u53EA\u6709\u4E09\u4E2A\u9700\u8981\u6FC0\u6D3B\uFF0C\u6700\u540E\u4E00\u4E2A\u5FC5\u987B\u4FDD\u6301\u6C89\u5BC2\uFF0C\u624D\u80FD\u4E3A\u961F\u4F0D\u7559\u4E0B\u64A4\u9000\u7F3A\u53E3\u3002\u5E74\u8F7B\u5F1F\u5B50\u5DF2\u7ECF\u4E3E\u8D77\u9635\u65D7\uFF0C\u7B49\u5F85\u5979\u7ED9\u51FA\u987A\u5E8F\u3002",
+      "story.red_mist.node.underground.title": "\u7384\u6CE5\u86DF\u7A9F",
+      "story.red_mist.node.underground.location": "\u82CD\u5CA9\u6BBF\u5730\u4E0B\u6CBC\u6CFD",
+      "story.red_mist.node.underground.speaker": "\u65C1\u767D",
+      "story.red_mist.node.underground.male_text": "\u9752\u77F3\u6BBF\u4E0B\u65B9\u5E76\u4E0D\u662F\u5730\u5BAB\uFF0C\u800C\u662F\u4E00\u7247\u65B9\u5706\u6570\u91CC\u7684\u9ED1\u6CE5\u6CBC\u6CFD\u3002\u70ED\u6C14\u4ECE\u6CE5\u6CE1\u4E2D\u55B7\u51FA\uFF0C\u767D\u7389\u5C0F\u4EAD\u60AC\u5728\u4E2D\u592E\uFF0C\u6697\u91D1\u7BB1\u5323\u6D6E\u4E8E\u4EAD\u4E0A\u3002\u695A\u660E\u7EEE\u7AD9\u5728\u53E6\u4E00\u4FA7\u7389\u680F\u540E\uFF0C\u8EAB\u8FB9\u8FD8\u6709\u4E00\u540D\u8D1F\u4F24\u5F1F\u5B50\u3002\u4E24\u4EBA\u5C1A\u672A\u5F00\u53E3\uFF0C\u6CE5\u9762\u5DF2\u7ECF\u51FA\u73B0\u7B2C\u4E8C\u9053\u6D9F\u6F2A\u3002",
+      "story.red_mist.node.underground.female_text": "\u5730\u4E0B\u70ED\u98CE\u626F\u52A8\u9762\u7EB1\u3002\u5BF9\u9762\u90A3\u4E2A\u6CD5\u529B\u4E0D\u9AD8\u7684\u9752\u8863\u4FEE\u58EB\u6CA1\u6709\u62A2\u5148\u9760\u8FD1\u91D1\u7BB1\uFF0C\u53CD\u800C\u5148\u5728\u9ED1\u571F\u5806\u95F4\u6807\u51FA\u4E09\u6761\u64A4\u9000\u7EBF\u3002\u695A\u660E\u7EEE\u8BA4\u51FA\u8FD9\u79CD\u8C28\u614E\uFF0C\u4E5F\u770B\u89C1\u58A8\u86DF\u6B63\u4ECE\u4ED6\u7684\u76F2\u533A\u6F5C\u8FD1\u3002\u53CC\u65B9\u82E5\u4E0D\u80FD\u5728\u7B2C\u4E00\u51FB\u524D\u5EFA\u7ACB\u6700\u4F4E\u9650\u5EA6\u7684\u4FE1\u4EFB\uFF0C\u4EFB\u4F55\u5B9D\u7269\u90FD\u53EA\u4F1A\u6210\u4E3A\u8BF1\u9975\u3002",
+      "story.red_mist.choice.underground.meet_cautious.label": "\u63D0\u51FA\u5171\u4EAB\u60C5\u62A5\u3001\u5404\u4FDD\u5E95\u724C",
+      "story.red_mist.choice.underground.meet_cautious.hint": "\u5EFA\u7ACB\u8C28\u614E\u540C\u76DF",
+      "story.red_mist.choice.underground.meet_warn.label": "\u5148\u63D0\u9192\u5BF9\u65B9\u58A8\u86DF\u4F4D\u7F6E",
+      "story.red_mist.choice.underground.meet_warn.hint": "\u4FE1\u4EFB\u63D0\u5347\uFF0C\u653E\u5F03\u5077\u88AD\u4F18\u52BF",
+      "story.red_mist.choice.underground.meet_wait.label": "\u6C89\u9ED8\u5360\u636E\u9000\u8DEF\uFF0C\u7B49\u5F85\u5BF9\u65B9\u5148\u52A8",
+      "story.red_mist.choice.underground.meet_wait.hint": "\u4FDD\u7559\u4E3B\u52A8\u6743\uFF0C\u589E\u52A0\u731C\u7591",
+      "story.red_mist.node.combat_one.title": "\u58A8\u86DF\u6218\u00B7\u8BD5\u63A2",
+      "story.red_mist.node.combat_one.location": "\u7384\u6CE5\u86DF\u7A9F",
+      "story.red_mist.node.combat_one.speaker": "\u6218\u6597",
+      "story.red_mist.node.combat_one.male_text": "\u58A8\u86DF\u7834\u6CE5\u800C\u51FA\uFF0C\u9CDE\u7247\u628A\u6708\u5149\u77F3\u53CD\u5C04\u6210\u788E\u767D\u3002\u5B83\u6CA1\u6709\u7ACB\u523B\u6251\u5411\u6700\u8FD1\u7684\u4EBA\uFF0C\u800C\u662F\u4EE5\u957F\u5C3E\u5C01\u4F4F\u72ED\u9053\u3002\u6C88\u781A\u5FC5\u987B\u51B3\u5B9A\u7B2C\u4E00\u8F6E\u76EE\u6807\uFF1A\u9650\u5236\u86DF\u5C3E\u3001\u4FDD\u62A4\u4F24\u5458\u3001\u8BD5\u63A2\u9CDE\u7532\u5F31\u70B9\uFF0C\u6216\u8D81\u64A4\u9000\u7A97\u53E3\u5C1A\u5728\u65F6\u79BB\u5F00\u3002",
+      "story.red_mist.node.combat_one.female_text": "\u58A8\u86DF\u7684\u7B2C\u4E00\u51FB\u4E0D\u662F\u51B2\u649E\uFF0C\u800C\u662F\u628A\u6EDA\u70EB\u9ED1\u6CE5\u6380\u5411\u853D\u6708\u5BAB\u5F1F\u5B50\u3002\u695A\u660E\u7EEE\u53EF\u4EE5\u63A7\u5236\u533A\u57DF\u3001\u7EC4\u7EC7\u64A4\u79BB\uFF0C\u4E5F\u53EF\u4EE5\u77ED\u6682\u91CA\u653E\u8D64\u9E3E\u706B\u538B\u5236\u5996\u86DF\uFF1B\u8D8A\u5F3A\u7684\u624B\u6BB5\u8D8A\u80FD\u6551\u4EBA\uFF0C\u4E5F\u8D8A\u96BE\u7EE7\u7EED\u9690\u85CF\u771F\u5B9E\u72B6\u6001\u3002",
+      "story.red_mist.node.combat_two.title": "\u58A8\u86DF\u6218\u00B7\u5E95\u724C",
+      "story.red_mist.node.combat_two.location": "\u767D\u7389\u4EAD\u4E0E\u9ED1\u6CE5\u6CBC\u6CFD",
+      "story.red_mist.node.combat_two.speaker": "\u6218\u6597",
+      "story.red_mist.node.combat_two.male_text": "\u58A8\u86DF\u88AB\u903C\u79BB\u6CE5\u9762\uFF0C\u5374\u5F00\u59CB\u649E\u51FB\u652F\u6491\u767D\u7389\u4EAD\u7684\u9635\u67F1\u3002\u518D\u62D6\u4E00\u8F6E\uFF0C\u91D1\u7BB1\u4E0E\u7075\u836F\u90FD\u4F1A\u6C89\u5165\u9ED1\u6CE5\u3002\u6C88\u781A\u53EF\u4EE5\u53D1\u52A8\u91D1\u8709\u8FDE\u73AF\u5203\u3001\u5F15\u7206\u9884\u7F6E\u7B26\u7B93\u3001\u5229\u7528\u84B8\u6C7D\u906E\u6321\u5408\u51FB\uFF0C\u6216\u4FDD\u7559\u6700\u540E\u6CD5\u529B\u5E26\u4EBA\u64A4\u9000\u3002",
+      "story.red_mist.node.combat_two.female_text": "\u9635\u67F1\u6B63\u5728\u65AD\u88C2\uFF0C\u8D1F\u4F24\u5F1F\u5B50\u5DF2\u7ECF\u65E0\u6CD5\u81EA\u884C\u79BB\u5F00\u3002\u695A\u660E\u7EEE\u53EF\u4EE5\u516C\u5F00\u8D64\u9E3E\u7130\u73AF\u5B8C\u6210\u538B\u5236\uFF0C\u4E5F\u53EF\u4EE5\u501F\u6C88\u781A\u7684\u7B26\u9635\u628A\u706B\u5149\u4F2A\u88C5\u6210\u73AF\u5883\u5F02\u53D8\u3002\u524D\u8005\u66F4\u7A33\uFF0C\u540E\u8005\u9700\u8981\u771F\u6B63\u4FE1\u4EFB\u4E00\u4E2A\u521A\u8BA4\u8BC6\u7684\u4EBA\u3002",
+      "story.red_mist.node.aftermath.title": "\u6218\u5229\u54C1\u4E0E\u79D8\u5BC6",
+      "story.red_mist.node.aftermath.location": "\u574D\u584C\u524D\u7684\u767D\u7389\u4EAD",
+      "story.red_mist.node.aftermath.speaker": "\u65C1\u767D",
+      "story.red_mist.node.aftermath.male_text": "\u58A8\u86DF\u9000\u5165\u9ED1\u6CE5\uFF0C\u6216\u7EC8\u4E8E\u4E0D\u518D\u52A8\u5F39\u3002\u91D1\u7BB1\u7981\u5236\u4ECD\u672A\u5B8C\u5168\u89E3\u9664\uFF0C\u51FA\u53E3\u5374\u5728\u6536\u7F29\u3002\u6B64\u523B\u62FF\u8D70\u4EC0\u4E48\u3001\u6551\u4E0B\u8C01\u3001\u662F\u5426\u8FFD\u51FB\uFF0C\u4EE5\u53CA\u613F\u4E0D\u613F\u610F\u66FF\u4E34\u65F6\u76DF\u53CB\u9690\u7792\u5E95\u724C\uFF0C\u6BD4\u6218\u6597\u672C\u8EAB\u66F4\u80FD\u51B3\u5B9A\u4E24\u6761\u4FEE\u4ED9\u8DEF\u65E5\u540E\u7684\u5F62\u72B6\u3002",
+      "story.red_mist.node.aftermath.female_text": "\u6CE5\u9762\u6062\u590D\u5E73\u9759\u53EA\u662F\u6682\u65F6\u7684\u3002\u5F1F\u5B50\u3001\u91D1\u7BB1\u3001\u58A8\u86DF\u6750\u6599\u548C\u540C\u76DF\u8005\u7684\u79D8\u5BC6\uFF0C\u4E0D\u53EF\u80FD\u5168\u90E8\u5E26\u8D70\u3002\u695A\u660E\u7EEE\u5FC5\u987B\u4F5C\u51FA\u9886\u961F\u7684\u6700\u540E\u51B3\u5B9A\uFF0C\u5E76\u63A5\u53D7\u56DE\u5230\u5B97\u95E8\u540E\u6709\u4EBA\u4F1A\u8FFD\u95EE\u6BCF\u4E00\u5904\u7F3A\u5931\u3002",
+      "story.red_mist.choice.aftermath.loot_rescue.label": "\u5148\u6551\u4F24\u5458\uFF0C\u653E\u5F03\u6838\u5FC3\u91D1\u7BB1",
+      "story.red_mist.choice.aftermath.loot_rescue.hint": "\u5173\u7CFB\u4E0E\u5B97\u95E8\u8BC4\u4EF7\u63D0\u5347\uFF0C\u8D44\u6E90\u8F83\u5C11",
+      "story.red_mist.choice.aftermath.loot_share.label": "\u5206\u53D6\u58A8\u86DF\u6750\u6599\u5E76\u66FF\u76DF\u53CB\u4FDD\u5BC6",
+      "story.red_mist.choice.aftermath.loot_share.hint": "\u5F62\u6210\u8C28\u614E\u540C\u76DF\uFF0C\u53CC\u65B9\u90FD\u6709\u6536\u83B7",
+      "story.red_mist.choice.aftermath.loot_escape.label": "\u53D6\u8D70\u4E3B\u836F\u540E\u7ACB\u5373\u64A4\u79BB",
+      "story.red_mist.choice.aftermath.loot_escape.hint": "\u4FDD\u5B58\u81EA\u8EAB\u6210\u957F\u8D44\u6E90\uFF0C\u7559\u4E0B\u4EBA\u60C5\u503A",
+      "story.red_mist.node.ending.title": "\u79D8\u82D1\u4F59\u70EC",
+      "story.red_mist.node.ending.location": "\u8D64\u96FE\u79D8\u82D1\u51FA\u53E3",
+      "story.red_mist.node.ending.speaker": "\u7ED3\u5C40",
+      "story.red_mist.node.ending.male_text": "\u96FE\u95E8\u5728\u8EAB\u540E\u5408\u62E2\u3002\u6709\u4EBA\u5E26\u56DE\u4E3B\u836F\uFF0C\u6709\u4EBA\u5E26\u56DE\u4F24\u8005\uFF0C\u4E5F\u6709\u4EBA\u53EA\u5E26\u56DE\u4E00\u6761\u4EE5\u540E\u7EDD\u4E0D\u4F1A\u518D\u8D70\u9519\u7684\u9000\u8DEF\u3002\u6C88\u781A\u6CA1\u6709\u5F97\u5230\u6240\u6709\u4E1C\u897F\uFF0C\u5374\u786E\u8BA4\u4E86\u4E00\u4EF6\u66F4\u91CD\u8981\u7684\u4E8B\uFF1A\u771F\u6B63\u7684\u5E95\u724C\u4E0D\u662F\u67D0\u4EF6\u6CD5\u5668\uFF0C\u800C\u662F\u5728\u522B\u4EBA\u90FD\u88AB\u5B9D\u7269\u5438\u5F15\u65F6\uFF0C\u4ECD\u80FD\u5224\u65AD\u81EA\u5DF1\u613F\u610F\u4ED8\u51FA\u4EC0\u4E48\u3002",
+      "story.red_mist.node.ending.female_text": "\u96FE\u95E8\u5728\u8EAB\u540E\u5408\u62E2\u3002\u5F1F\u5B50\u5F00\u59CB\u6E05\u70B9\u4F24\u4EA1\uFF0C\u957F\u8001\u7684\u4F20\u8BAF\u4E5F\u5DF2\u7ECF\u62B5\u8FBE\u3002\u695A\u660E\u7EEE\u77E5\u9053\u5B97\u95E8\u4F1A\u8BC4\u4EF7\u5979\u5E26\u56DE\u591A\u5C11\u8D44\u6E90\uFF0C\u5374\u65E0\u6CD5\u66FF\u5979\u5B9A\u4E49\u8FD9\u6B21\u9009\u62E9\u3002\u5979\u4FDD\u4F4F\u6216\u66B4\u9732\u7684\u529B\u91CF\u3001\u6551\u4E0B\u6216\u653E\u5F03\u7684\u4EBA\uFF0C\u90FD\u4F1A\u5728\u4E0B\u4E00\u6B21\u547D\u4EE4\u5230\u6765\u65F6\u7AD9\u5728\u5979\u8EAB\u8FB9\u3002"
+    }
+  },
+  "storyFacts": [],
+  "characterDefinitions": [],
+  "characterStates": [],
+  "questDefinitions": [],
+  "sceneNodes": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "prologue",
+      "displayKey": "story.red_mist.node.prologue.title",
+      "titleKey": "story.red_mist.node.prologue.title",
+      "locationKey": "story.red_mist.node.prologue.location",
+      "speakerKey": "story.red_mist.node.prologue.speaker",
+      "maleTextKey": "story.red_mist.node.prologue.male_text",
+      "femaleTextKey": "story.red_mist.node.prologue.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_weather",
+        "fmv_gate_arrival"
+      ],
+      "backgroundMediaRef": "red_mist_weather",
+      "introMediaRef": "fmv_gate_arrival",
+      "choices": [
+        {
+          "id": "choice.prologue.to_camp",
+          "labelKey": "story.red_mist.choice.prologue.to_camp.label",
+          "hintKey": "story.red_mist.choice.prologue.to_camp.hint",
+          "actionId": "to_camp",
+          "nextNodeId": "camp",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.prologue.gate_scout",
+          "labelKey": "story.red_mist.choice.prologue.gate_scout.label",
+          "hintKey": "story.red_mist.choice.prologue.gate_scout.hint",
+          "actionId": "gate_scout",
+          "nextNodeId": "alliance",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.prologue.gate_companion",
+          "labelKey": "story.red_mist.choice.prologue.gate_companion.label",
+          "hintKey": "story.red_mist.choice.prologue.gate_companion.hint",
+          "actionId": "gate_companion",
+          "nextNodeId": "camp",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.calm.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.calm.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.calm.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.calm.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.calm.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "camp",
+      "displayKey": "story.red_mist.node.camp.title",
+      "titleKey": "story.red_mist.node.camp.title",
+      "locationKey": "story.red_mist.node.camp.location",
+      "speakerKey": "story.red_mist.node.camp.speaker",
+      "maleTextKey": "story.red_mist.node.camp.male_text",
+      "femaleTextKey": "story.red_mist.node.camp.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_modules"
+      ],
+      "backgroundMediaRef": "red_mist_modules",
+      "choices": [
+        {
+          "id": "choice.camp.camp_retreat",
+          "labelKey": "story.red_mist.choice.camp.camp_retreat.label",
+          "hintKey": "story.red_mist.choice.camp.camp_retreat.hint",
+          "actionId": "camp_retreat",
+          "nextNodeId": "alliance",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.camp.camp_balanced",
+          "labelKey": "story.red_mist.choice.camp.camp_balanced.label",
+          "hintKey": "story.red_mist.choice.camp.camp_balanced.hint",
+          "actionId": "camp_balanced",
+          "nextNodeId": "alliance",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.camp.camp_protect",
+          "labelKey": "story.red_mist.choice.camp.camp_protect.label",
+          "hintKey": "story.red_mist.choice.camp.camp_protect.hint",
+          "actionId": "camp_protect",
+          "nextNodeId": "alliance",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.calm.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.calm.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.calm.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.calm.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.calm.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "alliance",
+      "displayKey": "story.red_mist.node.alliance.title",
+      "titleKey": "story.red_mist.node.alliance.title",
+      "locationKey": "story.red_mist.node.alliance.location",
+      "speakerKey": "story.red_mist.node.alliance.speaker",
+      "maleTextKey": "story.red_mist.node.alliance.male_text",
+      "femaleTextKey": "story.red_mist.node.alliance.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 1,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_establishing"
+      ],
+      "backgroundMediaRef": "red_mist_establishing",
+      "choices": [
+        {
+          "id": "choice.alliance.ally_cautious",
+          "labelKey": "story.red_mist.choice.alliance.ally_cautious.label",
+          "hintKey": "story.red_mist.choice.alliance.ally_cautious.hint",
+          "actionId": "ally_cautious",
+          "nextNodeId": "flight",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.alliance.ally_open",
+          "labelKey": "story.red_mist.choice.alliance.ally_open.label",
+          "hintKey": "story.red_mist.choice.alliance.ally_open.hint",
+          "actionId": "ally_open",
+          "nextNodeId": "flight",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.alliance.ally_refuse",
+          "labelKey": "story.red_mist.choice.alliance.ally_refuse.label",
+          "hintKey": "story.red_mist.choice.alliance.ally_refuse.hint",
+          "actionId": "ally_refuse",
+          "nextNodeId": "flight",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.ally.abuse",
+        "npc.invalid.ally.irrelevant",
+        "npc.invalid.ally.too_long",
+        "npc.invalid.ally.silence",
+        "npc.invalid.ally.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.ally.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.ally.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.ally.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.ally.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.ally.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "flight",
+      "displayKey": "story.red_mist.node.flight.title",
+      "titleKey": "story.red_mist.node.flight.title",
+      "locationKey": "story.red_mist.node.flight.location",
+      "speakerKey": "story.red_mist.node.flight.speaker",
+      "maleTextKey": "story.red_mist.node.flight.male_text",
+      "femaleTextKey": "story.red_mist.node.flight.female_text",
+      "nodeKind": "Flight",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "flight_sky-v2",
+        "fmv_celestial_flight"
+      ],
+      "backgroundMediaRef": "flight_sky-v2",
+      "introMediaRef": "fmv_celestial_flight",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.flight.flight_perfect",
+          "triggerId": "flight_perfect",
+          "nextNodeId": "herb_route",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.flight.flight_success",
+          "triggerId": "flight_success",
+          "nextNodeId": "herb_route",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.flight.flight_failure",
+          "triggerId": "flight_failure",
+          "nextNodeId": "corpse_signs",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse",
+        "npc.invalid.system.irrelevant",
+        "npc.invalid.system.too_long",
+        "npc.invalid.system.silence",
+        "npc.invalid.system.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.system.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.system.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.system.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.system.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.system.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "herb_route",
+      "displayKey": "story.red_mist.node.herb_route.title",
+      "titleKey": "story.red_mist.node.herb_route.title",
+      "locationKey": "story.red_mist.node.herb_route.location",
+      "speakerKey": "story.red_mist.node.herb_route.speaker",
+      "maleTextKey": "story.red_mist.node.herb_route.male_text",
+      "femaleTextKey": "story.red_mist.node.herb_route.female_text",
+      "nodeKind": "HerbGathering",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_establishing",
+        "fmv_herb_courtyard"
+      ],
+      "backgroundMediaRef": "red_mist_establishing",
+      "introMediaRef": "fmv_herb_courtyard",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.herb_route.herb_perfect",
+          "triggerId": "herb_perfect",
+          "nextNodeId": "corpse_signs",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.herb_route.herb_success",
+          "triggerId": "herb_success",
+          "nextNodeId": "corpse_signs",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.herb_route.herb_failure",
+          "triggerId": "herb_failure",
+          "nextNodeId": "rescue",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.calm.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.calm.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.calm.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.calm.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.calm.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "corpse_signs",
+      "displayKey": "story.red_mist.node.corpse_signs.title",
+      "titleKey": "story.red_mist.node.corpse_signs.title",
+      "locationKey": "story.red_mist.node.corpse_signs.location",
+      "speakerKey": "story.red_mist.node.corpse_signs.speaker",
+      "maleTextKey": "story.red_mist.node.corpse_signs.male_text",
+      "femaleTextKey": "story.red_mist.node.corpse_signs.female_text",
+      "nodeKind": "DivineSense",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_modules"
+      ],
+      "backgroundMediaRef": "red_mist_modules",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.corpse_signs.scan_perfect",
+          "triggerId": "scan_perfect",
+          "nextNodeId": "rescue",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.corpse_signs.scan_success",
+          "triggerId": "scan_success",
+          "nextNodeId": "rescue",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.corpse_signs.scan_failure",
+          "triggerId": "scan_failure",
+          "nextNodeId": "rescue",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.calm.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.calm.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.calm.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.calm.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.calm.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rescue",
+      "displayKey": "story.red_mist.node.rescue.title",
+      "titleKey": "story.red_mist.node.rescue.title",
+      "locationKey": "story.red_mist.node.rescue.location",
+      "speakerKey": "story.red_mist.node.rescue.speaker",
+      "maleTextKey": "story.red_mist.node.rescue.male_text",
+      "femaleTextKey": "story.red_mist.node.rescue.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_weather"
+      ],
+      "backgroundMediaRef": "red_mist_weather",
+      "choices": [
+        {
+          "id": "choice.rescue.rescue_careful",
+          "labelKey": "story.red_mist.choice.rescue.rescue_careful.label",
+          "hintKey": "story.red_mist.choice.rescue.rescue_careful.hint",
+          "actionId": "rescue_careful",
+          "nextNodeId": "shijun",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.rescue.rescue_rush",
+          "labelKey": "story.red_mist.choice.rescue.rescue_rush.label",
+          "hintKey": "story.red_mist.choice.rescue.rescue_rush.hint",
+          "actionId": "rescue_rush",
+          "nextNodeId": "shijun",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.rescue.rescue_skip",
+          "labelKey": "story.red_mist.choice.rescue.rescue_skip.label",
+          "hintKey": "story.red_mist.choice.rescue.rescue_skip.hint",
+          "actionId": "rescue_skip",
+          "nextNodeId": "shijun",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.ally.abuse",
+        "npc.invalid.ally.irrelevant",
+        "npc.invalid.ally.too_long",
+        "npc.invalid.ally.silence",
+        "npc.invalid.ally.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.ally.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.ally.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.ally.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.ally.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.ally.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "shijun",
+      "displayKey": "story.red_mist.node.shijun.title",
+      "titleKey": "story.red_mist.node.shijun.title",
+      "locationKey": "story.red_mist.node.shijun.location",
+      "speakerKey": "story.red_mist.node.shijun.speaker",
+      "maleTextKey": "story.red_mist.node.shijun.male_text",
+      "femaleTextKey": "story.red_mist.node.shijun.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_modules",
+        "shi_jun-v1"
+      ],
+      "backgroundMediaRef": "red_mist_modules",
+      "portraitMediaRef": "shi_jun-v1",
+      "choices": [
+        {
+          "id": "choice.shijun.shijun_probe",
+          "labelKey": "story.red_mist.choice.shijun.shijun_probe.label",
+          "hintKey": "story.red_mist.choice.shijun.shijun_probe.hint",
+          "actionId": "shijun_probe",
+          "nextNodeId": "formation",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.shijun.shijun_threat",
+          "labelKey": "story.red_mist.choice.shijun.shijun_threat.label",
+          "hintKey": "story.red_mist.choice.shijun.shijun_threat.hint",
+          "actionId": "shijun_threat",
+          "nextNodeId": "formation",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.shijun.shijun_trade",
+          "labelKey": "story.red_mist.choice.shijun.shijun_trade.label",
+          "hintKey": "story.red_mist.choice.shijun.shijun_trade.hint",
+          "actionId": "shijun_trade",
+          "nextNodeId": "formation",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.hostile.abuse",
+        "npc.invalid.hostile.irrelevant",
+        "npc.invalid.hostile.too_long",
+        "npc.invalid.hostile.silence",
+        "npc.invalid.hostile.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.hostile.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.hostile.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.hostile.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.hostile.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.hostile.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "formation",
+      "displayKey": "story.red_mist.node.formation.title",
+      "titleKey": "story.red_mist.node.formation.title",
+      "locationKey": "story.red_mist.node.formation.location",
+      "speakerKey": "story.red_mist.node.formation.speaker",
+      "maleTextKey": "story.red_mist.node.formation.male_text",
+      "femaleTextKey": "story.red_mist.node.formation.female_text",
+      "nodeKind": "Formation",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_weather"
+      ],
+      "backgroundMediaRef": "red_mist_weather",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.formation.formation_perfect",
+          "triggerId": "formation_perfect",
+          "nextNodeId": "underground",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.formation.formation_success",
+          "triggerId": "formation_success",
+          "nextNodeId": "underground",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.formation.formation_failure",
+          "triggerId": "formation_failure",
+          "nextNodeId": "combat_one",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.formation.formation_spike_bypass",
+          "triggerId": "formation_spike_bypass",
+          "nextNodeId": "underground",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse",
+        "npc.invalid.system.irrelevant",
+        "npc.invalid.system.too_long",
+        "npc.invalid.system.silence",
+        "npc.invalid.system.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.system.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.system.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.system.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.system.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.system.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "underground",
+      "displayKey": "story.red_mist.node.underground.title",
+      "titleKey": "story.red_mist.node.underground.title",
+      "locationKey": "story.red_mist.node.underground.location",
+      "speakerKey": "story.red_mist.node.underground.speaker",
+      "maleTextKey": "story.red_mist.node.underground.male_text",
+      "femaleTextKey": "story.red_mist.node.underground.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "dragon_cavern-v2",
+        "fmv_sword_vault"
+      ],
+      "backgroundMediaRef": "dragon_cavern-v2",
+      "introMediaRef": "fmv_sword_vault",
+      "choices": [
+        {
+          "id": "choice.underground.meet_cautious",
+          "labelKey": "story.red_mist.choice.underground.meet_cautious.label",
+          "hintKey": "story.red_mist.choice.underground.meet_cautious.hint",
+          "actionId": "meet_cautious",
+          "nextNodeId": "combat_one",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.underground.meet_warn",
+          "labelKey": "story.red_mist.choice.underground.meet_warn.label",
+          "hintKey": "story.red_mist.choice.underground.meet_warn.hint",
+          "actionId": "meet_warn",
+          "nextNodeId": "combat_one",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.underground.meet_wait",
+          "labelKey": "story.red_mist.choice.underground.meet_wait.label",
+          "hintKey": "story.red_mist.choice.underground.meet_wait.hint",
+          "actionId": "meet_wait",
+          "nextNodeId": "combat_one",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.encounter.abuse",
+        "npc.invalid.encounter.irrelevant",
+        "npc.invalid.encounter.too_long",
+        "npc.invalid.encounter.silence",
+        "npc.invalid.encounter.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.encounter.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.encounter.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.encounter.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.encounter.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.encounter.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "combat_one",
+      "displayKey": "story.red_mist.node.combat_one.title",
+      "titleKey": "story.red_mist.node.combat_one.title",
+      "locationKey": "story.red_mist.node.combat_one.location",
+      "speakerKey": "story.red_mist.node.combat_one.speaker",
+      "maleTextKey": "story.red_mist.node.combat_one.male_text",
+      "femaleTextKey": "story.red_mist.node.combat_one.female_text",
+      "nodeKind": "CombatOne",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "dragon_attack-v1"
+      ],
+      "backgroundMediaRef": "dragon_attack-v1",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.combat_one.probe_blades",
+          "triggerId": "probe_blades",
+          "nextNodeId": "combat_two",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_one.ward_tail",
+          "triggerId": "ward_tail",
+          "nextNodeId": "combat_two",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_one.protect_ally",
+          "triggerId": "protect_ally",
+          "nextNodeId": "combat_two",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_one.retreat",
+          "triggerId": "retreat",
+          "nextNodeId": "ending",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_one.moon_control",
+          "triggerId": "moon_control",
+          "nextNodeId": "combat_two",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_one.phoenix_flash",
+          "triggerId": "phoenix_flash",
+          "nextNodeId": "combat_two",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse",
+        "npc.invalid.system.irrelevant",
+        "npc.invalid.system.too_long",
+        "npc.invalid.system.silence",
+        "npc.invalid.system.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.system.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.system.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.system.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.system.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.system.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "combat_two",
+      "displayKey": "story.red_mist.node.combat_two.title",
+      "titleKey": "story.red_mist.node.combat_two.title",
+      "locationKey": "story.red_mist.node.combat_two.location",
+      "speakerKey": "story.red_mist.node.combat_two.speaker",
+      "maleTextKey": "story.red_mist.node.combat_two.male_text",
+      "femaleTextKey": "story.red_mist.node.combat_two.female_text",
+      "nodeKind": "CombatTwo",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "dragon_attack-v1"
+      ],
+      "backgroundMediaRef": "dragon_attack-v1",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.combat_two.trump_blades",
+          "triggerId": "trump_blades",
+          "nextNodeId": "aftermath",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_two.formation_burst",
+          "triggerId": "formation_burst",
+          "nextNodeId": "aftermath",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_two.joint_strike",
+          "triggerId": "joint_strike",
+          "nextNodeId": "aftermath",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_two.retreat",
+          "triggerId": "retreat",
+          "nextNodeId": "ending",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_two.phoenix_ring",
+          "triggerId": "phoenix_ring",
+          "nextNodeId": "aftermath",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_two.hold_line",
+          "triggerId": "hold_line",
+          "nextNodeId": "aftermath",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse",
+        "npc.invalid.system.irrelevant",
+        "npc.invalid.system.too_long",
+        "npc.invalid.system.silence",
+        "npc.invalid.system.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.system.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.system.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.system.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.system.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.system.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "aftermath",
+      "displayKey": "story.red_mist.node.aftermath.title",
+      "titleKey": "story.red_mist.node.aftermath.title",
+      "locationKey": "story.red_mist.node.aftermath.location",
+      "speakerKey": "story.red_mist.node.aftermath.speaker",
+      "maleTextKey": "story.red_mist.node.aftermath.male_text",
+      "femaleTextKey": "story.red_mist.node.aftermath.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "dragon_cavern-v2"
+      ],
+      "backgroundMediaRef": "dragon_cavern-v2",
+      "choices": [
+        {
+          "id": "choice.aftermath.loot_rescue",
+          "labelKey": "story.red_mist.choice.aftermath.loot_rescue.label",
+          "hintKey": "story.red_mist.choice.aftermath.loot_rescue.hint",
+          "actionId": "loot_rescue",
+          "nextNodeId": "ending",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.aftermath.loot_share",
+          "labelKey": "story.red_mist.choice.aftermath.loot_share.label",
+          "hintKey": "story.red_mist.choice.aftermath.loot_share.hint",
+          "actionId": "loot_share",
+          "nextNodeId": "ending",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.aftermath.loot_escape",
+          "labelKey": "story.red_mist.choice.aftermath.loot_escape.label",
+          "hintKey": "story.red_mist.choice.aftermath.loot_escape.hint",
+          "actionId": "loot_escape",
+          "nextNodeId": "ending",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.calm.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.calm.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.calm.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.calm.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.calm.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "ending",
+      "displayKey": "story.red_mist.node.ending.title",
+      "titleKey": "story.red_mist.node.ending.title",
+      "locationKey": "story.red_mist.node.ending.location",
+      "speakerKey": "story.red_mist.node.ending.speaker",
+      "maleTextKey": "story.red_mist.node.ending.male_text",
+      "femaleTextKey": "story.red_mist.node.ending.female_text",
+      "nodeKind": "Ending",
+      "estimatedMinutes": 1,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_establishing"
+      ],
+      "backgroundMediaRef": "red_mist_establishing",
+      "choices": [],
+      "transitions": [],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": {
+          "npcResponseRef": "npc.invalid.calm.abuse"
+        },
+        "irrelevant": {
+          "npcResponseRef": "npc.invalid.calm.irrelevant"
+        },
+        "too_long": {
+          "npcResponseRef": "npc.invalid.calm.too_long"
+        },
+        "silence": {
+          "npcResponseRef": "npc.invalid.calm.silence"
+        },
+        "low_confidence": {
+          "npcResponseRef": "npc.invalid.calm.low_confidence"
+        }
+      },
+      "injectionPoints": [],
+      "terminal": true,
+      "approvalStatus": "approved"
+    }
+  ],
+  "voiceIntents": [],
+  "npcResponses": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.calm.abuse",
+      "textKey": "story.red_mist.voice.calm.abuse",
+      "emotionKey": "story.red_mist.voice.emotion.stern",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.calm.irrelevant",
+      "textKey": "story.red_mist.voice.calm.irrelevant",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.calm.too_long",
+      "textKey": "story.red_mist.voice.calm.too_long",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.calm.silence",
+      "textKey": "story.red_mist.voice.calm.silence",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.calm.low_confidence",
+      "textKey": "story.red_mist.voice.calm.low_confidence",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.ally.abuse",
+      "textKey": "story.red_mist.voice.ally.abuse",
+      "emotionKey": "story.red_mist.voice.emotion.stern",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.ally.irrelevant",
+      "textKey": "story.red_mist.voice.ally.irrelevant",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.ally.too_long",
+      "textKey": "story.red_mist.voice.ally.too_long",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.ally.silence",
+      "textKey": "story.red_mist.voice.ally.silence",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.ally.low_confidence",
+      "textKey": "story.red_mist.voice.ally.low_confidence",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.system.abuse",
+      "textKey": "story.red_mist.voice.system.abuse",
+      "emotionKey": "story.red_mist.voice.emotion.stern",
+      "lipSyncMediaRef": "dragon_attack-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.system.irrelevant",
+      "textKey": "story.red_mist.voice.system.irrelevant",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "dragon_attack-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.system.too_long",
+      "textKey": "story.red_mist.voice.system.too_long",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "dragon_attack-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.system.silence",
+      "textKey": "story.red_mist.voice.system.silence",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "dragon_attack-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.system.low_confidence",
+      "textKey": "story.red_mist.voice.system.low_confidence",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "dragon_attack-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.hostile.abuse",
+      "textKey": "story.red_mist.voice.hostile.abuse",
+      "emotionKey": "story.red_mist.voice.emotion.stern",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.hostile.irrelevant",
+      "textKey": "story.red_mist.voice.hostile.irrelevant",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.hostile.too_long",
+      "textKey": "story.red_mist.voice.hostile.too_long",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.hostile.silence",
+      "textKey": "story.red_mist.voice.hostile.silence",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.hostile.low_confidence",
+      "textKey": "story.red_mist.voice.hostile.low_confidence",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.encounter.abuse",
+      "textKey": "story.red_mist.voice.encounter.abuse",
+      "emotionKey": "story.red_mist.voice.emotion.stern",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.encounter.irrelevant",
+      "textKey": "story.red_mist.voice.encounter.irrelevant",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.encounter.too_long",
+      "textKey": "story.red_mist.voice.encounter.too_long",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.encounter.silence",
+      "textKey": "story.red_mist.voice.encounter.silence",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.encounter.low_confidence",
+      "textKey": "story.red_mist.voice.encounter.low_confidence",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    }
+  ],
+  "combatantStates": [],
+  "encounterDefinitions": [],
+  "combatResolutions": [],
+  "mediaAssets": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "red_mist_weather",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+      "uri": "unity-resource:///Art/red_mist_weather.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "red_mist_modules",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6",
+      "uri": "unity-resource:///Art/red_mist_modules.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "red_mist_establishing",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+      "uri": "unity-resource:///Art/red_mist_establishing.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "flight_sky-v2",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:a0f9a817adc0fbc64baee43e9c210a1553c310aabe80964db156713c482201a2",
+      "uri": "unity-resource:///Art/flight_sky-v2.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "dragon_cavern-v2",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+      "uri": "unity-resource:///Art/dragon_cavern-v2.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "dragon_attack-v1",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+      "uri": "unity-resource:///Art/dragon_attack-v1.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "shi_jun-v1",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:06751100f14462ba0166c1a896ff11836bf91809eff617a822224e25832b6fab",
+      "uri": "unity-resource:///Art/shi_jun-v1.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fmv_gate_arrival",
+      "assetVersion": "1",
+      "mediaType": "video",
+      "contentHash": "sha256:757915a75443e5d490415392f952c77657498ae2b4c7d3eb6ff93ff8abc4a7d5",
+      "uri": "streaming-assets:///Media/fmv_gate_arrival.mp4",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fmv_celestial_flight",
+      "assetVersion": "1",
+      "mediaType": "video",
+      "contentHash": "sha256:75efb1c2dc7e79877a485d5ec7111de3008a252f737d3dd1b27b9a6231e2de21",
+      "uri": "streaming-assets:///Media/fmv_celestial_flight.mp4",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fmv_herb_courtyard",
+      "assetVersion": "1",
+      "mediaType": "video",
+      "contentHash": "sha256:75d156438fa91f4a35f02ac0370253079f87484e2e73b0454cc1b7ce58f02553",
+      "uri": "streaming-assets:///Media/fmv_herb_courtyard.mp4",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fmv_sword_vault",
+      "assetVersion": "1",
+      "mediaType": "video",
+      "contentHash": "sha256:e8309c400513ea613b42752315a7da7f1819c3a546101ab408cde5598ffdbad2",
+      "uri": "streaming-assets:///Media/fmv_sword_vault.mp4",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    }
+  ],
+  "generationJobs": [],
+  "saveGames": []
+}

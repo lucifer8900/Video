@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/story-bundle.schema.json",
+  "title": "StoryBundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "entryNodeId",
+    "contentHash",
+    "approvalStatus",
+    "storyFacts",
+    "characterDefinitions",
+    "characterStates",
+    "questDefinitions",
+    "sceneNodes",
+    "voiceIntents",
+    "npcResponses",
+    "combatantStates",
+    "encounterDefinitions",
+    "combatResolutions",
+    "mediaAssets",
+    "generationJobs",
+    "saveGames"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "entryNodeId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "contentHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "approvalStatus": {
+      "const": "approved"
+    },
+    "distributionStatus": {
+      "type": "string",
+      "enum": [
+        "internal_prototype_only",
+        "release_candidate",
+        "shipping"
+      ]
+    },
+    "localizations": {
+      "$ref": "#/$defs/localizations"
+    },
+    "storyFacts": {
+      "$ref": "#/$defs/storyFacts"
+    },
+    "characterDefinitions": {
+      "$ref": "#/$defs/characterDefinitions"
+    },
+    "characterStates": {
+      "$ref": "#/$defs/characterStates"
+    },
+    "questDefinitions": {
+      "$ref": "#/$defs/questDefinitions"
+    },
+    "sceneNodes": {
+      "$ref": "#/$defs/sceneNodes"
+    },
+    "voiceIntents": {
+      "$ref": "#/$defs/voiceIntents"
+    },
+    "npcResponses": {
+      "$ref": "#/$defs/npcResponses"
+    },
+    "combatantStates": {
+      "$ref": "#/$defs/combatantStates"
+    },
+    "encounterDefinitions": {
+      "$ref": "#/$defs/encounterDefinitions"
+    },
+    "combatResolutions": {
+      "$ref": "#/$defs/combatResolutions"
+    },
+    "mediaAssets": {
+      "$ref": "#/$defs/mediaAssets"
+    },
+    "generationJobs": {
+      "$ref": "#/$defs/generationJobs"
+    },
+    "saveGames": {
+      "$ref": "#/$defs/saveGames"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "distributionStatus"
+        ]
+      },
+      "then": {
+        "required": [
+          "localizations"
+        ],
+        "properties": {
+          "sceneNodes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "allOf": [
+                {
+                  "$ref": "scene-node.schema.json"
+                },
+                {
+                  "required": [
+                    "titleKey",
+                    "locationKey",
+                    "speakerKey",
+                    "maleTextKey",
+                    "femaleTextKey",
+                    "nodeKind",
+                    "estimatedMinutes",
+                    "backgroundMediaRef",
+                    "transitions"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "localizations": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "propertyNames": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "additionalProperties": {
+          "type": "string"
+        }
+      }
+    },
+    "storyFacts": {
+      "type": "array",
+      "items": {
+        "$ref": "story-fact.schema.json"
+      }
+    },
+    "characterDefinitions": {
+      "type": "array",
+      "items": {
+        "$ref": "character-definition.schema.json"
+      }
+    },
+    "characterStates": {
+      "type": "array",
+      "items": {
+        "$ref": "character-state.schema.json"
+      }
+    },
+    "questDefinitions": {
+      "type": "array",
+      "items": {
+        "$ref": "quest-definition.schema.json"
+      }
+    },
+    "sceneNodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "scene-node.schema.json"
+      }
+    },
+    "voiceIntents": {
+      "type": "array",
+      "items": {
+        "$ref": "voice-intent.schema.json"
+      }
+    },
+    "npcResponses": {
+      "type": "array",
+      "items": {
+        "$ref": "npc-response.schema.json"
+      }
+    },
+    "combatantStates": {
+      "type": "array",
+      "items": {
+        "$ref": "combatant-state.schema.json"
+      }
+    },
+    "encounterDefinitions": {
+      "type": "array",
+      "items": {
+        "$ref": "encounter-definition.schema.json"
+      }
+    },
+    "combatResolutions": {
+      "type": "array",
+      "items": {
+        "$ref": "combat-resolution.schema.json"
+      }
+    },
+    "mediaAssets": {
+      "type": "array",
+      "items": {
+        "$ref": "media-asset.schema.json"
+      }
+    },
+    "generationJobs": {
+      "type": "array",
+      "items": {
+        "$ref": "generation-job.schema.json"
+      }
+    },
+    "saveGames": {
+      "type": "array",
+      "items": {
+        "$ref": "save-game.schema.json"
+      }
+    }
+  }
+}

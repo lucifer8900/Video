@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.node.invalid_injection",
+  "displayKey": "fixture.node.invalid_injection.display",
+  "entryConditions": [],
+  "mediaRefs": [],
+  "choices": [],
+  "voiceIntentRefs": [],
+  "injectionPoints": [
+    "fixture_invalid_slot"
+  ],
+  "terminal": true
+}

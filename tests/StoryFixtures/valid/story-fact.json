@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.fact.world_rule",
+  "authorityLevel": "L0",
+  "factType": "world_rule",
+  "value": true,
+  "approvalStatus": "approved",
+  "sourceRefs": [
+    {
+      "sourceId": "fixture.source.contract_test",
+      "locator": "fixture.locator.001",
+      "needsReview": false
+    }
+  ],
+  "tags": [
+    "fixture"
+  ]
+}

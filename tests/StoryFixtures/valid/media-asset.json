@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.media.primary",
+  "assetVersion": "fixture-1",
+  "mediaType": "image",
+  "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+  "uri": "fixture/media/primary.png",
+  "language": null,
+  "resolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "dependencyRefs": [],
+  "approvalStatus": "approved"
+}

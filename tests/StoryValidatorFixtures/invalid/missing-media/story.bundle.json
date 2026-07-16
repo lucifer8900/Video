@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.bundle.missing_media",
+  "entryNodeId": "fixture.node.media.terminal",
+  "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+  "approvalStatus": "approved",
+  "storyFacts": [],
+  "characterDefinitions": [],
+  "characterStates": [],
+  "questDefinitions": [],
+  "sceneNodes": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node.media.terminal",
+      "displayKey": "fixture.display.media.terminal",
+      "entryConditions": [],
+      "mediaRefs": [
+        "fixture.media.missing"
+      ],
+      "choices": [],
+      "voiceIntentRefs": [],
+      "injectionPoints": [],
+      "terminal": true,
+      "approvalStatus": "approved"
+    }
+  ],
+  "voiceIntents": [],
+  "npcResponses": [],
+  "combatantStates": [],
+  "encounterDefinitions": [],
+  "combatResolutions": [],
+  "mediaAssets": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.media.missing",
+      "assetVersion": "1.0.0",
+      "mediaType": "image",
+      "contentHash": "sha256:3434343434343434343434343434343434343434343434343434343434343434",
+      "uri": "media/missing.png",
+      "language": null,
+      "resolution": {
+        "width": 1920,
+        "height": 1080
+      },
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    }
+  ],
+  "generationJobs": [],
+  "saveGames": []
+}

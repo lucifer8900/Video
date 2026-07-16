@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.bundle.cycle_without_termination",
+  "entryNodeId": "fixture.node0",
+  "contentHash": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+  "approvalStatus": "approved",
+  "storyFacts": [],
+  "characterDefinitions": [],
+  "characterStates": [],
+  "questDefinitions": [],
+  "sceneNodes": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node0",
+      "displayKey": "fixture.display.node0",
+      "entryConditions": [],
+      "mediaRefs": [],
+      "choices": [
+        {
+          "id": "fixture.choice.node0_to_node1",
+          "labelKey": "fixture.label.node0_to_node1",
+          "actionId": "fixture.action.node0_to_node1",
+          "nextNodeId": "fixture.node1",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node1",
+      "displayKey": "fixture.display.node1",
+      "entryConditions": [],
+      "mediaRefs": [],
+      "choices": [
+        {
+          "id": "fixture.choice.node1_to_node0",
+          "labelKey": "fixture.label.node1_to_node0",
+          "actionId": "fixture.action.node1_to_node0",
+          "nextNodeId": "fixture.node0",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    }
+  ],
+  "voiceIntents": [],
+  "npcResponses": [],
+  "combatantStates": [],
+  "encounterDefinitions": [],
+  "combatResolutions": [],
+  "mediaAssets": [],
+  "generationJobs": [],
+  "saveGames": []
+}

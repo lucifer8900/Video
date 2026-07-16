@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.node.severe_missing_confirmation",
+  "displayKey": "fixture.node.severe_missing_confirmation.display",
+  "entryConditions": [],
+  "mediaRefs": [],
+  "choices": [
+    {
+      "id": "fixture.choice.severe_missing_confirmation",
+      "labelKey": "fixture.choice.severe_missing_confirmation.label",
+      "actionId": "fixture.action.severe_missing_confirmation",
+      "entryConditions": [],
+      "effects": [
+        {
+          "op": "attack"
+        }
+      ]
+    }
+  ],
+  "voiceIntentRefs": [],
+  "injectionPoints": [],
+  "terminal": true
+}

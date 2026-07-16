@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.voice_intent.primary",
+  "displayKey": "fixture.voice_intent.primary.display",
+  "topicKeys": [
+    "fixture.topic.primary"
+  ],
+  "toneKey": "fixture.tone.neutral",
+  "minimumConfidence": 0.8,
+  "npcResponseRef": "fixture.npc_response.primary",
+  "effects": [],
+  "approvalStatus": "approved"
+}

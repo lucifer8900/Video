@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/character-state.schema.json",
+  "title": "CharacterState",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "characterId",
+    "relationships",
+    "injuries",
+    "outfitRef",
+    "locationRef",
+    "factRefs"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "characterId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "relationships": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "additionalProperties": {
+        "$ref": "common.schema.json#/$defs/relationshipState"
+      }
+    },
+    "injuries": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/injury"
+      },
+      "uniqueItems": true
+    },
+    "outfitRef": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "locationRef": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "factRefs": {
+      "$ref": "common.schema.json#/$defs/idArray"
+    },
+    "stateTags": {
+      "$ref": "common.schema.json#/$defs/stringArray"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.bundle.incomplete_quest_state",
+  "entryNodeId": "fixture.node.quest.terminal",
+  "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+  "approvalStatus": "approved",
+  "storyFacts": [],
+  "characterDefinitions": [],
+  "characterStates": [],
+  "questDefinitions": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.quest.timed",
+      "initialState": "active",
+      "timeLimitWorldClock": 60,
+      "entryConditions": [
+        {
+          "op": "always"
+        }
+      ],
+      "completionConditions": [
+        {
+          "op": "state_equals",
+          "statePath": "fixture.quest.timed.completed",
+          "value": true
+        }
+      ],
+      "failureConditions": [
+        {
+          "op": "state_equals",
+          "statePath": "fixture.quest.timed.failed",
+          "value": true
+        }
+      ],
+      "expiryConditions": [
+        {
+          "op": "state_gte",
+          "statePath": "fixture.world_clock.minutes",
+          "value": 60
+        }
+      ],
+      "onComplete": [
+        {
+          "op": "quest_state",
+          "questId": "fixture.quest.timed",
+          "value": "completed"
+        }
+      ],
+      "onFailure": [
+        {
+          "op": "quest_state",
+          "questId": "fixture.quest.timed",
+          "value": "failed"
+        }
+      ],
+      "onExpire": [],
+      "tags": [
+        "fixture.timed"
+      ],
+      "approvalStatus": "approved"
+    }
+  ],
+  "sceneNodes": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node.quest.terminal",
+      "displayKey": "fixture.display.quest.terminal",
+      "entryConditions": [],
+      "mediaRefs": [],
+      "choices": [],
+      "voiceIntentRefs": [],
+      "injectionPoints": [],
+      "terminal": true,
+      "approvalStatus": "approved"
+    }
+  ],
+  "voiceIntents": [],
+  "npcResponses": [],
+  "combatantStates": [],
+  "encounterDefinitions": [],
+  "combatResolutions": [],
+  "mediaAssets": [],
+  "generationJobs": [],
+  "saveGames": []
+}

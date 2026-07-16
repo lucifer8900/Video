@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.bundle.dangling",
+  "entryNodeId": "fixture.node.entry",
+  "contentHash": "sha256:6666666666666666666666666666666666666666666666666666666666666666",
+  "approvalStatus": "approved",
+  "storyFacts": [],
+  "characterDefinitions": [],
+  "characterStates": [],
+  "questDefinitions": [],
+  "sceneNodes": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node.entry",
+      "displayKey": "fixture.node.entry.display",
+      "entryConditions": [],
+      "mediaRefs": [],
+      "choices": [
+        {
+          "id": "fixture.choice.dangling",
+          "labelKey": "fixture.choice.dangling.label",
+          "actionId": "fixture.action.dangling",
+          "nextNodeId": "fixture.node.missing",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    }
+  ],
+  "voiceIntents": [],
+  "npcResponses": [],
+  "combatantStates": [],
+  "encounterDefinitions": [],
+  "combatResolutions": [],
+  "mediaAssets": [],
+  "generationJobs": [],
+  "saveGames": []
+}

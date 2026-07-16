@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.combat_resolution.primary",
+  "encounterId": "fixture.encounter.primary",
+  "seed": {
+    "strategy": "storySeed+encounterId+attemptIndex",
+    "storySeed": 100,
+    "encounterId": "fixture.encounter.primary",
+    "attemptIndex": 0,
+    "resolvedValue": 100
+  },
+  "outcome": "successful_retreat",
+  "objectiveResults": [
+    {
+      "objectiveId": "fixture.objective.primary",
+      "status": "achieved"
+    }
+  ],
+  "effects": [],
+  "primaryMediaRef": "fixture.media.encounter.primary",
+  "fallbackMediaRef": "fixture.media.encounter.fallback",
+  "audit": {
+    "resolverVersion": "fixture-resolver-1",
+    "sourceVersion": "fixture-source-1",
+    "inputStateHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+    "outputStateHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+    "resolvedAtUtc": "2026-07-15T00:00:00Z"
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/common.schema.json",
+  "title": "Shared story contract definitions",
+  "$defs": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "mediaRef": {
+      "$ref": "#/$defs/id"
+    },
+    "idArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "needs_review",
+        "approved"
+      ]
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "dateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sourceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "locator"
+      ],
+      "properties": {
+        "sourceId": {
+          "$ref": "#/$defs/id"
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidenceHash": {
+          "$ref": "#/$defs/sha256"
+        },
+        "needsReview": {
+          "type": "boolean"
+        }
+      }
+    },
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "op"
+      ],
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "always",
+            "fact_equals",
+            "state_equals",
+            "state_gte",
+            "state_lte",
+            "has_tag",
+            "all",
+            "any",
+            "not"
+          ]
+        },
+        "factRef": {
+          "$ref": "#/$defs/id"
+        },
+        "statePath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": true,
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/condition"
+          }
+        }
+      }
+    },
+    "confirmationRule": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mode",
+            "minimumConfidence"
+          ],
+          "properties": {
+            "mode": {
+              "const": "high_confidence"
+            },
+            "minimumConfidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mode",
+            "npcResponseRef"
+          ],
+          "properties": {
+            "mode": {
+              "const": "npc_second_confirmation"
+            },
+            "npcResponseRef": {
+              "$ref": "#/$defs/id"
+            }
+          }
+        }
+      ]
+    },
+    "stateEffect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "op"
+      ],
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "relationship",
+            "quest_state",
+            "world_clock",
+            "fact_flag",
+            "clue",
+            "location",
+            "hidden_flag",
+            "resource",
+            "attack",
+            "permanent_relationship_break",
+            "quest_failure"
+          ]
+        },
+        "targetRef": {
+          "$ref": "#/$defs/id"
+        },
+        "questId": {
+          "$ref": "#/$defs/id"
+        },
+        "factRef": {
+          "$ref": "#/$defs/id"
+        },
+        "field": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": true,
+        "delta": {
+          "type": "number"
+        },
+        "minutes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "confirmationRule": {
+          "$ref": "#/$defs/confirmationRule"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "relationship"
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "required": [
+              "targetRef",
+              "field",
+              "delta"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "enum": [
+                  "quest_state",
+                  "quest_failure"
+                ]
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "required": [
+              "questId"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "world_clock"
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "required": [
+              "minutes"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "fact_flag"
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "required": [
+              "factRef",
+              "value"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "enum": [
+                  "attack",
+                  "permanent_relationship_break",
+                  "quest_failure"
+                ]
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "required": [
+              "confirmationRule"
+            ]
+          }
+        }
+      ]
+    },
+    "choiceDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "labelKey",
+        "actionId",
+        "entryConditions",
+        "effects"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "labelKey": {
+          "$ref": "#/$defs/id"
+        },
+        "hintKey": {
+          "$ref": "#/$defs/id"
+        },
+        "actionId": {
+          "$ref": "#/$defs/id"
+        },
+        "nextNodeId": {
+          "$ref": "#/$defs/id"
+        },
+        "entryConditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/condition"
+          }
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/stateEffect"
+          }
+        }
+      }
+    },
+    "nodeTransition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "triggerId",
+        "nextNodeId",
+        "entryConditions",
+        "effects"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "triggerId": {
+          "$ref": "#/$defs/id"
+        },
+        "nextNodeId": {
+          "$ref": "#/$defs/id"
+        },
+        "entryConditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/condition"
+          }
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/stateEffect"
+          }
+        }
+      }
+    },
+    "resourcePool": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "current",
+        "maximum"
+      ],
+      "properties": {
+        "current": {
+          "type": "number",
+          "minimum": 0
+        },
+        "maximum": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "purity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "relationshipState": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "trust": {
+          "type": "number"
+        },
+        "respect": {
+          "type": "number"
+        },
+        "fear": {
+          "type": "number"
+        },
+        "debt": {
+          "type": "number"
+        },
+        "suspicion": {
+          "type": "number"
+        },
+        "affection": {
+          "type": "number"
+        },
+        "sectDuty": {
+          "type": "number"
+        },
+        "secretLevel": {
+          "type": "number"
+        }
+      }
+    },
+    "injury": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "severity"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "physical",
+            "meridian",
+            "mana_depletion",
+            "vital_essence",
+            "divine_sense",
+            "soul",
+            "life_bound_backlash",
+            "poison_curse_bane",
+            "heart_demon_mark"
+          ]
+        },
+        "severity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "tags": {
+          "$ref": "#/$defs/stringArray"
+        }
+      }
+    }
+  }
+}

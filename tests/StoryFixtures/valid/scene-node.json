@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.node.primary",
+  "displayKey": "fixture.node.primary.display",
+  "entryConditions": [],
+  "mediaRefs": [],
+  "choices": [
+    {
+      "id": "fixture.choice.primary",
+      "labelKey": "fixture.choice.primary.label",
+      "actionId": "fixture.action.primary",
+      "entryConditions": [],
+      "effects": [
+        {
+          "op": "world_clock",
+          "minutes": 1
+        }
+      ]
+    }
+  ],
+  "voiceIntentRefs": [
+    "fixture.intent.primary"
+  ],
+  "npcResponseRefs": [
+    "fixture.response.abuse",
+    "fixture.response.irrelevant",
+    "fixture.response.too_long",
+    "fixture.response.silence",
+    "fixture.response.low_confidence"
+  ],
+  "invalid_input_rules": {
+    "abuse": {
+      "npcResponseRef": "fixture.response.abuse"
+    },
+    "irrelevant": {
+      "npcResponseRef": "fixture.response.irrelevant"
+    },
+    "too_long": {
+      "npcResponseRef": "fixture.response.too_long"
+    },
+    "silence": {
+      "npcResponseRef": "fixture.response.silence"
+    },
+    "low_confidence": {
+      "npcResponseRef": "fixture.response.low_confidence"
+    }
+  },
+  "injectionPoints": [
+    "node_intro",
+    "travel_event",
+    "npc_mention"
+  ],
+  "terminal": true,
+  "approvalStatus": "approved"
+}
