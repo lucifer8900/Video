@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "templateId": "assoc.placeholder.ledger_callback.v1",
+  "kind": "callback",
+  "authorityLevel": "L2",
+  "preconditions": {
+    "requiresLedger": [
+      {
+        "type": "promise_made",
+        "minSeverity": 1,
+        "maxAgeWorldClock": 1440
+      }
+    ],
+    "forbidsFacts": [],
+    "chapterWindow": [
+      "chapter.red_mist"
+    ]
+  },
+  "parameterSlots": {},
+  "injectionPoints": [
+    "travel_event"
+  ],
+  "textPolicy": "llm_variant_within_style_guide",
+  "allowedEffects": [],
+  "mediaPolicy": "reuse_only",
+  "fallbackThreadId": "assoc.placeholder.offline_noop.v1",
+  "cooldownWorldClock": 0,
+  "maxTriggersPerPlayer": 1,
+  "approvalStatus": "needs_review"
+}

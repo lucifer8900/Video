@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "templateId": "assoc.fixture.range_overflow.v1",
+  "kind": "consequence",
+  "authorityLevel": "L2",
+  "preconditions": {
+    "requiresLedger": [
+      { "type": "debt_repaid", "minSeverity": 1, "maxAgeWorldClock": 120 }
+    ],
+    "forbidsFacts": [],
+    "chapterWindow": ["chapter.fixture"]
+  },
+  "parameterSlots": {},
+  "injectionPoints": ["npc_mention"],
+  "textPolicy": "llm_variant_within_style_guide",
+  "allowedEffects": [
+    { "op": "relationship", "field": "trust", "range": [-10, 11] }
+  ],
+  "mediaPolicy": "reuse_only",
+  "fallbackThreadId": "assoc.fixture.fallback",
+  "cooldownWorldClock": 0,
+  "maxTriggersPerPlayer": 1,
+  "approvalStatus": "needs_review"
+}
