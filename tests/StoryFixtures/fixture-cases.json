@@ -1142,6 +1142,34 @@
       "expectedValid": false,
       "expectedCode": "schema.additionalProperties",
       "expectedPath": "/prompt"
+    },
+    {
+      "name": "valid passed lip sync review report",
+      "schemaFile": "lip-sync-review-report.schema.json",
+      "instanceFile": "valid/lip-sync-review-report.pass.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid blocked lip sync inventory report",
+      "schemaFile": "lip-sync-review-report.schema.json",
+      "instanceFile": "valid/lip-sync-review-report.blocked.json",
+      "expectedValid": true
+    },
+    {
+      "name": "lip sync pass rejects a failed technical check",
+      "schemaFile": "lip-sync-review-report.schema.json",
+      "instanceFile": "invalid/lip-sync-review-report.pass-failed-check.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/items/0/checks/lipSyncPassed"
+    },
+    {
+      "name": "lip sync review cannot claim production readiness",
+      "schemaFile": "lip-sync-review-report.schema.json",
+      "instanceFile": "invalid/lip-sync-review-report.production-ready.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/productionReadiness"
     }
   ]
 }
