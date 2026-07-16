@@ -476,7 +476,7 @@ public sealed class AssociationConsistencyReviewRequest
     public IReadOnlyList<string> ActiveFactIds { get; }
 }
 
-public interface IAssociationConsistencyReviewer
+public interface IAssociationConsistencyReviewer : IAssociationAuditProfileProvider
 {
     Task<string?> ReviewAsync(
         AssociationConsistencyReviewRequest request,
@@ -485,6 +485,12 @@ public interface IAssociationConsistencyReviewer
 
 public sealed class MockAssociationConsistencyReviewer : IAssociationConsistencyReviewer
 {
+    private static readonly AssociationProviderAuditProfile Profile = new(
+        "reviewer",
+        "mock.association-reviewer",
+        "prompt.association-reviewer.mock.v1",
+        "model.association-reviewer.mock.v1");
+
     private readonly object _sync = new();
     private readonly Queue<string?> _responses;
     private readonly List<AssociationConsistencyReviewRequest> _requests = new();
@@ -502,6 +508,8 @@ public sealed class MockAssociationConsistencyReviewer : IAssociationConsistency
             lock (_sync) return _requests.Count;
         }
     }
+
+    public AssociationProviderAuditProfile AuditProfile => Profile;
 
     public IReadOnlyList<AssociationConsistencyReviewRequest> Requests
     {

@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace Lingmai.RedMist.Generation.Associations;
 
-public interface IAssociationRanker
+public interface IAssociationRanker : IAssociationAuditProfileProvider
 {
     Task<string?> RankAsync(
         AssociationRankerRequest request,
@@ -14,6 +14,12 @@ public interface IAssociationRanker
 
 public sealed class MockAssociationRanker : IAssociationRanker
 {
+    private static readonly AssociationProviderAuditProfile Profile = new(
+        "ranker",
+        "mock.association-ranker",
+        "prompt.association-ranker.mock.v1",
+        "model.association-ranker.mock.v1");
+
     private readonly object _sync = new();
     private readonly Queue<string?> _responses;
     private readonly List<AssociationRankerRequest> _requests = new();
@@ -31,6 +37,8 @@ public sealed class MockAssociationRanker : IAssociationRanker
             lock (_sync) return _requests.Count;
         }
     }
+
+    public AssociationProviderAuditProfile AuditProfile => Profile;
 
     public IReadOnlyList<AssociationRankerRequest> Requests
     {

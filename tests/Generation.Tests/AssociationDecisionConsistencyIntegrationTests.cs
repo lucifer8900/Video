@@ -773,7 +773,9 @@ public sealed class AssociationDecisionConsistencyIntegrationTests
             idFactory ?? new SequenceAssociationDecisionIdFactory(
                 "thr.consistency",
                 "genjob.consistency"),
-            timeProvider ?? TimeProvider.System);
+            timeProvider ?? TimeProvider.System,
+            new InMemoryAssociationDecisionAuditRepository(),
+            new AssociationDecisionMetrics());
     }
 
     private static AssociationDecisionRequest Request(
@@ -949,6 +951,12 @@ public sealed class AssociationDecisionConsistencyIntegrationTests
         Func<AssociationRankerRequest, CancellationToken, Task<string?>> handler) :
         IAssociationRanker
     {
+        public AssociationProviderAuditProfile AuditProfile { get; } = new(
+            "ranker",
+            "test.association-ranker",
+            "prompt.association-ranker.test.v1",
+            "model.association-ranker.test.v1");
+
         public Task<string?> RankAsync(
             AssociationRankerRequest request,
             CancellationToken cancellationToken) => handler(request, cancellationToken);
@@ -959,6 +967,12 @@ public sealed class AssociationDecisionConsistencyIntegrationTests
         IAssociationConsistencyReviewer
     {
         private int _callCount;
+
+        public AssociationProviderAuditProfile AuditProfile { get; } = new(
+            "reviewer",
+            "test.association-reviewer",
+            "prompt.association-reviewer.test.v1",
+            "model.association-reviewer.test.v1");
 
         public int CallCount => Volatile.Read(ref _callCount);
 

@@ -34,10 +34,18 @@ public sealed class AssociationConsistencyGuard
         _worldStateProvider = worldStateProvider ??
             throw new ArgumentNullException(nameof(worldStateProvider));
         _reviewer = reviewer ?? throw new ArgumentNullException(nameof(reviewer));
+        if (!string.Equals(_reviewer.AuditProfile?.Role, "reviewer", StringComparison.Ordinal))
+            throw new ArgumentException(
+                "The consistency reviewer audit profile role is invalid.",
+                nameof(reviewer));
         _reviewOptions = reviewOptions ?? throw new ArgumentNullException(nameof(reviewOptions));
         _metrics = metrics ?? throw new ArgumentNullException(nameof(metrics));
         _triggerGate = triggerGate ?? throw new ArgumentNullException(nameof(triggerGate));
     }
+
+    internal bool ModelReviewEnabled => _reviewOptions.EnableModelReview;
+
+    internal AssociationProviderAuditProfile ReviewerAuditProfile => _reviewer.AuditProfile;
 
     public bool TryCaptureWorldSnapshot(
         AssociationDecisionRequest request,
@@ -130,7 +138,8 @@ public sealed class AssociationConsistencyGuard
         long startedTimestamp,
         TimeSpan hardTimeout,
         TimeProvider timeProvider,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken,
+        Action? providerInvoked = null)
     {
         ArgumentNullException.ThrowIfNull(input);
         ArgumentNullException.ThrowIfNull(timeProvider);
@@ -156,6 +165,7 @@ public sealed class AssociationConsistencyGuard
         Task<string?> providerTask;
         try
         {
+            providerInvoked?.Invoke();
             providerTask = _reviewer.ReviewAsync(request, providerCancellation.Token);
             if (providerTask is null)
                 return Reject(AssociationConsistencyRejectionReason.ModelUnavailable);

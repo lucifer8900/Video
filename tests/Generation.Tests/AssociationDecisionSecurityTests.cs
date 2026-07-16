@@ -870,7 +870,9 @@ public sealed class AssociationDecisionSecurityTests
             actualFallbacks,
             guard,
             idFactory ?? new SequenceAssociationDecisionIdFactory("thr.security", "genjob.security"),
-            timeProvider ?? TimeProvider.System);
+            timeProvider ?? TimeProvider.System,
+            new InMemoryAssociationDecisionAuditRepository(),
+            new AssociationDecisionMetrics());
     }
 
     private static AssociationDecisionRequest Request() => new(
@@ -1030,6 +1032,8 @@ public sealed class AssociationDecisionSecurityTests
     private sealed class DelegateRanker(
         Func<AssociationRankerRequest, CancellationToken, Task<string?>> handler) : IAssociationRanker
     {
+        public AssociationProviderAuditProfile AuditProfile { get; } = TestRankerAuditProfile();
+
         public Task<string?> RankAsync(
             AssociationRankerRequest request,
             CancellationToken cancellationToken) => handler(request, cancellationToken);
@@ -1041,6 +1045,8 @@ public sealed class AssociationDecisionSecurityTests
         private readonly TaskCompletionSource<string?> _response = new(TaskCreationOptions.RunContinuationsAsynchronously);
 
         public Task Called => _called.Task;
+
+        public AssociationProviderAuditProfile AuditProfile { get; } = TestRankerAuditProfile();
 
         public CancellationToken ProviderCancellation { get; private set; }
 
@@ -1065,6 +1071,8 @@ public sealed class AssociationDecisionSecurityTests
 
         public Task Called => _called.Task;
 
+        public AssociationProviderAuditProfile AuditProfile { get; } = TestRankerAuditProfile();
+
         public CancellationToken ProviderCancellation { get; private set; }
 
         public async Task<string?> RankAsync(
@@ -1077,6 +1085,12 @@ public sealed class AssociationDecisionSecurityTests
             return response;
         }
     }
+
+    private static AssociationProviderAuditProfile TestRankerAuditProfile() => new(
+        "ranker",
+        "test.association-ranker",
+        "prompt.association-ranker.test.v1",
+        "model.association-ranker.test.v1");
 
     private sealed class CountingIdFactory : IAssociationDecisionIdFactory
     {

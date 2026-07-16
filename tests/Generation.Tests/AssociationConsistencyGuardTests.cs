@@ -454,6 +454,12 @@ public sealed class AssociationConsistencyGuardTests
 
         public Task Called => _called.Task;
 
+        public AssociationProviderAuditProfile AuditProfile { get; } = new(
+            "reviewer",
+            "test.association-reviewer",
+            "prompt.association-reviewer.test.v1",
+            "model.association-reviewer.test.v1");
+
         public CancellationToken ProviderCancellation => _providerCancellation;
 
         public Task<string?> ReviewAsync(

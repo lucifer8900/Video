@@ -33,16 +33,17 @@ public sealed class PostgresGenerationJobRepository : IGenerationJobRepository
             $"""
             INSERT INTO generation_jobs
             (
-                id, idempotency_key, input_hash, status, version, attempt_count,
+                id, idempotency_key, input_hash, workload_kind, status, version, attempt_count,
                 lease_owner, lease_expires_at_utc, created_at_utc, updated_at_utc
             )
             VALUES
             (
-                @id, @idempotency_key, @input_hash, 'created', 0, 0,
+                @id, @idempotency_key, @input_hash, 'media_generation', 'created', 0, 0,
                 NULL, NULL, @now_utc, @now_utc
             )
             ON CONFLICT (idempotency_key) DO UPDATE
                 SET idempotency_key = EXCLUDED.idempotency_key
+                WHERE generation_jobs.workload_kind = 'media_generation'
             RETURNING {Projection}
             """,
             connection);
@@ -50,7 +51,8 @@ public sealed class PostgresGenerationJobRepository : IGenerationJobRepository
         Add(command, "idempotency_key", NpgsqlDbType.Text, submission.IdempotencyKey);
         Add(command, "input_hash", NpgsqlDbType.Text, submission.InputHash);
         Add(command, "now_utc", NpgsqlDbType.TimestampTz, normalizedNow);
-        return await ReadRequiredAsync(command, cancellationToken).ConfigureAwait(false);
+        return await ReadOptionalAsync(command, cancellationToken).ConfigureAwait(false)
+            ?? throw new IdempotencyConflictException(submission.IdempotencyKey);
     }
 
     public async Task<GenerationJob?> GetAsync(
@@ -59,7 +61,8 @@ public sealed class PostgresGenerationJobRepository : IGenerationJobRepository
     {
         await using var connection = await OpenAsync(cancellationToken).ConfigureAwait(false);
         await using var command = new NpgsqlCommand(
-            $"SELECT {Projection} FROM generation_jobs WHERE id = @id",
+            $"SELECT {Projection} FROM generation_jobs " +
+            "WHERE id = @id AND workload_kind = 'media_generation'",
             connection);
         Add(command, "id", NpgsqlDbType.Uuid, jobId);
         return await ReadOptionalAsync(command, cancellationToken).ConfigureAwait(false);
@@ -69,7 +72,7 @@ public sealed class PostgresGenerationJobRepository : IGenerationJobRepository
     {
         await using var connection = await OpenAsync(cancellationToken).ConfigureAwait(false);
         await using var command = new NpgsqlCommand(
-            "SELECT count(*) FROM generation_jobs",
+            "SELECT count(*) FROM generation_jobs WHERE workload_kind = 'media_generation'",
             connection);
         object? value = await command.ExecuteScalarAsync(cancellationToken).ConfigureAwait(false);
         return checked((int)(long)(value ?? 0L));
@@ -105,7 +108,9 @@ public sealed class PostgresGenerationJobRepository : IGenerationJobRepository
                 lease_owner = NULL,
                 lease_expires_at_utc = NULL,
                 updated_at_utc = CURRENT_TIMESTAMP
-            WHERE id = @id AND version = @expected_version
+            WHERE id = @id
+              AND workload_kind = 'media_generation'
+              AND version = @expected_version
             RETURNING {Projection}
             """,
             connection,
@@ -142,7 +147,8 @@ public sealed class PostgresGenerationJobRepository : IGenerationJobRepository
             (
                 SELECT id
                 FROM generation_jobs
-                WHERE status IN ('queued', 'generating', 'moderating', 'transcoding')
+                WHERE workload_kind = 'media_generation'
+                  AND status IN ('queued', 'generating', 'moderating', 'transcoding')
                   AND (lease_owner IS NULL OR lease_expires_at_utc <= @now_utc)
                 ORDER BY created_at_utc, id
                 FOR UPDATE SKIP LOCKED
@@ -190,7 +196,8 @@ public sealed class PostgresGenerationJobRepository : IGenerationJobRepository
         CancellationToken cancellationToken)
     {
         await using var command = new NpgsqlCommand(
-            $"SELECT {Projection} FROM generation_jobs WHERE id = @id FOR UPDATE",
+            $"SELECT {Projection} FROM generation_jobs " +
+            "WHERE id = @id AND workload_kind = 'media_generation' FOR UPDATE",
             connection,
             transaction);
         Add(command, "id", NpgsqlDbType.Uuid, id);

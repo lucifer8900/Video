@@ -872,6 +872,50 @@
       "expectedPath": "/detail"
     },
     {
+      "name": "valid primary association decision audit",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "valid/association-decision-audit.primary.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid fallback association decision audit",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "valid/association-decision-audit.fallback.json",
+      "expectedValid": true
+    },
+    {
+      "name": "association decision audit requires prompt version",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "invalid/association-decision-audit.missing-prompt-version.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/providers/0/promptVersion"
+    },
+    {
+      "name": "association decision audit requires guard results",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "invalid/association-decision-audit.missing-guard-results.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/guardResults"
+    },
+    {
+      "name": "association decision fallback audit requires reason",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "invalid/association-decision-audit.fallback-missing-reason.json",
+      "expectedValid": false,
+      "expectedCode": "schema.type",
+      "expectedPath": "/outcomeReason"
+    },
+    {
+      "name": "association decision audit rejects sensitive additional fields",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "invalid/association-decision-audit.sensitive-additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/rawPrompt"
+    },
+    {
       "name": "valid technical StoryThread instance",
       "schemaFile": "story-thread.schema.json",
       "instanceFile": "valid/story-thread.json",

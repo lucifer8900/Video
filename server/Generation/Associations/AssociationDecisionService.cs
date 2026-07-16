@@ -43,6 +43,7 @@ public sealed class AssociationDecisionValidationException : InvalidOperationExc
 public sealed class AssociationDecisionService
 {
     internal static readonly TimeSpan HardTimeout = TimeSpan.FromSeconds(8);
+    internal static readonly TimeSpan AuditPersistenceTimeout = TimeSpan.FromSeconds(1);
 
     private readonly AssociationRuleFilter _ruleFilter;
     private readonly IAssociationRanker _ranker;
@@ -51,6 +52,11 @@ public sealed class AssociationDecisionService
     private readonly AssociationConsistencyGuard _consistencyGuard;
     private readonly IAssociationDecisionIdFactory _idFactory;
     private readonly TimeProvider _timeProvider;
+    private readonly IAssociationDecisionAuditRepository _auditRepository;
+    private readonly AssociationDecisionMetrics _metrics;
+    private readonly AssociationProviderAuditProfile _rankerAuditProfile;
+    private readonly AssociationProviderAuditProfile? _reviewerAuditProfile;
+    private readonly bool _reviewerEnabled;
 
     internal AssociationDecisionService(
         AssociationRuleFilter ruleFilter,
@@ -59,7 +65,9 @@ public sealed class AssociationDecisionService
         ApprovedFallbackStoryThreadCatalog fallbacks,
         AssociationConsistencyGuard consistencyGuard,
         IAssociationDecisionIdFactory idFactory,
-        TimeProvider timeProvider)
+        TimeProvider timeProvider,
+        IAssociationDecisionAuditRepository auditRepository,
+        AssociationDecisionMetrics metrics)
     {
         _ruleFilter = ruleFilter ?? throw new ArgumentNullException(nameof(ruleFilter));
         _ranker = ranker ?? throw new ArgumentNullException(nameof(ranker));
@@ -68,6 +76,16 @@ public sealed class AssociationDecisionService
         _consistencyGuard = consistencyGuard ?? throw new ArgumentNullException(nameof(consistencyGuard));
         _idFactory = idFactory ?? throw new ArgumentNullException(nameof(idFactory));
         _timeProvider = timeProvider ?? throw new ArgumentNullException(nameof(timeProvider));
+        _auditRepository = auditRepository ?? throw new ArgumentNullException(nameof(auditRepository));
+        _metrics = metrics ?? throw new ArgumentNullException(nameof(metrics));
+        _rankerAuditProfile = _ranker.AuditProfile ??
+            throw new ArgumentException("The ranker audit profile is required.", nameof(ranker));
+        if (!string.Equals(_rankerAuditProfile.Role, "ranker", StringComparison.Ordinal))
+            throw new ArgumentException("The ranker audit profile role is invalid.", nameof(ranker));
+        _reviewerEnabled = _consistencyGuard.ModelReviewEnabled;
+        _reviewerAuditProfile = _reviewerEnabled
+            ? _consistencyGuard.ReviewerAuditProfile
+            : null;
     }
 
     public async Task<StoryThreadContract> DecideAsync(
@@ -94,42 +112,133 @@ public sealed class AssociationDecisionService
         }
 
         cancellationToken.ThrowIfCancellationRequested();
+        string inputHash = AssociationAuditHash.ComputeInputHash(request, templates);
+        AssociationProviderAuditProfile rankerAuditProfile = _rankerAuditProfile;
+        bool reviewerEnabled = _reviewerEnabled;
+        AssociationProviderAuditProfile? reviewerAuditProfile = _reviewerAuditProfile;
+        var trace = new AssociationDecisionTrace();
+
+        async Task<StoryThreadContract> PersistFallbackAsync(
+            string outcomeReason,
+            string? fallbackThreadId = null)
+        {
+            trace.SetFallback(outcomeReason);
+            StoryThreadContract fallback = CreateFallback(
+                request,
+                cancellationToken,
+                fallbackThreadId);
+            return await PersistDecisionAsync(
+                fallback,
+                request,
+                inputHash,
+                trace,
+                rankerAuditProfile,
+                reviewerAuditProfile,
+                reviewerEnabled,
+                startedTimestamp,
+                cancellationToken).ConfigureAwait(false);
+        }
 
         IReadOnlyList<AssociationRuleCandidate> filtered = _ruleFilter.Filter(
             request,
             templates,
-            _consistencyGuard.RecordRejection);
-        CandidateBinding[] bindings = filtered
-            .OrderBy(item => item.Template.Template.TemplateId, StringComparer.Ordinal)
-            .Select(CreateBinding)
-            .Where(item => item is not null)
+            reason =>
+            {
+                _consistencyGuard.RecordRejection(reason);
+                trace.RecordRejection("prefilter", reason);
+            });
+        var eligibleBindings = new List<CandidateBinding>(filtered.Count);
+        foreach (AssociationRuleCandidate candidate in filtered.OrderBy(
+                     item => item.Template.Template.TemplateId,
+                     StringComparer.Ordinal))
+        {
+            CandidateBinding? binding = CreateBinding(candidate);
+            if (binding is null)
+            {
+                _consistencyGuard.RecordRejection(
+                    AssociationConsistencyRejectionReason.UnapprovedTextVariant);
+                trace.RecordRejection(
+                    "selection",
+                    AssociationConsistencyRejectionReason.UnapprovedTextVariant);
+                continue;
+            }
+
+            eligibleBindings.Add(binding);
+        }
+
+        CandidateBinding[] bindings = eligibleBindings
             .Take(AssociationRankerWireProtocol.MaximumProposalCount)
-            .Cast<CandidateBinding>()
             .Select((item, index) => item with { CandidateToken = $"cand.{index:D4}" })
             .ToArray();
+        trace.CandidateCount = bindings.Length;
         if (bindings.Length == 0)
         {
-            return CreateFallback(request, cancellationToken);
+            trace.SetFallback("no_candidates");
+            trace.Record("selection", "rejected", "no_candidates");
+            StoryThreadContract fallback = CreateFallback(request, cancellationToken);
+            return await PersistDecisionAsync(
+                fallback,
+                request,
+                inputHash,
+                trace,
+                rankerAuditProfile,
+                reviewerAuditProfile,
+                reviewerEnabled,
+                startedTimestamp,
+                cancellationToken).ConfigureAwait(false);
         }
 
         if (!_consistencyGuard.TryCaptureWorldSnapshot(
                 request,
                 out AssociationWorldSnapshot worldSnapshot))
         {
-            return CreateFallback(request, cancellationToken);
+            trace.SetFallback("state_unavailable");
+            trace.Record("deterministic", "rejected", "state_unavailable");
+            StoryThreadContract fallback = CreateFallback(request, cancellationToken);
+            return await PersistDecisionAsync(
+                fallback,
+                request,
+                inputHash,
+                trace,
+                rankerAuditProfile,
+                reviewerAuditProfile,
+                reviewerEnabled,
+                startedTimestamp,
+                cancellationToken).ConfigureAwait(false);
         }
 
         var rankerRequest = new AssociationRankerRequest(Array.AsReadOnly(bindings
             .Select(binding => ToRankerCandidate(binding, request.WorldClock))
             .ToArray()));
-        string? rawResponse = await InvokeRankerAsync(
+        AssociationRankerInvocation rankerInvocation = await InvokeRankerAsync(
             rankerRequest,
             startedTimestamp,
+            () => trace.RankerInvoked = true,
             cancellationToken).ConfigureAwait(false);
         cancellationToken.ThrowIfCancellationRequested();
+        if (rankerInvocation.FailureReason is string rankerFailure)
+        {
+            trace.SetFallback(rankerFailure);
+            trace.Record("selection", "rejected", rankerFailure);
+            return await PersistFallbackAsync(rankerFailure).ConfigureAwait(false);
+        }
+
+        string? rawResponse = rankerInvocation.Response;
         if (!AssociationRankerWireProtocol.TryParse(rawResponse, out IReadOnlyList<AssociationRankerProposal> proposals))
         {
-            return CreateFallback(request, cancellationToken);
+            trace.SetFallback("ranker_invalid_response");
+            trace.Record("selection", "rejected", "ranker_invalid_response");
+            StoryThreadContract fallback = CreateFallback(request, cancellationToken);
+            return await PersistDecisionAsync(
+                fallback,
+                request,
+                inputHash,
+                trace,
+                rankerAuditProfile,
+                reviewerAuditProfile,
+                reviewerEnabled,
+                startedTimestamp,
+                cancellationToken).ConfigureAwait(false);
         }
 
         var byToken = bindings.ToDictionary(item => item.CandidateToken, StringComparer.Ordinal);
@@ -154,6 +263,7 @@ public sealed class AssociationDecisionService
                 if (materializationRejection.HasValue)
                 {
                     _consistencyGuard.RecordRejection(materializationRejection.Value);
+                    trace.RecordRejection("selection", materializationRejection.Value);
                 }
 
                 continue;
@@ -168,25 +278,47 @@ public sealed class AssociationDecisionService
                 _consistencyGuard.Evaluate(consistencyInput);
             if (!deterministic.Passed)
             {
+                trace.RecordRejection(
+                    "deterministic",
+                    deterministic.Reason ?? AssociationConsistencyRejectionReason.StateUnavailable,
+                    worldSnapshot.SnapshotId);
                 continue;
             }
+            trace.Record("deterministic", "passed", "none", worldSnapshot.SnapshotId);
 
             AssociationConsistencyResult review = await _consistencyGuard.ReviewAsync(
                 consistencyInput,
                 startedTimestamp,
                 HardTimeout,
                 _timeProvider,
-                cancellationToken).ConfigureAwait(false);
+                cancellationToken,
+                () => trace.ReviewerInvoked = true).ConfigureAwait(false);
             if (!review.Passed)
             {
-                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+                trace.RecordRejection(
+                    "review",
+                    review.Reason ?? AssociationConsistencyRejectionReason.ModelUnavailable,
+                    worldSnapshot.SnapshotId);
+                return await PersistFallbackAsync(
+                    "reviewer_rejected",
+                    candidateFallbackThreadId).ConfigureAwait(false);
             }
+            trace.Record(
+                "review",
+                reviewerEnabled ? "passed" : "not_run",
+                reviewerEnabled ? "none" : "disabled",
+                worldSnapshot.SnapshotId);
 
             if (!_consistencyGuard.TryCaptureWorldSnapshot(
                     request,
                     out AssociationWorldSnapshot signingSnapshot))
             {
-                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+                trace.RecordRejection(
+                    "signing",
+                    AssociationConsistencyRejectionReason.StateUnavailable);
+                return await PersistFallbackAsync(
+                    "guard_rejected",
+                    candidateFallbackThreadId).ConfigureAwait(false);
             }
 
             AssociationConsistencyInput signingInput =
@@ -195,8 +327,15 @@ public sealed class AssociationDecisionService
                 _consistencyGuard.Evaluate(signingInput);
             if (!signingCheck.Passed)
             {
-                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+                trace.RecordRejection(
+                    "signing",
+                    signingCheck.Reason ?? AssociationConsistencyRejectionReason.StateUnavailable,
+                    signingSnapshot.SnapshotId);
+                return await PersistFallbackAsync(
+                    "guard_rejected",
+                    candidateFallbackThreadId).ConfigureAwait(false);
             }
+            trace.Record("signing", "passed", "none", signingSnapshot.SnapshotId);
 
             AssociationConsistencyResult reviewContext =
                 _consistencyGuard.ValidateReviewContext(
@@ -204,7 +343,13 @@ public sealed class AssociationDecisionService
                     signingInput);
             if (!reviewContext.Passed)
             {
-                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+                trace.RecordRejection(
+                    "review",
+                    reviewContext.Reason ?? AssociationConsistencyRejectionReason.ModelReviewContextChanged,
+                    signingSnapshot.SnapshotId);
+                return await PersistFallbackAsync(
+                    "reviewer_rejected",
+                    candidateFallbackThreadId).ConfigureAwait(false);
             }
 
             cancellationToken.ThrowIfCancellationRequested();
@@ -212,7 +357,10 @@ public sealed class AssociationDecisionService
             {
                 _consistencyGuard.RecordRejection(
                     AssociationConsistencyRejectionReason.ModelTimeout);
-                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+                trace.Record("selection", "rejected", "deadline_exceeded");
+                return await PersistFallbackAsync(
+                    "deadline_exceeded",
+                    candidateFallbackThreadId).ConfigureAwait(false);
             }
 
             AssociationConsistencyResult triggerReservation =
@@ -221,8 +369,19 @@ public sealed class AssociationDecisionService
                     out AssociationTriggerReservation? reservation);
             if (!triggerReservation.Passed)
             {
-                return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+                trace.RecordRejection(
+                    "trigger_reservation",
+                    triggerReservation.Reason ?? AssociationConsistencyRejectionReason.StateUnavailable,
+                    signingSnapshot.SnapshotId);
+                return await PersistFallbackAsync(
+                    "guard_rejected",
+                    candidateFallbackThreadId).ConfigureAwait(false);
             }
+            trace.Record(
+                "trigger_reservation",
+                "passed",
+                "none",
+                signingSnapshot.SnapshotId);
 
             AssociationTriggerReservation activeReservation = reservation!;
             using (activeReservation)
@@ -232,10 +391,10 @@ public sealed class AssociationDecisionService
                 {
                     _consistencyGuard.RecordRejection(
                         AssociationConsistencyRejectionReason.ModelTimeout);
-                    return CreateFallback(
-                        request,
-                        cancellationToken,
-                        candidateFallbackThreadId);
+                    trace.Record("selection", "rejected", "deadline_exceeded");
+                    return await PersistFallbackAsync(
+                        "deadline_exceeded",
+                        candidateFallbackThreadId).ConfigureAwait(false);
                 }
 
                 StoryThreadContract thread = CreateThread(
@@ -251,18 +410,31 @@ public sealed class AssociationDecisionService
                 {
                     _consistencyGuard.RecordRejection(
                         AssociationConsistencyRejectionReason.ModelTimeout);
-                    return CreateFallback(
-                        request,
-                        cancellationToken,
-                        candidateFallbackThreadId);
+                    trace.Record("selection", "rejected", "deadline_exceeded");
+                    return await PersistFallbackAsync(
+                        "deadline_exceeded",
+                        candidateFallbackThreadId).ConfigureAwait(false);
                 }
 
                 activeReservation.Commit();
-                return thread;
+                StoryThreadContract auditedThread = await PersistDecisionAsync(
+                    thread,
+                    request,
+                    inputHash,
+                    trace,
+                    rankerAuditProfile,
+                    reviewerAuditProfile,
+                    reviewerEnabled,
+                    startedTimestamp,
+                    cancellationToken).ConfigureAwait(false);
+                return auditedThread;
             }
         }
 
-        return CreateFallback(request, cancellationToken, candidateFallbackThreadId);
+        trace.Record("selection", "rejected", "no_valid_proposal");
+        return await PersistFallbackAsync(
+            "no_valid_proposal",
+            candidateFallbackThreadId).ConfigureAwait(false);
     }
 
     private CandidateBinding? CreateBinding(AssociationRuleCandidate candidate)
@@ -304,22 +476,27 @@ public sealed class AssociationDecisionService
             effectOptions);
     }
 
-    private async Task<string?> InvokeRankerAsync(
+    private async Task<AssociationRankerInvocation> InvokeRankerAsync(
         AssociationRankerRequest request,
         long startedTimestamp,
+        Action providerInvoked,
         CancellationToken callerCancellation)
     {
+        ArgumentNullException.ThrowIfNull(providerInvoked);
         callerCancellation.ThrowIfCancellationRequested();
         TimeSpan elapsedBeforeCall = SafeElapsed(startedTimestamp);
-        if (elapsedBeforeCall >= HardTimeout) return null;
+        if (elapsedBeforeCall >= HardTimeout)
+            return new AssociationRankerInvocation(null, "ranker_timeout");
 
         using var providerCancellation =
             CancellationTokenSource.CreateLinkedTokenSource(callerCancellation);
         Task<string?> providerTask;
         try
         {
+            providerInvoked();
             providerTask = _ranker.RankAsync(request, providerCancellation.Token);
-            if (providerTask is null) return null;
+            if (providerTask is null)
+                return new AssociationRankerInvocation(null, "ranker_unavailable");
         }
         catch (Exception exception) when (callerCancellation.IsCancellationRequested)
         {
@@ -330,7 +507,7 @@ public sealed class AssociationDecisionService
         }
         catch (Exception)
         {
-            return null;
+            return new AssociationRankerInvocation(null, "ranker_unavailable");
         }
 
         using var timeoutCancellation = new CancellationTokenSource();
@@ -354,7 +531,7 @@ public sealed class AssociationDecisionService
         {
             SafeCancel(providerCancellation);
             ObserveLate(providerTask);
-            return null;
+            return new AssociationRankerInvocation(null, "ranker_timeout");
         }
 
         timeoutCancellation.Cancel();
@@ -365,10 +542,12 @@ public sealed class AssociationDecisionService
             if (SafeElapsed(startedTimestamp) >= HardTimeout)
             {
                 SafeCancel(providerCancellation);
-                return null;
+                return new AssociationRankerInvocation(null, "ranker_timeout");
             }
 
-            return response;
+            return response is null
+                ? new AssociationRankerInvocation(null, "ranker_unavailable")
+                : new AssociationRankerInvocation(response, null);
         }
         catch (Exception exception) when (callerCancellation.IsCancellationRequested)
         {
@@ -379,7 +558,7 @@ public sealed class AssociationDecisionService
         }
         catch (Exception)
         {
-            return null;
+            return new AssociationRankerInvocation(null, "ranker_unavailable");
         }
     }
 
@@ -517,6 +696,54 @@ public sealed class AssociationDecisionService
 
         effects = Array.AsReadOnly(result.ToArray());
         return true;
+    }
+
+    private async Task<StoryThreadContract> PersistDecisionAsync(
+        StoryThreadContract thread,
+        AssociationDecisionRequest request,
+        string inputHash,
+        AssociationDecisionTrace trace,
+        AssociationProviderAuditProfile rankerAuditProfile,
+        AssociationProviderAuditProfile? reviewerAuditProfile,
+        bool reviewerEnabled,
+        long startedTimestamp,
+        CancellationToken cancellationToken)
+    {
+        cancellationToken.ThrowIfCancellationRequested();
+        TimeSpan elapsed = SafeElapsed(startedTimestamp);
+        AssociationDecisionAuditContract audit = AssociationDecisionAuditFactory.Create(
+            thread,
+            request,
+            inputHash,
+            trace,
+            rankerAuditProfile,
+            reviewerAuditProfile,
+            reviewerEnabled,
+            elapsed,
+            _timeProvider.GetUtcNow());
+        // Ranking and signing own the eight-second gameplay deadline. A fallback selected at
+        // that exact boundary must still be traceable, so persistence has its own short,
+        // fail-closed budget instead of being allowed to block without limit.
+        using var persistenceDeadline = new CancellationTokenSource(
+            AuditPersistenceTimeout,
+            _timeProvider);
+        try
+        {
+            await _auditRepository.StoreAsync(audit, persistenceDeadline.Token)
+                .ConfigureAwait(false);
+        }
+        catch (Exception exception) when (exception is not OutOfMemoryException)
+        {
+            throw new AssociationDecisionAuditException(exception);
+        }
+
+        TimeSpan completedElapsed = SafeElapsed(startedTimestamp);
+        _metrics.RecordCompleted(
+            trace.CandidateCount,
+            thread.FallbackUsed,
+            completedElapsed,
+            trace.Rejections);
+        return thread;
     }
 
     private StoryThreadContract CreateFallback(
@@ -713,4 +940,8 @@ public sealed class AssociationDecisionService
         string CandidateToken,
         AssociationRuleCandidate Candidate,
         IReadOnlyList<ApprovedTextVariant> Variants);
+
+    private sealed record AssociationRankerInvocation(
+        string? Response,
+        string? FailureReason);
 }

@@ -109,7 +109,11 @@ public sealed class AssociationDecisionServiceTests
         Assert.Equal(1, ranker.CallCount);
     }
 
-    private static AssociationDecisionService CreateService(IAssociationRanker ranker)
+    internal static AssociationDecisionService CreateService(
+        IAssociationRanker ranker,
+        IAssociationDecisionAuditRepository? auditRepository = null,
+        AssociationDecisionMetrics? metrics = null,
+        TimeProvider? timeProvider = null)
     {
         ApprovedTextVariantRegistry variants = ApprovedTextVariantRegistry.CreateForTests(new[]
         {
@@ -168,10 +172,12 @@ public sealed class AssociationDecisionServiceTests
             }),
             guard,
             new SequenceAssociationDecisionIdFactory("thr.test", "genjob.test"),
-            new FixedTimeProvider(FixedNow));
+            timeProvider ?? new FixedTimeProvider(FixedNow),
+            auditRepository ?? new InMemoryAssociationDecisionAuditRepository(),
+            metrics ?? new AssociationDecisionMetrics());
     }
 
-    private static AssociationDecisionRequest Request() => new(
+    internal static AssociationDecisionRequest Request() => new(
         PlayerId: "p.known",
         Chapter: "chapter.red_mist",
         WorldClock: 2000,
@@ -201,7 +207,7 @@ public sealed class AssociationDecisionServiceTests
         TriggerHistory: Array.Empty<AssociationTriggerHistory>(),
         DefaultFallbackThreadId: "assoc.fallback.default.v1");
 
-    private static ApprovedAssociationTemplate ApprovedTemplate()
+    internal static ApprovedAssociationTemplate ApprovedTemplate()
     {
         var contract = new AssociationTemplateContract(
             "1.0.0",
