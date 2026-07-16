@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0.0", "requestId": "fixture-request-ticket-bytes", "mediaId": "fixture.media.bytes",
+  "contentHash": "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+  "downloadUrl": "https://download.example.test/media/bytes.mp4?ticket=fixture", "expiresAtUtc": "2026-07-16T12:05:00Z",
+  "contentType": "video/mp4", "length": 4, "bytes": [0, 1, 2, 3]
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0.0",
+  "requestId": "fixture-request-ticket-valid",
+  "mediaId": "fixture.media.processed",
+  "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "downloadUrl": "https://download.example.test/media/fixture.mp4?ticket=fixture-not-a-secret",
+  "expiresAtUtc": "2026-07-16T12:05:00Z",
+  "contentType": "video/mp4",
+  "length": 4096
+}

@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/budget-cost-record.schema.json",
+  "title": "BudgetCostRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "reservationId",
+    "currency",
+    "estimatedMicros",
+    "maximumMicros",
+    "status",
+    "priceVersion",
+    "providerKey",
+    "modelSnapshot"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "reservationId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "estimatedMicros": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "maximumMicros": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "actualMicros": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "reserved",
+        "dispatching",
+        "reconciliation_pending",
+        "settled",
+        "released",
+        "denied"
+      ]
+    },
+    "priceVersion": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "providerKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "modelSnapshot": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "settled"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "actualMicros"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "released"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "actualMicros"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "denied"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "actualMicros"
+        ],
+        "properties": {
+          "actualMicros": {
+            "const": 0
+          }
+        }
+      }
+    }
+  ]
+}

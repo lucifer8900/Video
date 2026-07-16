@@ -1,0 +1,5 @@
+{
+  "schemaVersion": "1.0.0", "outcome": "fallback_budget_exceeded",
+  "reservationId": "budget.reservation.fixture.invalid",
+  "fallbackMediaRef": "media.fallback.budget", "reasonCode": "budget.limit_exceeded"
+}

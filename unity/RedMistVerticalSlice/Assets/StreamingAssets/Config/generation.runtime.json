@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0.0",
+  "enabled": false,
+  "apiBaseUrl": "",
+  "allowedMediaHosts": [],
+  "requestTimeoutSeconds": 10,
+  "maxResponseBytes": 262144,
+  "maxDownloadBytes": 536870912
+}

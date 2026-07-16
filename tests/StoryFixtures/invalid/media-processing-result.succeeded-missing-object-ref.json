@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0.0", "mediaId": "fixture.media.no_object", "status": "succeeded",
+  "profile": "video.1080p24.h264-aac.v1",
+  "probe": { "container": "mp4", "width": 1920, "height": 1080, "frameRate": 24, "durationMilliseconds": 8000, "hasAudio": false, "integratedLoudnessLufs": null, "truePeakDbtp": null },
+  "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333", "length": 1024
+}

@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0.0", "mediaId": "fixture.media.no_profile", "status": "succeeded",
+  "probe": { "container": "mp4", "width": 1920, "height": 1080, "frameRate": 24, "durationMilliseconds": 8000, "hasAudio": false, "integratedLoudnessLufs": null, "truePeakDbtp": null },
+  "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "objectRef": "media.fixture.no_profile", "length": 1024
+}

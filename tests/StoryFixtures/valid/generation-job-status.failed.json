@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0.0",
+  "requestId": "cx306-request-failed",
+  "jobId": "d38f896d-a410-489a-aa36-9018e46e98e0",
+  "status": "failed",
+  "terminal": true,
+  "pollAfterMilliseconds": 0,
+  "failureCode": "generation.failed"
+}

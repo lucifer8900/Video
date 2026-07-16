@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0.0",
+  "providerKey": "fixture.provider.video",
+  "operationId": "fixture.operation.no_output_hash",
+  "status": "succeeded",
+  "modelSnapshot": "fixture-model-snapshot",
+  "outputRef": "fixture.output.video"
+}

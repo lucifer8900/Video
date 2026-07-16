@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0.0", "mediaId": "fixture.media.no_probe", "status": "succeeded",
+  "profile": "video.1080p24.h264-aac.v1",
+  "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+  "objectRef": "media.fixture.no_probe", "length": 1024
+}

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/generation-provider-result.schema.json",
+  "title": "GenerationProviderResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "providerKey",
+    "operationId",
+    "status",
+    "modelSnapshot"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "providerKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "operationId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "submitted",
+        "running",
+        "succeeded",
+        "failed",
+        "cancelled"
+      ]
+    },
+    "modelSnapshot": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outputRef": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "outputHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "errorCode": {
+      "$ref": "common.schema.json#/$defs/id"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "succeeded"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "outputRef",
+          "outputHash"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "failed"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "errorCode"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/generation-job-status.schema.json",
+  "title": "GenerationJobStatus",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "requestId",
+    "jobId",
+    "status",
+    "terminal",
+    "pollAfterMilliseconds",
+    "failureCode"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "requestId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "jobId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "created",
+        "queued",
+        "generating",
+        "moderating",
+        "transcoding",
+        "ready",
+        "failed",
+        "expired"
+      ]
+    },
+    "terminal": {
+      "type": "boolean"
+    },
+    "pollAfterMilliseconds": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 60000
+    },
+    "failureCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "created",
+              "queued",
+              "generating",
+              "moderating",
+              "transcoding"
+            ]
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "terminal": {
+            "const": false
+          },
+          "pollAfterMilliseconds": {
+            "minimum": 1
+          },
+          "failureCode": {
+            "const": null
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "ready"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "terminal": {
+            "const": true
+          },
+          "pollAfterMilliseconds": {
+            "const": 0
+          },
+          "failureCode": {
+            "const": null
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "failed"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "terminal": {
+            "const": true
+          },
+          "pollAfterMilliseconds": {
+            "const": 0
+          },
+          "failureCode": {
+            "enum": [
+              "generation.failed",
+              "moderation.rejected"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "expired"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "terminal": {
+            "const": true
+          },
+          "pollAfterMilliseconds": {
+            "const": 0
+          },
+          "failureCode": {
+            "const": "generation.expired"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "1.0.0",
+  "mediaId": "fixture.media.failed_url",
+  "status": "failed",
+  "errorCode": "media.upload_failed",
+  "signedUrl": "https://storage.example.test/object?signature=must-not-be-stored"
+}

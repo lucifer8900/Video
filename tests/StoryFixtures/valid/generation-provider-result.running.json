@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "1.0.0",
+  "providerKey": "fixture.provider.video",
+  "operationId": "fixture.operation.running",
+  "status": "running",
+  "modelSnapshot": "fixture-model-snapshot"
+}
