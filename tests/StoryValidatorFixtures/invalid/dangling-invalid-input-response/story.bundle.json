@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.bundle.dangling_invalid_input_response",
+  "entryNodeId": "fixture.node.reaction",
+  "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "approvalStatus": "approved",
+  "storyFacts": [],
+  "characterDefinitions": [],
+  "characterStates": [],
+  "questDefinitions": [],
+  "sceneNodes": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node.reaction",
+      "displayKey": "fixture.display.reaction",
+      "entryConditions": [],
+      "mediaRefs": [],
+      "choices": [],
+      "voiceIntentRefs": [],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "fixture.response.missing" },
+        "irrelevant": { "npcResponseRef": "fixture.response.safe" },
+        "too_long": { "npcResponseRef": "fixture.response.safe" },
+        "silence": { "npcResponseRef": "fixture.response.safe" },
+        "low_confidence": { "npcResponseRef": "fixture.response.safe" }
+      },
+      "injectionPoints": [],
+      "terminal": true,
+      "approvalStatus": "approved"
+    }
+  ],
+  "voiceIntents": [],
+  "npcResponses": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.response.safe",
+      "textKey": "fixture.text.response.safe",
+      "emotionKey": "fixture.emotion.neutral",
+      "lipSyncMediaRef": "fixture.media.response.safe",
+      "effects": [],
+      "approvalStatus": "approved"
+    }
+  ],
+  "combatantStates": [],
+  "encounterDefinitions": [],
+  "combatResolutions": [],
+  "mediaAssets": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.media.response.safe",
+      "assetVersion": "1.0.0",
+      "mediaType": "video",
+      "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "uri": "https://fixtures.example.invalid/reaction.mp4",
+      "language": "zh-CN",
+      "resolution": { "width": 1920, "height": 1080 },
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    }
+  ],
+  "generationJobs": [],
+  "saveGames": []
+}
