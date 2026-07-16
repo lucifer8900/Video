@@ -17,7 +17,7 @@ public sealed class MediaDownloadEndpointTests
             "media.test.ready",
             $"sha256:{new string('a', 64)}",
             new Uri("https://cdn.example.test/media.mp4?X-Goog-Signature=TEST_ONLY"),
-            new DateTimeOffset(2026, 7, 16, 12, 5, 0, TimeSpan.Zero),
+            DateTimeOffset.UtcNow.AddMinutes(5),
             "video/mp4",
             4096));
         DefaultHttpContext context = Context();
