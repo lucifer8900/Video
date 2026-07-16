@@ -1,3 +1,6 @@
+#nullable disable
+// Unity 2022 legacy catalog linked into nullable-enabled .NET equivalence tests.
+
 using System;
 using System.Collections.Generic;
 
