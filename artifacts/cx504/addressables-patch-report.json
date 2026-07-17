@@ -1,0 +1,136 @@
+{
+    "schemaVersion": "1.0.0",
+    "reportId": "cx504.patch.a836257090bcba6e",
+    "planId": "cx504.red-mist.addressables.v1",
+    "mode": "experiment_only",
+    "runtimeMigration": false,
+    "steamPipeVerified": false,
+    "productionReadiness": "not_evaluated",
+    "authority": "addressables_payload_measurement_not_steam_download_authority",
+    "buildTarget": "StandaloneWindows64",
+    "unityVersion": "2022.3.62f3c1",
+    "addressablesVersion": "1.22.3",
+    "startedAtUtc": "2026-07-17T10:25:54.5021365+00:00",
+    "completedAtUtc": "2026-07-17T10:25:59.4568000+00:00",
+    "baselineInput": {
+        "logicalAddress": "cx504.chapter_red_mist_videos.target",
+        "contentHash": "sha256:487a93114fe4caee851168dfdae2adf03e33af4d38b875d28ea20401f91785b1",
+        "length": 8817938,
+        "durationMilliseconds": 8000
+    },
+    "replacementInput": {
+        "logicalAddress": "cx504.chapter_red_mist_videos.target",
+        "contentHash": "sha256:a836257090bcba6ef0651e60c6975d035f5881effb0b497dfc04b769263edc39",
+        "length": 1022048,
+        "durationMilliseconds": 8000
+    },
+    "baselineBuild": {
+        "durationMilliseconds": 1041,
+        "temporaryDiskBytes": 26519601,
+        "totalBytes": 26515563,
+        "files": [
+            {
+                "relativePath": "evidence/baseline-content-state.bin",
+                "contentHash": "sha256:32e299778f60984306ae158749ff7306fa480a939fc186e3fda68027c1626716",
+                "length": 4038,
+                "kind": "content_state"
+            },
+            {
+                "relativePath": "local/StandaloneWindows64/base-client-local_assets_all_8f1db45b8328934302d008adcb5c9283.bundle",
+                "contentHash": "sha256:d37ca05d44ff0f9c411a74351d7c7adaf5b4c9d0c1475116326d7d4e7c0fa9b4",
+                "length": 1298,
+                "kind": "bundle"
+            },
+            {
+                "relativePath": "remote/StandaloneWindows64/catalog_cx504.addressables.v1.hash",
+                "contentHash": "sha256:0e53b990ab65d11bbe26a4fbc55685bbe05efba5dd3514d78bec5428c0b20cd9",
+                "length": 32,
+                "kind": "catalog_hash"
+            },
+            {
+                "relativePath": "remote/StandaloneWindows64/catalog_cx504.addressables.v1.json",
+                "contentHash": "sha256:6aef5fa8ea41bbbbc915eb69c1d9f5689559139f01adc426f6437a3a668c4308",
+                "length": 39195,
+                "kind": "catalog"
+            },
+            {
+                "relativePath": "remote/StandaloneWindows64/chapter-red-mist-video-remote_assets_cx504.chapter_red_mist_videos.control-01_72b40f254ec875165362b51ed1fce46a.bundle",
+                "contentHash": "sha256:f3e32aebed14038fd42e8d06ca90e9e80d70c83715dba7be87be9e95a9fc463b",
+                "length": 8822784,
+                "kind": "bundle"
+            },
+            {
+                "relativePath": "remote/StandaloneWindows64/chapter-red-mist-video-remote_assets_cx504.chapter_red_mist_videos.control-02_bb8b737f97dca9488ea0ef3682235d7a.bundle",
+                "contentHash": "sha256:c63046146e80552d65de4a978cdb820502363555d17ea564581ec9cd028e7c6a",
+                "length": 8822784,
+                "kind": "bundle"
+            },
+            {
+                "relativePath": "remote/StandaloneWindows64/chapter-red-mist-video-remote_assets_cx504.chapter_red_mist_videos.target_fa2f4991172e16e93a9a478a7ec12e1e.bundle",
+                "contentHash": "sha256:a49b30422195ddadb2bbd3c0d9fc5c264e83e682daeace57f0432cdffaf4d85b",
+                "length": 8822784,
+                "kind": "bundle"
+            },
+            {
+                "relativePath": "remote/StandaloneWindows64/optional-asr-model-remote_assets_all_5ee078930b9f72e988fdb9509c120304.bundle",
+                "contentHash": "sha256:a6f88b258f8e7f6984db27db75fb1dfc8299b0faa9005dbff27647d1531e691e",
+                "length": 1320,
+                "kind": "bundle"
+            },
+            {
+                "relativePath": "remote/StandaloneWindows64/zh-cn-voice-subtitles-remote_assets_all_accfbbbbcc9d443a386c11fb0b6b8369.bundle",
+                "contentHash": "sha256:163ec9f13b304aeb106eb7f96eeb876c10819afafbe343bfd5b2588cc7d5037f",
+                "length": 1328,
+                "kind": "bundle"
+            }
+        ]
+    },
+    "updateBuild": {
+        "durationMilliseconds": 870,
+        "temporaryDiskBytes": 27546481,
+        "totalBytes": 1066107,
+        "files": [
+            {
+                "relativePath": "remote/StandaloneWindows64/catalog_cx504.addressables.v1.hash",
+                "contentHash": "sha256:c4170e81221ae241babaf6c5e4747785b831d6a97b900c89918e2d57e7cd9e49",
+                "length": 32,
+                "kind": "catalog_hash"
+            },
+            {
+                "relativePath": "remote/StandaloneWindows64/catalog_cx504.addressables.v1.json",
+                "contentHash": "sha256:863de3c0ae0a59679fd3dd0c719b37811f239ff7773d28d86b9d38ee3ad577e1",
+                "length": 39195,
+                "kind": "catalog"
+            },
+            {
+                "relativePath": "remote/StandaloneWindows64/chapter-red-mist-video-remote_assets_cx504.chapter_red_mist_videos.target_9a241c6faa3d4e1c6931886f5c26b42a.bundle",
+                "contentHash": "sha256:93fd2b30d97d20eb3754f7925829cf24640421f66a3932c186db5420e285f35e",
+                "length": 1026880,
+                "kind": "bundle"
+            }
+        ]
+    },
+    "patchPayloadBytes": 1066107,
+    "amplificationRatio": 0.12090207483881152,
+    "changedAssetBytes": 8817938,
+    "maximumAllowedPatchBytes": 14275483,
+    "maximumBundleBytes": 2147483648,
+    "maximumObservedBundleBytes": 8822784,
+    "expectedChangedBundleGroup": "chapter-red-mist-video-remote",
+    "changedBundleGroups": [
+        "chapter-red-mist-video-remote"
+    ],
+    "expectedChangedBundleAddress": "cx504.chapter_red_mist_videos.target",
+    "changedBundleAddresses": [
+        "cx504.chapter_red_mist_videos.target"
+    ],
+    "unexpectedChangedBundles": [],
+    "unchangedBundleHashesPreserved": true,
+    "verdict": "passed",
+    "limitations": [
+        "not_runtime_migration",
+        "not_steam_download_measurement",
+        "language_and_asr_are_fixture_manifests"
+    ],
+    "contentHash": "sha256:dafb46990be862cfba660789e507a7ff4247158976785f1665b2d039ec116215"
+}

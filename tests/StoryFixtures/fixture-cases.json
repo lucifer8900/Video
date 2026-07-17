@@ -1170,6 +1170,42 @@
       "expectedValid": false,
       "expectedCode": "schema.const",
       "expectedPath": "/productionReadiness"
+    },
+    {
+      "name": "valid CX-504 Addressables pack plan",
+      "schemaFile": "addressables-pack-plan.schema.json",
+      "instanceFile": "valid/addressables-pack-plan.json",
+      "expectedValid": true
+    },
+    {
+      "name": "CX-504 base client cannot be delivered as a remote pack",
+      "schemaFile": "addressables-pack-plan.schema.json",
+      "instanceFile": "invalid/addressables-pack-plan.base-remote.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/packs/0/delivery"
+    },
+    {
+      "name": "valid CX-504 Addressables patch report",
+      "schemaFile": "addressables-patch-report.schema.json",
+      "instanceFile": "valid/addressables-patch-report.json",
+      "expectedValid": true
+    },
+    {
+      "name": "Addressables patch report cannot claim Steam verification",
+      "schemaFile": "addressables-patch-report.schema.json",
+      "instanceFile": "invalid/addressables-patch-report.steam-verified.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/steamPipeVerified"
+    },
+    {
+      "name": "Addressables patch report rejects path traversal",
+      "schemaFile": "addressables-patch-report.schema.json",
+      "instanceFile": "invalid/addressables-patch-report.path-traversal.json",
+      "expectedValid": false,
+      "expectedCode": "schema.pattern",
+      "expectedPath": "/baselineBuild/files/0/relativePath"
     }
   ]
 }

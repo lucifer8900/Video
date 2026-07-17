@@ -1,4 +1,7 @@
 using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Contracts.Schema.Tests;
 
@@ -31,6 +34,8 @@ public sealed class SchemaContractTests
         "generation-batch-request.schema.json",
         "generation-batch-result.schema.json",
         "lip-sync-review-report.schema.json",
+        "addressables-pack-plan.schema.json",
+        "addressables-patch-report.schema.json",
         "generation-job-submit.schema.json",
         "generation-job-status.schema.json",
         "generation-job.schema.json",
@@ -82,6 +87,8 @@ public sealed class SchemaContractTests
         "valid/generation-batch-result.reviewed.json",
         "valid/lip-sync-review-report.pass.json",
         "valid/lip-sync-review-report.blocked.json",
+        "valid/addressables-pack-plan.json",
+        "valid/addressables-patch-report.json",
         "valid/generation-job-submit.json",
         "valid/generation-job-status.queued.json",
         "valid/generation-job-status.ready.json",
@@ -167,6 +174,9 @@ public sealed class SchemaContractTests
         "invalid/generation-batch-result.prompt.json",
         "invalid/lip-sync-review-report.pass-failed-check.json",
         "invalid/lip-sync-review-report.production-ready.json",
+        "invalid/addressables-patch-report.steam-verified.json",
+        "invalid/addressables-patch-report.path-traversal.json",
+        "invalid/addressables-pack-plan.base-remote.json",
         "invalid/generation-job-submit.additional-property.json",
         "invalid/generation-job-status.queued-terminal.json",
         "invalid/generation-job-status.failed-missing-code.json",
@@ -338,6 +348,297 @@ public sealed class SchemaContractTests
                 SchemaVersion,
                 root.GetProperty("properties").GetProperty("schemaVersion").GetProperty("const").GetString());
         }
+    }
+
+    [Fact]
+    public void AddressablesExperimentContractsRemainFailClosedAndCanonical()
+    {
+        var repositoryRoot = FindRepositoryRoot();
+        if (!InventoryExists(repositoryRoot))
+        {
+            return;
+        }
+
+        var canonicalPlanPath = Path.Combine(
+            repositoryRoot.FullName,
+            "content",
+            "packaging",
+            "cx504-addressables-pack-plan.json");
+        var fixturePlanPath = Path.Combine(
+            repositoryRoot.FullName,
+            "tests",
+            "StoryFixtures",
+            "valid",
+            "addressables-pack-plan.json");
+
+        Assert.Equal(
+            File.ReadAllText(canonicalPlanPath).ReplaceLineEndings("\n"),
+            File.ReadAllText(fixturePlanPath).ReplaceLineEndings("\n"));
+
+        using var planDocument = JsonDocument.Parse(File.ReadAllText(canonicalPlanPath));
+        var plan = planDocument.RootElement;
+        Assert.Equal("experiment_only", plan.GetProperty("mode").GetString());
+        Assert.False(plan.GetProperty("runtimeMigration").GetBoolean());
+        Assert.False(plan.GetProperty("steamPipeVerified").GetBoolean());
+        Assert.Equal("not_evaluated", plan.GetProperty("productionReadiness").GetString());
+        Assert.Equal(2147483648, plan.GetProperty("maximumBundleBytes").GetInt64());
+
+        var packs = plan.GetProperty("packs").EnumerateArray().ToArray();
+        Assert.Equal(4, packs.Length);
+        Assert.Equal(
+            [
+                "base_client",
+                "chapter_red_mist_videos",
+                "language_zh_cn_audio_subtitles",
+                "optional_offline_asr",
+            ],
+            packs.Select(pack => pack.GetProperty("packId").GetString()).ToArray());
+
+        var videoPack = packs.Single(pack =>
+            pack.GetProperty("packId").GetString() == "chapter_red_mist_videos");
+        Assert.Equal("pack_separately", videoPack.GetProperty("bundleMode").GetString());
+        Assert.Equal("needs_review", videoPack.GetProperty("contentStatus").GetString());
+
+        var asrPack = packs.Single(pack =>
+            pack.GetProperty("packId").GetString() == "optional_offline_asr");
+        Assert.True(asrPack.GetProperty("optional").GetBoolean());
+        Assert.False(asrPack.GetProperty("defaultInstall").GetBoolean());
+        Assert.Equal("fixture_only_model_missing", asrPack.GetProperty("contentStatus").GetString());
+    }
+
+    [Fact]
+    public void AddressablesPatchReportDeclaresIndependentBundleChangeEvidence()
+    {
+        var repositoryRoot = FindRepositoryRoot();
+        if (!InventoryExists(repositoryRoot))
+        {
+            return;
+        }
+
+        using var document = JsonDocument.Parse(File.ReadAllText(
+            SchemaPath(repositoryRoot, "addressables-patch-report.schema.json")));
+        JsonElement schema = document.RootElement;
+        string[] required = schema.GetProperty("required")
+            .EnumerateArray()
+            .Select(item => item.GetString()!)
+            .ToArray();
+
+        Assert.Contains("changedAssetBytes", required);
+        Assert.Contains("maximumObservedBundleBytes", required);
+        Assert.Contains("expectedChangedBundleGroup", required);
+        Assert.Contains("changedBundleGroups", required);
+        Assert.Contains("expectedChangedBundleAddress", required);
+        Assert.Contains("changedBundleAddresses", required);
+        Assert.Equal(
+            "chapter-red-mist-video-remote",
+            schema.GetProperty("properties")
+                .GetProperty("expectedChangedBundleGroup")
+                .GetProperty("const")
+                .GetString());
+        Assert.Equal(
+            "cx504.chapter_red_mist_videos.target",
+            schema.GetProperty("properties")
+                .GetProperty("expectedChangedBundleAddress")
+                .GetProperty("const")
+                .GetString());
+    }
+
+    [Fact]
+    public void PassedAddressablesPatchRequiresCatalogHashCatalogAndOneTargetBundle()
+    {
+        var repositoryRoot = FindRepositoryRoot();
+        if (!InventoryExists(repositoryRoot))
+        {
+            return;
+        }
+
+        using var document = JsonDocument.Parse(File.ReadAllText(
+            SchemaPath(repositoryRoot, "addressables-patch-report.schema.json")));
+        JsonElement passedFiles = document.RootElement.GetProperty("allOf")
+            .EnumerateArray()
+            .Single()
+            .GetProperty("then")
+            .GetProperty("properties")
+            .GetProperty("updateBuild")
+            .GetProperty("properties")
+            .GetProperty("files");
+        Assert.Equal(3, passedFiles.GetProperty("minItems").GetInt32());
+        Assert.Equal(3, passedFiles.GetProperty("maxItems").GetInt32());
+        Assert.Equal(3, passedFiles.GetProperty("allOf").GetArrayLength());
+    }
+
+    [Fact]
+    public void AddressablesPackPlanPinsTheSameEngineeringGuardrailUsedByReports()
+    {
+        var repositoryRoot = FindRepositoryRoot();
+        if (!InventoryExists(repositoryRoot))
+        {
+            return;
+        }
+
+        using var document = JsonDocument.Parse(File.ReadAllText(
+            SchemaPath(repositoryRoot, "addressables-pack-plan.schema.json")));
+        JsonElement schema = document.RootElement;
+        Assert.Equal(
+            2147483648,
+            schema.GetProperty("properties")
+                .GetProperty("maximumBundleBytes")
+                .GetProperty("const")
+                .GetInt64());
+        JsonElement threshold = schema.GetProperty("$defs")
+            .GetProperty("patchThreshold")
+            .GetProperty("properties");
+        Assert.Equal(1.5d, threshold.GetProperty("changedAssetMultiplier").GetProperty("const").GetDouble());
+        Assert.Equal(1048576, threshold.GetProperty("fixedOverheadBytes").GetProperty("const").GetInt64());
+    }
+
+    [Fact]
+    public void AddressablesPackPlanPinsEveryFieldOfAllFourPackShapes()
+    {
+        var repositoryRoot = FindRepositoryRoot();
+        if (!InventoryExists(repositoryRoot))
+        {
+            return;
+        }
+
+        using var document = JsonDocument.Parse(File.ReadAllText(
+            SchemaPath(repositoryRoot, "addressables-pack-plan.schema.json")));
+        JsonElement[] variants = document.RootElement.GetProperty("$defs")
+            .GetProperty("pack")
+            .GetProperty("oneOf")
+            .EnumerateArray()
+            .ToArray();
+        Assert.Equal(4, variants.Length);
+        var byId = variants.ToDictionary(
+            variant => variant.GetProperty("properties").GetProperty("packId").GetProperty("const").GetString()!,
+            variant => variant.GetProperty("properties"),
+            StringComparer.Ordinal);
+
+        AssertPackShape(byId["base_client"],
+            "base-client-local", "local", false, true, true,
+            "pack_together", "lz4", "generated_manifest", "experiment_fixture");
+        AssertPackShape(byId["chapter_red_mist_videos"],
+            "chapter-red-mist-video-remote", "remote", false, true, false,
+            "pack_separately", "uncompressed", "local_ignored_video_copy", "needs_review");
+        AssertPackShape(byId["language_zh_cn_audio_subtitles"],
+            "zh-cn-voice-subtitles-remote", "remote", false, true, true,
+            "pack_together", "lz4", "generated_manifest", "fixture_only_no_production_audio_split");
+        AssertPackShape(byId["optional_offline_asr"],
+            "optional-asr-model-remote", "remote", true, false, true,
+            "pack_together", "lz4", "generated_manifest", "fixture_only_model_missing");
+    }
+
+    [Fact]
+    public void ActualAddressablesPatchReportIsSchemaValidSelfHashedAndInternallyConsistent()
+    {
+        var repositoryRoot = FindRepositoryRoot();
+        if (!InventoryExists(repositoryRoot))
+        {
+            return;
+        }
+
+        string reportPath = Path.Combine(
+            repositoryRoot.FullName,
+            "artifacts",
+            "cx504",
+            "addressables-patch-report.json");
+        Assert.True(File.Exists(reportPath), "CX-504 actual patch report is missing.");
+
+        var validator = SchemaFixtureValidator.Load(repositoryRoot.FullName);
+        var diagnostics = validator.Validate(new FixtureCase(
+            "actual CX-504 Addressables patch report",
+            "addressables-patch-report.schema.json",
+            reportPath,
+            ExpectedValid: true));
+        Assert.True(
+            diagnostics.Count == 0,
+            $"Actual CX-504 report should be schema valid:{Environment.NewLine}{string.Join(Environment.NewLine, diagnostics)}");
+
+        string rawReport = File.ReadAllText(reportPath);
+        JsonObject report = JsonNode.Parse(rawReport)!.AsObject();
+        Assert.Equal("experiment_only", report["mode"]!.GetValue<string>());
+        Assert.False(report["runtimeMigration"]!.GetValue<bool>());
+        Assert.False(report["steamPipeVerified"]!.GetValue<bool>());
+        Assert.Equal("not_evaluated", report["productionReadiness"]!.GetValue<string>());
+        Assert.Equal("passed", report["verdict"]!.GetValue<string>());
+        Assert.True(report["unchangedBundleHashesPreserved"]!.GetValue<bool>());
+        Assert.Empty(report["unexpectedChangedBundles"]!.AsArray());
+        Assert.Equal(
+            ["chapter-red-mist-video-remote"],
+            report["changedBundleGroups"]!.AsArray().Select(value => value!.GetValue<string>()).ToArray());
+        Assert.Equal(
+            "cx504.chapter_red_mist_videos.target",
+            report["expectedChangedBundleAddress"]!.GetValue<string>());
+        Assert.Equal(
+            ["cx504.chapter_red_mist_videos.target"],
+            report["changedBundleAddresses"]!.AsArray().Select(value => value!.GetValue<string>()).ToArray());
+
+        long baselineBytes = report["baselineInput"]!["length"]!.GetValue<long>();
+        long replacementBytes = report["replacementInput"]!["length"]!.GetValue<long>();
+        long changedBytes = Math.Max(baselineBytes, replacementBytes);
+        long patchBytes = report["patchPayloadBytes"]!.GetValue<long>();
+        Assert.Equal(changedBytes, report["changedAssetBytes"]!.GetValue<long>());
+        Assert.Equal(
+            checked((long)Math.Ceiling(changedBytes * 1.5d) + 1_048_576L),
+            report["maximumAllowedPatchBytes"]!.GetValue<long>());
+        Assert.Equal(
+            patchBytes,
+            report["updateBuild"]!["totalBytes"]!.GetValue<long>());
+        Assert.Equal(
+            patchBytes / (double)changedBytes,
+            report["amplificationRatio"]!.GetValue<double>(),
+            precision: 12);
+
+        string expectedHash = report["contentHash"]!.GetValue<string>();
+        string hashToken = $"\"contentHash\": \"{expectedHash}\"";
+        Assert.Equal(rawReport.IndexOf(hashToken, StringComparison.Ordinal),
+            rawReport.LastIndexOf(hashToken, StringComparison.Ordinal));
+        string compact = MinifyJsonPreservingTokens(
+            rawReport.Replace(hashToken, "\"contentHash\": \"\"", StringComparison.Ordinal));
+        string actualHash = "sha256:" + Convert.ToHexString(
+            SHA256.HashData(Encoding.UTF8.GetBytes(compact))).ToLowerInvariant();
+        Assert.Equal(expectedHash, actualHash);
+    }
+
+    private static string MinifyJsonPreservingTokens(string json)
+    {
+        var builder = new StringBuilder(json.Length);
+        bool insideString = false;
+        bool escaped = false;
+        foreach (char character in json)
+        {
+            if (insideString)
+            {
+                builder.Append(character);
+                if (escaped)
+                {
+                    escaped = false;
+                }
+                else if (character == '\\')
+                {
+                    escaped = true;
+                }
+                else if (character == '"')
+                {
+                    insideString = false;
+                }
+
+                continue;
+            }
+
+            if (character == '"')
+            {
+                insideString = true;
+                builder.Append(character);
+            }
+            else if (!char.IsWhiteSpace(character))
+            {
+                builder.Append(character);
+            }
+        }
+
+        Assert.False(insideString);
+        return builder.ToString();
     }
 
     [Fact]
@@ -984,6 +1285,29 @@ public sealed class SchemaContractTests
                 .ToArray());
     }
 
+    private static void AssertPackShape(
+        JsonElement properties,
+        string groupName,
+        string delivery,
+        bool optional,
+        bool defaultInstall,
+        bool staticContent,
+        string bundleMode,
+        string compression,
+        string sourceKind,
+        string contentStatus)
+    {
+        Assert.Equal(groupName, properties.GetProperty("groupName").GetProperty("const").GetString());
+        Assert.Equal(delivery, properties.GetProperty("delivery").GetProperty("const").GetString());
+        Assert.Equal(optional, properties.GetProperty("optional").GetProperty("const").GetBoolean());
+        Assert.Equal(defaultInstall, properties.GetProperty("defaultInstall").GetProperty("const").GetBoolean());
+        Assert.Equal(staticContent, properties.GetProperty("staticContent").GetProperty("const").GetBoolean());
+        Assert.Equal(bundleMode, properties.GetProperty("bundleMode").GetProperty("const").GetString());
+        Assert.Equal(compression, properties.GetProperty("compression").GetProperty("const").GetString());
+        Assert.Equal(sourceKind, properties.GetProperty("sourceKind").GetProperty("const").GetString());
+        Assert.Equal(contentStatus, properties.GetProperty("contentStatus").GetProperty("const").GetString());
+    }
+
     private static void AssertAllowedProperties(JsonElement schema, string[] expectedProperties)
     {
         Assert.False(schema.GetProperty("additionalProperties").GetBoolean());
@@ -1028,6 +1352,8 @@ public sealed class SchemaContractTests
         {
             yield return $"tests/StoryFixtures/{fixtureFile}";
         }
+
+        yield return "artifacts/cx504/addressables-patch-report.json";
     }
 
     private static bool InventoryExists(DirectoryInfo repositoryRoot) =>

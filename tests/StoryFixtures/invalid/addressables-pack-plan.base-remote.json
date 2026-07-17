@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "planId": "cx504.red-mist.addressables.v1",
+  "mode": "experiment_only",
+  "runtimeMigration": false,
+  "steamPipeVerified": false,
+  "productionReadiness": "not_evaluated",
+  "claimAuthority": "addressables_payload_experiment_not_runtime_or_steam_authority",
+  "unityVersion": "2022.3.62f3c1",
+  "addressablesVersion": "1.22.3",
+  "maximumBundleBytes": 2147483648,
+  "patchThreshold": {
+    "changedAssetMultiplier": 1.5,
+    "fixedOverheadBytes": 1048576,
+    "authority": "engineering_guardrail_not_steam_download_guarantee"
+  },
+  "packs": [
+    {
+      "packId": "base_client",
+      "groupName": "base-client-local",
+      "delivery": "remote",
+      "optional": false,
+      "defaultInstall": true,
+      "staticContent": true,
+      "bundleMode": "pack_together",
+      "compression": "lz4",
+      "sourceKind": "generated_manifest",
+      "contentStatus": "experiment_fixture"
+    },
+    {
+      "packId": "chapter_red_mist_videos",
+      "groupName": "chapter-red-mist-video-remote",
+      "delivery": "remote",
+      "optional": false,
+      "defaultInstall": true,
+      "staticContent": false,
+      "bundleMode": "pack_separately",
+      "compression": "uncompressed",
+      "sourceKind": "local_ignored_video_copy",
+      "contentStatus": "needs_review"
+    },
+    {
+      "packId": "language_zh_cn_audio_subtitles",
+      "groupName": "zh-cn-voice-subtitles-remote",
+      "delivery": "remote",
+      "optional": false,
+      "defaultInstall": true,
+      "staticContent": true,
+      "bundleMode": "pack_together",
+      "compression": "lz4",
+      "sourceKind": "generated_manifest",
+      "contentStatus": "fixture_only_no_production_audio_split"
+    },
+    {
+      "packId": "optional_offline_asr",
+      "groupName": "optional-asr-model-remote",
+      "delivery": "remote",
+      "optional": true,
+      "defaultInstall": false,
+      "staticContent": true,
+      "bundleMode": "pack_together",
+      "compression": "lz4",
+      "sourceKind": "generated_manifest",
+      "contentStatus": "fixture_only_model_missing"
+    }
+  ],
+  "prohibitedSourcePatterns": [
+    "content/originalization/source-to-game-name-map.json",
+    "content/originalization/name-change-crosswalk.csv",
+    "GEMINI_API_KEY"
+  ]
+}

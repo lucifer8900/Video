@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/addressables-patch-report.schema.json",
+  "title": "CX-504 Addressables A/B content update report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "reportId",
+    "planId",
+    "mode",
+    "runtimeMigration",
+    "steamPipeVerified",
+    "productionReadiness",
+    "authority",
+    "buildTarget",
+    "unityVersion",
+    "addressablesVersion",
+    "startedAtUtc",
+    "completedAtUtc",
+    "baselineInput",
+    "replacementInput",
+    "baselineBuild",
+    "updateBuild",
+    "patchPayloadBytes",
+    "amplificationRatio",
+    "changedAssetBytes",
+    "maximumAllowedPatchBytes",
+    "maximumBundleBytes",
+    "maximumObservedBundleBytes",
+    "expectedChangedBundleGroup",
+    "changedBundleGroups",
+    "expectedChangedBundleAddress",
+    "changedBundleAddresses",
+    "unexpectedChangedBundles",
+    "unchangedBundleHashesPreserved",
+    "verdict",
+    "limitations",
+    "contentHash"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "reportId": { "$ref": "common.schema.json#/$defs/id" },
+    "planId": { "$ref": "common.schema.json#/$defs/id" },
+    "mode": { "const": "experiment_only" },
+    "runtimeMigration": { "const": false },
+    "steamPipeVerified": { "const": false },
+    "productionReadiness": { "const": "not_evaluated" },
+    "authority": { "const": "addressables_payload_measurement_not_steam_download_authority" },
+    "buildTarget": { "type": "string", "minLength": 1 },
+    "unityVersion": { "const": "2022.3.62f3c1" },
+    "addressablesVersion": { "const": "1.22.3" },
+    "startedAtUtc": { "$ref": "common.schema.json#/$defs/dateTime" },
+    "completedAtUtc": { "$ref": "common.schema.json#/$defs/dateTime" },
+    "baselineInput": { "$ref": "#/$defs/videoInput" },
+    "replacementInput": { "$ref": "#/$defs/videoInput" },
+    "baselineBuild": { "$ref": "#/$defs/buildInventory" },
+    "updateBuild": { "$ref": "#/$defs/buildInventory" },
+    "patchPayloadBytes": { "type": "integer", "minimum": 1 },
+    "amplificationRatio": { "type": "number", "minimum": 0 },
+    "changedAssetBytes": { "type": "integer", "minimum": 1 },
+    "maximumAllowedPatchBytes": { "type": "integer", "minimum": 1 },
+    "maximumBundleBytes": { "type": "integer", "minimum": 1, "maximum": 2147483648 },
+    "maximumObservedBundleBytes": { "type": "integer", "minimum": 1, "maximum": 2147483648 },
+    "expectedChangedBundleGroup": { "const": "chapter-red-mist-video-remote" },
+    "changedBundleGroups": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "pattern": "^[A-Za-z0-9._-]+$" }
+    },
+    "expectedChangedBundleAddress": { "const": "cx504.chapter_red_mist_videos.target" },
+    "changedBundleAddresses": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "pattern": "^[A-Za-z0-9._-]+$" }
+    },
+    "unexpectedChangedBundles": { "$ref": "common.schema.json#/$defs/stringArray" },
+    "unchangedBundleHashesPreserved": { "type": "boolean" },
+    "verdict": { "type": "string", "enum": ["passed", "failed"] },
+    "limitations": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "pattern": "^[A-Za-z0-9._-]+$" },
+      "allOf": [
+        { "contains": { "const": "not_runtime_migration" }, "minContains": 1, "maxContains": 1 },
+        { "contains": { "const": "not_steam_download_measurement" }, "minContains": 1, "maxContains": 1 }
+      ]
+    },
+    "contentHash": { "$ref": "common.schema.json#/$defs/sha256" }
+  },
+  "$defs": {
+    "videoInput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["logicalAddress", "contentHash", "length", "durationMilliseconds"],
+      "properties": {
+        "logicalAddress": { "$ref": "common.schema.json#/$defs/id" },
+        "contentHash": { "$ref": "common.schema.json#/$defs/sha256" },
+        "length": { "type": "integer", "minimum": 1 },
+        "durationMilliseconds": { "type": "integer", "minimum": 7900, "maximum": 8100 }
+      }
+    },
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relativePath", "contentHash", "length", "kind"],
+      "properties": {
+        "relativePath": { "type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)[^:\\\\]+$" },
+        "contentHash": { "$ref": "common.schema.json#/$defs/sha256" },
+        "length": { "type": "integer", "minimum": 1 },
+        "kind": { "type": "string", "enum": ["bundle", "catalog", "catalog_hash", "content_state", "metadata"] }
+      }
+    },
+    "buildInventory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["durationMilliseconds", "temporaryDiskBytes", "totalBytes", "files"],
+      "properties": {
+        "durationMilliseconds": { "type": "integer", "minimum": 0 },
+        "temporaryDiskBytes": { "type": "integer", "minimum": 0 },
+        "totalBytes": { "type": "integer", "minimum": 1 },
+        "files": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/file" }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "verdict": { "const": "passed" } }, "required": ["verdict"] },
+      "then": {
+        "properties": {
+          "changedBundleGroups": {
+            "minItems": 1,
+            "maxItems": 1,
+            "contains": { "const": "chapter-red-mist-video-remote" },
+            "minContains": 1,
+            "maxContains": 1
+          },
+          "changedBundleAddresses": {
+            "minItems": 1,
+            "maxItems": 1,
+            "contains": { "const": "cx504.chapter_red_mist_videos.target" },
+            "minContains": 1,
+            "maxContains": 1
+          },
+          "updateBuild": {
+            "properties": {
+              "files": {
+                "minItems": 3,
+                "maxItems": 3,
+                "allOf": [
+                  {
+                    "contains": {
+                      "properties": {
+                        "relativePath": { "const": "remote/StandaloneWindows64/catalog_cx504.addressables.v1.hash" },
+                        "kind": { "const": "catalog_hash" }
+                      },
+                      "required": ["relativePath", "kind"]
+                    },
+                    "minContains": 1,
+                    "maxContains": 1
+                  },
+                  {
+                    "contains": {
+                      "properties": {
+                        "relativePath": { "const": "remote/StandaloneWindows64/catalog_cx504.addressables.v1.json" },
+                        "kind": { "const": "catalog" }
+                      },
+                      "required": ["relativePath", "kind"]
+                    },
+                    "minContains": 1,
+                    "maxContains": 1
+                  },
+                  {
+                    "contains": {
+                      "properties": {
+                        "relativePath": {
+                          "pattern": "^remote/StandaloneWindows64/chapter-red-mist-video-remote_assets_cx504\\.chapter_red_mist_videos\\.target_[a-f0-9]{32}\\.bundle$"
+                        },
+                        "kind": { "const": "bundle" }
+                      },
+                      "required": ["relativePath", "kind"]
+                    },
+                    "minContains": 1,
+                    "maxContains": 1
+                  }
+                ]
+              }
+            }
+          },
+          "unexpectedChangedBundles": { "maxItems": 0 },
+          "unchangedBundleHashesPreserved": { "const": true }
+        }
+      }
+    }
+  ]
+}

@@ -15,6 +15,17 @@ unity/RedMistVerticalSlice/[Ll]ogs/
 unity/RedMistVerticalSlice/[Uu]ser[Ss]ettings/
 unity/RedMistVerticalSlice/[Mm]emoryCaptures/
 unity/RedMistVerticalSlice/Builds/
+/unity/RedMistVerticalSlice/Assets/Cx504Generated/
+/unity/RedMistVerticalSlice/Assets/Cx504Generated.meta
+/unity/RedMistVerticalSlice/Assets/AddressableAssetsData/
+/unity/RedMistVerticalSlice/Assets/AddressableAssetsData.meta
+/unity/RedMistVerticalSlice/Assets/Addressables_Temp/
+/unity/RedMistVerticalSlice/Assets/Addressables_Temp.meta
+/unity/RedMistVerticalSlice/Assets/StreamingAssets/aa/
+/unity/RedMistVerticalSlice/Assets/StreamingAssets/aa.meta
+/unity/RedMistVerticalSlice/ServerData/
+/unity/RedMistVerticalSlice/ServerData.meta
+/unity/RedMistVerticalSlice/Library/com.unity.addressables/
 unity/RedMistVerticalSlice/*.csproj
 unity/RedMistVerticalSlice/*.sln
 unity/RedMistVerticalSlice/*.suo
@@ -39,4 +50,11 @@ unity/RedMistVerticalSlice/test-results*.xml
 
 # Root-level Unity build and test diagnostics
 /unity-*.log
+/unity-*.xml
 /unity-*-test-results*.xml
+
+# Keep only the versioned CX-504 evidence report; local test/build artifacts stay untracked.
+/artifacts/*
+!/artifacts/cx504/
+/artifacts/cx504/*
+!/artifacts/cx504/addressables-patch-report.json
