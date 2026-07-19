@@ -7,7 +7,7 @@ namespace LipSyncReviewer.Tests;
 public sealed class LipSyncReviewManifestLoaderTests
 {
     [Fact]
-    public async Task ActualManifestProducesTwentyFiveBlockedAndNoReviewableItems()
+    public async Task ActualManifestProducesThirtyBlockedAndNoReviewableItems()
     {
         DirectoryInfo root = TestRepository.FindRoot();
         var loader = new LipSyncReviewManifestLoader(
@@ -18,7 +18,7 @@ public sealed class LipSyncReviewManifestLoaderTests
             CancellationToken.None);
 
         Assert.Empty(manifest.ReviewableItems);
-        Assert.Equal(25, manifest.BlockedItems.Count);
+        Assert.Equal(30, manifest.BlockedItems.Count);
         Assert.All(
             manifest.BlockedItems,
             item =>
@@ -73,7 +73,9 @@ public sealed class LipSyncReviewManifestLoaderTests
             "red-mist",
             "shot-manifest.json");
         JsonObject manifest = JsonNode.Parse(await File.ReadAllTextAsync(sourcePath))!.AsObject();
-        JsonObject response = manifest["responseRequirements"]![0]!.AsObject();
+        JsonObject response = manifest["responseRequirements"]!.AsArray()
+            .Select(item => item!.AsObject())
+            .Single(item => item["responseId"]!.GetValue<string>() == "npc.invalid.calm.abuse");
         response["lipSyncMedia"] = MediaPin("fixture.lipsync", Hash("video"), "video");
         response["audioMedia"] = MediaPin("fixture.audio", Hash("audio"), "audio");
         response["fallbackMedia"] = MediaPin("fixture.fallback", Hash("fallback"), "image");
@@ -94,7 +96,7 @@ public sealed class LipSyncReviewManifestLoaderTests
                 .LoadAsync(temporaryPath, CancellationToken.None);
 
             LipSyncReviewCandidate candidate = Assert.Single(loaded.ReviewableItems);
-            Assert.Equal(24, loaded.BlockedItems.Count);
+            Assert.Equal(29, loaded.BlockedItems.Count);
             Assert.Equal("npc.invalid.calm.abuse", candidate.ResponseId);
             Assert.Equal("video", candidate.LipSyncMedia.MediaType);
             Assert.Equal("audio", candidate.AudioMedia.MediaType);

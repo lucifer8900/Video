@@ -53,8 +53,9 @@
         }
       ],
       "transitions": [],
-      "voiceIntentRefs": [],
+      "voiceIntentRefs": ["intent.prologue.inspect_mist"],
       "npcResponseRefs": [
+        "npc.response.prologue.inspect_mist",
         "npc.invalid.calm.abuse", "npc.invalid.calm.irrelevant", "npc.invalid.calm.too_long",
         "npc.invalid.calm.silence", "npc.invalid.calm.low_confidence"
       ],
@@ -179,8 +180,9 @@
         }
       ],
       "transitions": [],
-      "voiceIntentRefs": [],
+      "voiceIntentRefs": ["intent.alliance.cautious_cooperation"],
       "npcResponseRefs": [
+        "npc.response.alliance.cautious_cooperation",
         "npc.invalid.ally.abuse", "npc.invalid.ally.irrelevant", "npc.invalid.ally.too_long",
         "npc.invalid.ally.silence", "npc.invalid.ally.low_confidence"
       ],
@@ -415,8 +417,9 @@
         }
       ],
       "transitions": [],
-      "voiceIntentRefs": [],
+      "voiceIntentRefs": ["intent.rescue.secure_survivor"],
       "npcResponseRefs": [
+        "npc.response.rescue.secure_survivor",
         "npc.invalid.ally.abuse", "npc.invalid.ally.irrelevant", "npc.invalid.ally.too_long",
         "npc.invalid.ally.silence", "npc.invalid.ally.low_confidence"
       ],
@@ -479,8 +482,9 @@
         }
       ],
       "transitions": [],
-      "voiceIntentRefs": [],
+      "voiceIntentRefs": ["intent.shijun.verify_bargain"],
       "npcResponseRefs": [
+        "npc.response.shijun.verify_bargain",
         "npc.invalid.hostile.abuse", "npc.invalid.hostile.irrelevant", "npc.invalid.hostile.too_long",
         "npc.invalid.hostile.silence", "npc.invalid.hostile.low_confidence"
       ],
@@ -608,8 +612,9 @@
         }
       ],
       "transitions": [],
-      "voiceIntentRefs": [],
+      "voiceIntentRefs": ["intent.underground.coordinate_retreat"],
       "npcResponseRefs": [
+        "npc.response.underground.coordinate_retreat",
         "npc.invalid.encounter.abuse", "npc.invalid.encounter.irrelevant", "npc.invalid.encounter.too_long",
         "npc.invalid.encounter.silence", "npc.invalid.encounter.low_confidence"
       ],
@@ -875,7 +880,134 @@
       "approvalStatus": "approved"
     }
   ],
+  "voiceIntents": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "intent.prologue.inspect_mist",
+      "displayKey": "story.red_mist.intent.prologue.inspect_mist.display",
+      "topicKeys": [
+        "story.red_mist.intent.prologue.inspect_mist.topic.observe",
+        "story.red_mist.intent.prologue.inspect_mist.topic.gate",
+        "story.red_mist.intent.prologue.inspect_mist.topic.entrance"
+      ],
+      "toneKey": "story.red_mist.voice.emotion.focused",
+      "minimumConfidence": 0.82,
+      "npcResponseRef": "npc.response.prologue.inspect_mist",
+      "fallbackNpcResponseRef": "npc.invalid.calm.low_confidence",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "intent.alliance.cautious_cooperation",
+      "displayKey": "story.red_mist.intent.alliance.cautious_cooperation.display",
+      "topicKeys": [
+        "story.red_mist.intent.alliance.cautious_cooperation.topic.cooperate",
+        "story.red_mist.intent.alliance.cautious_cooperation.topic.cover",
+        "story.red_mist.intent.alliance.cautious_cooperation.topic.reserve"
+      ],
+      "toneKey": "story.red_mist.voice.emotion.patient",
+      "minimumConfidence": 0.82,
+      "npcResponseRef": "npc.response.alliance.cautious_cooperation",
+      "fallbackNpcResponseRef": "npc.invalid.ally.low_confidence",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "intent.rescue.secure_survivor",
+      "displayKey": "story.red_mist.intent.rescue.secure_survivor.display",
+      "topicKeys": [
+        "story.red_mist.intent.rescue.secure_survivor.topic.verify",
+        "story.red_mist.intent.rescue.secure_survivor.topic.cover",
+        "story.red_mist.intent.rescue.secure_survivor.topic.rescue"
+      ],
+      "toneKey": "story.red_mist.voice.emotion.urgent",
+      "minimumConfidence": 0.82,
+      "npcResponseRef": "npc.response.rescue.secure_survivor",
+      "fallbackNpcResponseRef": "npc.invalid.ally.low_confidence",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "intent.shijun.verify_bargain",
+      "displayKey": "story.red_mist.intent.shijun.verify_bargain.display",
+      "topicKeys": [
+        "story.red_mist.intent.shijun.verify_bargain.topic.proof",
+        "story.red_mist.intent.shijun.verify_bargain.topic.spike",
+        "story.red_mist.intent.shijun.verify_bargain.topic.price"
+      ],
+      "toneKey": "story.red_mist.voice.emotion.uncertain",
+      "minimumConfidence": 0.82,
+      "npcResponseRef": "npc.response.shijun.verify_bargain",
+      "fallbackNpcResponseRef": "npc.invalid.hostile.low_confidence",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "intent.underground.coordinate_retreat",
+      "displayKey": "story.red_mist.intent.underground.coordinate_retreat.display",
+      "topicKeys": [
+        "story.red_mist.intent.underground.coordinate_retreat.topic.retreat",
+        "story.red_mist.intent.underground.coordinate_retreat.topic.flank",
+        "story.red_mist.intent.underground.coordinate_retreat.topic.signal"
+      ],
+      "toneKey": "story.red_mist.voice.emotion.focused",
+      "minimumConfidence": 0.82,
+      "npcResponseRef": "npc.response.underground.coordinate_retreat",
+      "fallbackNpcResponseRef": "npc.invalid.encounter.low_confidence",
+      "effects": [],
+      "approvalStatus": "approved"
+    }
+  ],
   "npcResponses": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.response.prologue.inspect_mist",
+      "textKey": "story.red_mist.response.prologue.inspect_mist.text",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.response.alliance.cautious_cooperation",
+      "textKey": "story.red_mist.response.alliance.cautious_cooperation.text",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.response.rescue.secure_survivor",
+      "textKey": "story.red_mist.response.rescue.secure_survivor.text",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.response.shijun.verify_bargain",
+      "textKey": "story.red_mist.response.shijun.verify_bargain.text",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.response.underground.coordinate_retreat",
+      "textKey": "story.red_mist.response.underground.coordinate_retreat.text",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
     {
       "schemaVersion": "1.0.0",
       "id": "npc.invalid.calm.abuse",

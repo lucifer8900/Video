@@ -224,7 +224,7 @@ public sealed class NarrativeCompilerContractTests
     }
 
     [Fact]
-    public async Task CompiledProductionBundleContainsApprovedInvalidInputReactions()
+    public async Task CompiledProductionBundleContainsApprovedMajorIntentsAndInvalidInputReactions()
     {
         var outputDirectory = CompilerProcessHarness.CreateTemporaryDirectory();
         try
@@ -233,6 +233,7 @@ public sealed class NarrativeCompilerContractTests
             Assert.Equal(0, compile.ExitCode);
             var bundle = JsonNode.Parse(File.ReadAllBytes(Path.Combine(outputDirectory, "story.bundle.json")))!.AsObject();
             JsonArray nodes = bundle["sceneNodes"]!.AsArray();
+            JsonArray intents = bundle["voiceIntents"]!.AsArray();
             JsonArray responses = bundle["npcResponses"]!.AsArray();
 
             Assert.Equal(14, nodes.Count);
@@ -243,7 +244,13 @@ public sealed class NarrativeCompilerContractTests
                     ["abuse", "irrelevant", "low_confidence", "silence", "too_long"],
                     rules.Select(rule => rule.Key).Order(StringComparer.Ordinal).ToArray());
             });
-            Assert.Equal(25, responses.Count);
+            Assert.Equal(5, intents.Count);
+            Assert.All(intents, intent =>
+            {
+                Assert.Empty(intent!["effects"]!.AsArray());
+                Assert.Equal("approved", intent["approvalStatus"]!.GetValue<string>());
+            });
+            Assert.Equal(30, responses.Count);
             Assert.All(responses, response => Assert.Empty(response!["effects"]!.AsArray()));
         }
         finally

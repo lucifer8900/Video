@@ -2,12 +2,162 @@
   "schemaVersion": "1.0.0",
   "manifestId": "shot-manifest.chapter.red_mist",
   "sourceBundleId": "chapter.red_mist",
-  "sourceBundleContentHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+  "sourceBundleContentHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
   "language": "zh-CN",
   "currency": "USD",
   "approvalStatus": "needs_review",
   "shotDispatchAllowed": false,
   "responseRequirements": [
+    {
+      "responseId": "npc.response.prologue.inspect_mist",
+      "sourceNodeIds": [
+        "prologue"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.response.prologue.inspect_mist.text",
+        "text": "\u96FE\u6D41\u6BCF\u4E5D\u606F\u56DE\u5377\u4E00\u6B21\uFF0C\u5DE6\u4FA7\u77F3\u9636\u7684\u98CE\u66F4\u7A33\u3002\u4F60\u770B\u6E05\u540E\uFF0C\u518D\u4ECE\u773C\u524D\u65B9\u6848\u91CC\u51B3\u5B9A\u8DEF\u7EBF\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.focused",
+        "text": "\u4E13\u6CE8"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.response.alliance.cautious_cooperation",
+      "sourceNodeIds": [
+        "alliance"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.response.alliance.cautious_cooperation.text",
+        "text": "\u6211\u5B88\u4F4F\u5DE6\u4FA7\uFF0C\u4F60\u4FDD\u7559\u81EA\u5DF1\u7684\u5E95\u724C\u3002\u5148\u6D3B\u7740\u8D8A\u8FC7\u5C71\u9698\uFF0C\u4E4B\u540E\u518D\u8C08\u5F7C\u6B64\u7684\u6765\u8DEF\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.patient",
+        "text": "\u514B\u5236"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_establishing",
+        "assetVersion": "1",
+        "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.response.rescue.secure_survivor",
+      "sourceNodeIds": [
+        "rescue"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.response.rescue.secure_survivor.text",
+        "text": "\u96FE\u540E\u8FD8\u6709\u7B2C\u4E8C\u4E2A\u4EBA\u7684\u811A\u6B65\u58F0\u3002\u5148\u7528\u65E7\u6697\u53F7\u6838\u9A8C\u8EAB\u4EFD\uFF0C\u6211\u4F1A\u8D34\u7740\u77F3\u5899\u7B49\u4F60\u4E0B\u4EE4\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.urgent",
+        "text": "\u6025\u8FEB"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "red_mist_weather",
+        "assetVersion": "1",
+        "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.response.shijun.verify_bargain",
+      "sourceNodeIds": [
+        "shijun"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.response.shijun.verify_bargain.text",
+        "text": "\u60F3\u9A8C\u8D27\u53EF\u4EE5\uFF0C\u9635\u9489\u4E0A\u7684\u70ED\u6CE5\u6765\u81EA\u95E8\u540E\u3002\u81F3\u4E8E\u8FD9\u53E5\u8BDD\u503C\u4E0D\u503C\u4E00\u682A\u836F\uFF0C\u7531\u4F60\u81EA\u5DF1\u5224\u65AD\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.uncertain",
+        "text": "\u7591\u95EE"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "shi_jun-v1",
+        "assetVersion": "1",
+        "contentHash": "sha256:06751100f14462ba0166c1a896ff11836bf91809eff617a822224e25832b6fab",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
+    {
+      "responseId": "npc.response.underground.coordinate_retreat",
+      "sourceNodeIds": [
+        "underground"
+      ],
+      "text": {
+        "localizationKey": "story.red_mist.response.underground.coordinate_retreat.text",
+        "text": "\u7389\u680F\u540E\u7684\u9752\u77F3\u662F\u7B2C\u4E00\u5904\u9000\u70B9\u3002\u6211\u5B88\u4F4F\u86DF\u5C3E\u65B9\u5411\uFF0C\u4F60\u7528\u4E00\u9053\u767D\u5149\u793A\u8B66\uFF0C\u662F\u5426\u5408\u51FB\u4ECD\u7531\u4F60\u51B3\u5B9A\u3002"
+      },
+      "emotion": {
+        "localizationKey": "story.red_mist.voice.emotion.focused",
+        "text": "\u4E13\u6CE8"
+      },
+      "lipSyncMedia": {
+        "mediaRef": "dragon_cavern-v2",
+        "assetVersion": "1",
+        "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+        "mediaType": "image"
+      },
+      "audioMedia": null,
+      "fallbackMedia": null,
+      "readinessStatus": "blocked",
+      "issueCodes": [
+        "audio.missing",
+        "fallback.missing",
+        "human_review.required",
+        "lip_sync.placeholder_media",
+        "source.original_missing"
+      ]
+    },
     {
       "responseId": "npc.invalid.calm.abuse",
       "sourceNodeIds": [
@@ -812,7 +962,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/0",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -836,6 +986,7 @@
         "auxiliaryMediaRefs": []
       },
       "npcResponseRefs": [
+        "npc.response.prologue.inspect_mist",
         "npc.invalid.calm.abuse",
         "npc.invalid.calm.irrelevant",
         "npc.invalid.calm.too_long",
@@ -890,7 +1041,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/1",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -965,7 +1116,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/2",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -989,6 +1140,7 @@
         "auxiliaryMediaRefs": []
       },
       "npcResponseRefs": [
+        "npc.response.alliance.cautious_cooperation",
         "npc.invalid.ally.abuse",
         "npc.invalid.ally.irrelevant",
         "npc.invalid.ally.too_long",
@@ -1040,7 +1192,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/3",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -1118,7 +1270,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/4",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -1196,7 +1348,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/5",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -1271,7 +1423,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/6",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -1295,6 +1447,7 @@
         "auxiliaryMediaRefs": []
       },
       "npcResponseRefs": [
+        "npc.response.rescue.secure_survivor",
         "npc.invalid.ally.abuse",
         "npc.invalid.ally.irrelevant",
         "npc.invalid.ally.too_long",
@@ -1346,7 +1499,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/7",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -1370,6 +1523,7 @@
         "auxiliaryMediaRefs": []
       },
       "npcResponseRefs": [
+        "npc.response.shijun.verify_bargain",
         "npc.invalid.hostile.abuse",
         "npc.invalid.hostile.irrelevant",
         "npc.invalid.hostile.too_long",
@@ -1421,7 +1575,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/8",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -1496,7 +1650,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/9",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -1520,6 +1674,7 @@
         "auxiliaryMediaRefs": []
       },
       "npcResponseRefs": [
+        "npc.response.underground.coordinate_retreat",
         "npc.invalid.encounter.abuse",
         "npc.invalid.encounter.irrelevant",
         "npc.invalid.encounter.too_long",
@@ -1574,7 +1729,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/10",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -1649,7 +1804,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/11",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -1724,7 +1879,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/12",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -1799,7 +1954,7 @@
       "source": {
         "sourceId": "chapter.red_mist",
         "locator": "/sceneNodes/13",
-        "evidenceHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1",
+        "evidenceHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc",
         "needsReview": true
       },
       "dialogueVariants": [
@@ -1868,5 +2023,5 @@
       "dispatchAllowed": false
     }
   ],
-  "contentHash": "sha256:f1b2ea03d432565a00723b5c88513ef8feec673b993b08db85406df5a3e2ebf5"
+  "contentHash": "sha256:dc1491b9c35c814c206290f5c9752e620cd07fe8a3d612c8f701da367684caa1"
 }

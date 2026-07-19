@@ -50,12 +50,12 @@ namespace Lingmai.RedMist.Tests
             StoryBundleLoadResult result = StoryBundleLoader.Parse(json);
 
             Assert.IsTrue(result.Success, result.TechnicalMessage);
-            Assert.AreEqual(1, result.Bundle.VoiceIntents.Count);
+            Assert.AreEqual(6, result.Bundle.VoiceIntents.Count);
             Assert.IsTrue(result.Bundle.VoiceIntents.ContainsKey("fixture.intent.prologue.inspect"));
             CollectionAssert.AreEqual(
                 new[] { "fixture.intent.prologue.inspect" },
                 result.Bundle.Nodes["prologue"].voiceIntentRefs);
-            Assert.AreEqual(26, result.Bundle.NpcResponses.Count);
+            Assert.AreEqual(31, result.Bundle.NpcResponses.Count);
             Assert.IsTrue(result.Bundle.NpcResponses.ContainsKey("fixture.response.prologue.inspect"));
             Assert.AreEqual(
                 "npc.invalid.calm.silence",
@@ -96,18 +96,30 @@ namespace Lingmai.RedMist.Tests
         }
 
         [Test]
-        public void ProductionBundleLoadsFiveInvalidInputRulesPerNodeAndKeepsVoiceIntentsOptional()
+        public void ProductionBundleLoadsFiveMajorIntentsAndFiveInvalidInputRulesPerNode()
         {
             StoryBundleLoadResult result = StoryBundleLoader.LoadFromFile(BundlePath);
 
             Assert.IsTrue(result.Success, result.TechnicalMessage);
-            Assert.AreEqual(0, result.Bundle.VoiceIntents.Count);
-            Assert.AreEqual(25, result.Bundle.NpcResponses.Count);
+            Assert.AreEqual(5, result.Bundle.VoiceIntents.Count);
+            Assert.AreEqual(30, result.Bundle.NpcResponses.Count);
+            CollectionAssert.AreEquivalent(
+                new[]
+                {
+                    "intent.prologue.inspect_mist",
+                    "intent.alliance.cautious_cooperation",
+                    "intent.rescue.secure_survivor",
+                    "intent.shijun.verify_bargain",
+                    "intent.underground.coordinate_retreat"
+                },
+                result.Bundle.VoiceIntents.Keys);
             foreach (StoryNode node in result.Bundle.Nodes.Values)
             {
-                CollectionAssert.IsEmpty(node.voiceIntentRefs, node.id);
                 Assert.AreEqual(5, node.invalidInputRules.Count, node.id);
-                Assert.AreEqual(5, node.npcResponseRefs.Count, node.id);
+                Assert.AreEqual(
+                    5 + node.voiceIntentRefs.Count,
+                    node.npcResponseRefs.Count,
+                    node.id);
             }
         }
 
@@ -226,7 +238,7 @@ namespace Lingmai.RedMist.Tests
 
         private static string BuildBundleWithSyntheticVoiceIntent(string voiceIntentRefsJson)
         {
-            string json = File.ReadAllText(BundlePath);
+            string json = File.ReadAllText(BundlePath).Replace("\r\n", "\n");
             json = ReplaceFirst(
                 json,
                 "\"zh-CN\": {",
@@ -238,15 +250,18 @@ namespace Lingmai.RedMist.Tests
                 "      \"fixture.emotion.attentive\": \"留意\",");
             json = ReplaceFirst(
                 json,
-                "\"voiceIntentRefs\": []",
+                "\"voiceIntentRefs\": [\n" +
+                "        \"intent.prologue.inspect_mist\"\n" +
+                "      ]",
                 "\"voiceIntentRefs\": " + voiceIntentRefsJson);
             json = ReplaceFirst(
                 json,
                 "\"npcResponseRefs\": [",
                 "\"npcResponseRefs\": [\n" +
                 "        \"fixture.response.prologue.inspect\",");
-            json = json.Replace(
-                "\"voiceIntents\": []",
+            json = ReplaceFirst(
+                json,
+                "\"voiceIntents\": [",
                 "\"voiceIntents\": [\n" +
                 "    {\n" +
                 "      \"schemaVersion\": \"1.0.0\",\n" +
@@ -258,8 +273,7 @@ namespace Lingmai.RedMist.Tests
                 "      \"npcResponseRef\": \"fixture.response.prologue.inspect\",\n" +
                 "      \"effects\": [],\n" +
                 "      \"approvalStatus\": \"approved\"\n" +
-                "    }\n" +
-                "  ]");
+                "    },");
             json = ReplaceFirst(
                 json,
                 "\"npcResponses\": [",

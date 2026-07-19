@@ -11,7 +11,7 @@ namespace Lingmai.RedMist
         public const string BundleVersionParameter = "bundleVersion";
         public const string BundleContentHashParameter = "bundleContentHash";
         public const string ApprovedRedMistDefaultsHash =
-            "sha256:cec3f01a05f77fdb6ca4edff3b1272ea85e214904ac7a14ba4574541d7b276d2";
+            "sha256:f073bcc07d932f4b7a1b1ea8958e4d547cd6f4e2df89db2a75af12781d6f96ed";
 
         public static StoryThread LoadFromFile(string path, StoryThreadContext context)
         {

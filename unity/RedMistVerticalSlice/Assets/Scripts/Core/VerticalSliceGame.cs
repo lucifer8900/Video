@@ -1349,31 +1349,31 @@ namespace Lingmai.RedMist
         {
             if (round == 1 && _state.route == PlayerRoute.ShenYan)
             {
-                SetChoice(0, "金蜉刃试探鳞隙", () => ResolveCombat("probe_blades", 1));
-                SetChoice(1, "符箓限制蛟尾", () => ResolveCombat("ward_tail", 1), _state.wards > 0);
-                SetChoice(2, "保护伤员撤向狭道", () => ResolveCombat("protect_ally", 1));
-                SetChoice(3, "保留底牌，立即撤退", () => ResolveCombat("retreat", 1));
+                SetChoice(0, "金蜉刃试探鳞隙", () => ResolveCombat("probe_blades", 1), StoryProgressionRules.IsCombatActionAvailable(_state, "probe_blades", 1));
+                SetChoice(1, "符箓限制蛟尾", () => ResolveCombat("ward_tail", 1), StoryProgressionRules.IsCombatActionAvailable(_state, "ward_tail", 1));
+                SetChoice(2, "保护伤员撤向狭道", () => ResolveCombat("protect_ally", 1), StoryProgressionRules.IsCombatActionAvailable(_state, "protect_ally", 1));
+                SetChoice(3, "保留底牌，立即撤退", () => ResolveCombat("retreat", 1), StoryProgressionRules.IsCombatActionAvailable(_state, "retreat", 1));
             }
             else if (round == 1)
             {
-                SetChoice(0, "结月轮阵控制黑泥", () => ResolveCombat("moon_control", 1));
-                SetChoice(1, "护送弟子退向玉栏", () => ResolveCombat("protect_ally", 1));
-                SetChoice(2, "短暂释放赤鸾火", () => ResolveCombat("phoenix_flash", 1));
-                SetChoice(3, "下令全队撤退", () => ResolveCombat("retreat", 1));
+                SetChoice(0, "结月轮阵控制黑泥", () => ResolveCombat("moon_control", 1), StoryProgressionRules.IsCombatActionAvailable(_state, "moon_control", 1));
+                SetChoice(1, "护送弟子退向玉栏", () => ResolveCombat("protect_ally", 1), StoryProgressionRules.IsCombatActionAvailable(_state, "protect_ally", 1));
+                SetChoice(2, "短暂释放赤鸾火", () => ResolveCombat("phoenix_flash", 1), StoryProgressionRules.IsCombatActionAvailable(_state, "phoenix_flash", 1));
+                SetChoice(3, "下令全队撤退", () => ResolveCombat("retreat", 1), StoryProgressionRules.IsCombatActionAvailable(_state, "retreat", 1));
             }
             else if (_state.route == PlayerRoute.ShenYan)
             {
-                SetChoice(0, "发动金蜉连环刃", () => ResolveCombat("trump_blades", 2), _state.mana >= 25);
-                SetChoice(1, "引爆符阵断其退路", () => ResolveCombat("formation_burst", 2), _state.formationOpened && _state.wards > 0);
-                SetChoice(2, "借蒸汽与楚明绮合击", () => ResolveCombat("joint_strike", 2), _state.trust >= 1);
-                SetChoice(3, "带伤员从缺口撤退", () => ResolveCombat("retreat", 2));
+                SetChoice(0, "发动金蜉连环刃", () => ResolveCombat("trump_blades", 2), StoryProgressionRules.IsCombatActionAvailable(_state, "trump_blades", 2));
+                SetChoice(1, "引爆符阵断其退路", () => ResolveCombat("formation_burst", 2), StoryProgressionRules.IsCombatActionAvailable(_state, "formation_burst", 2));
+                SetChoice(2, "借蒸汽与楚明绮合击", () => ResolveCombat("joint_strike", 2), StoryProgressionRules.IsCombatActionAvailable(_state, "joint_strike", 2));
+                SetChoice(3, "带伤员从缺口撤退", () => ResolveCombat("retreat", 2), StoryProgressionRules.IsCombatActionAvailable(_state, "retreat", 2));
             }
             else
             {
-                SetChoice(0, "公开赤鸾焰环镇压", () => ResolveCombat("phoenix_ring", 2), _state.mana >= 25);
-                SetChoice(1, "借符阵伪装火光合击", () => ResolveCombat("joint_strike", 2), _state.trust >= 1 && _state.formationOpened);
-                SetChoice(2, "令弟子撤离，独自拖延", () => ResolveCombat("hold_line", 2));
-                SetChoice(3, "保住身份，立即撤退", () => ResolveCombat("retreat", 2));
+                SetChoice(0, "公开赤鸾焰环镇压", () => ResolveCombat("phoenix_ring", 2), StoryProgressionRules.IsCombatActionAvailable(_state, "phoenix_ring", 2));
+                SetChoice(1, "借符阵伪装火光合击", () => ResolveCombat("joint_strike", 2), StoryProgressionRules.IsCombatActionAvailable(_state, "joint_strike", 2));
+                SetChoice(2, "令弟子撤离，独自拖延", () => ResolveCombat("hold_line", 2), StoryProgressionRules.IsCombatActionAvailable(_state, "hold_line", 2));
+                SetChoice(3, "保住身份，立即撤退", () => ResolveCombat("retreat", 2), StoryProgressionRules.IsCombatActionAvailable(_state, "retreat", 2));
             }
         }
 
@@ -1382,40 +1382,7 @@ namespace Lingmai.RedMist
             _audio.Click();
             string action = definition.action;
             RecordChoice(action);
-            switch (action)
-            {
-                case "to_camp": break;
-                case "gate_scout":
-                    _state.divineSense -= 8;
-                    _state.worldMinutes += 6;
-                    _state.ambushKnown = true;
-                    _state.discoveries.Add("水面逆流暴露的侧门伏击痕迹");
-                    break;
-                case "gate_companion":
-                    _state.trust += 1;
-                    _state.sectDuty += 1;
-                    break;
-                case "camp_retreat": _state.mana += 10; _state.wards = 1; _state.discoveries.Add("保留撤退法力"); break;
-                case "camp_balanced": _state.wards += 2; _state.mana -= 5; _state.discoveries.Add("完整战前载荷"); break;
-                case "camp_protect": _state.wards = Mathf.Max(0, _state.wards - 1); _state.trust += 2; _state.sectDuty += 1; break;
-                case "ally_cautious": _state.trust += 1; _state.respect += 1; break;
-                case "ally_open": _state.trust += 2; _state.exposure += 1; _state.secretPreserved = false; break;
-                case "ally_refuse": _state.suspicion += 1; break;
-                case "rescue_careful": _state.wards = Mathf.Max(0, _state.wards - 1); _state.worldMinutes += 18; _state.discipleRescued = true; _state.trust += 2; _state.sectDuty += 1; break;
-                case "rescue_rush": _state.health -= 18; _state.worldMinutes += 8; _state.discipleRescued = true; _state.allyWounded = true; _state.trust += 1; break;
-                case "rescue_skip": _state.worldMinutes += 4; _state.trust -= 2; _state.sectDuty += 2; break;
-                case "shijun_probe": _state.shijunTracked = _state.ambushKnown; _state.respect += 1; _state.worldMinutes += 5; break;
-                case "shijun_threat": _state.exposure += 2; _state.suspicion += 1; _state.worldMinutes += 1; break;
-                case "shijun_trade": _state.herbs = Mathf.Max(0, _state.herbs - 1); _state.formationOpened = true; _state.worldMinutes += 2; break;
-                case "meet_cautious": _state.trust += 1; _state.respect += 1; break;
-                case "meet_warn": _state.trust += 2; _state.respect += 1; _state.mana -= 4; break;
-                case "meet_wait": _state.suspicion += 2; break;
-                case "loot_rescue": _state.discipleRescued = true; _state.trust += 2; _state.sectDuty = Mathf.Max(0, _state.sectDuty - 1); _state.herbs = Mathf.Max(0, _state.herbs - 1); break;
-                case "loot_share": _state.trust += 2; _state.respect += 2; _state.secretPreserved = true; break;
-                case "loot_escape": _state.herbs += 2; _state.trust -= 1; _state.suspicion += 1; break;
-            }
-            _state.worldMinutes += 4;
-            _state.Clamp();
+            StoryProgressionRules.ApplyNarrativeChoice(_state, action);
             if (!string.IsNullOrEmpty(definition.nextNodeId)) ShowNode(definition.nextNodeId);
             else ShowErrorPage("剧情转场错误", "当前选项缺少下一节点，已停止继续以保护存档。", true);
         }
@@ -1425,52 +1392,18 @@ namespace Lingmai.RedMist
             _audio.Danger();
             RecordChoice(action);
             SetChoicesInteractable(false);
-            bool damageDragon = false;
-            string cue = "";
-            Color cueColor = Vermilion;
-            if (action == "retreat")
-            {
-                string retreatTarget = TransitionTarget(action);
-                if (retreatTarget == null) return;
-                _state.retreated = true;
-                _state.mana -= 12;
-                _state.worldMinutes += 15;
-                _cinematic.PlayCue("撤退窗口开启", new Color(0.25f, 0.48f, 0.45f), true);
-                StartCoroutine(ContinueAfterCue(retreatTarget, 1.1f));
-                return;
-            }
-
-            switch (action)
-            {
-                case "probe_blades": _state.mana -= 12; _state.divineSense -= 14; damageDragon = true; cue = "飞刃试鳞"; break;
-                case "ward_tail": _state.wards--; _state.mana -= 8; damageDragon = true; cue = "符锁蛟尾"; break;
-                case "protect_ally": _state.trust += 2; _state.mana -= 10; _state.allyWounded = false; cue = "护送撤位"; cueColor = Jade; break;
-                case "moon_control": _state.mana -= 17; _state.divineSense -= 10; damageDragon = true; cue = "月轮镇泥"; break;
-                case "phoenix_flash": _state.mana -= 22; _state.exposure += 2; _state.keyTrumpCardUsed = true; damageDragon = true; cue = "赤鸾初燃"; break;
-                case "trump_blades": _state.mana -= 30; _state.exposure += 2; _state.keyTrumpCardUsed = true; damageDragon = true; cue = "金蜉连环"; break;
-                case "formation_burst": _state.mana -= 16; _state.wards--; damageDragon = true; cue = "符阵断潮"; break;
-                case "joint_strike": _state.mana -= 18; _state.trust += 1; _state.respect += 2; damageDragon = true; cue = "雾火合击"; cueColor = Gold; break;
-                case "phoenix_ring": _state.mana -= 34; _state.exposure += 4; _state.keyTrumpCardUsed = true; _state.secretPreserved = false; damageDragon = true; cue = "赤鸾焰环"; break;
-                case "hold_line": _state.health -= 20; _state.trust += 2; _state.sectDuty = Mathf.Max(0, _state.sectDuty - 1); damageDragon = true; cue = "孤身截蛟"; break;
-            }
-
-            if (damageDragon) _state.dragonHealth--;
-            if (round == 1 && !damageDragon)
-            {
-                _state.health -= 10;
-                _state.allyWounded = true;
-            }
-            if (round == 2 && _state.dragonHealth > 0)
-            {
-                _state.health -= 18;
-                _state.mana -= 10;
-            }
-            _state.dragonDefeated = _state.dragonHealth <= 0;
-            _state.worldMinutes += round == 1 ? 6 : 9;
-            _state.Clamp();
-            _cinematic.PlayCue(cue, cueColor, true);
             string nextNodeId = TransitionTarget(action);
-            if (nextNodeId != null) StartCoroutine(ContinueAfterCue(nextNodeId, 1.15f));
+            if (nextNodeId == null) return;
+            CombatProgressionResult resolution = StoryProgressionRules.ApplyCombat(_state, action, round);
+            Color cueColor = Vermilion;
+            if (resolution.CueTone == CombatCueTone.Jade) cueColor = Jade;
+            else if (resolution.CueTone == CombatCueTone.Gold) cueColor = Gold;
+            else if (resolution.CueTone == CombatCueTone.Retreat)
+                cueColor = new Color(0.25f, 0.48f, 0.45f);
+            _cinematic.PlayCue(resolution.CueId, cueColor, true);
+            StartCoroutine(ContinueAfterCue(
+                nextNodeId,
+                resolution.CueTone == CombatCueTone.Retreat ? 1.1f : 1.15f));
         }
 
         private IEnumerator ContinueAfterCue(string node, float delay)
@@ -1500,84 +1433,49 @@ namespace Lingmai.RedMist
 
         private void OnFlightComplete(MinigameResult result)
         {
-            RecordChoice("flight_" + ResultBranch(result));
-            _state.flightPerfect = result.perfect;
-            _state.mana += result.perfect ? 8 : result.success ? -5 : -18;
-            _state.exposure += result.success ? 0 : 2;
-            _state.worldMinutes += result.perfect ? 5 : result.success ? 8 : 12;
-            if (!result.success)
-            {
-                _state.allyWounded = true;
-                _state.discoveries.Add("狭天隘紧急坠落点");
-            }
+            string trigger = StoryProgressionRules.ApplyFlight(_state, result);
+            RecordChoice(trigger);
             ReportResult(result);
-            FollowTransition("flight_" + ResultBranch(result));
+            FollowTransition(trigger);
         }
 
         private void OnHerbComplete(MinigameResult result)
         {
-            RecordChoice("herb_" + ResultBranch(result));
-            _state.herbPerfect = result.perfect;
-            _state.herbs += result.perfect ? 3 : result.success ? 2 : 1;
-            _state.worldMinutes += result.perfect ? 7 : 12;
-            if (result.perfect) _state.discoveries.Add("完整玉髓芝与引兽粉痕迹");
-            if (!result.success) _state.exposure += 2;
+            string trigger = StoryProgressionRules.ApplyHerb(_state, result);
+            RecordChoice(trigger);
             ReportResult(result);
-            FollowTransition("herb_" + ResultBranch(result));
+            FollowTransition(trigger);
         }
 
         private void OnScanComplete(MinigameResult result)
         {
-            RecordChoice("scan_" + ResultBranch(result));
-            _state.scanPerfect = result.perfect;
-            _state.ambushKnown = result.success;
-            _state.divineSense -= result.perfect ? 8 : result.success ? 16 : 25;
-            _state.exposure += result.perfect ? 0 : result.success ? 1 : 2;
-            if (result.success) _state.discoveries.Add("伏击者的火性蛛丝与撤离方向");
+            string trigger = StoryProgressionRules.ApplyScan(_state, result);
+            RecordChoice(trigger);
             ReportResult(result);
-            FollowTransition("scan_" + ResultBranch(result));
+            FollowTransition(trigger);
         }
 
         private void OnFormationComplete(MinigameResult result)
         {
-            RecordChoice("formation_" + ResultBranch(result));
-            _state.formationOpened = result.success || _state.formationOpened;
-            _state.mana -= result.perfect ? 3 : result.success ? 10 : 24;
-            _state.exposure += result.perfect ? 0 : result.success ? 1 : 2;
-            _state.worldMinutes += result.perfect ? 4 : 10;
-            if (result.perfect) _state.discoveries.Add("保留的青石撤退阵眼");
-            if (!result.success)
-            {
-                _state.health -= 12;
-                _state.suspicion += 2;
-                _state.allyWounded = true;
-                _state.discoveries.Add("强行破禁留下的反噬裂痕");
-            }
+            string trigger = StoryProgressionRules.ApplyFormation(_state, result);
+            RecordChoice(trigger);
             ReportResult(result);
-            FollowTransition("formation_" + ResultBranch(result));
+            FollowTransition(trigger);
         }
 
         private void OpenFormationWithSpike()
         {
             _audio.Click();
-            RecordChoice("formation_spike_bypass");
-            _state.worldMinutes += 2;
-            _state.respect += 1;
-            _state.discoveries.Add("石峻阵钉开启的无损通路");
-            _state.Clamp();
+            string trigger = StoryProgressionRules.ApplyFormationSpike(_state);
+            RecordChoice(trigger);
             _cinematic.PlayCue("阵钉归位", Jade, false);
-            FollowTransition("formation_spike_bypass");
+            FollowTransition(trigger);
         }
 
         private void RecordChoice(string action)
         {
             if (string.IsNullOrWhiteSpace(action)) return;
             _state.choiceHistory.Add(_state.currentNodeId + "::" + action);
-        }
-
-        private static string ResultBranch(MinigameResult result)
-        {
-            return result.perfect ? "perfect" : result.success ? "success" : "failure";
         }
 
         private void ReportResult(MinigameResult result)
@@ -1599,12 +1497,13 @@ namespace Lingmai.RedMist
         {
             string title;
             string detail;
-            if (_state.retreated)
+            RedMistEndingKind ending = StoryProgressionRules.ClassifyEnding(_state);
+            if (ending == RedMistEndingKind.Retreat)
             {
                 title = "【失败后继续】雾门之外";
                 detail = "你放弃核心战利品并保存了性命。后续筑基资源减少，宗门评价与人情债发生变化，但主线继续。";
             }
-            else if (_state.keyTrumpCardUsed || _state.exposure >= 4 || _state.health <= 35)
+            else if (ending == RedMistEndingKind.CostlyVictory)
             {
                 title = "【代价胜利】火照玄泥";
                 detail = "墨蛟被击败或逐退，但关键底牌、伤势或队伍代价已经无法完全隐藏。敌对势力会据此准备克制。";

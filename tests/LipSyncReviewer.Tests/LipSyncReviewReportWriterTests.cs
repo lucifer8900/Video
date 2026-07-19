@@ -111,8 +111,8 @@ public sealed class LipSyncReviewReportWriterTests
             reviewerSubject: null);
 
         Assert.Equal("blocked", written.Report.OverallStatus);
-        Assert.Equal(25, written.Report.TotalResponseCount);
-        Assert.Equal(25, written.Report.BlockedCount);
+        Assert.Equal(30, written.Report.TotalResponseCount);
+        Assert.Equal(30, written.Report.BlockedCount);
         Assert.Equal(0, written.Report.PassedCount);
         Assert.Empty(written.Report.Items);
         Assert.Null(written.Report.ReviewerSubject);

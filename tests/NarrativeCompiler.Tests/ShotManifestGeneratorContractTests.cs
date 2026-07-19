@@ -25,14 +25,14 @@ public sealed class ShotManifestGeneratorContractTests
             Assert.Equal("needs_review", manifest["approvalStatus"]!.GetValue<string>());
             Assert.False(manifest["shotDispatchAllowed"]!.GetValue<bool>());
             Assert.Equal("USD", manifest["currency"]!.GetValue<string>());
-            Assert.Equal(25, manifest["responseRequirements"]!.AsArray().Count);
+            Assert.Equal(30, manifest["responseRequirements"]!.AsArray().Count);
 
             var shots = manifest["shots"]!.AsArray();
             Assert.Equal(14, shots.Count);
             Assert.Equal(14, shots.Select(shot => shot!["nodeId"]!.GetValue<string>()).Distinct().Count());
             Assert.Equal(4, shots.Count(shot => shot!["generationTier"]!.GetValue<string>() == "reuse_only"));
             Assert.Equal(10, shots.Count(shot => shot!["generationTier"]!.GetValue<string>() == "blocked_pending_g2"));
-            Assert.Equal(70, shots.Sum(shot => shot!["npcResponseRefs"]!.AsArray().Count));
+            Assert.Equal(75, shots.Sum(shot => shot!["npcResponseRefs"]!.AsArray().Count));
             Assert.All(shots, shot =>
             {
                 Assert.False(shot!["dispatchAllowed"]!.GetValue<bool>());
@@ -283,8 +283,14 @@ public sealed class ShotManifestGeneratorContractTests
         {
             var bundle = JsonNode.Parse(File.ReadAllBytes(
                 Path.Combine(CompilerProcessHarness.SourceDirectory, "story.bundle.json")))!.AsObject();
-            var outsideResponse = bundle["npcResponses"]![5]!["id"]!.GetValue<string>();
-            bundle["sceneNodes"]![0]!["invalid_input_rules"]!["abuse"]!["npcResponseRef"] =
+            JsonObject firstNode = bundle["sceneNodes"]![0]!.AsObject();
+            var allowedResponses = firstNode["npcResponseRefs"]!.AsArray()
+                .Select(item => item!.GetValue<string>())
+                .ToHashSet(StringComparer.Ordinal);
+            var outsideResponse = bundle["npcResponses"]!.AsArray()
+                .Select(item => item!["id"]!.GetValue<string>())
+                .First(id => !allowedResponses.Contains(id));
+            firstNode["invalid_input_rules"]!["abuse"]!["npcResponseRef"] =
                 outsideResponse;
             UpdateContentHash(bundle);
             File.WriteAllText(bundlePath, bundle.ToJsonString(new JsonSerializerOptions { WriteIndented = true }));

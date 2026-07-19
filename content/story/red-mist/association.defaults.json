@@ -6,7 +6,7 @@
   "resolvedParams": {
     "bundleId": "chapter.red_mist",
     "bundleVersion": "1.0.0",
-    "bundleContentHash": "sha256:84d537651eee1409505bdcf461cbf41b886d560efa72082a9ece1c9ba70c25a1"
+    "bundleContentHash": "sha256:5b790c032435ab43f5c71d007b3ffe9862e5638f557d1bacef63f66f755a1abc"
   },
   "injections": [
     {
