@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -190,6 +191,54 @@ namespace Lingmai.RedMist.Tests
                         "video",
                         _bundle.MediaAssets[node.introMediaRef].MediaType,
                         node.id + " intro");
+                }
+            }
+        }
+
+        [Test]
+        public void EveryManualVideoPromptUsesOneExistingLandscapeFirstFrame()
+        {
+            string prompts = File.ReadAllText(_promptPath);
+            MatchCollection promptMarkers = Regex.Matches(
+                prompts,
+                @"<!-- (?:node|response):[^>]+ -->");
+            MatchCollection firstFrameLines = Regex.Matches(
+                prompts,
+                @"^上传首帧（仅上传这一张）：`(?<path>[^`\r\n]+\.png)`$",
+                RegexOptions.Multiline);
+
+            Assert.AreEqual(40, promptMarkers.Count, "CX-505 video prompt count");
+            Assert.AreEqual(
+                promptMarkers.Count,
+                firstFrameLines.Count,
+                "Every video prompt must name exactly one uploadable first-frame PNG.");
+            Assert.AreEqual(
+                0,
+                Regex.Matches(prompts, @"(?:参考图|人物参考|辅助参考|优先首帧)：").Count,
+                "The manual pack must not imply that Veo Image-to-video accepts extra reference images.");
+
+            foreach (Match match in firstFrameLines)
+            {
+                string relativePath = match.Groups["path"].Value;
+                string absolutePath = Path.Combine(
+                    RepositoryRoot(),
+                    relativePath.Replace('/', Path.DirectorySeparatorChar));
+                Assert.IsTrue(File.Exists(absolutePath), "Missing first frame: " + relativePath);
+
+                var texture = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+                try
+                {
+                    Assert.IsTrue(
+                        texture.LoadImage(File.ReadAllBytes(absolutePath)),
+                        "Unreadable first frame: " + relativePath);
+                    Assert.That(
+                        (double)texture.width / texture.height,
+                        Is.EqualTo(16d / 9d).Within(0.01d),
+                        "First frame must be 16:9 without stretching: " + relativePath);
+                }
+                finally
+                {
+                    UnityEngine.Object.DestroyImmediate(texture);
                 }
             }
         }

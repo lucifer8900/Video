@@ -23,14 +23,16 @@
 
 人物连续性：沈砚为二十余岁东亚男性，冷静克制，深青窄袖行装、旧皮护腕、暗金飞刃匣；楚明绮为二十余岁东亚女性，沉着威严，月白与暗朱分层战袍、银色月纹发冠、环形月轮法器；石峻为三十余岁东亚男性，瘦削、眼神锐利，褐黑短甲与旧铜扣，手持染血阵钉。青衣侦察者为二十七岁左右的原创东亚女性，低位编发、青灰窄袖袍、炭黑皮肩甲与小型白玉听风符。阵灵为成年中性人形投影。蛟窟临时盟友为二十九岁左右的原创东亚男性，束起黑发、灰白分层轻甲与白光信标。所有人物不得模仿现实演员。
 
-现有参考图位于 Unity 的 Assets/Resources/Art 与 Assets/Resources/Generated 目录。有人物的镜头应上传相应定妆图；同一 NPC 第一条通过后，从该条导出清晰静帧，后续全部作为同一 subject reference 使用。
+本批次已用 GPT Image 2 将人物身份、场景、光线和镜头构图合成到 15 张 16:9 首帧中，统一位于 `unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/`。在当前 Veo `Image-to-video` 页面，每次只上传对应条目列出的这一张首帧；不要再追加人物定妆图、场景图或素材模块表，也不要把可选结束图槽位当成人物参考槽位。15 张图片的复用关系和 GPT Image 2 生成提示词见 `video-first-frame-reference-pack.cx505.md`。
 
 ## 10 个主剧情视频缺口
 
 <!-- node:camp -->
 ### NODE camp — 临时营地备战
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。参考图：red_mist_establishing.png、shen_yan.png、chu_mingqi.png。
+模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_camp_v1.png`
 
 完整视频提示词（直接复制）：
 
@@ -41,7 +43,9 @@ Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist 
 <!-- node:alliance -->
 ### NODE alliance — 谨慎结伴
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。优先首帧：firstframe_alliance_shen_gu_v1.png 或 firstframe_alliance_chu_petitioners_v1.png；人物参考：shen_yan.png、chu_mingqi.png。
+模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_alliance_v1.png`
 
 完整视频提示词（直接复制）：
 
@@ -52,7 +56,9 @@ Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist 
 <!-- node:corpse_signs -->
 ### NODE corpse_signs — 溪涧伏击痕迹
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。参考图：red_mist_weather.png。
+模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_corpse_signs_v1.png`
 
 完整视频提示词（直接复制）：
 
@@ -63,7 +69,9 @@ Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist 
 <!-- node:rescue -->
 ### NODE rescue — 雾后求援
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。参考图：red_mist_weather.png。
+模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_rescue_v1.png`
 
 完整视频提示词（直接复制）：
 
@@ -74,7 +82,9 @@ Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist 
 <!-- node:shijun -->
 ### NODE shijun — 阵钉交易
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。参考图：shi_jun-v1.png、red_mist_modules.png。
+模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_v1.png`
 
 完整视频提示词（直接复制）：
 
@@ -85,7 +95,9 @@ Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist 
 <!-- node:formation -->
 ### NODE formation — 四门禁制
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。优先首帧：scene_celestial_formation_hall_v3.png；辅助参考：red_mist_modules.png。
+模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_formation_v1.png`
 
 完整视频提示词（直接复制）：
 
@@ -96,7 +108,9 @@ Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist 
 <!-- node:combat_one -->
 ### NODE combat_one — 墨蛟试探
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。参考图：dragon_cavern-v2.png、dragon_attack-v1.png、shen_yan.png、chu_mingqi.png。
+模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_combat_one_v1.png`
 
 完整视频提示词（直接复制）：
 
@@ -107,7 +121,11 @@ Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist 
 <!-- node:combat_two -->
 ### NODE combat_two — 底牌与崩塌
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。必须沿用 combat_one 获准首尾帧；参考图：dragon_cavern-v2.png、dragon_attack-v1.png、shen_yan.png、chu_mingqi.png。
+模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_combat_two_v1.png`
+
+连续性说明：首次预览使用上面的静态首帧；`combat_one` 通过后，最终生成时改为只上传该获准视频导出的末帧，不要再同时上传静态图。
 
 完整视频提示词（直接复制）：
 
@@ -118,7 +136,11 @@ Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist 
 <!-- node:aftermath -->
 ### NODE aftermath — 战利品与伤员
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。必须沿用 combat_two 获准末帧；参考图：dragon_cavern-v2.png、shen_yan.png、chu_mingqi.png。
+模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_aftermath_v1.png`
+
+连续性说明：首次预览使用上面的静态首帧；`combat_two` 通过后，最终生成时改为只上传该获准视频导出的末帧，不要再同时上传静态图。
 
 完整视频提示词（直接复制）：
 
@@ -129,7 +151,9 @@ Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist 
 <!-- node:ending -->
 ### NODE ending — 雾门余烬
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。参考图：red_mist_establishing.png、shen_yan.png、chu_mingqi.png。
+模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_ending_v2.png`
 
 完整视频提示词（直接复制）：
 
@@ -142,7 +166,9 @@ Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist 
 <!-- response:npc.response.prologue.inspect_mist -->
 ### RESPONSE npc.response.prologue.inspect_mist
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。参考图：red_mist_weather.png；青衣侦察者首条通过后追加其固定定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -166,7 +192,9 @@ Transcript: “雾流每九息回卷一次，左侧石阶的风更稳。你看�
 <!-- response:npc.response.alliance.cautious_cooperation -->
 ### RESPONSE npc.response.alliance.cautious_cooperation
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。参考图：red_mist_establishing.png、已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -190,7 +218,9 @@ Transcript: “我守住左侧，你保留自己的底牌。先活着越过山�
 <!-- response:npc.response.rescue.secure_survivor -->
 ### RESPONSE npc.response.rescue.secure_survivor
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。参考图：red_mist_weather.png、已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_rescue_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -214,7 +244,9 @@ Transcript: “雾后还有第二个人的脚步声。先用旧暗号核验身�
 <!-- response:npc.response.shijun.verify_bargain -->
 ### RESPONSE npc.response.shijun.verify_bargain
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。参考图：shi_jun-v1.png、red_mist_modules.png。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -238,7 +270,9 @@ Transcript: “想验货可以，阵钉上的热泥来自门后。至于这句�
 <!-- response:npc.response.underground.coordinate_retreat -->
 ### RESPONSE npc.response.underground.coordinate_retreat
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。参考图：dragon_cavern-v2.png；首条通过后追加蛟窟临时盟友固定定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -270,7 +304,9 @@ Transcript: “玉栏后的青石是第一处退点。我守住蛟尾方向，�
 <!-- response:npc.invalid.calm.abuse -->
 #### RESPONSE npc.invalid.calm.abuse
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -294,7 +330,9 @@ Transcript: “言语再重也不会改变雾中的局势。若要继续，就�
 <!-- response:npc.invalid.calm.irrelevant -->
 #### RESPONSE npc.invalid.calm.irrelevant
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -318,7 +356,9 @@ Transcript: “那件事与眼前的险境无关。先看清此地，再决定�
 <!-- response:npc.invalid.calm.too_long -->
 #### RESPONSE npc.invalid.calm.too_long
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -342,7 +382,9 @@ Transcript: “雾势正在变化。把话收短，只说你此刻要做什么�
 <!-- response:npc.invalid.calm.silence -->
 #### RESPONSE npc.invalid.calm.silence
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -366,7 +408,9 @@ Transcript: “不必仓促开口。先看清线索，想好后再作选择。�
 <!-- response:npc.invalid.calm.low_confidence -->
 #### RESPONSE npc.invalid.calm.low_confidence
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -394,7 +438,9 @@ Transcript: “这句话没有听清。换个简短说法，或直接选择眼�
 <!-- response:npc.invalid.ally.abuse -->
 #### RESPONSE npc.invalid.ally.abuse
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -418,7 +464,9 @@ Transcript: “若连同行者都只剩恶言，这条路便走不远。说出�
 <!-- response:npc.invalid.ally.irrelevant -->
 #### RESPONSE npc.invalid.ally.irrelevant
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -442,7 +490,9 @@ Transcript: “那件事可以以后再谈。入口和同伴都在等我们决�
 <!-- response:npc.invalid.ally.too_long -->
 #### RESPONSE npc.invalid.ally.too_long
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -466,7 +516,9 @@ Transcript: “没有时间听完整段缘由。告诉我结论：前进、观�
 <!-- response:npc.invalid.ally.silence -->
 #### RESPONSE npc.invalid.ally.silence
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -490,7 +542,9 @@ Transcript: “你还在权衡，我明白。我会守住这一侧，但决定�
 <!-- response:npc.invalid.ally.low_confidence -->
 #### RESPONSE npc.invalid.ally.low_confidence
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的青衣侦察者定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -518,7 +572,9 @@ Transcript: “我没听清你的意思。再说一遍，或指明你支持哪�
 <!-- response:npc.invalid.system.abuse -->
 #### RESPONSE npc.invalid.system.abuse
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；首条通过后固定阵灵人形静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_formation_spirit_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -542,7 +598,9 @@ Transcript: “无效言语不会改变结算。请给出可执行指令。”
 <!-- response:npc.invalid.system.irrelevant -->
 #### RESPONSE npc.invalid.system.irrelevant
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的阵灵人形静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_formation_spirit_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -566,7 +624,9 @@ Transcript: “输入与当前目标无关。请围绕路线、阵眼或战术�
 <!-- response:npc.invalid.system.too_long -->
 #### RESPONSE npc.invalid.system.too_long
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的阵灵人形静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_formation_spirit_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -590,7 +650,9 @@ Transcript: “指令过长，无法安全判定。请缩减为一个明确动�
 <!-- response:npc.invalid.system.silence -->
 #### RESPONSE npc.invalid.system.silence
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的阵灵人形静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_formation_spirit_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -614,7 +676,9 @@ Transcript: “未收到有效指令。场景仍在等待，固定方案保持�
 <!-- response:npc.invalid.system.low_confidence -->
 #### RESPONSE npc.invalid.system.low_confidence
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；使用已通过的阵灵人形静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_formation_spirit_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -642,7 +706,9 @@ Transcript: “指令置信度不足。请重新表述，或使用固定方案�
 <!-- response:npc.invalid.hostile.abuse -->
 #### RESPONSE npc.invalid.hostile.abuse
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；参考图：shi_jun-v1.png、red_mist_modules.png。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -666,7 +732,9 @@ Transcript: “骂得再响，也换不来一条真路。拿出筹码，或者�
 <!-- response:npc.invalid.hostile.irrelevant -->
 #### RESPONSE npc.invalid.hostile.irrelevant
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；参考图：shi_jun-v1.png、red_mist_modules.png。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -690,7 +758,9 @@ Transcript: “少绕弯子。此刻只谈阵钉、灵药和谁先让路。”
 <!-- response:npc.invalid.hostile.too_long -->
 #### RESPONSE npc.invalid.hostile.too_long
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；参考图：shi_jun-v1.png、red_mist_modules.png。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -714,7 +784,9 @@ Transcript: “我没兴致听你铺陈来历。用一句话报出条件。”
 <!-- response:npc.invalid.hostile.silence -->
 #### RESPONSE npc.invalid.hostile.silence
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；参考图：shi_jun-v1.png、red_mist_modules.png。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -738,7 +810,9 @@ Transcript: “沉默也是价码，只是通常最贵。想好了就开口。�
 <!-- response:npc.invalid.hostile.low_confidence -->
 #### RESPONSE npc.invalid.hostile.low_confidence
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；参考图：shi_jun-v1.png、red_mist_modules.png。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -766,7 +840,9 @@ Transcript: “你这句话含糊得很。再说清楚，免得我按最坏的�
 <!-- response:npc.invalid.encounter.abuse -->
 #### RESPONSE npc.invalid.encounter.abuse
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；参考图：dragon_cavern-v2.png，并使用已通过的蛟窟临时盟友定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -790,7 +866,9 @@ Transcript: “黑泥下的东西不会等我们吵完。收起敌意，先决�
 <!-- response:npc.invalid.encounter.irrelevant -->
 #### RESPONSE npc.invalid.encounter.irrelevant
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；参考图：dragon_cavern-v2.png，并使用已通过的蛟窟临时盟友定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -814,7 +892,9 @@ Transcript: “宝匣、退路和墨蛟才是眼前事实。别让无关的话�
 <!-- response:npc.invalid.encounter.too_long -->
 #### RESPONSE npc.invalid.encounter.too_long
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；参考图：dragon_cavern-v2.png，并使用已通过的蛟窟临时盟友定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -838,7 +918,9 @@ Transcript: “阵柱正在断裂。把计划压成一句，我只需要可执�
 <!-- response:npc.invalid.encounter.silence -->
 #### RESPONSE npc.invalid.encounter.silence
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；参考图：dragon_cavern-v2.png，并使用已通过的蛟窟临时盟友定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
@@ -862,7 +944,9 @@ Transcript: “你不表态，我便按最保守的方式守住退路。仍可�
 <!-- response:npc.invalid.encounter.low_confidence -->
 #### RESPONSE npc.invalid.encounter.low_confidence
 
-视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频；参考图：dragon_cavern-v2.png，并使用已通过的蛟窟临时盟友定妆静帧。
+视频模型与设置：Gemini Omni Flash；16:9，24 fps，10 秒，原生音频。
+
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_v1.png`
 
 完整视频提示词（Gemini Omni Flash，直接复制）：
 
