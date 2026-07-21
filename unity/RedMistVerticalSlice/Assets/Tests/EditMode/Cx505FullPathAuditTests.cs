@@ -243,6 +243,38 @@ namespace Lingmai.RedMist.Tests
             }
         }
 
+        [Test]
+        public void EveryManualVideoPromptHasExplicitTemporalContinuityContract()
+        {
+            string prompts = File.ReadAllText(_promptPath);
+            MatchCollection videoPrompts = Regex.Matches(
+                prompts,
+                @"<!-- (?<id>(?:node|response):[^>]+) -->[\s\S]*?完整视频提示词[^\r\n]*\r?\n\r?\n~~~text\r?\n(?<prompt>[\s\S]*?)\r?\n~~~");
+            string[] requiredSections =
+            {
+                "INVARIANT STATE:",
+                "PROP LOCK:",
+                "PRIMARY ACTION:",
+                "ALLOWED MOTION:",
+                "FORBIDDEN TRANSITIONS:",
+                "END STATE:"
+            };
+
+            Assert.AreEqual(40, videoPrompts.Count, "CX-505 video prompt count");
+            foreach (Match videoPrompt in videoPrompts)
+            {
+                string id = videoPrompt.Groups["id"].Value;
+                string body = videoPrompt.Groups["prompt"].Value;
+                foreach (string section in requiredSections)
+                {
+                    Assert.AreEqual(
+                        1,
+                        Regex.Matches(body, Regex.Escape(section)).Count,
+                        id + " must contain exactly one " + section);
+                }
+            }
+        }
+
         private HashSet<string> ExpectedAuthoredEdges()
         {
             var result = new HashSet<string>(StringComparer.Ordinal);
