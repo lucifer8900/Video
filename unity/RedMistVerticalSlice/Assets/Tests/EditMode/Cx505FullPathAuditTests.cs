@@ -244,6 +244,87 @@ namespace Lingmai.RedMist.Tests
         }
 
         [Test]
+        public void EveryManualVideoPromptUsesGrandV2FirstFramesWithDeliberateTonalRange()
+        {
+            string prompts = File.ReadAllText(_promptPath);
+            string[] relativePaths = Regex.Matches(
+                    prompts,
+                    @"^上传首帧（仅上传这一张）：`(?<path>[^`\r\n]+\.png)`$",
+                    RegexOptions.Multiline)
+                .Cast<Match>()
+                .Select(match => match.Groups["path"].Value)
+                .Distinct(StringComparer.Ordinal)
+                .ToArray();
+
+            Assert.AreEqual(15, relativePaths.Length, "CX-505 first-frame reuse set");
+            foreach (string relativePath in relativePaths)
+            {
+                Assert.IsTrue(
+                    Path.GetFileNameWithoutExtension(relativePath)
+                        .EndsWith("_grand_v2", StringComparison.Ordinal),
+                    "The production pack must use the redesigned grand-v2 plate: " + relativePath);
+
+                string absolutePath = Path.Combine(
+                    RepositoryRoot(),
+                    relativePath.Replace('/', Path.DirectorySeparatorChar));
+                Assert.IsTrue(File.Exists(absolutePath), "Missing grand-v2 first frame: " + relativePath);
+
+                var texture = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+                try
+                {
+                    Assert.IsTrue(texture.LoadImage(File.ReadAllBytes(absolutePath)), relativePath);
+                    Color32[] pixels = texture.GetPixels32();
+                    double luminanceSum = 0d;
+                    int shadowPixels = 0;
+                    int highlightPixels = 0;
+                    foreach (Color32 pixel in pixels)
+                    {
+                        double luminance =
+                            (0.2126d * pixel.r + 0.7152d * pixel.g + 0.0722d * pixel.b) / 255d;
+                        luminanceSum += luminance;
+                        if (luminance <= 0.18d) shadowPixels++;
+                        if (luminance >= 0.72d) highlightPixels++;
+                    }
+
+                    double average = luminanceSum / pixels.Length;
+                    double shadowRatio = (double)shadowPixels / pixels.Length;
+                    double highlightRatio = (double)highlightPixels / pixels.Length;
+                    Assert.That(average, Is.GreaterThanOrEqualTo(0.27d),
+                        "Grand first frame must read clearly instead of being globally underexposed: " + relativePath);
+                    Assert.That(shadowRatio, Is.GreaterThanOrEqualTo(0.03d),
+                        "Grand first frame must retain intentional dramatic shadow: " + relativePath);
+                    Assert.That(highlightRatio, Is.GreaterThanOrEqualTo(0.02d),
+                        "Grand first frame must contain readable daylight or practical highlights: " + relativePath);
+                }
+                finally
+                {
+                    UnityEngine.Object.DestroyImmediate(texture);
+                }
+            }
+        }
+
+        [Test]
+        public void DialogueVisualPromptsAreSilentVeoPerformancePlates()
+        {
+            string prompts = File.ReadAllText(_promptPath);
+            MatchCollection responsePrompts = Regex.Matches(
+                prompts,
+                @"<!-- response:(?<id>[^>]+) -->[\s\S]*?完整视频提示词[^\r\n]*\r?\n\r?\n~~~text\r?\n(?<prompt>[\s\S]*?)\r?\n~~~");
+
+            Assert.AreEqual(30, responsePrompts.Count, "CX-505 dialogue visual prompt count");
+            foreach (Match responsePrompt in responsePrompts)
+            {
+                string id = responsePrompt.Groups["id"].Value;
+                string body = responsePrompt.Groups["prompt"].Value;
+                StringAssert.Contains("SILENT PERFORMANCE PLATE:", body, id);
+                StringAssert.Contains("No dialogue", body, id);
+                Assert.IsFalse(
+                    Regex.IsMatch(body, @"[\u3400-\u9fff]"),
+                    id + " must keep the Mandarin transcript out of Veo to prevent fake speech and garbled captions.");
+            }
+        }
+
+        [Test]
         public void EveryManualVideoPromptHasExplicitTemporalContinuityContract()
         {
             string prompts = File.ReadAllText(_promptPath);
@@ -252,6 +333,8 @@ namespace Lingmai.RedMist.Tests
                 @"<!-- (?<id>(?:node|response):[^>]+) -->[\s\S]*?完整视频提示词[^\r\n]*\r?\n\r?\n~~~text\r?\n(?<prompt>[\s\S]*?)\r?\n~~~");
             string[] requiredSections =
             {
+                "LIGHTING DESIGN:",
+                "PHYSICAL INTEGRATION:",
                 "INVARIANT STATE:",
                 "PROP LOCK:",
                 "PRIMARY ACTION:",
