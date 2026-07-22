@@ -39,6 +39,9 @@ unity/RedMistVerticalSlice/test-results*.xml
 /unity/RedMistVerticalSlice/Assets/StreamingAssets/Media/*.mp4.meta
 /unity/RedMistVerticalSlice/GeneratedSource/
 
+# Licensed real-world references remain local and never enter Git or Unity builds.
+/content/reference-library/raw/
+
 # Rejected concept images remain local review artifacts.
 /unity/RedMistVerticalSlice/Docs/RejectedConcepts/*.png
 /unity/RedMistVerticalSlice/Docs/RejectedConcepts/*.png.meta
