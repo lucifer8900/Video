@@ -41,6 +41,10 @@ unity/RedMistVerticalSlice/test-results*.xml
 
 # Licensed real-world references remain local and never enter Git or Unity builds.
 /content/reference-library/raw/
+/content/reference-library/cache/
+/content/reference-library/private-research/
+/content/reference-library/quarantine/
+/artifacts/cx507-review/
 
 # Rejected concept images remain local review artifacts.
 /unity/RedMistVerticalSlice/Docs/RejectedConcepts/*.png

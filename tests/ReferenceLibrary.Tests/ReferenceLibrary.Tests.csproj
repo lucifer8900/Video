@@ -21,8 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\tools\ReferenceLibrary\ReferenceLibrary.csproj"
-                      ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\..\tools\ReferenceLibrary\ReferenceLibrary.csproj" />
   </ItemGroup>
 
 </Project>

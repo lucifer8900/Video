@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.local/schemas/reference-library-costume-curation.schema.json",
+  "title": "CX-507 costume period curation decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "catalogLibraryId",
+    "reviewer",
+    "reviewedAtUtc",
+    "policy",
+    "expectedCostumeAssets",
+    "costumeOrderSha256",
+    "quarantinedAssets"
+  ],
+  "properties": {
+    "$schema": { "type": "string", "minLength": 1 },
+    "schemaVersion": { "const": "1.0.0" },
+    "catalogLibraryId": { "type": "string", "minLength": 1 },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "reviewedAtUtc": { "type": "string", "format": "date-time" },
+    "policy": { "type": "string", "minLength": 40 },
+    "expectedCostumeAssets": { "type": "integer", "minimum": 1 },
+    "costumeOrderSha256": { "$ref": "#/$defs/sha256" },
+    "quarantinedAssets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["assetId", "reason", "evidenceSourceUrl"],
+        "properties": {
+          "assetId": { "type": "string", "minLength": 1 },
+          "reason": { "type": "string", "minLength": 20 },
+          "evidenceSourceUrl": { "type": "string", "format": "uri", "pattern": "^https://" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

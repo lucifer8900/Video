@@ -31,12 +31,26 @@ internal static class ReferenceLibraryProcessHarness
             downloadsRoot);
     }
 
+    public static async Task<ProcessResult> RunToolAsync(params string[] arguments)
+    {
+        var toolDll = Path.Combine(
+            RepositoryRoot.FullName,
+            "tools",
+            "ReferenceLibrary",
+            "bin",
+            CurrentConfiguration(),
+            "net8.0",
+            "ReferenceLibrary.dll");
+        Assert.True(File.Exists(toolDll), $"Tool output is missing: {toolDll}");
+        return await RunDotNetAsync(toolDll, arguments);
+    }
+
     public static async Task<ProcessResult> RunGitAsync(params string[] arguments) =>
         await RunProcessAsync("git", RepositoryRoot.FullName, arguments);
 
     public static string CreateTemporaryDirectory()
     {
-        var path = Path.Combine(Path.GetTempPath(), "cx506-" + Guid.NewGuid().ToString("N"));
+        var path = Path.Combine(Path.GetTempPath(), "cx507-" + Guid.NewGuid().ToString("N"));
         Directory.CreateDirectory(path);
         return path;
     }

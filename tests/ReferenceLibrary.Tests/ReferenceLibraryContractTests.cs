@@ -188,7 +188,7 @@ public sealed class ReferenceLibraryContractTests
             ProjectPath("content/reference-library/raw"));
 
         Assert.Equal(0, result.ExitCode);
-        Assert.Contains("48", result.Stdout, StringComparison.Ordinal);
+        Assert.Matches("Reference catalog valid: [0-9]+ assets", result.Stdout);
         Assert.Contains("valid", result.Stdout, StringComparison.OrdinalIgnoreCase);
     }
 

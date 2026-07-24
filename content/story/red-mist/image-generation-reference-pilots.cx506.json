@@ -19,7 +19,7 @@
       "adoptionStatus": "needs_review",
       "referenceAssetIds": [
         "ref-architecture-001-b5834f783d",
-        "ref-architecture-003-0d1eebe4a2",
+        "ref-architecture-002-30c475224b",
         "ref-architecture-004-5f8ba81573",
         "ref-landscape-001-74d99e0571"
       ],
@@ -57,8 +57,8 @@
         "ref-people-003-4763a77d34",
         "ref-people-001-6c50e4da3b",
         "ref-costumes-textiles-002-dbb9476d1a",
-        "ref-costumes-textiles-003-2f32f515d0",
-        "ref-architecture-003-0d1eebe4a2"
+        "ref-costumes-textiles-022-wikime-8bf6f0ffbe33",
+        "ref-architecture-002-30c475224b"
       ],
       "prompt": "Create a new 16:9 photoreal live-action full-body still of the existing GAME-ORIGINAL celadon-clad woman scout. Real people may inform only pose, expression, skin microtexture and weight balance; never copy identity, face, age or clothing. Preserve the approved low braid, muted celadon narrow-sleeved robe, one charcoal shoulder guard and exactly one pinned pale-jade talisman. Ground her on wet stone while one hand physically steadies against a timber column in a post-rain medicinal garden. Require natural asymmetry, pores, cloth weight, complete boots, contact shadows and shared pond/eave lighting; forbid actor likeness, AI beauty skin, floating feet, modern props, text and CGI styling.",
       "outputPath": "unity/RedMistVerticalSlice/Assets/Art/Generated/Cx506Pilots/cx506-original-character-v1.png",

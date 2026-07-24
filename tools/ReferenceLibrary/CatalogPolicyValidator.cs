@@ -31,9 +31,14 @@ internal static class CatalogPolicyValidator
         var diagnostics = new List<CatalogDiagnostic>();
         var root = Path.GetFullPath(downloadsRoot);
 
-        if (catalog.SchemaVersion != "1.0.0")
+        if (catalog.SchemaVersion != "2.0.0")
         {
-            diagnostics.Add(new("catalog.version", "/schemaVersion", "Expected schemaVersion 1.0.0."));
+            diagnostics.Add(new("catalog.version", "/schemaVersion", "Expected schemaVersion 2.0.0."));
+        }
+
+        if (catalog.CoveragePlanId != "cx507-china-visual-atlas-v1")
+        {
+            diagnostics.Add(new("catalog.coverage_plan", "/coveragePlanId", "Catalog must bind the approved CX-507 plan."));
         }
 
         if (!catalog.ReferenceOnly || catalog.ShipInBuild)
@@ -57,6 +62,12 @@ internal static class CatalogPolicyValidator
             diagnostics.Add(new("category.total", "/assets", "Catalog does not meet the minimum total asset count."));
         }
 
+
+        if (catalog.Assets.Count < 800)
+        {
+            diagnostics.Add(new("coverage.minimum_total", "/assets", $"CX-507 requires at least 800 assets; found {catalog.Assets.Count}."));
+        }
+
         foreach (var category in catalog.Categories)
         {
             var count = catalog.Assets.Count(asset => asset.Category == category);
@@ -70,6 +81,10 @@ internal static class CatalogPolicyValidator
         {
             diagnostics.Add(new("asset.duplicate_id", "/assets", $"Duplicate id {duplicate.Key}."));
         }
+
+        AddDuplicateDiagnostics(catalog.Assets, asset => asset.SourcePageUrl, "source_page", diagnostics);
+        AddDuplicateDiagnostics(catalog.Assets, asset => asset.DownloadUrl, "download_url", diagnostics);
+        AddDuplicateDiagnostics(catalog.Assets, asset => asset.Sha256, "sha256", diagnostics);
 
         for (var index = 0; index < catalog.Assets.Count; index++)
         {
@@ -112,6 +127,16 @@ internal static class CatalogPolicyValidator
                 asset.Category == "people" ? "people.identity_reuse" : "asset.identity_reuse",
                 path + "/identityReuse",
                 "Recognizable identity reuse is forbidden."));
+        }
+
+        if (asset.CurationStatus != "needs_review" || asset.CoverageTargetIds.Count == 0)
+        {
+            diagnostics.Add(new("asset.review_boundary", path, "Every CX-507 asset remains needs_review and must have coverage provenance."));
+        }
+
+        if (asset.Taxonomy is null || string.IsNullOrWhiteSpace(asset.Taxonomy.Authenticity))
+        {
+            diagnostics.Add(new("asset.taxonomy", path + "/taxonomy", "Strict taxonomy and authenticity state are required."));
         }
 
         if (!TryHttpsUri(asset.SourcePageUrl, out var sourcePage))
@@ -196,5 +221,17 @@ internal static class CatalogPolicyValidator
         var valid = Uri.TryCreate(value, UriKind.Absolute, out var parsed) && parsed.Scheme == Uri.UriSchemeHttps;
         uri = parsed ?? new Uri("https://invalid.invalid/");
         return valid;
+    }
+
+    private static void AddDuplicateDiagnostics(
+        IReadOnlyList<ReferenceAsset> assets,
+        Func<ReferenceAsset, string> selector,
+        string field,
+        ICollection<CatalogDiagnostic> diagnostics)
+    {
+        foreach (var duplicate in assets.GroupBy(selector, StringComparer.Ordinal).Where(group => group.Count() > 1))
+        {
+            diagnostics.Add(new($"asset.duplicate_{field}", "/assets", duplicate.Key));
+        }
     }
 }
