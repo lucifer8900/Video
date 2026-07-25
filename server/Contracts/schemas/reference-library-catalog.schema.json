@@ -45,11 +45,14 @@
         },
         {
           "const": "by"
+        },
+        {
+          "const": "unverified"
         }
       ],
       "items": false,
-      "minItems": 3,
-      "maxItems": 3
+      "minItems": 4,
+      "maxItems": 4
     },
     "categories": {
       "type": "array",
@@ -190,7 +193,10 @@
           "maxLength": 128
         },
         "sourcePageUrl": {
-          "$ref": "#/$defs/httpsUri"
+          "oneOf": [
+            { "$ref": "#/$defs/httpsUri" },
+            { "type": "null" }
+          ]
         },
         "downloadUrl": {
           "$ref": "#/$defs/httpsUri"
@@ -199,7 +205,8 @@
           "enum": [
             "cc0",
             "pdm",
-            "by"
+            "by",
+            "unverified"
           ]
         },
         "licenseVersion": {
@@ -208,13 +215,16 @@
           "maxLength": 16
         },
         "licenseUrl": {
-          "$ref": "#/$defs/httpsUri"
+          "oneOf": [
+            { "$ref": "#/$defs/httpsUri" },
+            { "type": "null" }
+          ]
         },
         "commercialUseAllowed": {
-          "const": true
+          "type": "boolean"
         },
         "modificationsAllowed": {
-          "const": true
+          "type": "boolean"
         },
         "shareAlikeRequired": {
           "const": false
@@ -271,12 +281,12 @@
         },
         "width": {
           "type": "integer",
-          "minimum": 800,
+          "minimum": 1,
           "maximum": 100000
         },
         "height": {
           "type": "integer",
-          "minimum": 600,
+          "minimum": 1,
           "maximum": 100000
         },
         "sha256": {
@@ -301,8 +311,115 @@
         },
         "taxonomy": {
           "$ref": "#/$defs/taxonomy"
+        },
+        "sourceVerification": {
+          "enum": ["verified", "unverified"]
+        },
+        "shortfallException": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": [
+            "reason",
+            "sourceStatus",
+            "qualityStatus",
+            "requiresManualReview"
+          ],
+          "properties": {
+            "reason": { "const": "material_shortage" },
+            "sourceStatus": { "enum": ["unverified", "verified"] },
+            "qualityStatus": { "enum": ["minimum_resolution", "reduced_resolution"] },
+            "requiresManualReview": { "const": true }
+          }
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "not": { "required": ["shortfallException"] }
+          },
+          "then": {
+            "properties": {
+              "license": { "enum": ["cc0", "pdm", "by"] },
+              "licenseUrl": { "$ref": "#/$defs/httpsUri" },
+              "commercialUseAllowed": { "const": true },
+              "modificationsAllowed": { "const": true },
+              "width": { "minimum": 800 },
+              "height": { "minimum": 600 }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": ["shortfallException"],
+            "properties": {
+              "shortfallException": { "type": "object" }
+            }
+          },
+          "then": {
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "shortfallException": {
+                      "properties": { "sourceStatus": { "const": "unverified" } }
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "license": { "const": "unverified" },
+                    "licenseVersion": { "const": "unverified" },
+                    "licenseUrl": { "type": "null" },
+                    "commercialUseAllowed": { "const": false },
+                    "modificationsAllowed": { "const": false }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "shortfallException": {
+                      "properties": { "sourceStatus": { "const": "verified" } }
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "license": { "enum": ["cc0", "pdm", "by"] },
+                    "licenseUrl": { "$ref": "#/$defs/httpsUri" },
+                    "commercialUseAllowed": { "const": true },
+                    "modificationsAllowed": { "const": true }
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "width": { "minimum": 320 },
+                  "height": { "minimum": 180 }
+                }
+              }
+              ,
+              {
+                "if": {
+                  "properties": {
+                    "license": { "const": "unverified" }
+                  }
+                },
+                "then": {
+                  "required": ["sourceVerification"],
+                  "properties": {
+                    "sourceVerification": { "const": "unverified" },
+                    "licenseVersion": { "const": "unverified" },
+                    "licenseUrl": { "type": "null" },
+                    "commercialUseAllowed": { "const": false },
+                    "modificationsAllowed": { "const": false }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
     },
     "taxonomy": {
       "type": "object",

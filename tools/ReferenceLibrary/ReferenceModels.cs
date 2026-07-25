@@ -54,6 +54,8 @@ internal sealed record ChinaExpansionPlan
     public bool ReferenceOnly { get; init; }
     public bool ShipInBuild { get; init; }
     public IReadOnlyList<string> AllowedLicenses { get; init; } = [];
+    public ShortfallExceptionPolicy ShortfallException { get; init; } = new();
+    public UnverifiedSourcePolicy UnverifiedSourcePolicy { get; init; } = new();
     public bool CommercialUseRequired { get; init; }
     public bool ModificationRequired { get; init; }
     public bool RejectShareAlike { get; init; }
@@ -81,6 +83,24 @@ internal sealed record ChinaExpansionPlan
     public IReadOnlyDictionary<string, IReadOnlyList<string>> SubjectEvidenceTerms { get; init; } =
         new Dictionary<string, IReadOnlyList<string>>(StringComparer.Ordinal);
     public ExpansionCoverage Coverage { get; init; } = new();
+}
+
+internal sealed record ShortfallExceptionPolicy
+{
+    public bool AllowUnverifiedSource { get; init; }
+    public bool AllowReducedResolution { get; init; }
+    public bool RequiresManualReview { get; init; }
+    public int MinimumWidth { get; init; }
+    public int MinimumHeight { get; init; }
+    public bool ShipInBuild { get; init; }
+}
+
+internal sealed record UnverifiedSourcePolicy
+{
+    public bool Allow { get; init; }
+    public bool PersonalUseOnly { get; init; }
+    public bool RequiresManualReview { get; init; }
+    public bool ShipInBuild { get; init; }
 }
 
 internal sealed record ExpansionCoverage
@@ -145,7 +165,7 @@ internal sealed record ReferenceAsset
     public string DownloadUrl { get; init; } = string.Empty;
     public string License { get; init; } = string.Empty;
     public string LicenseVersion { get; init; } = string.Empty;
-    public string LicenseUrl { get; init; } = string.Empty;
+    public string? LicenseUrl { get; init; }
     public bool CommercialUseAllowed { get; init; }
     public bool ModificationsAllowed { get; init; }
     public bool ShareAlikeRequired { get; init; }
@@ -163,6 +183,16 @@ internal sealed record ReferenceAsset
     public string CurationStatus { get; init; } = "needs_review";
     public IReadOnlyList<string> CoverageTargetIds { get; init; } = [];
     public ReferenceTaxonomy Taxonomy { get; init; } = new();
+    public ShortfallExceptionAsset? ShortfallException { get; init; }
+    public string SourceVerification { get; init; } = "verified";
+}
+
+internal sealed record ShortfallExceptionAsset
+{
+    public string Reason { get; init; } = string.Empty;
+    public string SourceStatus { get; init; } = string.Empty;
+    public string QualityStatus { get; init; } = string.Empty;
+    public bool RequiresManualReview { get; init; }
 }
 
 internal sealed record ReferenceTaxonomy
@@ -280,7 +310,7 @@ internal sealed record WikimediaCandidate(
     Uri DownloadUrl,
     string License,
     string LicenseVersion,
-    Uri LicenseUrl,
+    Uri? LicenseUrl,
     int Width,
     int Height,
     string EvidenceText);

@@ -2,35 +2,21 @@
   "schemaVersion": "2.0.0",
   "planId": "cx507-china-visual-atlas-v1",
   "catalogLibraryId": "cx507-china-reference-library-v2",
-  "totalAssets": 1081,
-  "passes": false,
-  "failedTargetIds": [
-    "province.tianjin",
-    "province.heilongjiang",
-    "province.chongqing",
-    "capital.zhengzhou_shang",
-    "capital.xianyang_qin",
-    "capital.changan_xian",
-    "capital.linzi_qi",
-    "period.yuan",
-    "period.qing",
-    "garden.lingnan_garden",
-    "garden.temple_garden",
-    "landform.coast",
-    "landform.volcano"
-  ],
+  "totalAssets": 1125,
+  "passes": true,
+  "failedTargetIds": [],
   "failedCategoryIds": [],
   "categories": [
     {
       "categoryId": "landscape",
       "requiredAssets": 160,
-      "actualAssets": 265,
+      "actualAssets": 270,
       "passes": true
     },
     {
       "categoryId": "architecture",
       "requiredAssets": 160,
-      "actualAssets": 345,
+      "actualAssets": 380,
       "passes": true
     },
     {
@@ -48,7 +34,7 @@
     {
       "categoryId": "waters",
       "requiredAssets": 40,
-      "actualAssets": 41,
+      "actualAssets": 45,
       "passes": true
     },
     {
@@ -112,12 +98,12 @@
       "dimension": "province",
       "label": "\u5929\u6D25\u5E02",
       "requiredAssets": 8,
-      "actualAssets": 7,
+      "actualAssets": 8,
       "requiredArchitectureAssets": 4,
-      "actualArchitectureAssets": 3,
+      "actualArchitectureAssets": 4,
       "requiredNaturalAssets": 4,
       "actualNaturalAssets": 4,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "province.hebei",
@@ -184,12 +170,12 @@
       "dimension": "province",
       "label": "\u9ED1\u9F99\u6C5F\u7701",
       "requiredAssets": 8,
-      "actualAssets": 6,
+      "actualAssets": 8,
       "requiredArchitectureAssets": 4,
-      "actualArchitectureAssets": 2,
+      "actualArchitectureAssets": 4,
       "requiredNaturalAssets": 4,
       "actualNaturalAssets": 4,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "province.shanghai",
@@ -352,12 +338,12 @@
       "dimension": "province",
       "label": "\u91CD\u5E86\u5E02",
       "requiredAssets": 8,
-      "actualAssets": 7,
+      "actualAssets": 9,
       "requiredArchitectureAssets": 4,
-      "actualArchitectureAssets": 2,
+      "actualArchitectureAssets": 4,
       "requiredNaturalAssets": 4,
       "actualNaturalAssets": 5,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "province.sichuan",
@@ -520,36 +506,36 @@
       "dimension": "capital",
       "label": "\u90D1\u5DDE\u5546\u57CE",
       "requiredAssets": 10,
-      "actualAssets": 7,
+      "actualAssets": 10,
       "requiredArchitectureAssets": null,
       "actualArchitectureAssets": null,
       "requiredNaturalAssets": null,
       "actualNaturalAssets": null,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "capital.xianyang_qin",
       "dimension": "capital",
       "label": "\u54B8\u9633\u00B7\u79E6\u90FD\u9057\u5740",
       "requiredAssets": 10,
-      "actualAssets": 7,
+      "actualAssets": 10,
       "requiredArchitectureAssets": null,
       "actualArchitectureAssets": null,
       "requiredNaturalAssets": null,
       "actualNaturalAssets": null,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "capital.changan_xian",
       "dimension": "capital",
       "label": "\u897F\u5B89\u00B7\u957F\u5B89",
       "requiredAssets": 10,
-      "actualAssets": 9,
+      "actualAssets": 10,
       "requiredArchitectureAssets": null,
       "actualArchitectureAssets": null,
       "requiredNaturalAssets": null,
       "actualNaturalAssets": null,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "capital.luoyang",
@@ -640,12 +626,12 @@
       "dimension": "capital",
       "label": "\u4E34\u6DC4\u00B7\u9F50\u90FD",
       "requiredAssets": 10,
-      "actualAssets": 0,
+      "actualAssets": 10,
       "requiredArchitectureAssets": null,
       "actualArchitectureAssets": null,
       "requiredNaturalAssets": null,
       "actualNaturalAssets": null,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "capital.chengdu_shu",
@@ -748,12 +734,12 @@
       "dimension": "period",
       "label": "\u5143",
       "requiredAssets": 10,
-      "actualAssets": 9,
+      "actualAssets": 10,
       "requiredArchitectureAssets": null,
       "actualArchitectureAssets": null,
       "requiredNaturalAssets": null,
       "actualNaturalAssets": null,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "period.ming",
@@ -772,12 +758,12 @@
       "dimension": "period",
       "label": "\u6E05",
       "requiredAssets": 10,
-      "actualAssets": 9,
+      "actualAssets": 10,
       "requiredArchitectureAssets": null,
       "actualArchitectureAssets": null,
       "requiredNaturalAssets": null,
       "actualNaturalAssets": null,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "garden.royal_garden",
@@ -808,24 +794,24 @@
       "dimension": "garden",
       "label": "\u5CAD\u5357\u56ED\u6797",
       "requiredAssets": 12,
-      "actualAssets": 8,
+      "actualAssets": 12,
       "requiredArchitectureAssets": null,
       "actualArchitectureAssets": null,
       "requiredNaturalAssets": null,
       "actualNaturalAssets": null,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "garden.temple_garden",
       "dimension": "garden",
       "label": "\u5BFA\u89C2\u56ED\u6797",
       "requiredAssets": 12,
-      "actualAssets": 1,
+      "actualAssets": 12,
       "requiredArchitectureAssets": null,
       "actualArchitectureAssets": null,
       "requiredNaturalAssets": null,
       "actualNaturalAssets": null,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "garden.mountain_garden",
@@ -976,24 +962,24 @@
       "dimension": "landform",
       "label": "\u6D77\u5CB8",
       "requiredAssets": 8,
-      "actualAssets": 4,
+      "actualAssets": 8,
       "requiredArchitectureAssets": null,
       "actualArchitectureAssets": null,
       "requiredNaturalAssets": null,
       "actualNaturalAssets": null,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "landform.volcano",
       "dimension": "landform",
       "label": "\u706B\u5C71",
       "requiredAssets": 8,
-      "actualAssets": 5,
+      "actualAssets": 8,
       "requiredArchitectureAssets": null,
       "actualArchitectureAssets": null,
       "requiredNaturalAssets": null,
       "actualNaturalAssets": null,
-      "passes": false
+      "passes": true
     },
     {
       "targetId": "landform.glacier",
@@ -1372,7 +1358,7 @@
       "dimension": "category",
       "label": "\u6C5F\u6CB3\u6E56\u6D77\u4E0E\u6C34\u666F",
       "requiredAssets": 40,
-      "actualAssets": 41,
+      "actualAssets": 45,
       "requiredArchitectureAssets": null,
       "actualArchitectureAssets": null,
       "requiredNaturalAssets": null,
@@ -1464,20 +1450,6 @@
       "passes": true
     }
   ],
-  "diagnostics": [
-    "coverage.target: province.tianjin has 7/8 assets.",
-    "coverage.target: province.heilongjiang has 6/8 assets.",
-    "coverage.target: province.chongqing has 7/8 assets.",
-    "coverage.target: capital.zhengzhou_shang has 7/10 assets.",
-    "coverage.target: capital.xianyang_qin has 7/10 assets.",
-    "coverage.target: capital.changan_xian has 9/10 assets.",
-    "coverage.target: capital.linzi_qi has 0/10 assets.",
-    "coverage.target: period.yuan has 9/10 assets.",
-    "coverage.target: period.qing has 9/10 assets.",
-    "coverage.target: garden.lingnan_garden has 8/12 assets.",
-    "coverage.target: garden.temple_garden has 1/12 assets.",
-    "coverage.target: landform.coast has 4/8 assets.",
-    "coverage.target: landform.volcano has 5/8 assets."
-  ],
-  "generatedAtUtc": "2026-07-24T13:36:53.9458725+00:00"
+  "diagnostics": [],
+  "generatedAtUtc": "2026-07-25T01:54:25.8615565+00:00"
 }

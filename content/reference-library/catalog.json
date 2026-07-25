@@ -8,7 +8,8 @@
   "allowedLicenses": [
     "cc0",
     "pdm",
-    "by"
+    "by",
+    "unverified"
   ],
   "categories": [
     "landscape",
@@ -18276,6 +18277,7 @@
       "downloadedAtUtc": "2026-07-22T08:56:38.0699552+00:00",
       "curationStatus": "needs_review",
       "coverageTargetIds": [
+        "capital.linzi_qi",
         "province.shandong"
       ],
       "taxonomy": {
@@ -18285,11 +18287,15 @@
           "shandong"
         ],
         "locationLabels": [
+          "\u4E34\u6DC4\u00B7\u9F50\u90FD",
           "\u5C71\u4E1C\u7701"
         ],
-        "historicalCapitalIds": [],
+        "historicalCapitalIds": [
+          "linzi_qi"
+        ],
         "historicalPeriodIds": [],
         "architectureTypeIds": [
+          "capital_complex",
           "regional_historic_architecture"
         ],
         "gardenTypeIds": [],
@@ -21208,7 +21214,7 @@
       "id": "ref-landscape-173-openversef",
       "category": "landscape",
       "title": "IMG_11679_Hehuanshan",
-      "creator": "Mark thanks for 3,000,000\u002B views",
+      "creator": "Mark thanks for 3,000,000+ views",
       "creatorUrl": "https://www.flickr.com/photos/67415843@N05",
       "source": "openverse/flickr/flickr",
       "sourcePageUrl": "https://www.flickr.com/photos/67415843@N05/11234956724",
@@ -22636,18 +22642,24 @@
       "downloadedAtUtc": "2026-07-22T09:05:04.3612751+00:00",
       "curationStatus": "needs_review",
       "coverageTargetIds": [
+        "capital.linzi_qi",
         "period.yuan"
       ],
       "taxonomy": {
         "authenticity": "unknown_needs_review",
         "peoplePresence": "confirmed_absent",
         "provinceRegionIds": [],
-        "locationLabels": [],
-        "historicalCapitalIds": [],
+        "locationLabels": [
+          "\u4E34\u6DC4\u00B7\u9F50\u90FD"
+        ],
+        "historicalCapitalIds": [
+          "linzi_qi"
+        ],
         "historicalPeriodIds": [
           "yuan"
         ],
         "architectureTypeIds": [
+          "capital_complex",
           "period_architecture"
         ],
         "gardenTypeIds": [],
@@ -57910,6 +57922,2662 @@
           "mountain_garden"
         ],
         "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      }
+    },
+    {
+      "id": "ref-architecture-346-wikime-5089d8bbd4c2",
+      "category": "architecture",
+      "title": "Tianjin Gulou Street Drum Tower.jpg",
+      "creator": "William M Benson",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Tianjin_Gulou_Street_Drum_Tower.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Tianjin_Gulou_Street_Drum_Tower.jpg",
+      "license": "pdm",
+      "licenseVersion": "1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-346-wikime-5089d8bbd4c2.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 538864,
+      "width": 1024,
+      "height": 768,
+      "sha256": "aee757194b0ab92e3af4306fa5b2faa9485ade7cc49d46f33e8339e19e475bff",
+      "downloadedAtUtc": "2026-07-24T15:37:11.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "province.tianjin"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [
+          "tianjin"
+        ],
+        "locationLabels": [
+          "\u5929\u6D25\u5E02"
+        ],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "regional_historic_architecture"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-architecture-347-wikime-884d43b4017c",
+      "category": "architecture",
+      "title": "Shang Dynasty City Wall, Zhengzhou 02.jpg",
+      "creator": "Gary Todd",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Shang_Dynasty_City_Wall,_Zhengzhou_02.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Shang_Dynasty_City_Wall%2C_Zhengzhou_02.jpg",
+      "license": "cc0",
+      "licenseVersion": "1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-347-wikime-884d43b4017c.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 611163,
+      "width": 1280,
+      "height": 960,
+      "sha256": "5fffe987b09b15ff9c0bd4f60f83706a47333b54a8c99a9e8ced0a17d2a87082",
+      "downloadedAtUtc": "2026-07-24T15:40:15.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.zhengzhou_shang"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u90D1\u5DDE\u5546\u57CE"
+        ],
+        "historicalCapitalIds": [
+          "zhengzhou_shang"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-architecture-348-wikime-a2d92374a72f",
+      "category": "architecture",
+      "title": "Shang Dynasty City Wall, Zhengzhou 04.jpg",
+      "creator": "Gary Todd",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Shang_Dynasty_City_Wall,_Zhengzhou_04.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Shang_Dynasty_City_Wall%2C_Zhengzhou_04.jpg",
+      "license": "cc0",
+      "licenseVersion": "1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-348-wikime-a2d92374a72f.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 605816,
+      "width": 1280,
+      "height": 960,
+      "sha256": "b508ed3fe84ebdba1d56a6fcc25db7ec3343c62b584099643f771b84efc08030",
+      "downloadedAtUtc": "2026-07-24T15:40:15.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.zhengzhou_shang"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u90D1\u5DDE\u5546\u57CE"
+        ],
+        "historicalCapitalIds": [
+          "zhengzhou_shang"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-architecture-349-openve-2dbe98490de7",
+      "category": "architecture",
+      "title": "Giant Wild Goose Pagoda",
+      "creator": "xiquinhosilva",
+      "creatorUrl": "https://www.flickr.com/photos/7138083@N04",
+      "source": "openverse/flickr/flickr",
+      "sourcePageUrl": "https://www.flickr.com/photos/7138083@N04/54075271485",
+      "downloadUrl": "https://live.staticflickr.com/65535/54075271485_f796369561_b.jpg",
+      "license": "by",
+      "licenseVersion": "2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-349-openve-2dbe98490de7.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 242625,
+      "width": 1024,
+      "height": 683,
+      "sha256": "47d855d6050bfbc7b1f6cbe21adf3488bf2004d5b7c411004878c32f6b1ea513",
+      "downloadedAtUtc": "2026-07-24T15:44:07.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.changan_xian"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u897F\u5B89\u00B7\u957F\u5B89"
+        ],
+        "historicalCapitalIds": [
+          "changan_xian"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-architecture-350-wikime-7493973d520c",
+      "category": "architecture",
+      "title": "Shang Dynasty City Wall, Zhengzhou 01.jpg",
+      "creator": "Gary Todd",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Shang_Dynasty_City_Wall,_Zhengzhou_01.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Shang_Dynasty_City_Wall%2C_Zhengzhou_01.jpg",
+      "license": "cc0",
+      "licenseVersion": "1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-350-wikime-7493973d520c.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 591443,
+      "width": 1280,
+      "height": 960,
+      "sha256": "ef9212bcc5ce84bf005f4592d3c427ae4984c5887c730a5c3df34d2e16ecc378",
+      "downloadedAtUtc": "2026-07-24T16:12:03.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.zhengzhou_shang"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u90D1\u5DDE\u5546\u57CE"
+        ],
+        "historicalCapitalIds": [
+          "zhengzhou_shang"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-architecture-351-wikime-d6ce10fd31c0",
+      "category": "architecture",
+      "title": "1358 Palacio Yongle.jpg",
+      "creator": "Unknown author Unknown author",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:1358_Palacio_Yongle.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/1358_Palacio_Yongle.jpg",
+      "license": "pdm",
+      "licenseVersion": "1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-351-wikime-d6ce10fd31c0.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 533324,
+      "width": 1106,
+      "height": 830,
+      "sha256": "f8a5e94d4ae412c7b82a0b766080901b61237ddb2d196b4fed55e2edd46d577b",
+      "downloadedAtUtc": "2026-07-24T16:15:07.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "period.yuan"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [
+          "yuan"
+        ],
+        "architectureTypeIds": [
+          "period_architecture"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-architecture-352-wikime-e740362db55e",
+      "category": "architecture",
+      "title": "2014 Manchu Forbidden City Stele at Chenghuang Temple.jpg",
+      "creator": "Gary Lee Todd, Ph.D.",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:2014_Manchu_Forbidden_City_Stele_at_Chenghuang_Temple.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/2014_Manchu_Forbidden_City_Stele_at_Chenghuang_Temple.jpg",
+      "license": "cc0",
+      "licenseVersion": "1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-352-wikime-e740362db55e.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 2214979,
+      "width": 3168,
+      "height": 4752,
+      "sha256": "19c912ff9bca73a8d7e98464f95505cca2f64b2336d2d9590cdda3f2f931f523",
+      "downloadedAtUtc": "2026-07-24T16:15:15.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "period.qing"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [
+          "qing"
+        ],
+        "architectureTypeIds": [
+          "period_architecture"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      }
+    },
+    {
+      "id": "ref-architecture-353-wikime-c12cc995bf46",
+      "category": "architecture",
+      "title": "SZ \u6DF1\u5733 Shenzhen \u5357\u5C71\u533A Nanshan \u79D1\u82D1\u5357\u8DEF Keyuan South Road \u4E2D\u7535\u957F\u57CE\u4E50\u6D32 LifeJoy \u5546\u573A mall \u5E99\u6771\u6392\u9AA8 food shop January 2024 R12S.jpg",
+      "creator": "NAnuMORE KWANA Simonz",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E5%8D%97%E5%B1%B1%E5%8C%BA_Nanshan_%E7%A7%91%E8%8B%91%E5%8D%97%E8%B7%AF_Keyuan_South_Road_%E4%B8%AD%E7%94%B5%E9%95%BF%E5%9F%8E%E4%B9%90%E6%B4%B2_LifeJoy_%E5%95%86%E5%9C%BA_mall_%E5%BA%99%E6%9D%B1%E6%8E%92%E9%AA%A8_food_shop_January_2024_R12S.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E5%8D%97%E5%B1%B1%E5%8C%BA_Nanshan_%E7%A7%91%E8%8B%91%E5%8D%97%E8%B7%AF_Keyuan_South_Road_%E4%B8%AD%E7%94%B5%E9%95%BF%E5%9F%8E%E4%B9%90%E6%B4%B2_LifeJoy_%E5%95%86%E5%9C%BA_mall_%E5%BA%99%E6%9D%B1%E6%8E%92%E9%AA%A8_food_shop_January_2024_R12S.jpg",
+      "license": "cc0",
+      "licenseVersion": "1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-353-wikime-c12cc995bf46.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 3348124,
+      "width": 3000,
+      "height": 4000,
+      "sha256": "035d270b6ba576c4b0c334c8e8899eccb245249579744019d2370264dd8a84f1",
+      "downloadedAtUtc": "2026-07-24T16:16:04.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.lingnan_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "lingnan_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      }
+    },
+    {
+      "id": "ref-architecture-354-wikime-8eae2b75f279",
+      "category": "architecture",
+      "title": "SZ \u6DF1\u5733 Shenzhen \u5357\u5C71 Nanshan near bridge tunnel night January 2024 R12S 03.jpg",
+      "creator": "NAnuMORE KWANA Simonz",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E5%8D%97%E5%B1%B1_Nanshan_near_bridge_tunnel_night_January_2024_R12S_03.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E5%8D%97%E5%B1%B1_Nanshan_near_bridge_tunnel_night_January_2024_R12S_03.jpg",
+      "license": "cc0",
+      "licenseVersion": "1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-354-wikime-8eae2b75f279.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 3286452,
+      "width": 3000,
+      "height": 4000,
+      "sha256": "9139eb376b0d13319935b4e738ed9eb89e028e6255d4e2ca3d4be73f97f7830c",
+      "downloadedAtUtc": "2026-07-24T16:16:04.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.lingnan_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "lingnan_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      }
+    },
+    {
+      "id": "ref-landscape-266-wikime-84103b601452",
+      "category": "landscape",
+      "title": "West Bund Honam JP.jpg",
+      "creator": "\u5EE3\u6771\u6CB3\u6751\u6D0B\u884C\u767C\u884C",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:West_Bund_Honam_JP.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/West_Bund_Honam_JP.jpg",
+      "license": "pdm",
+      "licenseVersion": "1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "composition",
+        "lighting",
+        "color",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/landscape/ref-landscape-266-wikime-84103b601452.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 111921,
+      "width": 800,
+      "height": 496,
+      "sha256": "8dc777be3a8bf684d2afca7eac103c7692e5eb01913688d397a5668ba3ebdd8b",
+      "downloadedAtUtc": "2026-07-24T16:17:09.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.lingnan_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "not_applicable",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [],
+        "gardenTypeIds": [
+          "lingnan_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-architecture-355-wikime-e55f40c0e42b",
+      "category": "architecture",
+      "title": "Tanzhetemplepic4.jpg",
+      "creator": "DING *_^",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Tanzhetemplepic4.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Tanzhetemplepic4.jpg",
+      "license": "by",
+      "licenseVersion": "2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-355-wikime-e55f40c0e42b.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 426180,
+      "width": 1024,
+      "height": 659,
+      "sha256": "724a56f4308e77617bd93c41e1062c0f91090b568ff84db36782bee095aa7cc5",
+      "downloadedAtUtc": "2026-07-24T16:18:49.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.temple_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "temple_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-architecture-356-wikime-1290b47f6d5a",
+      "category": "architecture",
+      "title": "Saint Sophia Cathedral, Harbin 1.jpg",
+      "creator": "\u95EB\u6069\u94ED / Enming Yan",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Saint_Sophia_Cathedral,_Harbin_1.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Saint_Sophia_Cathedral%2C_Harbin_1.jpg/3840px-Saint_Sophia_Cathedral%2C_Harbin_1.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-356-wikime-1290b47f6d5a.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1661530,
+      "width": 3840,
+      "height": 2880,
+      "sha256": "bd3e7a9bd85c97d1c0e96cc28e84bf881277e8bfbaf797894f45be54464c8e29",
+      "downloadedAtUtc": "2026-07-25T01:18:44.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "province.heilongjiang"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [
+          "heilongjiang"
+        ],
+        "locationLabels": [
+          "\u9ED1\u9F99\u6C5F\u7701"
+        ],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "regional_historic_architecture"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-357-wikime-8e5155616a1b",
+      "category": "architecture",
+      "title": "Saint Sophia Cathedral, Harbin 2.jpg",
+      "creator": "\u95EB\u6069\u94ED / Enming Yan",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Saint_Sophia_Cathedral,_Harbin_2.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Saint_Sophia_Cathedral%2C_Harbin_2.jpg/3840px-Saint_Sophia_Cathedral%2C_Harbin_2.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-357-wikime-8e5155616a1b.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1620966,
+      "width": 3840,
+      "height": 2880,
+      "sha256": "520c1b28e234a796dbc02b9b9e50df0ab0e0025d615277b1b427ff98ab9d1ed1",
+      "downloadedAtUtc": "2026-07-25T01:18:44.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "province.heilongjiang"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [
+          "heilongjiang"
+        ],
+        "locationLabels": [
+          "\u9ED1\u9F99\u6C5F\u7701"
+        ],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "regional_historic_architecture"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-358-wikime-f52cee184cd9",
+      "category": "architecture",
+      "title": "Zhongshan Ancient Town, Jiangjin, Chongqing.jpg",
+      "creator": "Chen Hualin",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Zhongshan_Ancient_Town,_Jiangjin,_Chongqing.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Zhongshan_Ancient_Town%2C_Jiangjin%2C_Chongqing.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-358-wikime-f52cee184cd9.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1701869,
+      "width": 2272,
+      "height": 1520,
+      "sha256": "84e28e4b0bf732ea75fa6942f187a1cf96cd0e037e06189884fad3e08117529f",
+      "downloadedAtUtc": "2026-07-25T01:18:47.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "province.chongqing"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [
+          "chongqing"
+        ],
+        "locationLabels": [
+          "\u91CD\u5E86\u5E02"
+        ],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "regional_historic_architecture"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-359-openve-fa4934ff3ec1",
+      "category": "architecture",
+      "title": "Chongqing",
+      "creator": "Wilson Loo",
+      "creatorUrl": "https://www.flickr.com/photos/8097809@N02",
+      "source": "openverse/flickr/flickr",
+      "sourcePageUrl": "https://www.flickr.com/photos/8097809@N02/5377306152",
+      "downloadUrl": "https://live.staticflickr.com/5042/5377306152_47618a15bb_b.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-359-openve-fa4934ff3ec1.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 291272,
+      "width": 768,
+      "height": 1024,
+      "sha256": "0b37472d800e74d0d66e9258a4dcbcc24aea57116e6f72ae779cba9b60b4c595",
+      "downloadedAtUtc": "2026-07-25T01:18:50.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "province.chongqing"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [
+          "chongqing"
+        ],
+        "locationLabels": [
+          "\u91CD\u5E86\u5E02"
+        ],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "regional_historic_architecture"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-360-wikime-44544460567b",
+      "category": "architecture",
+      "title": "A Model of the Site of Xianyang Palace I 02 2012-09.JPG",
+      "creator": "\u732B\u732B\u7684\u65E5\u8BB0\u672C",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:A_Model_of_the_Site_of_Xianyang_Palace_I_02_2012-09.JPG",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/A_Model_of_the_Site_of_Xianyang_Palace_I_02_2012-09.JPG/3840px-A_Model_of_the_Site_of_Xianyang_Palace_I_02_2012-09.JPG",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-360-wikime-44544460567b.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1528623,
+      "width": 3840,
+      "height": 2880,
+      "sha256": "ea166ca8cd57a08b18c159b15d6ed76fb12869efdd0e7eee4331c8a8e69ea66e",
+      "downloadedAtUtc": "2026-07-25T01:19:07.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.xianyang_qin"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u54B8\u9633\u00B7\u79E6\u90FD\u9057\u5740"
+        ],
+        "historicalCapitalIds": [
+          "xianyang_qin"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-361-wikime-c76b3586ab87",
+      "category": "architecture",
+      "title": "A Model of the Site of Xianyang Palace I 01 2012-09.JPG",
+      "creator": "\u732B\u732B\u7684\u65E5\u8BB0\u672C",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:A_Model_of_the_Site_of_Xianyang_Palace_I_01_2012-09.JPG",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/A_Model_of_the_Site_of_Xianyang_Palace_I_01_2012-09.JPG/3840px-A_Model_of_the_Site_of_Xianyang_Palace_I_01_2012-09.JPG",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-361-wikime-c76b3586ab87.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1542762,
+      "width": 3840,
+      "height": 2880,
+      "sha256": "b1611ab90c5a532609b6a931d965fb7ebbc3bf2dc368610886c9429bc3292108",
+      "downloadedAtUtc": "2026-07-25T01:19:07.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.xianyang_qin"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u54B8\u9633\u00B7\u79E6\u90FD\u9057\u5740"
+        ],
+        "historicalCapitalIds": [
+          "xianyang_qin"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-362-wikime-81b69b4b0abd",
+      "category": "architecture",
+      "title": "A Semicircle Eaves Tile with Tree and two-beast Design Excavated from the Site of Xianyang Palace I 2012-09.JPG",
+      "creator": "\u732B\u732B\u7684\u65E5\u8BB0\u672C",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:A_Semicircle_Eaves_Tile_with_Tree_and_two-beast_Design_Excavated_from_the_Site_of_Xianyang_Palace_I_2012-09.JPG",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/A_Semicircle_Eaves_Tile_with_Tree_and_two-beast_Design_Excavated_from_the_Site_of_Xianyang_Palace_I_2012-09.JPG/3840px-A_Semicircle_Eaves_Tile_with_Tree_and_two-beast_Design_Excavated_from_the_Site_of_Xianyang_Palace_I_2012-09.JPG",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-362-wikime-81b69b4b0abd.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1495303,
+      "width": 3840,
+      "height": 2880,
+      "sha256": "283950dfa8e4585f77b13f4d9ba177a24baef86d99843d761e8d891e7fd12e7d",
+      "downloadedAtUtc": "2026-07-25T01:19:19.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.xianyang_qin"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u54B8\u9633\u00B7\u79E6\u90FD\u9057\u5740"
+        ],
+        "historicalCapitalIds": [
+          "xianyang_qin"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-landscape-267-wikime-f0cfa856792e",
+      "category": "landscape",
+      "title": "WuXianGuan-yard-0514.jpg",
+      "creator": "User:Vmenkov",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:WuXianGuan-yard-0514.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/WuXianGuan-yard-0514.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "composition",
+        "lighting",
+        "color",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/landscape/ref-landscape-267-wikime-f0cfa856792e.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1594665,
+      "width": 2048,
+      "height": 1536,
+      "sha256": "58ef007c4691670248e83d3eb733edd775a67b7a348db3ad86b824f6333045ab",
+      "downloadedAtUtc": "2026-07-25T01:20:44.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.lingnan_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "not_applicable",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [],
+        "gardenTypeIds": [
+          "lingnan_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-363-wikime-f5dd8a0e9cb6",
+      "category": "architecture",
+      "title": "Garden Grove Vietnamese Buddhist Temple.jpg",
+      "creator": "Toksave",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Garden_Grove_Vietnamese_Buddhist_Temple.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Garden_Grove_Vietnamese_Buddhist_Temple.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-363-wikime-f5dd8a0e9cb6.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 486831,
+      "width": 1280,
+      "height": 960,
+      "sha256": "33ede46dcffd35df9c9f13cef95966b760616e24211088d722031adaf56d18fb",
+      "downloadedAtUtc": "2026-07-25T01:20:53.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.temple_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "temple_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-364-wikime-2b9d46d23bdb",
+      "category": "architecture",
+      "title": "Man Chunman Buddhist Temple, Dai Ethnic Garden, Xishuangbanna Prefecture, China.jpg",
+      "creator": "Jacek Karczmarczyk",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Man_Chunman_Buddhist_Temple,_Dai_Ethnic_Garden,_Xishuangbanna_Prefecture,_China.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Man_Chunman_Buddhist_Temple%2C_Dai_Ethnic_Garden%2C_Xishuangbanna_Prefecture%2C_China.jpg",
+      "license": "by",
+      "licenseVersion": "3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-364-wikime-2b9d46d23bdb.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 335237,
+      "width": 990,
+      "height": 659,
+      "sha256": "d2f2bd4370d091271408a3381c006bf4529bcf6806402fb6ef42478a5e20c0c9",
+      "downloadedAtUtc": "2026-07-25T01:20:53.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.temple_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "temple_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-architecture-365-wikime-d6633f5c3e91",
+      "category": "architecture",
+      "title": "Hwa Chong Temple 02.jpg",
+      "creator": "Zarate123",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Hwa_Chong_Temple_02.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Hwa_Chong_Temple_02.jpg/3840px-Hwa_Chong_Temple_02.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-365-wikime-d6633f5c3e91.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 2536578,
+      "width": 3840,
+      "height": 2880,
+      "sha256": "23f6abf758682717cf0b8e3969982fab0b0b9ac82312b25015c8b1e1cf8ed8c7",
+      "downloadedAtUtc": "2026-07-25T01:21:40.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.temple_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "temple_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-366-wikime-03ea356fbc99",
+      "category": "architecture",
+      "title": "Hwa Chong Temple 04.jpg",
+      "creator": "Zarate123",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Hwa_Chong_Temple_04.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Hwa_Chong_Temple_04.jpg/3840px-Hwa_Chong_Temple_04.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-366-wikime-03ea356fbc99.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1907361,
+      "width": 3840,
+      "height": 2880,
+      "sha256": "f5cbcec0c8867da1f802b965114d26c01a6f110631cecdcb69af3e3fd719ae2b",
+      "downloadedAtUtc": "2026-07-25T01:21:40.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.temple_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "temple_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-367-wikime-cc86f069490d",
+      "category": "architecture",
+      "title": "Hwa Chong Temple 09.jpg",
+      "creator": "Zarate123",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Hwa_Chong_Temple_09.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Hwa_Chong_Temple_09.jpg/3840px-Hwa_Chong_Temple_09.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-367-wikime-cc86f069490d.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 3776355,
+      "width": 3840,
+      "height": 5120,
+      "sha256": "33b60ec8637206e34dd7a1cb623240eea708e0044fd52d77af685e62f4713bd2",
+      "downloadedAtUtc": "2026-07-25T01:21:40.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.temple_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "temple_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-368-openve-81265315a53a",
+      "category": "architecture",
+      "title": "7 Storey Pagoda",
+      "creator": "Eustaquio Santimano",
+      "creatorUrl": "https://www.flickr.com/photos/25509772@N00",
+      "source": "openverse/flickr/flickr",
+      "sourcePageUrl": "https://www.flickr.com/photos/25509772@N00/6016739195",
+      "downloadUrl": "https://live.staticflickr.com/6013/6016739195_b2f305312c_b.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-368-openve-81265315a53a.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 217707,
+      "width": 1024,
+      "height": 680,
+      "sha256": "d16240c4bcd87c966d4c973d13d001906179202cea5eb5703ee6d33fbd21d818",
+      "downloadedAtUtc": "2026-07-25T01:22:36.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.temple_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "temple_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-369-openve-5f567766e1c8",
+      "category": "architecture",
+      "title": "Evening Drum at Shuang Yen",
+      "creator": "Tony Fischer Photography",
+      "creatorUrl": "https://www.flickr.com/photos/22714323@N06",
+      "source": "openverse/flickr/flickr",
+      "sourcePageUrl": "https://www.flickr.com/photos/22714323@N06/2774183845",
+      "downloadUrl": "https://live.staticflickr.com/3169/2774183845_9bce90ffbe_b.jpg",
+      "license": "by",
+      "licenseVersion": "2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-369-openve-5f567766e1c8.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 415574,
+      "width": 1024,
+      "height": 975,
+      "sha256": "42d107b2224ea53c6e9911aac25c263b6e9906cc5bcf473729c989e3edca00c5",
+      "downloadedAtUtc": "2026-07-25T01:22:36.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.temple_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "temple_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-architecture-370-openve-74c1db53be4d",
+      "category": "architecture",
+      "title": "Kyoto, Kinkaku-ji, Golden Temple",
+      "creator": "Arian Zwegers",
+      "creatorUrl": "https://www.flickr.com/photos/67769030@N07",
+      "source": "openverse/flickr/flickr",
+      "sourcePageUrl": "https://www.flickr.com/photos/67769030@N07/6172337393",
+      "downloadUrl": "https://live.staticflickr.com/6178/6172337393_a96c7e0c8a_b.jpg",
+      "license": "by",
+      "licenseVersion": "2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-370-openve-74c1db53be4d.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 182436,
+      "width": 1023,
+      "height": 692,
+      "sha256": "91e6aa56cd6f1ecb44acc84446e0a56332801e94ecc6e0cb54679d9960ac7ece",
+      "downloadedAtUtc": "2026-07-25T01:22:36.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.temple_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "temple_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-architecture-371-openve-f0f02ba8f9a0",
+      "category": "architecture",
+      "title": "Chinese Satan",
+      "creator": "Wootang01",
+      "creatorUrl": "https://www.flickr.com/photos/7310714@N06",
+      "source": "openverse/flickr/flickr",
+      "sourcePageUrl": "https://www.flickr.com/photos/7310714@N06/2143139811",
+      "downloadUrl": "https://live.staticflickr.com/2316/2143139811_f131e3b197_b.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-371-openve-f0f02ba8f9a0.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 254203,
+      "width": 768,
+      "height": 1024,
+      "sha256": "d576dcdb128ece1e46e08e9bd5eadfe3f45fca3272123fabba2eca678028ace6",
+      "downloadedAtUtc": "2026-07-25T01:22:36.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.temple_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "temple_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-372-openve-56f54307d060",
+      "category": "architecture",
+      "title": "DSC02652",
+      "creator": "lyng883",
+      "creatorUrl": "https://www.flickr.com/photos/87616709@N00",
+      "source": "openverse/flickr/flickr",
+      "sourcePageUrl": "https://www.flickr.com/photos/87616709@N00/5278143332",
+      "downloadUrl": "https://live.staticflickr.com/5128/5278143332_a06c007ed7_b.jpg",
+      "license": "by",
+      "licenseVersion": "2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-372-openve-56f54307d060.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 364889,
+      "width": 1024,
+      "height": 768,
+      "sha256": "186ef1d51321ab9dce957676e387f8846ade7b6ae2697a1aad65ffcd5f1847b8",
+      "downloadedAtUtc": "2026-07-25T01:22:43.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "garden.temple_garden"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "garden_architecture"
+        ],
+        "gardenTypeIds": [
+          "temple_garden"
+        ],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "verified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      }
+    },
+    {
+      "id": "ref-waters-042-wikime-5dfe18d87e22",
+      "category": "waters",
+      "title": "Ningbo, China - Coast Guard Academy (3723125975).jpg",
+      "creator": "USCG Press",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ningbo,_China_-_Coast_Guard_Academy_(3723125975).jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Ningbo%2C_China_-_Coast_Guard_Academy_%283723125975%29.jpg/3840px-Ningbo%2C_China_-_Coast_Guard_Academy_%283723125975%29.jpg",
+      "license": "by",
+      "licenseVersion": "2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "composition",
+        "lighting",
+        "color",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/waters/ref-waters-042-wikime-5dfe18d87e22.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1634566,
+      "width": 3840,
+      "height": 2880,
+      "sha256": "12bc3a673d389c687f84400e85c89cf31e109befb64da3a7f2e53e10ae64fad7",
+      "downloadedAtUtc": "2026-07-25T01:23:32.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "category.waters",
+        "landform.coast"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "not_applicable",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [],
+        "gardenTypeIds": [],
+        "landformIds": [
+          "coast"
+        ],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      }
+    },
+    {
+      "id": "ref-waters-043-wikime-7d8605fc5e52",
+      "category": "waters",
+      "title": "Ningbo, China - Coast Guard Academy (3723928548).jpg",
+      "creator": "USCG Press",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ningbo,_China_-_Coast_Guard_Academy_(3723928548).jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Ningbo%2C_China_-_Coast_Guard_Academy_%283723928548%29.jpg/3840px-Ningbo%2C_China_-_Coast_Guard_Academy_%283723928548%29.jpg",
+      "license": "by",
+      "licenseVersion": "2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "composition",
+        "lighting",
+        "color",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/waters/ref-waters-043-wikime-7d8605fc5e52.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1100637,
+      "width": 3840,
+      "height": 2158,
+      "sha256": "fec459cd20adb022e5efa3abfd36082222975ee063357d383c7f36678e7dad59",
+      "downloadedAtUtc": "2026-07-25T01:23:32.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "category.waters",
+        "landform.coast"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "not_applicable",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [],
+        "gardenTypeIds": [],
+        "landformIds": [
+          "coast"
+        ],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      }
+    },
+    {
+      "id": "ref-waters-044-openve-c07a0b0a9508",
+      "category": "waters",
+      "title": "The China Coast Marathon(Finishing line)\u4E2D\u570B\u6CBF\u5CB8\u99AC\u62C9\u677E(\u885D\u7DDA\u7BC7)",
+      "creator": "Thomas Fan",
+      "creatorUrl": "https://www.flickr.com/photos/42502651@N00",
+      "source": "openverse/flickr/flickr",
+      "sourcePageUrl": "https://www.flickr.com/photos/42502651@N00/364853304",
+      "downloadUrl": "https://live.staticflickr.com/117/364853304_021c5888bc_b.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "composition",
+        "lighting",
+        "color",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/waters/ref-waters-044-openve-c07a0b0a9508.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 130488,
+      "width": 683,
+      "height": 1024,
+      "sha256": "3981e6ae895fe7cd34fc5ce013e59ff39978e6a981ee726f7f145d56356aa3bb",
+      "downloadedAtUtc": "2026-07-25T01:26:05.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "category.waters",
+        "landform.coast"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "not_applicable",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [],
+        "gardenTypeIds": [],
+        "landformIds": [
+          "coast"
+        ],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-waters-045-openve-c6120e45a350",
+      "category": "waters",
+      "title": "United States and China Coast Guards interdict vessel for illegally fishing on the high seas",
+      "creator": "Coast Guard News",
+      "creatorUrl": "https://www.flickr.com/photos/23412076@N06",
+      "source": "openverse/flickr/flickr",
+      "sourcePageUrl": "https://www.flickr.com/photos/23412076@N06/14154964437",
+      "downloadUrl": "https://live.staticflickr.com/3887/14154964437_ff3a4f31ce_b.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "composition",
+        "lighting",
+        "color",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/waters/ref-waters-045-openve-c6120e45a350.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 118645,
+      "width": 1024,
+      "height": 683,
+      "sha256": "301d55155303ae1c00ef1663bb9b705c27f7cabea6ba4d1bb77b48e7e42c7379",
+      "downloadedAtUtc": "2026-07-25T01:26:05.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "category.waters",
+        "landform.coast"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "not_applicable",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [],
+        "gardenTypeIds": [],
+        "landformIds": [
+          "coast"
+        ],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-landscape-268-wikime-8a962e25eba2",
+      "category": "landscape",
+      "title": "Galapagos China hat.jpg",
+      "creator": "Ljuba brank",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Galapagos_China_hat.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Galapagos_China_hat.jpg/3840px-Galapagos_China_hat.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "composition",
+        "lighting",
+        "color",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/landscape/ref-landscape-268-wikime-8a962e25eba2.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1195794,
+      "width": 3840,
+      "height": 2880,
+      "sha256": "55c069163db401c22d990882b31657af81e3da450bf6599bf67fd680f712899b",
+      "downloadedAtUtc": "2026-07-25T01:26:57.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "landform.volcano"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "not_applicable",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [],
+        "gardenTypeIds": [],
+        "landformIds": [
+          "volcano"
+        ],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-landscape-269-wikime-fc3fe2439a55",
+      "category": "landscape",
+      "title": "Cloudy Volcano, Phandar lake, Gilgit, Pakistan.jpg",
+      "creator": "Arslan.haider1990",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Cloudy_Volcano,_Phandar_lake,_Gilgit,_Pakistan.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Cloudy_Volcano%2C_Phandar_lake%2C_Gilgit%2C_Pakistan.jpg/1920px-Cloudy_Volcano%2C_Phandar_lake%2C_Gilgit%2C_Pakistan.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "composition",
+        "lighting",
+        "color",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/landscape/ref-landscape-269-wikime-fc3fe2439a55.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1140690,
+      "width": 1920,
+      "height": 2560,
+      "sha256": "0ab0821444c78efaf4a708c67b7989ab8934774e7e330a4ad3e2d4116a4a2e58",
+      "downloadedAtUtc": "2026-07-25T01:30:24.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "landform.volcano"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "not_applicable",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [],
+        "gardenTypeIds": [],
+        "landformIds": [
+          "volcano"
+        ],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-373-wikime-7943e995d156",
+      "category": "architecture",
+      "title": "Lingyan Si - Qian Fo Dian.jpg",
+      "creator": "M. Weitzel",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Lingyan_Si_-_Qian_Fo_Dian.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Lingyan_Si_-_Qian_Fo_Dian.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-373-wikime-7943e995d156.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 1385363,
+      "width": 2048,
+      "height": 1536,
+      "sha256": "07a5c7d4505cac7cfcb9a4bd8de3be7e28a49087dcf04925580878c178971ab9",
+      "downloadedAtUtc": "2026-07-25T01:37:53.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.linzi_qi"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u4E34\u6DC4\u00B7\u9F50\u90FD"
+        ],
+        "historicalCapitalIds": [
+          "linzi_qi"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-374-wikime-85d6dc0a0549",
+      "category": "architecture",
+      "title": "China Jinan 5207248efs.jpg",
+      "creator": "ermell",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:China_Jinan_5207248efs.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/China_Jinan_5207248efs.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-374-wikime-85d6dc0a0549.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 8036891,
+      "width": 3461,
+      "height": 3456,
+      "sha256": "7e19f0adcd9ac6d9473a4b04f1bbd0152ea8689795ded2857754e0f973593789",
+      "downloadedAtUtc": "2026-07-25T01:37:53.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.linzi_qi"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u4E34\u6DC4\u00B7\u9F50\u90FD"
+        ],
+        "historicalCapitalIds": [
+          "linzi_qi"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-375-wikime-a16a3ca1da18",
+      "category": "architecture",
+      "title": "China Jinan 5207355.jpg",
+      "creator": "ermell",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:China_Jinan_5207355.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/China_Jinan_5207355.jpg/3840px-China_Jinan_5207355.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-375-wikime-a16a3ca1da18.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 3992297,
+      "width": 3840,
+      "height": 2880,
+      "sha256": "a3311295734cc22accc80f86a128778f10d84cbe0c21379565aef78ee9325d7c",
+      "downloadedAtUtc": "2026-07-25T01:37:53.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.linzi_qi"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u4E34\u6DC4\u00B7\u9F50\u90FD"
+        ],
+        "historicalCapitalIds": [
+          "linzi_qi"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-376-wikime-ff398371da0c",
+      "category": "architecture",
+      "title": "China Jinan 5207356.jpg",
+      "creator": "ermell",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:China_Jinan_5207356.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/China_Jinan_5207356.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-376-wikime-ff398371da0c.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 13408618,
+      "width": 3456,
+      "height": 4608,
+      "sha256": "09352c236be2e43e5935d46260ddcd09f0e89e229b51f414f3ea10d5c706ffb6",
+      "downloadedAtUtc": "2026-07-25T01:37:53.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.linzi_qi"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u4E34\u6DC4\u00B7\u9F50\u90FD"
+        ],
+        "historicalCapitalIds": [
+          "linzi_qi"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-377-openve-45affdef5a0b",
+      "category": "architecture",
+      "title": "Confucius Temple",
+      "creator": "ToGa Wanderings",
+      "creatorUrl": "https://www.flickr.com/photos/69031678@N00",
+      "source": "openverse/flickr/flickr",
+      "sourcePageUrl": "https://www.flickr.com/photos/69031678@N00/3596758507",
+      "downloadUrl": "https://live.staticflickr.com/2464/3596758507_9c6611046c_b.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-377-openve-45affdef5a0b.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 122390,
+      "width": 1024,
+      "height": 768,
+      "sha256": "d677b9f621608873be6bb0def6d3eb9ae21465ae175d76d9c882c958d2b9a3e0",
+      "downloadedAtUtc": "2026-07-25T01:38:10.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.linzi_qi"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u4E34\u6DC4\u00B7\u9F50\u90FD"
+        ],
+        "historicalCapitalIds": [
+          "linzi_qi"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-378-openve-b8b1bd322b8c",
+      "category": "architecture",
+      "title": "Confucius Temple",
+      "creator": "ToGa Wanderings",
+      "creatorUrl": "https://www.flickr.com/photos/69031678@N00",
+      "source": "openverse/flickr/flickr",
+      "sourcePageUrl": "https://www.flickr.com/photos/69031678@N00/3596757461",
+      "downloadUrl": "https://live.staticflickr.com/3395/3596757461_5e09dc8b74_b.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-378-openve-b8b1bd322b8c.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 278992,
+      "width": 1024,
+      "height": 768,
+      "sha256": "a3808056555d871df98ad1fa8dd5d14961afcc3d546371e4ab4239e3130937f5",
+      "downloadedAtUtc": "2026-07-25T01:38:10.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.linzi_qi"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u4E34\u6DC4\u00B7\u9F50\u90FD"
+        ],
+        "historicalCapitalIds": [
+          "linzi_qi"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "reduced_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-379-wikime-6e46da0f0b4d",
+      "category": "architecture",
+      "title": "Mount tai dai temple 2006 09.jpg",
+      "creator": "Rolf M\u00FCller ( User:Rolfmueller )",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Mount_tai_dai_temple_2006_09.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Mount_tai_dai_temple_2006_09.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-379-wikime-6e46da0f0b4d.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 673606,
+      "width": 1728,
+      "height": 1152,
+      "sha256": "dc39c6289ce18680c6ce6a7bea9cb23bbaf3a441dd88386958d946ec73288a5c",
+      "downloadedAtUtc": "2026-07-25T01:39:00.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.linzi_qi"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u4E34\u6DC4\u00B7\u9F50\u90FD"
+        ],
+        "historicalCapitalIds": [
+          "linzi_qi"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-architecture-380-wikime-7678ffd10dfd",
+      "category": "architecture",
+      "title": "Mount tai roofs 2006 09 1.jpg",
+      "creator": "Rolf M\u00FCller ( User:Rolfmueller )",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Mount_tai_roofs_2006_09_1.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Mount_tai_roofs_2006_09_1.jpg",
+      "license": "unverified",
+      "licenseVersion": "unverified",
+      "licenseUrl": null,
+      "commercialUseAllowed": false,
+      "modificationsAllowed": false,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "structure",
+        "material",
+        "composition",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-380-wikime-7678ffd10dfd.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 578050,
+      "width": 1728,
+      "height": 1152,
+      "sha256": "a0c538eb2a5ba09cf9b7f75573b1e8edb82a107bc08d5779adc37bb5119016e4",
+      "downloadedAtUtc": "2026-07-25T01:39:00.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "capital.linzi_qi"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "unknown_needs_review",
+        "provinceRegionIds": [],
+        "locationLabels": [
+          "\u4E34\u6DC4\u00B7\u9F50\u90FD"
+        ],
+        "historicalCapitalIds": [
+          "linzi_qi"
+        ],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [
+          "capital_complex"
+        ],
+        "gardenTypeIds": [],
+        "landformIds": [],
+        "weatherPhenomenonIds": [],
+        "seasons": [],
+        "timesOfDay": []
+      },
+      "shortfallException": {
+        "reason": "material_shortage",
+        "sourceStatus": "unverified",
+        "qualityStatus": "minimum_resolution",
+        "requiresManualReview": true
+      },
+      "sourceVerification": "unverified"
+    },
+    {
+      "id": "ref-landscape-270-wikime-98c52280bda1",
+      "category": "landscape",
+      "title": "Particle Pollution in Eastern China (13919).jpg",
+      "creator": "NASA image created by Jesse Allen, Earth Observatory, using data obtained from the MODIS Rapid Response team.",
+      "creatorUrl": null,
+      "source": "wikimedia_commons",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Particle_Pollution_in_Eastern_China_(13919).jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Particle_Pollution_in_Eastern_China_%2813919%29.jpg/3840px-Particle_Pollution_in_Eastern_China_%2813919%29.jpg",
+      "license": "pdm",
+      "licenseVersion": "1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "commercialUseAllowed": true,
+      "modificationsAllowed": true,
+      "shareAlikeRequired": false,
+      "referenceOnly": true,
+      "shipInBuild": false,
+      "identityReuse": false,
+      "referenceRoles": [
+        "composition",
+        "lighting",
+        "color",
+        "surface_detail"
+      ],
+      "localRelativePath": "content/reference-library/raw/landscape/ref-landscape-270-wikime-98c52280bda1.jpg",
+      "mediaType": "image/jpeg",
+      "byteLength": 3204784,
+      "width": 3840,
+      "height": 2880,
+      "sha256": "a0eb9d148b725337374ca7e71512d4d505a8f8e9c9ec841e93a7675dae3b0e3d",
+      "downloadedAtUtc": "2026-07-25T01:44:14.0000000+00:00",
+      "curationStatus": "needs_review",
+      "coverageTargetIds": [
+        "landform.volcano"
+      ],
+      "taxonomy": {
+        "authenticity": "unknown_needs_review",
+        "peoplePresence": "not_applicable",
+        "provinceRegionIds": [],
+        "locationLabels": [],
+        "historicalCapitalIds": [],
+        "historicalPeriodIds": [],
+        "architectureTypeIds": [],
+        "gardenTypeIds": [],
+        "landformIds": [
+          "volcano"
+        ],
         "weatherPhenomenonIds": [],
         "seasons": [],
         "timesOfDay": []

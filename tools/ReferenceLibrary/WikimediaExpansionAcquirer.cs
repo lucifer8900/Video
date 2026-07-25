@@ -53,7 +53,8 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         Action<ReferenceCatalog>? checkpoint,
         CancellationToken cancellationToken,
         IReadOnlySet<string>? focusedCategories = null,
-        IReadOnlySet<string>? focusedQueryIds = null)
+        IReadOnlySet<string>? focusedQueryIds = null,
+        IReadOnlySet<string>? focusedTargetIds = null)
     {
         Directory.CreateDirectory(downloadsRoot);
         Directory.CreateDirectory(cacheRoot);
@@ -66,7 +67,7 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         var usedIds = assets.Select(asset => asset.Id).ToHashSet(StringComparer.Ordinal);
         var categorySequences = assets.GroupBy(asset => asset.Category, StringComparer.Ordinal)
             .ToDictionary(group => group.Key, group => group.Count(), StringComparer.Ordinal);
-        foreach (var descriptor in OrderTargetsForAcquisition(plan, focusedCategories))
+        foreach (var descriptor in OrderTargetsForAcquisition(plan, focusedCategories, focusedTargetIds))
         {
             var acquisitionQueries = QueriesForAcquisition(descriptor, focusedQueryIds);
             if (ShouldUseDiversityAcquisition(focusedQueryIds) &&
@@ -121,7 +122,13 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
                      !QueryQuotaSatisfied(assets, descriptor, query);
                      page++)
                 {
-                    var candidates = await SearchAsync(plan, descriptor, query, page, cancellationToken);
+                    var candidates = await SearchAsync(
+                        plan,
+                        descriptor,
+                        query,
+                        page,
+                        cancellationToken,
+                        allowShortfallException: plan.UnverifiedSourcePolicy.Allow);
                     if (candidates.Count == 0)
                     {
                         break;
@@ -211,9 +218,9 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
                             DownloadUrl = candidate.DownloadUrl.AbsoluteUri,
                             License = candidate.License,
                             LicenseVersion = candidate.LicenseVersion,
-                            LicenseUrl = candidate.LicenseUrl.AbsoluteUri,
-                            CommercialUseAllowed = true,
-                            ModificationsAllowed = true,
+                            LicenseUrl = candidate.LicenseUrl?.AbsoluteUri,
+                            CommercialUseAllowed = candidate.License != "unverified",
+                            ModificationsAllowed = candidate.License != "unverified",
                             ShareAlikeRequired = false,
                             ReferenceOnly = true,
                             ShipInBuild = false,
@@ -227,6 +234,12 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
                             Sha256 = sha,
                             DownloadedAtUtc = DateTimeOffset.UtcNow,
                             CurationStatus = "needs_review",
+                            SourceVerification = candidate.License == "unverified" ? "unverified" : "verified",
+                            ShortfallException = ShortfallExceptionFor(
+                                plan,
+                                candidate,
+                                downloaded,
+                                targetShortfall: !TargetSatisfied(assets, descriptor)),
                         }, descriptor, query);
                         var newIndex = assets.Count;
                         assets.Add(asset);
@@ -255,9 +268,16 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
 
     internal static IReadOnlyList<ExpansionTargetDescriptor> OrderTargetsForAcquisition(
         ChinaExpansionPlan plan,
-        IReadOnlySet<string>? focusedCategories = null)
+        IReadOnlySet<string>? focusedCategories = null,
+        IReadOnlySet<string>? focusedTargetIds = null)
     {
         var targets = ChinaExpansionPlanValidator.EnumerateTargets(plan).ToArray();
+        if (focusedTargetIds is { Count: > 0 })
+        {
+            targets = targets
+                .Where(target => focusedTargetIds.Contains(target.TargetId))
+                .ToArray();
+        }
         if (focusedCategories is { Count: > 0 })
         {
             targets = targets
@@ -296,7 +316,7 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
             ReferenceOnly = true,
             ShipInBuild = false,
             MinimumAssetsPerCategory = 4,
-            AllowedLicenses = ["cc0", "pdm", "by"],
+            AllowedLicenses = ["cc0", "pdm", "by", "unverified"],
             Categories = baseCatalog.Categories.Count > 0
                 ? baseCatalog.Categories
                 : ["landscape", "architecture", "plants", "animals", "waters", "weather", "astronomy", "people", "costumes_textiles", "artifacts", "geology_caves", "light_fog_fire"],
@@ -413,9 +433,9 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
                 DownloadUrl = candidate.DownloadUrl.AbsoluteUri,
                 License = candidate.License,
                 LicenseVersion = candidate.LicenseVersion,
-                LicenseUrl = candidate.LicenseUrl.AbsoluteUri,
-                CommercialUseAllowed = true,
-                ModificationsAllowed = true,
+                LicenseUrl = candidate.LicenseUrl?.AbsoluteUri,
+                CommercialUseAllowed = candidate.License != "unverified",
+                ModificationsAllowed = candidate.License != "unverified",
                 ShareAlikeRequired = false,
                 ReferenceOnly = true,
                 ShipInBuild = false,
@@ -429,6 +449,12 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
                 Sha256 = sha,
                 DownloadedAtUtc = DateTimeOffset.UtcNow,
                 CurationStatus = "needs_review",
+                SourceVerification = candidate.License == "unverified" ? "unverified" : "verified",
+                ShortfallException = ShortfallExceptionFor(
+                    plan,
+                    candidate,
+                    downloaded,
+                    targetShortfall: !TargetSatisfied(assets, descriptor)),
             }, descriptor, query);
             var newIndex = assets.Count;
             assets.Add(asset);
@@ -461,7 +487,13 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         var attemptedCandidates = 0;
         for (var page = 0; page < plan.MaxPagesPerQuery; page++)
         {
-            var candidates = await SearchAsync(plan, descriptor, query, page, cancellationToken);
+            var candidates = await SearchAsync(
+                plan,
+                descriptor,
+                query,
+                page,
+                cancellationToken,
+                allowShortfallException: plan.UnverifiedSourcePolicy.Allow);
             if (candidates.Count == 0) break;
             foreach (var candidate in candidates)
             {
@@ -527,7 +559,8 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         ExpansionTargetDescriptor descriptor,
         ExpansionQuery query,
         int page,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken,
+        bool allowShortfallException)
     {
         foreach (var source in PreferredSourcesForQuery(query))
         {
@@ -551,11 +584,11 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
                     cancellationToken),
                 "wikimedia_commons" => await SearchSourceSafeAsync(
                     source,
-                    token => SearchWikimediaAsync(plan, descriptor, query, page, token),
+                    token => SearchWikimediaAsync(plan, descriptor, query, page, token, allowShortfallException),
                     cancellationToken),
                 _ => await SearchSourceSafeAsync(
                     source,
-                    token => SearchOpenverseAsync(plan, descriptor, query, page, token),
+                    token => SearchOpenverseAsync(plan, descriptor, query, page, token, allowShortfallException),
                     cancellationToken),
             };
             if (candidates.Count > 0)
@@ -788,13 +821,14 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         ExpansionTargetDescriptor descriptor,
         ExpansionQuery query,
         int page,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken,
+        bool allowShortfallException)
     {
         var discoverySearch = BuildDiscoverySearch(descriptor, query);
         if (TryGetExactWikimediaCategory(discoverySearch, out var category))
         {
             return await SearchWikimediaCategoryAsync(
-                plan, descriptor, query, category, page, cancellationToken);
+                plan, descriptor, query, category, page, cancellationToken, allowShortfallException);
         }
 
         if (plan.RequestDelayMilliseconds > 0)
@@ -825,7 +859,7 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         using var response = await GetWithRetryAsync(builder.Uri, cancellationToken);
         await using var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
         using var document = await JsonDocument.ParseAsync(stream, cancellationToken: cancellationToken);
-        return ParseWikimediaQueryCandidates(document.RootElement, plan, descriptor, query);
+        return ParseWikimediaQueryCandidates(document.RootElement, plan, descriptor, query, allowShortfallException);
     }
 
     private async Task<IReadOnlyList<WikimediaCandidate>> SearchWikimediaCategoryAsync(
@@ -834,7 +868,8 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         ExpansionQuery query,
         string category,
         int page,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken,
+        bool allowShortfallException)
     {
         string? continuation = null;
         if (page > 0 && !_wikimediaCategoryContinuations.TryGetValue(
@@ -866,7 +901,7 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
             }
         }
 
-        return ParseWikimediaQueryCandidates(document.RootElement, plan, descriptor, query);
+        return ParseWikimediaQueryCandidates(document.RootElement, plan, descriptor, query, allowShortfallException);
     }
 
     internal static bool TryGetExactWikimediaCategory(string search, out string category)
@@ -907,7 +942,8 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         JsonElement root,
         ChinaExpansionPlan plan,
         ExpansionTargetDescriptor descriptor,
-        ExpansionQuery query)
+        ExpansionQuery query,
+        bool allowShortfallException)
     {
         if (!root.TryGetProperty("query", out var queryRoot) ||
             !queryRoot.TryGetProperty("pages", out var pages) ||
@@ -919,7 +955,7 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         var candidates = new List<WikimediaCandidate>();
         foreach (var item in pages.EnumerateArray())
         {
-            if (TryParseCandidate(item, plan, descriptor, query, out var candidate))
+            if (TryParseCandidate(item, plan, descriptor, query, allowShortfallException, out var candidate))
             {
                 candidates.Add(candidate!);
             }
@@ -1399,22 +1435,30 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         ExpansionTargetDescriptor descriptor,
         ExpansionQuery query,
         int page,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken,
+        bool allowShortfallException)
     {
         if (plan.RequestDelayMilliseconds > 0)
         {
             await Task.Delay(plan.RequestDelayMilliseconds, cancellationToken);
         }
 
+        var parameters = new List<string>
+        {
+            "q=" + Uri.EscapeDataString(BuildOpenverseSearch(descriptor, query)),
+            "mature=false",
+            "page_size=20",
+            "page=" + (page + 1).ToString(System.Globalization.CultureInfo.InvariantCulture),
+        };
+        if (!allowShortfallException)
+        {
+            parameters.Add("license=cc0%2Cpdm%2Cby");
+            parameters.Add("license_type=commercial%2Cmodification");
+        }
+
         var builder = new UriBuilder("https://api.openverse.org/v1/images/")
         {
-            Query = string.Join("&",
-                "q=" + Uri.EscapeDataString(BuildOpenverseSearch(descriptor, query)),
-                "license=cc0%2Cpdm%2Cby",
-                "license_type=commercial%2Cmodification",
-                "mature=false",
-                "page_size=20",
-                "page=" + (page + 1).ToString(System.Globalization.CultureInfo.InvariantCulture)),
+            Query = string.Join("&", parameters),
         };
         using var response = await GetWithRetryAsync(builder.Uri, cancellationToken);
         await using var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
@@ -1428,7 +1472,7 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         var candidates = new List<WikimediaCandidate>();
         foreach (var item in results.EnumerateArray())
         {
-            if (TryParseOpenverseCandidate(item, plan, descriptor, query, out var candidate))
+            if (TryParseOpenverseCandidate(item, plan, descriptor, query, allowShortfallException, out var candidate))
             {
                 candidates.Add(candidate!);
             }
@@ -1539,11 +1583,12 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         return WhitespaceRegex().Replace(simplified, " ").Trim();
     }
 
-    private static bool TryParseOpenverseCandidate(
+    internal static bool TryParseOpenverseCandidate(
         JsonElement item,
         ChinaExpansionPlan plan,
         ExpansionTargetDescriptor descriptor,
         ExpansionQuery query,
+        bool allowShortfallException,
         out WikimediaCandidate? candidate)
     {
         candidate = null;
@@ -1551,9 +1596,10 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         var creator = CleanText(GetString(item, "creator"));
         var width = GetInt(item, "width");
         var height = GetInt(item, "height");
-        if (license is not ("cc0" or "pdm" or "by") ||
+        var strictLicense = license is "cc0" or "pdm" or "by";
+        if ((!strictLicense && !allowShortfallException) ||
             (license == "by" && string.IsNullOrWhiteSpace(creator)) ||
-            !MeetsMinimumDimensions(plan, width, height) ||
+            !MeetsMinimumDimensions(plan, descriptor, width, height) ||
             !TryHttpsUri(GetString(item, "foreign_landing_url"), out var sourcePage) ||
             !TryHttpsUri(GetString(item, "url"), out var downloadUrl))
         {
@@ -1583,9 +1629,19 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
             return false;
         }
 
+        Uri? licenseUrl = null;
         var version = CleanText(GetString(item, "license_version"));
-        version = string.IsNullOrWhiteSpace(version) ? (license == "by" ? "4.0" : "1.0") : version;
-        if (!TryHttpsUri(GetString(item, "license_url"), out var licenseUrl))
+        if (!strictLicense)
+        {
+            license = "unverified";
+            version = "unverified";
+        }
+        else if (string.IsNullOrWhiteSpace(version))
+        {
+            version = license == "by" ? "4.0" : "1.0";
+        }
+
+        if (strictLicense && !TryHttpsUri(GetString(item, "license_url"), out licenseUrl))
         {
             licenseUrl = license switch
             {
@@ -1619,6 +1675,7 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         ChinaExpansionPlan plan,
         ExpansionTargetDescriptor descriptor,
         ExpansionQuery query,
+        bool allowShortfallException,
         out WikimediaCandidate? candidate)
     {
         candidate = null;
@@ -1642,7 +1699,7 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
             height = GetInt(info, "height");
         }
 
-        if (!MeetsMinimumDimensions(plan, width, height) ||
+        if (!MeetsMinimumDimensions(plan, descriptor, width, height) ||
             !TryHttpsUri(GetString(info, "descriptionurl"), out var sourcePage) ||
             !TryHttpsUri(GetString(info, "thumburl", GetString(info, "url")), out var downloadUrl))
         {
@@ -1655,7 +1712,12 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         }
 
         var rawLicense = Metadata(metadata, "LicenseShortName");
-        if (!TryNormalizeLicense(rawLicense, out var license, out var version, out var licenseUrl))
+        if (!TryNormalizeLicense(
+                rawLicense,
+                allowShortfallException,
+                out var license,
+                out var version,
+                out var licenseUrl))
         {
             return false;
         }
@@ -1796,7 +1858,7 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
                 candidate,
                 cacheRoot,
                 candidateTimeout.Token);
-            if (!MeetsMinimumDimensions(plan, image.Width, image.Height))
+            if (!MeetsMinimumDimensions(plan, descriptor, image.Width, image.Height))
             {
                 throw new InvalidDataException(
                     $"Downloaded image is {image.Width}x{image.Height}, below {plan.MinimumWidth}x{plan.MinimumHeight} orientation-aware minimum.");
@@ -2089,21 +2151,55 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
         _ => ["composition", "lighting", "color", "surface_detail"],
     };
 
-    private static bool TryNormalizeLicense(
+    private static ShortfallExceptionAsset? ShortfallExceptionFor(
+        ChinaExpansionPlan plan,
+        WikimediaCandidate candidate,
+        DownloadedImage downloaded,
+        bool targetShortfall)
+    {
+        if (!targetShortfall)
+        {
+            return null;
+        }
+
+        var reducedResolution = Math.Max(downloaded.Width, downloaded.Height) < plan.MinimumWidth ||
+                                Math.Min(downloaded.Width, downloaded.Height) < plan.MinimumHeight;
+        var unverifiedSource = string.Equals(candidate.License, "unverified", StringComparison.Ordinal);
+        return (reducedResolution || unverifiedSource) && plan.ShortfallException.RequiresManualReview
+            ? new ShortfallExceptionAsset
+            {
+                Reason = "material_shortage",
+                SourceStatus = unverifiedSource ? "unverified" : "verified",
+                QualityStatus = reducedResolution ? "reduced_resolution" : "minimum_resolution",
+                RequiresManualReview = true,
+            }
+            : null;
+    }
+
+    internal static bool TryNormalizeLicense(
         string raw,
+        bool allowUnverified,
         out string license,
         out string version,
-        out Uri licenseUrl)
+        out Uri? licenseUrl)
     {
         var normalized = CleanText(raw);
         license = string.Empty;
         version = "unspecified";
-        licenseUrl = new Uri("https://creativecommons.org/publicdomain/mark/1.0/");
-        if (normalized.Contains("SA", StringComparison.OrdinalIgnoreCase) ||
-            normalized.Contains("NC", StringComparison.OrdinalIgnoreCase) ||
-            normalized.Contains("ND", StringComparison.OrdinalIgnoreCase))
+        licenseUrl = null;
+        var restricted = normalized.Contains("SA", StringComparison.OrdinalIgnoreCase) ||
+                         normalized.Contains("NC", StringComparison.OrdinalIgnoreCase) ||
+                         normalized.Contains("ND", StringComparison.OrdinalIgnoreCase);
+        if (restricted && !allowUnverified)
         {
             return false;
+        }
+
+        if (restricted)
+        {
+            license = "unverified";
+            version = "unverified";
+            return true;
         }
 
         if (normalized.StartsWith("CC0", StringComparison.OrdinalIgnoreCase))
@@ -2127,6 +2223,13 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
             license = "pdm";
             version = "1.0";
             licenseUrl = new Uri("https://creativecommons.org/publicdomain/mark/1.0/");
+            return true;
+        }
+
+        if (allowUnverified)
+        {
+            license = "unverified";
+            version = "unverified";
             return true;
         }
 
@@ -2320,6 +2423,22 @@ internal sealed partial class WikimediaExpansionAcquirer(HttpClient httpClient)
     internal static bool MeetsMinimumDimensions(ChinaExpansionPlan plan, int width, int height) =>
         Math.Max(width, height) >= plan.MinimumWidth &&
         Math.Min(width, height) >= plan.MinimumHeight;
+
+    internal static bool MeetsMinimumDimensions(
+        ChinaExpansionPlan plan,
+        ExpansionTargetDescriptor descriptor,
+        int width,
+        int height)
+    {
+        var minimumWidth = plan.ShortfallException.AllowReducedResolution
+            ? plan.ShortfallException.MinimumWidth
+            : plan.MinimumWidth;
+        var minimumHeight = plan.ShortfallException.AllowReducedResolution
+            ? plan.ShortfallException.MinimumHeight
+            : plan.MinimumHeight;
+        return Math.Max(width, height) >= minimumWidth &&
+               Math.Min(width, height) >= minimumHeight;
+    }
 
     private static bool TryHttpsUri(string value, out Uri uri)
     {

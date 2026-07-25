@@ -42,6 +42,29 @@ internal static class ChinaExpansionPlanValidator
             diagnostics.Add(new("plan.license_policy", "/allowedLicenses", "Only strict CC0/PDM/CC BY commercial-modification sources are allowed."));
         }
 
+        var shortfall = plan.ShortfallException;
+        if (!shortfall.AllowUnverifiedSource || !shortfall.AllowReducedResolution ||
+            !shortfall.RequiresManualReview || shortfall.ShipInBuild ||
+            shortfall.MinimumWidth is < 320 or >= 800 ||
+            shortfall.MinimumHeight is < 180 or >= 600 ||
+            shortfall.MinimumWidth > plan.MinimumWidth ||
+            shortfall.MinimumHeight > plan.MinimumHeight)
+        {
+            diagnostics.Add(new(
+                "plan.shortfall_exception",
+                "/shortfallException",
+                "Shortfall exceptions must be manual-review-only, reference-only, lower bounded resolution and cannot weaken the strict default policy."));
+        }
+
+        var unverified = plan.UnverifiedSourcePolicy;
+        if (!unverified.Allow || !unverified.PersonalUseOnly || !unverified.RequiresManualReview || unverified.ShipInBuild)
+        {
+            diagnostics.Add(new(
+                "plan.unverified_source_policy",
+                "/unverifiedSourcePolicy",
+                "Unverified sources are allowed only for personal reference use, require manual review and cannot ship in builds."));
+        }
+
         if (!plan.ArchitectureMustExcludePeople ||
             !new[] { "crowd", "tourist", "visitor", "people" }.All(required =>
                 plan.ArchitecturePersonExclusionTerms.Contains(required, StringComparer.OrdinalIgnoreCase)))

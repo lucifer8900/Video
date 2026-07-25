@@ -11,6 +11,8 @@
     "referenceOnly",
     "shipInBuild",
     "allowedLicenses",
+    "shortfallException",
+    "unverifiedSourcePolicy",
     "commercialUseRequired",
     "modificationRequired",
     "rejectShareAlike",
@@ -69,6 +71,37 @@
       "items": false,
       "minItems": 3,
       "maxItems": 3
+    },
+    "shortfallException": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowUnverifiedSource",
+        "allowReducedResolution",
+        "requiresManualReview",
+        "minimumWidth",
+        "minimumHeight",
+        "shipInBuild"
+      ],
+      "properties": {
+        "allowUnverifiedSource": { "const": true },
+        "allowReducedResolution": { "const": true },
+        "requiresManualReview": { "const": true },
+        "minimumWidth": { "type": "integer", "minimum": 320, "maximum": 799 },
+        "minimumHeight": { "type": "integer", "minimum": 180, "maximum": 599 },
+        "shipInBuild": { "const": false }
+      }
+    },
+    "unverifiedSourcePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allow", "personalUseOnly", "requiresManualReview", "shipInBuild"],
+      "properties": {
+        "allow": { "const": true },
+        "personalUseOnly": { "const": true },
+        "requiresManualReview": { "const": true },
+        "shipInBuild": { "const": false }
+      }
     },
     "commercialUseRequired": {
       "const": true

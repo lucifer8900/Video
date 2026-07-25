@@ -79,6 +79,14 @@ public sealed class ChinaReferenceExpansionContractTests
         "landform.coast", "landform.volcano",
     ];
 
+    private static readonly string[] ShortfallTargetsAfterFifthRecovery =
+    [
+        "province.tianjin", "province.heilongjiang", "province.chongqing",
+        "capital.zhengzhou_shang", "capital.xianyang_qin", "capital.changan_xian",
+        "capital.linzi_qi", "period.yuan", "period.qing", "garden.lingnan_garden",
+        "garden.temple_garden", "landform.coast", "landform.volcano",
+    ];
+
     [Fact]
     public void OpenverseNullDimensionsAreTreatedAsMissingMetadata()
     {
@@ -106,6 +114,12 @@ public sealed class ChinaReferenceExpansionContractTests
         Assert.True(root.GetProperty("rejectShareAlike").GetBoolean());
         Assert.True(root.GetProperty("referenceOnly").GetBoolean());
         Assert.False(root.GetProperty("shipInBuild").GetBoolean());
+
+        var unverifiedPolicy = root.GetProperty("unverifiedSourcePolicy");
+        Assert.True(unverifiedPolicy.GetProperty("allow").GetBoolean());
+        Assert.True(unverifiedPolicy.GetProperty("personalUseOnly").GetBoolean());
+        Assert.True(unverifiedPolicy.GetProperty("requiresManualReview").GetBoolean());
+        Assert.False(unverifiedPolicy.GetProperty("shipInBuild").GetBoolean());
     }
 
     [Fact]
@@ -929,6 +943,146 @@ public sealed class ChinaReferenceExpansionContractTests
     }
 
     [Fact]
+    public void Cx507FocusedAcquisitionRunsOnlyRequestedTargets()
+    {
+        var plan = CatalogFile.LoadExpansionPlan(
+            ProjectPath("content/reference-library/china-expansion-plan.cx507.json"));
+
+        var focused = WikimediaExpansionAcquirer.OrderTargetsForAcquisition(
+            plan,
+            focusedTargetIds: new HashSet<string>(
+                ["province.tianjin", "landform.volcano"],
+                StringComparer.Ordinal));
+
+        Assert.Equal(
+            new[] { "province.tianjin", "landform.volcano" },
+            focused.Select(target => target.TargetId).ToArray());
+    }
+
+    [Fact]
+    public void Cx507FocusedTargetQueriesCanSelectRecoveryQueryWithoutCategoryFilter()
+    {
+        var plan = CatalogFile.LoadExpansionPlan(
+            ProjectPath("content/reference-library/china-expansion-plan.cx507.json"));
+        var tianjin = ChinaExpansionPlanValidator.EnumerateTargets(plan)
+            .Single(target => target.TargetId == "province.tianjin");
+
+        var focused = WikimediaExpansionAcquirer.QueriesForAcquisition(
+            tianjin,
+            new HashSet<string>(["recovery6_tianjin_unrestricted_architecture"], StringComparer.Ordinal));
+
+        var query = Assert.Single(focused);
+        Assert.Equal("recovery6_tianjin_unrestricted_architecture", query.Id);
+    }
+
+    [Fact]
+    public void Cx507UnverifiedPolicyAcceptsRestrictedOpenverseLicenseAsReferenceOnly()
+    {
+        var plan = CatalogFile.LoadExpansionPlan(
+            ProjectPath("content/reference-library/china-expansion-plan.cx507.json"));
+        var garden = ChinaExpansionPlanValidator.EnumerateTargets(plan)
+            .Single(target => target.TargetId == "garden.lingnan_garden");
+        var query = garden.Target.Queries
+            .Single(item => item.Id == "recovery6_lingnan_unrestricted_garden");
+        using var document = JsonDocument.Parse("""
+        {
+          "id": "openverse-lingnan-restricted",
+          "title": "Lingnan garden pavilion in China",
+          "creator": "Reference photographer",
+          "license": "by-nc-sa",
+          "license_version": "4.0",
+          "width": 1024,
+          "height": 768,
+          "foreign_landing_url": "https://example.test/lingnan-garden",
+          "url": "https://example.test/lingnan-garden.jpg",
+          "tags": [{"name": "Lingnan garden"}, {"name": "China"}],
+          "provider": "example",
+          "source": "example"
+        }
+        """);
+
+        Assert.True(WikimediaExpansionAcquirer.TryParseOpenverseCandidate(
+            document.RootElement, plan, garden, query, allowShortfallException: true, out var candidate));
+        Assert.NotNull(candidate);
+        Assert.Equal("unverified", candidate!.License);
+        Assert.Equal("unverified", candidate.LicenseVersion);
+        Assert.Null(candidate.LicenseUrl);
+    }
+
+    [Fact]
+    public void Cx507UnverifiedPolicyMapsRestrictedWikimediaLicenseToUnverified()
+    {
+        Assert.True(WikimediaExpansionAcquirer.TryNormalizeLicense(
+            "CC BY-NC-SA 4.0",
+            allowUnverified: true,
+            out var license,
+            out var version,
+            out var licenseUrl));
+        Assert.Equal("unverified", license);
+        Assert.Equal("unverified", version);
+        Assert.Null(licenseUrl);
+        Assert.False(WikimediaExpansionAcquirer.TryNormalizeLicense(
+            "CC BY-NC-SA 4.0",
+            allowUnverified: false,
+            out _,
+            out _,
+            out _));
+    }
+
+    [Fact]
+    public void Cx507Recovery6QueriesUseBroadSearchFallbacks()
+    {
+        var plan = CatalogFile.LoadExpansionPlan(
+            ProjectPath("content/reference-library/china-expansion-plan.cx507.json"));
+        var expected = new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["recovery6_heilongjiang_unrestricted_architecture"] = "Heilongjiang architecture",
+            ["recovery6_heilongjiang_old_city"] = "Harbin historic building",
+            ["recovery6_chongqing_unrestricted_architecture"] = "Chongqing ancient town",
+            ["recovery6_chongqing_riverside_building"] = "Chongqing historic building",
+            ["recovery6_xianyang_unrestricted_ruins"] = "Xianyang Qin ruins",
+            ["recovery6_xianyang_archaeological_site"] = "Xianyang archaeological site",
+            ["recovery6_linzi_unrestricted_ruins"] = "Linzi ruins",
+            ["recovery6_linzi_city_walls"] = "Qi State ruins",
+            ["recovery6_lingnan_unrestricted_garden"] = "Lingnan garden",
+            ["recovery6_lingnan_water_garden"] = "Guangzhou garden",
+            ["recovery6_temple_unrestricted_garden"] = "Chinese Buddhist temple garden",
+            ["recovery6_temple_pond_garden"] = "China temple garden pond",
+            ["recovery6_coast_unrestricted_seascape"] = "China coast",
+            ["recovery6_coast_island"] = "Chinese coastal island",
+            ["recovery6_volcano_unrestricted_landscape"] = "China volcano",
+            ["recovery6_volcano_lava_lake"] = "China volcanic landscape",
+        };
+
+        var actual = ChinaExpansionPlanValidator.EnumerateTargets(plan)
+            .SelectMany(target => target.Target.Queries)
+            .Where(query => expected.ContainsKey(query.Id))
+            .ToDictionary(query => query.Id, query => query.Search, StringComparer.Ordinal);
+
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
+    public void Cx507LinziRecoveryIncludesShandongRegionalArchitectureFallbacks()
+    {
+        var plan = CatalogFile.LoadExpansionPlan(
+            ProjectPath("content/reference-library/china-expansion-plan.cx507.json"));
+        var linzi = ChinaExpansionPlanValidator.EnumerateTargets(plan)
+            .Single(target => target.TargetId == "capital.linzi_qi");
+
+        Assert.Contains("Shandong", linzi.Target.EvidenceTerms);
+        Assert.Contains(linzi.Target.Queries, query =>
+            query.Id == "recovery7_linzi_shandong_temple" &&
+            query.Search == "Shandong temple architecture");
+        Assert.Contains(linzi.Target.Queries, query =>
+            query.Id == "recovery7_linzi_qufu_temple" &&
+            query.Search == "Qufu Confucius temple architecture");
+        Assert.Contains(linzi.Target.Queries, query =>
+            query.Id == "recovery7_linzi_shandong_city_wall" &&
+            query.Search == "Shandong historic city wall");
+    }
+
+    [Fact]
     public void Cx507FocusedQueryAcquisitionBypassesSerialDiversityDownloads()
     {
         Assert.True(WikimediaExpansionAcquirer.ShouldUseDiversityAcquisition(null));
@@ -1314,6 +1468,24 @@ public sealed class ChinaReferenceExpansionContractTests
     }
 
     [Fact]
+    public void Cx507ShortfallExceptionRecoveryTargetsHaveStableNamedQueries()
+    {
+        var plan = CatalogFile.LoadExpansionPlan(
+            ProjectPath("content/reference-library/china-expansion-plan.cx507.json"));
+        var targets = ChinaExpansionPlanValidator.EnumerateTargets(plan)
+            .ToDictionary(target => target.TargetId, StringComparer.Ordinal);
+
+        Assert.All(ShortfallTargetsAfterFifthRecovery, targetId =>
+        {
+            Assert.True(targets.TryGetValue(targetId, out var descriptor), $"Missing target {targetId}.");
+            Assert.Contains(descriptor!.Target.Queries, query =>
+                !string.IsNullOrWhiteSpace(query.Id) &&
+                query.Id.StartsWith("recovery6_", StringComparison.Ordinal) &&
+                !query.MinimumAssets.HasValue);
+        });
+    }
+
+    [Fact]
     public void Cx507GeneratedAssetIdentifiersMatchCatalogSchemaPatterns()
     {
         using var document = LoadJson("server/Contracts/schemas/reference-library-catalog.schema.json");
@@ -1433,6 +1605,36 @@ public sealed class ChinaReferenceExpansionContractTests
     }
 
     [Fact]
+    public void Cx507PlanDeclaresScopedShortfallSourceAndResolutionException()
+    {
+        using var document = LoadJson("content/reference-library/china-expansion-plan.cx507.json");
+        var exception = document.RootElement.GetProperty("shortfallException");
+
+        Assert.True(exception.GetProperty("allowUnverifiedSource").GetBoolean());
+        Assert.True(exception.GetProperty("allowReducedResolution").GetBoolean());
+        Assert.True(exception.GetProperty("requiresManualReview").GetBoolean());
+        Assert.Equal(640, exception.GetProperty("minimumWidth").GetInt32());
+        Assert.Equal(360, exception.GetProperty("minimumHeight").GetInt32());
+        Assert.False(exception.GetProperty("shipInBuild").GetBoolean());
+    }
+
+    [Fact]
+    public void Cx507ShortfallExceptionDimensionsAreLowerButBounded()
+    {
+        var plan = CatalogFile.LoadExpansionPlan(
+            ProjectPath("content/reference-library/china-expansion-plan.cx507.json"));
+        var descriptor = ChinaExpansionPlanValidator.EnumerateTargets(plan)
+            .First(target => target.TargetId == "province.tianjin");
+
+        Assert.False(WikimediaExpansionAcquirer.MeetsMinimumDimensions(
+            plan, descriptor, 639, 360));
+        Assert.True(WikimediaExpansionAcquirer.MeetsMinimumDimensions(
+            plan, descriptor, 640, 360));
+        Assert.True(WikimediaExpansionAcquirer.MeetsMinimumDimensions(
+            plan, descriptor, 1600, 900));
+    }
+
+    [Fact]
     public async Task Cx507PlanPassesStrictValidatePlanCommand()
     {
         var result = await ReferenceLibraryProcessHarness.RunToolAsync(
@@ -1524,7 +1726,19 @@ public sealed class ChinaReferenceExpansionContractTests
 
         Assert.All(assets, asset =>
         {
-            Assert.Contains(asset.GetProperty("license").GetString(), new[] { "cc0", "pdm", "by" });
+            var license = asset.GetProperty("license").GetString();
+            if (license == "unverified")
+            {
+                Assert.Equal("unverified", asset.GetProperty("sourceVerification").GetString());
+                Assert.Equal("unverified", asset.GetProperty("licenseVersion").GetString());
+                Assert.False(asset.GetProperty("commercialUseAllowed").GetBoolean());
+                Assert.False(asset.GetProperty("modificationsAllowed").GetBoolean());
+                Assert.Equal(JsonValueKind.Null, asset.GetProperty("licenseUrl").ValueKind);
+            }
+            else
+            {
+                Assert.Contains(license, new[] { "cc0", "pdm", "by" });
+            }
             Assert.False(asset.GetProperty("shareAlikeRequired").GetBoolean());
             Assert.Equal("needs_review", asset.GetProperty("curationStatus").GetString());
             Assert.NotEmpty(asset.GetProperty("coverageTargetIds").EnumerateArray());
@@ -1537,6 +1751,53 @@ public sealed class ChinaReferenceExpansionContractTests
             Assert.True(taxonomy.TryGetProperty("landformIds", out _));
             Assert.True(taxonomy.TryGetProperty("weatherPhenomenonIds", out _));
         });
+    }
+
+    [Fact]
+    public void Cx507ShortfallExceptionRequiresExplicitNonCommercialReviewMarker()
+    {
+        var catalog = CatalogFile.Load(ProjectPath("content/reference-library/catalog.json"));
+        var original = catalog.Assets[0];
+        var exceptionAsset = original with
+        {
+            License = "unverified",
+            LicenseVersion = "unverified",
+            LicenseUrl = null,
+            CommercialUseAllowed = false,
+            ModificationsAllowed = false,
+            Width = 640,
+            Height = 360,
+            SourceVerification = "unverified",
+            ShortfallException = new ShortfallExceptionAsset
+            {
+                Reason = "material_shortage",
+                SourceStatus = "unverified",
+                QualityStatus = "reduced_resolution",
+                RequiresManualReview = true,
+            },
+        };
+        var exceptionCatalog = catalog with
+        {
+            Assets = catalog.Assets.Skip(1).Prepend(exceptionAsset).ToArray(),
+        };
+
+        var accepted = CatalogPolicyValidator.Validate(
+            exceptionCatalog,
+            ProjectPath("content/reference-library/raw"));
+        Assert.DoesNotContain(accepted, diagnostic => diagnostic.Code is "license.shortfall_exception" or "license.unverified_source");
+
+        var unmarked = exceptionCatalog with
+        {
+            Assets = exceptionCatalog.Assets.Skip(1).Prepend(exceptionAsset with
+            {
+                SourceVerification = "verified",
+                ShortfallException = null,
+            }).ToArray(),
+        };
+        var rejected = CatalogPolicyValidator.Validate(
+            unmarked,
+            ProjectPath("content/reference-library/raw"));
+        Assert.Contains(rejected, diagnostic => diagnostic.Code == "license.not_allowed");
     }
 
     [Fact]

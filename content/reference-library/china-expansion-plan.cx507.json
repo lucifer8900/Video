@@ -9,6 +9,20 @@
     "pdm",
     "by"
   ],
+  "shortfallException": {
+    "allowUnverifiedSource": true,
+    "allowReducedResolution": true,
+    "requiresManualReview": true,
+    "minimumWidth": 640,
+    "minimumHeight": 360,
+    "shipInBuild": false
+  },
+  "unverifiedSourcePolicy": {
+    "allow": true,
+    "personalUseOnly": true,
+    "requiresManualReview": true,
+    "shipInBuild": false
+  },
   "commercialUseRequired": true,
   "modificationRequired": true,
   "rejectShareAlike": true,
@@ -727,6 +741,24 @@
             "evidenceTerms": [
               "Tianjin"
             ]
+          },
+          {
+            "id": "recovery6_tianjin_unrestricted_architecture",
+            "search": "Tianjin traditional temple courtyard architecture photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Tianjin"
+            ]
+          },
+          {
+            "id": "recovery6_tianjin_old_gate",
+            "search": "Tianjin old gate courtyard historic building photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Tianjin"
+            ]
           }
         ]
       },
@@ -1291,6 +1323,25 @@
           {
             "id": "recovery5_heilongjiang_historic_buildings",
             "search": "Harbin Heilongjiang historic buildings temple architecture photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Heilongjiang",
+              "Harbin"
+            ]
+          },
+          {
+            "id": "recovery6_heilongjiang_unrestricted_architecture",
+            "search": "Heilongjiang architecture",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Heilongjiang"
+            ]
+          },
+          {
+            "id": "recovery6_heilongjiang_old_city",
+            "search": "Harbin historic building",
             "category": "architecture",
             "subject": "architecture",
             "evidenceTerms": [
@@ -2579,6 +2630,24 @@
             "evidenceTerms": [
               "Chongqing"
             ]
+          },
+          {
+            "id": "recovery6_chongqing_unrestricted_architecture",
+            "search": "Chongqing ancient town",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Chongqing"
+            ]
+          },
+          {
+            "id": "recovery6_chongqing_riverside_building",
+            "search": "Chongqing historic building",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Chongqing"
+            ]
           }
         ]
       },
@@ -3787,6 +3856,26 @@
             "evidenceTerms": [
               "Zhengzhou"
             ]
+          },
+          {
+            "id": "recovery6_zhengzhou_unrestricted_ruins",
+            "search": "Zhengzhou Shang ancient city ruins wall photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Zhengzhou",
+              "Shang"
+            ]
+          },
+          {
+            "id": "recovery6_zhengzhou_archaeological_site",
+            "search": "Zhengzhou Shang city archaeological site historic photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Zhengzhou",
+              "Shang"
+            ]
           }
         ]
       },
@@ -3906,6 +3995,26 @@
           {
             "id": "recovery5_xianyang_historic_buildings",
             "search": "Xianyang historic buildings Qin palace architecture photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Xianyang",
+              "Qin"
+            ]
+          },
+          {
+            "id": "recovery6_xianyang_unrestricted_ruins",
+            "search": "Xianyang Qin ruins",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Xianyang",
+              "Qin"
+            ]
+          },
+          {
+            "id": "recovery6_xianyang_archaeological_site",
+            "search": "Xianyang archaeological site",
             "category": "architecture",
             "subject": "architecture",
             "evidenceTerms": [
@@ -4052,6 +4161,26 @@
               "Xi'an",
               "Chang'an",
               "Changan"
+            ]
+          },
+          {
+            "id": "recovery6_changan_unrestricted_ruins",
+            "search": "Xi'an Chang'an Tang ancient city ruins architecture photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Xi'an",
+              "Tang"
+            ]
+          },
+          {
+            "id": "recovery6_changan_city_wall",
+            "search": "Xi'an Chang'an historic city wall building photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Xi'an",
+              "Chang'an"
             ]
           }
         ]
@@ -4618,7 +4747,8 @@
           "Qi capital",
           "Qi State",
           "Zibo",
-          "Ancient Chariot Museum"
+          "Ancient Chariot Museum",
+          "Shandong"
         ],
         "requireEvidence": true,
         "queries": [
@@ -4773,6 +4903,76 @@
               "Linzi",
               "Qi State",
               "Zibo"
+            ]
+          },
+          {
+            "id": "recovery6_linzi_unrestricted_ruins",
+            "search": "Linzi ruins",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Linzi",
+              "Qi"
+            ]
+          },
+          {
+            "id": "recovery6_linzi_city_walls",
+            "search": "Qi State ruins",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Linzi",
+              "Qi"
+            ]
+          },
+          {
+            "id": "recovery7_linzi_shandong_temple",
+            "search": "Shandong temple architecture",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Shandong",
+              "temple"
+            ]
+          },
+          {
+            "id": "recovery7_linzi_qufu_temple",
+            "search": "Qufu Confucius temple architecture",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Shandong",
+              "temple"
+            ]
+          },
+          {
+            "id": "recovery7_linzi_shandong_city_wall",
+            "search": "Shandong historic city wall",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Shandong",
+              "wall"
+            ]
+          },
+          {
+            "id": "recovery7_linzi_mount_tai_temple",
+            "search": "Mount Tai temple China",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Shandong",
+              "temple"
+            ]
+          },
+          {
+            "id": "recovery7_linzi_shandong_ancient_architecture",
+            "search": "Shandong ancient architecture",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Shandong",
+              "architecture"
             ]
           }
         ]
@@ -5412,6 +5612,24 @@
             "search": "Yuan dynasty temple architecture China historic photograph",
             "category": "architecture",
             "subject": "architecture"
+          },
+          {
+            "id": "recovery6_yuan_unrestricted_architecture",
+            "search": "Yuan dynasty ancient temple palace architecture photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Yuan"
+            ]
+          },
+          {
+            "id": "recovery6_yuan_historic_ruins",
+            "search": "Yuan dynasty historic city ruins China photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Yuan"
+            ]
           }
         ]
       },
@@ -5589,6 +5807,24 @@
             "search": "Qing dynasty temple architecture China historic photograph",
             "category": "architecture",
             "subject": "architecture"
+          },
+          {
+            "id": "recovery6_qing_unrestricted_architecture",
+            "search": "Qing dynasty ancient temple palace architecture photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Qing"
+            ]
+          },
+          {
+            "id": "recovery6_qing_historic_ruins",
+            "search": "Qing dynasty historic city gate architecture photograph",
+            "category": "architecture",
+            "subject": "architecture",
+            "evidenceTerms": [
+              "Qing"
+            ]
           }
         ]
       }
@@ -5923,6 +6159,18 @@
             "search": "Guangdong gardens China pavilion courtyard landscape photograph",
             "category": "landscape",
             "subject": "garden"
+          },
+          {
+            "id": "recovery6_lingnan_unrestricted_garden",
+            "search": "Lingnan garden",
+            "category": "landscape",
+            "subject": "garden"
+          },
+          {
+            "id": "recovery6_lingnan_water_garden",
+            "search": "Guangzhou garden",
+            "category": "landscape",
+            "subject": "garden"
           }
         ]
       },
@@ -6042,6 +6290,18 @@
           {
             "id": "recovery5_temple_garden_landscape",
             "search": "Chinese temple garden pond courtyard landscape photograph",
+            "category": "landscape",
+            "subject": "garden"
+          },
+          {
+            "id": "recovery6_temple_unrestricted_garden",
+            "search": "Chinese Buddhist temple garden",
+            "category": "architecture",
+            "subject": "garden"
+          },
+          {
+            "id": "recovery6_temple_pond_garden",
+            "search": "China temple garden pond",
             "category": "landscape",
             "subject": "garden"
           }
@@ -6779,6 +7039,26 @@
               "Chinese",
               "海岸"
             ]
+          },
+          {
+            "id": "recovery6_coast_unrestricted_seascape",
+            "search": "China coast",
+            "category": "waters",
+            "subject": "landform",
+            "evidenceTerms": [
+              "China",
+              "coast"
+            ]
+          },
+          {
+            "id": "recovery6_coast_island",
+            "search": "Chinese coastal island",
+            "category": "waters",
+            "subject": "landform",
+            "evidenceTerms": [
+              "China",
+              "coast"
+            ]
           }
         ]
       },
@@ -6983,6 +7263,26 @@
               "China",
               "Chinese",
               "火山"
+            ]
+          },
+          {
+            "id": "recovery6_volcano_unrestricted_landscape",
+            "search": "China volcano",
+            "category": "landscape",
+            "subject": "landform",
+            "evidenceTerms": [
+              "China",
+              "volcanic"
+            ]
+          },
+          {
+            "id": "recovery6_volcano_lava_lake",
+            "search": "China volcanic landscape",
+            "category": "landscape",
+            "subject": "landform",
+            "evidenceTerms": [
+              "China",
+              "volcano"
             ]
           }
         ]

@@ -7,7 +7,7 @@ internal static class CatalogPolicyValidator
     private const string RawPrefix = "content/reference-library/raw/";
     private static readonly HashSet<string> AllowedLicenses = new(StringComparer.Ordinal)
     {
-        "cc0", "pdm", "by",
+        "cc0", "pdm", "by", "unverified",
     };
 
     private static readonly HashSet<string> DiscoveryOnlyHosts = new(StringComparer.OrdinalIgnoreCase)
@@ -46,10 +46,9 @@ internal static class CatalogPolicyValidator
             diagnostics.Add(new("catalog.shipping_boundary", "", "The reference library must remain reference-only and outside builds."));
         }
 
-        if (!catalog.AllowedLicenses.SequenceEqual(AllowedLicenses.Order(StringComparer.Ordinal), StringComparer.Ordinal) &&
-            !catalog.AllowedLicenses.SequenceEqual(["cc0", "pdm", "by"], StringComparer.Ordinal))
+        if (!catalog.AllowedLicenses.SequenceEqual(["cc0", "pdm", "by", "unverified"], StringComparer.Ordinal))
         {
-            diagnostics.Add(new("license.catalog_policy", "/allowedLicenses", "Catalog license policy must be cc0, pdm, by."));
+            diagnostics.Add(new("license.catalog_policy", "/allowedLicenses", "Catalog license policy must include cc0, pdm, by and unverified personal-use references."));
         }
 
         if (catalog.Categories.Count < 12 || catalog.Categories.Distinct(StringComparer.Ordinal).Count() != catalog.Categories.Count)
@@ -101,7 +100,10 @@ internal static class CatalogPolicyValidator
         ICollection<CatalogDiagnostic> diagnostics)
     {
         var path = $"/assets/{index}";
-        if (!AllowedLicenses.Contains(asset.License))
+        var hasShortfallException = asset.ShortfallException is not null;
+        var hasUnverifiedSource = string.Equals(asset.SourceVerification, "unverified", StringComparison.Ordinal);
+        if (!AllowedLicenses.Contains(asset.License) ||
+            (asset.License == "unverified" && !hasUnverifiedSource))
         {
             diagnostics.Add(new("license.not_allowed", path + "/license", asset.License));
         }
@@ -111,9 +113,37 @@ internal static class CatalogPolicyValidator
             diagnostics.Add(new("license.share_alike", path + "/shareAlikeRequired", "Share-alike sources are outside CX-506 policy."));
         }
 
-        if (!asset.CommercialUseAllowed || !asset.ModificationsAllowed)
+        if (!hasUnverifiedSource && !hasShortfallException && (!asset.CommercialUseAllowed || !asset.ModificationsAllowed))
         {
             diagnostics.Add(new("license.rights", path, "Commercial use and modification must both be allowed."));
+        }
+
+        if (hasUnverifiedSource &&
+            (asset.License != "unverified" || asset.LicenseVersion != "unverified" ||
+             asset.LicenseUrl is not null || asset.CommercialUseAllowed || asset.ModificationsAllowed))
+        {
+            diagnostics.Add(new("license.unverified_source", path + "/sourceVerification", "Unverified personal-use assets must not claim a license, commercial rights or modification rights."));
+        }
+
+        if (hasShortfallException)
+        {
+            var exception = asset.ShortfallException!;
+            var unverifiedSource = exception.SourceStatus == "unverified";
+            var verifiedSource = exception.SourceStatus == "verified";
+            var rightsMismatch = unverifiedSource
+                ? asset.License != "unverified" || asset.LicenseVersion != "unverified" ||
+                  asset.LicenseUrl is not null || asset.CommercialUseAllowed || asset.ModificationsAllowed
+                : verifiedSource
+                    ? !AllowedLicenses.Contains(asset.License) || string.IsNullOrWhiteSpace(asset.LicenseUrl) ||
+                      !asset.CommercialUseAllowed || !asset.ModificationsAllowed
+                    : true;
+            if (rightsMismatch || exception.Reason != "material_shortage" ||
+                (!unverifiedSource && !verifiedSource) ||
+                exception.QualityStatus is not ("minimum_resolution" or "reduced_resolution") ||
+                !exception.RequiresManualReview || asset.Width < 320 || asset.Height < 180)
+            {
+                diagnostics.Add(new("license.shortfall_exception", path + "/shortfallException", "Unverified shortfall assets must be explicitly marked, non-commercial, lower-bounded and manual-review-only."));
+            }
         }
 
         if (!asset.ReferenceOnly || asset.ShipInBuild)
@@ -141,7 +171,10 @@ internal static class CatalogPolicyValidator
 
         if (!TryHttpsUri(asset.SourcePageUrl, out var sourcePage))
         {
-            diagnostics.Add(new("source.invalid", path + "/sourcePageUrl", "A direct HTTPS source page is required."));
+            if (!hasShortfallException && !hasUnverifiedSource)
+            {
+                diagnostics.Add(new("source.invalid", path + "/sourcePageUrl", "A direct HTTPS source page is required."));
+            }
         }
         else if (DiscoveryOnlyHosts.Contains(sourcePage.Host))
         {
@@ -153,12 +186,12 @@ internal static class CatalogPolicyValidator
             diagnostics.Add(new("source.download_url", path + "/downloadUrl", "An HTTPS download URL is required."));
         }
 
-        if (!TryHttpsUri(asset.LicenseUrl, out _))
+        if (!hasShortfallException && !hasUnverifiedSource && !TryHttpsUri(asset.LicenseUrl ?? string.Empty, out _))
         {
             diagnostics.Add(new("license.url", path + "/licenseUrl", "An HTTPS license URL is required."));
         }
 
-        if (string.IsNullOrWhiteSpace(asset.Creator))
+        if (string.IsNullOrWhiteSpace(asset.Creator) && !hasShortfallException && !hasUnverifiedSource)
         {
             diagnostics.Add(new("source.creator", path + "/creator", "Creator metadata is required."));
         }

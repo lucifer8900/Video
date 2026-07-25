@@ -219,9 +219,9 @@ static async Task<int> ExpandAsync(string[] args)
     HashSet<string>? focusedQueryIds = null;
     if (options.TryGetValue("--only-query", out var onlyQuery))
     {
-        if (focusedCategories is not { Count: > 0 })
+        if (focusedCategories is not { Count: > 0 } && options.ContainsKey("--only-target") is false)
         {
-            throw new InvalidDataException("--only-query requires --only-category.");
+            throw new InvalidDataException("--only-query requires --only-category or --only-target.");
         }
 
         focusedQueryIds = onlyQuery
@@ -229,7 +229,11 @@ static async Task<int> ExpandAsync(string[] args)
             .ToHashSet(StringComparer.Ordinal);
         var knownQueryIds = ChinaExpansionPlanValidator.EnumerateTargets(plan)
             .Where(target =>
-                target.Dimension == "category" && focusedCategories.Contains(target.Target.Id))
+                (focusedCategories is { Count: > 0 } &&
+                 target.Dimension == "category" && focusedCategories.Contains(target.Target.Id)) ||
+                (options.TryGetValue("--only-target", out var targetFilter) &&
+                 targetFilter.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                    .Contains(target.TargetId, StringComparer.Ordinal)))
             .SelectMany(target => target.Target.Queries)
             .Select(query => query.Id)
             .Where(id => !string.IsNullOrWhiteSpace(id))
@@ -238,6 +242,21 @@ static async Task<int> ExpandAsync(string[] args)
         {
             throw new InvalidDataException(
                 "--only-query must contain known comma-separated query IDs from --only-category.");
+        }
+    }
+    HashSet<string>? focusedTargetIds = null;
+    if (options.TryGetValue("--only-target", out var onlyTarget))
+    {
+        focusedTargetIds = onlyTarget
+            .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+            .ToHashSet(StringComparer.Ordinal);
+        var knownTargetIds = ChinaExpansionPlanValidator.EnumerateTargets(plan)
+            .Select(target => target.TargetId)
+            .ToHashSet(StringComparer.Ordinal);
+        if (focusedTargetIds.Count == 0 || focusedTargetIds.Any(id => !knownTargetIds.Contains(id)))
+        {
+            throw new InvalidDataException(
+                "--only-target must contain known comma-separated CX-507 target IDs.");
         }
     }
     var diagnostics = new List<CatalogDiagnostic>();
@@ -266,7 +285,8 @@ static async Task<int> ExpandAsync(string[] args)
         checkpoint => CatalogFile.WriteAtomic(catalogPath, checkpoint),
         CancellationToken.None,
         focusedCategories,
-        focusedQueryIds);
+        focusedQueryIds,
+        focusedTargetIds);
     CatalogFile.WriteAtomic(catalogPath, expanded);
     Console.WriteLine($"CX-507 catalog expanded: {expanded.Assets.Count} assets -> {catalogPath}");
     return 0;
@@ -402,7 +422,7 @@ static void PrintUsage()
     Console.WriteLine("ReferenceLibrary validate --catalog <catalog.json> --downloads-root <raw-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary acquire --plan <plan.json> --catalog <catalog.json> --downloads-root <raw-dir>");
     Console.WriteLine("ReferenceLibrary validate-plan --plan <china-expansion-plan.json>");
-    Console.WriteLine("ReferenceLibrary expand --plan <plan.json> --catalog <catalog.json> --downloads-root <raw-dir> --cache-root <cache-dir> [--only-category <id,id,...>] [--only-query <id,id,...>]");
+    Console.WriteLine("ReferenceLibrary expand --plan <plan.json> --catalog <catalog.json> --downloads-root <raw-dir> --cache-root <cache-dir> [--only-category <id,id,...>] [--only-query <id,id,...>] [--only-target <id,id,...>]");
     Console.WriteLine("ReferenceLibrary coverage --catalog <catalog.json> --plan <plan.json> --report <report.json>");
     Console.WriteLine("ReferenceLibrary curate-architecture --catalog <catalog.json> --decisions <decisions.json> --downloads-root <raw-dir> --quarantine-root <quarantine-dir>");
     Console.WriteLine("ReferenceLibrary curate-costumes --catalog <catalog.json> --decisions <decisions.json> --downloads-root <raw-dir> --quarantine-root <quarantine-dir>");
