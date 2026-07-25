@@ -1,14 +1,14 @@
 # 《赤雾秘苑》CX-505 堂皇版单首帧参考图包
 
-> **CX-513 采用覆盖：** 青衣侦察者三组对话首帧已采用 v4。生成这三组主回应与五类异常回应时，使用 `video-generation-prompts.cx513.md` 中列出的 Unity v4 路径；本文件中的 `grand_v2` 文件仍保留为历史场景构图对照，不再作为这些回应的上传首帧。
+> **青衣侦察者 v4 已直接纳入本 CX-505 参考包：** 三组对话主回应及其五类异常回应均使用 Unity `*_v4.png` 首帧；旧 `*_grand_v2.png` 仅保留作历史场景构图对照，不再作为这些回应的上传首帧。对应的视频与 TTS 正文均在 `video-generation-prompts.cx505.md` 内，不另设覆盖文件。
 
-状态：`generated_with_gpt_image_2`、`grand_v2_active_except_cx513_scout_v4`、`manual_video_generation_only`。
+状态：`generated_with_gpt_image_2`、`grand_v2_active_for_non_scout_assets`、`scout_dialogue_v4_active`、`manual_video_generation_only`。
 
 ## 处理结论
 
 本轮不是给旧图增加曝光或对比度，而是用 Codex 内置 GPT Image 2 / imagegen 对 15 张首帧全部重新进行场景设计：建筑尺度、空间功能、材质、日照、人物站位与环境光均已重建。旧的 `*_v1.png` 和 `firstframe_node_ending_v2.png` 仅保留用于回滚与比较，不再上传到 Veo。
 
-当前生产版统一使用 `*_grand_v2.png`。新版世界材质为白玉与暖色浅石、朱漆木构、老化鎏金铜、青瓷瓦、矿物琉璃、云海与瀑布；红雾只作为受控的危险层，不再覆盖整个画面。每张图都有真实亮部、冷暖半影与保留细节的深色构图边缘，人物必须共享场景的主光、反射光、接触阴影与透视。
+非侦察者首帧继续使用 `*_grand_v2.png`；青衣侦察者三组对话及其五类异常回应统一使用 `*_v4.png`。新版世界材质为白玉与暖色浅石、朱漆木构、老化鎏金铜、青瓷瓦、矿物琉璃、云海与瀑布；红雾只作为受控的危险层，不再覆盖整个画面。每张图都有真实亮部、冷暖半影与保留细节的深色构图边缘，人物必须共享场景的主光、反射光、接触阴影与透视。
 
 当前 Veo `Image-to-video` 页面每次只上传一张已合成的 16:9 首帧。不要再追加人物定妆图或场景图；`结束（可选）` 只用于真正的结束帧连续性，不是人物参考槽。
 
@@ -28,9 +28,9 @@
 | `firstframe_node_combat_two_grand_v2.png` | NODE `combat_two` 首次预览；最终优先用 `combat_one` 获准末帧 | 1 |
 | `firstframe_node_aftermath_grand_v2.png` | NODE `aftermath` 首次预览；最终优先用 `combat_two` 获准末帧 | 1 |
 | `firstframe_node_ending_grand_v2.png` | NODE `ending` | 1 |
-| `firstframe_dialogue_scout_mist_grand_v2.png` | 主回应 `inspect_mist`、5 条 calm 异常回应 | 6 |
-| `firstframe_dialogue_scout_alliance_grand_v2.png` | 主回应 `cautious_cooperation`、5 条 ally 异常回应 | 6 |
-| `firstframe_dialogue_scout_rescue_grand_v2.png` | 主回应 `secure_survivor` | 1 |
+| `firstframe_dialogue_scout_mist_v4.png` | 主回应 `inspect_mist`、5 条 calm 异常回应 | 6 |
+| `firstframe_dialogue_scout_alliance_v4.png` | 主回应 `cautious_cooperation`、5 条 ally 异常回应 | 6 |
+| `firstframe_dialogue_scout_rescue_v4.png` | 主回应 `secure_survivor` | 1 |
 | `firstframe_dialogue_formation_spirit_grand_v2.png` | 5 条 system 异常回应 | 5 |
 | `firstframe_dialogue_cavern_ally_grand_v2.png` | 主回应 `coordinate_retreat`、5 条 encounter 异常回应 | 6 |
 | **合计** | 10 个节点视频＋30 个回应视频 | **40** |
@@ -39,7 +39,7 @@
 
 1. 在 `video-generation-prompts.cx505.md` 找到对应条目。
 2. 选择 Veo 3.1 Fast 预览或 Veo 3.1 最终，并选择 `Image-to-video`。
-3. 只上传条目列出的一个 `*_grand_v2.png`，不要上传本文件记录的旧源图。
+3. 只上传条目列出的一个首帧；非侦察者条目使用 `*_grand_v2.png`，青衣侦察者条目使用 `*_v4.png`，不要上传本文件记录的旧源图。
 4. NPC 回应画面关闭“生成音频”，只复制无声表演底片提示词；中文只在单独的 TTS 页面生成。
 5. 首次结果数量设为 `1`；通过人物、道具、亮暗、物理落地和无字幕检查后再制作最终候选。
 6. `combat_two` 与 `aftermath` 的最终版优先只上传上一段获准视频导出的末帧。
@@ -142,7 +142,7 @@ Show the same magnificent pavilion after the dragon withdraws: pale-jade floor r
 Create a grand sunrise overlook outside the monumental ivory-and-bronze mountain gate, with a wet vermilion ceremonial terrace, jade balustrades, hanging lantern towers, waterfalls, cloud sea and radiant palace mountains. Preserve exactly four adults: Shen Yan empty-handed at left, one helper, one supported rescued disciple and Chu Mingqi supporting at right. Shen's single blade case and Chu's single moon-ring remain attached; the artifact stays concealed. Warm sunrise backlight and peach clouds balance cool mountain shadows and detailed gate shade. No cloth bag, package, extra survivor, revealed artifact or celebratory pose.
 ~~~
 
-### `firstframe_dialogue_scout_mist_grand_v2.png`
+### `firstframe_dialogue_scout_mist_v4.png`
 
 源图：`firstframe_dialogue_scout_mist_v1.png`；本图为青衣侦察者新版身份母版。
 
@@ -150,7 +150,7 @@ Create a grand sunrise overlook outside the monumental ivory-and-bronze mountain
 Create a silent performance plate for the approved twenty-seven-year-old East Asian woman scout: oval face, straight black brows, low braided ponytail, muted celadon narrow-sleeved robe, charcoal embossed leather shoulder guard and exactly one pale-jade wind-listening talisman pinned at her chest. Place her in a 65mm medium close-up beside a majestic sunlit living-bronze mist gate, white-jade safe stair, vermilion colonnade, ritual lantern towers, waterfalls and cloud palaces. Mouth naturally closed, hands lowered. Warm morning key, cool cloud fill, gold bounce and a dark column edge. Exactly one foreground scout; no held tablet, gesture, dialogue or text.
 ~~~
 
-### `firstframe_dialogue_scout_alliance_grand_v2.png`
+### `firstframe_dialogue_scout_alliance_v4.png`
 
 源图：新版雾门身份母版＋`firstframe_dialogue_scout_alliance_v1.png` 的剧情位置。
 
@@ -158,7 +158,7 @@ Create a silent performance plate for the approved twenty-seven-year-old East As
 Use the exact same scout face, hair, robe, shoulder guard and pinned talisman from the identity master. Place her at the left guard position of a magnificent sunlit alliance terrace with a physical ivory-jade relief map in the lower foreground, disciplined adult formations under shaded colonnades, gilded crane lanterns, bridges, waterfalls and an embassy gate across cloud mountains. Use a 65mm medium shot with the scout large on the left third, mouth closed, hands lowered and empty. Do not reproduce the old handheld black tablet. Match warm sun, cool cloud fill, contact shadow and reflected floor light.
 ~~~
 
-### `firstframe_dialogue_scout_rescue_grand_v2.png`
+### `firstframe_dialogue_scout_rescue_v4.png`
 
 源图：新版雾门身份母版＋`firstframe_dialogue_scout_rescue_v1.png` 的救援信息。
 

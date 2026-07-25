@@ -7,7 +7,7 @@ namespace Lingmai.RedMist.ReferenceLibrary;
 internal static partial class ScoutFirstFrameAdoptionValidator
 {
     private const string SourceManifest = "content/story/red-mist/red-mist-scout-first-frame-propagation.cx512.json";
-    private const string PromptOverride = "content/story/red-mist/video-generation-prompts.cx513.md";
+    private const string PromptOverride = "content/story/red-mist/video-generation-prompts.cx505.md";
     private const string CatalogPath = "unity/RedMistVerticalSlice/Assets/Scripts/Presentation/GeneratedArtCatalog.cs";
     private const string BuilderPath = "unity/RedMistVerticalSlice/Assets/Editor/VerticalSliceBuilder.cs";
     private static readonly byte[] PngSignature = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a];
@@ -94,7 +94,7 @@ internal static partial class ScoutFirstFrameAdoptionValidator
 
         if (Value(manifest, "promptOverridePath") != PromptOverride)
         {
-            diagnostics.Add(new("prompt.override_missing", "$.promptOverridePath", "The adopted v4 upload paths must be recorded in the CX-513 prompt override."));
+            diagnostics.Add(new("prompt.override_missing", "$.promptOverridePath", "The adopted v4 upload paths must be recorded directly in the CX-505 prompt file."));
         }
 
         var sourceCardPath = Resolve(repositoryRoot, SourceManifest);
@@ -133,18 +133,19 @@ internal static partial class ScoutFirstFrameAdoptionValidator
         var path = Resolve(repositoryRoot, PromptOverride);
         if (!File.Exists(path))
         {
-            diagnostics.Add(new("prompt.override_missing", "$.promptOverridePath", "The CX-513 prompt override file is missing."));
+            diagnostics.Add(new("prompt.override_missing", "$.promptOverridePath", "The CX-505 prompt file is missing."));
             return;
         }
 
         var text = File.ReadAllText(path);
-        if (!text.Contains("firstframe_dialogue_scout_mist_v4.png", StringComparison.Ordinal) ||
+        if (text.Contains("video-generation-prompts.cx513.md", StringComparison.Ordinal) ||
+            !text.Contains("firstframe_dialogue_scout_mist_v4.png", StringComparison.Ordinal) ||
             !text.Contains("firstframe_dialogue_scout_alliance_v4.png", StringComparison.Ordinal) ||
             !text.Contains("firstframe_dialogue_scout_rescue_v4.png", StringComparison.Ordinal) ||
             !text.Contains("npc.invalid.calm.low_confidence", StringComparison.Ordinal) ||
             !text.Contains("npc.invalid.ally.low_confidence", StringComparison.Ordinal))
         {
-            diagnostics.Add(new("prompt.mapping", "$.promptOverridePath", "The CX-513 prompt override must map all three v4 frames and their five-class NPC response reuse."));
+            diagnostics.Add(new("prompt.mapping", "$.promptOverridePath", "The CX-505 prompt file must map all three v4 frames, their five-class NPC response reuse, and no separate CX-513 override."));
         }
     }
 

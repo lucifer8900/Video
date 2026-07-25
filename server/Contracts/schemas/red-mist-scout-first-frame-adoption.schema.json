@@ -33,7 +33,7 @@
         "grandV2SourcesPreserved": { "const": true }
       }
     },
-    "promptOverridePath": { "const": "content/story/red-mist/video-generation-prompts.cx513.md" },
+    "promptOverridePath": { "const": "content/story/red-mist/video-generation-prompts.cx505.md" },
     "candidates": {
       "type": "array",
       "minItems": 3,

@@ -1,6 +1,6 @@
 # 《赤雾秘苑》CX-505 人工视频生成提示词
 
-> **CX-513 采用覆盖：** 青衣侦察者的雾门、盟台、救援廊及其五类异常回应已改用 v4 首帧。上传路径与 responseId 映射见 `video-generation-prompts.cx513.md`；下方完整视频/TTS 提示词仍作为动作和语音正文，不能再上传对应的 `*_grand_v2.png`。
+> **青衣侦察者 v4 已直接纳入本 CX-505 生产提示词：** 雾门、盟台、救援廊及其五类异常回应均上传对应的 `*_v4.png`；旧 `*_grand_v2.png` 仅保留作历史构图参考，不再作为这些回应的上传首帧。下方完整视频/TTS 提示词仍是当前动作和语音正文。
 
 状态：`manual_generation_only`。本文件只供人工复制到 Veo on Agent Platform 或其他经人工批准的工具；项目代码不得自动提交、轮询或下载视频。现有 `fmv_gate_arrival`、`fmv_celestial_flight`、`fmv_herb_courtyard`、`fmv_sword_vault` 继续复用，不在本批次重做。
 
@@ -251,13 +251,13 @@ END STATE: The fissure is slightly more closed; every survivor, support contact,
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action with grounded physical materials, restrained spiritual VFX, film-quality lighting, natural skin, realistic cloth and hair, and clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one continuous medium close-up with no cuts. At the living bronze mist gate, show the approved original East Asian woman expedition scout, about twenty-seven, with an oval face, straight black brows, low braided ponytail, muted celadon narrow-sleeved robe, charcoal leather shoulder guard, and small pale-jade wind-listening talisman. Layered vermilion mist and the safer left stair stay readable behind her.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Treat the uploaded first frame as a locked plate. Preserve her exact face, hairline, braid, costume seams, body proportions, pose, screen position, background architecture, stair geometry, lighting direction, lens, and color grade for the entire clip.
 PROP LOCK: The pale-jade talisman remains rigidly pinned at its exact attachment point with the same size, shape, carving, material, and brightness. Her weapon remains fully sheathed and fixed; hands stay visible where shown and never touch a prop.
@@ -286,13 +286,13 @@ Transcript: “雾流每九息回卷一次，左侧石阶的风更稳。你看�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action with grounded physical materials, restrained spiritual VFX, film-quality lighting, natural skin, realistic cloth and hair, and clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one continuous medium shot with no cuts. On the narrow cliff alliance platform, show the exact same approved expedition scout already holding the left guard position, with her approved oval face, straight black brows, low braided ponytail, muted celadon narrow-sleeved robe, charcoal leather shoulder guard, and pale-jade wind-listening talisman. The defensive ward, layered red mist, and distant sect lantern formations remain visible behind her.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock her exact face, hairline, braid, costume seams, proportions, pose, screen position, cliff edge, ward boundary, lantern formation, lighting, lens, and color grade to the uploaded first frame. She never changes guard position.
 PROP LOCK: Her talisman remains rigidly pinned at the same attachment point and brightness; her weapon remains fully sheathed with an unchanged hilt and scabbard. All ward fittings and background lanterns retain their count and geometry. Hands remain still and never touch any prop.
@@ -321,13 +321,13 @@ Transcript: “我守住左侧，你保留自己的底牌。先活着越过山�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_rescue_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_rescue_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action with grounded physical materials, restrained spiritual VFX, film-quality lighting, natural skin, realistic cloth and hair, and clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one continuous medium close-up with no cuts. Beside the broken black-stone rescue wall, show the exact same approved expedition scout in her first-frame stopped pose, with her approved face, low braided ponytail, muted celadon robe, charcoal shoulder guard, and pale-jade wind-listening talisman. The physical jade ward and hidden wounded-survivor area remain readable behind her.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock her exact face, hairline, braid, costume seams, proportions, pose, screen position, wall fracture, ward boundary, survivor silhouette if visible, mist layers, lighting, lens, and color grade to the uploaded first frame.
 PROP LOCK: Her talisman remains pinned with unchanged shape, carving, material, and brightness; weapon and ward equipment stay fixed and untouched. Her hands remain in the same visible position and never rise, signal, or cross a prop.
@@ -434,13 +434,13 @@ Transcript: “玉栏后的青石是第一处退点。我守住蛟尾方向，�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded bronze and jade, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Beside layered vermilion mist and a sunlit living bronze mechanism, show the approved celadon-robed expedition scout facing the unseen player.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock the uploaded first frame's exact face, hairline, low braid, straight brows, costume seams, proportions, posture, screen position, bronze mechanism, mist layers, lighting, lens, and grade.
 PROP LOCK: Her pale-jade wind-listening talisman stays rigidly pinned with identical shape, carving, brightness, and attachment. Her weapon remains fully sheathed; hands stay still and do not touch any object.
@@ -469,13 +469,13 @@ Transcript: “言语再重也不会改变雾中的局势。若要继续，就�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded bronze and jade, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Beside layered vermilion mist and a sunlit living bronze mechanism, show the exact same approved celadon-robed expedition scout and the same already-present distant shadow.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock the first frame's exact scout face, hairline, braid, costume, proportions, posture, position, distant shadow outline, mechanism geometry, mist layers, lighting, lens, and grade. The shadow never approaches or changes form.
 PROP LOCK: Her pale-jade talisman remains pinned and unchanged; her weapon remains fully sheathed. Hands and all visible mechanisms stay fixed and untouched.
@@ -504,13 +504,13 @@ Transcript: “那件事与眼前的险境无关。先看清此地，再决定�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded bronze and jade, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Beside layered vermilion mist and a sunlit living bronze mechanism, show the exact same approved celadon-robed expedition scout watching the gate.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock the uploaded first frame's exact face, hairline, braid, costume, proportions, posture, screen position, gate and mechanism geometry, mist layers, lighting, lens, and grade.
 PROP LOCK: Her pale-jade talisman remains rigidly pinned and her weapon fully sheathed. Hands stay at their first-frame positions; all mechanism parts remain unchanged and untouched.
@@ -539,13 +539,13 @@ Transcript: “雾势正在变化。把话收短，只说你此刻要做什么�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded bronze and jade, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Beside layered vermilion mist and a sunlit living bronze mechanism, show the exact same approved celadon-robed expedition scout waiting beside the unseen player.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock the uploaded first frame's exact face, hairline, braid, costume, proportions, posture, screen position, mechanism geometry, mist layers, lighting, lens, and grade.
 PROP LOCK: Her pale-jade talisman stays rigidly pinned and her weapon fully sheathed. Hands remain still and away from every prop for the entire clip.
@@ -574,13 +574,13 @@ Transcript: “不必仓促开口。先看清线索，想好后再作选择。�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded bronze and jade, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Beside layered vermilion mist and a sunlit living bronze mechanism, show the exact same approved celadon-robed expedition scout listening to the unseen player.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock the uploaded first frame's exact face, hairline, braid, costume, proportions, posture, screen position, mechanism geometry, mist layers, lighting, lens, and grade.
 PROP LOCK: Her pale-jade talisman remains rigidly pinned with unchanged carving and brightness; her weapon remains fully sheathed. Hands stay at their first-frame positions and never approach the talisman.
@@ -613,13 +613,13 @@ Transcript: “这句话没有听清。换个简短说法，或直接选择眼�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded ward light, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. On the narrow cliff route above layered vermilion mist, show the exact same approved celadon-robed expedition scout with the same defensive ward and distant sect silhouettes behind her.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock the uploaded first frame's exact face, braid, brows, costume seams, proportions, posture, screen position, cliff, ward boundary, sect silhouettes, lighting, lens, and grade.
 PROP LOCK: Her pale-jade talisman remains rigidly pinned and her weapon fully sheathed; hands, ward fittings, and every visible prop stay fixed and untouched.
@@ -648,13 +648,13 @@ Transcript: “若连同行者都只剩恶言，这条路便走不远。说出�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded ward light, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. On the narrow cliff route above layered vermilion mist, show the exact same approved celadon-robed expedition scout; the ancient entrance, waiting adult team, defensive ward, and distant sect silhouettes remain visible and stationary behind her.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock the first frame's exact face, braid, costume, proportions, posture, position, entrance geometry, team count and positions, ward boundary, silhouettes, lighting, lens, and grade.
 PROP LOCK: Her talisman remains rigidly pinned and weapon fully sheathed. Hands, ward fittings, team equipment, and every visible prop stay fixed and untouched.
@@ -683,13 +683,13 @@ Transcript: “那件事可以以后再谈。入口和同伴都在等我们决�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded ward light, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. On the narrow cliff route above layered vermilion mist, show the exact same approved celadon-robed expedition scout with the defensive ward, distant sect silhouettes, and visibly closing bronze gate behind her.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock the uploaded first frame's exact face, braid, costume, proportions, posture, screen position, cliff, ward boundary, gate geometry, silhouettes, lighting, lens, and grade.
 PROP LOCK: Her talisman remains pinned and weapon fully sheathed. Hands stay at their first-frame positions; all ward and gate parts keep their exact shapes and counts.
@@ -718,13 +718,13 @@ Transcript: “没有时间听完整段缘由。告诉我结论：前进、观�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded ward light, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. On the narrow cliff route above layered vermilion mist, show the exact same approved celadon-robed expedition scout already holding the left-flank guard position, with the same defensive ward and distant sect silhouettes behind her.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock the first frame's exact face, braid, costume, proportions, left-flank posture, screen position, cliff, ward boundary, silhouettes, lighting, lens, and grade. She does not move into or out of position.
 PROP LOCK: Her talisman remains pinned and weapon fully sheathed. Hands, ward fittings, and every visible prop stay fixed and untouched.
@@ -753,13 +753,13 @@ Transcript: “你还在权衡，我明白。我会守住这一侧，但决定�
 
 视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
-上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_grand_v2.png`
+上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
 完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded ward light, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. On the narrow cliff route above layered vermilion mist, show the exact same approved celadon-robed expedition scout with the defensive ward, visible physical route choices, and distant sect silhouettes behind her.
-LIGHTING DESIGN: Match the uploaded grand-v2 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
+LIGHTING DESIGN: Match the uploaded v4 first frame exactly: preserve its motivated daylight, luminous ivory-jade and gilded-bronze highlights, vermilion accents, cool detailed shadows, face exposure, eye catchlights, and three-dimensional depth. Do not revert to a globally dark, murky, moonlit, monochrome, or crushed-black grade.
 PHYSICAL INTEGRATION: Keep every person grounded in the photographed set with stable contact shadows, shared floor and wall bounce light, correct reflections, occlusion, perspective and scale, natural skin texture, cloth weight, and hair. No person may look pasted on, waxy, miniature, billboard-like, or isolated from the environment lighting.
 INVARIANT STATE: Lock the uploaded first frame's exact face, braid, costume, proportions, posture, screen position, route geometry, ward boundary, silhouettes, lighting, lens, and grade.
 PROP LOCK: Her talisman remains pinned and weapon fully sheathed. Hands and all physical route markers stay fixed, readable, and untouched.
