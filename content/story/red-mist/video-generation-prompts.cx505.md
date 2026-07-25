@@ -1,5 +1,7 @@
 # 《赤雾秘苑》CX-505 人工视频生成提示词
 
+> **CX-513 采用覆盖：** 青衣侦察者的雾门、盟台、救援廊及其五类异常回应已改用 v4 首帧。上传路径与 responseId 映射见 `video-generation-prompts.cx513.md`；下方完整视频/TTS 提示词仍作为动作和语音正文，不能再上传对应的 `*_grand_v2.png`。
+
 状态：`manual_generation_only`。本文件只供人工复制到 Veo on Agent Platform 或其他经人工批准的工具；项目代码不得自动提交、轮询或下载视频。现有 `fmv_gate_arrival`、`fmv_celestial_flight`、`fmv_herb_courtyard`、`fmv_sword_vault` 继续复用，不在本批次重做。
 
 ## 模型选择与复制规则

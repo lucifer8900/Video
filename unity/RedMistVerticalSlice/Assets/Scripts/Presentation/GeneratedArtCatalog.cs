@@ -21,6 +21,9 @@ namespace Lingmai.RedMist
         public const string ChuMingqiPortrait = "Generated/Characters/portrait_chu_mingqi_v2";
         public const string BronzeWardenPortrait = "Generated/Characters/portrait_bronze_warden_v2";
         public const string CeladonScoutIdentity = "Generated/Characters/identity_celadon_scout_v3";
+        public const string ScoutMistFirstFrame = "Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4";
+        public const string ScoutAllianceFirstFrame = "Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4";
+        public const string ScoutRescueFirstFrame = "Generated/VideoFirstFrames/firstframe_dialogue_scout_rescue_v4";
         public const string ExplorerShenYanFront = "Generated/Characters/explorer_shen_yan_front_v3";
         public const string ExplorerShenYanBack = "Generated/Characters/explorer_shen_yan_back_v3";
         public const string ExplorerChuMingqiFront = "Generated/Characters/explorer_chu_mingqi_front_v3";
@@ -80,6 +83,31 @@ namespace Lingmai.RedMist
                     return SwordSealVault;
                 default:
                     return SanctuaryEntrance;
+            }
+        }
+
+        public static string FirstFrameForResponse(string responseId)
+        {
+            switch (responseId)
+            {
+                case "npc.response.prologue.inspect_mist":
+                case "npc.invalid.calm.abuse":
+                case "npc.invalid.calm.irrelevant":
+                case "npc.invalid.calm.too_long":
+                case "npc.invalid.calm.silence":
+                case "npc.invalid.calm.low_confidence":
+                    return ScoutMistFirstFrame;
+                case "npc.response.alliance.cautious_cooperation":
+                case "npc.invalid.ally.abuse":
+                case "npc.invalid.ally.irrelevant":
+                case "npc.invalid.ally.too_long":
+                case "npc.invalid.ally.silence":
+                case "npc.invalid.ally.low_confidence":
+                    return ScoutAllianceFirstFrame;
+                case "npc.response.rescue.secure_survivor":
+                    return ScoutRescueFirstFrame;
+                default:
+                    return string.Empty;
             }
         }
 

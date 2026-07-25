@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.example/schemas/red-mist-scout-first-frame-adoption.schema.json",
+  "title": "Red Mist CX-513 Scout First-Frame Adoption",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "cardId", "worldId", "sourceCardId", "humanReview", "generationPolicy", "promptOverridePath", "candidates"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "cardId": { "const": "CX-513" },
+    "worldId": { "const": "lingmai-ember-red-mist" },
+    "sourceCardId": { "const": "CX-512" },
+    "humanReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["approved", "decision", "scope"],
+      "properties": {
+        "approved": { "const": true },
+        "decision": { "const": "user_explicit" },
+        "scope": { "const": "three_celadon_scout_dialogue_first_frames_only" }
+      }
+    },
+    "generationPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stillImagesOnly", "geminiOrVeoUsed", "overwriteExistingAssets", "realPeopleIdentityReuseAllowed", "sourceCandidatesPreserved", "grandV2SourcesPreserved"],
+      "properties": {
+        "stillImagesOnly": { "const": true },
+        "geminiOrVeoUsed": { "const": false },
+        "overwriteExistingAssets": { "const": false },
+        "realPeopleIdentityReuseAllowed": { "const": false },
+        "sourceCandidatesPreserved": { "const": true },
+        "grandV2SourcesPreserved": { "const": true }
+      }
+    },
+    "promptOverridePath": { "const": "content/story/red-mist/video-generation-prompts.cx513.md" },
+    "candidates": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": { "$ref": "#/$defs/candidate" }
+    }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mediaType", "byteLength", "sha256", "width", "height"],
+      "properties": {
+        "mediaType": { "const": "image/png" },
+        "byteLength": { "type": "integer", "minimum": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "width": { "const": 1664 },
+        "height": { "const": 936 }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assetId", "sceneKey", "sourcePath", "sourceArtifact", "targetPath", "targetMetaPath", "targetGuid", "runtimeResourcePath", "registryConstant", "generationMode", "adoptionStatus", "adopted", "shipInBuild", "overwriteExistingAssets", "responseIds", "artifact", "continuityLocks"],
+      "properties": {
+        "assetId": { "type": "string", "pattern": "^firstframe\\.dialogue\\.scout\\.(mist|alliance|rescue)\\.v4$" },
+        "sceneKey": { "enum": ["scout_mist", "scout_alliance", "scout_rescue"] },
+        "sourcePath": { "type": "string", "pattern": "^content/visual-candidates/cx512/first-frames/firstframe_dialogue_scout_(mist|alliance|rescue)_v4\\.png$" },
+        "sourceArtifact": { "$ref": "#/$defs/artifact" },
+        "targetPath": { "type": "string", "pattern": "^unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_(mist|alliance|rescue)_v4\\.png$" },
+        "targetMetaPath": { "type": "string", "pattern": "^unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_(mist|alliance|rescue)_v4\\.png\\.meta$" },
+        "targetGuid": { "type": "string", "pattern": "^[0-9a-f]{32}$" },
+        "runtimeResourcePath": { "type": "string", "pattern": "^Generated/VideoFirstFrames/firstframe_dialogue_scout_(mist|alliance|rescue)_v4$" },
+        "registryConstant": { "type": "string", "pattern": "^Scout(Mist|Alliance|Rescue)FirstFrame$" },
+        "generationMode": { "const": "codex_builtin_imagegen" },
+        "adoptionStatus": { "const": "adopted" },
+        "adopted": { "const": true },
+        "shipInBuild": { "const": true },
+        "overwriteExistingAssets": { "const": false },
+        "responseIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "artifact": { "$ref": "#/$defs/artifact" },
+        "continuityLocks": { "type": "array", "minItems": 6, "items": { "type": "string" } }
+      }
+    }
+  }
+}

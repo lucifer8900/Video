@@ -1792,10 +1792,28 @@ namespace Lingmai.RedMist
             _fullBody = response.Text;
             _body.text = response.Text;
             _textComplete = true;
+            ShowNpcResponseFirstFrame(decision.NpcResponseId);
             if (_voiceStatus != null)
                 _voiceStatus.text = result.Resolution == "confirmation_required"
                     ? "请使用固定选项确认；不会自动触发严重后果"
                     : "NPC 已回应；固定选项仍可用";
+        }
+
+        private void ShowNpcResponseFirstFrame(string responseId)
+        {
+            string key = GeneratedArtCatalog.FirstFrameForResponse(responseId);
+            if (string.IsNullOrWhiteSpace(key)) return;
+
+            SetBackdrop(key, Color.white, new Rect(0f, 0f, 1f, 1f));
+            // The adopted v4 plates already contain the scout and the environment at cinematic
+            // scale. Hiding the separate portrait prevents a second, stretched sticker layer.
+            if (_portrait != null)
+            {
+                _portrait.texture = null;
+                _portrait.gameObject.SetActive(false);
+            }
+            SetStoryCinematicMode(true);
+            Debug.Log("RED_MIST_SCOUT_FIRST_FRAME response=" + responseId + " resource=" + key);
         }
 
         private void RefreshHud()

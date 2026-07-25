@@ -1,6 +1,8 @@
 # 《赤雾秘苑》CX-505 堂皇版单首帧参考图包
 
-状态：`generated_with_gpt_image_2`、`grand_v2_active`、`manual_video_generation_only`。
+> **CX-513 采用覆盖：** 青衣侦察者三组对话首帧已采用 v4。生成这三组主回应与五类异常回应时，使用 `video-generation-prompts.cx513.md` 中列出的 Unity v4 路径；本文件中的 `grand_v2` 文件仍保留为历史场景构图对照，不再作为这些回应的上传首帧。
+
+状态：`generated_with_gpt_image_2`、`grand_v2_active_except_cx513_scout_v4`、`manual_video_generation_only`。
 
 ## 处理结论
 
