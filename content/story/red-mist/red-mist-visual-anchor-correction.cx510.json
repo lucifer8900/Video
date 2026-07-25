@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "cardId": "CX-510",
+  "worldId": "lingmai-ember-red-mist",
+  "referenceCatalog": "content/reference-library/catalog.json",
+  "baseAssetId": "identity.celadon_scout.v2",
+  "generationPolicy": {
+    "stillImagesOnly": true,
+    "geminiOrVeoUsed": false,
+    "overwriteExistingAssets": false,
+    "realPeopleIdentityReuseAllowed": false,
+    "adoptionRequiresHumanReview": true,
+    "allowUnverifiedPersonalReferences": true
+  },
+  "candidate": {
+    "assetId": "identity.celadon_scout.v3",
+    "assetKind": "identity_anchor",
+    "generationMode": "codex_builtin_imagegen",
+    "adoptionStatus": "needs_review",
+    "adopted": false,
+    "shipInBuild": false,
+    "outputPath": "content/visual-candidates/cx510/identity-anchors/identity_celadon_scout_v3.png",
+    "referenceInputs": [
+      { "assetId": "ref-architecture-002-30c475224b", "assetSha256": "94d5d82c537bf08bf4293536e52dee320a4e415d793fe437f0f650343fcb9757", "role": "structure" },
+      { "assetId": "ref-artifacts-002-6a1870a67c", "assetSha256": "243a377edd25896d344c7e666e7dad16f8b26eb881b5175ded017726ea62bd70", "role": "material" },
+      { "assetId": "ref-landscape-001-74d99e0571", "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9", "role": "lighting" },
+      { "assetId": "ref-people-002-97a702ff69", "assetSha256": "9f6dd98f0cd2c0f6150e1a8b6a5427a0a4ec1b2cc68125ee9a4f50c558f5f879", "role": "pose" },
+      { "assetId": "ref-costumes-textiles-002-dbb9476d1a", "assetSha256": "804f2fba91949ba74594b5259125bfefbc37b8d850bc7758fb4909b85c48917d", "role": "garment_construction" }
+    ],
+    "researchReferences": [
+      { "localRelativePath": "content/reference-library/private-research/cx509/female-costume/wei-jin-hanfu.jpg", "sourcePageUrl": "https://thehanfustory.com/products/wei-jin-dynasty-qiyao-ruqun-hanfu-lady-xiang", "role": "garment_construction", "identityReuse": false }
+    ],
+    "prompt": "Use case: stylized-concept. Asset type: game character concept, landscape 16:9 full-body identity-anchor correction for an original cinematic cultivation-fantasy game. Input images: Image 1 is the existing Celadon Scout v2; use it only as a reference for the celadon costume, palette, gate setting, wind and overall mood. Correct the anatomy and camera; do not preserve its head-to-body error and do not copy a face or identity. Image 2 is a historical garment-construction reference only; do not copy its face, identity, hairstyle or background. Create the v3 Celadon Scout with the same coherent celadon field outfit and majestic gate atmosphere, but anatomically correct: one original East Asian woman in her early twenties, natural human proportions measured at approximately 7.5 heads tall from crown to soles, head width naturally proportional to shoulders, normal neck length, balanced torso and legs, realistic hands and feet. The head must not be enlarged and the body must not be shrunken. Scene/backdrop: preserve the grand original celestial sect gate above a cloud sea, monumental pale-stone watch terrace, celadon roof ridges, vermilion gate towers, bronze lanterns, layered mountains, clear blue sky and a thin red-mist band. Keep the scene bright, spacious and cinematic. Subject and clothing: preserve the v2 outfit language in spirit, fitted celadon cross-collar short jacket with narrow sleeves, dark ink-green over-vest, layered split overskirt over practical straight trousers, woven sash, cloth leg wraps and traditional cloth upturned-toe boots with stitched edging. Clothing must fit the corrected body naturally with real fabric weight. Hands empty; no bag, sword, dagger or extra prop. Camera and composition: explicit landscape 16:9 wide frame, full body from hair to both feet visible with generous margins, subject slightly left of center, camera several paces back with a normal 50mm-equivalent lens and no wide-angle distortion, eye-level camera, straight vertical architecture. Use natural perspective and accurate scale. Lighting and style: premium photoreal live-action Chinese fantasy film still, bright morning key light, cool architectural shadows, warm bronze bounce, gentle wind in loose hair and fabric, realistic linen/ramie/silk weave, original face and costume. Preserve the celadon costume, palette and grand gate mood while correcting proportions.",
+    "avoidItems": ["no_text", "no_watermark", "no_actor_likeness", "no_copied_landmark", "no_qing_clothing", "no_nonuniform_stretch", "grand_majestic_environment", "no_head_body_distortion"],
+    "continuityLocks": ["stable_identity", "stable_prop_count", "grounded_contact", "shared_environment_light", "grand_majestic_environment", "human_proportions", "normal_lens_perspective", "no_head_body_distortion", "no_identity_reuse"],
+    "postProcess": { "mode": "aspect_crop", "sourceWidth": 1672, "sourceHeight": 941, "outputWidth": 1664, "outputHeight": 936, "cropStrategy": "center", "focusDescription": "Remove four pixels from each horizontal edge and two pixels from the top plus three from the bottom without resampling; keep the corrected full figure, cloth boots and gate silhouette." },
+    "artifact": { "mediaType": "image/png", "byteLength": 3854784, "sha256": "9bd742b2affe58c78dd0b309d7e5908f88000e3c2a32309b68fac296617d2139", "width": 1664, "height": 936 },
+    "reviewChecks": { "skinAndFabric": "pending", "weightBearing": "pending", "contactShadows": "pending", "sharedLighting": "pending", "perspectiveScale": "pending", "handsAndProps": "pending", "noTextOrWatermark": "pending", "noLandmarkReplication": "pending", "noActorLikeness": "pending" }
+  }
+}
