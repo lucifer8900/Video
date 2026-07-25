@@ -89,6 +89,7 @@ namespace Lingmai.Editor
                 GeneratedArtCatalog.ShenYanPortrait,
                 GeneratedArtCatalog.ChuMingqiPortrait,
                 GeneratedArtCatalog.BronzeWardenPortrait,
+                GeneratedArtCatalog.CeladonScoutIdentity,
                 GeneratedArtCatalog.ExplorerShenYanFront,
                 GeneratedArtCatalog.ExplorerShenYanBack,
                 GeneratedArtCatalog.ExplorerChuMingqiFront,

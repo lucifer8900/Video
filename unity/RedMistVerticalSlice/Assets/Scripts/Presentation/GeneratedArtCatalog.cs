@@ -20,6 +20,7 @@ namespace Lingmai.RedMist
         public const string ShenYanPortrait = "Generated/Characters/portrait_shen_yan_v2";
         public const string ChuMingqiPortrait = "Generated/Characters/portrait_chu_mingqi_v2";
         public const string BronzeWardenPortrait = "Generated/Characters/portrait_bronze_warden_v2";
+        public const string CeladonScoutIdentity = "Generated/Characters/identity_celadon_scout_v3";
         public const string ExplorerShenYanFront = "Generated/Characters/explorer_shen_yan_front_v3";
         public const string ExplorerShenYanBack = "Generated/Characters/explorer_shen_yan_back_v3";
         public const string ExplorerChuMingqiFront = "Generated/Characters/explorer_chu_mingqi_front_v3";

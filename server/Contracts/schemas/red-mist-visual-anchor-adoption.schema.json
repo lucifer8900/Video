@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.example/schemas/red-mist-visual-anchor-adoption.schema.json",
+  "title": "Red Mist visual anchor adoption",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "cardId",
+    "worldId",
+    "sourceAssetId",
+    "sourcePath",
+    "sourceArtifact",
+    "targetPath",
+    "targetMetaPath",
+    "runtimeResourcePath",
+    "adoptionStatus",
+    "humanReview",
+    "overwriteExistingAssets",
+    "shipInBuild",
+    "generationPolicy",
+    "propagation"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "cardId": { "const": "CX-511" },
+    "worldId": { "const": "lingmai-ember-red-mist" },
+    "sourceAssetId": { "const": "identity.celadon_scout.v3" },
+    "sourcePath": {
+      "const": "content/visual-candidates/cx510/identity-anchors/identity_celadon_scout_v3.png"
+    },
+    "sourceArtifact": { "$ref": "#/$defs/pngArtifact" },
+    "targetPath": {
+      "const": "unity/RedMistVerticalSlice/Assets/Resources/Generated/Characters/identity_celadon_scout_v3.png"
+    },
+    "targetMetaPath": {
+      "const": "unity/RedMistVerticalSlice/Assets/Resources/Generated/Characters/identity_celadon_scout_v3.png.meta"
+    },
+    "runtimeResourcePath": {
+      "const": "Generated/Characters/identity_celadon_scout_v3"
+    },
+    "adoptionStatus": { "const": "adopted" },
+    "humanReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["approved", "decision", "reviewedAt"],
+      "properties": {
+        "approved": { "const": true },
+        "decision": { "const": "user_explicit" },
+        "reviewedAt": { "type": "string", "format": "date" }
+      }
+    },
+    "overwriteExistingAssets": { "const": false },
+    "shipInBuild": { "const": true },
+    "generationPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stillImagesOnly", "geminiOrVeoUsed", "sourceCandidateWasNeedsReview", "realPeopleIdentityReuseAllowed"],
+      "properties": {
+        "stillImagesOnly": { "const": true },
+        "geminiOrVeoUsed": { "const": false },
+        "sourceCandidateWasNeedsReview": { "const": true },
+        "realPeopleIdentityReuseAllowed": { "const": false }
+      }
+    },
+    "propagation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceCandidatePreserved", "priorVersionsPreserved", "catalogConstant", "resourcesLoadPath"],
+      "properties": {
+        "sourceCandidatePreserved": { "const": true },
+        "priorVersionsPreserved": { "const": true },
+        "catalogConstant": { "const": "CeladonScoutIdentity" },
+        "resourcesLoadPath": { "const": "Generated/Characters/identity_celadon_scout_v3" }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "pngArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mediaType", "byteLength", "sha256", "width", "height"],
+      "properties": {
+        "mediaType": { "const": "image/png" },
+        "byteLength": { "type": "integer", "minimum": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "width": { "const": 1664 },
+        "height": { "const": 936 }
+      }
+    }
+  }
+}
