@@ -21,6 +21,7 @@ static async Task<int> RunAsync(string[] args)
             "validate-visual-anchors" => ValidateVisualAnchors(args[1..]),
             "validate-visual-anchor-correction" => ValidateVisualAnchorCorrection(args[1..]),
             "validate-visual-anchor-adoption" => ValidateVisualAnchorAdoption(args[1..]),
+            "validate-scout-first-frame-propagation" => ValidateScoutFirstFramePropagation(args[1..]),
             "validate-plan" => ValidatePlan(args[1..]),
             "coverage" => Coverage(args[1..]),
             "curate-architecture" => CurateArchitecture(args[1..]),
@@ -159,6 +160,34 @@ static int ValidateVisualAnchorAdoption(string[] args)
     }
 
     Console.WriteLine("CX-511 visual anchor adoption valid: celadon scout v3.");
+    return 0;
+}
+
+static int ValidateScoutFirstFramePropagation(string[] args)
+{
+    var options = ParseOptions(args);
+    var manifestPath = RequiredPath(options, "--manifest");
+    var repositoryRoot = options.TryGetValue("--repository-root", out var explicitRoot)
+        ? Path.GetFullPath(explicitRoot)
+        : FindRepositoryRoot().FullName;
+    var schemaPath = options.TryGetValue("--schema", out var explicitSchema)
+        ? Path.GetFullPath(explicitSchema)
+        : RepositorySchema("red-mist-scout-first-frame-propagation.schema.json");
+    var diagnostics = new List<CatalogDiagnostic>();
+    diagnostics.AddRange(CatalogFile.ValidateSchema(schemaPath, manifestPath));
+    diagnostics.AddRange(ScoutFirstFramePropagationValidator.Validate(manifestPath, repositoryRoot));
+    foreach (var diagnostic in diagnostics)
+    {
+        Console.WriteLine(diagnostic);
+    }
+
+    if (diagnostics.Count > 0)
+    {
+        Console.WriteLine($"CX-512 scout first-frame propagation invalid: {diagnostics.Count} diagnostic(s).");
+        return 2;
+    }
+
+    Console.WriteLine("CX-512 scout first-frame propagation valid: 3 candidates.");
     return 0;
 }
 
@@ -552,6 +581,7 @@ static void PrintUsage()
     Console.WriteLine("ReferenceLibrary validate-visual-anchors --manifest <red-mist-visual-anchors.json> --catalog <catalog.json> --candidate-root <cx509-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-visual-anchor-correction --manifest <red-mist-visual-anchor-correction.json> --catalog <catalog.json> --candidate-root <cx510-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-visual-anchor-adoption --manifest <red-mist-visual-anchor-adoption.json> --repository-root <repo> [--schema <schema.json>]");
+    Console.WriteLine("ReferenceLibrary validate-scout-first-frame-propagation --manifest <red-mist-scout-first-frame-propagation.json> --repository-root <repo> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary acquire --plan <plan.json> --catalog <catalog.json> --downloads-root <raw-dir>");
     Console.WriteLine("ReferenceLibrary validate-plan --plan <china-expansion-plan.json>");
     Console.WriteLine("ReferenceLibrary expand --plan <plan.json> --catalog <catalog.json> --downloads-root <raw-dir> --cache-root <cache-dir> [--only-category <id,id,...>] [--only-query <id,id,...>] [--only-target <id,id,...>]");
