@@ -1206,6 +1206,12 @@
       "expectedValid": false,
       "expectedCode": "schema.pattern",
       "expectedPath": "/baselineBuild/files/0/relativePath"
+    },
+    {
+      "name": "valid CX-508 red mist visual bible",
+      "schemaFile": "red-mist-visual-bible.schema.json",
+      "instanceFile": "../../content/story/red-mist/red-mist-visual-bible.cx508.json",
+      "expectedValid": true
     }
   ]
 }

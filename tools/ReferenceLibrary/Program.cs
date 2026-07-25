@@ -17,6 +17,7 @@ static async Task<int> RunAsync(string[] args)
         return args[0] switch
         {
             "validate" => Validate(args[1..]),
+            "validate-visual-bible" => ValidateVisualBible(args[1..]),
             "validate-plan" => ValidatePlan(args[1..]),
             "coverage" => Coverage(args[1..]),
             "curate-architecture" => CurateArchitecture(args[1..]),
@@ -32,6 +33,38 @@ static async Task<int> RunAsync(string[] args)
         Console.Error.WriteLine($"reference-library.failed: {exception.Message}");
         return 3;
     }
+}
+
+static int ValidateVisualBible(string[] args)
+{
+    var options = ParseOptions(args);
+    var manifestPath = RequiredPath(options, "--manifest");
+    var catalogPath = RequiredPath(options, "--catalog");
+    var candidateRoot = RequiredPath(options, "--candidate-root");
+    var repositoryRoot = FindRepositoryRoot().FullName;
+    var schemaPath = options.TryGetValue("--schema", out var explicitSchema)
+        ? Path.GetFullPath(explicitSchema)
+        : RepositorySchema("red-mist-visual-bible.schema.json");
+    var diagnostics = new List<CatalogDiagnostic>();
+    diagnostics.AddRange(CatalogFile.ValidateSchema(schemaPath, manifestPath));
+    diagnostics.AddRange(VisualBibleValidator.Validate(
+        manifestPath,
+        catalogPath,
+        candidateRoot,
+        repositoryRoot));
+    foreach (var diagnostic in diagnostics)
+    {
+        Console.WriteLine(diagnostic);
+    }
+
+    if (diagnostics.Count > 0)
+    {
+        Console.WriteLine($"CX-508 visual bible invalid: {diagnostics.Count} diagnostic(s).");
+        return 2;
+    }
+
+    Console.WriteLine("CX-508 visual bible valid: 7 identity anchors, 15 first frames.");
+    return 0;
 }
 
 static int ValidatePlan(string[] args)
@@ -420,6 +453,7 @@ static int UnknownCommand(string command)
 static void PrintUsage()
 {
     Console.WriteLine("ReferenceLibrary validate --catalog <catalog.json> --downloads-root <raw-dir> [--schema <schema.json>]");
+    Console.WriteLine("ReferenceLibrary validate-visual-bible --manifest <red-mist-visual-bible.json> --catalog <catalog.json> --candidate-root <cx508-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary acquire --plan <plan.json> --catalog <catalog.json> --downloads-root <raw-dir>");
     Console.WriteLine("ReferenceLibrary validate-plan --plan <china-expansion-plan.json>");
     Console.WriteLine("ReferenceLibrary expand --plan <plan.json> --catalog <catalog.json> --downloads-root <raw-dir> --cache-root <cache-dir> [--only-category <id,id,...>] [--only-query <id,id,...>] [--only-target <id,id,...>]");
