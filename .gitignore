@@ -51,6 +51,11 @@ unity/RedMistVerticalSlice/test-results*.xml
 /content/visual-candidates/cx508/rejected/
 /content/visual-candidates/cx508/reports/raw-imagegen/
 
+# CX-509 raw ImageGen responses and rejected iterations stay local; only review
+# candidates and the contact sheet are versioned.
+/content/visual-candidates/cx509/rejected/
+/content/visual-candidates/cx509/reports/raw-imagegen/
+
 # Rejected concept images remain local review artifacts.
 /unity/RedMistVerticalSlice/Docs/RejectedConcepts/*.png
 /unity/RedMistVerticalSlice/Docs/RejectedConcepts/*.png.meta
