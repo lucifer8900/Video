@@ -25,8 +25,8 @@
 | `firstframe_shijun_negotiation_grand_v2.png` | NODE `shijun`、主回应 `verify_bargain`、5 条 hostile 异常回应 | 7 |
 | `firstframe_node_formation_grand_v2.png` | NODE `formation` | 1 |
 | `firstframe_node_combat_one_grand_v2.png` | NODE `combat_one` | 1 |
-| `firstframe_node_combat_two_grand_v2.png` | NODE `combat_two` 首次预览；最终优先用 `combat_one` 获准末帧 | 1 |
-| `firstframe_node_aftermath_grand_v2.png` | NODE `aftermath` 首次预览；最终优先用 `combat_two` 获准末帧 | 1 |
+| `firstframe_node_combat_two_grand_v2.png` | NODE `combat_two` 无获准末帧时的静态备用；最终优先用 `combat_one` 获准末帧 | 1 |
+| `firstframe_node_aftermath_grand_v2.png` | NODE `aftermath` 无获准末帧时的静态备用；最终优先用 `combat_two` 获准末帧 | 1 |
 | `firstframe_node_ending_grand_v2.png` | NODE `ending` | 1 |
 | `firstframe_dialogue_scout_mist_v4.png` | 主回应 `inspect_mist`、5 条 calm 异常回应 | 6 |
 | `firstframe_dialogue_scout_alliance_v4.png` | 主回应 `cautious_cooperation`、5 条 ally 异常回应 | 6 |
@@ -38,10 +38,10 @@
 ## 人工生成视频时的固定步骤
 
 1. 在 `video-generation-prompts.cx505.md` 找到对应条目。
-2. 选择 Veo 3.1 Fast 预览或 Veo 3.1 最终，并选择 `Image-to-video`。
+2. 统一选择 Veo 3.1 Lite；需要连续承接时选择 `Image-to-video`，不再为每个镜头单独生成预览视频。
 3. 只上传条目列出的一个首帧；非侦察者条目使用 `*_grand_v2.png`，青衣侦察者条目使用 `*_v4.png`，不要上传本文件记录的旧源图。
 4. NPC 回应画面关闭“生成音频”，只复制无声表演底片提示词；中文只在单独的 TTS 页面生成。
-5. 首次结果数量设为 `1`；通过人物、道具、亮暗、物理落地和无字幕检查后再制作最终候选。
+5. 结果数量设为 `1`，直接生成正式候选；通过人物、道具、亮暗、物理落地和无字幕检查后才登记。
 6. `combat_two` 与 `aftermath` 的最终版优先只上传上一段获准视频导出的末帧。
 
 ## GPT Image 2 统一重建设计合同

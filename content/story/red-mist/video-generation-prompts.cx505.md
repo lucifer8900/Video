@@ -8,18 +8,18 @@
 
 本批次不使用 Gemini Omni Flash 生成对白视频：Veo 只负责无声画面，Gemini TTS 只负责独立干声。
 
-| 资产类型 | 预览模型 | 最终候选 | 原因 |
+| 资产类型 | 统一生成模型 | 生成方式 | 原因 |
 |---|---|---|---|
-| 10 个无对白主剧情环境视频 | Veo 3.1 Fast | Veo 3.1 | 优先保证电影质感、复杂运动和首尾帧控制；此组不需要角色说话 |
-| 30 个 NPC 回应无声表演底片 | Veo 3.1 Fast（Image-to-video） | Veo 3.1（Image-to-video） | 只生成人物微表情和动态背景，不输入中文台词，避免假口型与乱码字幕；对白由独立 TTS 生成 |
+| 10 个无对白主剧情环境视频 | Veo 3.1 Lite | Text-to-video 或 Image-to-video | 直接生成正式候选，兼顾电影质感、复杂运动和首尾帧控制；此组不需要角色说话 |
+| 30 个 NPC 回应无声表演底片 | Veo 3.1 Lite | Image-to-video | 只生成人物微表情和动态背景，不输入中文台词，避免假口型与乱码字幕；对白由独立 TTS 生成 |
 | 30 条独立干声 | Gemini 3.1 Flash TTS (Preview) | Gemini 2.5 Pro TTS | 3.1 Flash 用于快速试音；2.5 Pro 用于锁定后的高保真最终干声 |
 
 重要限制：
 
-- Veo 3.1 环境视频选 16:9、24 fps、8 秒；预览先用 720p，接受后再用 Veo 3.1 输出 1080p 或界面允许的更高分辨率。
-- NPC 回应画面统一使用 Veo 3.1 `Image-to-video`、16:9、24 fps、8 秒，并关闭“生成音频”；画面只做闭口微表情与动态背景，提示词中不得出现中文台词。
-- 先用青衣侦察者的 `inspect_mist` 生成 1 条无声表演底片。确认人脸、发型、服装、闭口状态、人物落地感、亮暗层次均达到人工 4/5 后，再生成其余回应画面。
-- 若界面允许选择“结果数量”，首轮一律设为 `1`；只有单条提示词稳定后才可按人工需要增加候选。界面生成的多条结果只是随机候选，供人工筛选，不代表不同剧情分支，也不得把四条候选全部登记进游戏。
+- 环境视频统一使用 Veo 3.1 Lite，设置 16:9、24 fps、8 秒，直接生成正式候选；不再为每个镜头额外生成预览视频或第二轮“最终版”。分辨率选择界面可用的稳定档位即可。
+- NPC 回应画面统一使用 Veo 3.1 Lite `Image-to-video`、16:9、24 fps、8 秒，并关闭“生成音频”；画面只做闭口微表情与动态背景，提示词中不得出现中文台词。
+- 只在整套制作开始时先生成青衣侦察者的 `inspect_mist` 作为一次性风格基准。确认人脸、发型、服装、闭口状态、人物落地感、亮暗层次达到人工 4/5 后，其余镜头直接生成正式候选，不再重复预览。
+- 若界面允许选择“结果数量”，统一设为 `1`；只有人工审核明确认为失败时才额外生成候选。多条结果只是同一镜头的随机候选，不代表不同剧情分支，也不得把全部候选登记进游戏。
 - TTS 只生成独立干声，不需要也不能上传首帧。Veo 无声底片与 TTS 干声不能直接叠加冒充口型同步；最终口型合成属于单独人工决策点，在批准工具与流程前暂停。
 - 视频页面只复制对应的视频代码块；语音页面只复制对应的语音代码块。下面每一条都已经包含全部必要约束，不再需要手工追加公共段落。
 - Veo 视频提示词全部使用英文，且不含任何中文台词；TTS 提示词保留完整中文 Transcript，使用 Standard Mandarin Chinese，并固定本文指定的 voice。
@@ -33,7 +33,7 @@
 <!-- node:camp -->
 ### NODE camp — 临时营地备战
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+模型与设置：Veo 3.1 Lite；16:9，24 fps，8 秒。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_camp_grand_v2.png`
 
@@ -54,7 +54,7 @@ END STATE: In the final frame every person, prop, building, light source, and ba
 <!-- node:alliance -->
 ### NODE alliance — 谨慎结伴
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+模型与设置：Veo 3.1 Lite；16:9，24 fps，8 秒。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_alliance_grand_v2.png`
 
@@ -75,7 +75,7 @@ END STATE: The final frame restores the route line to its initial brightness and
 <!-- node:corpse_signs -->
 ### NODE corpse_signs — 溪涧伏击痕迹
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+模型与设置：Veo 3.1 Lite；16:9，24 fps，8 秒。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_corpse_signs_grand_v2.png`
 
@@ -96,7 +96,7 @@ END STATE: The pulse has faded and all bodies, traces, props, plants, stones, an
 <!-- node:rescue -->
 ### NODE rescue — 雾后求援
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+模型与设置：Veo 3.1 Lite；16:9，24 fps，8 秒。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_rescue_grand_v2.png`
 
@@ -117,7 +117,7 @@ END STATE: All people, the outside shadow, props, wall pieces, barrier geometry,
 <!-- node:shijun -->
 ### NODE shijun — 阵钉交易
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+模型与设置：Veo 3.1 Lite；16:9，24 fps，8 秒。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_grand_v2.png`
 
@@ -138,7 +138,7 @@ END STATE: Shi Jun, both silhouettes, the spike, token, pouch, plinth, and four 
 <!-- node:formation -->
 ### NODE formation — 四门禁制
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+模型与设置：Veo 3.1 Lite；16:9，24 fps，8 秒。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_formation_grand_v2.png`
 
@@ -159,7 +159,7 @@ END STATE: The pulse has faded; all four hubs, circuit paths, guardian carvings,
 <!-- node:combat_one -->
 ### NODE combat_one — 墨蛟试探
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+模型与设置：Veo 3.1 Lite；16:9，24 fps，8 秒。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_combat_one_grand_v2.png`
 
@@ -180,11 +180,11 @@ END STATE: The tail rests against the causeway after the single press; every cre
 <!-- node:combat_two -->
 ### NODE combat_two — 底牌与崩塌
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+模型与设置：Veo 3.1 Lite；16:9，24 fps，8 秒。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_combat_two_grand_v2.png`
 
-连续性说明：首次预览使用上面的静态首帧；`combat_one` 通过后，最终生成时改为只上传该获准视频导出的末帧，不要再同时上传静态图。
+连续性说明：若 `combat_one` 已审核通过，直接将其获准视频导出的末帧作为本次生成的唯一开始图片；若尚无获准末帧，才使用上面的静态首帧。两种图片不要同时上传。
 
 完整视频提示词（直接复制）：
 
@@ -203,11 +203,11 @@ END STATE: The one crack is slightly longer and the dust is settling; otherwise 
 <!-- node:aftermath -->
 ### NODE aftermath — 战利品与伤员
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+模型与设置：Veo 3.1 Lite；16:9，24 fps，8 秒。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_aftermath_grand_v2.png`
 
-连续性说明：首次预览使用上面的静态首帧；`combat_two` 通过后，最终生成时改为只上传该获准视频导出的末帧，不要再同时上传静态图。
+连续性说明：若 `combat_two` 已审核通过，直接将其获准视频导出的末帧作为本次生成的唯一开始图片；若尚无获准末帧，才使用上面的静态首帧。两种图片不要同时上传。
 
 完整视频提示词（直接复制）：
 
@@ -226,7 +226,7 @@ END STATE: Every person, weapon, chest, root bundle, injury, prop, exit, and arc
 <!-- node:ending -->
 ### NODE ending — 雾门余烬
 
-模型与设置：Veo 3.1 Fast 预览，Veo 3.1 最终；16:9，24 fps，8 秒。
+模型与设置：Veo 3.1 Lite；16:9，24 fps，8 秒。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_ending_grand_v2.png`
 
@@ -249,11 +249,11 @@ END STATE: The fissure is slightly more closed; every survivor, support contact,
 <!-- response:npc.response.prologue.inspect_mist -->
 ### RESPONSE npc.response.prologue.inspect_mist
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action with grounded physical materials, restrained spiritual VFX, film-quality lighting, natural skin, realistic cloth and hair, and clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one continuous medium close-up with no cuts. At the living bronze mist gate, show the approved original East Asian woman expedition scout, about twenty-seven, with an oval face, straight black brows, low braided ponytail, muted celadon narrow-sleeved robe, charcoal leather shoulder guard, and small pale-jade wind-listening talisman. Layered vermilion mist and the safer left stair stay readable behind her.
@@ -284,11 +284,11 @@ Transcript: “雾流每九息回卷一次，左侧石阶的风更稳。你看�
 <!-- response:npc.response.alliance.cautious_cooperation -->
 ### RESPONSE npc.response.alliance.cautious_cooperation
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action with grounded physical materials, restrained spiritual VFX, film-quality lighting, natural skin, realistic cloth and hair, and clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one continuous medium shot with no cuts. On the narrow cliff alliance platform, show the exact same approved expedition scout already holding the left guard position, with her approved oval face, straight black brows, low braided ponytail, muted celadon narrow-sleeved robe, charcoal leather shoulder guard, and pale-jade wind-listening talisman. The defensive ward, layered red mist, and distant sect lantern formations remain visible behind her.
@@ -319,11 +319,11 @@ Transcript: “我守住左侧，你保留自己的底牌。先活着越过山�
 <!-- response:npc.response.rescue.secure_survivor -->
 ### RESPONSE npc.response.rescue.secure_survivor
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_rescue_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action with grounded physical materials, restrained spiritual VFX, film-quality lighting, natural skin, realistic cloth and hair, and clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one continuous medium close-up with no cuts. Beside the broken black-stone rescue wall, show the exact same approved expedition scout in her first-frame stopped pose, with her approved face, low braided ponytail, muted celadon robe, charcoal shoulder guard, and pale-jade wind-listening talisman. The physical jade ward and hidden wounded-survivor area remain readable behind her.
@@ -354,11 +354,11 @@ Transcript: “雾后还有第二个人的脚步声。先用旧暗号核验身�
 <!-- response:npc.response.shijun.verify_bargain -->
 ### RESPONSE npc.response.shijun.verify_bargain
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action with grounded physical materials, restrained spiritual VFX, film-quality lighting, natural skin, realistic armor, and clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one continuous medium close-up with no cuts. Before four monumental bronze doors, show the approved Shi Jun, an original lean East Asian man in his thirties with sharp eyes, brown-black short armor, worn copper fasteners, and a blood-marked bronze formation spike, exactly as in the uploaded first frame.
@@ -389,11 +389,11 @@ Transcript: “想验货可以，阵钉上的热泥来自门后。至于这句�
 <!-- response:npc.response.underground.coordinate_retreat -->
 ### RESPONSE npc.response.underground.coordinate_retreat
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action with grounded physical materials, restrained spiritual VFX, film-quality lighting, natural skin, realistic ash-white armor, and clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one continuous tactical medium shot with no cuts. In the geothermal black-mud cavern, show the approved original East Asian man temporary ally, about twenty-nine, with tied black hair, a narrow weathered face, layered ash-white light armor, and a small white-light signal talisman, standing behind the cracked white-jade railing. The already-marked first retreat stone and distant ink-dragon tail remain readable in depth.
@@ -432,11 +432,11 @@ Transcript: “玉栏后的青石是第一处退点。我守住蛟尾方向，�
 <!-- response:npc.invalid.calm.abuse -->
 #### RESPONSE npc.invalid.calm.abuse
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded bronze and jade, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Beside layered vermilion mist and a sunlit living bronze mechanism, show the approved celadon-robed expedition scout facing the unseen player.
@@ -467,11 +467,11 @@ Transcript: “言语再重也不会改变雾中的局势。若要继续，就�
 <!-- response:npc.invalid.calm.irrelevant -->
 #### RESPONSE npc.invalid.calm.irrelevant
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded bronze and jade, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Beside layered vermilion mist and a sunlit living bronze mechanism, show the exact same approved celadon-robed expedition scout and the same already-present distant shadow.
@@ -502,11 +502,11 @@ Transcript: “那件事与眼前的险境无关。先看清此地，再决定�
 <!-- response:npc.invalid.calm.too_long -->
 #### RESPONSE npc.invalid.calm.too_long
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded bronze and jade, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Beside layered vermilion mist and a sunlit living bronze mechanism, show the exact same approved celadon-robed expedition scout watching the gate.
@@ -537,11 +537,11 @@ Transcript: “雾势正在变化。把话收短，只说你此刻要做什么�
 <!-- response:npc.invalid.calm.silence -->
 #### RESPONSE npc.invalid.calm.silence
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded bronze and jade, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Beside layered vermilion mist and a sunlit living bronze mechanism, show the exact same approved celadon-robed expedition scout waiting beside the unseen player.
@@ -572,11 +572,11 @@ Transcript: “不必仓促开口。先看清线索，想好后再作选择。�
 <!-- response:npc.invalid.calm.low_confidence -->
 #### RESPONSE npc.invalid.calm.low_confidence
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded bronze and jade, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Beside layered vermilion mist and a sunlit living bronze mechanism, show the exact same approved celadon-robed expedition scout listening to the unseen player.
@@ -611,11 +611,11 @@ Transcript: “这句话没有听清。换个简短说法，或直接选择眼�
 <!-- response:npc.invalid.ally.abuse -->
 #### RESPONSE npc.invalid.ally.abuse
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded ward light, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. On the narrow cliff route above layered vermilion mist, show the exact same approved celadon-robed expedition scout with the same defensive ward and distant sect silhouettes behind her.
@@ -646,11 +646,11 @@ Transcript: “若连同行者都只剩恶言，这条路便走不远。说出�
 <!-- response:npc.invalid.ally.irrelevant -->
 #### RESPONSE npc.invalid.ally.irrelevant
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded ward light, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. On the narrow cliff route above layered vermilion mist, show the exact same approved celadon-robed expedition scout; the ancient entrance, waiting adult team, defensive ward, and distant sect silhouettes remain visible and stationary behind her.
@@ -681,11 +681,11 @@ Transcript: “那件事可以以后再谈。入口和同伴都在等我们决�
 <!-- response:npc.invalid.ally.too_long -->
 #### RESPONSE npc.invalid.ally.too_long
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded ward light, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. On the narrow cliff route above layered vermilion mist, show the exact same approved celadon-robed expedition scout with the defensive ward, distant sect silhouettes, and visibly closing bronze gate behind her.
@@ -716,11 +716,11 @@ Transcript: “没有时间听完整段缘由。告诉我结论：前进、观�
 <!-- response:npc.invalid.ally.silence -->
 #### RESPONSE npc.invalid.ally.silence
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded ward light, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. On the narrow cliff route above layered vermilion mist, show the exact same approved celadon-robed expedition scout already holding the left-flank guard position, with the same defensive ward and distant sect silhouettes behind her.
@@ -751,11 +751,11 @@ Transcript: “你还在权衡，我明白。我会守住这一侧，但决定�
 <!-- response:npc.invalid.ally.low_confidence -->
 #### RESPONSE npc.invalid.ally.low_confidence
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, natural skin, realistic cloth and hair, grounded ward light, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. On the narrow cliff route above layered vermilion mist, show the exact same approved celadon-robed expedition scout with the defensive ward, visible physical route choices, and distant sect silhouettes behind her.
@@ -790,11 +790,11 @@ Transcript: “我没听清你的意思。再说一遍，或指明你支持哪�
 <!-- response:npc.invalid.system.abuse -->
 #### RESPONSE npc.invalid.system.abuse
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_formation_spirit_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action materials with a restrained supernatural projection, clear depth, monumental jade-bronze architecture. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Show the approved life-sized translucent adult androgynous formation spirit projected from the same physical hub, with a calm human face, pale-jade inner light, dark-bronze circuit filigree, readable natural lips, and no floating panels.
@@ -825,11 +825,11 @@ Transcript: “无效言语不会改变结算。请给出可执行指令。”
 <!-- response:npc.invalid.system.irrelevant -->
 #### RESPONSE npc.invalid.system.irrelevant
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_formation_spirit_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action materials with a restrained supernatural projection, clear depth, monumental jade-bronze architecture. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Show the exact same approved life-sized translucent adult androgynous formation spirit anchored to the physical hub; the already-carved route channel, formation eye, and tactical marker remain separate and readable physical features.
@@ -860,11 +860,11 @@ Transcript: “输入与当前目标无关。请围绕路线、阵眼或战术�
 <!-- response:npc.invalid.system.too_long -->
 #### RESPONSE npc.invalid.system.too_long
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_formation_spirit_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action materials with a restrained supernatural projection, clear depth, monumental jade-bronze architecture. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Show the exact same approved life-sized translucent adult androgynous formation spirit anchored to the physical hub; one existing empty carved command socket remains visible.
@@ -895,11 +895,11 @@ Transcript: “指令过长，无法安全判定。请缩减为一个明确动�
 <!-- response:npc.invalid.system.silence -->
 #### RESPONSE npc.invalid.system.silence
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_formation_spirit_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action materials with a restrained supernatural projection, clear depth, monumental jade-bronze architecture. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Show the exact same approved life-sized translucent adult androgynous formation spirit anchored to the physical hub while the same fixed physical mechanisms remain gently illuminated.
@@ -930,11 +930,11 @@ Transcript: “未收到有效指令。场景仍在等待，固定方案保持�
 <!-- response:npc.invalid.system.low_confidence -->
 #### RESPONSE npc.invalid.system.low_confidence
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_formation_spirit_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action materials with a restrained supernatural projection, clear depth, monumental jade-bronze architecture. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Show the exact same approved life-sized translucent adult androgynous formation spirit anchored to the physical hub; the same fixed carved choices remain visible and lit.
@@ -969,11 +969,11 @@ Transcript: “指令置信度不足。请重新表述，或使用固定方案�
 <!-- response:npc.invalid.hostile.abuse -->
 #### RESPONSE npc.invalid.hostile.abuse
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, grounded bronze and jade, realistic skin and armor, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Before four monumental dark-bronze doors, show the exact same approved Shi Jun already holding the doorway, with sharp eyes, brown-black short armor, worn copper fasteners, and a blood-marked bronze formation spike.
@@ -1004,11 +1004,11 @@ Transcript: “骂得再响，也换不来一条真路。拿出筹码，或者�
 <!-- response:npc.invalid.hostile.irrelevant -->
 #### RESPONSE npc.invalid.hostile.irrelevant
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, grounded bronze and jade, realistic skin and armor, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Before four monumental dark-bronze doors, show the exact same approved Shi Jun; the formation spike in his hand, medicine pouch, token, plinth, and blocked doorway remain separately readable.
@@ -1039,11 +1039,11 @@ Transcript: “少绕弯子。此刻只谈阵钉、灵药和谁先让路。”
 <!-- response:npc.invalid.hostile.too_long -->
 #### RESPONSE npc.invalid.hostile.too_long
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, grounded bronze and jade, realistic skin and armor, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Before four monumental dark-bronze doors, show the exact same approved Shi Jun holding the blood-marked bronze formation spike exactly as in the uploaded first frame.
@@ -1074,11 +1074,11 @@ Transcript: “我没兴致听你铺陈来历。用一句话报出条件。”
 <!-- response:npc.invalid.hostile.silence -->
 #### RESPONSE npc.invalid.hostile.silence
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, grounded bronze and jade, realistic skin and armor, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Before four monumental dark-bronze doors, show the exact same approved Shi Jun holding the blood-marked formation spike exactly as in the uploaded first frame.
@@ -1109,11 +1109,11 @@ Transcript: “沉默也是价码，只是通常最贵。想好了就开口。�
 <!-- response:npc.invalid.hostile.low_confidence -->
 #### RESPONSE npc.invalid.hostile.low_confidence
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, grounded bronze and jade, realistic skin and armor, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous medium close-up. Before four monumental dark-bronze doors, show the exact same approved Shi Jun holding the blood-marked formation spike exactly as in the uploaded first frame.
@@ -1148,11 +1148,11 @@ Transcript: “你这句话含糊得很。再说清楚，免得我按最坏的�
 <!-- response:npc.invalid.encounter.abuse -->
 #### RESPONSE npc.invalid.encounter.abuse
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, realistic skin and ash-white armor, grounded jade and black mud, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous tactical medium close-up. Behind the cracked white-jade railing, show the approved temporary ally with tied black hair, narrow weathered face, layered ash-white light armor, and small white-light signal talisman; the same distant ink-dragon silhouette remains visible through thin steam.
@@ -1183,11 +1183,11 @@ Transcript: “黑泥下的东西不会等我们吵完。收起敌意，先决�
 <!-- response:npc.invalid.encounter.irrelevant -->
 #### RESPONSE npc.invalid.encounter.irrelevant
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, realistic skin and ash-white armor, grounded jade and black mud, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous tactical medium close-up. Behind the cracked white-jade railing, show the exact same approved temporary ally; the stationary gold chest, marked retreat line, and distant ink-dragon silhouette remain separately readable in depth.
@@ -1218,11 +1218,11 @@ Transcript: “宝匣、退路和墨蛟才是眼前事实。别让无关的话�
 <!-- response:npc.invalid.encounter.too_long -->
 #### RESPONSE npc.invalid.encounter.too_long
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, realistic skin and ash-white armor, grounded jade and black mud, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous tactical medium close-up. Behind the cracked white-jade railing, show the exact same approved temporary ally; the existing crack in one physical formation pillar and the distant ink-dragon silhouette remain visible.
@@ -1253,11 +1253,11 @@ Transcript: “阵柱正在断裂。把计划压成一句，我只需要可执�
 <!-- response:npc.invalid.encounter.silence -->
 #### RESPONSE npc.invalid.encounter.silence
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, realistic skin and ash-white armor, grounded jade and black mud, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous tactical medium close-up. Behind the cracked white-jade railing, show the exact same approved temporary ally already holding the conservative guard pose over the marked retreat route; the distant ink-dragon silhouette remains visible.
@@ -1288,11 +1288,11 @@ Transcript: “你不表态，我便按最保守的方式守住退路。仍可�
 <!-- response:npc.invalid.encounter.low_confidence -->
 #### RESPONSE npc.invalid.encounter.low_confidence
 
-视频模型与设置：Veo 3.1 Fast 预览、Veo 3.1 最终；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
+视频模型与设置：Veo 3.1 Lite；Image-to-video；16:9，24 fps，8 秒；关闭生成音频。
 
 上传首帧（仅上传这一张）：`unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_grand_v2.png`
 
-完整视频提示词（Veo 3.1 无声表演底片，直接复制）：
+完整视频提示词（Veo 3.1 Lite 无声表演底片，直接复制）：
 
 ~~~text
 Original cinematic Chinese cultivation-fantasy world, same universe as Red Mist Secret Garden. Photoreal live-action, realistic skin and ash-white armor, grounded jade and black mud, restrained spiritual VFX, clear depth. Landscape 16:9, 24 fps, exactly 8 seconds, one locked continuous tactical medium close-up. Behind the cracked white-jade railing, show the exact same approved temporary ally listening while the distant ink-dragon silhouette remains visible through thin steam.
@@ -1322,19 +1322,19 @@ Transcript: “雾声盖住了你的话。再说得明确些，或者直接选�
 
 ## 人工交付规则
 
-### 第一批：先做 G2 小样，不要一次生成全部文件
+### 第一批：先做 G2 声线确认，再直接生成正式视频
 
 1. 在语音页面先生成 4 个声线小样：青衣侦察者选 Kore、阵灵选 Schedar、石峻选 Algenib、蛟窟盟友选 Iapetus。语音页不上传图片；每个角色先用本组第一条 TTS 提示试听。
-2. 在视频页面先只生成青衣侦察者 `inspect_mist` 的 1 个 Veo 3.1 Fast 无声预览：上传对应 `*_grand_v2.png`，关闭生成音频，只复制视频代码块。
+2. 在视频页面先只生成青衣侦察者 `inspect_mist` 的 1 个 Veo 3.1 Lite 无声基准片：上传对应 `*_v4.png`，关闭生成音频，只复制视频代码块。
 3. 该样片的人脸、发型、服装、闭口状态、道具稳定、人物落地感、日光层次和无字幕均达到人工 4/5 后，再按角色族逐批生成；失败时先停下调整提示词，不用增加候选数掩盖问题。
-4. 10 个无对白主剧情镜头可独立用 Veo 3.1 Fast 做预览；最终 Veo 3.1 版本必须等人物和新版堂皇世界风格通过后再生成。
+4. 基准片通过后，其余 10 个无对白主剧情镜头和 NPC 回应直接使用 Veo 3.1 Lite 生成正式候选，不再逐条生成预览视频。
 
 ### 文件命名
 
-- 主剧情视频：`node__{nodeId}__preview_v01.mp4`
-- NPC 回应视频：`response__{responseId}__preview_v01.mp4`
-- 独立语音：`voice__{responseId}__preview_v01.wav`
-- 最终版本把 `preview` 改为 `final`，不覆盖预览文件。
+- 主剧情视频：`node__{nodeId}__final_v01.mp4`
+- NPC 回应视频：`response__{responseId}__final_v01.mp4`
+- 独立语音：`voice__{responseId}__final_v01.wav`
+- 如需重做，递增 `v02`、`v03`，不要覆盖已审核文件。
 
 ### 交付与暂停点
 
@@ -1358,5 +1358,5 @@ Transcript: “雾声盖住了你的话。再说得明确些，或者直接选�
 
 ## 官方能力依据
 
-- [Veo 3.1 官方模型说明](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate)：用于稳定的文本/图片到视频、首尾帧与高分辨率环境镜头。
+- [Veo 3.1 Lite 官方模型说明](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate)：本批次统一使用 Lite 生成文本/图片到视频与连续性镜头。
 - [Gemini TTS 官方说明](https://docs.cloud.google.com/text-to-speech/docs/gemini-tts)：文字输入、音频输出，可用自然语言控制角色、语气、节奏和口音；Gemini 3.1 Flash TTS 适合快速试音，Gemini 2.5 Pro TTS 适合最终高保真语音。
