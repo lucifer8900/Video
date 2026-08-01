@@ -89,16 +89,28 @@ public sealed class MockVideoGenerationProvider : IVideoGenerationProvider
             HashBytes(content));
     }
 
-    private static string CanonicalVideoRequest(VideoGenerationRequest request) =>
-        string.Join(
-            "\n",
+    private static string CanonicalVideoRequest(VideoGenerationRequest request)
+    {
+        var values = new List<string>
+        {
             "mock-video-v1",
             request.JobId.ToString("D"),
             request.Prompt,
             request.InputHash,
             request.Seed.ToString(System.Globalization.CultureInfo.InvariantCulture),
             request.AspectRatio,
-            request.DurationSeconds.ToString(System.Globalization.CultureInfo.InvariantCulture));
+            request.DurationSeconds.ToString(System.Globalization.CultureInfo.InvariantCulture),
+            request.InputImages.Count.ToString(System.Globalization.CultureInfo.InvariantCulture),
+        };
+        foreach (VideoGenerationInputImage image in request.InputImages)
+        {
+            values.Add(image.ContentType);
+            values.Add(image.Bytes.LongLength.ToString(System.Globalization.CultureInfo.InvariantCulture));
+            values.Add(image.Sha256);
+        }
+
+        return string.Join("\n", values);
+    }
 
     private static void ValidateVideoRequest(VideoGenerationRequest request)
     {
@@ -106,7 +118,12 @@ public sealed class MockVideoGenerationProvider : IVideoGenerationProvider
         if (string.IsNullOrWhiteSpace(request.Prompt) ||
             string.IsNullOrWhiteSpace(request.InputHash) ||
             string.IsNullOrWhiteSpace(request.AspectRatio) ||
-            request.DurationSeconds <= 0)
+            request.DurationSeconds <= 0 ||
+            request.InputImages is null ||
+            request.InputImages.Any(image =>
+                image.Bytes is null || image.Bytes.Length == 0 ||
+                string.IsNullOrWhiteSpace(image.ContentType) ||
+                !string.Equals(HashBytes(image.Bytes), image.Sha256, StringComparison.OrdinalIgnoreCase)))
         {
             throw new GenerationProviderException(
                 GenerationProviderErrorCodes.InvalidRequest,

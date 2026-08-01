@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Lingmai.RedMist.Generation.Providers;
 
 namespace Lingmai.RedMist.Generation.Tests;
 
@@ -18,13 +19,22 @@ public sealed class ProviderRuntimeConfigurationTests
         Assert.Equal("ManualPrompt", providers.GetProperty("Video").GetProperty("Mode").GetString());
         Assert.Equal("Mock", providers.GetProperty("Image").GetProperty("Mode").GetString());
         Assert.Equal("Mock", providers.GetProperty("Text").GetProperty("Mode").GetString());
-        Assert.Equal(string.Empty, providers.GetProperty("Video").GetProperty("ModelId").GetString());
+        Assert.Equal(
+            "http://127.0.0.1:18001/v1/chat/completions",
+            providers.GetProperty("Video").GetProperty("Endpoint").GetString());
+        Assert.Equal(
+            Flow2ApiVideoGenerationProvider.ImageToVideoLiteModel,
+            providers.GetProperty("Video").GetProperty("ModelId").GetString());
+        Assert.Equal(
+            "Flow2API",
+            providers.GetProperty("Video").GetProperty("CredentialEnvironmentVariable").GetString());
         Assert.Equal(string.Empty, providers.GetProperty("Image").GetProperty("ModelId").GetString());
         Assert.Equal(string.Empty, providers.GetProperty("Text").GetProperty("ModelId").GetString());
 
         string serialized = providers.GetRawText();
         Assert.DoesNotContain("ApiKey", serialized, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("GEMINI", serialized, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("23.95.205.140", serialized, StringComparison.Ordinal);
     }
 
     [Fact]

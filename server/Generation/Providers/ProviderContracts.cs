@@ -15,7 +15,15 @@ public sealed record VideoGenerationRequest
     public required string AspectRatio { get; init; }
 
     public int DurationSeconds { get; init; }
+
+    public IReadOnlyList<VideoGenerationInputImage> InputImages { get; init; } =
+        Array.Empty<VideoGenerationInputImage>();
 }
+
+public sealed record VideoGenerationInputImage(
+    string ContentType,
+    byte[] Bytes,
+    string Sha256);
 
 public sealed record ImageGenerationRequest
 {
