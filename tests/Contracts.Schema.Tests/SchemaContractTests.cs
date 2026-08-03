@@ -52,6 +52,7 @@ public sealed class SchemaContractTests
         "save-game.schema.json",
         "story-bundle.schema.json",
         "red-mist-visual-bible.schema.json",
+        "red-mist-art-direction.schema.json",
     ];
 
     private static readonly string[] FixtureFiles =

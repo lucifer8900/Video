@@ -1,0 +1,339 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.example/schemas/red-mist-art-direction.schema.json",
+  "title": "Red Mist CX-516 Art Direction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "cardId",
+    "worldId",
+    "approval",
+    "artDirection",
+    "researchPolicy",
+    "characterScope",
+    "identityDesigns",
+    "costumePlan",
+    "creatureDesign",
+    "environmentPlan",
+    "productionPolicy",
+    "futureVideoConstraints",
+    "markdownContract",
+    "nextStep"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "cardId": { "const": "CX-516" },
+    "worldId": { "const": "lingmai-ember-red-mist" },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "approvedOn", "decisions"],
+      "properties": {
+        "status": { "const": "approved" },
+        "approvedOn": { "type": "string", "format": "date" },
+        "decisions": {
+          "type": "array",
+          "minItems": 6,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 3 }
+        }
+      }
+    },
+    "artDirection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primaryDirection", "tonalPrinciples", "prohibitions", "antiCopying"],
+      "properties": {
+        "primaryDirection": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "prefixItems": [
+            { "const": "tang_grand_ceremonial" },
+            { "const": "song_elegant_daily" },
+            { "const": "original_xianxia" }
+          ]
+        },
+        "tonalPrinciples": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["brightMajesty", "controlledContrast", "noGlobalGloom", "dayDuskNightContrast", "physicalMaterials"],
+          "properties": {
+            "brightMajesty": { "const": true },
+            "controlledContrast": { "const": true },
+            "noGlobalGloom": { "const": true },
+            "dayDuskNightContrast": { "const": true },
+            "physicalMaterials": { "const": true }
+          }
+        },
+        "prohibitions": {
+          "type": "array",
+          "minItems": 9,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^no_[a-z0-9_]+$" }
+        },
+        "antiCopying": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["actorLikenessAllowed", "exactCostumeReplicationAllowed", "exactPatternReplicationAllowed", "exactSetReplicationAllowed", "directCrossWorkMashupAllowed"],
+          "properties": {
+            "actorLikenessAllowed": { "const": false },
+            "exactCostumeReplicationAllowed": { "const": false },
+            "exactPatternReplicationAllowed": { "const": false },
+            "exactSetReplicationAllowed": { "const": false },
+            "directCrossWorkMashupAllowed": { "const": false }
+          }
+        }
+      }
+    },
+    "researchPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["officialWorkPagesOnly", "minimumWorks", "privateReferenceRoot", "downloadedStillsTracked", "referenceOnly", "shipInBuild", "identityReuse", "sources"],
+      "properties": {
+        "officialWorkPagesOnly": { "const": true },
+        "minimumWorks": { "const": 8 },
+        "privateReferenceRoot": {
+          "type": "string",
+          "pattern": "^content/reference-library/private-research/cx516$"
+        },
+        "downloadedStillsTracked": { "const": false },
+        "referenceOnly": { "const": true },
+        "shipInBuild": { "const": false },
+        "identityReuse": { "const": false },
+        "sources": {
+          "type": "array",
+          "minItems": 8,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/researchSource" }
+        }
+      }
+    },
+    "characterScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["humanoidCharacterIds", "creatureIds", "expressionReferenceSet"],
+      "properties": {
+        "humanoidCharacterIds": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^character\\.[a-z0-9_]+$" }
+        },
+        "creatureIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "prefixItems": [{ "const": "creature.ink_dragon" }]
+        },
+        "expressionReferenceSet": { "$ref": "#/$defs/expressionReferenceSet" }
+      }
+    },
+    "identityDesigns": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": { "$ref": "#/$defs/identityDesign" }
+    },
+    "costumePlan": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": { "$ref": "#/$defs/costumeEntry" }
+    },
+    "creatureDesign": { "$ref": "#/$defs/creatureDesign" },
+    "environmentPlan": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": { "$ref": "#/$defs/environmentDomain" }
+    },
+    "productionPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["imageGenerationThisCard", "videoGenerationThisCard", "flow2ApiUsed", "geminiUsed", "veoUsed", "overwriteExistingAssets", "plotChanges", "dialogueChanges", "characterNameChanges", "unityAdoption", "cx514Status"],
+      "properties": {
+        "imageGenerationThisCard": { "const": false },
+        "videoGenerationThisCard": { "const": false },
+        "flow2ApiUsed": { "const": false },
+        "geminiUsed": { "const": false },
+        "veoUsed": { "const": false },
+        "overwriteExistingAssets": { "const": false },
+        "plotChanges": { "const": false },
+        "dialogueChanges": { "const": false },
+        "characterNameChanges": { "const": false },
+        "unityAdoption": { "const": false },
+        "cx514Status": { "const": "paused" }
+      }
+    },
+    "futureVideoConstraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["defaultModel", "networkMode", "maxClipsPerBatch", "candidatesPerShot", "automaticRetries", "stripVeoAudio", "voiceAndSoundIndependent", "dispatchEnabled"],
+      "properties": {
+        "defaultModel": { "const": "veo_3_1_i2v_lite_landscape" },
+        "networkMode": { "const": "ssh_loopback_when_enabled" },
+        "maxClipsPerBatch": { "const": 5 },
+        "candidatesPerShot": { "const": 1 },
+        "automaticRetries": { "const": 0 },
+        "stripVeoAudio": { "const": true },
+        "voiceAndSoundIndependent": { "const": true },
+        "dispatchEnabled": { "const": false }
+      }
+    },
+    "markdownContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relativePath", "requiredPhrases"],
+      "properties": {
+        "relativePath": { "const": "content/story/red-mist/red-mist-art-direction.cx516.md" },
+        "requiredPhrases": {
+          "type": "array",
+          "minItems": 8,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 3 }
+        }
+      }
+    },
+    "nextStep": { "const": "new_task_card_for_multiview_outfit_and_expression_assets" }
+  },
+  "$defs": {
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 2 }
+    },
+    "researchSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["workId", "title", "platform", "officialPageUrl", "observations", "abstractFindings", "referenceOnly", "shipInBuild", "identityReuse", "exactReplicationAllowed"],
+      "properties": {
+        "workId": { "type": "string", "pattern": "^work\\.[a-z0-9_]+$" },
+        "title": { "type": "string", "minLength": 2 },
+        "platform": { "enum": ["iQIYI", "Youku", "Tencent Video", "WeTV"] },
+        "officialPageUrl": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "observations": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "enum": ["costume", "architecture", "landscape", "lighting"] }
+        },
+        "abstractFindings": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "referenceOnly": { "const": true },
+        "shipInBuild": { "const": false },
+        "identityReuse": { "const": false },
+        "exactReplicationAllowed": { "const": false }
+      }
+    },
+    "expressionReferenceSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["strategy", "countPerHumanoid", "emotionIds", "trainingModelPlanned"],
+      "properties": {
+        "strategy": { "const": "reference_assets" },
+        "countPerHumanoid": { "const": 12 },
+        "emotionIds": {
+          "type": "array",
+          "minItems": 12,
+          "maxItems": 12,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[a-z0-9_]+$" }
+        },
+        "trainingModelPlanned": { "const": false }
+      }
+    },
+    "identityDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["characterId", "displayName", "role", "ageRead", "silhouette", "posture", "faceMotion", "basePalette", "materialLanguage", "footwear", "continuityProps", "noActorLikeness"],
+      "properties": {
+        "characterId": { "type": "string", "pattern": "^character\\.[a-z0-9_]+$" },
+        "displayName": { "type": "string", "minLength": 2 },
+        "role": { "enum": ["male_protagonist", "female_protagonist", "major_villain", "major_supporting", "general_supporting", "story_character"] },
+        "ageRead": { "type": "string", "minLength": 3 },
+        "silhouette": { "type": "string", "minLength": 12 },
+        "posture": { "type": "string", "minLength": 12 },
+        "faceMotion": { "type": "string", "minLength": 12 },
+        "basePalette": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "materialLanguage": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "footwear": { "type": "string", "minLength": 5 },
+        "continuityProps": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 2 } },
+        "noActorLikeness": { "const": true }
+      }
+    },
+    "costumeEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["characterId", "tier", "outfits"],
+      "properties": {
+        "characterId": { "type": "string", "pattern": "^character\\.[a-z0-9_]+$" },
+        "tier": { "enum": ["protagonist", "major_villain", "major_supporting", "general_supporting", "story_character"] },
+        "outfits": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": { "$ref": "#/$defs/outfit" }
+        }
+      }
+    },
+    "outfit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["outfitId", "displayName", "stage", "function", "eraBasis", "silhouette", "palette", "materials", "footwear", "weathering", "cinematicRead"],
+      "properties": {
+        "outfitId": { "type": "string", "pattern": "^outfit\\.[a-z0-9_]+\\.v1$" },
+        "displayName": { "type": "string", "minLength": 2 },
+        "stage": { "enum": ["early", "mid", "late", "primary", "secondary", "single"] },
+        "function": { "enum": ["daily_exploration", "formal_ceremony", "combat_crisis", "command", "ritual", "scouting", "covert_action", "cavern_travel", "formation_manifestation"] },
+        "eraBasis": { "enum": ["tang_ceremonial", "song_daily", "original_xianxia_synthesis"] },
+        "silhouette": { "type": "string", "minLength": 12 },
+        "palette": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "materials": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "footwear": { "type": "string", "minLength": 5 },
+        "weathering": { "type": "string", "minLength": 8 },
+        "cinematicRead": { "type": "string", "minLength": 12 }
+      }
+    },
+    "creatureDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["creatureId", "displayName", "category", "head", "horns", "whiskersAndMane", "body", "scales", "limbs", "wings", "scaleRead", "motion", "palette", "prohibitions", "humanOutfitCount"],
+      "properties": {
+        "creatureId": { "const": "creature.ink_dragon" },
+        "displayName": { "const": "墨蛟" },
+        "category": { "const": "original_chinese_jiao_dragon" },
+        "head": { "type": "string", "minLength": 8 },
+        "horns": { "type": "string", "minLength": 8 },
+        "whiskersAndMane": { "type": "string", "minLength": 8 },
+        "body": { "type": "string", "minLength": 8 },
+        "scales": { "type": "string", "minLength": 8 },
+        "limbs": { "type": "string", "minLength": 8 },
+        "wings": { "const": "none" },
+        "scaleRead": { "type": "string", "minLength": 8 },
+        "motion": { "type": "string", "minLength": 8 },
+        "palette": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "prohibitions": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "humanOutfitCount": { "const": 0 }
+      }
+    },
+    "environmentDomain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["domainId", "displayName", "scaleAndStructure", "materials", "dayLook", "duskLook", "nightLook", "interactionCues", "wonderElement"],
+      "properties": {
+        "domainId": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+        "displayName": { "type": "string", "minLength": 2 },
+        "scaleAndStructure": { "type": "string", "minLength": 15 },
+        "materials": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "dayLook": { "type": "string", "minLength": 10 },
+        "duskLook": { "type": "string", "minLength": 10 },
+        "nightLook": { "type": "string", "minLength": 10 },
+        "interactionCues": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "wonderElement": { "type": "string", "minLength": 10 }
+      }
+    }
+  }
+}

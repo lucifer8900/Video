@@ -1212,6 +1212,12 @@
       "schemaFile": "red-mist-visual-bible.schema.json",
       "instanceFile": "../../content/story/red-mist/red-mist-visual-bible.cx508.json",
       "expectedValid": true
+    },
+    {
+      "name": "valid CX-516 red mist art direction",
+      "schemaFile": "red-mist-art-direction.schema.json",
+      "instanceFile": "../../content/story/red-mist/red-mist-art-direction.cx516.json",
+      "expectedValid": true
     }
   ]
 }
