@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/story-fact.schema.json",
+  "title": "StoryFact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "authorityLevel",
+    "factType",
+    "value",
+    "approvalStatus"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "authorityLevel": {
+      "const": "L0"
+    },
+    "factType": {
+      "type": "string",
+      "enum": [
+        "canon_result",
+        "world_rule",
+        "character_life"
+      ]
+    },
+    "value": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "approvalStatus": {
+      "$ref": "common.schema.json#/$defs/status"
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/sourceRef"
+      },
+      "uniqueItems": true
+    },
+    "tags": {
+      "$ref": "common.schema.json#/$defs/stringArray"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0.0", "id": "fixture.generation_job.failed_no_time",
+  "providerKey": "fixture.provider.local", "modelSnapshot": "fixture-model-snapshot",
+  "promptVersion": "fixture.prompt.v1", "seed": 207,
+  "inputHash": "sha256:7777777777777777777777777777777777777777777777777777777777777777",
+  "jobStatus": "failed", "requestedAtUtc": "2026-07-15T00:00:00Z",
+  "cost": { "amount": 0, "currency": "CNY" }, "failureCode": "fixture.failure.provider"
+}

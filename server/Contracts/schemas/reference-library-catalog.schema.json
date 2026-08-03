@@ -1,0 +1,555 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.example/schemas/reference-library-catalog.schema.json",
+  "title": "CX-507 China visual reference atlas",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "libraryId",
+    "coveragePlanId",
+    "referenceOnly",
+    "shipInBuild",
+    "minimumAssetsPerCategory",
+    "allowedLicenses",
+    "categories",
+    "assets"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "libraryId": {
+      "const": "cx507-china-reference-library-v2"
+    },
+    "coveragePlanId": {
+      "const": "cx507-china-visual-atlas-v1"
+    },
+    "referenceOnly": {
+      "const": true
+    },
+    "shipInBuild": {
+      "const": false
+    },
+    "minimumAssetsPerCategory": {
+      "const": 4
+    },
+    "allowedLicenses": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "const": "cc0"
+        },
+        {
+          "const": "pdm"
+        },
+        {
+          "const": "by"
+        },
+        {
+          "const": "unverified"
+        }
+      ],
+      "items": false,
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "categories": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "const": "landscape"
+        },
+        {
+          "const": "architecture"
+        },
+        {
+          "const": "plants"
+        },
+        {
+          "const": "animals"
+        },
+        {
+          "const": "waters"
+        },
+        {
+          "const": "weather"
+        },
+        {
+          "const": "astronomy"
+        },
+        {
+          "const": "people"
+        },
+        {
+          "const": "costumes_textiles"
+        },
+        {
+          "const": "artifacts"
+        },
+        {
+          "const": "geology_caves"
+        },
+        {
+          "const": "light_fog_fire"
+        }
+      ],
+      "items": false,
+      "minItems": 12,
+      "maxItems": 12,
+      "uniqueItems": true
+    },
+    "assets": {
+      "type": "array",
+      "minItems": 800,
+      "items": {
+        "$ref": "#/$defs/asset"
+      }
+    }
+  },
+  "$defs": {
+    "httpsUri": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category",
+        "title",
+        "creator",
+        "creatorUrl",
+        "source",
+        "sourcePageUrl",
+        "downloadUrl",
+        "license",
+        "licenseVersion",
+        "licenseUrl",
+        "commercialUseAllowed",
+        "modificationsAllowed",
+        "shareAlikeRequired",
+        "referenceOnly",
+        "shipInBuild",
+        "identityReuse",
+        "referenceRoles",
+        "localRelativePath",
+        "mediaType",
+        "byteLength",
+        "width",
+        "height",
+        "sha256",
+        "downloadedAtUtc",
+        "curationStatus",
+        "coverageTargetIds",
+        "taxonomy"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^ref-[a-z0-9-]+-[0-9]{3,4}-(?:[a-z0-9]{4,10}|[a-z0-9]{4,10}-[0-9a-f]{12})$"
+        },
+        "category": {
+          "enum": [
+            "landscape",
+            "architecture",
+            "plants",
+            "animals",
+            "waters",
+            "weather",
+            "astronomy",
+            "people",
+            "costumes_textiles",
+            "artifacts",
+            "geology_caves",
+            "light_fog_fire"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "creator": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024
+        },
+        "creatorUrl": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/httpsUri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "sourcePageUrl": {
+          "oneOf": [
+            { "$ref": "#/$defs/httpsUri" },
+            { "type": "null" }
+          ]
+        },
+        "downloadUrl": {
+          "$ref": "#/$defs/httpsUri"
+        },
+        "license": {
+          "enum": [
+            "cc0",
+            "pdm",
+            "by",
+            "unverified"
+          ]
+        },
+        "licenseVersion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16
+        },
+        "licenseUrl": {
+          "oneOf": [
+            { "$ref": "#/$defs/httpsUri" },
+            { "type": "null" }
+          ]
+        },
+        "commercialUseAllowed": {
+          "type": "boolean"
+        },
+        "modificationsAllowed": {
+          "type": "boolean"
+        },
+        "shareAlikeRequired": {
+          "const": false
+        },
+        "referenceOnly": {
+          "const": true
+        },
+        "shipInBuild": {
+          "const": false
+        },
+        "identityReuse": {
+          "const": false
+        },
+        "referenceRoles": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "composition",
+              "structure",
+              "material",
+              "lighting",
+              "weather",
+              "color",
+              "silhouette",
+              "anatomy",
+              "pose",
+              "expression",
+              "gaze",
+              "gesture",
+              "weight_balance",
+              "garment_construction",
+              "surface_detail"
+            ]
+          }
+        },
+        "localRelativePath": {
+          "type": "string",
+          "pattern": "^content/reference-library/raw/[a-z_]+/[a-z0-9._-]+\\.(jpg|png|webp)$"
+        },
+        "mediaType": {
+          "enum": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ]
+        },
+        "byteLength": {
+          "type": "integer",
+          "minimum": 64,
+          "maximum": 50000000
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "downloadedAtUtc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "curationStatus": {
+          "const": "needs_review"
+        },
+        "coverageTargetIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+\\.[a-z0-9_]+$"
+          }
+        },
+        "taxonomy": {
+          "$ref": "#/$defs/taxonomy"
+        },
+        "sourceVerification": {
+          "enum": ["verified", "unverified"]
+        },
+        "shortfallException": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": [
+            "reason",
+            "sourceStatus",
+            "qualityStatus",
+            "requiresManualReview"
+          ],
+          "properties": {
+            "reason": { "const": "material_shortage" },
+            "sourceStatus": { "enum": ["unverified", "verified"] },
+            "qualityStatus": { "enum": ["minimum_resolution", "reduced_resolution"] },
+            "requiresManualReview": { "const": true }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "not": { "required": ["shortfallException"] }
+          },
+          "then": {
+            "properties": {
+              "license": { "enum": ["cc0", "pdm", "by"] },
+              "licenseUrl": { "$ref": "#/$defs/httpsUri" },
+              "commercialUseAllowed": { "const": true },
+              "modificationsAllowed": { "const": true },
+              "width": { "minimum": 800 },
+              "height": { "minimum": 600 }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": ["shortfallException"],
+            "properties": {
+              "shortfallException": { "type": "object" }
+            }
+          },
+          "then": {
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "shortfallException": {
+                      "properties": { "sourceStatus": { "const": "unverified" } }
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "license": { "const": "unverified" },
+                    "licenseVersion": { "const": "unverified" },
+                    "licenseUrl": { "type": "null" },
+                    "commercialUseAllowed": { "const": false },
+                    "modificationsAllowed": { "const": false }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "shortfallException": {
+                      "properties": { "sourceStatus": { "const": "verified" } }
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "license": { "enum": ["cc0", "pdm", "by"] },
+                    "licenseUrl": { "$ref": "#/$defs/httpsUri" },
+                    "commercialUseAllowed": { "const": true },
+                    "modificationsAllowed": { "const": true }
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "width": { "minimum": 320 },
+                  "height": { "minimum": 180 }
+                }
+              }
+              ,
+              {
+                "if": {
+                  "properties": {
+                    "license": { "const": "unverified" }
+                  }
+                },
+                "then": {
+                  "required": ["sourceVerification"],
+                  "properties": {
+                    "sourceVerification": { "const": "unverified" },
+                    "licenseVersion": { "const": "unverified" },
+                    "licenseUrl": { "type": "null" },
+                    "commercialUseAllowed": { "const": false },
+                    "modificationsAllowed": { "const": false }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "taxonomy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authenticity",
+        "peoplePresence",
+        "provinceRegionIds",
+        "locationLabels",
+        "historicalCapitalIds",
+        "historicalPeriodIds",
+        "architectureTypeIds",
+        "gardenTypeIds",
+        "landformIds",
+        "weatherPhenomenonIds",
+        "seasons",
+        "timesOfDay"
+      ],
+      "properties": {
+        "authenticity": {
+          "enum": [
+            "unknown_needs_review",
+            "extant",
+            "restored",
+            "reconstructed",
+            "ruins",
+            "mixed",
+            "not_applicable"
+          ]
+        },
+        "peoplePresence": {
+          "enum": [
+            "unknown_needs_review",
+            "confirmed_absent",
+            "detected_present",
+            "not_applicable"
+          ]
+        },
+        "provinceRegionIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_][a-z0-9_.-]*$"
+          }
+        },
+        "locationLabels": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          }
+        },
+        "historicalCapitalIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_][a-z0-9_.-]*$"
+          }
+        },
+        "historicalPeriodIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_][a-z0-9_.-]*$"
+          }
+        },
+        "architectureTypeIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_][a-z0-9_.-]*$"
+          }
+        },
+        "gardenTypeIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_][a-z0-9_.-]*$"
+          }
+        },
+        "landformIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_][a-z0-9_.-]*$"
+          }
+        },
+        "weatherPhenomenonIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_][a-z0-9_.-]*$"
+          }
+        },
+        "seasons": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "spring",
+              "summer",
+              "autumn",
+              "winter",
+              "unknown"
+            ]
+          }
+        },
+        "timesOfDay": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "dawn",
+              "day",
+              "dusk",
+              "night",
+              "unknown"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

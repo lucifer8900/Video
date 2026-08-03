@@ -1,0 +1,8 @@
+# Unity serializes empty YAML scalar values with trailing spaces.
+*.meta -whitespace
+*.asset -whitespace
+*.unity -whitespace
+*.controller -whitespace
+
+# Markdown uses two trailing spaces for intentional hard line breaks.
+*.md whitespace=-blank-at-eol

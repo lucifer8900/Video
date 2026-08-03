@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.example/schemas/red-mist-multiview-candidates.schema.json",
+  "title": "Red Mist CX-517 Multiview Candidates",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "cardId",
+    "worldId",
+    "createdOn",
+    "artDirectionSource",
+    "generationPolicy",
+    "anchorSources",
+    "requiredCandidateIds",
+    "candidates",
+    "markdownContract",
+    "reviewBoundary"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "cardId": { "const": "CX-517" },
+    "worldId": { "const": "lingmai-ember-red-mist" },
+    "createdOn": { "type": "string", "format": "date" },
+    "artDirectionSource": { "$ref": "#/$defs/fileSource" },
+    "generationPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "imageProvider",
+        "stillImagesOnly",
+        "videoOrAudioUsed",
+        "flow2ApiUsed",
+        "geminiUsed",
+        "veoUsed",
+        "overwriteExistingAssets",
+        "generationCalls",
+        "discardedOutputs",
+        "acceptedCandidateFiles",
+        "expressionsDeferredUntilMultiviewApproval",
+        "cx514Status"
+      ],
+      "properties": {
+        "imageProvider": { "const": "codex_builtin_imagegen" },
+        "stillImagesOnly": { "const": true },
+        "videoOrAudioUsed": { "const": false },
+        "flow2ApiUsed": { "const": false },
+        "geminiUsed": { "const": false },
+        "veoUsed": { "const": false },
+        "overwriteExistingAssets": { "const": false },
+        "generationCalls": { "type": "integer", "minimum": 13 },
+        "discardedOutputs": { "type": "integer", "minimum": 0 },
+        "acceptedCandidateFiles": { "const": 13 },
+        "expressionsDeferredUntilMultiviewApproval": { "const": true },
+        "cx514Status": { "const": "paused" }
+      }
+    },
+    "anchorSources": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": { "$ref": "#/$defs/anchorSource" }
+    },
+    "requiredCandidateIds": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^turnaround\\.(outfit|creature)\\.[a-z0-9_]+\\.v[1-9][0-9]*$" }
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "items": { "$ref": "#/$defs/candidate" }
+    },
+    "markdownContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relativePath", "listsEveryAssetAndFile"],
+      "properties": {
+        "relativePath": { "const": "content/story/red-mist/red-mist-multiview-candidates.cx517.md" },
+        "listsEveryAssetAndFile": { "const": true }
+      }
+    },
+    "reviewBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["humanReviewRequired", "automaticAdoption", "unityIntegration", "nextCard"],
+      "properties": {
+        "humanReviewRequired": { "const": true },
+        "automaticAdoption": { "const": false },
+        "unityIntegration": { "const": false },
+        "nextCard": { "const": "human_review_then_expression_reference_card" }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "fileSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": { "type": "string", "pattern": "^content/" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "anchorSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assetId", "path", "sha256"],
+      "properties": {
+        "assetId": { "type": "string", "pattern": "^(identity|creature)\\.[a-z0-9_]+\\.v[1-9][0-9]*$" },
+        "path": { "type": "string", "pattern": "^content/visual-candidates/cx(508|509|510)/identity-anchors/[a-z0-9_]+_v[1-9][0-9]*\\.png$" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mediaType", "byteLength", "width", "height", "sha256"],
+      "properties": {
+        "mediaType": { "const": "image/png" },
+        "byteLength": { "type": "integer", "minimum": 1 },
+        "width": { "type": "integer", "minimum": 1400 },
+        "height": { "type": "integer", "minimum": 900 },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assetId",
+        "assetKind",
+        "subjectId",
+        "sourceAnchor",
+        "generationMode",
+        "adoptionStatus",
+        "adopted",
+        "shipInBuild",
+        "outputPath",
+        "views",
+        "prompt",
+        "continuityLocks",
+        "avoidItems",
+        "reviewStatus",
+        "reviewChecks",
+        "artifact"
+      ],
+      "properties": {
+        "assetId": { "type": "string", "pattern": "^turnaround\\.(outfit|creature)\\.[a-z0-9_]+\\.v[1-9][0-9]*$" },
+        "assetKind": { "enum": ["outfit_turnaround", "creature_turnaround"] },
+        "subjectId": { "type": "string", "pattern": "^(character|creature)\\.[a-z0-9_]+$" },
+        "outfitId": { "type": "string", "pattern": "^outfit\\.[a-z0-9_]+\\.v1$" },
+        "sourceAnchor": { "$ref": "#/$defs/anchorSource" },
+        "generationMode": { "const": "codex_builtin_imagegen" },
+        "adoptionStatus": { "const": "needs_review" },
+        "adopted": { "const": false },
+        "shipInBuild": { "const": false },
+        "outputPath": { "type": "string", "pattern": "^content/visual-candidates/cx517/turnarounds/[a-z0-9_]+_v[1-9][0-9]*\\.png$" },
+        "views": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": { "enum": ["front", "left_profile", "back", "front_three_quarter", "rear_three_quarter", "top"] }
+        },
+        "prompt": { "type": "string", "minLength": 180 },
+        "continuityLocks": {
+          "type": "array",
+          "minItems": 6,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[a-z0-9_]+$" }
+        },
+        "avoidItems": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^no_[a-z0-9_]+$" }
+        },
+        "reviewStatus": { "const": "pending_human_review" },
+        "reviewChecks": {
+          "type": "array",
+          "minItems": 10,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[a-z0-9_]+$" }
+        },
+        "artifact": { "$ref": "#/$defs/artifact" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "assetKind": { "const": "outfit_turnaround" } }, "required": ["assetKind"] },
+          "then": { "required": ["outfitId"] },
+          "else": { "not": { "required": ["outfitId"] } }
+        }
+      ]
+    }
+  }
+}

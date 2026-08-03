@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0.0",
+  "idempotencyKey": "cx306.submit.injected",
+  "inputHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "providerApiKey": "must-not-be-accepted"
+}

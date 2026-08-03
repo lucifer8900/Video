@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/voice-intent.schema.json",
+  "title": "VoiceIntent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "displayKey",
+    "topicKeys",
+    "toneKey",
+    "minimumConfidence",
+    "npcResponseRef",
+    "effects"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "displayKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "topicKeys": {
+      "$ref": "common.schema.json#/$defs/idArray"
+    },
+    "toneKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "minimumConfidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "npcResponseRef": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "fallbackNpcResponseRef": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/stateEffect"
+      }
+    },
+    "confirmationRule": {
+      "$ref": "common.schema.json#/$defs/confirmationRule"
+    },
+    "approvalStatus": {
+      "$ref": "common.schema.json#/$defs/status"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.bundle.missing_offline_fallback",
+  "entryNodeId": "fixture.node.offline.entry",
+  "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "approvalStatus": "approved",
+  "storyFacts": [],
+  "characterDefinitions": [],
+  "characterStates": [],
+  "questDefinitions": [],
+  "sceneNodes": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node.offline.entry",
+      "displayKey": "fixture.display.offline.entry",
+      "entryConditions": [],
+      "mediaRefs": [],
+      "choices": [],
+      "voiceIntentRefs": [
+        "fixture.intent.offline.continue"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "fixture.response.offline.continue" },
+        "irrelevant": { "npcResponseRef": "fixture.response.offline.continue" },
+        "too_long": { "npcResponseRef": "fixture.response.offline.continue" },
+        "silence": { "npcResponseRef": "fixture.response.offline.continue" },
+        "low_confidence": { "npcResponseRef": "fixture.response.offline.continue" }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node.offline.terminal",
+      "displayKey": "fixture.display.offline.terminal",
+      "entryConditions": [],
+      "mediaRefs": [],
+      "choices": [],
+      "voiceIntentRefs": [],
+      "injectionPoints": [],
+      "terminal": true,
+      "approvalStatus": "approved"
+    }
+  ],
+  "voiceIntents": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.intent.offline.continue",
+      "displayKey": "fixture.display.intent.offline.continue",
+      "topicKeys": [
+        "fixture.topic.continue"
+      ],
+      "toneKey": "fixture.tone.neutral",
+      "minimumConfidence": 0.9,
+      "npcResponseRef": "fixture.response.offline.continue",
+      "effects": [],
+      "approvalStatus": "approved"
+    }
+  ],
+  "npcResponses": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.response.offline.continue",
+      "textKey": "fixture.text.response.offline.continue",
+      "emotionKey": "fixture.emotion.neutral",
+      "lipSyncMediaRef": "fixture.media.offline.response",
+      "effects": [],
+      "nextNodeId": "fixture.node.offline.terminal",
+      "approvalStatus": "approved"
+    }
+  ],
+  "combatantStates": [],
+  "encounterDefinitions": [],
+  "combatResolutions": [],
+  "mediaAssets": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.media.offline.response",
+      "assetVersion": "1.0.0",
+      "mediaType": "video",
+      "contentHash": "sha256:1212121212121212121212121212121212121212121212121212121212121212",
+      "uri": "https://fixtures.example.invalid/media/offline-response.mp4",
+      "language": "zh-CN",
+      "resolution": {
+        "width": 1920,
+        "height": 1080
+      },
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    }
+  ],
+  "generationJobs": [],
+  "saveGames": []
+}

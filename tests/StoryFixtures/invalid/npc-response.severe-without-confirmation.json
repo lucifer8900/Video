@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.npc_response.unsafe_attack",
+  "textKey": "fixture.npc_response.unsafe_attack.text",
+  "emotionKey": "fixture.emotion.hostile",
+  "lipSyncMediaRef": "fixture.media.lip_sync.hostile",
+  "effects": [
+    {
+      "op": "attack",
+      "targetRef": "fixture.character.player"
+    }
+  ],
+  "approvalStatus": "approved"
+}

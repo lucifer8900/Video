@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0.0", "id": "fixture.generation_job.legacy_running",
+  "providerKey": "fixture.provider.local", "modelSnapshot": "fixture-model-snapshot",
+  "promptVersion": "fixture.prompt.v1", "seed": 201,
+  "inputHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "jobStatus": "running", "requestedAtUtc": "2026-07-15T00:00:00Z",
+  "cost": { "amount": 0, "currency": "CNY" }
+}

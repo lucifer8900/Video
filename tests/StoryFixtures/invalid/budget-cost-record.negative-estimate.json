@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0.0", "reservationId": "budget.reservation.fixture.negative",
+  "currency": "USD", "estimatedMicros": -1, "maximumMicros": 200000,
+  "status": "reserved", "priceVersion": "fixture.price.v1",
+  "providerKey": "fixture.provider.video", "modelSnapshot": "fixture-model-snapshot"
+}

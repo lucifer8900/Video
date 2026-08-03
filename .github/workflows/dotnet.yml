@@ -1,0 +1,29 @@
+name: .NET CI
+
+on:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore Video.sln
+
+      - name: Build
+        run: dotnet build Video.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test Video.sln --configuration Release --no-build --no-restore --verbosity normal

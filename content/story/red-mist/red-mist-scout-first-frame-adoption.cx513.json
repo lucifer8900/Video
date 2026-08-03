@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "cardId": "CX-513",
+  "worldId": "lingmai-ember-red-mist",
+  "sourceCardId": "CX-512",
+  "humanReview": {
+    "approved": true,
+    "decision": "user_explicit",
+    "scope": "three_celadon_scout_dialogue_first_frames_only"
+  },
+  "generationPolicy": {
+    "stillImagesOnly": true,
+    "geminiOrVeoUsed": false,
+    "overwriteExistingAssets": false,
+    "realPeopleIdentityReuseAllowed": false,
+    "sourceCandidatesPreserved": true,
+    "grandV2SourcesPreserved": true
+  },
+  "promptOverridePath": "content/story/red-mist/video-generation-prompts.cx505.md",
+  "candidates": [
+    {
+      "assetId": "firstframe.dialogue.scout.mist.v4",
+      "sceneKey": "scout_mist",
+      "sourcePath": "content/visual-candidates/cx512/first-frames/firstframe_dialogue_scout_mist_v4.png",
+      "sourceArtifact": {"mediaType": "image/png", "byteLength": 3792346, "sha256": "36f74aced057f0073422b7e3efac96b95fa6f087893b206d8f4dbff9177dc793", "width": 1664, "height": 936},
+      "targetPath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png",
+      "targetMetaPath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4.png.meta",
+      "targetGuid": "f46812de4e5179141ad442d5d35d8ff0",
+      "runtimeResourcePath": "Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_v4",
+      "registryConstant": "ScoutMistFirstFrame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "adopted",
+      "adopted": true,
+      "shipInBuild": true,
+      "overwriteExistingAssets": false,
+      "responseIds": ["npc.response.prologue.inspect_mist", "npc.invalid.calm.abuse", "npc.invalid.calm.irrelevant", "npc.invalid.calm.too_long", "npc.invalid.calm.silence", "npc.invalid.calm.low_confidence"],
+      "artifact": {"mediaType": "image/png", "byteLength": 3792346, "sha256": "36f74aced057f0073422b7e3efac96b95fa6f087893b206d8f4dbff9177dc793", "width": 1664, "height": 936},
+      "continuityLocks": ["stable_v3_identity", "stable_v3_costume", "shared_mist_gate_geometry", "shared_environment_light", "grounded_contact", "normal_lens_perspective", "one_foreground_scout"]
+    },
+    {
+      "assetId": "firstframe.dialogue.scout.alliance.v4",
+      "sceneKey": "scout_alliance",
+      "sourcePath": "content/visual-candidates/cx512/first-frames/firstframe_dialogue_scout_alliance_v4.png",
+      "sourceArtifact": {"mediaType": "image/png", "byteLength": 3957313, "sha256": "ec853770de29170156047c47877e4647ace1f850eeb63ea066ce9da3994630d6", "width": 1664, "height": 936},
+      "targetPath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png",
+      "targetMetaPath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4.png.meta",
+      "targetGuid": "e7d82dfe40072f74a99cd91277e72ada",
+      "runtimeResourcePath": "Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_v4",
+      "registryConstant": "ScoutAllianceFirstFrame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "adopted",
+      "adopted": true,
+      "shipInBuild": true,
+      "overwriteExistingAssets": false,
+      "responseIds": ["npc.response.alliance.cautious_cooperation", "npc.invalid.ally.abuse", "npc.invalid.ally.irrelevant", "npc.invalid.ally.too_long", "npc.invalid.ally.silence", "npc.invalid.ally.low_confidence"],
+      "artifact": {"mediaType": "image/png", "byteLength": 3957313, "sha256": "ec853770de29170156047c47877e4647ace1f850eeb63ea066ce9da3994630d6", "width": 1664, "height": 936},
+      "continuityLocks": ["stable_v3_identity", "stable_v3_costume", "shared_alliance_terrace_geometry", "shared_environment_light", "grounded_contact", "normal_lens_perspective", "one_foreground_scout"]
+    },
+    {
+      "assetId": "firstframe.dialogue.scout.rescue.v4",
+      "sceneKey": "scout_rescue",
+      "sourcePath": "content/visual-candidates/cx512/first-frames/firstframe_dialogue_scout_rescue_v4.png",
+      "sourceArtifact": {"mediaType": "image/png", "byteLength": 3785461, "sha256": "e36cb6440d04a2762be7dcb50259e7706e3c28299acd983927f0c789a1dbd901", "width": 1664, "height": 936},
+      "targetPath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_rescue_v4.png",
+      "targetMetaPath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_rescue_v4.png.meta",
+      "targetGuid": "5909fd97b958c92409e1d5cdd8325bb9",
+      "runtimeResourcePath": "Generated/VideoFirstFrames/firstframe_dialogue_scout_rescue_v4",
+      "registryConstant": "ScoutRescueFirstFrame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "adopted",
+      "adopted": true,
+      "shipInBuild": true,
+      "overwriteExistingAssets": false,
+      "responseIds": ["npc.response.rescue.secure_survivor"],
+      "artifact": {"mediaType": "image/png", "byteLength": 3785461, "sha256": "e36cb6440d04a2762be7dcb50259e7706e3c28299acd983927f0c789a1dbd901", "width": 1664, "height": 936},
+      "continuityLocks": ["stable_v3_identity", "stable_v3_costume", "shared_rescue_gallery_geometry", "shared_environment_light", "grounded_contact", "normal_lens_perspective", "one_foreground_scout"]
+    }
+  ]
+}

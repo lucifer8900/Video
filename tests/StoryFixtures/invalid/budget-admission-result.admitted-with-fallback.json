@@ -1,0 +1,5 @@
+{
+  "schemaVersion": "1.0.0", "outcome": "admitted",
+  "reservationId": "budget.reservation.fixture.invalid",
+  "fallbackMediaRef": "media.fallback.budget", "reasonCode": "budget.should_not_be_here"
+}

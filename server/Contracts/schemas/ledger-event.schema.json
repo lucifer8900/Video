@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/ledger-event.schema.json",
+  "title": "LedgerEvent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "entryId",
+    "playerId",
+    "type",
+    "actors",
+    "severity",
+    "chapter",
+    "worldClock",
+    "sourceNodeId",
+    "factRefs",
+    "payload"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "entryId": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 96,
+      "pattern": "^led\\.[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+    },
+    "playerId": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 96,
+      "pattern": "^p\\.[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "debt_incurred",
+        "debt_repaid",
+        "secret_exposed",
+        "promise_made",
+        "promise_broken",
+        "npc_rescued",
+        "npc_abandoned",
+        "enemy_spared",
+        "item_gained",
+        "quest_expired",
+        "trump_card_revealed"
+      ]
+    },
+    "actors": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      }
+    },
+    "severity": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "chapter": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "worldClock": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "sourceNodeId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "factRefs": {
+      "type": "array",
+      "maxItems": 16,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 6,
+        "maxLength": 160,
+        "pattern": "^fact\\.[A-Za-z0-9][A-Za-z0-9._:-]*$"
+      }
+    },
+    "payload": {
+      "type": "object",
+      "maxProperties": 2
+    }
+  },
+  "$defs": {
+    "token": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[a-z][a-z0-9_]{0,63}$"
+    },
+    "stableId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "ledgerId": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 96,
+      "pattern": "^led\\.[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+    },
+    "debtIncurredPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "maxProperties": 1,
+      "properties": {
+        "debtKind": { "$ref": "#/$defs/token" }
+      }
+    },
+    "debtRepaidPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "maxProperties": 1,
+      "properties": {
+        "debtRef": { "$ref": "#/$defs/ledgerId" }
+      }
+    },
+    "secretExposedPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "maxProperties": 1,
+      "properties": {
+        "secretRef": { "$ref": "#/$defs/stableId" }
+      }
+    },
+    "promisePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "maxProperties": 1,
+      "properties": {
+        "promiseRef": { "$ref": "#/$defs/stableId" }
+      }
+    },
+    "npcPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "maxProperties": 1,
+      "properties": {
+        "npcRef": { "$ref": "#/$defs/stableId" }
+      }
+    },
+    "itemGainedPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "maxProperties": 2,
+      "properties": {
+        "itemRef": { "$ref": "#/$defs/stableId" },
+        "quantity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 999999
+        }
+      }
+    },
+    "questExpiredPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "maxProperties": 1,
+      "properties": {
+        "questRef": { "$ref": "#/$defs/stableId" }
+      }
+    },
+    "trumpCardPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "maxProperties": 1,
+      "properties": {
+        "abilityRef": { "$ref": "#/$defs/stableId" }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "type": { "const": "debt_incurred" } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/debtIncurredPayload" } } }
+    },
+    {
+      "if": { "properties": { "type": { "const": "debt_repaid" } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/debtRepaidPayload" } } }
+    },
+    {
+      "if": { "properties": { "type": { "const": "secret_exposed" } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/secretExposedPayload" } } }
+    },
+    {
+      "if": { "properties": { "type": { "const": "promise_made" } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/promisePayload" } } }
+    },
+    {
+      "if": { "properties": { "type": { "const": "promise_broken" } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/promisePayload" } } }
+    },
+    {
+      "if": { "properties": { "type": { "const": "npc_rescued" } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/npcPayload" } } }
+    },
+    {
+      "if": { "properties": { "type": { "const": "npc_abandoned" } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/npcPayload" } } }
+    },
+    {
+      "if": { "properties": { "type": { "const": "enemy_spared" } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/npcPayload" } } }
+    },
+    {
+      "if": { "properties": { "type": { "const": "item_gained" } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/itemGainedPayload" } } }
+    },
+    {
+      "if": { "properties": { "type": { "const": "quest_expired" } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/questExpiredPayload" } } }
+    },
+    {
+      "if": { "properties": { "type": { "const": "trump_card_revealed" } }, "required": ["type"] },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/trumpCardPayload" } } }
+    }
+  ]
+}

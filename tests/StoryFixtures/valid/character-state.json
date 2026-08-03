@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.character_state.primary",
+  "characterId": "fixture.character.primary",
+  "relationships": {
+    "fixture.character.secondary": {
+      "trust": 0,
+      "respect": 0,
+      "fear": 0,
+      "debt": 0,
+      "suspicion": 0,
+      "affection": 0,
+      "sectDuty": 0,
+      "secretLevel": 0
+    }
+  },
+  "injuries": [],
+  "outfitRef": "fixture.costume.primary",
+  "locationRef": "fixture.location.primary",
+  "factRefs": [
+    "fixture.fact.world_rule"
+  ],
+  "stateTags": [
+    "fixture_state"
+  ]
+}

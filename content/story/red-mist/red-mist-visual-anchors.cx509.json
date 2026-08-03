@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0.0",
+  "cardId": "CX-509",
+  "worldId": "lingmai-ember-red-mist",
+  "referenceCatalog": "content/reference-library/catalog.json",
+  "generationPolicy": {
+    "stillImagesOnly": true,
+    "geminiOrVeoUsed": false,
+    "overwriteExistingAssets": false,
+    "realPeopleIdentityReuseAllowed": false,
+    "adoptionRequiresHumanReview": true,
+    "allowUnverifiedPersonalReferences": true
+  },
+  "requiredAnchorIds": [
+    "identity.chu_mingqi.v2",
+    "identity.celadon_scout.v2",
+    "identity.formation_spirit.v2",
+    "identity.shi_jun.v3",
+    "creature.ink_dragon.v3"
+  ],
+  "candidates": [
+    {
+      "assetId": "identity.chu_mingqi.v2",
+      "assetKind": "identity_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx509/identity-anchors/identity_chu_mingqi_v2.png",
+      "referenceInputs": [
+        { "assetId": "ref-architecture-001-b5834f783d", "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c", "role": "structure" },
+        { "assetId": "ref-artifacts-001-c3a4a9fb55", "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0", "role": "material" },
+        { "assetId": "ref-landscape-001-74d99e0571", "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9", "role": "lighting" },
+        { "assetId": "ref-people-001-6c50e4da3b", "assetSha256": "0e772eef260fed986399dac6b50c0b4222dbce8917fc7887583e68c1ee9646e2", "role": "pose" },
+        { "assetId": "ref-costumes-textiles-002-dbb9476d1a", "assetSha256": "804f2fba91949ba74594b5259125bfefbc37b8d850bc7758fb4909b85c48917d", "role": "garment_construction" }
+      ],
+      "researchReferences": [
+        { "localRelativePath": "content/reference-library/private-research/cx509/female-costume/wei-jin-hanfu.jpg", "sourcePageUrl": "https://thehanfustory.com/products/wei-jin-dynasty-qiyao-ruqun-hanfu-lady-xiang", "role": "garment_construction", "identityReuse": false }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: game character concept, landscape 16:9 full-body identity anchor for an original cinematic cultivation-fantasy game. Input images: one historical garment-construction reference only; do not copy its face, identity, hairstyle, pose or background. Create an original live-action-quality cinematic anchor for Chu Mingqi, a high-ranking female sect leader and decisive battlefield negotiator: one original East Asian woman in her mid-twenties, intelligent calm gaze, upright grounded posture, natural anatomy, realistic skin and hair. Scene/backdrop: a monumental original celestial sect palace terrace with broad pale-jade steps, tall vermilion timber halls, warm gilded bronze rails, carved cloud-and-water motifs, distant mountain clouds and a red-mist horizon. Prosperous, ceremonial and physically buildable, with bright daylight and cool architectural shadows; even a morally dangerous character belongs in a grand world. Subject: layered non-Qing early-imperial-inspired cross-collar robes, fitted narrow-sleeve inner combat layer, moon-white and deep cinnabar outer robe, restrained silver moon embroidery, slate-blue woven waist sash, structured cuffs, practical cloth and wrapped upturned-toe boots with embroidered trim, no modern shoes. Exactly one rigid silver circular moon-ring is mounted securely at the waist as a fixed relic; both hands are empty. The ring is the only circular personal prop and must never become a bag, parcel, handheld hoop or extra object. Style/medium: premium photoreal live-action Chinese fantasy film still, refined theatrical production design, realistic woven silk and brocade, no plastic fabric. Composition: explicit landscape 16:9 wide frame, full body from hair to both feet with generous margins, subject in the central third, camera several paces back so the grand palace remains readable. Lighting: bright late-afternoon key light, cool blue shadow planes, warm reflected bronze light, restrained mist, majestic and controlled rather than gloomy. Original face and costume design only.",
+      "avoidItems": ["no_text", "no_watermark", "no_actor_likeness", "no_copied_landmark", "no_qing_clothing", "no_nonuniform_stretch", "grand_majestic_environment", "no_lizard_like"],
+      "continuityLocks": ["stable_identity", "stable_prop_count", "grounded_contact", "shared_environment_light", "grand_majestic_environment", "human_proportions", "no_identity_reuse"],
+      "postProcess": { "mode": "aspect_crop", "sourceWidth": 1672, "sourceHeight": 941, "outputWidth": 1664, "outputHeight": 936, "cropStrategy": "center", "focusDescription": "Remove four pixels from each horizontal edge and two pixels from the top plus three from the bottom without resampling; keep the full figure and palace stairs." },
+      "artifact": { "mediaType": "image/png", "byteLength": 3960990, "sha256": "ad13ade5efe7c4451919b16ede690520de64e6ae79680e55f7a1926c6cac29ae", "width": 1664, "height": 936 },
+      "reviewChecks": { "skinAndFabric": "pending", "weightBearing": "pending", "contactShadows": "pending", "sharedLighting": "pending", "perspectiveScale": "pending", "handsAndProps": "pending", "noTextOrWatermark": "pending", "noLandmarkReplication": "pending", "noActorLikeness": "pending" }
+    },
+    {
+      "assetId": "identity.celadon_scout.v2",
+      "assetKind": "identity_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx509/identity-anchors/identity_celadon_scout_v2.png",
+      "referenceInputs": [
+        { "assetId": "ref-architecture-002-30c475224b", "assetSha256": "94d5d82c537bf08bf4293536e52dee320a4e415d793fe437f0f650343fcb9757", "role": "structure" },
+        { "assetId": "ref-artifacts-002-6a1870a67c", "assetSha256": "243a377edd25896d344c7e666e7dad16f8b26eb881b5175ded017726ea62bd70", "role": "material" },
+        { "assetId": "ref-landscape-001-74d99e0571", "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9", "role": "lighting" },
+        { "assetId": "ref-people-002-97a702ff69", "assetSha256": "9f6dd98f0cd2c0f6150e1a8b6a5427a0a4ec1b2cc68125ee9a4f50c558f5f879", "role": "pose" },
+        { "assetId": "ref-costumes-textiles-002-dbb9476d1a", "assetSha256": "804f2fba91949ba74594b5259125bfefbc37b8d850bc7758fb4909b85c48917d", "role": "garment_construction" }
+      ],
+      "researchReferences": [
+        { "localRelativePath": "content/reference-library/private-research/cx509/female-costume/wei-jin-hanfu.jpg", "sourcePageUrl": "https://thehanfustory.com/products/wei-jin-dynasty-qiyao-ruqun-hanfu-lady-xiang", "role": "garment_construction", "identityReuse": false }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: game character concept, landscape 16:9 full-body identity anchor for an original cinematic cultivation-fantasy game. Input images: one historical garment-construction reference only; do not copy its face, identity, hairstyle, pose or background. Create an original live-action-quality anchor for the Celadon Scout, a young female mountain-pass reconnaissance cultivator who is observant, quick and practical: one original East Asian woman in her early twenties, alert intelligent expression, relaxed but ready stance, natural human anatomy and skin. Scene/backdrop: a grand original celestial sect gate above a cloud sea, with monumental pale-stone watch terrace, tall celadon roof ridges, vermilion gate towers, bronze lanterns, distant layered mountains and a clear sunlit sky with a thin red-mist band. The world remains prosperous and majestic, not a dirty camp or gloomy ruin. Subject: coherent non-Qing Song/Ming-inspired field attire: fitted celadon cross-collar short jacket with narrow sleeves, dark ink-green over-vest, layered split overskirt over practical straight trousers for climbing, woven sash, small cloth leg wraps, traditional cloth upturned-toe boots with embroidered edging. All pieces share one textile language; no modern tactical vest or random armor. Hands empty; no bag, sword, dagger or extra prop. Style/medium: premium photoreal live-action Chinese fantasy film still, refined period costume design, realistic linen, ramie and silk weave, human proportions. Composition: explicit landscape 16:9 wide frame, full body from hair to both feet with generous margins, camera several paces back so the grand gate and mountain vista remain readable. Lighting: bright morning key light, cool architectural shadows, warm bronze bounce, gentle wind moving only loose fabric and hair, confident and clear. Original face and costume design only.",
+      "avoidItems": ["no_text", "no_watermark", "no_actor_likeness", "no_copied_landmark", "no_qing_clothing", "no_nonuniform_stretch", "grand_majestic_environment", "no_lizard_like"],
+      "continuityLocks": ["stable_identity", "stable_prop_count", "grounded_contact", "shared_environment_light", "grand_majestic_environment", "human_proportions", "no_identity_reuse"],
+      "postProcess": { "mode": "aspect_crop", "sourceWidth": 1672, "sourceHeight": 941, "outputWidth": 1664, "outputHeight": 936, "cropStrategy": "center", "focusDescription": "Remove four pixels from each horizontal edge and two pixels from the top plus three from the bottom without resampling; keep full boots and the gate silhouette." },
+      "artifact": { "mediaType": "image/png", "byteLength": 3787721, "sha256": "55c890005e1a59d235cacc5dfd0b4514476eda74e2de586b3f0d568b8cffeee2", "width": 1664, "height": 936 },
+      "reviewChecks": { "skinAndFabric": "pending", "weightBearing": "pending", "contactShadows": "pending", "sharedLighting": "pending", "perspectiveScale": "pending", "handsAndProps": "pending", "noTextOrWatermark": "pending", "noLandmarkReplication": "pending", "noActorLikeness": "pending" }
+    },
+    {
+      "assetId": "identity.formation_spirit.v2",
+      "assetKind": "identity_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx509/identity-anchors/identity_formation_spirit_v2.png",
+      "referenceInputs": [
+        { "assetId": "ref-architecture-004-5f8ba81573", "assetSha256": "73f7d675a4e295e070358e9817f8b14ce45ebcf67c418d57815155a90cfe25e4", "role": "structure" },
+        { "assetId": "ref-artifacts-003-403f6ee91c", "assetSha256": "179164afa66687858b57c03c28854c30b8dfab5de47ea44d1c5cf6c2f5532841", "role": "material" },
+        { "assetId": "ref-landscape-002-de6242e92d", "assetSha256": "d010e0b334760623b19b19c691bfcc0ee14eb3fef684dbcd6b96fc71c54f7fcb", "role": "lighting" },
+        { "assetId": "ref-people-003-4763a77d34", "assetSha256": "e47c769d1242922e7d2d795b0b2bd5c597422653bcb930bd3281bd07861d618f", "role": "pose" },
+        { "assetId": "ref-costumes-textiles-002-dbb9476d1a", "assetSha256": "804f2fba91949ba74594b5259125bfefbc37b8d850bc7758fb4909b85c48917d", "role": "garment_construction" }
+      ],
+      "researchReferences": [
+        { "localRelativePath": "content/reference-library/private-research/cx509/female-costume/wei-jin-hanfu.jpg", "sourcePageUrl": "https://thehanfustory.com/products/wei-jin-dynasty-qiyao-ruqun-hanfu-lady-xiang", "role": "garment_construction", "identityReuse": false }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: game character concept, landscape 16:9 full-body identity anchor for an original cinematic cultivation-fantasy game. Input images: one historical wide-sleeve garment reference only; do not copy its face, identity, hairstyle, pose or background. Create an original live-action-quality anchor for the Formation Spirit, an ancient intelligent guardian of a celestial array. It appears human and dignified, not a mannequin: one androgynous young adult with calm unreadable expression, natural human anatomy, softly luminous skin edges and a restrained translucent aura only around the silhouette. Scene/backdrop: a vast ceremonial array courtyard on a mountain palace summit, concentric pale-jade stone rings, four monumental bronze gate towers, vermilion halls, carved cloud pillars, distant cloud sea and sunlit peaks. The architecture is symmetrical, spacious, wealthy and majestic, with array hubs but no readable symbols or text. Even an antagonistic guardian occupies a grand sacred complex. Subject: coherent non-Qing Wei-Jin/Song-inspired ceremonial Daoist robe: long ivory inner robe, celadon outer robe, broad structured sleeves with real woven weight, straight collar, layered sash, subtle jade-and-gold abstract cloud embroidery, cloth upturned-toe shoes mostly hidden by the hem. No exposed armor, plastic, transparent plastic dress, fantasy bikini or random straps. Hands relaxed at the sides, no handheld object. Style/medium: premium photoreal live-action Chinese fantasy film still, practical textile costume, refined production design, realistic skin and cloth; spirit effect is restrained volumetric light, not a CGI body. Composition: explicit landscape 16:9 wide frame, full body with generous margins, centered in the array central third, camera several paces back so the four gate towers and array geometry remain readable. Lighting: bright high-altitude daylight, cool jade shadows, warm bronze reflections and a narrow robe-edge halo, solemn and imposing without global darkness. Original face and costume design only.",
+      "avoidItems": ["no_text", "no_watermark", "no_actor_likeness", "no_copied_landmark", "no_qing_clothing", "no_nonuniform_stretch", "grand_majestic_environment", "no_lizard_like"],
+      "continuityLocks": ["stable_identity", "stable_prop_count", "grounded_contact", "shared_environment_light", "grand_majestic_environment", "human_proportions", "no_identity_reuse"],
+      "postProcess": { "mode": "aspect_crop", "sourceWidth": 1672, "sourceHeight": 941, "outputWidth": 1664, "outputHeight": 936, "cropStrategy": "center", "focusDescription": "Remove four pixels from each horizontal edge and two pixels from the top plus three from the bottom without resampling; keep the full robe and symmetric array." },
+      "artifact": { "mediaType": "image/png", "byteLength": 3866892, "sha256": "def223bd873b3e4b23082a2863bd2bea0e3ab5d076ceb7d64286bd49150627e2", "width": 1664, "height": 936 },
+      "reviewChecks": { "skinAndFabric": "pending", "weightBearing": "pending", "contactShadows": "pending", "sharedLighting": "pending", "perspectiveScale": "pending", "handsAndProps": "pending", "noTextOrWatermark": "pending", "noLandmarkReplication": "pending", "noActorLikeness": "pending" }
+    },
+    {
+      "assetId": "identity.shi_jun.v3",
+      "assetKind": "identity_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx509/identity-anchors/identity_shi_jun_v3.png",
+      "referenceInputs": [
+        { "assetId": "ref-architecture-004-5f8ba81573", "assetSha256": "73f7d675a4e295e070358e9817f8b14ce45ebcf67c418d57815155a90cfe25e4", "role": "structure" },
+        { "assetId": "ref-artifacts-001-c3a4a9fb55", "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0", "role": "material" },
+        { "assetId": "ref-landscape-001-74d99e0571", "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9", "role": "lighting" },
+        { "assetId": "ref-people-001-6c50e4da3b", "assetSha256": "0e772eef260fed986399dac6b50c0b4222dbce8917fc7887583e68c1ee9646e2", "role": "pose" },
+        { "assetId": "ref-costumes-textiles-002-dbb9476d1a", "assetSha256": "804f2fba91949ba74594b5259125bfefbc37b8d850bc7758fb4909b85c48917d", "role": "garment_construction" }
+      ],
+      "researchReferences": [
+        { "localRelativePath": "content/reference-library/private-research/cx509/villain-prop/villain-grand-style.jpg", "sourcePageUrl": "https://www.elle.com/tw/entertainment/drama/g65395845/chinesedrama-villain/", "role": "lighting", "identityReuse": false }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: game character concept, landscape 16:9 full-body identity anchor for an original cinematic cultivation-fantasy game. Input images: one web reference is used only for broad costume layering, restrained villain lighting and garment texture; do not copy any actor face, identity, hairstyle or exact costume. Create an original live-action-quality anchor for Shi Jun, a calculating antagonist and formation tactician: one original East Asian man in his late twenties, lean and proportionate 7.5-head anatomy, natural shoulders and hands, composed watchful expression, grounded stance. Scene/backdrop: a vast open ceremonial antagonist court built into a celestial palace, high pale-stone terrace, vermilion halls, dark teal roof tiles, restrained gilded bronze, monumental stairs, distant cloud sea and sunlit mountains. It must feel powerful, expensive and majestic, not a cramped dungeon or ruined black set; menace comes from stillness and a cold eye line, not a dark environment. Subject: non-Qing early-imperial-inspired layered costume, fitted charcoal-indigo inner cross-collar robe, dark umber textile half-coat, short practical matte bronze lamellar cuirass over cloth, narrow sleeves, woven waist sash, subtle geometric array embroidery. Feet are wrapped in matte charcoal cloth gaiters and flat woven cloth shoes with stitched soles; absolutely no glossy leather. Exactly one weapon: a short thick 30-centimeter square-section bronze array nail, blunt ritual peg with a faceted cap and one tiny hole near the top, held low in the right hand. It has no cutting edge, blade, point, sword guard, scabbard or spear shape. Left hand empty. Style/medium: premium photoreal live-action Chinese fantasy film still, refined practical costume and prop design, realistic cloth, bronze patina and skin. Composition: explicit landscape 16:9 wide frame, full body with generous margins, subject slightly right, camera several paces back, grand court and stairs readable. Lighting: bright side daylight with cool blue shadow planes and a narrow controlled warm rim on bronze, clear facial detail and dignified antagonistic pressure. Original face and costume design only.",
+      "avoidItems": ["no_text", "no_watermark", "no_actor_likeness", "no_copied_landmark", "no_qing_clothing", "no_nonuniform_stretch", "grand_majestic_environment", "no_lizard_like"],
+      "continuityLocks": ["stable_identity", "stable_prop_count", "grounded_contact", "shared_environment_light", "grand_majestic_environment", "human_proportions", "no_identity_reuse"],
+      "postProcess": { "mode": "aspect_crop", "sourceWidth": 1672, "sourceHeight": 941, "outputWidth": 1664, "outputHeight": 936, "cropStrategy": "center", "focusDescription": "Remove four pixels from each horizontal edge and two pixels from the top plus three from the bottom without resampling; keep the full figure, cloth shoes and square array nail." },
+      "artifact": { "mediaType": "image/png", "byteLength": 3638428, "sha256": "cf29b3028d2e55a8be4cc7bf0fd2141f7426046bdcde776f47537ea35294d613", "width": 1664, "height": 936 },
+      "reviewChecks": { "skinAndFabric": "pending", "weightBearing": "pending", "contactShadows": "pending", "sharedLighting": "pending", "perspectiveScale": "pending", "handsAndProps": "pending", "noTextOrWatermark": "pending", "noLandmarkReplication": "pending", "noActorLikeness": "pending" }
+    },
+    {
+      "assetId": "creature.ink_dragon.v3",
+      "assetKind": "creature_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx509/identity-anchors/creature_ink_dragon_v3.png",
+      "referenceInputs": [
+        { "assetId": "ref-architecture-002-30c475224b", "assetSha256": "94d5d82c537bf08bf4293536e52dee320a4e415d793fe437f0f650343fcb9757", "role": "structure" },
+        { "assetId": "ref-artifacts-001-c3a4a9fb55", "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0", "role": "material" },
+        { "assetId": "ref-landscape-001-74d99e0571", "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9", "role": "lighting" },
+        { "assetId": "ref-animals-001-95eeb469f9", "assetSha256": "ef9f94fe04601f53603d03243ccf0505453203c67497c05ef39c53311e686625", "role": "anatomy" }
+      ],
+      "researchReferences": [
+        { "localRelativePath": "content/reference-library/private-research/cx509/dragon/dragon-traditional-illustration.jpg", "sourcePageUrl": "https://www.jdflyishu.com/h-nd-2910.html", "role": "anatomy", "identityReuse": false }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: game creature concept, landscape 16:9 full-body creature anchor for an original cinematic cultivation-fantasy game. Input images: one traditional Chinese dragon anatomy reference only; ignore handwriting, seals and watermarks, and do not copy the drawing literally. Create an unmistakable original Chinese fantasy 墨蛟, a powerful aquatic dragon from an immortal world. It must read as a Chinese dragon at first glance, never as a black lizard or ordinary animal. Anatomy: one enormous elegant serpentine body with a long S-curve, dense overlapping ink-black scales with subtle blue-green and oil-slick highlights, a proud Chinese dragon head with long muzzle, expressive brow, flowing whiskers, mane-like cheek fur and broad mouth, layered dorsal fins and cloud-shaped spines, four compact clawed limbs with visible talons, tapering scaled tail. No wings or bat membranes; no lizard-like anatomy, no realistic crocodile body, monitor-lizard anatomy or generic snake head. The head, whiskers, mane, cloud motifs and claws must clearly establish East Asian dragon iconography. Scene/backdrop: the creature rises above a monumental celestial jade lake beside a grand vermilion-and-bronze palace, carved bridges, tall gate towers, distant mountains and bright cloud sea. Black ink mist coils around the body without hiding anatomy; the setting remains expansive, luminous and majestic. Style/medium: premium photoreal live-action-quality fantasy creature film still, physically plausible wet scales, detailed whiskers and mane, cinematic VFX integrated with real architecture. Composition: explicit landscape 16:9 wide frame, entire dragon from head to tail visible in one coherent pose, no cropping, three-quarter aerial view showing scale against palace architecture. Lighting: bright daylight from behind and above, cool blue reflections on scales, warm bronze bounce, restrained red-mist accents, dangerous but regal rather than horror-dark. Original creature design only.",
+      "avoidItems": ["no_text", "no_watermark", "no_actor_likeness", "no_copied_landmark", "no_qing_clothing", "no_nonuniform_stretch", "grand_majestic_environment", "no_lizard_like"],
+      "continuityLocks": ["stable_identity", "stable_prop_count", "grounded_contact", "shared_environment_light", "grand_majestic_environment", "human_proportions", "no_identity_reuse"],
+      "postProcess": { "mode": "aspect_crop", "sourceWidth": 1672, "sourceHeight": 941, "outputWidth": 1664, "outputHeight": 936, "cropStrategy": "center", "focusDescription": "Remove four pixels from each horizontal edge and two pixels from the top plus three from the bottom without resampling; keep the whole dragon and palace scale reference." },
+      "artifact": { "mediaType": "image/png", "byteLength": 4494778, "sha256": "4d200963ee5619880544bca3c498f724dd3940296035d1dd225c5ea30735b2e4", "width": 1664, "height": 936 },
+      "reviewChecks": { "skinAndFabric": "pending", "weightBearing": "pending", "contactShadows": "pending", "sharedLighting": "pending", "perspectiveScale": "pending", "handsAndProps": "pending", "noTextOrWatermark": "pending", "noLandmarkReplication": "pending", "noActorLikeness": "pending" }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditRef": "genjob.audit.invalid.1",
+  "threadId": "thr.audit.invalid.1",
+  "inputHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "playerRefHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "chapterId": "chapter.red_mist",
+  "templateId": "assoc.enemy.echo.v1",
+  "resolvedParams": {},
+  "providers": [
+    {
+      "role": "ranker",
+      "providerKey": "mock.association-ranker",
+      "modelSnapshot": "model.association-ranker.mock.v1",
+      "invoked": true
+    }
+  ],
+  "guardResults": [
+    {
+      "stage": "deterministic",
+      "decision": "passed",
+      "reasonCode": "none"
+    }
+  ],
+  "candidateCount": 1,
+  "fallbackUsed": false,
+  "outcomeReason": null,
+  "latencyMilliseconds": 3,
+  "createdAtUtc": "2026-07-16T12:00:00Z"
+}

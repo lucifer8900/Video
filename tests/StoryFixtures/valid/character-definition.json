@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.character.primary",
+  "identity": {
+    "displayNameKey": "fixture.character.primary.name",
+    "roleTags": [
+      "fixture_role"
+    ]
+  },
+  "personalityTraits": [
+    "fixture_trait"
+  ],
+  "voiceProfile": {
+    "profileId": "fixture.voice_profile.primary",
+    "languageTag": "zh-CN",
+    "styleTags": [
+      "fixture_style"
+    ]
+  },
+  "visualRules": {
+    "appearanceTags": [
+      "fixture_appearance"
+    ],
+    "costumeRefs": [
+      "fixture.costume.primary"
+    ],
+    "forbiddenVariationTags": []
+  },
+  "mediaRefs": [
+    "fixture.media.character.primary"
+  ],
+  "approvalStatus": "approved"
+}

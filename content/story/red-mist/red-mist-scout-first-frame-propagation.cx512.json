@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.0.0",
+  "cardId": "CX-512",
+  "worldId": "lingmai-ember-red-mist",
+  "baseIdentityAssetId": "identity.celadon_scout.v3",
+  "identityReference": {
+    "path": "unity/RedMistVerticalSlice/Assets/Resources/Generated/Characters/identity_celadon_scout_v3.png",
+    "mediaType": "image/png",
+    "byteLength": 3854784,
+    "sha256": "9bd742b2affe58c78dd0b309d7e5908f88000e3c2a32309b68fac296617d2139",
+    "width": 1664,
+    "height": 936,
+    "role": "approved_identity_anchor_v3"
+  },
+  "generationPolicy": {
+    "stillImagesOnly": true,
+    "geminiOrVeoUsed": false,
+    "overwriteExistingAssets": false,
+    "realPeopleIdentityReuseAllowed": false,
+    "adoptionRequiresHumanReview": true,
+    "existingFirstFramesPreserved": true
+  },
+  "sourceFramesPreserved": true,
+  "comparisonContactSheet": {
+    "path": "content/visual-candidates/cx512/reports/contact-sheet.cx512.png",
+    "mediaType": "image/png",
+    "byteLength": 5216579,
+    "sha256": "79643fc11da38976fffb7ca89809407a82a0ddff76472c48fec6efe2ca619c68",
+    "width": 1536,
+    "height": 1452
+  },
+  "candidates": [
+    {
+      "assetId": "firstframe.dialogue.scout.mist.v4",
+      "sceneKey": "scout_mist",
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_grand_v2.png",
+      "sourceFirstFrame": {
+        "path": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_grand_v2.png",
+        "mediaType": "image/png",
+        "byteLength": 2297466,
+        "sha256": "30bd39fd642eea47aa8e07b8f97bbf30ca7d12bef97236ba45b43eb16c46c45a",
+        "width": 1672,
+        "height": 941,
+        "role": "legacy_grand_v2_scene_composition_only"
+      },
+      "identityReference": {
+        "path": "unity/RedMistVerticalSlice/Assets/Resources/Generated/Characters/identity_celadon_scout_v3.png",
+        "mediaType": "image/png",
+        "byteLength": 3854784,
+        "sha256": "9bd742b2affe58c78dd0b309d7e5908f88000e3c2a32309b68fac296617d2139",
+        "width": 1664,
+        "height": 936,
+        "role": "authoritative_identity_reference"
+      },
+      "outputPath": "content/visual-candidates/cx512/first-frames/firstframe_dialogue_scout_mist_v4.png",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "referenceRoles": ["identity_anchor_v3", "legacy_grand_v2_scene_composition"],
+      "prompt": "Use case: historical-scene. Asset type: cinematic game video first-frame candidate, landscape 16:9, target output 1664x936 after the declared aspect-preserving center crop. Treat Image 1 as the authoritative approved Celadon Scout identity anchor v3: preserve the same adult East Asian woman, face, eye shape, hair arrangement, calm analytical expression, body proportions and costume construction. Treat Image 2 only as legacy grand v2 scene-composition reference: preserve its monumental bronze mist gate, vermilion columns, gold circular gate mechanism, white-jade stairs, layered cloud palaces, distant waterfalls and red mist depth, but do not copy a person or identity from it. Create one foreground scout only, framed from mid-thigh to just above the head, eye-level camera, 65mm normal cinematic lens, no wide-angle distortion, natural perspective and grounded feet. Keep the v3 muted celadon robe, pale patterned inner sleeves, dark ink-green vest, layered split overskirt and trousers, woven sash and restrained travel boots; one small jade talisman remains pinned at the sash and is the only visible hand-adjacent prop. Her hands are empty and relaxed, her mouth naturally closed, and she looks toward the safer jade stair with composed assessment. Make the cultivation-world architecture magnificent and coherent: bright morning key light on bronze and jade, cool red-mist shadows, warm reflected gold, readable cloud layers, atmospheric waterfalls and small distant architecture, with a clear foreground-midground-background separation. The result should feel like a premium live-action fantasy production still, physically integrated into the gate environment, with believable contact shadows, cloth weight, skin texture and restrained cinematic color grading.",
+      "avoidItems": ["no_text", "no_pseudo_writing", "no_subtitles", "no_watermark", "no_actor_likeness", "no_copied_landmark", "no_qing_clothing", "no_modern_objects", "no_handheld_tablet", "no_extra_foreground_people", "no_duplicate_talisman", "no_floating_feet", "no_stretched_anatomy", "no_plastic_skin", "no_costume_drift"],
+      "continuityLocks": ["stable_v3_identity", "stable_face_and_hair", "stable_proportions", "stable_v3_costume", "one_pinned_talisman", "hands_empty", "one_foreground_scout", "shared_scene_geometry", "shared_environment_light", "grounded_contact", "normal_lens_perspective", "old_grand_v2_preserved_only_as_scene_reference"],
+      "postProcess": {"mode": "aspect_crop", "sourceWidth": 1672, "sourceHeight": 941, "outputWidth": 1664, "outputHeight": 936, "cropStrategy": "center"},
+      "artifact": {"mediaType": "image/png", "byteLength": 3792346, "sha256": "36f74aced057f0073422b7e3efac96b95fa6f087893b206d8f4dbff9177dc793", "width": 1664, "height": 936},
+      "reviewChecks": {"identity": "pending", "scene": "pending", "anatomy": "pending", "contactShadow": "pending", "lighting": "pending", "propCount": "pending", "noText": "pending", "noActorLikeness": "pending", "humanApproval": "pending"}
+    },
+    {
+      "assetId": "firstframe.dialogue.scout.alliance.v4",
+      "sceneKey": "scout_alliance",
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_grand_v2.png",
+      "sourceFirstFrame": {
+        "path": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_grand_v2.png",
+        "mediaType": "image/png",
+        "byteLength": 2679698,
+        "sha256": "df4e1851789f97a84ec241b728a33f4161399d073eb607fb6b0c362a022129ce",
+        "width": 1672,
+        "height": 941,
+        "role": "legacy_grand_v2_scene_composition_only"
+      },
+      "identityReference": {
+        "path": "unity/RedMistVerticalSlice/Assets/Resources/Generated/Characters/identity_celadon_scout_v3.png",
+        "mediaType": "image/png",
+        "byteLength": 3854784,
+        "sha256": "9bd742b2affe58c78dd0b309d7e5908f88000e3c2a32309b68fac296617d2139",
+        "width": 1664,
+        "height": 936,
+        "role": "authoritative_identity_reference"
+      },
+      "outputPath": "content/visual-candidates/cx512/first-frames/firstframe_dialogue_scout_alliance_v4.png",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "referenceRoles": ["identity_anchor_v3", "legacy_grand_v2_scene_composition"],
+      "prompt": "Use case: historical-scene. Asset type: cinematic game video first-frame candidate, landscape 16:9, target output 1664x936 after the declared aspect-preserving center crop. Treat Image 1 as the authoritative approved Celadon Scout identity anchor v3: preserve the same adult East Asian woman, face, eye shape, hair arrangement, calm analytical expression, body proportions and costume construction. Treat Image 2 only as legacy grand v2 scene-composition reference: preserve the majestic alliance terrace, red-and-gold colonnade, crane-shaped lanterns, ivory-jade relief map, cloud mountains, waterfalls and distant adult formation silhouettes, but do not copy a person or identity from it. Create one foreground scout only on the left third, framed from mid-thigh to just above the head, eye-level camera, 65mm normal cinematic lens, no wide-angle distortion, natural perspective and grounded feet. Keep the v3 muted celadon robe, pale patterned inner sleeves, dark ink-green vest, layered split overskirt and trousers, woven sash and restrained travel boots; one small jade talisman remains pinned at the sash and is the only visible hand-adjacent prop. Her hands are empty and held naturally at her sides, her mouth naturally closed, and she gives a guarded but restrained cooperative glance toward the unseen negotiator. The ivory-jade relief map is a physical architectural object on its pedestal, not a floating interface, and the distant adult formation is small, stationary and secondary. Make the terrace magnificent and bright with clear morning light on red lacquer and gold, cool shadows under the colonnade, readable cloud layers and waterfall depth, strong foreground-midground-background separation and believable contact shadows. The result should feel like a premium live-action fantasy production still, physically integrated into the same world as the v3 identity anchor, with realistic cloth weight, skin texture and restrained cinematic color grading.",
+      "avoidItems": ["no_text", "no_pseudo_writing", "no_subtitles", "no_watermark", "no_actor_likeness", "no_copied_landmark", "no_qing_clothing", "no_modern_objects", "no_handheld_tablet", "no_extra_foreground_people", "no_duplicate_talisman", "no_floating_feet", "no_stretched_anatomy", "no_plastic_skin", "no_costume_drift"],
+      "continuityLocks": ["stable_v3_identity", "stable_face_and_hair", "stable_proportions", "stable_v3_costume", "one_pinned_talisman", "hands_empty", "one_foreground_scout", "shared_scene_geometry", "shared_environment_light", "grounded_contact", "normal_lens_perspective", "old_grand_v2_preserved_only_as_scene_reference"],
+      "postProcess": {"mode": "aspect_crop", "sourceWidth": 1672, "sourceHeight": 941, "outputWidth": 1664, "outputHeight": 936, "cropStrategy": "center"},
+      "artifact": {"mediaType": "image/png", "byteLength": 3957313, "sha256": "ec853770de29170156047c47877e4647ace1f850eeb63ea066ce9da3994630d6", "width": 1664, "height": 936},
+      "reviewChecks": {"identity": "pending", "scene": "pending", "anatomy": "pending", "contactShadow": "pending", "lighting": "pending", "propCount": "pending", "noText": "pending", "noActorLikeness": "pending", "humanApproval": "pending"}
+    },
+    {
+      "assetId": "firstframe.dialogue.scout.rescue.v4",
+      "sceneKey": "scout_rescue",
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_rescue_grand_v2.png",
+      "sourceFirstFrame": {
+        "path": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_rescue_grand_v2.png",
+        "mediaType": "image/png",
+        "byteLength": 2410905,
+        "sha256": "77d8080b786caaa7ad948fa0bb2098c4cb75d9eeaa9344e6bcbf0b0e65404319",
+        "width": 1672,
+        "height": 941,
+        "role": "legacy_grand_v2_scene_composition_only"
+      },
+      "identityReference": {
+        "path": "unity/RedMistVerticalSlice/Assets/Resources/Generated/Characters/identity_celadon_scout_v3.png",
+        "mediaType": "image/png",
+        "byteLength": 3854784,
+        "sha256": "9bd742b2affe58c78dd0b309d7e5908f88000e3c2a32309b68fac296617d2139",
+        "width": 1664,
+        "height": 936,
+        "role": "authoritative_identity_reference"
+      },
+      "outputPath": "content/visual-candidates/cx512/first-frames/firstframe_dialogue_scout_rescue_v4.png",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "referenceRoles": ["identity_anchor_v3", "legacy_grand_v2_scene_composition"],
+      "prompt": "Use case: historical-scene. Asset type: cinematic game video first-frame candidate, landscape 16:9, target output 1664x936 after the declared aspect-preserving center crop. Treat Image 1 as the authoritative approved Celadon Scout identity anchor v3: preserve the same adult East Asian woman, face, eye shape, hair arrangement, calm analytical expression, body proportions and costume construction. Treat Image 2 only as legacy grand v2 scene-composition reference: preserve the majestic sanctuary gallery, vermilion columns, white-jade balustrade, gilded ward anchors, circular bronze gate, cloud palaces and layered red mist, but do not copy a person or identity from it. Create one foreground scout only on the left third, framed from mid-thigh to just above the head, eye-level camera, 65mm normal cinematic lens, no wide-angle distortion, natural perspective and grounded feet. Keep the v3 muted celadon robe, pale patterned inner sleeves, dark ink-green vest, layered split overskirt and trousers, woven sash and restrained travel boots; one small jade talisman remains pinned at the sash and is the only visible hand-adjacent prop. Her hands are empty and naturally lowered, her mouth naturally closed, and she casts a controlled urgent glance toward the rescue ward. Behind a waist-high jade ward place exactly one wounded adult figure and exactly one unresolved standing shadow, both secondary and physically grounded; no extra foreground person. Make the sanctuary grand rather than gloomy: bright shafts of morning light reveal jade and gilding, cool red-mist shadows retain danger, the circular gate and cloud-palace depth remain readable, and contact shadows anchor every figure. The result should feel like a premium live-action fantasy production still with believable anatomy, cloth weight, skin texture and restrained cinematic color grading, fully integrated into the same world as the v3 identity anchor.",
+      "avoidItems": ["no_text", "no_pseudo_writing", "no_subtitles", "no_watermark", "no_actor_likeness", "no_copied_landmark", "no_qing_clothing", "no_modern_objects", "no_handheld_tablet", "no_extra_foreground_people", "no_duplicate_talisman", "no_floating_feet", "no_stretched_anatomy", "no_plastic_skin", "no_costume_drift"],
+      "continuityLocks": ["stable_v3_identity", "stable_face_and_hair", "stable_proportions", "stable_v3_costume", "one_pinned_talisman", "hands_empty", "one_foreground_scout", "shared_scene_geometry", "shared_environment_light", "grounded_contact", "normal_lens_perspective", "old_grand_v2_preserved_only_as_scene_reference"],
+      "postProcess": {"mode": "aspect_crop", "sourceWidth": 1672, "sourceHeight": 941, "outputWidth": 1664, "outputHeight": 936, "cropStrategy": "center"},
+      "artifact": {"mediaType": "image/png", "byteLength": 3785461, "sha256": "e36cb6440d04a2762be7dcb50259e7706e3c28299acd983927f0c789a1dbd901", "width": 1664, "height": 936},
+      "reviewChecks": {"identity": "pending", "scene": "pending", "anatomy": "pending", "contactShadow": "pending", "lighting": "pending", "propCount": "pending", "noText": "pending", "noActorLikeness": "pending", "humanApproval": "pending"}
+    }
+  ]
+}

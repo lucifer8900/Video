@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0.0", "reservationId": "budget.reservation.fixture.reconcile",
+  "currency": "USD", "estimatedMicros": 120000, "maximumMicros": 200000,
+  "status": "reconciliation_pending", "priceVersion": "fixture.price.v1",
+  "providerKey": "fixture.provider.video", "modelSnapshot": "fixture-model-snapshot"
+}

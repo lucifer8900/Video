@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "events": [
+    {
+      "schemaVersion": "1.0.0",
+      "entryId": "led.0193f2",
+      "playerId": "p.8842",
+      "type": "debt_incurred",
+      "actors": ["char.shen_yan", "npc.shi_jun"],
+      "severity": 3,
+      "chapter": "chapter.red_mist",
+      "worldClock": 1440,
+      "sourceNodeId": "rescue",
+      "factRefs": ["fact.shijun_alive"],
+      "payload": {"debtKind": "spared_life"}
+    }
+  ]
+}

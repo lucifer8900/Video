@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "reportId": "cx504.patch.path-traversal",
+  "planId": "cx504.red-mist.addressables.v1",
+  "mode": "experiment_only",
+  "runtimeMigration": false,
+  "steamPipeVerified": false,
+  "productionReadiness": "not_evaluated",
+  "authority": "addressables_payload_measurement_not_steam_download_authority",
+  "buildTarget": "StandaloneWindows64",
+  "unityVersion": "2022.3.62f3c1",
+  "addressablesVersion": "1.22.3",
+  "startedAtUtc": "2026-07-16T16:00:00Z",
+  "completedAtUtc": "2026-07-16T16:01:00Z",
+  "baselineInput": { "logicalAddress": "cx504.chapter_red_mist_videos.target", "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111", "length": 8000000, "durationMilliseconds": 8000 },
+  "replacementInput": { "logicalAddress": "cx504.chapter_red_mist_videos.target", "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222", "length": 8100000, "durationMilliseconds": 8000 },
+  "baselineBuild": {
+    "durationMilliseconds": 10000,
+    "temporaryDiskBytes": 12000000,
+    "totalBytes": 8200000,
+    "files": [{ "relativePath": "../secret.bundle", "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333", "length": 8200000, "kind": "bundle" }]
+  },
+  "updateBuild": {
+    "durationMilliseconds": 7000,
+    "temporaryDiskBytes": 11000000,
+    "totalBytes": 8300000,
+    "files": [
+      { "relativePath": "remote/StandaloneWindows64/catalog_cx504.addressables.v1.hash", "contentHash": "sha256:4444444444444444444444444444444444444444444444444444444444444444", "length": 32, "kind": "catalog_hash" },
+      { "relativePath": "remote/StandaloneWindows64/catalog_cx504.addressables.v1.json", "contentHash": "sha256:5555555555555555555555555555555555555555555555555555555555555555", "length": 39195, "kind": "catalog" },
+      { "relativePath": "remote/StandaloneWindows64/chapter-red-mist-video-remote_assets_cx504.chapter_red_mist_videos.target_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.bundle", "contentHash": "sha256:6666666666666666666666666666666666666666666666666666666666666666", "length": 8260773, "kind": "bundle" }
+    ]
+  },
+  "patchPayloadBytes": 8300000,
+  "amplificationRatio": 1.024691358,
+  "changedAssetBytes": 8100000,
+  "maximumAllowedPatchBytes": 13198576,
+  "maximumBundleBytes": 2147483648,
+  "maximumObservedBundleBytes": 8260773,
+  "expectedChangedBundleGroup": "chapter-red-mist-video-remote",
+  "changedBundleGroups": ["chapter-red-mist-video-remote"],
+  "expectedChangedBundleAddress": "cx504.chapter_red_mist_videos.target",
+  "changedBundleAddresses": ["cx504.chapter_red_mist_videos.target"],
+  "unexpectedChangedBundles": [],
+  "unchangedBundleHashesPreserved": true,
+  "verdict": "passed",
+  "limitations": ["not_runtime_migration", "not_steam_download_measurement", "language_and_asr_are_fixture_manifests"],
+  "contentHash": "sha256:5555555555555555555555555555555555555555555555555555555555555555"
+}

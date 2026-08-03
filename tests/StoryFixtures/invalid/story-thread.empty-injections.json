@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "threadId": "thr.fixture.empty",
+  "templateId": "assoc.fixture.v1",
+  "playerId": "p.fixture",
+  "resolvedParams": {},
+  "injections": [],
+  "mediaRefs": [],
+  "expiresAtChapterEnd": true,
+  "auditRef": "genjob.fixture",
+  "fallbackUsed": false
+}

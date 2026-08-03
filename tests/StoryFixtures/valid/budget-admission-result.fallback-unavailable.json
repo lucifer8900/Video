@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0.0",
+  "outcome": "fallback_budget_unavailable",
+  "fallbackMediaRef": "media.fallback.budget",
+  "reasonCode": "budget.store_unavailable"
+}

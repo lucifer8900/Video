@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.local/schemas/reference-library-architecture-curation.schema.json",
+  "title": "CX-507 architecture visual curation decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "catalogLibraryId",
+    "reviewer",
+    "reviewedAtUtc",
+    "policy",
+    "expectedArchitectureAssets",
+    "architectureOrderSha256",
+    "quarantineUnlisted",
+    "confirmedAbsentIndices",
+    "reviewedContactSheets"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "catalogLibraryId": { "type": "string", "minLength": 1 },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "reviewedAtUtc": { "type": "string", "format": "date-time" },
+    "policy": { "type": "string", "minLength": 40 },
+    "expectedArchitectureAssets": { "type": "integer", "minimum": 1 },
+    "architectureOrderSha256": { "$ref": "#/$defs/sha256" },
+    "quarantineUnlisted": { "const": true },
+    "confirmedAbsentIndices": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "integer", "minimum": 1 }
+    },
+    "reviewedContactSheets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["fileName", "sha256"],
+        "properties": {
+          "fileName": { "type": "string", "pattern": "^architecture-all-[0-9]{2}\\.jpg$" },
+          "sha256": { "$ref": "#/$defs/sha256" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

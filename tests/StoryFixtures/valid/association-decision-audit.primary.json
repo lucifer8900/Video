@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditRef": "genjob.audit.primary.1",
+  "threadId": "thr.audit.primary.1",
+  "inputHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "playerRefHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "chapterId": "chapter.red_mist",
+  "templateId": "assoc.enemy.echo.v1",
+  "resolvedParams": {
+    "target": "npc.known"
+  },
+  "providers": [
+    {
+      "role": "ranker",
+      "providerKey": "mock.association-ranker",
+      "promptVersion": "prompt.association-ranker.mock.v1",
+      "modelSnapshot": "model.association-ranker.mock.v1",
+      "invoked": true
+    }
+  ],
+  "guardResults": [
+    {
+      "stage": "deterministic",
+      "decision": "passed",
+      "reasonCode": "none",
+      "worldSnapshotId": "snapshot.audit.primary.1"
+    },
+    {
+      "stage": "review",
+      "decision": "not_run",
+      "reasonCode": "disabled"
+    },
+    {
+      "stage": "signing",
+      "decision": "passed",
+      "reasonCode": "none",
+      "worldSnapshotId": "snapshot.audit.signing.1"
+    }
+  ],
+  "candidateCount": 1,
+  "fallbackUsed": false,
+  "outcomeReason": null,
+  "latencyMilliseconds": 12,
+  "createdAtUtc": "2026-07-16T12:00:00Z"
+}

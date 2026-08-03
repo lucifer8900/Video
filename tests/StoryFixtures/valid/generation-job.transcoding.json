@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.generation_job.transcoding",
+  "providerKey": "fixture.provider.local",
+  "modelSnapshot": "fixture-model-snapshot",
+  "promptVersion": "fixture.prompt.v1",
+  "seed": 104,
+  "inputHash": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+  "jobStatus": "transcoding",
+  "requestedAtUtc": "2026-07-15T00:00:00Z",
+  "cost": { "amount": 0, "currency": "CNY" },
+  "auditStatus": "needs_review"
+}

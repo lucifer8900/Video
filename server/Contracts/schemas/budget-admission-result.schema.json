@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/budget-admission-result.schema.json",
+  "title": "BudgetAdmissionResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "outcome"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "admitted",
+        "fallback_budget_exceeded",
+        "fallback_budget_unavailable"
+      ]
+    },
+    "reservationId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "fallbackMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "reasonCode": {
+      "$ref": "common.schema.json#/$defs/id"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "const": "admitted"
+          }
+        },
+        "required": [
+          "outcome"
+        ]
+      },
+      "then": {
+        "required": [
+          "reservationId"
+        ],
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "fallbackMediaRef"
+              ]
+            },
+            {
+              "required": [
+                "reasonCode"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "enum": [
+              "fallback_budget_exceeded",
+              "fallback_budget_unavailable"
+            ]
+          }
+        },
+        "required": [
+          "outcome"
+        ]
+      },
+      "then": {
+        "required": [
+          "fallbackMediaRef",
+          "reasonCode"
+        ],
+        "not": {
+          "required": [
+            "reservationId"
+          ]
+        }
+      }
+    }
+  ],
+  "not": {
+    "anyOf": [
+      {
+        "required": [
+          "reservationId",
+          "fallbackMediaRef"
+        ]
+      },
+      {
+        "required": [
+          "reservationId",
+          "reasonCode"
+        ]
+      }
+    ]
+  }
+}

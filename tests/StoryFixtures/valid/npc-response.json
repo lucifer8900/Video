@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.npc_response.primary",
+  "textKey": "fixture.npc_response.primary.text",
+  "emotionKey": "fixture.emotion.neutral",
+  "lipSyncMediaRef": "fixture.media.lip_sync.primary",
+  "effects": [],
+  "approvalStatus": "approved"
+}

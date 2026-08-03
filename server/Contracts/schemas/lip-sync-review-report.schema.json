@@ -1,0 +1,334 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/lip-sync-review-report.schema.json",
+  "title": "LipSyncReviewReport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "reportId",
+    "reviewPolicyVersion",
+    "reviewScope",
+    "productionReadiness",
+    "authority",
+    "overallStatus",
+    "sourceManifestId",
+    "sourceManifestContentHash",
+    "sourceBundleId",
+    "sourceBundleContentHash",
+    "language",
+    "reviewerSubject",
+    "startedAtUtc",
+    "completedAtUtc",
+    "totalResponseCount",
+    "reviewableCount",
+    "passedCount",
+    "redoCount",
+    "blockedCount",
+    "items",
+    "blockedItems",
+    "events",
+    "contentHash"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "reportId": { "$ref": "common.schema.json#/$defs/id" },
+    "reviewPolicyVersion": { "type": "string", "const": "cx503.1" },
+    "reviewScope": { "type": "string", "const": "pronunciation_subtitle_lip_sync" },
+    "productionReadiness": { "type": "string", "const": "not_evaluated" },
+    "authority": { "type": "string", "const": "human_review_export_not_promotion_authority" },
+    "overallStatus": {
+      "type": "string",
+      "enum": ["blocked", "redo_required", "lip_sync_passed"]
+    },
+    "sourceManifestId": { "$ref": "common.schema.json#/$defs/id" },
+    "sourceManifestContentHash": { "$ref": "common.schema.json#/$defs/sha256" },
+    "sourceBundleId": { "$ref": "common.schema.json#/$defs/id" },
+    "sourceBundleContentHash": { "$ref": "common.schema.json#/$defs/sha256" },
+    "language": { "type": "string", "minLength": 2, "maxLength": 35 },
+    "reviewerSubject": {
+      "oneOf": [
+        { "$ref": "common.schema.json#/$defs/sha256" },
+        { "type": "null" }
+      ]
+    },
+    "startedAtUtc": { "$ref": "common.schema.json#/$defs/dateTime" },
+    "completedAtUtc": { "$ref": "common.schema.json#/$defs/dateTime" },
+    "totalResponseCount": { "type": "integer", "minimum": 1 },
+    "reviewableCount": { "type": "integer", "minimum": 0 },
+    "passedCount": { "type": "integer", "minimum": 0 },
+    "redoCount": { "type": "integer", "minimum": 0 },
+    "blockedCount": { "type": "integer", "minimum": 0 },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "responseId",
+          "sourceNodeIds",
+          "dialogue",
+          "emotionLocalizationKey",
+          "emotionText",
+          "lipSyncMedia",
+          "audioMedia",
+          "fallbackMedia",
+          "presentationHash",
+          "sourceReadinessStatus",
+          "sourceIssueCodes",
+          "videoPlaybackCompleted",
+          "videoPlayedMilliseconds",
+          "audioPlaybackCompleted",
+          "audioPlayedMilliseconds",
+          "decision",
+          "checks",
+          "reasonCodes",
+          "reviewedAtUtc",
+          "finalEventHash"
+        ],
+        "properties": {
+          "responseId": { "$ref": "common.schema.json#/$defs/id" },
+          "sourceNodeIds": {
+            "allOf": [
+              { "$ref": "common.schema.json#/$defs/idArray" },
+              { "minItems": 1 }
+            ]
+          },
+          "dialogue": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["localizationKey", "text", "contentHash"],
+            "properties": {
+              "localizationKey": { "$ref": "common.schema.json#/$defs/id" },
+              "text": { "type": "string", "minLength": 1, "maxLength": 2000 },
+              "contentHash": { "$ref": "common.schema.json#/$defs/sha256" }
+            }
+          },
+          "emotionLocalizationKey": { "$ref": "common.schema.json#/$defs/id" },
+          "emotionText": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "lipSyncMedia": { "$ref": "#/$defs/lipSyncMediaPin" },
+          "audioMedia": { "$ref": "#/$defs/audioMediaPin" },
+          "fallbackMedia": { "$ref": "#/$defs/fallbackMediaPin" },
+          "presentationHash": { "$ref": "common.schema.json#/$defs/sha256" },
+          "sourceReadinessStatus": { "type": "string", "enum": ["needs_review", "ready"] },
+          "sourceIssueCodes": { "$ref": "common.schema.json#/$defs/idArray" },
+          "videoPlaybackCompleted": { "type": "boolean", "const": true },
+          "videoPlayedMilliseconds": { "type": "integer", "minimum": 1 },
+          "audioPlaybackCompleted": { "type": "boolean", "const": true },
+          "audioPlayedMilliseconds": { "type": "integer", "minimum": 1 },
+          "decision": { "type": "string", "enum": ["pass", "redo"] },
+          "checks": { "$ref": "#/$defs/checks" },
+          "reasonCodes": { "$ref": "common.schema.json#/$defs/idArray" },
+          "reviewedAtUtc": { "$ref": "common.schema.json#/$defs/dateTime" },
+          "finalEventHash": { "$ref": "common.schema.json#/$defs/sha256" }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": { "decision": { "const": "pass" } },
+              "required": ["decision"]
+            },
+            "then": {
+              "properties": {
+                "checks": { "$ref": "#/$defs/allChecksPassed" },
+                "reasonCodes": { "maxItems": 0 }
+              }
+            },
+            "else": {
+              "properties": {
+                "checks": { "not": { "$ref": "#/$defs/allChecksPassed" } },
+                "reasonCodes": { "minItems": 1 }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "blockedItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["responseId", "sourceReadinessStatus", "issueCodes"],
+        "properties": {
+          "responseId": { "$ref": "common.schema.json#/$defs/id" },
+          "sourceReadinessStatus": {
+            "type": "string",
+            "enum": ["blocked", "needs_review", "ready"]
+          },
+          "issueCodes": { "$ref": "common.schema.json#/$defs/idArray" }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sequence",
+          "responseId",
+          "manifestContentHash",
+          "dialogueContentHash",
+          "presentationHash",
+          "revision",
+          "videoPlaybackCompleted",
+          "videoPlayedMilliseconds",
+          "audioPlaybackCompleted",
+          "audioPlayedMilliseconds",
+          "decision",
+          "checks",
+          "reasonCodes",
+          "recordedAtUtc",
+          "previousEventHash",
+          "eventHash"
+        ],
+        "properties": {
+          "sequence": { "type": "integer", "minimum": 1 },
+          "responseId": { "$ref": "common.schema.json#/$defs/id" },
+          "manifestContentHash": { "$ref": "common.schema.json#/$defs/sha256" },
+          "dialogueContentHash": { "$ref": "common.schema.json#/$defs/sha256" },
+          "presentationHash": { "$ref": "common.schema.json#/$defs/sha256" },
+          "revision": { "type": "integer", "minimum": 1 },
+          "videoPlaybackCompleted": { "const": true },
+          "videoPlayedMilliseconds": { "type": "integer", "minimum": 1 },
+          "audioPlaybackCompleted": { "const": true },
+          "audioPlayedMilliseconds": { "type": "integer", "minimum": 1 },
+          "decision": { "type": "string", "enum": ["pass", "redo"] },
+          "checks": { "$ref": "#/$defs/checks" },
+          "reasonCodes": { "$ref": "common.schema.json#/$defs/idArray" },
+          "recordedAtUtc": { "$ref": "common.schema.json#/$defs/dateTime" },
+          "previousEventHash": {
+            "oneOf": [
+              { "$ref": "common.schema.json#/$defs/sha256" },
+              { "type": "null" }
+            ]
+          },
+          "eventHash": { "$ref": "common.schema.json#/$defs/sha256" }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": { "decision": { "const": "pass" } },
+              "required": ["decision"]
+            },
+            "then": {
+              "properties": {
+                "checks": { "$ref": "#/$defs/allChecksPassed" },
+                "reasonCodes": { "maxItems": 0 }
+              }
+            },
+            "else": {
+              "properties": {
+                "checks": { "not": { "$ref": "#/$defs/allChecksPassed" } },
+                "reasonCodes": { "minItems": 1 }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "contentHash": { "$ref": "common.schema.json#/$defs/sha256" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "reviewableCount": { "const": 0 } },
+        "required": ["reviewableCount"]
+      },
+      "then": {
+        "properties": {
+          "overallStatus": { "const": "blocked" },
+          "reviewerSubject": { "type": "null" },
+          "items": { "maxItems": 0 },
+          "events": { "maxItems": 0 },
+          "passedCount": { "const": 0 },
+          "redoCount": { "const": 0 },
+          "blockedCount": { "minimum": 1 }
+        }
+      },
+      "else": {
+        "properties": {
+          "reviewerSubject": { "$ref": "common.schema.json#/$defs/sha256" },
+          "items": { "minItems": 1 },
+          "events": { "minItems": 1 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "overallStatus": { "const": "lip_sync_passed" } },
+        "required": ["overallStatus"]
+      },
+      "then": {
+        "properties": {
+          "blockedCount": { "const": 0 },
+          "redoCount": { "const": 0 },
+          "passedCount": { "minimum": 1 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "overallStatus": { "const": "blocked" } },
+        "required": ["overallStatus"]
+      },
+      "then": {
+        "properties": { "blockedCount": { "minimum": 1 } }
+      }
+    }
+  ],
+  "$defs": {
+    "baseMediaPin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mediaRef", "assetVersion", "contentHash", "mediaType"],
+      "properties": {
+        "mediaRef": { "$ref": "common.schema.json#/$defs/id" },
+        "assetVersion": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "contentHash": { "$ref": "common.schema.json#/$defs/sha256" },
+        "mediaType": { "type": "string" }
+      }
+    },
+    "lipSyncMediaPin": {
+      "allOf": [
+        { "$ref": "#/$defs/baseMediaPin" },
+        { "properties": { "mediaType": { "enum": ["video", "animation"] } } }
+      ]
+    },
+    "audioMediaPin": {
+      "allOf": [
+        { "$ref": "#/$defs/baseMediaPin" },
+        { "properties": { "mediaType": { "const": "audio" } } }
+      ]
+    },
+    "fallbackMediaPin": {
+      "allOf": [
+        { "$ref": "#/$defs/baseMediaPin" },
+        { "properties": { "mediaType": { "enum": ["video", "animation", "image"] } } }
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rawAudioUnmasked", "pronunciationPassed", "subtitlePassed", "lipSyncPassed"],
+      "properties": {
+        "rawAudioUnmasked": { "type": "boolean" },
+        "pronunciationPassed": { "type": "boolean" },
+        "subtitlePassed": { "type": "boolean" },
+        "lipSyncPassed": { "type": "boolean" }
+      }
+    },
+    "allChecksPassed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rawAudioUnmasked", "pronunciationPassed", "subtitlePassed", "lipSyncPassed"],
+      "properties": {
+        "rawAudioUnmasked": { "const": true },
+        "pronunciationPassed": { "const": true },
+        "subtitlePassed": { "const": true },
+        "lipSyncPassed": { "const": true }
+      }
+    }
+  }
+}

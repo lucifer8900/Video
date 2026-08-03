@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/quest-definition.schema.json",
+  "title": "QuestDefinition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "initialState",
+    "timeLimitWorldClock",
+    "entryConditions",
+    "completionConditions",
+    "failureConditions",
+    "expiryConditions",
+    "onComplete",
+    "onFailure",
+    "onExpire"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "initialState": {
+      "type": "string",
+      "enum": [
+        "locked",
+        "available",
+        "active"
+      ]
+    },
+    "timeLimitWorldClock": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "entryConditions": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/condition"
+      }
+    },
+    "completionConditions": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/condition"
+      }
+    },
+    "failureConditions": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/condition"
+      }
+    },
+    "expiryConditions": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/condition"
+      }
+    },
+    "onComplete": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/stateEffect"
+      }
+    },
+    "onFailure": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/stateEffect"
+      }
+    },
+    "onExpire": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/stateEffect"
+      }
+    },
+    "tags": {
+      "$ref": "common.schema.json#/$defs/stringArray"
+    },
+    "approvalStatus": {
+      "$ref": "common.schema.json#/$defs/status"
+    }
+  }
+}

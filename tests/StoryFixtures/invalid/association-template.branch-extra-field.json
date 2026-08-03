@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "templateId": "assoc.fixture.branch_extra_field.v1",
+  "kind": "callback",
+  "authorityLevel": "L2",
+  "preconditions": {
+    "requiresLedger": [
+      { "type": "enemy_spared", "minSeverity": 2, "maxAgeWorldClock": 20160 }
+    ],
+    "forbidsFacts": [],
+    "chapterWindow": ["chapter.fixture"]
+  },
+  "parameterSlots": {
+    "target": { "source": "ledger.actors[1]" }
+  },
+  "injectionPoints": ["travel_event"],
+  "textPolicy": "llm_variant_within_style_guide",
+  "allowedEffects": [
+    {
+      "op": "branch_unlock",
+      "value": "branch.{target}_optional",
+      "field": "suspicion"
+    }
+  ],
+  "mediaPolicy": "reuse_only",
+  "fallbackThreadId": "assoc.fixture.fallback",
+  "cooldownWorldClock": 10080,
+  "maxTriggersPerPlayer": 1,
+  "approvalStatus": "needs_review"
+}

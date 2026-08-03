@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0.0",
+  "requestId": "cx306-request-ready",
+  "jobId": "5d6f3b87-8cf6-4567-88b3-fffd30bf4c02",
+  "status": "ready",
+  "terminal": true,
+  "pollAfterMilliseconds": 0,
+  "failureCode": null
+}

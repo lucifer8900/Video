@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "manifestId": "shot-manifest.chapter.fixture",
+  "sourceBundleId": "chapter.fixture",
+  "sourceBundleContentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "language": "zh-CN",
+  "approvalStatus": "needs_review",
+  "shotDispatchAllowed": false,
+  "responseRequirements": [],
+  "shots": [],
+  "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+}

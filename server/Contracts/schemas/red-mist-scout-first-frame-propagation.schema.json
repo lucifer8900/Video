@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.example/schemas/red-mist-scout-first-frame-propagation.schema.json",
+  "title": "Red Mist CX-512 Scout First-Frame Propagation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "cardId",
+    "worldId",
+    "baseIdentityAssetId",
+    "identityReference",
+    "generationPolicy",
+    "sourceFramesPreserved",
+    "comparisonContactSheet",
+    "candidates"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "cardId": { "const": "CX-512" },
+    "worldId": { "const": "lingmai-ember-red-mist" },
+    "baseIdentityAssetId": { "const": "identity.celadon_scout.v3" },
+    "identityReference": { "$ref": "#/$defs/referenceArtifact" },
+    "generationPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stillImagesOnly", "geminiOrVeoUsed", "overwriteExistingAssets", "realPeopleIdentityReuseAllowed", "adoptionRequiresHumanReview", "existingFirstFramesPreserved"],
+      "properties": {
+        "stillImagesOnly": { "const": true },
+        "geminiOrVeoUsed": { "const": false },
+        "overwriteExistingAssets": { "const": false },
+        "realPeopleIdentityReuseAllowed": { "const": false },
+        "adoptionRequiresHumanReview": { "const": true },
+        "existingFirstFramesPreserved": { "const": true }
+      }
+    },
+    "sourceFramesPreserved": { "const": true },
+    "comparisonContactSheet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "mediaType", "byteLength", "sha256", "width", "height"],
+      "properties": {
+        "path": { "const": "content/visual-candidates/cx512/reports/contact-sheet.cx512.png" },
+        "mediaType": { "const": "image/png" },
+        "byteLength": { "type": "integer", "minimum": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "width": { "const": 1536 },
+        "height": { "const": 1452 }
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": { "$ref": "#/$defs/candidate" }
+    }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "referenceArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "mediaType", "byteLength", "sha256", "width", "height", "role"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "mediaType": { "const": "image/png" },
+        "byteLength": { "type": "integer", "minimum": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "role": { "type": "string", "minLength": 1 }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mediaType", "byteLength", "sha256", "width", "height"],
+      "properties": {
+        "mediaType": { "const": "image/png" },
+        "byteLength": { "type": "integer", "minimum": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "width": { "const": 1664 },
+        "height": { "const": 936 }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assetId", "sceneKey", "sourceFirstFramePath", "sourceFirstFrame", "identityReference", "outputPath", "generationMode", "adoptionStatus", "adopted", "shipInBuild", "referenceRoles", "prompt", "avoidItems", "continuityLocks", "postProcess", "artifact", "reviewChecks"],
+      "properties": {
+        "assetId": { "type": "string", "pattern": "^firstframe\\.dialogue\\.scout\\.(mist|alliance|rescue)\\.v4$" },
+        "sceneKey": { "enum": ["scout_mist", "scout_alliance", "scout_rescue"] },
+        "sourceFirstFramePath": { "type": "string", "pattern": "^unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_(mist|alliance|rescue)_grand_v2\\.png$" },
+        "sourceFirstFrame": { "$ref": "#/$defs/referenceArtifact" },
+        "identityReference": { "$ref": "#/$defs/referenceArtifact" },
+        "outputPath": { "type": "string", "pattern": "^content/visual-candidates/cx512/first-frames/firstframe_dialogue_scout_(mist|alliance|rescue)_v4\\.png$" },
+        "generationMode": { "const": "codex_builtin_imagegen" },
+        "adoptionStatus": { "const": "needs_review" },
+        "adopted": { "const": false },
+        "shipInBuild": { "const": false },
+        "referenceRoles": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+        "prompt": { "type": "string", "minLength": 500 },
+        "avoidItems": { "type": "array", "minItems": 10, "items": { "type": "string" } },
+        "continuityLocks": { "type": "array", "minItems": 10, "items": { "type": "string" } },
+        "postProcess": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "sourceWidth", "sourceHeight", "outputWidth", "outputHeight", "cropStrategy"],
+          "properties": {
+            "mode": { "const": "aspect_crop" },
+            "sourceWidth": { "const": 1672 },
+            "sourceHeight": { "const": 941 },
+            "outputWidth": { "const": 1664 },
+            "outputHeight": { "const": 936 },
+            "cropStrategy": { "const": "center" }
+          }
+        },
+        "artifact": { "$ref": "#/$defs/artifact" },
+        "reviewChecks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["identity", "scene", "anatomy", "contactShadow", "lighting", "propCount", "noText", "noActorLikeness", "humanApproval"],
+          "properties": {
+            "identity": { "const": "pending" },
+            "scene": { "const": "pending" },
+            "anatomy": { "const": "pending" },
+            "contactShadow": { "const": "pending" },
+            "lighting": { "const": "pending" },
+            "propCount": { "const": "pending" },
+            "noText": { "const": "pending" },
+            "noActorLikeness": { "const": "pending" },
+            "humanApproval": { "const": "pending" }
+          }
+        }
+      }
+    }
+  }
+}

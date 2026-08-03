@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "manifestId": "shot-manifest.chapter.fixture",
+  "sourceBundleId": "chapter.fixture",
+  "sourceBundleContentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "language": "zh-CN",
+  "currency": "USD",
+  "approvalStatus": "needs_review",
+  "shotDispatchAllowed": false,
+  "responseRequirements": [],
+  "shots": [
+    {
+      "shotId": "shot.fixture.primary",
+      "nodeId": "fixture",
+      "nodeKind": "dialogue",
+      "source": { "sourceId": "chapter.fixture", "locator": "/sceneNodes/0" },
+      "dialogueVariants": [
+        { "route": "male", "localizationKey": "story.fixture.male_text", "text": "男线测试台词" },
+        { "route": "female", "localizationKey": "story.fixture.female_text", "text": "女线测试台词" }
+      ],
+      "dialogueBinding": "unbound_node_text",
+      "mediaRoles": {
+        "backgroundMediaRef": "fixture-background",
+        "portraitMediaRef": null,
+        "introMediaRef": "fixture-video",
+        "explicitFallbackMediaRef": null,
+        "auxiliaryMediaRefs": []
+      },
+      "npcResponseRefs": [],
+      "targetDurationMilliseconds": null,
+      "firstFrame": null,
+      "lastFrame": null,
+      "primaryMedia": { "mediaRef": "fixture-video", "assetVersion": "v1", "contentHash": "sha256:5555555555555555555555555555555555555555555555555555555555555555", "mediaType": "video" },
+      "generationTier": "reuse_only",
+      "maximumCostMicros": 1,
+      "fallbackMedia": { "mediaRef": "fixture-background", "assetVersion": "v1", "contentHash": "sha256:6666666666666666666666666666666666666666666666666666666666666666", "mediaType": "image" },
+      "fallbackOrigin": "background_placeholder",
+      "characterStateRefs": [],
+      "readinessStatus": "needs_review",
+      "issueCodes": ["frame.missing"],
+      "dispatchAllowed": false
+    }
+  ],
+  "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.node.invalid_reaction_kind",
+  "displayKey": "fixture.node.invalid_reaction_kind.display",
+  "entryConditions": [],
+  "mediaRefs": [],
+  "choices": [],
+  "voiceIntentRefs": [
+    "fixture.intent.primary"
+  ],
+  "invalid_input_rules": {
+    "abuse": { "npcResponseRef": "fixture.response.abuse" },
+    "irrelevant": { "npcResponseRef": "fixture.response.irrelevant" },
+    "too_long": { "npcResponseRef": "fixture.response.too_long" },
+    "silence": { "npcResponseRef": "fixture.response.silence" },
+    "low_confidence": { "npcResponseRef": "fixture.response.low_confidence" },
+    "harassment": { "npcResponseRef": "fixture.response.injected" }
+  },
+  "injectionPoints": [],
+  "terminal": true,
+  "approvalStatus": "approved"
+}

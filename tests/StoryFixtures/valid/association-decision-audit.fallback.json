@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditRef": "genjob.audit.fallback.1",
+  "threadId": "thr.audit.fallback.1",
+  "inputHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "playerRefHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "chapterId": "chapter.red_mist",
+  "templateId": "assoc.fallback.default.v1",
+  "resolvedParams": {},
+  "providers": [
+    {
+      "role": "ranker",
+      "providerKey": "mock.association-ranker",
+      "promptVersion": "prompt.association-ranker.mock.v1",
+      "modelSnapshot": "model.association-ranker.mock.v1",
+      "invoked": false
+    }
+  ],
+  "guardResults": [
+    {
+      "stage": "selection",
+      "decision": "not_run",
+      "reasonCode": "no_candidates"
+    },
+    {
+      "stage": "fallback",
+      "decision": "passed",
+      "reasonCode": "approved_fallback"
+    }
+  ],
+  "candidateCount": 0,
+  "fallbackUsed": true,
+  "outcomeReason": "no_candidates",
+  "latencyMilliseconds": 2,
+  "createdAtUtc": "2026-07-16T12:00:01Z"
+}

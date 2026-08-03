@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/encounter-definition.schema.json",
+  "title": "EncounterDefinition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "combatantIds",
+    "enemyIds",
+    "terrainId",
+    "objectives",
+    "tacticalOptions",
+    "primaryMediaRef",
+    "fallbackMediaRef"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "combatantIds": {
+      "$ref": "common.schema.json#/$defs/idArray",
+      "minItems": 1
+    },
+    "enemyIds": {
+      "$ref": "common.schema.json#/$defs/idArray",
+      "minItems": 1
+    },
+    "terrainId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "terrainTags": {
+      "$ref": "common.schema.json#/$defs/stringArray"
+    },
+    "objectives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/objective"
+      }
+    },
+    "tacticalOptions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/tacticalOption"
+      }
+    },
+    "primaryMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "fallbackMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    }
+  },
+  "$defs": {
+    "objective": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "enemy_defeated",
+            "enemy_driven_off",
+            "objective_secured",
+            "ally_extracted",
+            "delay_completed",
+            "intelligence_confirmed",
+            "secret_preserved",
+            "successful_retreat"
+          ]
+        },
+        "requiredForSuccess": {
+          "type": "boolean"
+        },
+        "successEffects": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/stateEffect"
+          }
+        },
+        "failureEffects": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/stateEffect"
+          }
+        }
+      }
+    },
+    "tacticalOption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "phase",
+        "intentId",
+        "prerequisiteTags"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "phase": {
+          "type": "string",
+          "enum": [
+            "preparation",
+            "reconnaissance",
+            "probe_exchange",
+            "commitment",
+            "resolution"
+          ]
+        },
+        "intentId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "prerequisiteTags": {
+          "$ref": "common.schema.json#/$defs/stringArray"
+        },
+        "resourceCosts": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/stateEffect"
+          }
+        }
+      }
+    }
+  }
+}

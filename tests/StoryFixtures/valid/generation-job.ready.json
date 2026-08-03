@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.generation_job.ready",
+  "providerKey": "fixture.provider.local",
+  "modelSnapshot": "fixture-model-snapshot",
+  "promptVersion": "fixture.prompt.v1",
+  "seed": 105,
+  "inputHash": "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+  "jobStatus": "ready",
+  "requestedAtUtc": "2026-07-15T00:00:00Z",
+  "completedAtUtc": "2026-07-15T00:01:00Z",
+  "cost": { "amount": 0, "currency": "CNY" },
+  "resultMediaRef": "fixture.media.ready",
+  "outputHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "auditStatus": "approved"
+}

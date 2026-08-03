@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "templateId": "assoc.fixture.protected_field.v1",
+  "kind": "consequence",
+  "authorityLevel": "L2",
+  "preconditions": {
+    "requiresLedger": [
+      { "type": "secret_exposed", "minSeverity": 1, "maxAgeWorldClock": 120 }
+    ],
+    "forbidsFacts": [],
+    "chapterWindow": ["chapter.fixture"]
+  },
+  "parameterSlots": {},
+  "injectionPoints": ["npc_mention"],
+  "textPolicy": "llm_variant_within_style_guide",
+  "allowedEffects": [
+    { "op": "relationship", "field": "sectDuty", "range": [-1, 1] }
+  ],
+  "mediaPolicy": "reuse_only",
+  "fallbackThreadId": "assoc.fixture.fallback",
+  "cooldownWorldClock": 0,
+  "maxTriggersPerPlayer": 1,
+  "approvalStatus": "needs_review"
+}

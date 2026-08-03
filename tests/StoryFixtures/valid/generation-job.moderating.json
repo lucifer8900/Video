@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.generation_job.moderating",
+  "providerKey": "fixture.provider.local",
+  "modelSnapshot": "fixture-model-snapshot",
+  "promptVersion": "fixture.prompt.v1",
+  "seed": 103,
+  "inputHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+  "jobStatus": "moderating",
+  "requestedAtUtc": "2026-07-15T00:00:00Z",
+  "cost": { "amount": 0, "currency": "CNY" },
+  "auditStatus": "needs_review"
+}

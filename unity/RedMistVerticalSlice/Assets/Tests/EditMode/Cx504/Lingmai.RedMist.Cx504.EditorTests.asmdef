@@ -1,0 +1,24 @@
+{
+  "name": "Lingmai.RedMist.Cx504.EditorTests",
+  "rootNamespace": "Lingmai.RedMist.Cx504.Tests",
+  "references": [
+    "Lingmai.RedMist.Cx504.Editor",
+    "Unity.Addressables.Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

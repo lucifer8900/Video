@@ -1,0 +1,2966 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": "Detector hits require human review; non-hits or an unavailable detector are not automatic confirmation.",
+  "detectorAvailable": false,
+  "architectureAssets": 210,
+  "suspectedAssets": 0,
+  "allContactSheets": [
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-01.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-02.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-03.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-04.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-05.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-06.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-07.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-08.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-09.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-10.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-11.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-12.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-13.jpg",
+    "F:\\VideoGame\\Video\\content\\reference-library\\reports\\architecture-contact-sheets.cx507\\all\\architecture-all-14.jpg"
+  ],
+  "suspectedContactSheets": [],
+  "assets": [
+    {
+      "index": 1,
+      "id": "ref-architecture-001-b5834f783d",
+      "title": "风雪中的佛光寺东大殿 / The Great East Hall of Foguang Temple in the snow",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-001-b5834f783d.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-001-b5834f783d.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 2,
+      "id": "ref-architecture-002-30c475224b",
+      "title": "Behind the Tulou",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-002-30c475224b.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-002-30c475224b.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 3,
+      "id": "ref-architecture-004-5f8ba81573",
+      "title": "Twin Pagodas, Luohanyuan Temple, Suzhou, China",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-004-5f8ba81573.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-004-5f8ba81573.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 4,
+      "id": "ref-architecture-009-167647884",
+      "title": "大同清真大寺 (54579120624).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-009-167647884.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-009-167647884.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 5,
+      "id": "ref-architecture-014-24523702",
+      "title": "Tiantan (Temple of Heaven), Beijing (149187190).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-014-24523702.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-014-24523702.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 6,
+      "id": "ref-architecture-016-25709215",
+      "title": "Badaling Great Wall near Beijing (3019968612).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-016-25709215.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-016-25709215.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 7,
+      "id": "ref-architecture-017-12264124",
+      "title": "天津蓟县独乐寺观音阁.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-017-12264124.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-017-12264124.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 8,
+      "id": "ref-architecture-018-172431200",
+      "title": "Huangyaguan Greatwall in Jixian Tianjin.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-018-172431200.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-018-172431200.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 9,
+      "id": "ref-architecture-021-1813644",
+      "title": "Zhaozhou Bridge.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-021-1813644.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-021-1813644.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 10,
+      "id": "ref-architecture-023-2707969",
+      "title": "The Manichaean Hall 01 Longxing temple.JPG",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-023-2707969.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-023-2707969.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 11,
+      "id": "ref-architecture-028-117784616",
+      "title": "亜細亜大観 16 033 \"孔子廟 （滿洲國）\".jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-028-117784616.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-028-117784616.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 12,
+      "id": "ref-architecture-031-124610772",
+      "title": "20191113 Longhua Temple lantern-2.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-031-124610772.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-031-124610772.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 13,
+      "id": "ref-architecture-035-wikimediac",
+      "title": "China-Nanjing (2024) Ming Xiaoling 明孝陵 - img 09.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-035-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-035-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 14,
+      "id": "ref-architecture-037-wikimediac",
+      "title": "宏村德義堂 Hongcun De Yi Hall - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-037-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-037-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 15,
+      "id": "ref-architecture-043-wikimediac",
+      "title": "Kongzi (Confucius) Temple, Qufu (13036660474).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-043-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-043-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 16,
+      "id": "ref-architecture-048-openversef",
+      "title": "Wudang Shan",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-048-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-048-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 17,
+      "id": "ref-architecture-052-wikimediac",
+      "title": "Chan Clan Ancestral Hall Courtyard Canton.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-052-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-052-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 18,
+      "id": "ref-architecture-055-wikimediac",
+      "title": "五公祠 - Five Officials Temple - 2016.01 - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-055-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-055-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 19,
+      "id": "ref-architecture-063-wikimediac",
+      "title": "Dali, Yunnan, China - panoramio (14).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-063-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-063-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 20,
+      "id": "ref-architecture-064-wikimediac",
+      "title": "Potala.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-064-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-064-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 21,
+      "id": "ref-architecture-065-wikimediac",
+      "title": "Pagoda on a Rocky Hill near Walled Town of Lueyang Xian. Shaanxi Province, China, 1875 WDL2086.png",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-065-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-065-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 22,
+      "id": "ref-architecture-068-wikimediac",
+      "title": "Yinchuan - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-068-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-068-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 23,
+      "id": "ref-architecture-069-wikimediac",
+      "title": "Silk Road 1992 (4367186019).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-069-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-069-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 24,
+      "id": "ref-architecture-070-wikimediac",
+      "title": "Jiaohe Ruins Turpan Xinjiang China 新疆 吐魯番 交河故城 入城口 - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-070-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-070-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 25,
+      "id": "ref-architecture-071-wikimediac",
+      "title": "Gaochang Ruins Turpan Xinjiang China 新疆 吐魯番 高昌故城 - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-071-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-071-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 26,
+      "id": "ref-architecture-076-wikimediac",
+      "title": "Longshan Temple Taiwan Detail.jpeg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-076-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-076-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 27,
+      "id": "ref-architecture-078-wikimediac",
+      "title": "合德堂 Hede Tang - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-078-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-078-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 28,
+      "id": "ref-architecture-080-openversef",
+      "title": "anyang yinxu - si mu wu ding",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-080-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-080-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 29,
+      "id": "ref-architecture-093-openversef",
+      "title": "Forbidden City",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-093-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-093-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 30,
+      "id": "ref-architecture-094-openversef",
+      "title": "Dragon and demon roof guardians",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-094-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-094-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 31,
+      "id": "ref-architecture-097-openversef",
+      "title": "Forbidden City",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-097-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-097-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 32,
+      "id": "ref-architecture-109-openversew",
+      "title": "Datong Ancient City Wall 12",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-109-openversew.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-109-openversew.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 33,
+      "id": "ref-architecture-111-openversef",
+      "title": "Porcelain Tower",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-111-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-111-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 34,
+      "id": "ref-architecture-114-openversef",
+      "title": "Pekin, Walls Of The Tartar City [c1894-1896] William H. Jackson [RESTORED].",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-114-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-114-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 35,
+      "id": "ref-architecture-115-openversef",
+      "title": "Yuanmingyuan Park",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-115-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-115-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 36,
+      "id": "ref-architecture-122-openversef",
+      "title": "Shinshu-en Chinese garden @ Daishi Park @ Kawasaki",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-122-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-122-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 37,
+      "id": "ref-architecture-126-openversef",
+      "title": "Lion Guardians of the Bodhi Path",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-126-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-126-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 38,
+      "id": "ref-architecture-134-openversef",
+      "title": "Chinese Goldfish Pond",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-134-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-134-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 39,
+      "id": "ref-architecture-135-openversef",
+      "title": "Chinese Garden",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-135-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-135-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 40,
+      "id": "ref-architecture-137-openversef",
+      "title": "The garden with rocks",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-137-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-137-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 41,
+      "id": "ref-architecture-140-openversef",
+      "title": "Portland Chinese Gardens",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-140-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-140-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 42,
+      "id": "ref-architecture-151-openversef",
+      "title": "Heilongjiang, China",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-151-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-151-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 43,
+      "id": "ref-architecture-152-openversef",
+      "title": "CULTURE",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-152-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-152-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 44,
+      "id": "ref-architecture-155-openversef",
+      "title": "Cafe at Moon Lake",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-155-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-155-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 45,
+      "id": "ref-architecture-156-openversef",
+      "title": "Relief at Tianyige Museum",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-156-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-156-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 46,
+      "id": "ref-architecture-161-openversef",
+      "title": "Youmin Si Buddhist Temple",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-161-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-161-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 47,
+      "id": "ref-architecture-162-openversef",
+      "title": "Shengjin Ta Tower & Temple",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-162-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-162-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 48,
+      "id": "ref-architecture-163-openversef",
+      "title": "碧霞祠 Azure Clouds Temple / 山東省泰山 Mount Tai, Shandong Province 山东省泰山 / 中國旅遊 中国旅游 China Tourism / SML.20121011.7D.09574.ChinaTourism.CN.QingDao.MountTai",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-163-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-163-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 49,
+      "id": "ref-architecture-166-openversef",
+      "title": "longmen grottoes - fengxiansi",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-166-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-166-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 50,
+      "id": "ref-architecture-167-openversef",
+      "title": "Wudang Shan",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-167-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-167-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 51,
+      "id": "ref-architecture-169-openversef",
+      "title": "Abandoned Building",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-169-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-169-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 52,
+      "id": "ref-architecture-172-openversef",
+      "title": "Minority style bridge over a pond",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-172-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-172-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 53,
+      "id": "ref-architecture-180-openversef",
+      "title": "Zhongdian, Jietang Songlin monastery, on the roof",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-180-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-180-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 54,
+      "id": "ref-architecture-182-openversef",
+      "title": "Potala Palace",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-182-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-182-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 55,
+      "id": "ref-architecture-184-openversef",
+      "title": "Prayer wheel",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-184-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-184-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 56,
+      "id": "ref-architecture-185-openversef",
+      "title": "Bell Tower, Xi'an, China",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-185-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-185-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 57,
+      "id": "ref-architecture-186-openversef",
+      "title": "Here be dragons",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-186-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-186-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 58,
+      "id": "ref-architecture-188-openversef",
+      "title": "June 07 sony 568",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-188-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-188-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 59,
+      "id": "ref-architecture-189-openversef",
+      "title": "June 07 sony 500",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-189-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-189-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 60,
+      "id": "ref-architecture-190-openversef",
+      "title": "June 07 350D 764",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-190-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-190-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 61,
+      "id": "ref-architecture-191-openversef",
+      "title": "June 07 S80 241",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-191-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-191-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 62,
+      "id": "ref-architecture-192-openversef",
+      "title": "June 07 350D 752",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-192-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-192-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 63,
+      "id": "ref-architecture-193-openversef",
+      "title": "Grand Buddhist Temple",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-193-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-193-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 64,
+      "id": "ref-architecture-196-openversef",
+      "title": "Hong Kong Temple",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-196-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-196-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 65,
+      "id": "ref-architecture-225-openversef",
+      "title": "Gorgeously Illumminated Drum Tower",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-225-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-225-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 66,
+      "id": "ref-architecture-228-openversef",
+      "title": "Huaqing Hot Spring, Xi'an China",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-228-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-228-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 67,
+      "id": "ref-architecture-231-openversef",
+      "title": "The Prayer Hall",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-231-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-231-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 68,
+      "id": "ref-architecture-232-openversef",
+      "title": "Xi'an City Wall 1",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-232-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-232-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 69,
+      "id": "ref-architecture-234-openversef",
+      "title": "longmen grottoes - fengxiansi",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-234-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-234-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 70,
+      "id": "ref-architecture-235-openversef",
+      "title": "Pagoda Forest at the Shaolin Temple",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-235-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-235-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 71,
+      "id": "ref-architecture-236-openversef",
+      "title": "China: Longmen details",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-236-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-236-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 72,
+      "id": "ref-architecture-238-openversef",
+      "title": "Han-Wei Luoyang Ancient City Site of Imperial Palace",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-238-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-238-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 73,
+      "id": "ref-architecture-245-openversef",
+      "title": "Window frame",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-245-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-245-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 74,
+      "id": "ref-architecture-252-openversef",
+      "title": "IMG_0495",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-252-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-252-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 75,
+      "id": "ref-architecture-254-openversef",
+      "title": "China - Hanging Temple 1",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-254-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-254-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 76,
+      "id": "ref-architecture-255-openversef",
+      "title": "Yungang",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-255-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-255-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 77,
+      "id": "ref-architecture-256-openversef",
+      "title": "IMG_5984",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-256-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-256-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 78,
+      "id": "ref-architecture-264-openversef",
+      "title": "QingYang Gong Taoist Temple",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-264-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-264-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 79,
+      "id": "ref-architecture-267-openversef",
+      "title": "武候祠",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-267-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-267-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 80,
+      "id": "ref-architecture-268-openversef",
+      "title": "武候祠",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-268-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-268-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 81,
+      "id": "ref-architecture-271-openversef",
+      "title": "The Shenyang Palace Museum 瀋陽故宮博物院",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-271-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-271-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 82,
+      "id": "ref-architecture-274-openversef",
+      "title": "Manchu Forbidden City Throne",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-274-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-274-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 83,
+      "id": "ref-architecture-275-openversef",
+      "title": "Manchu Forbidden City",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-275-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-275-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 84,
+      "id": "ref-architecture-276-openversef",
+      "title": "Manchu Forbidden City Throne",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-276-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-276-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 85,
+      "id": "ref-architecture-279-openversef",
+      "title": "Manchu Forbidden City",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-279-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-279-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 86,
+      "id": "ref-architecture-284-openversef",
+      "title": "Zhaoxing, village gate",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-284-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-284-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 87,
+      "id": "ref-architecture-285-openversef",
+      "title": "Zhaoxing",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-285-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-285-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 88,
+      "id": "ref-architecture-291-openversef",
+      "title": "南天門摩天閣 / 山東省泰山 山东省泰山 Mount Tai, Shandong Province / 中國旅遊 中国旅游 China Tourism / SML.20121011.7D.09494.PS",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-291-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-291-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 89,
+      "id": "ref-architecture-293-openversef",
+      "title": "The Drum Tower of Xi'an",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-293-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-293-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 90,
+      "id": "ref-architecture-295-openversef",
+      "title": "Nioufongjing Wulinggong Temple",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-295-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-295-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 91,
+      "id": "ref-architecture-297-openversef",
+      "title": "Chinese Gdn - thru window",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-297-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-297-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 92,
+      "id": "ref-architecture-298-openversef",
+      "title": "Chinese Gdn - bldg reflection",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-298-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-298-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 93,
+      "id": "ref-architecture-301-openversef",
+      "title": "BeiHai Park 1",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-301-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-301-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 94,
+      "id": "ref-architecture-303-openversef",
+      "title": "DSC01057",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-303-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-303-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 95,
+      "id": "ref-architecture-313-openversew",
+      "title": "Rooftop dragon of Dazhao Temple in Hohhot, Inner Mongolia",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-313-openversew.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-313-openversew.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 96,
+      "id": "ref-architecture-314-wikimediac",
+      "title": "Confucian temple, Jilin City 7.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-314-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-314-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 97,
+      "id": "ref-architecture-315-wikimediac",
+      "title": "Confucian temple, Jilin City 6.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-315-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-315-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 98,
+      "id": "ref-architecture-316-openversef",
+      "title": "China Chengyang - Wind and Rain bridge",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-316-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-316-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 99,
+      "id": "ref-architecture-317-openversef",
+      "title": "Chengyang, wind and rain bridge",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-317-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-317-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 100,
+      "id": "ref-architecture-319-openversef",
+      "title": "Xi Xia Imperial Tombs",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-319-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-319-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 101,
+      "id": "ref-architecture-320-openversef",
+      "title": "Xi Xia Imperial Tombs",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-320-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-320-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 102,
+      "id": "ref-architecture-326-openversef",
+      "title": "Dragon Pavilion",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-326-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-326-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 103,
+      "id": "ref-architecture-328-openversef",
+      "title": "Huayan Temple",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-328-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-328-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 104,
+      "id": "ref-architecture-330-wikimediac",
+      "title": "Xiangtangshan Northern Grottoes 08.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-330-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-330-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 105,
+      "id": "ref-architecture-331-wikimediac",
+      "title": "Xiangtangshan Northern Grottoes 10.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-331-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-331-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 106,
+      "id": "ref-architecture-332-wikimediac",
+      "title": "Xiangtangshan Northern Grottoes 05.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-332-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-332-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 107,
+      "id": "ref-architecture-333-wikimediac",
+      "title": "Xiangtangshan Northern Grottoes 07.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-333-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-333-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 108,
+      "id": "ref-architecture-334-wikimediac",
+      "title": "Xiangtangshan Northern Grottoes 13.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-334-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-334-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 109,
+      "id": "ref-architecture-335-wikimediac",
+      "title": "Xiangtangshan Northern Grottoes 00.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-335-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-335-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 110,
+      "id": "ref-architecture-336-wikimediac",
+      "title": "Xiangtangshan Northern Grottoes 01.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-336-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-336-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 111,
+      "id": "ref-architecture-337-wikimediac",
+      "title": "Xiangtangshan Northern Grottoes 04.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-337-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-337-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 112,
+      "id": "ref-architecture-339-openversef",
+      "title": "Yinxu World Heritage Site, Anyang",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-339-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-339-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 113,
+      "id": "ref-architecture-350-wikimediac",
+      "title": "陵顶俯瞰 - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-350-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-350-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 114,
+      "id": "ref-architecture-356-openversef",
+      "title": "Yungang Grottoes-33",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-356-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-356-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 115,
+      "id": "ref-architecture-357-openversef",
+      "title": "Yungang Grottoes-22",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-357-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-357-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 116,
+      "id": "ref-architecture-358-openversef",
+      "title": "Yungang Grottoes-35",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-358-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-358-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 117,
+      "id": "ref-architecture-362-openversef",
+      "title": "Xian from Giant Wild Goose Pagoda, China",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-362-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-362-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 118,
+      "id": "ref-architecture-363-openversef",
+      "title": "Giant Wild Goose Pagoda, Xian, China",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-363-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-363-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 119,
+      "id": "ref-architecture-365-openversef",
+      "title": "Giant Wild Goose Pagoda, Xian, China",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-365-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-365-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 120,
+      "id": "ref-architecture-366-openversef",
+      "title": "Giant Wild Goose Pagoda",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-366-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-366-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 121,
+      "id": "ref-architecture-370-openversef",
+      "title": "Iron Pagoda, Kaifeng",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-370-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-370-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 122,
+      "id": "ref-architecture-374-openversef",
+      "title": "Chengtiansi Ta (Xi Ta, or West Pagoda)",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-374-openversef.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-374-openversef.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 123,
+      "id": "ref-architecture-123-wikimediac",
+      "title": "Forbidden City Beijing (3019178959).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-123-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-123-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 124,
+      "id": "ref-architecture-124-wikimediac",
+      "title": "Zaojian Hall Island in Summer Palace.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-124-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-124-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 125,
+      "id": "ref-architecture-125-wikimediac",
+      "title": "天津鼓楼东1.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-125-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-125-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 126,
+      "id": "ref-architecture-126-openversew",
+      "title": "Tianjin Temple Sanskrit Ranjana Script",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-126-openversew.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-126-openversew.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 127,
+      "id": "ref-architecture-127-wikimediac",
+      "title": "Chengde Mountain Resort 22632-Chengde (30893925458).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-127-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-127-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 128,
+      "id": "ref-architecture-128-openversew",
+      "title": "Shanhaiguan great wall",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-128-openversew.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-128-openversew.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 129,
+      "id": "ref-architecture-129-wikimediac",
+      "title": "雲岡石窟 Yungang Grottoes - panoramio (1).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-129-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-129-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 130,
+      "id": "ref-architecture-130-wikimediac",
+      "title": "平遙古城 Pingyao Ancient City Walls - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-130-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-130-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 131,
+      "id": "ref-architecture-131-openversew",
+      "title": "The Town God's Temple of Licheng County in Shanxi 2024",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-131-openversew.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-131-openversew.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 132,
+      "id": "ref-architecture-132-wikimediac",
+      "title": "Wuta Si (Five Pagoda Temple) - 19742590255.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-132-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-132-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 133,
+      "id": "ref-architecture-133-openversew",
+      "title": "File:Manjushri from Rig Sum Gonpo (Lords of the Three Families), view 1, collected by Sven Hedin in 1930, Efi Khalkha temple, Chahar, Inner Mongolia - Östasiatiska museet, Stockholm - DSC09304.JPG",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-133-openversew.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-133-openversew.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 134,
+      "id": "ref-architecture-134-wikimediac",
+      "title": "Rooftop dragon of Dazhao Temple in Hohhot, Inner Mongolia.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-134-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-134-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 135,
+      "id": "ref-architecture-135-wikimediac",
+      "title": "2014 East Tomb (Fuling, Tomb of Manchu Chief Nurhachi) 03.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-135-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-135-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 136,
+      "id": "ref-architecture-136-wikimediac",
+      "title": "2014 East Tomb (Fuling, Tomb of Manchu Chief Nurhachi) 02.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-136-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-136-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 137,
+      "id": "ref-architecture-137-wikimediac",
+      "title": "2014 East Tomb (Fuling, Tomb of Manchu Chief Nurhachi) 05.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-137-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-137-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 138,
+      "id": "ref-architecture-138-wikimediac",
+      "title": "2014 East Tomb (Fuling, Tomb of Manchu Chief Nurhachi) 04.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-138-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-138-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 139,
+      "id": "ref-architecture-139-wikimediac",
+      "title": "Confucian temple, Jilin City 5.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-139-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-139-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 140,
+      "id": "ref-architecture-140-wikimediac",
+      "title": "2024-Apr Shanghai Yu Yuan Garden 豫园 - img 20.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-140-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-140-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 141,
+      "id": "ref-architecture-141-wikimediac",
+      "title": "20191113 Longhua Temple lantern-3.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-141-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-141-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 142,
+      "id": "ref-architecture-142-wikimediac",
+      "title": "20191113 Longhua Temple lantern-4.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-142-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-142-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 143,
+      "id": "ref-architecture-143-wikimediac",
+      "title": "China-Nanjing (2024) Ming Xiaoling 明孝陵 - img 10.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-143-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-143-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 144,
+      "id": "ref-architecture-144-wikimediac",
+      "title": "China-Nanjing (2024) Ming Xiaoling - Bao Ding Mound 宝顶 - img 02.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-144-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-144-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 145,
+      "id": "ref-architecture-145-wikimediac",
+      "title": "Xihu, Hangzhou, Zhejiang, China - panoramio (32).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-145-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-145-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 146,
+      "id": "ref-architecture-146-wikimediac",
+      "title": "Hongcun (8251556909).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-146-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-146-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 147,
+      "id": "ref-architecture-147-wikimediac",
+      "title": "Hongcun (8252633918).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-147-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-147-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 148,
+      "id": "ref-architecture-148-wikimediac",
+      "title": "Hongcun (8251564777).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-148-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-148-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 149,
+      "id": "ref-architecture-149-wikimediac",
+      "title": "Yongding, Longyan, Fujian, China - panoramio (2).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-149-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-149-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 150,
+      "id": "ref-architecture-150-wikimediac",
+      "title": "Model of Hualin Temple Main Hall, Northern Song (33549715221).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-150-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-150-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 151,
+      "id": "ref-architecture-151-wikimediac",
+      "title": "Song-Yuan Bridges in Fujian (33522553622).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-151-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-151-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 152,
+      "id": "ref-architecture-152-wikimediac",
+      "title": "Looking up in the center of a Fujian Tulou 2014-12-21.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-152-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-152-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 153,
+      "id": "ref-architecture-153-wikimediac",
+      "title": "Pavilion of Prince Teng 2023021301.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-153-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-153-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 154,
+      "id": "ref-architecture-154-wikimediac",
+      "title": "Tengwangge (Prince of Teng Pavilion) (31538091445).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-154-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-154-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 155,
+      "id": "ref-architecture-155-wikimediac",
+      "title": "Introduction to Kongzi (Confucius) Temple, Qufu (13036273605).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-155-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-155-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 156,
+      "id": "ref-architecture-156-wikimediac",
+      "title": "PenglaiPavilion.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-156-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-156-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 157,
+      "id": "ref-architecture-157-wikimediac",
+      "title": "Pagoda Relief in Longmen Grottoes - 3.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-157-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-157-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 158,
+      "id": "ref-architecture-158-wikimediac",
+      "title": "Longmen Grottoes, Luoyang, Henan, Zhongguo - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-158-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-158-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 159,
+      "id": "ref-architecture-159-wikimediac",
+      "title": "Ancient Buddhist Grottoes at Longmen- Middle Binyang Cave Main Buddha Statue.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-159-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-159-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 160,
+      "id": "ref-architecture-160-wikimediac",
+      "title": "Wuhan, Viewed from Yellow Crane Tower 2 (G. Todd) - Flickr.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-160-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-160-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 161,
+      "id": "ref-architecture-161-wikimediac",
+      "title": "Guiyuan Temple, Wuhan (10160047775).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-161-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-161-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 162,
+      "id": "ref-architecture-162-wikimediac",
+      "title": "Yueyang Tower of the Qing Dynasty - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-162-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-162-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 163,
+      "id": "ref-architecture-163-wikimediac",
+      "title": "Fenghuang, Xiangxi, Hunan, China - panoramio (1).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-163-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-163-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 164,
+      "id": "ref-architecture-164-wikimediac",
+      "title": "Kaiping Cottages 18195-Kaiping (49038347952).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-164-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-164-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 165,
+      "id": "ref-architecture-165-openversew",
+      "title": "Foshan Ancestral Temple 39539-Foshan (49042475643)",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-165-openversew.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-165-openversew.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 166,
+      "id": "ref-architecture-166-wikimediac",
+      "title": "Lingqu Canal and Qin Conquest (10081811575).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-166-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-166-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 167,
+      "id": "ref-architecture-167-wikimediac",
+      "title": "2023-06-23 重慶湖廣會館 02.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-167-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-167-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 168,
+      "id": "ref-architecture-168-wikimediac",
+      "title": "028 Sichuan-160811 28 (29868006911).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-168-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-168-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 169,
+      "id": "ref-architecture-169-wikimediac",
+      "title": "石宝寨 - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-169-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-169-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 170,
+      "id": "ref-architecture-170-openverser",
+      "title": "Jade Pavilion, Dujiangyan, Sichuan, China",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-170-openverser.webp",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-170-openverser.webp",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 171,
+      "id": "ref-architecture-171-wikimediac",
+      "title": "Leshan Sights (BUDDHA-BUDDHISM-CHENGDU-SICHUAN-CHINA) (2165330441).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-171-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-171-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 172,
+      "id": "ref-architecture-172-wikimediac",
+      "title": "Dujiangyan, Chengdu, Sichuan, China - panoramio (3).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-172-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-172-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 173,
+      "id": "ref-architecture-173-wikimediac",
+      "title": "Dujiangyan, Chengdu, Sichuan, China - panoramio (4).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-173-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-173-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 174,
+      "id": "ref-architecture-174-wikimediac",
+      "title": "Qingyan Ancient Town 86175-Guiyang (49047026191).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-174-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-174-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 175,
+      "id": "ref-architecture-175-wikimediac",
+      "title": "Yunnan colors (49073876713).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-175-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-175-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 176,
+      "id": "ref-architecture-176-wikimediac",
+      "title": "Yunnan tibetain (49074440626).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-176-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-176-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 177,
+      "id": "ref-architecture-177-wikimediac",
+      "title": "Potala Palace - Lhasa, Tibet - 41704031342.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-177-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-177-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 178,
+      "id": "ref-architecture-178-wikimediac",
+      "title": "City wall of Xi'an 51550-Xian (27959363326).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-178-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-178-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 179,
+      "id": "ref-architecture-179-wikimediac",
+      "title": "Mogao Caves (54376968407).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-179-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-179-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 180,
+      "id": "ref-architecture-180-wikimediac",
+      "title": "Ta'er Monastery Xining Qinghai China 青海 西宁 塔尔寺 金殿 - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-180-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-180-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 181,
+      "id": "ref-architecture-181-wikimediac",
+      "title": "Yinchuan (53725582498).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-181-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-181-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 182,
+      "id": "ref-architecture-182-wikimediac",
+      "title": "Macau - Ruins of Saint Paul.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-182-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-182-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 183,
+      "id": "ref-architecture-183-wikimediac",
+      "title": "Templo de A-Má.JPG",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-183-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-183-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 184,
+      "id": "ref-architecture-184-wikimediac",
+      "title": "Roof detail of the Chihkan Tower 20100219.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-184-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-184-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 185,
+      "id": "ref-architecture-185-wikimediac",
+      "title": "Longshan Temple DSC02309.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-185-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-185-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 186,
+      "id": "ref-architecture-186-wikimediac",
+      "title": "Yin Ruins Historic Site (44026577280).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-186-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-186-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 187,
+      "id": "ref-architecture-187-wikimediac",
+      "title": "Zifeng Tower from City Wall.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-187-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-187-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 188,
+      "id": "ref-architecture-188-wikimediac",
+      "title": "Iron Pagoda - 10220309853.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-188-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-188-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 189,
+      "id": "ref-architecture-189-wikimediac",
+      "title": "Iron Pagoda, Kaifeng - 14053257123.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-189-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-189-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 190,
+      "id": "ref-architecture-190-wikimediac",
+      "title": "开封铁塔 - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-190-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-190-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 191,
+      "id": "ref-architecture-191-wikimediac",
+      "title": "Kwong Hau Temple 9.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-191-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-191-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 192,
+      "id": "ref-architecture-192-wikimediac",
+      "title": "Kwong Hau Temple 10.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-192-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-192-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 193,
+      "id": "ref-architecture-193-wikimediac",
+      "title": "Daxiangguo Temple 01.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-193-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-193-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 194,
+      "id": "ref-architecture-194-wikimediac",
+      "title": "Daxiangguo Temple Front Gate.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-194-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-194-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 195,
+      "id": "ref-architecture-195-wikimediac",
+      "title": "Huayan Temple (Datong) 3.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-195-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-195-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 196,
+      "id": "ref-architecture-196-wikimediac",
+      "title": "Huayan Temple (Datong) 2.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-196-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-196-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 197,
+      "id": "ref-architecture-197-wikimediac",
+      "title": "Xiangtangshan Northern Grottoes 14.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-197-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-197-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 198,
+      "id": "ref-architecture-198-wikimediac",
+      "title": "Xiangtangshan Northern Grottoes 22.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-198-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-198-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 199,
+      "id": "ref-architecture-199-wikimediac",
+      "title": "Shang Bronze Ge Dagger-Axe with Pole Remnant, Yinxu, Anyang.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-199-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-199-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 200,
+      "id": "ref-architecture-200-wikimediac",
+      "title": "Shang Bronze Dao Broadswords, Yinxu 2.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-200-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-200-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 201,
+      "id": "ref-architecture-203-wikimediac",
+      "title": "Restored Tomb -160, Yin Ruins, Anyang b.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-203-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-203-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 202,
+      "id": "ref-architecture-204-wikimediac",
+      "title": "Shang Settlements and Tombs in Yinxu (Anyang) (10185764213).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-204-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-204-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 203,
+      "id": "ref-architecture-206-wikimediac",
+      "title": "Ancient Shu Altar Reconstruction, Sanxingdui Museum.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-206-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-206-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 204,
+      "id": "ref-architecture-207-wikimediac",
+      "title": "Qin Shihuang Tomb, Lintong, Shaanxi (9894935505).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-207-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-207-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 205,
+      "id": "ref-architecture-211-wikimediac",
+      "title": "哈爾濱聖索菲亞教堂 Saint Sophia Cathedral in Harbin - panoramio.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-211-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-211-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 206,
+      "id": "ref-architecture-212-wikimediac",
+      "title": "Xihu, Hangzhou, Zhejiang, China - panoramio (24).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-212-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-212-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 207,
+      "id": "ref-architecture-213-wikimediac",
+      "title": "China Temple.jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-213-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-213-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 208,
+      "id": "ref-architecture-214-wikimediac",
+      "title": "Kaiping Cottages 18222-Kaiping (49038349672).jpg",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-214-wikimediac.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-214-wikimediac.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 209,
+      "id": "ref-architecture-215-openversew",
+      "title": "Qingyan Ancient Town 86111-Guiyang (49046519018)",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-215-openversew.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-215-openversew.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    },
+    {
+      "index": 210,
+      "id": "ref-architecture-216-openversew",
+      "title": "Qingyan Ancient Town 86118-Guiyang (49046520128)",
+      "localRelativePath": "content/reference-library/raw/architecture/ref-architecture-216-openversew.jpg",
+      "absolutePath": "F:\\VideoGame\\Video\\content\\reference-library\\raw\\architecture\\ref-architecture-216-openversew.jpg",
+      "suspected": false,
+      "detector": {
+        "readError": false,
+        "faces": [],
+        "people": [],
+        "detectorUnavailable": true
+      }
+    }
+  ]
+}

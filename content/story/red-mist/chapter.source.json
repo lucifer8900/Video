@@ -1,0 +1,1360 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter.red_mist",
+  "entryNodeId": "prologue",
+  "approvalStatus": "approved",
+  "distributionStatus": "internal_prototype_only",
+  "sceneNodes": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "prologue",
+      "displayKey": "story.red_mist.node.prologue.title",
+      "titleKey": "story.red_mist.node.prologue.title",
+      "locationKey": "story.red_mist.node.prologue.location",
+      "speakerKey": "story.red_mist.node.prologue.speaker",
+      "maleTextKey": "story.red_mist.node.prologue.male_text",
+      "femaleTextKey": "story.red_mist.node.prologue.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_weather",
+        "fmv_gate_arrival"
+      ],
+      "backgroundMediaRef": "red_mist_weather",
+      "introMediaRef": "fmv_gate_arrival",
+      "choices": [
+        {
+          "id": "choice.prologue.to_camp",
+          "labelKey": "story.red_mist.choice.prologue.to_camp.label",
+          "hintKey": "story.red_mist.choice.prologue.to_camp.hint",
+          "actionId": "to_camp",
+          "nextNodeId": "camp",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.prologue.gate_scout",
+          "labelKey": "story.red_mist.choice.prologue.gate_scout.label",
+          "hintKey": "story.red_mist.choice.prologue.gate_scout.hint",
+          "actionId": "gate_scout",
+          "nextNodeId": "alliance",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.prologue.gate_companion",
+          "labelKey": "story.red_mist.choice.prologue.gate_companion.label",
+          "hintKey": "story.red_mist.choice.prologue.gate_companion.hint",
+          "actionId": "gate_companion",
+          "nextNodeId": "camp",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": ["intent.prologue.inspect_mist"],
+      "npcResponseRefs": [
+        "npc.response.prologue.inspect_mist",
+        "npc.invalid.calm.abuse", "npc.invalid.calm.irrelevant", "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence", "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.calm.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.calm.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.calm.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.calm.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.calm.low_confidence" }
+      },
+      "injectionPoints": [
+        "node_intro"
+      ],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "camp",
+      "displayKey": "story.red_mist.node.camp.title",
+      "titleKey": "story.red_mist.node.camp.title",
+      "locationKey": "story.red_mist.node.camp.location",
+      "speakerKey": "story.red_mist.node.camp.speaker",
+      "maleTextKey": "story.red_mist.node.camp.male_text",
+      "femaleTextKey": "story.red_mist.node.camp.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_modules"
+      ],
+      "backgroundMediaRef": "red_mist_modules",
+      "choices": [
+        {
+          "id": "choice.camp.camp_retreat",
+          "labelKey": "story.red_mist.choice.camp.camp_retreat.label",
+          "hintKey": "story.red_mist.choice.camp.camp_retreat.hint",
+          "actionId": "camp_retreat",
+          "nextNodeId": "alliance",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.camp.camp_balanced",
+          "labelKey": "story.red_mist.choice.camp.camp_balanced.label",
+          "hintKey": "story.red_mist.choice.camp.camp_balanced.hint",
+          "actionId": "camp_balanced",
+          "nextNodeId": "alliance",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.camp.camp_protect",
+          "labelKey": "story.red_mist.choice.camp.camp_protect.label",
+          "hintKey": "story.red_mist.choice.camp.camp_protect.hint",
+          "actionId": "camp_protect",
+          "nextNodeId": "alliance",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse", "npc.invalid.calm.irrelevant", "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence", "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.calm.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.calm.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.calm.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.calm.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.calm.low_confidence" }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "alliance",
+      "displayKey": "story.red_mist.node.alliance.title",
+      "titleKey": "story.red_mist.node.alliance.title",
+      "locationKey": "story.red_mist.node.alliance.location",
+      "speakerKey": "story.red_mist.node.alliance.speaker",
+      "maleTextKey": "story.red_mist.node.alliance.male_text",
+      "femaleTextKey": "story.red_mist.node.alliance.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 1,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_establishing"
+      ],
+      "backgroundMediaRef": "red_mist_establishing",
+      "choices": [
+        {
+          "id": "choice.alliance.ally_cautious",
+          "labelKey": "story.red_mist.choice.alliance.ally_cautious.label",
+          "hintKey": "story.red_mist.choice.alliance.ally_cautious.hint",
+          "actionId": "ally_cautious",
+          "nextNodeId": "flight",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.alliance.ally_open",
+          "labelKey": "story.red_mist.choice.alliance.ally_open.label",
+          "hintKey": "story.red_mist.choice.alliance.ally_open.hint",
+          "actionId": "ally_open",
+          "nextNodeId": "flight",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.alliance.ally_refuse",
+          "labelKey": "story.red_mist.choice.alliance.ally_refuse.label",
+          "hintKey": "story.red_mist.choice.alliance.ally_refuse.hint",
+          "actionId": "ally_refuse",
+          "nextNodeId": "flight",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": ["intent.alliance.cautious_cooperation"],
+      "npcResponseRefs": [
+        "npc.response.alliance.cautious_cooperation",
+        "npc.invalid.ally.abuse", "npc.invalid.ally.irrelevant", "npc.invalid.ally.too_long",
+        "npc.invalid.ally.silence", "npc.invalid.ally.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.ally.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.ally.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.ally.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.ally.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.ally.low_confidence" }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "flight",
+      "displayKey": "story.red_mist.node.flight.title",
+      "titleKey": "story.red_mist.node.flight.title",
+      "locationKey": "story.red_mist.node.flight.location",
+      "speakerKey": "story.red_mist.node.flight.speaker",
+      "maleTextKey": "story.red_mist.node.flight.male_text",
+      "femaleTextKey": "story.red_mist.node.flight.female_text",
+      "nodeKind": "Flight",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "flight_sky-v2",
+        "fmv_celestial_flight"
+      ],
+      "backgroundMediaRef": "flight_sky-v2",
+      "introMediaRef": "fmv_celestial_flight",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.flight.flight_perfect",
+          "triggerId": "flight_perfect",
+          "nextNodeId": "herb_route",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.flight.flight_success",
+          "triggerId": "flight_success",
+          "nextNodeId": "herb_route",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.flight.flight_failure",
+          "triggerId": "flight_failure",
+          "nextNodeId": "corpse_signs",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse", "npc.invalid.system.irrelevant", "npc.invalid.system.too_long",
+        "npc.invalid.system.silence", "npc.invalid.system.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.system.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.system.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.system.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.system.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.system.low_confidence" }
+      },
+      "injectionPoints": [
+        "travel_event"
+      ],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "herb_route",
+      "displayKey": "story.red_mist.node.herb_route.title",
+      "titleKey": "story.red_mist.node.herb_route.title",
+      "locationKey": "story.red_mist.node.herb_route.location",
+      "speakerKey": "story.red_mist.node.herb_route.speaker",
+      "maleTextKey": "story.red_mist.node.herb_route.male_text",
+      "femaleTextKey": "story.red_mist.node.herb_route.female_text",
+      "nodeKind": "HerbGathering",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_establishing",
+        "fmv_herb_courtyard"
+      ],
+      "backgroundMediaRef": "red_mist_establishing",
+      "introMediaRef": "fmv_herb_courtyard",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.herb_route.herb_perfect",
+          "triggerId": "herb_perfect",
+          "nextNodeId": "corpse_signs",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.herb_route.herb_success",
+          "triggerId": "herb_success",
+          "nextNodeId": "corpse_signs",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.herb_route.herb_failure",
+          "triggerId": "herb_failure",
+          "nextNodeId": "rescue",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse", "npc.invalid.calm.irrelevant", "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence", "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.calm.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.calm.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.calm.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.calm.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.calm.low_confidence" }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "corpse_signs",
+      "displayKey": "story.red_mist.node.corpse_signs.title",
+      "titleKey": "story.red_mist.node.corpse_signs.title",
+      "locationKey": "story.red_mist.node.corpse_signs.location",
+      "speakerKey": "story.red_mist.node.corpse_signs.speaker",
+      "maleTextKey": "story.red_mist.node.corpse_signs.male_text",
+      "femaleTextKey": "story.red_mist.node.corpse_signs.female_text",
+      "nodeKind": "DivineSense",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_modules"
+      ],
+      "backgroundMediaRef": "red_mist_modules",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.corpse_signs.scan_perfect",
+          "triggerId": "scan_perfect",
+          "nextNodeId": "rescue",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.corpse_signs.scan_success",
+          "triggerId": "scan_success",
+          "nextNodeId": "rescue",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.corpse_signs.scan_failure",
+          "triggerId": "scan_failure",
+          "nextNodeId": "rescue",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse", "npc.invalid.calm.irrelevant", "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence", "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.calm.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.calm.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.calm.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.calm.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.calm.low_confidence" }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rescue",
+      "displayKey": "story.red_mist.node.rescue.title",
+      "titleKey": "story.red_mist.node.rescue.title",
+      "locationKey": "story.red_mist.node.rescue.location",
+      "speakerKey": "story.red_mist.node.rescue.speaker",
+      "maleTextKey": "story.red_mist.node.rescue.male_text",
+      "femaleTextKey": "story.red_mist.node.rescue.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_weather"
+      ],
+      "backgroundMediaRef": "red_mist_weather",
+      "choices": [
+        {
+          "id": "choice.rescue.rescue_careful",
+          "labelKey": "story.red_mist.choice.rescue.rescue_careful.label",
+          "hintKey": "story.red_mist.choice.rescue.rescue_careful.hint",
+          "actionId": "rescue_careful",
+          "nextNodeId": "shijun",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.rescue.rescue_rush",
+          "labelKey": "story.red_mist.choice.rescue.rescue_rush.label",
+          "hintKey": "story.red_mist.choice.rescue.rescue_rush.hint",
+          "actionId": "rescue_rush",
+          "nextNodeId": "shijun",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.rescue.rescue_skip",
+          "labelKey": "story.red_mist.choice.rescue.rescue_skip.label",
+          "hintKey": "story.red_mist.choice.rescue.rescue_skip.hint",
+          "actionId": "rescue_skip",
+          "nextNodeId": "shijun",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": ["intent.rescue.secure_survivor"],
+      "npcResponseRefs": [
+        "npc.response.rescue.secure_survivor",
+        "npc.invalid.ally.abuse", "npc.invalid.ally.irrelevant", "npc.invalid.ally.too_long",
+        "npc.invalid.ally.silence", "npc.invalid.ally.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.ally.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.ally.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.ally.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.ally.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.ally.low_confidence" }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "shijun",
+      "displayKey": "story.red_mist.node.shijun.title",
+      "titleKey": "story.red_mist.node.shijun.title",
+      "locationKey": "story.red_mist.node.shijun.location",
+      "speakerKey": "story.red_mist.node.shijun.speaker",
+      "maleTextKey": "story.red_mist.node.shijun.male_text",
+      "femaleTextKey": "story.red_mist.node.shijun.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_modules",
+        "shi_jun-v1"
+      ],
+      "backgroundMediaRef": "red_mist_modules",
+      "portraitMediaRef": "shi_jun-v1",
+      "choices": [
+        {
+          "id": "choice.shijun.shijun_probe",
+          "labelKey": "story.red_mist.choice.shijun.shijun_probe.label",
+          "hintKey": "story.red_mist.choice.shijun.shijun_probe.hint",
+          "actionId": "shijun_probe",
+          "nextNodeId": "formation",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.shijun.shijun_threat",
+          "labelKey": "story.red_mist.choice.shijun.shijun_threat.label",
+          "hintKey": "story.red_mist.choice.shijun.shijun_threat.hint",
+          "actionId": "shijun_threat",
+          "nextNodeId": "formation",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.shijun.shijun_trade",
+          "labelKey": "story.red_mist.choice.shijun.shijun_trade.label",
+          "hintKey": "story.red_mist.choice.shijun.shijun_trade.hint",
+          "actionId": "shijun_trade",
+          "nextNodeId": "formation",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": ["intent.shijun.verify_bargain"],
+      "npcResponseRefs": [
+        "npc.response.shijun.verify_bargain",
+        "npc.invalid.hostile.abuse", "npc.invalid.hostile.irrelevant", "npc.invalid.hostile.too_long",
+        "npc.invalid.hostile.silence", "npc.invalid.hostile.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.hostile.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.hostile.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.hostile.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.hostile.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.hostile.low_confidence" }
+      },
+      "injectionPoints": [
+        "npc_mention"
+      ],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "formation",
+      "displayKey": "story.red_mist.node.formation.title",
+      "titleKey": "story.red_mist.node.formation.title",
+      "locationKey": "story.red_mist.node.formation.location",
+      "speakerKey": "story.red_mist.node.formation.speaker",
+      "maleTextKey": "story.red_mist.node.formation.male_text",
+      "femaleTextKey": "story.red_mist.node.formation.female_text",
+      "nodeKind": "Formation",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_weather"
+      ],
+      "backgroundMediaRef": "red_mist_weather",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.formation.formation_perfect",
+          "triggerId": "formation_perfect",
+          "nextNodeId": "underground",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.formation.formation_success",
+          "triggerId": "formation_success",
+          "nextNodeId": "underground",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.formation.formation_failure",
+          "triggerId": "formation_failure",
+          "nextNodeId": "combat_one",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.formation.formation_spike_bypass",
+          "triggerId": "formation_spike_bypass",
+          "nextNodeId": "underground",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse", "npc.invalid.system.irrelevant", "npc.invalid.system.too_long",
+        "npc.invalid.system.silence", "npc.invalid.system.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.system.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.system.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.system.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.system.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.system.low_confidence" }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "underground",
+      "displayKey": "story.red_mist.node.underground.title",
+      "titleKey": "story.red_mist.node.underground.title",
+      "locationKey": "story.red_mist.node.underground.location",
+      "speakerKey": "story.red_mist.node.underground.speaker",
+      "maleTextKey": "story.red_mist.node.underground.male_text",
+      "femaleTextKey": "story.red_mist.node.underground.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "dragon_cavern-v2",
+        "fmv_sword_vault"
+      ],
+      "backgroundMediaRef": "dragon_cavern-v2",
+      "introMediaRef": "fmv_sword_vault",
+      "choices": [
+        {
+          "id": "choice.underground.meet_cautious",
+          "labelKey": "story.red_mist.choice.underground.meet_cautious.label",
+          "hintKey": "story.red_mist.choice.underground.meet_cautious.hint",
+          "actionId": "meet_cautious",
+          "nextNodeId": "combat_one",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.underground.meet_warn",
+          "labelKey": "story.red_mist.choice.underground.meet_warn.label",
+          "hintKey": "story.red_mist.choice.underground.meet_warn.hint",
+          "actionId": "meet_warn",
+          "nextNodeId": "combat_one",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.underground.meet_wait",
+          "labelKey": "story.red_mist.choice.underground.meet_wait.label",
+          "hintKey": "story.red_mist.choice.underground.meet_wait.hint",
+          "actionId": "meet_wait",
+          "nextNodeId": "combat_one",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": ["intent.underground.coordinate_retreat"],
+      "npcResponseRefs": [
+        "npc.response.underground.coordinate_retreat",
+        "npc.invalid.encounter.abuse", "npc.invalid.encounter.irrelevant", "npc.invalid.encounter.too_long",
+        "npc.invalid.encounter.silence", "npc.invalid.encounter.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.encounter.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.encounter.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.encounter.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.encounter.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.encounter.low_confidence" }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "combat_one",
+      "displayKey": "story.red_mist.node.combat_one.title",
+      "titleKey": "story.red_mist.node.combat_one.title",
+      "locationKey": "story.red_mist.node.combat_one.location",
+      "speakerKey": "story.red_mist.node.combat_one.speaker",
+      "maleTextKey": "story.red_mist.node.combat_one.male_text",
+      "femaleTextKey": "story.red_mist.node.combat_one.female_text",
+      "nodeKind": "CombatOne",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "dragon_attack-v1"
+      ],
+      "backgroundMediaRef": "dragon_attack-v1",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.combat_one.probe_blades",
+          "triggerId": "probe_blades",
+          "nextNodeId": "combat_two",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_one.ward_tail",
+          "triggerId": "ward_tail",
+          "nextNodeId": "combat_two",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_one.protect_ally",
+          "triggerId": "protect_ally",
+          "nextNodeId": "combat_two",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_one.retreat",
+          "triggerId": "retreat",
+          "nextNodeId": "ending",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_one.moon_control",
+          "triggerId": "moon_control",
+          "nextNodeId": "combat_two",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_one.phoenix_flash",
+          "triggerId": "phoenix_flash",
+          "nextNodeId": "combat_two",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse", "npc.invalid.system.irrelevant", "npc.invalid.system.too_long",
+        "npc.invalid.system.silence", "npc.invalid.system.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.system.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.system.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.system.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.system.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.system.low_confidence" }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "combat_two",
+      "displayKey": "story.red_mist.node.combat_two.title",
+      "titleKey": "story.red_mist.node.combat_two.title",
+      "locationKey": "story.red_mist.node.combat_two.location",
+      "speakerKey": "story.red_mist.node.combat_two.speaker",
+      "maleTextKey": "story.red_mist.node.combat_two.male_text",
+      "femaleTextKey": "story.red_mist.node.combat_two.female_text",
+      "nodeKind": "CombatTwo",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "dragon_attack-v1"
+      ],
+      "backgroundMediaRef": "dragon_attack-v1",
+      "choices": [],
+      "transitions": [
+        {
+          "id": "transition.combat_two.trump_blades",
+          "triggerId": "trump_blades",
+          "nextNodeId": "aftermath",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_two.formation_burst",
+          "triggerId": "formation_burst",
+          "nextNodeId": "aftermath",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_two.joint_strike",
+          "triggerId": "joint_strike",
+          "nextNodeId": "aftermath",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_two.retreat",
+          "triggerId": "retreat",
+          "nextNodeId": "ending",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_two.phoenix_ring",
+          "triggerId": "phoenix_ring",
+          "nextNodeId": "aftermath",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "transition.combat_two.hold_line",
+          "triggerId": "hold_line",
+          "nextNodeId": "aftermath",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.system.abuse", "npc.invalid.system.irrelevant", "npc.invalid.system.too_long",
+        "npc.invalid.system.silence", "npc.invalid.system.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.system.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.system.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.system.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.system.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.system.low_confidence" }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "aftermath",
+      "displayKey": "story.red_mist.node.aftermath.title",
+      "titleKey": "story.red_mist.node.aftermath.title",
+      "locationKey": "story.red_mist.node.aftermath.location",
+      "speakerKey": "story.red_mist.node.aftermath.speaker",
+      "maleTextKey": "story.red_mist.node.aftermath.male_text",
+      "femaleTextKey": "story.red_mist.node.aftermath.female_text",
+      "nodeKind": "Narrative",
+      "estimatedMinutes": 2,
+      "entryConditions": [],
+      "mediaRefs": [
+        "dragon_cavern-v2"
+      ],
+      "backgroundMediaRef": "dragon_cavern-v2",
+      "choices": [
+        {
+          "id": "choice.aftermath.loot_rescue",
+          "labelKey": "story.red_mist.choice.aftermath.loot_rescue.label",
+          "hintKey": "story.red_mist.choice.aftermath.loot_rescue.hint",
+          "actionId": "loot_rescue",
+          "nextNodeId": "ending",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.aftermath.loot_share",
+          "labelKey": "story.red_mist.choice.aftermath.loot_share.label",
+          "hintKey": "story.red_mist.choice.aftermath.loot_share.hint",
+          "actionId": "loot_share",
+          "nextNodeId": "ending",
+          "entryConditions": [],
+          "effects": []
+        },
+        {
+          "id": "choice.aftermath.loot_escape",
+          "labelKey": "story.red_mist.choice.aftermath.loot_escape.label",
+          "hintKey": "story.red_mist.choice.aftermath.loot_escape.hint",
+          "actionId": "loot_escape",
+          "nextNodeId": "ending",
+          "entryConditions": [],
+          "effects": []
+        }
+      ],
+      "transitions": [],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse", "npc.invalid.calm.irrelevant", "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence", "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.calm.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.calm.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.calm.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.calm.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.calm.low_confidence" }
+      },
+      "injectionPoints": [],
+      "terminal": false,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "ending",
+      "displayKey": "story.red_mist.node.ending.title",
+      "titleKey": "story.red_mist.node.ending.title",
+      "locationKey": "story.red_mist.node.ending.location",
+      "speakerKey": "story.red_mist.node.ending.speaker",
+      "maleTextKey": "story.red_mist.node.ending.male_text",
+      "femaleTextKey": "story.red_mist.node.ending.female_text",
+      "nodeKind": "Ending",
+      "estimatedMinutes": 1,
+      "entryConditions": [],
+      "mediaRefs": [
+        "red_mist_establishing"
+      ],
+      "backgroundMediaRef": "red_mist_establishing",
+      "choices": [],
+      "transitions": [],
+      "voiceIntentRefs": [],
+      "npcResponseRefs": [
+        "npc.invalid.calm.abuse", "npc.invalid.calm.irrelevant", "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence", "npc.invalid.calm.low_confidence"
+      ],
+      "invalid_input_rules": {
+        "abuse": { "npcResponseRef": "npc.invalid.calm.abuse" },
+        "irrelevant": { "npcResponseRef": "npc.invalid.calm.irrelevant" },
+        "too_long": { "npcResponseRef": "npc.invalid.calm.too_long" },
+        "silence": { "npcResponseRef": "npc.invalid.calm.silence" },
+        "low_confidence": { "npcResponseRef": "npc.invalid.calm.low_confidence" }
+      },
+      "injectionPoints": [],
+      "terminal": true,
+      "approvalStatus": "approved"
+    }
+  ],
+  "voiceIntents": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "intent.prologue.inspect_mist",
+      "displayKey": "story.red_mist.intent.prologue.inspect_mist.display",
+      "topicKeys": [
+        "story.red_mist.intent.prologue.inspect_mist.topic.observe",
+        "story.red_mist.intent.prologue.inspect_mist.topic.gate",
+        "story.red_mist.intent.prologue.inspect_mist.topic.entrance"
+      ],
+      "toneKey": "story.red_mist.voice.emotion.focused",
+      "minimumConfidence": 0.82,
+      "npcResponseRef": "npc.response.prologue.inspect_mist",
+      "fallbackNpcResponseRef": "npc.invalid.calm.low_confidence",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "intent.alliance.cautious_cooperation",
+      "displayKey": "story.red_mist.intent.alliance.cautious_cooperation.display",
+      "topicKeys": [
+        "story.red_mist.intent.alliance.cautious_cooperation.topic.cooperate",
+        "story.red_mist.intent.alliance.cautious_cooperation.topic.cover",
+        "story.red_mist.intent.alliance.cautious_cooperation.topic.reserve"
+      ],
+      "toneKey": "story.red_mist.voice.emotion.patient",
+      "minimumConfidence": 0.82,
+      "npcResponseRef": "npc.response.alliance.cautious_cooperation",
+      "fallbackNpcResponseRef": "npc.invalid.ally.low_confidence",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "intent.rescue.secure_survivor",
+      "displayKey": "story.red_mist.intent.rescue.secure_survivor.display",
+      "topicKeys": [
+        "story.red_mist.intent.rescue.secure_survivor.topic.verify",
+        "story.red_mist.intent.rescue.secure_survivor.topic.cover",
+        "story.red_mist.intent.rescue.secure_survivor.topic.rescue"
+      ],
+      "toneKey": "story.red_mist.voice.emotion.urgent",
+      "minimumConfidence": 0.82,
+      "npcResponseRef": "npc.response.rescue.secure_survivor",
+      "fallbackNpcResponseRef": "npc.invalid.ally.low_confidence",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "intent.shijun.verify_bargain",
+      "displayKey": "story.red_mist.intent.shijun.verify_bargain.display",
+      "topicKeys": [
+        "story.red_mist.intent.shijun.verify_bargain.topic.proof",
+        "story.red_mist.intent.shijun.verify_bargain.topic.spike",
+        "story.red_mist.intent.shijun.verify_bargain.topic.price"
+      ],
+      "toneKey": "story.red_mist.voice.emotion.uncertain",
+      "minimumConfidence": 0.82,
+      "npcResponseRef": "npc.response.shijun.verify_bargain",
+      "fallbackNpcResponseRef": "npc.invalid.hostile.low_confidence",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "intent.underground.coordinate_retreat",
+      "displayKey": "story.red_mist.intent.underground.coordinate_retreat.display",
+      "topicKeys": [
+        "story.red_mist.intent.underground.coordinate_retreat.topic.retreat",
+        "story.red_mist.intent.underground.coordinate_retreat.topic.flank",
+        "story.red_mist.intent.underground.coordinate_retreat.topic.signal"
+      ],
+      "toneKey": "story.red_mist.voice.emotion.focused",
+      "minimumConfidence": 0.82,
+      "npcResponseRef": "npc.response.underground.coordinate_retreat",
+      "fallbackNpcResponseRef": "npc.invalid.encounter.low_confidence",
+      "effects": [],
+      "approvalStatus": "approved"
+    }
+  ],
+  "npcResponses": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.response.prologue.inspect_mist",
+      "textKey": "story.red_mist.response.prologue.inspect_mist.text",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.response.alliance.cautious_cooperation",
+      "textKey": "story.red_mist.response.alliance.cautious_cooperation.text",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.response.rescue.secure_survivor",
+      "textKey": "story.red_mist.response.rescue.secure_survivor.text",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.response.shijun.verify_bargain",
+      "textKey": "story.red_mist.response.shijun.verify_bargain.text",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.response.underground.coordinate_retreat",
+      "textKey": "story.red_mist.response.underground.coordinate_retreat.text",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.calm.abuse",
+      "textKey": "story.red_mist.voice.calm.abuse",
+      "emotionKey": "story.red_mist.voice.emotion.stern",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.calm.irrelevant",
+      "textKey": "story.red_mist.voice.calm.irrelevant",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.calm.too_long",
+      "textKey": "story.red_mist.voice.calm.too_long",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.calm.silence",
+      "textKey": "story.red_mist.voice.calm.silence",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.calm.low_confidence",
+      "textKey": "story.red_mist.voice.calm.low_confidence",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "red_mist_weather",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.ally.abuse",
+      "textKey": "story.red_mist.voice.ally.abuse",
+      "emotionKey": "story.red_mist.voice.emotion.stern",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.ally.irrelevant",
+      "textKey": "story.red_mist.voice.ally.irrelevant",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.ally.too_long",
+      "textKey": "story.red_mist.voice.ally.too_long",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.ally.silence",
+      "textKey": "story.red_mist.voice.ally.silence",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.ally.low_confidence",
+      "textKey": "story.red_mist.voice.ally.low_confidence",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "red_mist_establishing",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.system.abuse",
+      "textKey": "story.red_mist.voice.system.abuse",
+      "emotionKey": "story.red_mist.voice.emotion.stern",
+      "lipSyncMediaRef": "dragon_attack-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.system.irrelevant",
+      "textKey": "story.red_mist.voice.system.irrelevant",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "dragon_attack-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.system.too_long",
+      "textKey": "story.red_mist.voice.system.too_long",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "dragon_attack-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.system.silence",
+      "textKey": "story.red_mist.voice.system.silence",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "dragon_attack-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.system.low_confidence",
+      "textKey": "story.red_mist.voice.system.low_confidence",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "dragon_attack-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.hostile.abuse",
+      "textKey": "story.red_mist.voice.hostile.abuse",
+      "emotionKey": "story.red_mist.voice.emotion.stern",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.hostile.irrelevant",
+      "textKey": "story.red_mist.voice.hostile.irrelevant",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.hostile.too_long",
+      "textKey": "story.red_mist.voice.hostile.too_long",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.hostile.silence",
+      "textKey": "story.red_mist.voice.hostile.silence",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.hostile.low_confidence",
+      "textKey": "story.red_mist.voice.hostile.low_confidence",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "shi_jun-v1",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.encounter.abuse",
+      "textKey": "story.red_mist.voice.encounter.abuse",
+      "emotionKey": "story.red_mist.voice.emotion.stern",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.encounter.irrelevant",
+      "textKey": "story.red_mist.voice.encounter.irrelevant",
+      "emotionKey": "story.red_mist.voice.emotion.focused",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.encounter.too_long",
+      "textKey": "story.red_mist.voice.encounter.too_long",
+      "emotionKey": "story.red_mist.voice.emotion.urgent",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.encounter.silence",
+      "textKey": "story.red_mist.voice.encounter.silence",
+      "emotionKey": "story.red_mist.voice.emotion.patient",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "npc.invalid.encounter.low_confidence",
+      "textKey": "story.red_mist.voice.encounter.low_confidence",
+      "emotionKey": "story.red_mist.voice.emotion.uncertain",
+      "lipSyncMediaRef": "dragon_cavern-v2",
+      "effects": [],
+      "approvalStatus": "approved"
+    }
+  ],
+  "mediaAssets": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "red_mist_weather",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:2a71d22cb0b81ce9fa6d08d157d00410782ae67bdc1f6f141b7eecd49f2088e4",
+      "uri": "unity-resource:///Art/red_mist_weather.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "red_mist_modules",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:d8a9c8baac654bf39c9b32b16c79a93135232393a768bfc14d33966448d4a1f6",
+      "uri": "unity-resource:///Art/red_mist_modules.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "red_mist_establishing",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:52e52dfb04e6758f3f8d9629c4b8e50db4ac4a214447e24f13262f1809c08131",
+      "uri": "unity-resource:///Art/red_mist_establishing.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "flight_sky-v2",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:a0f9a817adc0fbc64baee43e9c210a1553c310aabe80964db156713c482201a2",
+      "uri": "unity-resource:///Art/flight_sky-v2.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "dragon_cavern-v2",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:059ec1a3db22e99f65bd4a977a9378901b18deded1d12b69781de62033667895",
+      "uri": "unity-resource:///Art/dragon_cavern-v2.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "dragon_attack-v1",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:2ef71e2847f00c54ab9f508e6497955c4a2924faef6e2da96f7da2231c67949b",
+      "uri": "unity-resource:///Art/dragon_attack-v1.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "shi_jun-v1",
+      "assetVersion": "1",
+      "mediaType": "image",
+      "contentHash": "sha256:06751100f14462ba0166c1a896ff11836bf91809eff617a822224e25832b6fab",
+      "uri": "unity-resource:///Art/shi_jun-v1.png",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fmv_gate_arrival",
+      "assetVersion": "1",
+      "mediaType": "video",
+      "contentHash": "sha256:757915a75443e5d490415392f952c77657498ae2b4c7d3eb6ff93ff8abc4a7d5",
+      "uri": "streaming-assets:///Media/fmv_gate_arrival.mp4",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fmv_celestial_flight",
+      "assetVersion": "1",
+      "mediaType": "video",
+      "contentHash": "sha256:75efb1c2dc7e79877a485d5ec7111de3008a252f737d3dd1b27b9a6231e2de21",
+      "uri": "streaming-assets:///Media/fmv_celestial_flight.mp4",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fmv_herb_courtyard",
+      "assetVersion": "1",
+      "mediaType": "video",
+      "contentHash": "sha256:75d156438fa91f4a35f02ac0370253079f87484e2e73b0454cc1b7ce58f02553",
+      "uri": "streaming-assets:///Media/fmv_herb_courtyard.mp4",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fmv_sword_vault",
+      "assetVersion": "1",
+      "mediaType": "video",
+      "contentHash": "sha256:e8309c400513ea613b42752315a7da7f1819c3a546101ab408cde5598ffdbad2",
+      "uri": "streaming-assets:///Media/fmv_sword_vault.mp4",
+      "language": null,
+      "dependencyRefs": [],
+      "approvalStatus": "approved"
+    }
+  ]
+}

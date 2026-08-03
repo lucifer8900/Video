@@ -1,0 +1,1610 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentId": "lmye.combat-progression.taxonomy.v1",
+  "repository": "https://github.com/lucifer8900/Video.git",
+  "purpose": "为 lucifer8900/Video 的《灵脉余烬》AI真人影视互动游戏提供战斗、成长和资产分类数据；不作为脱离项目的百科。",
+  "status": "draft-needs-rights-and-content-review",
+  "namingLayer": "ADAPTATION-NAME; runtime IDs and display names are project production aliases, not source chapter names",
+  "source": {
+    "internalMapping": "content/originalization/source-to-game-name-map.json",
+    "encoding": "GB18030",
+    "storageRule": "仅保存结构化摘要与章节检索锚点，不复制长段正文。"
+  },
+  "provenanceLabels": [
+    {
+      "id": "CANON",
+      "meaning": "内部研究源直接支持的功能或分类；当前显示名称属于ADAPTATION-NAME。"
+    },
+    {
+      "id": "ADAPTATION-BRIDGE",
+      "meaning": "为互动、双主线或影视节点添加的结构化桥接，不改写关键事实。"
+    },
+    {
+      "id": "GAME-ORIGINAL",
+      "meaning": "为Unity运行、量表、平衡或原创事件添加的规则。"
+    }
+  ],
+  "enums": {
+    "realmIds": [
+      "qi_refining",
+      "foundation",
+      "core_formation",
+      "nascent_soul",
+      "deity_transformation",
+      "spatial_tempering",
+      "body_integration",
+      "mahayana",
+      "tribulation"
+    ],
+    "standardRealmStages": [
+      "early",
+      "middle",
+      "late",
+      "peak"
+    ],
+    "techniqueCategories": [
+      "primary_cultivation",
+      "auxiliary_cultivation",
+      "divine_sense",
+      "body_refinement",
+      "profession_inheritance"
+    ],
+    "abilityCategories": [
+      "basic_spell",
+      "support_spell",
+      "escape_art",
+      "secret_art",
+      "divine_ability",
+      "formation_ability"
+    ],
+    "assetCategories": [
+      "magic_implement",
+      "talisman_treasure",
+      "magic_treasure",
+      "life_bound_treasure",
+      "ancient_treasure",
+      "imitated_spirit_treasure",
+      "heaven_reaching_spirit_treasure",
+      "profound_heaven_treasure",
+      "unknown_special_object",
+      "talisman",
+      "formation_set",
+      "puppet",
+      "pill",
+      "spirit_medicine",
+      "wearable_or_tool"
+    ],
+    "companionKinds": [
+      "spirit_beast",
+      "spirit_insect_swarm",
+      "artifact_spirit",
+      "puppet_construct"
+    ],
+    "injuryKinds": [
+      "physical",
+      "meridian",
+      "mana_depletion",
+      "vital_essence",
+      "divine_sense",
+      "soul",
+      "life_bound_backlash",
+      "poison_curse_bane",
+      "heart_demon_mark"
+    ]
+  },
+  "realms": [
+    {
+      "id": "qi_refining",
+      "name": "炼气",
+      "majorBand": "下境界",
+      "stageModel": {
+        "type": "integer_layers",
+        "minimum": 1,
+        "maximum": 13
+      },
+      "gamePermissions": [
+        "基础法术",
+        "法器",
+        "符箓",
+        "低阶阵具"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一百二十七章（内部研究章节）；第一百七十三章（内部研究章节）关键词见内部研究档"
+    },
+    {
+      "id": "foundation",
+      "name": "筑基",
+      "majorBand": "下境界",
+      "stageModel": {
+        "type": "named_stages",
+        "values": [
+          "early",
+          "middle",
+          "late",
+          "peak"
+        ],
+        "peakAlias": "假丹"
+      },
+      "entryExamples": [
+        "固脉丹",
+        "闭关冲关",
+        "资质与运气"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一百二十七章（内部研究章节）；第二百一十三章（内部研究章节）；第三百七十六章（内部研究章节）"
+    },
+    {
+      "id": "core_formation",
+      "name": "结丹",
+      "majorBand": "下境界",
+      "stageModel": {
+        "type": "named_stages",
+        "values": [
+          "early",
+          "middle",
+          "late",
+          "peak"
+        ]
+      },
+      "gamePermissions": [
+        "丹火",
+        "法宝祭炼",
+        "本命法宝培炼"
+      ],
+      "entryExamples": [
+        "霜魄水",
+        "炎髓液",
+        "三轮归元功路线"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第二百四十一章（内部研究章节）；第三百七十六章（内部研究章节）；第四百一十五章（内部研究章节）"
+    },
+    {
+      "id": "nascent_soul",
+      "name": "元婴",
+      "majorBand": "下境界",
+      "stageModel": {
+        "type": "named_stages",
+        "values": [
+          "early",
+          "middle",
+          "late",
+          "peak"
+        ]
+      },
+      "entryExamples": [
+        "九旋参元丹路线",
+        "心境与神魂准备"
+      ],
+      "specialRisks": [
+        "元婴受损",
+        "夺舍",
+        "七曜灵陆小天劫"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第四百三十三章（内部研究章节）；第六百零五章（内部研究章节）；第一千二百一十九章（内部研究章节）"
+    },
+    {
+      "id": "deity_transformation",
+      "name": "化神",
+      "majorBand": "下境界",
+      "stageModel": {
+        "type": "named_stages",
+        "values": [
+          "early",
+          "middle",
+          "late",
+          "peak"
+        ]
+      },
+      "specialRules": [
+        "尘寰界天地元气限制",
+        "七曜灵陆小天劫",
+        "为炼虚五行合一准备"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一百二十七章（内部研究章节）；第一千二百一十九章（内部研究章节）"
+    },
+    {
+      "id": "spatial_tempering",
+      "name": "炼虚",
+      "majorBand": "中境界",
+      "stageModel": {
+        "type": "named_stages",
+        "values": [
+          "early",
+          "middle",
+          "late"
+        ]
+      },
+      "entryExamples": [
+        "五行合一",
+        "多属性功法",
+        "丹灵根或器灵根的有条件补足"
+      ],
+      "specialRisks": [
+        "大天劫"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一千二百一十九章（内部研究章节）"
+    },
+    {
+      "id": "body_integration",
+      "name": "合体",
+      "majorBand": "中境界",
+      "stageModel": {
+        "type": "named_stages",
+        "values": [
+          "early",
+          "middle",
+          "late",
+          "peak"
+        ]
+      },
+      "specialRisks": [
+        "大天劫"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一千二百九十六章（内部研究章节）；第一千三百一十八章（内部研究章节）"
+    },
+    {
+      "id": "mahayana",
+      "name": "大乘",
+      "majorBand": "中境界",
+      "stageModel": {
+        "type": "named_stages",
+        "values": [
+          "early",
+          "middle",
+          "late"
+        ],
+        "note": "正文明确使用大乘初期、后期并提到再进层级；中期作为连续层级桥接需人工逐角色复核。"
+      },
+      "specialRisks": [
+        "大天劫",
+        "法则接触"
+      ],
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第一千五百一十八章（内部研究章节）；第一千三百二十七章（内部研究章节）"
+    },
+    {
+      "id": "tribulation",
+      "name": "渡劫",
+      "majorBand": "上境界",
+      "stageModel": {
+        "type": "gateway",
+        "values": [
+          "preparation",
+          "active_tribulation",
+          "resolved"
+        ]
+      },
+      "gameRule": "飞升关口，不可作为可重复刷取的普通等级。",
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第一百二十七章（内部研究章节）；第一千二百一十九章（内部研究章节）"
+    }
+  ],
+  "lifespanAndTribulations": {
+    "lifespanBands": [
+      {
+        "realmId": "mortal",
+        "estimate": "超过百岁已属少见"
+      },
+      {
+        "realmId": "foundation",
+        "estimate": "二百余年量级"
+      },
+      {
+        "realmId": "core_formation",
+        "estimate": "四五百年量级"
+      },
+      {
+        "realmId": "nascent_soul",
+        "estimate": "千年量级"
+      }
+    ],
+    "lifespanRule": "以上为正文概述的量级，不是每名角色的固定死亡日；伤势、功法与个体差异另计。",
+    "tribulations": [
+      {
+        "id": "minor_heavenly_tribulation",
+        "eligibleRealms": [
+          "nascent_soul",
+          "deity_transformation"
+        ],
+        "intervalYearsApproximate": 300,
+        "world": "七曜灵陆",
+        "escalatesOnRepetition": true
+      },
+      {
+        "id": "major_heavenly_tribulation",
+        "eligibleRealms": [
+          "spatial_tempering",
+          "body_integration",
+          "mahayana"
+        ],
+        "intervalYearsApproximate": 3000,
+        "world": "七曜灵陆",
+        "escalatesOnRepetition": true
+      },
+      {
+        "id": "immortal_ascension_tribulation",
+        "eligibleRealms": [
+          "tribulation"
+        ],
+        "intervalYearsApproximate": null,
+        "world": "飞升关口",
+        "escalatesOnRepetition": false
+      }
+    ],
+    "provenance": "CANON+ADAPTATION-BRIDGE",
+    "sourceAnchor": "第一百二十七章（内部研究章节）；第一千二百一十九章（内部研究章节）"
+  },
+  "spiritualRoots": [
+    {
+      "id": "five_element_root",
+      "name": "五行灵根属性",
+      "elements": [
+        "metal",
+        "wood",
+        "water",
+        "fire",
+        "earth"
+      ],
+      "provenance": "CANON"
+    },
+    {
+      "id": "false_root",
+      "name": "伪灵根",
+      "composition": "四或五种五行属性",
+      "effects": [
+        "修炼通常较慢",
+        "资源和时间成本高"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一百二十七章（内部研究章节）"
+    },
+    {
+      "id": "true_root",
+      "name": "真灵根",
+      "composition": "两或三种五行属性",
+      "effects": [
+        "修炼通常较快"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一百二十七章（内部研究章节）"
+    },
+    {
+      "id": "heavenly_root",
+      "name": "天灵根/天根",
+      "composition": "单一属性",
+      "effects": [
+        "修炼速度显著较快",
+        "免去通常的结丹瓶颈"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一百二十七章（内部研究章节）"
+    },
+    {
+      "id": "mutated_root",
+      "name": "变异灵根",
+      "composition": "两三种五行属性异变升华",
+      "examples": [
+        "雷灵根",
+        "冰灵根",
+        "暗灵根",
+        "风灵根"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一百二十七章（内部研究章节）"
+    },
+    {
+      "id": "pill_root",
+      "name": "丹灵根",
+      "availability": "七曜灵陆、已有灵根修士、有条件炼化",
+      "effects": [
+        "以特制妖丹补足缺失属性",
+        "效果弱于真正灵根"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一千二百一十九章（内部研究章节）"
+    },
+    {
+      "id": "artifact_root",
+      "name": "器灵根",
+      "availability": "七曜灵陆罕用",
+      "effects": [
+        "以器物替代部分灵根效用",
+        "耗时且危险"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一千二百一十九章（内部研究章节）"
+    }
+  ],
+  "attributes": [
+    {
+      "id": "realmRank",
+      "name": "境界权限",
+      "storage": "enum+integer",
+      "visibility": "known_or_estimated",
+      "gameRule": "先于局部战斗数值比较，跨大境界通常形成压制。",
+      "provenance": "CANON+GAME-ORIGINAL"
+    },
+    {
+      "id": "cultivationAccumulation",
+      "name": "阶段修为沉淀",
+      "storage": "0_to_100_within_stage",
+      "visibility": "player_exact_npc_estimated",
+      "gameRule": "满值只表示可准备突破，不保证成功。",
+      "provenance": "ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "ageAndLifespan",
+      "name": "年龄与寿元",
+      "storage": "world_days_and_estimate_band",
+      "visibility": "banded",
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "mana",
+      "name": "法力",
+      "storage": "current_maximum_purity_recovery",
+      "visibility": "player_exact_npc_hidden",
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "divineSense",
+      "name": "神识/神念",
+      "storage": "range_precision_capacity_stability",
+      "visibility": "partly_hidden",
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "body",
+      "name": "肉身",
+      "storage": "strength_toughness_recovery_meridian_load",
+      "visibility": "partly_hidden",
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "vitalEssence",
+      "name": "元气/精血",
+      "storage": "current_maximum_recovery_days_lifespan_damage",
+      "visibility": "player_exact",
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "soulIntegrity",
+      "name": "神魂完整度",
+      "storage": "current_maximum_wound_tags",
+      "visibility": "player_banded",
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "movement",
+      "name": "遁速与机动",
+      "storage": "sustained_burst_turning_escape_tags",
+      "visibility": "estimated",
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "heartState",
+      "name": "心境稳定与心魔",
+      "storage": "stability_obsessions_unsettled_debts_demon_marks",
+      "visibility": "narrative_banded",
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "controlLoad",
+      "name": "神识控制负荷",
+      "storage": "current_capacity",
+      "visibility": "player_exact",
+      "gameRule": "同时操控飞剑、傀儡、虫群和远距侦察会占用容量。",
+      "provenance": "ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "exposureLedger",
+      "name": "底牌暴露记录",
+      "storage": "observer_knowledge_tags",
+      "visibility": "partly_hidden",
+      "provenance": "ADAPTATION-BRIDGE"
+    }
+  ],
+  "damageVectors": [
+    "physical",
+    "metal",
+    "wood",
+    "water",
+    "fire",
+    "earth",
+    "lightning",
+    "cold",
+    "poison",
+    "corpse_or_demonic_bane",
+    "soul",
+    "illusion_or_mind",
+    "space",
+    "law"
+  ],
+  "resistanceRule": {
+    "formulaDescription": "抗性由肉身/种族基底、功法状态、装备护罩、丹药符箓、环境、伤势和克制动态合成，不保存为永久装备词条总和。",
+    "provenance": "ADAPTATION-BRIDGE"
+  },
+  "injuryTypes": [
+    {
+      "id": "physical",
+      "effects": [
+        "姿态受限",
+        "移动下降",
+        "持续出血或器官风险"
+      ]
+    },
+    {
+      "id": "meridian",
+      "effects": [
+        "法力流转下降",
+        "强行施法可能恶化"
+      ]
+    },
+    {
+      "id": "mana_depletion",
+      "effects": [
+        "护体和飞遁选项关闭",
+        "不是永久伤势"
+      ],
+      "sourceAnchor": "第一百七十九章（内部研究章节）"
+    },
+    {
+      "id": "vital_essence",
+      "effects": [
+        "长期恢复",
+        "可能损寿元",
+        "爆发秘术受限"
+      ]
+    },
+    {
+      "id": "divine_sense",
+      "effects": [
+        "侦察范围下降",
+        "控制容量下降",
+        "严重时癫狂或心魔反噬"
+      ],
+      "sourceAnchor": "第三百七十三章（内部研究章节）"
+    },
+    {
+      "id": "soul",
+      "effects": [
+        "夺舍抵抗下降",
+        "分神和器灵相关风险增加"
+      ]
+    },
+    {
+      "id": "life_bound_backlash",
+      "effects": [
+        "本命法宝受损反馈主人"
+      ],
+      "sourceAnchor": "第四百八十九章（内部研究章节）"
+    },
+    {
+      "id": "poison_curse_bane",
+      "effects": [
+        "需要对应解法",
+        "通用恢复丹不能自动清除"
+      ]
+    },
+    {
+      "id": "heart_demon_mark",
+      "effects": [
+        "突破风险增加",
+        "需要心境或剧情解决"
+      ],
+      "sourceAnchor": "第四百一十二章（内部研究章节）；第两千一百八十二章（内部研究章节）"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "lmye.technique.001",
+      "name": "常青养元功",
+      "category": "primary_cultivation",
+      "affinities": [
+        "wood"
+      ],
+      "roles": [
+        "早期修仙入门",
+        "法力生成",
+        "沈砚玄刃门阶段核心"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第三十章（内部研究章节）；第一百三十七章（内部研究章节）"
+    },
+    {
+      "id": "lmye.technique.002",
+      "name": "苍元剑典",
+      "category": "primary_cultivation",
+      "affinities": [
+        "wood",
+        "sword"
+      ],
+      "roles": [
+        "苍元剑芒",
+        "碧竹流云剑兼容",
+        "剑阵前置"
+      ],
+      "acquisition": "师父抄本与玄金残页完整传承",
+      "provenance": "CANON",
+      "sourceAnchor": "第二百一十三章（内部研究章节）；第二百四十一章（内部研究章节）"
+    },
+    {
+      "id": "lmye.technique.003",
+      "name": "三轮归元功",
+      "category": "auxiliary_cultivation",
+      "requirements": [
+        "苍元剑典",
+        "到达指定功法层级",
+        "接受散功重修与寿元时间成本"
+      ],
+      "effects": [
+        "压缩真元",
+        "提高法力纯度",
+        "提高结丹机会但非必成"
+      ],
+      "risks": [
+        "多次散功重修",
+        "时间可能超过寿元窗口"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第二百四十一章（内部研究章节）"
+    },
+    {
+      "id": "lmye.technique.004",
+      "name": "太衍神念诀",
+      "category": "divine_sense",
+      "effects": [
+        "提高神识",
+        "提高傀儡与多目标控制能力"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第二百三十章（内部研究章节）；第二百九十一章（内部研究章节）"
+    },
+    {
+      "id": "lmye.technique.005",
+      "name": "玄女返生经",
+      "category": "primary_cultivation",
+      "ownerArchetype": "楚明绮",
+      "effects": [
+        "容颜保持",
+        "周期性法力轮回",
+        "轮回状态影响外观与当前可调用力量"
+      ],
+      "stateModel": "真实境界、轮回阶段、当前法力与身份暴露分别保存",
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第二百零八章（内部研究章节）"
+    },
+    {
+      "id": "lmye.technique.006",
+      "name": "不动明身诀",
+      "category": "body_refinement",
+      "effects": [
+        "肉身强化",
+        "高层修炼痛苦与门槛"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第九百一十五章（内部研究章节）；第一千二百零二章（内部研究章节）"
+    },
+    {
+      "id": "lmye.technique.007",
+      "name": "梵魔铸圣功",
+      "category": "body_refinement",
+      "effects": [
+        "法体双修",
+        "高阶肉身与法力协同"
+      ],
+      "costs": [
+        "修炼时间长",
+        "资源路线复杂"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一千三百二十四章（内部研究章节）；第一千三百五十一章（内部研究章节）"
+    }
+  ],
+  "abilities": [
+    {
+      "id": "lmye.ability.001",
+      "name": "藏息术",
+      "category": "support_spell",
+      "counterRelation": "可对抗天眼术；不等于对所有高阶神识绝对隐身。",
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第一百六十一章（内部研究章节）"
+    },
+    {
+      "id": "lmye.ability.002",
+      "name": "镇秽玄雷",
+      "category": "divine_ability",
+      "carrierRequirement": "玄雷竹炼制的碧竹流云剑等正文载体",
+      "gameRule": "不是脱离载体的通用雷属性技能。",
+      "provenance": "CANON",
+      "sourceAnchor": "第四百二十四章（内部研究章节）；第四百二十六章（内部研究章节）"
+    },
+    {
+      "id": "lmye.ability.003",
+      "name": "赤影遁法",
+      "category": "escape_art",
+      "costModel": "高爆发逃生并伴随长期代价；逐次内容复核",
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第六百零五章（内部研究章节）"
+    },
+    {
+      "id": "lmye.ability.004",
+      "name": "霆行遁术",
+      "category": "escape_art",
+      "carrierRequirement": "霆风翼与可用雷力",
+      "provenance": "CANON",
+      "sourceAnchor": "第五百四十五章（内部研究章节）；第五百五十三章（内部研究章节）"
+    },
+    {
+      "id": "lmye.ability.005",
+      "name": "太庚裂剑阵",
+      "category": "formation_ability",
+      "requirements": [
+        "苍元剑典相应层级",
+        "成套碧竹流云剑",
+        "足够法力与神识控制"
+      ],
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第六百四十六章（内部研究章节）；第七百八十八章（内部研究章节）"
+    }
+  ],
+  "assetTaxonomy": [
+    {
+      "id": "magic_implement",
+      "name": "法器",
+      "subGrades": [
+        "lower",
+        "middle",
+        "upper",
+        "top"
+      ],
+      "rules": [
+        "常见于炼气和筑基",
+        "可单件或成套",
+        "控制仍消耗法力与神识"
+      ],
+      "examples": [
+        "金蜉连环刃",
+        "青凝镜"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一百六十三章（内部研究章节）；第七百一十八章（内部研究章节）"
+    },
+    {
+      "id": "talisman_treasure",
+      "name": "符宝",
+      "rules": [
+        "封存法宝部分威能",
+        "有灵力或次数限制"
+      ],
+      "examples": [
+        "灵锋符宝",
+        "镇岳塔符宝"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一百四十三章（内部研究章节）；第二百四十五章（内部研究章节）"
+    },
+    {
+      "id": "magic_treasure",
+      "name": "法宝",
+      "rules": [
+        "结丹阶段核心",
+        "可祭炼、收入体内并长期培炼"
+      ],
+      "examples": [
+        "赤鸾焰环",
+        "碧竹流云剑"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第二百零五章（内部研究章节）；第四百一十五章（内部研究章节）"
+    },
+    {
+      "id": "life_bound_treasure",
+      "name": "本命法宝",
+      "rules": [
+        "与主人心神联系深",
+        "持续培炼成长",
+        "受损可能反噬主人"
+      ],
+      "examples": [
+        "七十二口碧竹流云剑"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第四百一十五章（内部研究章节）；第四百八十九章（内部研究章节）"
+    },
+    {
+      "id": "ancient_treasure",
+      "name": "遗宝/太古遗宝",
+      "rules": [
+        "古修士法宝",
+        "神通往往单一而威力大",
+        "通常不能收入体内，只能携带"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第四百一十九章（内部研究章节）"
+    },
+    {
+      "id": "imitated_spirit_treasure",
+      "name": "摹制灵宝",
+      "rules": [
+        "模仿灵宝能力",
+        "威能与门槛低于正体",
+        "每件仿制质量单独定义"
+      ],
+      "examples": [
+        "七曜炎扇仿制体系"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一千四十九章（内部研究章节）；第一千一百章（内部研究章节）"
+    },
+    {
+      "id": "heaven_reaching_spirit_treasure",
+      "name": "贯界灵宝",
+      "rules": [
+        "需对应御天宝诀或专门驱动条件",
+        "可封印体内慢慢培炼",
+        "七曜灵陆太初万灵录语境需逐件校验"
+      ],
+      "examples": [
+        "空冥天鼎"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第六百四十一章（内部研究章节）；第八百七十二章（内部研究章节）"
+    },
+    {
+      "id": "profound_heaven_treasure",
+      "name": "太玄界宝",
+      "rules": [
+        "触及天地法则",
+        "不是普通炼器随机产物",
+        "全局唯一性需锁定"
+      ],
+      "examples": [
+        "玄穹断灵剑"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第一千二百五十二章（内部研究章节）；第一千三百二十八章（内部研究章节）"
+    },
+    {
+      "id": "unknown_special_object",
+      "name": "未明特殊物",
+      "rules": [
+        "身份揭示前保持未知",
+        "UI不提前剧透分类",
+        "能力逐阶段解锁"
+      ],
+      "examples": [
+        "翠纹灵瓶的早期状态"
+      ],
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第十章（内部研究章节）；第二十五章（内部研究章节）；第二十六章（内部研究章节）"
+    }
+  ],
+  "assetDefinitions": [
+    {
+      "id": "lmye.artifact.001",
+      "name": "金蜉连环刃",
+      "category": "magic_implement",
+      "subGrade": "top",
+      "configuration": {
+        "motherBladeCount": 1,
+        "childBladeCount": 8
+      },
+      "combatHooks": [
+        "成套控制",
+        "多目标压力",
+        "占用神识控制负荷"
+      ],
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第一百六十三章（内部研究章节）"
+    },
+    {
+      "id": "lmye.artifact.002",
+      "name": "赤鸾焰环",
+      "category": "magic_treasure",
+      "ownerArchetype": "楚明绮",
+      "combatHooks": [
+        "火焰范围控制",
+        "与主人心神相连",
+        "暴露真实身份和修为风险"
+      ],
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第二百零五章（内部研究章节）"
+    },
+    {
+      "id": "lmye.artifact.003",
+      "name": "碧竹流云剑",
+      "category": "life_bound_treasure",
+      "configuration": {
+        "canonicalSetCounts": [
+          12,
+          36,
+          72
+        ],
+        "hanLiSetCount": 72
+      },
+      "requirements": [
+        "结丹期炼制",
+        "木属性材料",
+        "苍元剑典兼容",
+        "长期培炼"
+      ],
+      "combatHooks": [
+        "成套飞剑",
+        "镇秽玄雷载体",
+        "剑阵前置",
+        "受损反噬"
+      ],
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第二百四十一章（内部研究章节）；第四百一十五章（内部研究章节）"
+    },
+    {
+      "id": "lmye.artifact.004",
+      "name": "霆风翼",
+      "category": "magic_treasure",
+      "combatHooks": [
+        "雷遁",
+        "爆发机动",
+        "需要可用风雷力量"
+      ],
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第五百四十五章（内部研究章节）；第五百五十三章（内部研究章节）"
+    },
+    {
+      "id": "lmye.artifact.005",
+      "name": "空冥天鼎",
+      "category": "heaven_reaching_spirit_treasure",
+      "requirements": [
+        "炼化玄澜冰焰等专门条件",
+        "对应御天宝诀",
+        "长期培炼"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第六百四十一章（内部研究章节）；第八百七十二章（内部研究章节）"
+    },
+    {
+      "id": "lmye.artifact.006",
+      "name": "玄穹断灵剑",
+      "category": "profound_heaven_treasure",
+      "globalUniqueness": "locked",
+      "combatHooks": [
+        "法则层级",
+        "世界势力追索",
+        "不可随机复制"
+      ],
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第一千三百二十八章（内部研究章节）；第一千三百五十九章（内部研究章节）"
+    },
+    {
+      "id": "lmye.artifact.007",
+      "name": "翠纹灵瓶（初识）",
+      "category": "unknown_special_object",
+      "globalUniqueness": "locked",
+      "knownCapabilities": [
+        "凝聚绿液",
+        "催熟植物"
+      ],
+      "forbiddenCapabilities": [
+        "直接生成丹药",
+        "补齐丹方",
+        "保证炼丹成功",
+        "无风险公开使用"
+      ],
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第十章（内部研究章节）；第二十五章（内部研究章节）；第二十六章（内部研究章节）"
+    }
+  ],
+  "supportAssets": {
+    "talismans": [
+      {
+        "id": "lmye.talisman.001",
+        "name": "地行符",
+        "role": "撤退或穿地",
+        "sourceAnchor": "第二百零六章（内部研究章节）"
+      },
+      {
+        "id": "lmye.talisman.002",
+        "name": "太清匿形符",
+        "role": "高阶隐匿",
+        "sourceAnchor": "第一千三百零六章（内部研究章节）"
+      },
+      {
+        "id": "lmye.talisman.003",
+        "name": "六甲玄罡符",
+        "role": "借环境天地灵气形成可复原多层护罩",
+        "sourceAnchor": "第九百六十三章（内部研究章节）"
+      },
+      {
+        "id": "lmye.talisman.004",
+        "name": "附灵符",
+        "role": "宗门密符传承",
+        "requirements": [
+          "炼制口诀",
+          "高阶妖兽精魄等稀有材料"
+        ],
+        "sourceAnchor": "第五百九十一章（内部研究章节）"
+      }
+    ],
+    "formations": [
+      {
+        "id": "lmye.formation.001",
+        "name": "逆转五元阵",
+        "roles": [
+          "隐匿",
+          "防护",
+          "区域控制"
+        ],
+        "sourceAnchor": "第二百二十六章（内部研究章节）"
+      },
+      {
+        "id": "lmye.formation.002",
+        "name": "五元乱迹阵",
+        "roles": [
+          "困敌",
+          "隐藏"
+        ],
+        "sourceAnchor": "第六百零九章（内部研究章节）"
+      },
+      {
+        "id": "lmye.formation.003",
+        "name": "微尘须弥刚阵",
+        "roles": [
+          "佛宗高阶禁制",
+          "区域封锁"
+        ],
+        "sourceAnchor": "第八百二十六章（内部研究章节）；第八百二十七章（内部研究章节）"
+      }
+    ],
+    "puppets": [
+      {
+        "id": "lmye.puppet.001",
+        "name": "二阶机傀兽",
+        "rules": [
+          "独立机关术分级",
+          "消耗供能与神识控制"
+        ],
+        "sourceAnchor": "第二百二十四章（内部研究章节）"
+      },
+      {
+        "id": "lmye.puppet.002",
+        "name": "上阶人形机傀",
+        "rules": [
+          "专门材料和炼制",
+          "可维修但不能自动复活"
+        ],
+        "sourceAnchor": "第九百六十八章（内部研究章节）"
+      }
+    ],
+    "pillsAndMedicines": [
+      {
+        "id": "lmye.medicine.001",
+        "name": "固脉丹",
+        "use": "筑基冲关辅助",
+        "rule": "提高机会但不保证成功",
+        "sourceAnchor": "第一百二十七章（内部研究章节）；第二百一十三章（内部研究章节）"
+      },
+      {
+        "id": "lmye.medicine.002",
+        "name": "霜魄水",
+        "use": "结丹准备辅材",
+        "sourceAnchor": "第三百七十六章（内部研究章节）"
+      },
+      {
+        "id": "lmye.medicine.003",
+        "name": "炎髓液",
+        "use": "结丹准备辅材",
+        "sourceAnchor": "第三百七十六章（内部研究章节）"
+      },
+      {
+        "id": "lmye.medicine.004",
+        "name": "九旋参元丹路线",
+        "use": "辅助凝结元婴",
+        "rule": "需要九旋灵参、引灵草、赤晶角等稀缺材料；炼丹失败会真实损失。",
+        "sourceAnchor": "第四百三十三章（内部研究章节）；第六百零五章（内部研究章节）"
+      },
+      {
+        "id": "lmye.medicine.005",
+        "name": "驻容丹",
+        "use": "功能性丹药，不直接提高战斗力",
+        "sourceAnchor": "第一百五十五章（内部研究章节）"
+      },
+      {
+        "id": "lmye.medicine.006",
+        "name": "霞衣草",
+        "use": "海兽引诱与专门计划素材",
+        "sourceAnchor": "第三百九十五章（内部研究章节）"
+      },
+      {
+        "id": "lmye.medicine.007",
+        "name": "九旋灵参",
+        "use": "高灵性稀有灵草与凝婴丹路线",
+        "sourceAnchor": "第四百三十三章（内部研究章节）"
+      }
+    ],
+    "wearablesAndTools": [
+      {
+        "id": "lmye.tool.001",
+        "name": "初阶纳物囊",
+        "rule": "没有认主保护，失窃后内容可被夺取。",
+        "sourceAnchor": "第一百四十八章（内部研究章节）"
+      },
+      {
+        "id": "lmye.tool.002",
+        "name": "驭兽囊",
+        "rule": "携带灵兽/灵虫的专门容器；容量与生存环境逐物种定义。"
+      },
+      {
+        "id": "lmye.tool.003",
+        "name": "易容面甲／匿身份衣",
+        "rule": "提供社会与侦察功能，不作为固定装备套装部位。",
+        "provenance": "CANON+ADAPTATION-BRIDGE"
+      }
+    ]
+  },
+  "companions": [
+    {
+      "id": "lmye.companion.001",
+      "name": "摄魄兽",
+      "kind": "spirit_beast",
+      "fixedTraits": [
+        "介于灵兽与妖魂之间",
+        "吸魂啖鬼",
+        "对魂鬼具有强克制"
+      ],
+      "growthModel": "物种阶段、精元和剧情进化，不随机洗技能",
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第四百三十七章（内部研究章节）"
+    },
+    {
+      "id": "lmye.companion.002",
+      "name": "蚀金甲群",
+      "kind": "spirit_insect_swarm",
+      "fixedTraits": [
+        "群聚",
+        "吞噬五金与天地灵气",
+        "水火不浸",
+        "受玉木和蛛类等克制关系影响"
+      ],
+      "growthModel": "虫群数量、成熟阶段、饲育时间和操控负荷",
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第三百八十七章（内部研究章节）"
+    },
+    {
+      "id": "lmye.companion.003",
+      "name": "血晶蛛群",
+      "kind": "spirit_insect_swarm",
+      "fixedTraits": [
+        "奇虫榜物种",
+        "可守卫洞府和参与专门任务"
+      ],
+      "provenance": "CANON",
+      "sourceAnchor": "第三百四十五章（内部研究章节）；第三百八十五章（内部研究章节）"
+    },
+    {
+      "id": "lmye.companion.004",
+      "name": "六翎寒蜈",
+      "kind": "spirit_insect_swarm",
+      "fixedTraits": [
+        "随翅翼和等阶进化",
+        "驱使风雪之力"
+      ],
+      "growthModel": "长期催化、物种阶段和群体协同",
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第一千二百零二章（内部研究章节）"
+    },
+    {
+      "id": "lmye.companion.005",
+      "name": "月珞",
+      "kind": "artifact_spirit",
+      "fixedTraits": [
+        "皓月狼庭相关记忆",
+        "器灵身份",
+        "保有部分自主能力"
+      ],
+      "relationshipModel": "信任、同意、秘密、精元与寄身器物；不使用宠物品质或喂食忠诚模板。",
+      "risk": "频繁器灵化形可能损耗精元乃至溃散。",
+      "provenance": "CANON+ADAPTATION-BRIDGE",
+      "sourceAnchor": "第六百一十五章（内部研究章节）；第七百九十三章（内部研究章节）"
+    }
+  ],
+  "combat": {
+    "resolutionMode": "data_first_cinematic_playback_second",
+    "phases": [
+      {
+        "id": "preparation",
+        "decisions": [
+          "目标",
+          "情报可信度",
+          "载荷",
+          "阵具",
+          "同伴",
+          "撤退储备"
+        ]
+      },
+      {
+        "id": "reconnaissance",
+        "decisions": [
+          "肉眼或神识",
+          "隐匿",
+          "灵虫/傀儡",
+          "是否承担反侦察风险"
+        ]
+      },
+      {
+        "id": "probe_exchange",
+        "decisions": [
+          "低阶试探",
+          "限制",
+          "护送",
+          "诱敌",
+          "保留底牌"
+        ]
+      },
+      {
+        "id": "commitment",
+        "decisions": [
+          "法宝",
+          "阵法",
+          "神通",
+          "精血/元气代价",
+          "撤退"
+        ]
+      },
+      {
+        "id": "resolution",
+        "decisions": [
+          "追击",
+          "夺物",
+          "救人",
+          "清除痕迹",
+          "立即撤离"
+        ]
+      }
+    ],
+    "resources": [
+      "mana",
+      "controlLoad",
+      "body",
+      "vitalEssence",
+      "soulIntegrity",
+      "consumables",
+      "artifactCondition",
+      "environmentQi",
+      "worldTime",
+      "retreatWindow",
+      "exposureLedger"
+    ],
+    "reconnaissanceResultFields": [
+      "informationGained",
+      "confidence",
+      "counterDetection"
+    ],
+    "formationStateFields": [
+      "formationId",
+      "anchors",
+      "powerSource",
+      "coverage",
+      "concealment",
+      "knownRules",
+      "integrity",
+      "setupTime"
+    ],
+    "retreatChecks": [
+      "burstMovement",
+      "sustainedMana",
+      "trackingCounterplay",
+      "terrain",
+      "preparedExit",
+      "injuredAllies",
+      "decoy",
+      "exposedEscapeArt"
+    ],
+    "validVictoryTypes": [
+      "enemy_defeated",
+      "enemy_driven_off",
+      "objective_secured",
+      "ally_extracted",
+      "delay_completed",
+      "intelligence_confirmed",
+      "secret_preserved",
+      "successful_retreat"
+    ],
+    "postCombatLedger": [
+      "survivalAndQuestState",
+      "injuriesAndResourcePools",
+      "artifactDamage",
+      "worldClockAdvance",
+      "consumedAndLostObjects",
+      "materialAndKnowledgeObjects",
+      "relationshipsAndDebts",
+      "exposureAndEnemyAdaptation",
+      "locationDepletionAndTraces"
+    ],
+    "forbiddenRuntimeBehavior": [
+      "AI视频决定胜负",
+      "运行时模型生成未审核功法或宝物能力",
+      "普通击杀直接增加境界经验",
+      "法力耗尽后仍免费飞遁",
+      "把撤退自动判定为失败"
+    ]
+  },
+  "progression": {
+    "cultivationSources": [
+      "闭关运转",
+      "灵脉与环境",
+      "合适丹药",
+      "功法完整度",
+      "师承纠错",
+      "心境历练",
+      "受控机缘"
+    ],
+    "knowledgeAcquisitionRoutes": [
+      "宗门传功与藏经权限",
+      "师父抄本",
+      "玉简玄金残页骨片",
+      "剧情托付与交换",
+      "遗迹与器灵讲解",
+      "有风险的战利品"
+    ],
+    "techniqueLearningChecks": [
+      "manualCompleteness",
+      "readingOrDivineSenseRequirement",
+      "rootAndBodyCompatibility",
+      "prerequisiteTechniques",
+      "inheritancePermission",
+      "comprehension",
+      "worldTime",
+      "heartState"
+    ],
+    "breakthroughChecks": [
+      "techniqueStage",
+      "cultivationAccumulation",
+      "rootCompatibility",
+      "bodyMeridianSoulCondition",
+      "pillMedicineFormationEnvironment",
+      "heartDemonState",
+      "lifespanAndTribulationWindow",
+      "controlledRandomResolution"
+    ],
+    "craftingInputs": [
+      "recipeCompleteness",
+      "materialsAndAge",
+      "fireSourceAndTools",
+      "craftKnowledge",
+      "manaAndDivineSense",
+      "worldTime",
+      "siteSecurity"
+    ],
+    "artifactAttunementPipeline": [
+      "acquire",
+      "quarantineAndIdentify",
+      "inspectPreviousMarksCursesAndSpirit",
+      "cleanseOrNegotiate",
+      "checkCompatibility",
+      "refine",
+      "equipStoreOrSeal",
+      "maintain"
+    ],
+    "companionGrowthInputs": [
+      "speciesStage",
+      "ageAndMaturity",
+      "specificFeedOrDemonCores",
+      "environmentQi",
+      "trainingTime",
+      "swarmCount",
+      "bloodlineConditions",
+      "contractOrRelationship"
+    ],
+    "opportunityModel": {
+      "sequence": [
+        "clue",
+        "investmentChoice",
+        "risk",
+        "missableWindow",
+        "result"
+      ],
+      "resultKinds": [
+        "manualFragment",
+        "material",
+        "mentor",
+        "relationshipDebt",
+        "enemy",
+        "uniqueObject"
+      ],
+      "runtimeRule": "只从人工审核的OpportunityDefinition抽取，不自由生成神功宝物。"
+    },
+    "antiFarmRules": [
+      "敌人、药草、遗迹和宝物是世界实体，不原地无限刷新。",
+      "同类低阶战斗不增加境界修为。",
+      "重复猎取降低生态资源并提高警觉、关注和价格波动。",
+      "唯一传承和正史宝物使用全局唯一ID。",
+      "事件进入时锁定种子，读档不能无成本洗结果。",
+      "敌人记录已暴露底牌并准备克制。",
+      "闭关、炼制、疗伤和养虫推进世界时间。"
+    ],
+    "failureContinuation": [
+      {
+        "id": "controlled_retreat",
+        "costs": [
+          "消耗",
+          "时间",
+          "次目标失败"
+        ],
+        "continuation": "返回安全点或换路线"
+      },
+      {
+        "id": "costly_failure",
+        "costs": [
+          "丢物",
+          "伤势",
+          "关系下降"
+        ],
+        "continuation": "疗伤、还债或补救任务"
+      },
+      {
+        "id": "strategic_failure",
+        "costs": [
+          "秘境关闭",
+          "宗门败退",
+          "身份暴露"
+        ],
+        "continuation": "换地图或身份，世界继续推进"
+      },
+      {
+        "id": "fatal_failure",
+        "requirements": [
+          "明确风险警告",
+          "撤退资源耗尽",
+          "剧情允许"
+        ],
+        "continuation": "正史处理或章节检查点"
+      }
+    ]
+  },
+  "playableProfiles": [
+    {
+      "id": "lmye.profile.male_main",
+      "name": "沈砚主线",
+      "coreVerbs": [
+        "观察",
+        "准备",
+        "试探",
+        "炼制",
+        "隐藏",
+        "撤退",
+        "反杀"
+      ],
+      "uniqueSystemHooks": [
+        "翠纹灵瓶隐秘生产",
+        "苍元剑典",
+        "太衍神念诀",
+        "本命飞剑",
+        "傀儡与虫群控制",
+        "底牌暴露"
+      ],
+      "forbiddenShortcut": "翠纹灵瓶不直接生成丹药、丹方、辅材或炼丹成功。",
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "lmye.profile.female_main",
+      "name": "楚明绮主线",
+      "coreVerbs": [
+        "统领",
+        "隐藏身份",
+        "控制区域",
+        "护送门人",
+        "谈判",
+        "选择暴露力量",
+        "撤离"
+      ],
+      "uniqueSystemHooks": [
+        "玄女返生经状态",
+        "真实境界与当前法力分离",
+        "赤鸾焰环",
+        "宗门资源与义务",
+        "队伍伤亡责任"
+      ],
+      "forbiddenShortcut": "轮回状态不是删级重练，女性线不是沈砚养成循环换皮。",
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "lmye.profile.sea_relay",
+      "name": "苏绛璃接力视角",
+      "uniqueSystemHooks": [
+        "海上组织与情报",
+        "身份风险",
+        "啼魂相关剧情"
+      ],
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    },
+    {
+      "id": "lmye.profile.spirit_relay",
+      "name": "月珞接力视角",
+      "uniqueSystemHooks": [
+        "器灵形态",
+        "记忆与寄身器物",
+        "自主选择",
+        "精元损耗"
+      ],
+      "provenance": "CANON+ADAPTATION-BRIDGE"
+    }
+  ],
+  "unityContracts": {
+    "definitionStateSeparation": [
+      "TechniqueDefinition/TechniqueState",
+      "AssetDefinition/AssetInstance",
+      "CompanionDefinition/CompanionState",
+      "EncounterDefinition/CombatResolution"
+    ],
+    "requiredRuntimeObjects": [
+      "CultivationState",
+      "CombatantState",
+      "TechniqueState",
+      "AssetInstance",
+      "CompanionState",
+      "EncounterDefinition",
+      "CombatResolution"
+    ],
+    "deterministicSeed": "storySeed + encounterId + attemptIndex",
+    "exampleCombatantState": {
+      "entityId": "char.han_li.blood_trial",
+      "cultivation": {
+        "realmId": "qi_refining",
+        "stage": 11,
+        "accumulation": 63,
+        "bottleneckTags": []
+      },
+      "roots": {
+        "type": "false_root",
+        "elements": [
+          "wood",
+          "water",
+          "fire",
+          "earth"
+        ]
+      },
+      "resources": {
+        "mana": {
+          "current": 78,
+          "maximum": 100,
+          "purity": 37
+        },
+        "divineSenseLoad": {
+          "current": 18,
+          "maximum": 42
+        },
+        "vitalEssence": {
+          "current": 100,
+          "maximum": 100
+        },
+        "soulIntegrity": {
+          "current": 100,
+          "maximum": 100
+        }
+      },
+      "injuries": [],
+      "loadoutIds": [
+        "magic_implement.gold_beetle_blades",
+        "lmye.ability.001",
+        "lmye.talisman.001"
+      ],
+      "retreatReserveMana": 25,
+      "exposureTags": []
+    },
+    "resolutionOrder": [
+      "validate_story_and_character_state",
+      "lock_seed",
+      "build_visible_and_hidden_information",
+      "validate_intent_prerequisites_and_retreat_reserve",
+      "resolve_realm_suppression_counters_formations_and_control_load",
+      "write_atomic_state_effects",
+      "select_primary_and_offline_fallback_media",
+      "write_audit_source_version_and_hash"
+    ]
+  }
+}

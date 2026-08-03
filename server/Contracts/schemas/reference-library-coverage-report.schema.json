@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.example/schemas/reference-library-coverage-report.schema.json",
+  "title": "CX-507 China reference coverage report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "planId",
+    "catalogLibraryId",
+    "totalAssets",
+    "passes",
+    "failedTargetIds",
+    "failedCategoryIds",
+    "categories",
+    "targets",
+    "diagnostics",
+    "generatedAtUtc"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "planId": {
+      "const": "cx507-china-visual-atlas-v1"
+    },
+    "catalogLibraryId": {
+      "const": "cx507-china-reference-library-v2"
+    },
+    "totalAssets": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "passes": {
+      "type": "boolean"
+    },
+    "failedTargetIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "failedCategoryIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "landscape",
+          "architecture",
+          "plants",
+          "animals",
+          "waters",
+          "weather",
+          "astronomy",
+          "people",
+          "costumes_textiles",
+          "artifacts",
+          "geology_caves",
+          "light_fog_fire"
+        ]
+      }
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "categoryId",
+          "requiredAssets",
+          "actualAssets",
+          "passes"
+        ],
+        "properties": {
+          "categoryId": {
+            "enum": [
+              "landscape",
+              "architecture",
+              "plants",
+              "animals",
+              "waters",
+              "weather",
+              "astronomy",
+              "people",
+              "costumes_textiles",
+              "artifacts",
+              "geology_caves",
+              "light_fog_fire"
+            ]
+          },
+          "requiredAssets": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "actualAssets": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "passes": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "targets": {
+      "type": "array",
+      "minItems": 114,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "targetId",
+          "dimension",
+          "label",
+          "requiredAssets",
+          "actualAssets",
+          "requiredArchitectureAssets",
+          "actualArchitectureAssets",
+          "requiredNaturalAssets",
+          "actualNaturalAssets",
+          "passes"
+        ],
+        "properties": {
+          "targetId": {
+            "type": "string"
+          },
+          "dimension": {
+            "enum": [
+              "province",
+              "capital",
+              "period",
+              "garden",
+              "landform",
+              "weather",
+              "category"
+            ]
+          },
+          "label": {
+            "type": "string"
+          },
+          "requiredAssets": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "actualAssets": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "requiredArchitectureAssets": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "actualArchitectureAssets": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "requiredNaturalAssets": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "actualNaturalAssets": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "passes": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "generatedAtUtc": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

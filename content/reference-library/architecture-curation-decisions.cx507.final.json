@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogLibraryId": "cx507-china-reference-library-v2",
+  "reviewer": "codex_visual_review",
+  "reviewedAtUtc": "2026-07-23T00:00:00Z",
+  "policy": "Keep only visually reviewed architecture, ruins, interiors, or construction details with no visible people; quarantine images containing people, non-architecture scenery, artifacts, maps, exhibit boards, models, or unsuitable visual references.",
+  "expectedArchitectureAssets": 210,
+  "architectureOrderSha256": "60af3649a786b1ec2b7b58e7ec2aed80f385cdfdb601f5d446aa3289645b6dca",
+  "quarantineUnlisted": true,
+  "confirmedAbsentIndices": [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+    21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+    41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
+    61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+    81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100,
+    101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116,
+    117, 118, 119, 120, 121, 122,
+    125, 131, 132, 134, 135, 137, 138, 139, 141, 142, 144, 146, 148, 152, 153, 156,
+    158, 160, 161, 163, 167, 169, 171, 172, 174, 175, 176, 178, 181, 182, 186, 187,
+    195, 196, 203, 204, 205, 208
+  ],
+  "reviewedContactSheets": [
+    { "fileName": "architecture-all-01.jpg", "sha256": "5bd9971b7c97abebea0e37bc721e4f68e111e48de4e5d1c8236ba9cf332fb2ed" },
+    { "fileName": "architecture-all-02.jpg", "sha256": "fd4a573d54844ea84e392ee5b36d170b56e2d7a28fe2dd9c0368ed19a43b43b2" },
+    { "fileName": "architecture-all-03.jpg", "sha256": "3292e11e8d09e935d7f515484ecb3fa836e184f14b07e492dad7eb39647ac874" },
+    { "fileName": "architecture-all-04.jpg", "sha256": "ab972b7d158576371b9a93d2021b07556d871fd268bfeeda952684f837b2f6d6" },
+    { "fileName": "architecture-all-05.jpg", "sha256": "8e408dabc1addafc378bba7d8e8a2e1b270215aad41de20a13671e1993de2af0" },
+    { "fileName": "architecture-all-06.jpg", "sha256": "acc799c0adaf1aefaf69d72d77a1d9170b0ad9364b6505df2c34622c8aba1f9e" },
+    { "fileName": "architecture-all-07.jpg", "sha256": "3a4e25aeab11b5a5abcb2eff8044799ff909553796a75f663b447f76b35fd1d0" },
+    { "fileName": "architecture-all-08.jpg", "sha256": "0e118e529dc5e7ffd9f464e0cba8e19c98dbcf734d19692ec992463dbd9ec534" },
+    { "fileName": "architecture-all-09.jpg", "sha256": "fa7fe8d0b6a4859a29a2187b1651939c68406fef45e15f2cb4460f2c36f7d538" },
+    { "fileName": "architecture-all-10.jpg", "sha256": "f838078e47e6bf845ddb4bb8f3bba02285dec11aa1499253addfa8320cb81f99" },
+    { "fileName": "architecture-all-11.jpg", "sha256": "9656d677a1dd65de9a4b7cd866221f71d5ee773c6ea32915dca3087a510d0b01" },
+    { "fileName": "architecture-all-12.jpg", "sha256": "3afbef818bb7f67d9344b24ea32c2f0756d327c3843f19db4bff92c8eaf8b986" },
+    { "fileName": "architecture-all-13.jpg", "sha256": "c1fbf1bd86555bb1fe91f29c11e54900b3516695fb61bb8064ef86a920c36d5c" },
+    { "fileName": "architecture-all-14.jpg", "sha256": "8bedee24d7dc628b6dc8ce997e49d7ce3de1f3a7b60711b2f5a4c82c0d9ec399" }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/combat-resolution.schema.json",
+  "title": "CombatResolution",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "encounterId",
+    "seed",
+    "outcome",
+    "objectiveResults",
+    "effects",
+    "primaryMediaRef",
+    "fallbackMediaRef",
+    "audit"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "encounterId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "seed": {
+      "$ref": "#/$defs/deterministicSeed"
+    },
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "enemy_defeated",
+        "enemy_driven_off",
+        "objective_secured",
+        "ally_extracted",
+        "delay_completed",
+        "intelligence_confirmed",
+        "secret_preserved",
+        "successful_retreat",
+        "controlled_retreat",
+        "costly_failure",
+        "strategic_failure",
+        "fatal_failure"
+      ]
+    },
+    "objectiveResults": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/objectiveResult"
+      }
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/stateEffect"
+      }
+    },
+    "primaryMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "fallbackMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "audit": {
+      "$ref": "#/$defs/audit"
+    }
+  },
+  "$defs": {
+    "deterministicSeed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strategy",
+        "storySeed",
+        "encounterId",
+        "attemptIndex",
+        "resolvedValue"
+      ],
+      "properties": {
+        "strategy": {
+          "const": "storySeed+encounterId+attemptIndex"
+        },
+        "storySeed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "encounterId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "attemptIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "resolvedValue": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "objectiveResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "objectiveId",
+        "status"
+      ],
+      "properties": {
+        "objectiveId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "achieved",
+            "partial",
+            "failed"
+          ]
+        }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "resolverVersion",
+        "sourceVersion",
+        "inputStateHash",
+        "outputStateHash",
+        "resolvedAtUtc"
+      ],
+      "properties": {
+        "resolverVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputStateHash": {
+          "$ref": "common.schema.json#/$defs/sha256"
+        },
+        "outputStateHash": {
+          "$ref": "common.schema.json#/$defs/sha256"
+        },
+        "resolvedAtUtc": {
+          "$ref": "common.schema.json#/$defs/dateTime"
+        }
+      }
+    }
+  }
+}

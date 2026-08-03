@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0.0",
+  "requestId": "cx306-invalid-leak",
+  "jobId": "945ccbac-afef-471d-9257-353db8c8a123",
+  "status": "queued",
+  "terminal": false,
+  "pollAfterMilliseconds": 1000,
+  "failureCode": null,
+  "inputHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.quest.primary",
+  "initialState": "available",
+  "timeLimitWorldClock": null,
+  "entryConditions": [
+    {
+      "op": "always"
+    }
+  ],
+  "completionConditions": [],
+  "failureConditions": [],
+  "expiryConditions": [],
+  "onComplete": [],
+  "onFailure": [],
+  "onExpire": [],
+  "tags": [
+    "fixture"
+  ],
+  "approvalStatus": "approved"
+}

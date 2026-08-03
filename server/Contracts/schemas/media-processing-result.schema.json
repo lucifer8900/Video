@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/media-processing-result.schema.json",
+  "title": "MediaProcessingResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "mediaId",
+    "status"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "mediaId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "succeeded",
+        "failed"
+      ]
+    },
+    "profile": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "probe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "container",
+        "width",
+        "height",
+        "frameRate",
+        "durationMilliseconds",
+        "hasAudio",
+        "integratedLoudnessLufs",
+        "truePeakDbtp"
+      ],
+      "properties": {
+        "container": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "frameRate": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "durationMilliseconds": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hasAudio": {
+          "type": "boolean"
+        },
+        "integratedLoudnessLufs": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "truePeakDbtp": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    },
+    "contentHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "objectRef": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "length": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "errorCode": {
+      "$ref": "common.schema.json#/$defs/id"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "succeeded"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "profile",
+          "probe",
+          "contentHash",
+          "objectRef",
+          "length"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "failed"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "errorCode"
+        ]
+      }
+    }
+  ]
+}

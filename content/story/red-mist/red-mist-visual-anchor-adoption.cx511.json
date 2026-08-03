@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "cardId": "CX-511",
+  "worldId": "lingmai-ember-red-mist",
+  "sourceAssetId": "identity.celadon_scout.v3",
+  "sourcePath": "content/visual-candidates/cx510/identity-anchors/identity_celadon_scout_v3.png",
+  "sourceArtifact": {
+    "mediaType": "image/png",
+    "byteLength": 3854784,
+    "sha256": "9bd742b2affe58c78dd0b309d7e5908f88000e3c2a32309b68fac296617d2139",
+    "width": 1664,
+    "height": 936
+  },
+  "targetPath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/Characters/identity_celadon_scout_v3.png",
+  "targetMetaPath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/Characters/identity_celadon_scout_v3.png.meta",
+  "runtimeResourcePath": "Generated/Characters/identity_celadon_scout_v3",
+  "adoptionStatus": "adopted",
+  "humanReview": {
+    "approved": true,
+    "decision": "user_explicit",
+    "reviewedAt": "2026-07-25"
+  },
+  "overwriteExistingAssets": false,
+  "shipInBuild": true,
+  "generationPolicy": {
+    "stillImagesOnly": true,
+    "geminiOrVeoUsed": false,
+    "sourceCandidateWasNeedsReview": true,
+    "realPeopleIdentityReuseAllowed": false
+  },
+  "propagation": {
+    "sourceCandidatePreserved": true,
+    "priorVersionsPreserved": true,
+    "catalogConstant": "CeladonScoutIdentity",
+    "resourcesLoadPath": "Generated/Characters/identity_celadon_scout_v3"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "reportId": "lip-sync-review.fixture.blocked",
+  "reviewPolicyVersion": "cx503.1",
+  "reviewScope": "pronunciation_subtitle_lip_sync",
+  "productionReadiness": "not_evaluated",
+  "authority": "human_review_export_not_promotion_authority",
+  "overallStatus": "blocked",
+  "sourceManifestId": "manifest.fixture",
+  "sourceManifestContentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "sourceBundleId": "bundle.fixture",
+  "sourceBundleContentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+  "language": "zh-CN",
+  "reviewerSubject": null,
+  "startedAtUtc": "2026-07-16T14:00:00Z",
+  "completedAtUtc": "2026-07-16T14:00:00Z",
+  "totalResponseCount": 1,
+  "reviewableCount": 0,
+  "passedCount": 0,
+  "redoCount": 0,
+  "blockedCount": 1,
+  "items": [],
+  "blockedItems": [
+    {
+      "responseId": "response.blocked",
+      "sourceReadinessStatus": "blocked",
+      "issueCodes": ["audio.missing", "lip_sync.placeholder_media"]
+    }
+  ],
+  "events": [],
+  "contentHash": "sha256:cd6f8b143ddaabd5a489b274404373d0612f1cc9a33dac8df6710e0af00c2b33"
+}

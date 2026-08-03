@@ -1,1 +1,87 @@
 .superpowers/
+# Paid cloud generation tooling remains local until explicitly authorized.
+/tools/gemini/
+
+# Internal source-to-game mappings must not enter the public repository.
+/content/originalization/name-change-crosswalk.csv
+/content/originalization/source-to-game-name-map.json
+/tools/migration/apply-originalization.ps1
+
+# Unity generated folders
+unity/RedMistVerticalSlice/[Ll]ibrary/
+unity/RedMistVerticalSlice/[Tt]emp/
+unity/RedMistVerticalSlice/[Oo]bj/
+unity/RedMistVerticalSlice/[Ll]ogs/
+unity/RedMistVerticalSlice/[Uu]ser[Ss]ettings/
+unity/RedMistVerticalSlice/[Mm]emoryCaptures/
+unity/RedMistVerticalSlice/Builds/
+/unity/RedMistVerticalSlice/Assets/Cx504Generated/
+/unity/RedMistVerticalSlice/Assets/Cx504Generated.meta
+/unity/RedMistVerticalSlice/Assets/AddressableAssetsData/
+/unity/RedMistVerticalSlice/Assets/AddressableAssetsData.meta
+/unity/RedMistVerticalSlice/Assets/Addressables_Temp/
+/unity/RedMistVerticalSlice/Assets/Addressables_Temp.meta
+/unity/RedMistVerticalSlice/Assets/StreamingAssets/aa/
+/unity/RedMistVerticalSlice/Assets/StreamingAssets/aa.meta
+/unity/RedMistVerticalSlice/ServerData/
+/unity/RedMistVerticalSlice/ServerData.meta
+/unity/RedMistVerticalSlice/Library/com.unity.addressables/
+unity/RedMistVerticalSlice/*.csproj
+unity/RedMistVerticalSlice/*.sln
+unity/RedMistVerticalSlice/*.suo
+unity/RedMistVerticalSlice/*.user
+unity/RedMistVerticalSlice/.vs/
+unity/RedMistVerticalSlice/*.log
+unity/RedMistVerticalSlice/test-results*.xml
+
+# Generated video and duplicate image sources stay outside Git.
+/unity/RedMistVerticalSlice/Assets/StreamingAssets/Media/*.mp4
+/unity/RedMistVerticalSlice/Assets/StreamingAssets/Media/*.mp4.meta
+/unity/RedMistVerticalSlice/GeneratedSource/
+
+# Licensed real-world references remain local and never enter Git or Unity builds.
+/content/reference-library/raw/
+/content/reference-library/cache/
+/content/reference-library/private-research/
+/content/reference-library/quarantine/
+/artifacts/cx507-review/
+
+# CX-508 raw ImageGen responses and rejected iterations stay local; only selected
+# review candidates and their contact sheet are versioned.
+/content/visual-candidates/cx508/rejected/
+/content/visual-candidates/cx508/reports/raw-imagegen/
+
+# CX-509 raw ImageGen responses and rejected iterations stay local; only review
+# candidates and the contact sheet are versioned.
+/content/visual-candidates/cx509/rejected/
+/content/visual-candidates/cx509/reports/raw-imagegen/
+
+# CX-510 raw ImageGen responses and rejected iterations stay local; only review
+# candidates and the comparison contact sheet are versioned.
+/content/visual-candidates/cx510/rejected/
+/content/visual-candidates/cx510/reports/raw-imagegen/
+
+# CX-512 raw ImageGen responses and rejected iterations stay local; only review
+# candidates and the comparison contact sheet are versioned.
+/content/visual-candidates/cx512/rejected/
+/content/visual-candidates/cx512/reports/raw-imagegen/
+
+# Rejected concept images remain local review artifacts.
+/unity/RedMistVerticalSlice/Docs/RejectedConcepts/*.png
+/unity/RedMistVerticalSlice/Docs/RejectedConcepts/*.png.meta
+
+# .NET generated folders
+**/[Bb]in/
+**/[Oo]bj/
+**/[Tt]est[Rr]esults/
+
+# Root-level Unity build and test diagnostics
+/unity-*.log
+/unity-*.xml
+/unity-*-test-results*.xml
+
+# Keep only the versioned CX-504 evidence report; local test/build artifacts stay untracked.
+/artifacts/*
+!/artifacts/cx504/
+/artifacts/cx504/*
+!/artifacts/cx504/addressables-patch-report.json

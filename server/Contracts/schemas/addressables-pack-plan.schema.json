@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/addressables-pack-plan.schema.json",
+  "title": "CX-504 Addressables packaging experiment plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "planId",
+    "mode",
+    "runtimeMigration",
+    "steamPipeVerified",
+    "productionReadiness",
+    "claimAuthority",
+    "unityVersion",
+    "addressablesVersion",
+    "maximumBundleBytes",
+    "patchThreshold",
+    "packs",
+    "prohibitedSourcePatterns"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "planId": { "$ref": "common.schema.json#/$defs/id" },
+    "mode": { "const": "experiment_only" },
+    "runtimeMigration": { "const": false },
+    "steamPipeVerified": { "const": false },
+    "productionReadiness": { "const": "not_evaluated" },
+    "claimAuthority": {
+      "const": "addressables_payload_experiment_not_runtime_or_steam_authority"
+    },
+    "unityVersion": { "const": "2022.3.62f3c1" },
+    "addressablesVersion": { "const": "1.22.3" },
+    "maximumBundleBytes": { "const": 2147483648 },
+    "patchThreshold": { "$ref": "#/$defs/patchThreshold" },
+    "packs": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": { "$ref": "#/$defs/pack" },
+      "allOf": [
+        { "contains": { "properties": { "packId": { "const": "base_client" } }, "required": ["packId"] }, "minContains": 1, "maxContains": 1 },
+        { "contains": { "properties": { "packId": { "const": "chapter_red_mist_videos" } }, "required": ["packId"] }, "minContains": 1, "maxContains": 1 },
+        { "contains": { "properties": { "packId": { "const": "language_zh_cn_audio_subtitles" } }, "required": ["packId"] }, "minContains": 1, "maxContains": 1 },
+        { "contains": { "properties": { "packId": { "const": "optional_offline_asr" } }, "required": ["packId"] }, "minContains": 1, "maxContains": 1 }
+      ]
+    },
+    "prohibitedSourcePatterns": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "patchThreshold": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["changedAssetMultiplier", "fixedOverheadBytes", "authority"],
+      "properties": {
+        "changedAssetMultiplier": { "const": 1.5 },
+        "fixedOverheadBytes": { "const": 1048576 },
+        "authority": { "const": "engineering_guardrail_not_steam_download_guarantee" }
+      }
+    },
+    "pack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "packId",
+        "groupName",
+        "delivery",
+        "optional",
+        "defaultInstall",
+        "staticContent",
+        "bundleMode",
+        "compression",
+        "sourceKind",
+        "contentStatus"
+      ],
+      "properties": {
+        "packId": {
+          "type": "string",
+          "enum": [
+            "base_client",
+            "chapter_red_mist_videos",
+            "language_zh_cn_audio_subtitles",
+            "optional_offline_asr"
+          ]
+        },
+        "groupName": { "$ref": "common.schema.json#/$defs/id" },
+        "delivery": { "type": "string", "enum": ["local", "remote"] },
+        "optional": { "type": "boolean" },
+        "defaultInstall": { "type": "boolean" },
+        "staticContent": { "type": "boolean" },
+        "bundleMode": { "type": "string", "enum": ["pack_together", "pack_separately"] },
+        "compression": { "type": "string", "enum": ["lz4", "uncompressed"] },
+        "sourceKind": { "type": "string", "enum": ["generated_manifest", "local_ignored_video_copy"] },
+        "contentStatus": { "type": "string", "minLength": 1 }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "packId": { "const": "base_client" },
+            "groupName": { "const": "base-client-local" },
+            "delivery": { "const": "local" },
+            "optional": { "const": false },
+            "defaultInstall": { "const": true },
+            "staticContent": { "const": true },
+            "bundleMode": { "const": "pack_together" },
+            "compression": { "const": "lz4" },
+            "sourceKind": { "const": "generated_manifest" },
+            "contentStatus": { "const": "experiment_fixture" }
+          }
+        },
+        {
+          "properties": {
+            "packId": { "const": "chapter_red_mist_videos" },
+            "groupName": { "const": "chapter-red-mist-video-remote" },
+            "delivery": { "const": "remote" },
+            "optional": { "const": false },
+            "defaultInstall": { "const": true },
+            "staticContent": { "const": false },
+            "bundleMode": { "const": "pack_separately" },
+            "compression": { "const": "uncompressed" },
+            "sourceKind": { "const": "local_ignored_video_copy" },
+            "contentStatus": { "const": "needs_review" }
+          }
+        },
+        {
+          "properties": {
+            "packId": { "const": "language_zh_cn_audio_subtitles" },
+            "groupName": { "const": "zh-cn-voice-subtitles-remote" },
+            "delivery": { "const": "remote" },
+            "optional": { "const": false },
+            "defaultInstall": { "const": true },
+            "staticContent": { "const": true },
+            "bundleMode": { "const": "pack_together" },
+            "compression": { "const": "lz4" },
+            "sourceKind": { "const": "generated_manifest" },
+            "contentStatus": { "const": "fixture_only_no_production_audio_split" }
+          }
+        },
+        {
+          "properties": {
+            "packId": { "const": "optional_offline_asr" },
+            "groupName": { "const": "optional-asr-model-remote" },
+            "delivery": { "const": "remote" },
+            "optional": { "const": true },
+            "defaultInstall": { "const": false },
+            "staticContent": { "const": true },
+            "bundleMode": { "const": "pack_together" },
+            "compression": { "const": "lz4" },
+            "sourceKind": { "const": "generated_manifest" },
+            "contentStatus": { "const": "fixture_only_model_missing" }
+          }
+        }
+      ]
+    }
+  }
+}

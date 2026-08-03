@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/scene-node.schema.json",
+  "title": "SceneNode",
+  "type": "object",
+  "additionalProperties": false,
+  "$defs": {
+    "invalidInputRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "npcResponseRef"
+      ],
+      "properties": {
+        "npcResponseRef": {
+          "$ref": "common.schema.json#/$defs/id"
+        }
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "displayKey",
+    "entryConditions",
+    "mediaRefs",
+    "choices",
+    "voiceIntentRefs",
+    "injectionPoints"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "displayKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "titleKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "locationKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "speakerKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "maleTextKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "femaleTextKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "nodeKind": {
+      "type": "string",
+      "enum": [
+        "Narrative",
+        "Flight",
+        "DivineSense",
+        "HerbGathering",
+        "Formation",
+        "CombatOne",
+        "CombatTwo",
+        "Ending"
+      ]
+    },
+    "estimatedMinutes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "entryConditions": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/condition"
+      }
+    },
+    "mediaRefs": {
+      "$ref": "common.schema.json#/$defs/idArray"
+    },
+    "fallbackMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "backgroundMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "portraitMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "introMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "choices": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/choiceDefinition"
+      }
+    },
+    "transitions": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/nodeTransition"
+      }
+    },
+    "voiceIntentRefs": {
+      "$ref": "common.schema.json#/$defs/idArray"
+    },
+    "npcResponseRefs": {
+      "$ref": "common.schema.json#/$defs/idArray"
+    },
+    "invalid_input_rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "abuse",
+        "irrelevant",
+        "too_long",
+        "silence",
+        "low_confidence"
+      ],
+      "properties": {
+        "abuse": {
+          "$ref": "#/$defs/invalidInputRule"
+        },
+        "irrelevant": {
+          "$ref": "#/$defs/invalidInputRule"
+        },
+        "too_long": {
+          "$ref": "#/$defs/invalidInputRule"
+        },
+        "silence": {
+          "$ref": "#/$defs/invalidInputRule"
+        },
+        "low_confidence": {
+          "$ref": "#/$defs/invalidInputRule"
+        }
+      }
+    },
+    "offlineFallbackNodeId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "onEnterEffects": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/stateEffect"
+      }
+    },
+    "onExitEffects": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/stateEffect"
+      }
+    },
+    "injectionPoints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "node_intro",
+          "travel_event",
+          "npc_mention"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "terminal": {
+      "type": "boolean"
+    },
+    "approvalStatus": {
+      "$ref": "common.schema.json#/$defs/status"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "voiceIntentRefs": {
+            "minItems": 1
+          }
+        },
+        "required": [
+          "voiceIntentRefs"
+        ]
+      },
+      "then": {
+        "required": [
+          "invalid_input_rules"
+        ]
+      }
+    }
+  ]
+}

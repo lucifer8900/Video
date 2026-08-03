@@ -1,0 +1,386 @@
+{
+  "schemaVersion": "1.0.0",
+  "cardId": "CX-517",
+  "worldId": "lingmai-ember-red-mist",
+  "createdOn": "2026-08-03",
+  "artDirectionSource": {
+    "path": "content/story/red-mist/red-mist-art-direction.cx516.json",
+    "sha256": "0ba5b0fec6a2e3ed96ba75ce0c2818e91e96d03010bf463c1c3cacfda72c6deb"
+  },
+  "generationPolicy": {
+    "imageProvider": "codex_builtin_imagegen",
+    "stillImagesOnly": true,
+    "videoOrAudioUsed": false,
+    "flow2ApiUsed": false,
+    "geminiUsed": false,
+    "veoUsed": false,
+    "overwriteExistingAssets": false,
+    "generationCalls": 15,
+    "discardedOutputs": 2,
+    "acceptedCandidateFiles": 13,
+    "expressionsDeferredUntilMultiviewApproval": true,
+    "cx514Status": "paused"
+  },
+  "anchorSources": [
+    {
+      "assetId": "identity.shen_yan.v1",
+      "path": "content/visual-candidates/cx508/identity-anchors/identity_shen_yan_v1.png",
+      "sha256": "1a0973205fac132f1f5d3c658f8921200d5ce4ca7575182a2c85ab80eb166e50"
+    },
+    {
+      "assetId": "identity.chu_mingqi.v2",
+      "path": "content/visual-candidates/cx509/identity-anchors/identity_chu_mingqi_v2.png",
+      "sha256": "ad13ade5efe7c4451919b16ede690520de64e6ae79680e55f7a1926c6cac29ae"
+    },
+    {
+      "assetId": "identity.shi_jun.v3",
+      "path": "content/visual-candidates/cx509/identity-anchors/identity_shi_jun_v3.png",
+      "sha256": "cf29b3028d2e55a8be4cc7bf0fd2141f7426046bdcde776f47537ea35294d613"
+    },
+    {
+      "assetId": "identity.celadon_scout.v3",
+      "path": "content/visual-candidates/cx510/identity-anchors/identity_celadon_scout_v3.png",
+      "sha256": "9bd742b2affe58c78dd0b309d7e5908f88000e3c2a32309b68fac296617d2139"
+    },
+    {
+      "assetId": "identity.cavern_ally.v1",
+      "path": "content/visual-candidates/cx508/identity-anchors/identity_cavern_ally_v1.png",
+      "sha256": "60fa153e34eab624ba8c429274e640420778082c5d3001f38b6d73bc9d35947d"
+    },
+    {
+      "assetId": "identity.formation_spirit.v2",
+      "path": "content/visual-candidates/cx509/identity-anchors/identity_formation_spirit_v2.png",
+      "sha256": "def223bd873b3e4b23082a2863bd2bea0e3ab5d076ceb7d64286bd49150627e2"
+    },
+    {
+      "assetId": "creature.ink_dragon.v3",
+      "path": "content/visual-candidates/cx509/identity-anchors/creature_ink_dragon_v3.png",
+      "sha256": "4d200963ee5619880544bca3c498f724dd3940296035d1dd225c5ea30735b2e4"
+    }
+  ],
+  "requiredCandidateIds": [
+    "turnaround.outfit.shen_yan_qinglan_travel.v1",
+    "turnaround.outfit.shen_yan_xuanheng_ceremony.v1",
+    "turnaround.outfit.shen_yan_yaoyuan_combat.v1",
+    "turnaround.outfit.chu_mingqi_jiyue_travel.v1",
+    "turnaround.outfit.chu_mingqi_danque_ceremony.v1",
+    "turnaround.outfit.chu_mingqi_chixiao_combat.v1",
+    "turnaround.outfit.shi_jun_cangjin_command.v1",
+    "turnaround.outfit.shi_jun_anyao_ritual.v1",
+    "turnaround.outfit.celadon_scout_listening.v1",
+    "turnaround.outfit.celadon_scout_night_patrol.v1",
+    "turnaround.outfit.cavern_ally_stone_lamp.v1",
+    "turnaround.outfit.formation_spirit_star_balance.v1",
+    "turnaround.creature.ink_dragon.v1"
+  ],
+  "candidates": [
+    {
+      "assetId": "turnaround.outfit.shen_yan_qinglan_travel.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.shen_yan",
+      "outfitId": "outfit.shen_yan_qinglan_travel.v1",
+      "sourceAnchor": {
+        "assetId": "identity.shen_yan.v1",
+        "path": "content/visual-candidates/cx508/identity-anchors/identity_shen_yan_v1.png",
+        "sha256": "1a0973205fac132f1f5d3c658f8921200d5ce4ca7575182a2c85ab80eb166e50"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shen_yan_qinglan_travel_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Shen Yan face, age, topknot, body and medicine case across exactly front, left profile and back full-body studio views. Replace clothing with clean celadon and ivory Song-inspired Qinglan travel layers, woven sash and dark textile boots; keep the case rigid and identical. Use bright warm-ivory 85mm studio realism, physical cloth and contact shadow; exclude scenery, text, extra people, leather, Qing styling and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2072028, "width": 1536, "height": 1024, "sha256": "48548c9b77e9e6b1225f29bda1686bb1c00ffb3c6707f92325f055a1fef481fe"}
+    },
+    {
+      "assetId": "turnaround.outfit.shen_yan_xuanheng_ceremony.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.shen_yan",
+      "outfitId": "outfit.shen_yan_xuanheng_ceremony.v1",
+      "sourceAnchor": {
+        "assetId": "identity.shen_yan.v1",
+        "path": "content/visual-candidates/cx508/identity-anchors/identity_shen_yan_v1.png",
+        "sha256": "1a0973205fac132f1f5d3c658f8921200d5ce4ca7575182a2c85ab80eb166e50"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shen_yan_xuanheng_ceremony_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Shen Yan face, age, topknot, body and medicine case across exactly front, left profile and back full-body views. Dress him in the Tang-inspired Xuanheng ceremonial robe with peacock blue, warm ivory and restrained aged gold, heavy patterned silk, supported waist and navy textile boots. Photograph on a bright warm-ivory 85mm studio with realistic cloth weight and contact shadow; exclude scenery, text, extra people, leather, Qing style and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2237195, "width": 1536, "height": 1024, "sha256": "297b2a8d5a4c55ec2b0e9524577f57b370fa827c3cac053b31cc5a7fb92b9aa0"}
+    },
+    {
+      "assetId": "turnaround.outfit.shen_yan_yaoyuan_combat.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.shen_yan",
+      "outfitId": "outfit.shen_yan_yaoyuan_combat.v1",
+      "sourceAnchor": {
+        "assetId": "identity.shen_yan.v1",
+        "path": "content/visual-candidates/cx508/identity-anchors/identity_shen_yan_v1.png",
+        "sha256": "1a0973205fac132f1f5d3c658f8921200d5ce4ca7575182a2c85ab80eb166e50"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shen_yan_yaoyuan_combat_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Shen Yan identity, hair, mature proportions and rigid medicine case in exactly front, left profile and back full-body views. Replace the robe with the deep-blue and teal Yaoyuan combat outfit using fitted woven layers, restrained matte textile guards, dense cord and reinforced cloth boots without bulky armor. Use high-key warm-ivory 85mm costume photography with readable physical materials; exclude scenery, text, extra people, leather, Qing style and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2238780, "width": 1536, "height": 1024, "sha256": "154d28137fee552b14ce301231579020d8e0adfd891295816fb4e48c37f16ef9"}
+    },
+    {
+      "assetId": "turnaround.outfit.chu_mingqi_jiyue_travel.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.chu_mingqi",
+      "outfitId": "outfit.chu_mingqi_jiyue_travel.v1",
+      "sourceAnchor": {
+        "assetId": "identity.chu_mingqi.v2",
+        "path": "content/visual-candidates/cx509/identity-anchors/identity_chu_mingqi_v2.png",
+        "sha256": "ad13ade5efe7c4451919b16ede690520de64e6ae79680e55f7a1926c6cac29ae"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_chu_mingqi_jiyue_travel_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Chu Mingqi face, age, hair and body in exactly front, left profile and back full-body studio views. Dress her in moon-white, pale-vermilion and crow-blue Jiyue travel layers with light silk, fine gauze and moon-white textile boots. Secure the rigid matte-silver moon ring flat at the same left-waist point so it never becomes a bag or handheld object. Use bright warm-ivory 85mm realism; exclude scenery, text, extra people, leather, Qing styling and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2110874, "width": 1536, "height": 1024, "sha256": "5d31ff1b8026301dab1b97ab0f07cd382bdc7aa879c5d93b814a77a30f78642a"}
+    },
+    {
+      "assetId": "turnaround.outfit.chu_mingqi_danque_ceremony.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.chu_mingqi",
+      "outfitId": "outfit.chu_mingqi_danque_ceremony.v1",
+      "sourceAnchor": {
+        "assetId": "identity.chu_mingqi.v2",
+        "path": "content/visual-candidates/cx509/identity-anchors/identity_chu_mingqi_v2.png",
+        "sha256": "ad13ade5efe7c4451919b16ede690520de64e6ae79680e55f7a1926c6cac29ae"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_chu_mingqi_danque_ceremony_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Chu Mingqi identity, hair and body across exactly front, left profile and back full-body views. Use the pomegranate-red, warm-ivory and pale-gold Danque ceremonial outfit with high-waist skirt, broad outer mantle, heavy brocade and red cloth ceremonial boots, formal but explicitly non-bridal. Lock the same rigid silver moon ring to her waist in all views. Photograph on a bright warm-ivory 85mm studio; exclude scenery, text, extra people, leather, Qing style and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation", "no_wedding_costume"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2289582, "width": 1536, "height": 1024, "sha256": "eedcdabd2b2ca37e1e2819d527c942889317bd4d2b2a5454c60741b10d7560e1"}
+    },
+    {
+      "assetId": "turnaround.outfit.chu_mingqi_chixiao_combat.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.chu_mingqi",
+      "outfitId": "outfit.chu_mingqi_chixiao_combat.v1",
+      "sourceAnchor": {
+        "assetId": "identity.chu_mingqi.v2",
+        "path": "content/visual-candidates/cx509/identity-anchors/identity_chu_mingqi_v2.png",
+        "sha256": "ad13ade5efe7c4451919b16ede690520de64e6ae79680e55f7a1926c6cac29ae"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_chu_mingqi_chixiao_combat_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Chu Mingqi face, age, hair and anatomy across exactly front, left profile and back full-body studio views. Dress her in deep-crimson Chixiao combat layers over moon-white fitted sleeves with silver-gray segmented hip guards, dense cord and crimson textile combat boots. Keep the rigid moon ring securely fixed and mechanically identical at the waist. Use bright warm-ivory 85mm photoreal wardrobe lighting; exclude scenery, text, extra people, leather, Qing styling and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2272273, "width": 1536, "height": 1024, "sha256": "cb113776a40b1f39457eaea8a8ed230e815b3ca10cfb05e927b46e7e83a78ad5"}
+    },
+    {
+      "assetId": "turnaround.outfit.shi_jun_cangjin_command.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.shi_jun",
+      "outfitId": "outfit.shi_jun_cangjin_command.v1",
+      "sourceAnchor": {
+        "assetId": "identity.shi_jun.v3",
+        "path": "content/visual-candidates/cx509/identity-anchors/identity_shi_jun_v3.png",
+        "sha256": "cf29b3028d2e55a8be4cc7bf0fd2141f7426046bdcde776f47537ea35294d613"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shi_jun_cangjin_command_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Shi Jun mature face, stern age, hair crown and tall broad proportions across exactly front, left profile and back views. Dress him in a deep-crimson Cangjin command robe with aged-gold vertical structure, bone-white layer, heavy brocade and crimson cloth high boots. Enclose the formation nail completely inside one palm-length horizontal black metal waist box with no hilt or blade silhouette. Use bright warm-ivory 85mm realism; exclude text, scenery, extra people, leather, Qing style and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation", "no_sword_silhouette"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2376831, "width": 1536, "height": 1024, "sha256": "7e197fd3297c67edde2b76406b17a87e5cd72ddd3302678643d76f78c5b17698"}
+    },
+    {
+      "assetId": "turnaround.outfit.shi_jun_anyao_ritual.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.shi_jun",
+      "outfitId": "outfit.shi_jun_anyao_ritual.v1",
+      "sourceAnchor": {
+        "assetId": "identity.shi_jun.v3",
+        "path": "content/visual-candidates/cx509/identity-anchors/identity_shi_jun_v3.png",
+        "sha256": "cf29b3028d2e55a8be4cc7bf0fd2141f7426046bdcde776f47537ea35294d613"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shi_jun_anyao_ritual_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Shi Jun mature identity, age, hair crown and tall broad anatomy across exactly front, left profile and back full-body views. Dress him in an ink-teal Anyao ritual robe with crimson inner edge, limited dark-gold geometric shoulder and waist guards, heavy silk and textile boots. Fix one palm-length fully closed black metal relic box horizontally at the waist, with no visible nail, handle, blade or sheath. Use bright warm-ivory 85mm realism; exclude text, scenery, extra people, leather, Qing style and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation", "no_sword_silhouette"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2208486, "width": 1536, "height": 1024, "sha256": "78e3443d95e27af6d51f645739132adbaa2460b0e0097e8d662c76bd615486f4"}
+    },
+    {
+      "assetId": "turnaround.outfit.celadon_scout_listening.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.celadon_scout",
+      "outfitId": "outfit.celadon_scout_listening.v1",
+      "sourceAnchor": {
+        "assetId": "identity.celadon_scout.v3",
+        "path": "content/visual-candidates/cx510/identity-anchors/identity_celadon_scout_v3.png",
+        "sha256": "9bd742b2affe58c78dd0b309d7e5908f88000e3c2a32309b68fac296617d2139"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_celadon_scout_listening_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Celadon Scout adult face, low braid and realistic head-to-body proportions across exactly front, left profile and back full-body views. Dress her in celadon and turquoise narrow-sleeve listening-duty layers with small charcoal shoulder pieces, woven fabric and charcoal cloth boots. Fix the pale-jade listening talisman at the same upper-left belt point in all views. Use bright warm-ivory 85mm studio realism; exclude text, scenery, extra people, leather, Qing styling and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation", "no_oversized_head"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2191526, "width": 1536, "height": 1024, "sha256": "ba1c8b863ae7b04669b30f83ba425a2deba5a83c4318ce1d89b8cf4ac1f1c6e9"}
+    },
+    {
+      "assetId": "turnaround.outfit.celadon_scout_night_patrol.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.celadon_scout",
+      "outfitId": "outfit.celadon_scout_night_patrol.v1",
+      "sourceAnchor": {
+        "assetId": "identity.celadon_scout.v3",
+        "path": "content/visual-candidates/cx510/identity-anchors/identity_celadon_scout_v3.png",
+        "sha256": "9bd742b2affe58c78dd0b309d7e5908f88000e3c2a32309b68fac296617d2139"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_celadon_scout_night_patrol_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Celadon Scout adult identity, low braid and long-leg proportions across exactly front, left profile and back full-body views. Dress her in a deep-teal narrow-sleeve night-patrol robe with cool-jade separation, charcoal short mantle, light guard waist and deep-teal cloth boots, never an all-black figure. Keep the pale-jade listening talisman fixed identically at the upper-left belt. Use bright warm-ivory 85mm realism; exclude text, scenery, extra people, leather, Qing style and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation", "no_oversized_head"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2238248, "width": 1536, "height": 1024, "sha256": "7e831924bec305e2bc5cebff44dcb040de344e7a74ea3a38f78995be51653fef"}
+    },
+    {
+      "assetId": "turnaround.outfit.cavern_ally_stone_lamp.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.cavern_ally",
+      "outfitId": "outfit.cavern_ally_stone_lamp.v1",
+      "sourceAnchor": {
+        "assetId": "identity.cavern_ally.v1",
+        "path": "content/visual-candidates/cx508/identity-anchors/identity_cavern_ally_v1.png",
+        "sha256": "60fa153e34eab624ba8c429274e640420778082c5d3001f38b6d73bc9d35947d"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_cavern_ally_stone_lamp_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Cavern Ally weathered adult face, tied hair, moustache, short beard and sturdy body across exactly front, left profile and back full-body views. Replace armor with a maintained rock-brown bound-sleeve robe, moss-green short mantle, warm-gray sash, matte copper fittings, stone-bead talisman and ankle cloth boots. Allow only light cave dust and no rags. Use bright warm-ivory 85mm photoreal studio light; exclude text, scenery, extra people, leather, Qing style and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation", "no_ragged_clothing"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2144543, "width": 1536, "height": 1024, "sha256": "2f2bb62409afaa94823a74177af4db577247c2b46a53e072d2fd258f2c33075c"}
+    },
+    {
+      "assetId": "turnaround.outfit.formation_spirit_star_balance.v1",
+      "assetKind": "outfit_turnaround",
+      "subjectId": "character.formation_spirit",
+      "outfitId": "outfit.formation_spirit_star_balance.v1",
+      "sourceAnchor": {
+        "assetId": "identity.formation_spirit.v2",
+        "path": "content/visual-candidates/cx509/identity-anchors/identity_formation_spirit_v2.png",
+        "sha256": "def223bd873b3e4b23082a2863bd2bea0e3ab5d076ceb7d64286bd49150627e2"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_formation_spirit_star_balance_v1.png",
+      "views": ["front", "left_profile", "back"],
+      "prompt": "Preserve the approved fictional Formation Spirit serene young-adult face, long hair, crown and tall slender anatomy across exactly front, left profile and back full-body views. Dress him in a sewable warm-ivory and celadon-blue Wei-Jin/Song ritual robe with weighted sleeves, restrained pale-gold star-balance geometry, night-blue accents and warm-white cloth shoes; use no handheld object. Photograph with bright warm-ivory 85mm realism and physical silk; exclude text, magic scenery, extra people, bizarre sculptural clothing, leather, Qing style and actor likeness.",
+      "continuityLocks": ["same_face", "same_hair", "same_anatomy", "same_outfit", "same_footwear", "same_prop"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_modern_leather", "no_qing_clothing", "no_identity_drift", "no_prop_mutation", "no_bizarre_clothing"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "proportions", "hands", "feet", "garment_construction", "material_fidelity", "footwear", "prop_continuity", "no_text_or_watermark", "no_actor_likeness"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2160502, "width": 1536, "height": 1024, "sha256": "8d5fe879956f92d7c07525e6eb435cdf76d95782ecfd6334cc9dbb12492842ce"}
+    },
+    {
+      "assetId": "turnaround.creature.ink_dragon.v1",
+      "assetKind": "creature_turnaround",
+      "subjectId": "creature.ink_dragon",
+      "sourceAnchor": {
+        "assetId": "creature.ink_dragon.v3",
+        "path": "content/visual-candidates/cx509/identity-anchors/creature_ink_dragon_v3.png",
+        "sha256": "4d200963ee5619880544bca3c498f724dd3940296035d1dd225c5ea30735b2e4"
+      },
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx517/turnarounds/turnaround_creature_ink_dragon_v1.png",
+      "views": ["front_three_quarter", "left_profile", "rear_three_quarter", "top"],
+      "prompt": "Preserve the approved original Chinese Ink Jiao Dragon identity in a clean four-view creature board: front three-quarter, left profile, rear three-quarter and top, each complete head to tail. Lock the long Chinese muzzle, one pair of short backward forked horns, two whiskers, black-silver mane, ink-black blue-green scales, twenty-meter serpentine body, exactly four limbs with four claws per foot, tapered tail and no wings. Use bright warm-ivory VFX-maquette studio realism; exclude scenery, text, people, lizard anatomy, western dragon anatomy and all anatomy mutation.",
+      "continuityLocks": ["same_identity", "same_anatomy", "same_horns", "same_whiskers", "same_mane", "same_scales", "exactly_four_limbs", "exactly_four_claws_per_foot", "no_wings"],
+      "avoidItems": ["no_text", "no_watermark", "no_extra_people", "no_actor_likeness", "no_lizard_anatomy", "no_western_dragon", "no_extra_limbs", "no_missing_limbs", "no_wings"],
+      "reviewStatus": "pending_human_review",
+      "reviewChecks": ["identity_consistency", "view_consistency", "complete_head_to_tail", "chinese_jiao_head", "horn_count", "whiskers_and_mane", "scale_palette", "four_limbs", "four_claws_per_foot", "no_wings", "no_lizard_anatomy", "no_text_or_watermark"],
+      "artifact": {"mediaType": "image/png", "byteLength": 2463616, "width": 1536, "height": 1024, "sha256": "6f49fb857b203b6c6ce4a2b4a656265b6648ae9bed3dd7e79af399845b45596d"}
+    }
+  ],
+  "markdownContract": {
+    "relativePath": "content/story/red-mist/red-mist-multiview-candidates.cx517.md",
+    "listsEveryAssetAndFile": true
+  },
+  "reviewBoundary": {
+    "humanReviewRequired": true,
+    "automaticAdoption": false,
+    "unityIntegration": false,
+    "nextCard": "human_review_then_expression_reference_card"
+  }
+}

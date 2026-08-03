@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/generation-batch-request.schema.json",
+  "title": "GenerationBatchRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "idempotencyKey",
+    "sourceManifestId",
+    "sourceManifestContentHash",
+    "targetTier",
+    "shotIds",
+    "sourcePreviewBatchRef"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "idempotencyKey": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "sourceManifestId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "sourceManifestContentHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "targetTier": {
+      "type": "string",
+      "enum": [
+        "preview_fast",
+        "final_quality"
+      ]
+    },
+    "shotIds": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "sourcePreviewBatchRef": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "targetTier": {
+            "const": "preview_fast"
+          }
+        },
+        "required": [
+          "targetTier"
+        ]
+      },
+      "then": {
+        "properties": {
+          "sourcePreviewBatchRef": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "targetTier": {
+            "const": "final_quality"
+          }
+        },
+        "required": [
+          "targetTier"
+        ]
+      },
+      "then": {
+        "properties": {
+          "sourcePreviewBatchRef": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      }
+    }
+  ]
+}

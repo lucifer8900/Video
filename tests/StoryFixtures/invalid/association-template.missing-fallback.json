@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "templateId": "assoc.fixture.missing_fallback.v1",
+  "kind": "callback",
+  "authorityLevel": "L2",
+  "preconditions": {
+    "requiresLedger": [
+      { "type": "enemy_spared", "minSeverity": 2, "maxAgeWorldClock": 20160 }
+    ],
+    "forbidsFacts": [],
+    "chapterWindow": ["chapter.fixture"]
+  },
+  "parameterSlots": {
+    "target": { "source": "ledger.actors[1]" }
+  },
+  "injectionPoints": ["travel_event"],
+  "textPolicy": "llm_variant_within_style_guide",
+  "allowedEffects": [],
+  "mediaPolicy": "reuse_only",
+  "cooldownWorldClock": 10080,
+  "maxTriggersPerPlayer": 1,
+  "approvalStatus": "needs_review"
+}

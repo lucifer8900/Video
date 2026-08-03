@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/ledger-event-batch-response.schema.json",
+  "title": "LedgerEventBatchResponse",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "acknowledgements"],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "acknowledgements": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["playerId", "entryId", "status"],
+        "properties": {
+          "playerId": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 96,
+            "pattern": "^p\\.[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+          },
+          "entryId": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 96,
+            "pattern": "^led\\.[a-z0-9]+(?:[._-][a-z0-9]+)*$"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["accepted", "duplicate"]
+          }
+        }
+      }
+    }
+  }
+}

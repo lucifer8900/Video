@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.example/schemas/red-mist-visual-anchors.schema.json",
+  "title": "Red Mist CX-509 Visual Anchor Candidates",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "cardId",
+    "worldId",
+    "referenceCatalog",
+    "generationPolicy",
+    "requiredAnchorIds",
+    "candidates"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "cardId": { "const": "CX-509" },
+    "worldId": { "const": "lingmai-ember-red-mist" },
+    "referenceCatalog": { "const": "content/reference-library/catalog.json" },
+    "generationPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stillImagesOnly",
+        "geminiOrVeoUsed",
+        "overwriteExistingAssets",
+        "realPeopleIdentityReuseAllowed",
+        "adoptionRequiresHumanReview",
+        "allowUnverifiedPersonalReferences"
+      ],
+      "properties": {
+        "stillImagesOnly": { "const": true },
+        "geminiOrVeoUsed": { "const": false },
+        "overwriteExistingAssets": { "const": false },
+        "realPeopleIdentityReuseAllowed": { "const": false },
+        "adoptionRequiresHumanReview": { "const": true },
+        "allowUnverifiedPersonalReferences": { "const": true }
+      }
+    },
+    "requiredAnchorIds": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/versionedId" }
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": { "$ref": "#/$defs/candidate" }
+    }
+  },
+  "$defs": {
+    "versionedId": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+(?:\\.[a-z0-9_]+)*\\.v[1-9][0-9]*$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "referenceInput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assetId", "assetSha256", "role"],
+      "properties": {
+        "assetId": { "type": "string", "minLength": 1 },
+        "assetSha256": { "$ref": "#/$defs/sha256" },
+        "role": {
+          "enum": [
+            "structure",
+            "material",
+            "lighting",
+            "pose",
+            "expression",
+            "garment_construction",
+            "surface_detail",
+            "anatomy"
+          ]
+        }
+      }
+    },
+    "researchReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["localRelativePath", "sourcePageUrl", "role", "identityReuse"],
+      "properties": {
+        "localRelativePath": {
+          "type": "string",
+          "pattern": "^content/reference-library/private-research/cx509/[a-z0-9-]+/[a-z0-9-]+\\.(jpg|jpeg|png|webp)$"
+        },
+        "sourcePageUrl": { "type": "string", "format": "uri" },
+        "role": {
+          "enum": ["lighting", "garment_construction", "anatomy"]
+        },
+        "identityReuse": { "const": false }
+      }
+    },
+    "postProcess": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "sourceWidth", "sourceHeight", "outputWidth", "outputHeight", "cropStrategy"],
+      "properties": {
+        "mode": { "const": "aspect_crop" },
+        "sourceWidth": { "const": 1672 },
+        "sourceHeight": { "const": 941 },
+        "outputWidth": { "const": 1664 },
+        "outputHeight": { "const": 936 },
+        "cropStrategy": { "const": "center" },
+        "focusDescription": { "type": "string", "minLength": 1 }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mediaType", "byteLength", "sha256", "width", "height"],
+      "properties": {
+        "mediaType": { "const": "image/png" },
+        "byteLength": { "type": "integer", "minimum": 24 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "width": { "const": 1664 },
+        "height": { "const": 936 }
+      }
+    },
+    "reviewStatus": { "enum": ["pending", "pass", "fail"] },
+    "reviewChecks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "skinAndFabric",
+        "weightBearing",
+        "contactShadows",
+        "sharedLighting",
+        "perspectiveScale",
+        "handsAndProps",
+        "noTextOrWatermark",
+        "noLandmarkReplication",
+        "noActorLikeness"
+      ],
+      "properties": {
+        "skinAndFabric": { "$ref": "#/$defs/reviewStatus" },
+        "weightBearing": { "$ref": "#/$defs/reviewStatus" },
+        "contactShadows": { "$ref": "#/$defs/reviewStatus" },
+        "sharedLighting": { "$ref": "#/$defs/reviewStatus" },
+        "perspectiveScale": { "$ref": "#/$defs/reviewStatus" },
+        "handsAndProps": { "$ref": "#/$defs/reviewStatus" },
+        "noTextOrWatermark": { "$ref": "#/$defs/reviewStatus" },
+        "noLandmarkReplication": { "$ref": "#/$defs/reviewStatus" },
+        "noActorLikeness": { "$ref": "#/$defs/reviewStatus" }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assetId",
+        "assetKind",
+        "generationMode",
+        "adoptionStatus",
+        "adopted",
+        "shipInBuild",
+        "outputPath",
+        "referenceInputs",
+        "researchReferences",
+        "prompt",
+        "avoidItems",
+        "continuityLocks",
+        "postProcess",
+        "artifact",
+        "reviewChecks"
+      ],
+      "properties": {
+        "assetId": { "$ref": "#/$defs/versionedId" },
+        "assetKind": { "enum": ["identity_anchor", "creature_anchor"] },
+        "generationMode": { "const": "codex_builtin_imagegen" },
+        "adoptionStatus": { "const": "needs_review" },
+        "adopted": { "const": false },
+        "shipInBuild": { "const": false },
+        "outputPath": {
+          "type": "string",
+          "pattern": "^content/visual-candidates/cx509/identity-anchors/[a-z0-9_]+_v[1-9][0-9]*\\.png$"
+        },
+        "referenceInputs": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/referenceInput" }
+        },
+        "researchReferences": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/researchReference" }
+        },
+        "prompt": { "type": "string", "minLength": 300 },
+        "avoidItems": {
+          "type": "array",
+          "minItems": 8,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "continuityLocks": {
+          "type": "array",
+          "minItems": 7,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "postProcess": { "$ref": "#/$defs/postProcess" },
+        "artifact": { "$ref": "#/$defs/artifact" },
+        "reviewChecks": { "$ref": "#/$defs/reviewChecks" }
+      }
+    }
+  }
+}

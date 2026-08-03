@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "templateId": "assoc.fixture.no_parameters.v1",
+  "kind": "foreshadow",
+  "authorityLevel": "L2",
+  "preconditions": {
+    "requiresLedger": [
+      { "type": "promise_made", "minSeverity": 1, "maxAgeWorldClock": 120 }
+    ],
+    "forbidsFacts": [],
+    "chapterWindow": ["chapter.fixture"]
+  },
+  "parameterSlots": {},
+  "injectionPoints": ["node_intro"],
+  "textPolicy": "llm_variant_within_style_guide",
+  "allowedEffects": [],
+  "mediaPolicy": "reuse_only",
+  "fallbackThreadId": "assoc.fixture.fallback",
+  "cooldownWorldClock": 0,
+  "maxTriggersPerPlayer": 1,
+  "approvalStatus": "needs_review"
+}

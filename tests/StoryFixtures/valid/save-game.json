@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.save.primary",
+  "storyBundleId": "fixture.bundle.primary",
+  "storyBundleVersion": "fixture-1",
+  "currentNodeId": "fixture.node.primary",
+  "stateSnapshot": {
+    "characterStateRefs": [
+      "fixture.character_state.primary"
+    ],
+    "questStates": [
+      {
+        "questId": "fixture.quest.primary",
+        "status": "active"
+      }
+    ],
+    "factFlags": {
+      "fixture.fact.world_rule": true
+    },
+    "worldClockMinutes": 0,
+    "watchedMediaRefs": []
+  },
+  "migrationVersion": 0,
+  "savedAtUtc": "2026-07-15T00:00:00Z"
+}

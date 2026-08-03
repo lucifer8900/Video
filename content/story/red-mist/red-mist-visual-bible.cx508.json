@@ -1,0 +1,1682 @@
+{
+  "schemaVersion": "1.0.0",
+  "cardId": "CX-508",
+  "worldId": "lingmai-ember-red-mist",
+  "referenceCatalog": "content/reference-library/catalog.json",
+  "generationPolicy": {
+    "stillImagesOnly": true,
+    "geminiOrVeoUsed": false,
+    "overwriteExistingAssets": false,
+    "realPeopleIdentityReuseAllowed": false,
+    "adoptionRequiresHumanReview": true,
+    "allowUnverifiedPersonalReferences": true
+  },
+  "requiredIdentityAnchorIds": [
+    "identity.shen_yan.v1",
+    "identity.chu_mingqi.v1",
+    "identity.shi_jun.v1",
+    "identity.celadon_scout.v1",
+    "identity.cavern_ally.v1",
+    "identity.formation_spirit.v1",
+    "creature.ink_dragon.v1"
+  ],
+  "requiredFirstFrameIds": [
+    "firstframe.node.camp.v3",
+    "firstframe.node.alliance.v3",
+    "firstframe.node.corpse_signs.v3",
+    "firstframe.node.rescue.v3",
+    "firstframe.shijun.negotiation.v3",
+    "firstframe.node.formation.v3",
+    "firstframe.node.combat_one.v3",
+    "firstframe.node.combat_two.v3",
+    "firstframe.node.aftermath.v3",
+    "firstframe.node.ending.v3",
+    "firstframe.dialogue.scout_mist.v3",
+    "firstframe.dialogue.scout_alliance.v3",
+    "firstframe.dialogue.scout_rescue.v3",
+    "firstframe.dialogue.formation_spirit.v3",
+    "firstframe.dialogue.cavern_ally.v3"
+  ],
+  "candidates": [
+    {
+      "assetId": "identity.shen_yan.v1",
+      "assetKind": "identity_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/identity-anchors/identity_shen_yan_v1.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        },
+        {
+          "assetId": "ref-people-002-97a702ff69",
+          "assetSha256": "9f6dd98f0cd2c0f6150e1a8b6a5427a0a4ec1b2cc68125ee9a4f50c558f5f879",
+          "role": "pose"
+        },
+        {
+          "assetId": "ref-costumes-textiles-022-wikime-8bf6f0ffbe33",
+          "assetSha256": "899ca152b6e82b2cd1b4bcf3066805c565385cbcab599b0d73381cd50e53acba",
+          "role": "surface_detail"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Shen Yan is one original East Asian man in his mid-twenties, deep-teal travel robe, empty hands and exactly one closed dark-gold flying-blade case. Full-body three-quarter stance on a wet sanctuary terrace; grounded boots and restrained alert expression.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3693281,
+        "sha256": "1a0973205fac132f1f5d3c658f8921200d5ce4ca7575182a2c85ab80eb166e50",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      }
+    },
+    {
+      "assetId": "identity.chu_mingqi.v1",
+      "assetKind": "identity_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/identity-anchors/identity_chu_mingqi_v1.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-002-6a1870a67c",
+          "assetSha256": "243a377edd25896d344c7e666e7dad16f8b26eb881b5175ded017726ea62bd70",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        },
+        {
+          "assetId": "ref-people-003-4763a77d34",
+          "assetSha256": "e47c769d1242922e7d2d795b0b2bd5c597422653bcb930bd3281bd07861d618f",
+          "role": "pose"
+        },
+        {
+          "assetId": "ref-costumes-textiles-022-wikime-8bf6f0ffbe33",
+          "assetSha256": "899ca152b6e82b2cd1b4bcf3066805c565385cbcab599b0d73381cd50e53acba",
+          "role": "surface_detail"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Chu Mingqi is one original East Asian woman in her mid-twenties, moon-white and dark-vermilion battle robes, empty hands, one small silver hair crown and exactly one rigid circular moon-ring attached at the waist; never a bag or handheld loop.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3820585,
+        "sha256": "7b2d838f4883e0bf32e8c5f50c3317eecf16377ae3db98706d09c6f8506ea079",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      }
+    },
+    {
+      "assetId": "identity.shi_jun.v1",
+      "assetKind": "identity_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/identity-anchors/identity_shi_jun_v2.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-004-5f8ba81573",
+          "assetSha256": "73f7d675a4e295e070358e9817f8b14ce45ebcf67c418d57815155a90cfe25e4",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        },
+        {
+          "assetId": "ref-people-002-97a702ff69",
+          "assetSha256": "9f6dd98f0cd2c0f6150e1a8b6a5427a0a4ec1b2cc68125ee9a4f50c558f5f879",
+          "role": "pose"
+        },
+        {
+          "assetId": "ref-costumes-textiles-022-wikime-8bf6f0ffbe33",
+          "assetSha256": "899ca152b6e82b2cd1b4bcf3066805c565385cbcab599b0d73381cd50e53acba",
+          "role": "surface_detail"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Shi Jun is one lean original East Asian man in his late thirties, brown-black short armor, left hand empty and exactly one short 28-centimetre aged-bronze formation spike held upright in the right hand, lower end above his knee; never a spear.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3663590,
+        "sha256": "b07d0d11162d16eb57629ab1d637f58d3f75a47ef39492a699370d9f64232a4b",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      }
+    },
+    {
+      "assetId": "identity.celadon_scout.v1",
+      "assetKind": "identity_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/identity-anchors/identity_celadon_scout_v1.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-004-5f8ba81573",
+          "assetSha256": "73f7d675a4e295e070358e9817f8b14ce45ebcf67c418d57815155a90cfe25e4",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-002-6a1870a67c",
+          "assetSha256": "243a377edd25896d344c7e666e7dad16f8b26eb881b5175ded017726ea62bd70",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        },
+        {
+          "assetId": "ref-people-003-4763a77d34",
+          "assetSha256": "e47c769d1242922e7d2d795b0b2bd5c597422653bcb930bd3281bd07861d618f",
+          "role": "pose"
+        },
+        {
+          "assetId": "ref-costumes-textiles-022-wikime-8bf6f0ffbe33",
+          "assetSha256": "899ca152b6e82b2cd1b4bcf3066805c565385cbcab599b0d73381cd50e53acba",
+          "role": "surface_detail"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. The Celadon Scout is one original East Asian woman about twenty-seven, low braided ponytail, muted celadon narrow-sleeved robe, one charcoal shoulder guard, empty hands and exactly one small pale-jade listening talisman pinned at her chest.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3913322,
+        "sha256": "ca89b618c736839a1c3a04cea5fab2526233e7b2ec370362aebbbe269299db87",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      }
+    },
+    {
+      "assetId": "identity.cavern_ally.v1",
+      "assetKind": "identity_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/identity-anchors/identity_cavern_ally_v1.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-002-6a1870a67c",
+          "assetSha256": "243a377edd25896d344c7e666e7dad16f8b26eb881b5175ded017726ea62bd70",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        },
+        {
+          "assetId": "ref-people-002-97a702ff69",
+          "assetSha256": "9f6dd98f0cd2c0f6150e1a8b6a5427a0a4ec1b2cc68125ee9a4f50c558f5f879",
+          "role": "pose"
+        },
+        {
+          "assetId": "ref-costumes-textiles-022-wikime-8bf6f0ffbe33",
+          "assetSha256": "899ca152b6e82b2cd1b4bcf3066805c565385cbcab599b0d73381cd50e53acba",
+          "role": "surface_detail"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. The Cavern Ally is one original East Asian man about twenty-nine with tied black hair, ash-white layered light armor over charcoal cloth, empty hands and exactly one rigid white-jade signal talisman mounted flat at the chest.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3748015,
+        "sha256": "60fa153e34eab624ba8c429274e640420778082c5d3001f38b6d73bc9d35947d",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      }
+    },
+    {
+      "assetId": "identity.formation_spirit.v1",
+      "assetKind": "identity_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/identity-anchors/identity_formation_spirit_v1.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-004-5f8ba81573",
+          "assetSha256": "73f7d675a4e295e070358e9817f8b14ce45ebcf67c418d57815155a90cfe25e4",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-168-openverser",
+          "assetSha256": "6cd2c923bc6a45a4ef7d47ea78946ed1b00fac49cb8bc2339c62fa5a63b56169",
+          "role": "lighting"
+        },
+        {
+          "assetId": "ref-people-001-6c50e4da3b",
+          "assetSha256": "0e772eef260fed986399dac6b50c0b4222dbce8917fc7887583e68c1ee9646e2",
+          "role": "pose"
+        },
+        {
+          "assetId": "ref-costumes-textiles-022-wikime-8bf6f0ffbe33",
+          "assetSha256": "899ca152b6e82b2cd1b4bcf3066805c565385cbcab599b0d73381cd50e53acba",
+          "role": "surface_detail"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. The Formation Spirit is exactly one elegant adult androgynous East Asian human-form projection, mostly opaque realistic face and hair, restrained translucent jade robe edges, fine aged-gold seams, natural hands and one physical crystal socket at its grounded feet.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3751706,
+        "sha256": "3253404c5e51c3098479cd0d08550df04fcafa5c15a14bcb678feba5d6b511c6",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      }
+    },
+    {
+      "assetId": "creature.ink_dragon.v1",
+      "assetKind": "creature_anchor",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/identity-anchors/creature_ink_dragon_v2.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        },
+        {
+          "assetId": "ref-animals-004-051b9e4dcb",
+          "assetSha256": "d1b54718725b77d755f14e0fc2cae904338ecc0e8d0863f1a9138d16926df39c",
+          "role": "anatomy"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. The Ink Dragon is exactly one original hornless, wingless subterranean spirit beast with one head, exactly two forelimbs total, one continuous low serpentine torso and one muscular tail. Show realistic scale surface, belly compression and coherent ground contact.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3967202,
+        "sha256": "14dbbedc2847f836c8744b4201f711a781a208ff155b38cfdce05c80eb812623",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      }
+    },
+    {
+      "assetId": "firstframe.node.camp.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_node_camp_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Preserve Shen left and Chu right across one physical relief route table on a majestic expedition terrace. Keep one closed blade case, one waist moon-ring, empty hands, exactly two foreground adults, cloud sea, waterfalls and one sealed bronze mountain gate.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3899210,
+        "sha256": "0440f99a7a41f9c43ec9228b31fe41ed1dbbe9d6cbed9625aa051cacea4400ae",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_camp_grand_v2.png",
+      "reuseVideoIds": [
+        "shot.camp.primary"
+      ]
+    },
+    {
+      "assetId": "firstframe.node.alliance.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_node_alliance_v4.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Preserve Shen and Chu across one physical jade relief map on a bright oath terrace with two small background disciple groups. Keep exact protagonist props and empty hands; all gate decoration is nonlinguistic cloud-and-water relief with no writing-like marks.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "none",
+        "sourceWidth": 1664,
+        "sourceHeight": 936,
+        "outputWidth": 1664,
+        "outputHeight": 936
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3929211,
+        "sha256": "53f8a5223f9149da45a9dbc1eb6fd4f1dc4fd7ef0ac7f0327ddfa2a11e3bcf37",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_alliance_grand_v2.png",
+      "reuseVideoIds": [
+        "shot.alliance.primary"
+      ]
+    },
+    {
+      "assetId": "firstframe.node.corpse_signs.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_node_corpse_signs_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Create an abandoned celestial outer garden with exactly one motionless clothed adult, exactly three hair-thin cuts on one black-barked tree and one heat-dried silver web trace. Show only Shen's shoulder edge and one empty gloved hand in foreground; no attacker or gore.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3933669,
+        "sha256": "b12d86e69d66bf0abeeb25d3197fc87f633bd450e0e24982f377e6e0ff644b50",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_corpse_signs_grand_v2.png",
+      "reuseVideoIds": [
+        "shot.corpse_signs.primary"
+      ]
+    },
+    {
+      "assetId": "firstframe.node.rescue.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_node_rescue_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. In a damaged sanctuary gallery show exactly four adult presences total: Shen, Chu, one wounded disciple behind a translucent jade ward and one unresolved standing shadow behind that ward. No fifth silhouette, creature, active spell, extra ring or duplicate case.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3947794,
+        "sha256": "a3ee9a158a9630c34a6955c471eafb584d885fe4c27c0d538f37efdb89ce0fd9",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_rescue_grand_v2.png",
+      "reuseVideoIds": [
+        "shot.rescue.primary"
+      ]
+    },
+    {
+      "assetId": "firstframe.shijun.negotiation.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_shijun_negotiation_v4.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Preserve Shi Jun with exactly one short 28-centimetre formation spike. One jade identity token and one closed medicine pouch sit separately on a plain relief plinth; two party members are cropped shoulder silhouettes. No spear, second spike or writing-like ornament.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "none",
+        "sourceWidth": 1664,
+        "sourceHeight": 936,
+        "outputWidth": 1664,
+        "outputHeight": 936
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3593839,
+        "sha256": "890d2bd5fe80db09d9bdd153b3fc09d2f3e634f524f27f5ea16ff9d0b816138f",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_shijun_negotiation_grand_v2.png",
+      "reuseVideoIds": [
+        "shot.shijun.primary",
+        "npc.response.shijun.verify_bargain",
+        "npc.invalid.hostile.abuse",
+        "npc.invalid.hostile.irrelevant",
+        "npc.invalid.hostile.too_long",
+        "npc.invalid.hostile.silence",
+        "npc.invalid.hostile.low_confidence"
+      ]
+    },
+    {
+      "assetId": "firstframe.node.formation.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_node_formation_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Preserve Shen and Chu at human scale in a bright circular sun court with exactly four physical hubs: bronze armature, lapis chimes, medicinal-leaf crystal reliquary and suspended water mirror, connected by one incomplete carved floor circuit.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 4102489,
+        "sha256": "356528b96b42616d72e8bbd634149ecdef28c7bda6955e439d843338ab939b78",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_formation_grand_v2.png",
+      "reuseVideoIds": [
+        "shot.formation.primary"
+      ]
+    },
+    {
+      "assetId": "firstframe.node.combat_one.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_node_combat_one_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. In the geothermal pavilion show Shen left, Chu right, exactly two wounded disciples behind one railing and exactly one hornless Ink Dragon with two forelimbs total and one tail. Keep the bright escape route visible before impact; no spell burst or extra anatomy.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3920473,
+        "sha256": "a44e411a25928c87f13042b8eb87778b501b766188d9d17de62958fd4d317454",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_combat_one_grand_v2.png",
+      "reuseVideoIds": [
+        "shot.combat_one.primary"
+      ]
+    },
+    {
+      "assetId": "firstframe.node.combat_two.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_node_combat_two_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Continue the same pavilion with one wounded two-limbed Ink Dragon, one cracked ivory pillar, Shen, Chu, exactly one injured disciple and one closed gold chest on a dry plinth. The foreclaw is near but not striking the crack; no collapse or floating chest.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3896157,
+        "sha256": "e54cac1f502030b1033a4ea5bedbd7082481ae37bd7a3cef68d386f93620b226",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_combat_two_grand_v2.png",
+      "reuseVideoIds": [
+        "shot.combat_two.primary"
+      ]
+    },
+    {
+      "assetId": "firstframe.node.aftermath.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_node_aftermath_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. After the dragon withdraws show exactly Shen, Chu and one wounded disciple. Spatially separate one closed gold chest, one medicinal-root tray and one bright narrowing exit; neither protagonist touches an objective. Keep late-afternoon light and readable jade floor.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 4065194,
+        "sha256": "f1f9adcce9f50dee4e1176994b08f56f2b392703827f28adf8ccb7bcbb3c08b0",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_aftermath_grand_v2.png",
+      "reuseVideoIds": [
+        "shot.aftermath.primary"
+      ]
+    },
+    {
+      "assetId": "firstframe.node.ending.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_node_ending_v4.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. At a grand sunrise overlook show exactly four adults: empty-handed Shen, one helper, one wounded rescued disciple and Chu supporting the group. Keep one blade case and one waist moon-ring attached; no bag, package, revealed artifact, extra survivor or victory pose.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "none",
+        "sourceWidth": 1664,
+        "sourceHeight": 936,
+        "outputWidth": 1664,
+        "outputHeight": 936
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3912430,
+        "sha256": "4ec86171597c97d42d2e9decfa8760ebd62ac689f67b55ad29c194e87d4d64b8",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_node_ending_grand_v2.png",
+      "reuseVideoIds": [
+        "shot.ending.primary"
+      ]
+    },
+    {
+      "assetId": "firstframe.dialogue.scout_mist.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_dialogue_scout_mist_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Preserve the Celadon Scout identity in a 65mm medium close-up beside one sunlit bronze mist gate. Mouth closed, hands lowered and empty, one pinned talisman, restrained red mist beyond the safe stair; exactly one foreground scout and no held tablet.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3891021,
+        "sha256": "e63d1d242cda447189797f00ac7ec17fabe7ca9d3d968b4df355f0d34fbc0c5c",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_mist_grand_v2.png",
+      "reuseVideoIds": [
+        "npc.response.prologue.inspect_mist",
+        "npc.invalid.calm.abuse",
+        "npc.invalid.calm.irrelevant",
+        "npc.invalid.calm.too_long",
+        "npc.invalid.calm.silence",
+        "npc.invalid.calm.low_confidence"
+      ]
+    },
+    {
+      "assetId": "firstframe.dialogue.scout_alliance.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_dialogue_scout_alliance_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Preserve the exact Scout at the left guard position of a sunlit alliance terrace, large in a 65mm medium shot. Mouth closed, hands empty, one pinned talisman, relief map foreground and disciplined formations deep behind; no tablet or writing.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 4049877,
+        "sha256": "3d3d51ab10662787b093841acc2724c3a973704fdcc77f802b874509bffb09fe",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_alliance_grand_v2.png",
+      "reuseVideoIds": [
+        "npc.response.alliance.cautious_cooperation",
+        "npc.invalid.ally.abuse",
+        "npc.invalid.ally.irrelevant",
+        "npc.invalid.ally.too_long",
+        "npc.invalid.ally.silence",
+        "npc.invalid.ally.low_confidence"
+      ]
+    },
+    {
+      "assetId": "firstframe.dialogue.scout_rescue.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_dialogue_scout_rescue_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Preserve the exact Scout large on the left with one pinned talisman and empty hands. Behind one jade ward include exactly one wounded adult and one unresolved shadow; exactly three visible presences total, integrated by warm gate rim and cool jade bounce.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3612380,
+        "sha256": "27132c4f7451a5a3346ea0e35aaf9e118e643a24c653f007e2b082f7375d0d3d",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_scout_rescue_grand_v2.png",
+      "reuseVideoIds": [
+        "npc.response.rescue.secure_survivor"
+      ]
+    },
+    {
+      "assetId": "firstframe.dialogue.formation_spirit.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_dialogue_formation_spirit_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Preserve exactly one grounded Formation Spirit in a 55mm medium shot, mouth closed and hands natural, emerging from one crystal socket. Keep exactly four physical hubs in depth and restrained jade contact glow; no ghost swarm, UI, giant disc or fifth hub.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3652671,
+        "sha256": "5dc8cd794f1972253e80587f7dee840a4fea577fc2fe39a7cc600dc72c4e9c42",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_formation_spirit_grand_v2.png",
+      "reuseVideoIds": [
+        "npc.invalid.system.abuse",
+        "npc.invalid.system.irrelevant",
+        "npc.invalid.system.too_long",
+        "npc.invalid.system.silence",
+        "npc.invalid.system.low_confidence"
+      ]
+    },
+    {
+      "assetId": "firstframe.dialogue.cavern_ally.v3",
+      "assetKind": "first_frame",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "adopted": false,
+      "shipInBuild": false,
+      "outputPath": "content/visual-candidates/cx508/first-frames/firstframe_dialogue_cavern_ally_v3.png",
+      "referenceInputs": [
+        {
+          "assetId": "ref-architecture-001-b5834f783d",
+          "assetSha256": "6140e365408b92811519f65b653231149c9bd1dc7092615dd6d9d6bd3493c02c",
+          "role": "structure"
+        },
+        {
+          "assetId": "ref-artifacts-001-c3a4a9fb55",
+          "assetSha256": "38b058ddd81c4dfbed212a116bcb2d4e2ff44ef773735a63d43729cdd42ed9d0",
+          "role": "material"
+        },
+        {
+          "assetId": "ref-landscape-001-74d99e0571",
+          "assetSha256": "3c45b92acb0c8f522c2cffef37a119ceedbe3060993d6e8961aa36f336e73fb9",
+          "role": "lighting"
+        }
+      ],
+      "prompt": "USE CASE: historical-scene. Create a photoreal live-action, premium historical cultivation-fantasy film still in an original world. Use monumental physically buildable ivory jade, warm limestone, vermilion timber, aged gilded bronze and celadon tile. Use bright motivated daylight, cool detailed shadows, shared environment bounce, contact shadows, natural skin and real cloth weight. Preserve stable identity and exact prop/person counts. No text, pseudo-writing, watermark, actor likeness, copied landmark, Qing clothing, modern objects, pasted-on figures, malformed hands, duplicate props, floating objects, stretched anatomy, global darkness or excessive bloom. Preserve the Cavern Ally in a 65mm medium close-up with one chest-mounted signal talisman, mouth closed and empty lowered hands. In the undercroft one distant stable Ink Dragon tail segment may remain behind a railing; no head, limb, orb, crowd or attack.",
+      "avoidItems": [
+        "no_text",
+        "no_watermark",
+        "no_actor_likeness",
+        "no_copied_landmark",
+        "no_qing_clothing",
+        "no_nonuniform_stretch"
+      ],
+      "continuityLocks": [
+        "stable_identity",
+        "stable_prop_count",
+        "grounded_contact",
+        "shared_environment_light"
+      ],
+      "postProcess": {
+        "mode": "aspect_crop",
+        "sourceWidth": 1672,
+        "sourceHeight": 941,
+        "outputWidth": 1664,
+        "outputHeight": 936,
+        "cropStrategy": "center",
+        "focusDescription": "Remove four horizontal pixels per side and two/three vertical edge pixels; preserve central subject without resampling."
+      },
+      "artifact": {
+        "mediaType": "image/png",
+        "byteLength": 3853547,
+        "sha256": "40c649633307bdaabfd06a25eb87931f8944c5995a517f21cb6f6188934261b4",
+        "width": 1664,
+        "height": 936
+      },
+      "reviewChecks": {
+        "skinAndFabric": "pending",
+        "weightBearing": "pending",
+        "contactShadows": "pending",
+        "sharedLighting": "pending",
+        "perspectiveScale": "pending",
+        "handsAndProps": "pending",
+        "noTextOrWatermark": "pending",
+        "noLandmarkReplication": "pending",
+        "noActorLikeness": "pending"
+      },
+      "sourceFirstFramePath": "unity/RedMistVerticalSlice/Assets/Resources/Generated/VideoFirstFrames/firstframe_dialogue_cavern_ally_grand_v2.png",
+      "reuseVideoIds": [
+        "npc.response.underground.coordinate_retreat",
+        "npc.invalid.encounter.abuse",
+        "npc.invalid.encounter.irrelevant",
+        "npc.invalid.encounter.too_long",
+        "npc.invalid.encounter.silence",
+        "npc.invalid.encounter.low_confidence"
+      ]
+    }
+  ]
+}

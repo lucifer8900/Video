@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/generation-review-result.schema.json",
+  "title": "GenerationReviewResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "promptSafe",
+    "playerInputSafe",
+    "sourceRecorded",
+    "characterConsistent",
+    "dialogueConsistent",
+    "humanApproved",
+    "canEnterReady",
+    "rejectionCodes"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "promptSafe": {
+      "type": "boolean"
+    },
+    "playerInputSafe": {
+      "type": "boolean"
+    },
+    "sourceRecorded": {
+      "type": "boolean"
+    },
+    "characterConsistent": {
+      "type": "boolean"
+    },
+    "dialogueConsistent": {
+      "type": "boolean"
+    },
+    "humanApproved": {
+      "type": "boolean"
+    },
+    "canEnterReady": {
+      "type": "boolean"
+    },
+    "rejectionCodes": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "canEnterReady": {
+            "const": true
+          }
+        },
+        "required": [
+          "canEnterReady"
+        ]
+      },
+      "then": {
+        "properties": {
+          "promptSafe": {
+            "const": true
+          },
+          "playerInputSafe": {
+            "const": true
+          },
+          "sourceRecorded": {
+            "const": true
+          },
+          "characterConsistent": {
+            "const": true
+          },
+          "dialogueConsistent": {
+            "const": true
+          },
+          "humanApproved": {
+            "const": true
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1241 @@
+{
+  "schemaVersion": "1.0.0",
+  "cases": [
+    {
+      "name": "valid API error response",
+      "schemaFile": "api-error-response.schema.json",
+      "instanceFile": "valid/api-error-response.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid API health response",
+      "schemaFile": "api-health-response.schema.json",
+      "instanceFile": "valid/api-health-response.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid story fact",
+      "schemaFile": "story-fact.schema.json",
+      "instanceFile": "valid/story-fact.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid character definition",
+      "schemaFile": "character-definition.schema.json",
+      "instanceFile": "valid/character-definition.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid character state",
+      "schemaFile": "character-state.schema.json",
+      "instanceFile": "valid/character-state.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid quest definition",
+      "schemaFile": "quest-definition.schema.json",
+      "instanceFile": "valid/quest-definition.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid scene node",
+      "schemaFile": "scene-node.schema.json",
+      "instanceFile": "valid/scene-node.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid voice intent",
+      "schemaFile": "voice-intent.schema.json",
+      "instanceFile": "valid/voice-intent.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid voice evaluation report",
+      "schemaFile": "voice-evaluation-report.schema.json",
+      "instanceFile": "valid/voice-evaluation-report.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid npc response",
+      "schemaFile": "npc-response.schema.json",
+      "instanceFile": "valid/npc-response.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid combatant state",
+      "schemaFile": "combatant-state.schema.json",
+      "instanceFile": "valid/combatant-state.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid encounter definition",
+      "schemaFile": "encounter-definition.schema.json",
+      "instanceFile": "valid/encounter-definition.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid combat resolution",
+      "schemaFile": "combat-resolution.schema.json",
+      "instanceFile": "valid/combat-resolution.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid media asset",
+      "schemaFile": "media-asset.schema.json",
+      "instanceFile": "valid/media-asset.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid succeeded media processing result",
+      "schemaFile": "media-processing-result.schema.json",
+      "instanceFile": "valid/media-processing-result.succeeded.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid failed media processing result",
+      "schemaFile": "media-processing-result.schema.json",
+      "instanceFile": "valid/media-processing-result.failed.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid media download ticket",
+      "schemaFile": "media-download-ticket.schema.json",
+      "instanceFile": "valid/media-download-ticket.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid admitted budget result",
+      "schemaFile": "budget-admission-result.schema.json",
+      "instanceFile": "valid/budget-admission-result.admitted.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid budget exceeded fallback result",
+      "schemaFile": "budget-admission-result.schema.json",
+      "instanceFile": "valid/budget-admission-result.fallback-exceeded.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid budget unavailable fallback result",
+      "schemaFile": "budget-admission-result.schema.json",
+      "instanceFile": "valid/budget-admission-result.fallback-unavailable.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid reserved budget cost record",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "valid/budget-cost-record.reserved.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid reconciliation pending budget cost record",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "valid/budget-cost-record.reconciliation-pending.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid settled budget cost record",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "valid/budget-cost-record.settled.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid released budget cost record",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "valid/budget-cost-record.released.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid denied budget cost record",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "valid/budget-cost-record.denied.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid generation job",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "valid/generation-job.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid created generation job",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "valid/generation-job.created.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid generating generation job",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "valid/generation-job.generating.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid moderating generation job",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "valid/generation-job.moderating.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid transcoding generation job",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "valid/generation-job.transcoding.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid ready generation job",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "valid/generation-job.ready.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid failed generation job",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "valid/generation-job.failed.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid expired generation job",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "valid/generation-job.expired.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid running generation provider result",
+      "schemaFile": "generation-provider-result.schema.json",
+      "instanceFile": "valid/generation-provider-result.running.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid succeeded generation provider result",
+      "schemaFile": "generation-provider-result.schema.json",
+      "instanceFile": "valid/generation-provider-result.succeeded.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid failed generation provider result",
+      "schemaFile": "generation-provider-result.schema.json",
+      "instanceFile": "valid/generation-provider-result.failed.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid ready generation review result",
+      "schemaFile": "generation-review-result.schema.json",
+      "instanceFile": "valid/generation-review-result.ready.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid rejected generation review result",
+      "schemaFile": "generation-review-result.schema.json",
+      "instanceFile": "valid/generation-review-result.rejected.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid save game",
+      "schemaFile": "save-game.schema.json",
+      "instanceFile": "valid/save-game.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid story bundle",
+      "schemaFile": "story-bundle.schema.json",
+      "instanceFile": "valid/story-bundle.json",
+      "expectedValid": true,
+      "checkReferences": true
+    },
+    {
+      "name": "story fact missing id",
+      "schemaFile": "story-fact.schema.json",
+      "instanceFile": "invalid/story-fact.missing-id.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/id"
+    },
+    {
+      "name": "voice scene node missing invalid input rules",
+      "schemaFile": "scene-node.schema.json",
+      "instanceFile": "invalid/scene-node.voice-without-invalid-input-rules.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/invalid_input_rules"
+    },
+    {
+      "name": "scene node invalid input kind",
+      "schemaFile": "scene-node.schema.json",
+      "instanceFile": "invalid/scene-node.invalid-input-kind.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/invalid_input_rules/harassment"
+    },
+    {
+      "name": "severe npc response without confirmation",
+      "schemaFile": "npc-response.schema.json",
+      "instanceFile": "invalid/npc-response.severe-without-confirmation.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/effects/0/confirmationRule"
+    },
+    {
+      "name": "severe scene effect without confirmation",
+      "schemaFile": "scene-node.schema.json",
+      "instanceFile": "invalid/scene-node.severe-without-confirmation.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/choices/0/effects/0/confirmationRule"
+    },
+    {
+      "name": "scene node invalid injection point",
+      "schemaFile": "scene-node.schema.json",
+      "instanceFile": "invalid/scene-node.invalid-injection-point.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/injectionPoints/0"
+    },
+    {
+      "name": "story bundle dangling reference",
+      "schemaFile": "story-bundle.schema.json",
+      "instanceFile": "invalid/story-bundle.dangling-reference.json",
+      "expectedValid": false,
+      "checkReferences": true,
+      "expectedCode": "reference.not_found",
+      "expectedPath": "/sceneNodes/0/choices/0/nextNodeId"
+    },
+    {
+      "name": "generation job rejects legacy running status",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "invalid/generation-job.legacy-running.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/jobStatus"
+    },
+    {
+      "name": "generation job rejects legacy succeeded status",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "invalid/generation-job.legacy-succeeded.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/jobStatus"
+    },
+    {
+      "name": "generation job rejects legacy cancelled status",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "invalid/generation-job.legacy-cancelled.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/jobStatus"
+    },
+    {
+      "name": "ready generation job requires completion time",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "invalid/generation-job.ready-missing-completed-at.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/completedAtUtc"
+    },
+    {
+      "name": "ready generation job requires result media",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "invalid/generation-job.ready-missing-result-media-ref.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/resultMediaRef"
+    },
+    {
+      "name": "ready generation job requires output hash",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "invalid/generation-job.ready-missing-output-hash.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/outputHash"
+    },
+    {
+      "name": "failed generation job requires completion time",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "invalid/generation-job.failed-missing-completed-at.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/completedAtUtc"
+    },
+    {
+      "name": "failed generation job requires failure code",
+      "schemaFile": "generation-job.schema.json",
+      "instanceFile": "invalid/generation-job.failed-missing-failure-code.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/failureCode"
+    },
+    {
+      "name": "succeeded provider result requires output reference",
+      "schemaFile": "generation-provider-result.schema.json",
+      "instanceFile": "invalid/generation-provider-result.succeeded-missing-output-ref.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/outputRef"
+    },
+    {
+      "name": "succeeded provider result requires output hash",
+      "schemaFile": "generation-provider-result.schema.json",
+      "instanceFile": "invalid/generation-provider-result.succeeded-missing-output-hash.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/outputHash"
+    },
+    {
+      "name": "failed provider result requires error code",
+      "schemaFile": "generation-provider-result.schema.json",
+      "instanceFile": "invalid/generation-provider-result.failed-missing-error-code.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/errorCode"
+    },
+    {
+      "name": "provider result rejects additional property",
+      "schemaFile": "generation-provider-result.schema.json",
+      "instanceFile": "invalid/generation-provider-result.additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/providerPayload"
+    },
+    {
+      "name": "ready review rejects a failed gate",
+      "schemaFile": "generation-review-result.schema.json",
+      "instanceFile": "invalid/generation-review-result.ready-with-failed-check.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/characterConsistent"
+    },
+    {
+      "name": "review result rejects additional property",
+      "schemaFile": "generation-review-result.schema.json",
+      "instanceFile": "invalid/generation-review-result.additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/rawProviderResponse"
+    },
+    {
+      "name": "succeeded media processing result requires profile",
+      "schemaFile": "media-processing-result.schema.json",
+      "instanceFile": "invalid/media-processing-result.succeeded-missing-profile.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/profile"
+    },
+    {
+      "name": "succeeded media processing result requires probe",
+      "schemaFile": "media-processing-result.schema.json",
+      "instanceFile": "invalid/media-processing-result.succeeded-missing-probe.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/probe"
+    },
+    {
+      "name": "succeeded media processing result requires content hash",
+      "schemaFile": "media-processing-result.schema.json",
+      "instanceFile": "invalid/media-processing-result.succeeded-missing-content-hash.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/contentHash"
+    },
+    {
+      "name": "succeeded media processing result requires object reference",
+      "schemaFile": "media-processing-result.schema.json",
+      "instanceFile": "invalid/media-processing-result.succeeded-missing-object-ref.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/objectRef"
+    },
+    {
+      "name": "succeeded media processing result requires length",
+      "schemaFile": "media-processing-result.schema.json",
+      "instanceFile": "invalid/media-processing-result.succeeded-missing-length.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/length"
+    },
+    {
+      "name": "failed media processing result requires error code",
+      "schemaFile": "media-processing-result.schema.json",
+      "instanceFile": "invalid/media-processing-result.failed-missing-error-code.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/errorCode"
+    },
+    {
+      "name": "media processing result rejects additional property",
+      "schemaFile": "media-processing-result.schema.json",
+      "instanceFile": "invalid/media-processing-result.additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/signedUrl"
+    },
+    {
+      "name": "media download ticket rejects bytes",
+      "schemaFile": "media-download-ticket.schema.json",
+      "instanceFile": "invalid/media-download-ticket.bytes.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/bytes"
+    },
+    {
+      "name": "media download ticket rejects base64",
+      "schemaFile": "media-download-ticket.schema.json",
+      "instanceFile": "invalid/media-download-ticket.base64.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/base64"
+    },
+    {
+      "name": "media download ticket rejects object credentials",
+      "schemaFile": "media-download-ticket.schema.json",
+      "instanceFile": "invalid/media-download-ticket.object-credential.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/objectCredential"
+    },
+    {
+      "name": "admitted budget result requires reservation",
+      "schemaFile": "budget-admission-result.schema.json",
+      "instanceFile": "invalid/budget-admission-result.admitted-missing-reservation.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/reservationId"
+    },
+    {
+      "name": "admitted budget result rejects fallback metadata",
+      "schemaFile": "budget-admission-result.schema.json",
+      "instanceFile": "invalid/budget-admission-result.admitted-with-fallback.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/outcome"
+    },
+    {
+      "name": "budget fallback requires fallback media",
+      "schemaFile": "budget-admission-result.schema.json",
+      "instanceFile": "invalid/budget-admission-result.fallback-missing-media.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/fallbackMediaRef"
+    },
+    {
+      "name": "budget fallback requires reason",
+      "schemaFile": "budget-admission-result.schema.json",
+      "instanceFile": "invalid/budget-admission-result.fallback-missing-reason.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/reasonCode"
+    },
+    {
+      "name": "budget fallback rejects reservation",
+      "schemaFile": "budget-admission-result.schema.json",
+      "instanceFile": "invalid/budget-admission-result.fallback-with-reservation.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/outcome"
+    },
+    {
+      "name": "budget admission result rejects account id",
+      "schemaFile": "budget-admission-result.schema.json",
+      "instanceFile": "invalid/budget-admission-result.account-id.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/accountId"
+    },
+    {
+      "name": "budget admission result rejects device id",
+      "schemaFile": "budget-admission-result.schema.json",
+      "instanceFile": "invalid/budget-admission-result.device-id.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/deviceId"
+    },
+    {
+      "name": "budget admission result rejects scope keys",
+      "schemaFile": "budget-admission-result.schema.json",
+      "instanceFile": "invalid/budget-admission-result.scope-keys.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/scopeKeys"
+    },
+    {
+      "name": "budget cost record rejects negative estimate",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "invalid/budget-cost-record.negative-estimate.json",
+      "expectedValid": false,
+      "expectedCode": "schema.minimum",
+      "expectedPath": "/estimatedMicros"
+    },
+    {
+      "name": "settled budget cost requires actual",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "invalid/budget-cost-record.settled-missing-actual.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/actualMicros"
+    },
+    {
+      "name": "released budget cost requires actual",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "invalid/budget-cost-record.released-missing-actual.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/actualMicros"
+    },
+    {
+      "name": "denied budget cost requires zero actual",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "invalid/budget-cost-record.denied-nonzero-actual.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/actualMicros"
+    },
+    {
+      "name": "budget cost record rejects account id",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "invalid/budget-cost-record.account-id.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/accountId"
+    },
+    {
+      "name": "budget cost record rejects device id",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "invalid/budget-cost-record.device-id.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/deviceId"
+    },
+    {
+      "name": "budget cost record rejects scope keys",
+      "schemaFile": "budget-cost-record.schema.json",
+      "instanceFile": "invalid/budget-cost-record.scope-keys.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/scopeKeys"
+    },
+    {
+      "name": "valid generation job submit request",
+      "schemaFile": "generation-job-submit.schema.json",
+      "instanceFile": "valid/generation-job-submit.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid queued generation job status",
+      "schemaFile": "generation-job-status.schema.json",
+      "instanceFile": "valid/generation-job-status.queued.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid ready generation job status",
+      "schemaFile": "generation-job-status.schema.json",
+      "instanceFile": "valid/generation-job-status.ready.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid failed generation job status",
+      "schemaFile": "generation-job-status.schema.json",
+      "instanceFile": "valid/generation-job-status.failed.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid expired generation job status",
+      "schemaFile": "generation-job-status.schema.json",
+      "instanceFile": "valid/generation-job-status.expired.json",
+      "expectedValid": true
+    },
+    {
+      "name": "generation submit rejects additional properties",
+      "schemaFile": "generation-job-submit.schema.json",
+      "instanceFile": "invalid/generation-job-submit.additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/providerApiKey"
+    },
+    {
+      "name": "queued generation status cannot be terminal",
+      "schemaFile": "generation-job-status.schema.json",
+      "instanceFile": "invalid/generation-job-status.queued-terminal.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/terminal"
+    },
+    {
+      "name": "failed generation status requires a failure code",
+      "schemaFile": "generation-job-status.schema.json",
+      "instanceFile": "invalid/generation-job-status.failed-missing-code.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/failureCode"
+    },
+    {
+      "name": "generation status rejects input hash leakage",
+      "schemaFile": "generation-job-status.schema.json",
+      "instanceFile": "invalid/generation-job-status.leaks-input-hash.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/inputHash"
+    },
+    {
+      "name": "valid ledger event",
+      "schemaFile": "ledger-event.schema.json",
+      "instanceFile": "valid/ledger-event.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid item gained ledger event",
+      "schemaFile": "ledger-event.schema.json",
+      "instanceFile": "valid/ledger-event.item-gained.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid ledger event batch",
+      "schemaFile": "ledger-event-batch.schema.json",
+      "instanceFile": "valid/ledger-event-batch.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid ledger acknowledgement batch",
+      "schemaFile": "ledger-event-batch-response.schema.json",
+      "instanceFile": "valid/ledger-event-batch-response.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid narrative ledger page",
+      "schemaFile": "narrative-ledger-page.schema.json",
+      "instanceFile": "valid/narrative-ledger-page.json",
+      "expectedValid": true
+    },
+    {
+      "name": "ledger event rejects additional properties",
+      "schemaFile": "ledger-event.schema.json",
+      "instanceFile": "invalid/ledger-event.additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/providerApiKey"
+    },
+    {
+      "name": "ledger event rejects non-player IDs",
+      "schemaFile": "ledger-event.schema.json",
+      "instanceFile": "invalid/ledger-event.invalid-player-id.json",
+      "expectedValid": false,
+      "expectedCode": "schema.pattern",
+      "expectedPath": "/playerId"
+    },
+    {
+      "name": "ledger event rejects nested payload data",
+      "schemaFile": "ledger-event.schema.json",
+      "instanceFile": "invalid/ledger-event.nested-payload.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/payload/unsafe"
+    },
+    {
+      "name": "ledger event rejects unknown free-text payload keys",
+      "schemaFile": "ledger-event.schema.json",
+      "instanceFile": "invalid/ledger-event.unknown-payload-key.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/payload/note"
+    },
+    {
+      "name": "ledger event rejects payload keys for another event type",
+      "schemaFile": "ledger-event.schema.json",
+      "instanceFile": "invalid/ledger-event.mismatched-payload-key.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/payload/debtKind"
+    },
+    {
+      "name": "ledger batch cannot be empty",
+      "schemaFile": "ledger-event-batch.schema.json",
+      "instanceFile": "invalid/ledger-event-batch.empty.json",
+      "expectedValid": false,
+      "expectedCode": "schema.minItems",
+      "expectedPath": "/events"
+    },
+    {
+      "name": "ledger acknowledgements reject fingerprint leakage",
+      "schemaFile": "ledger-event-batch-response.schema.json",
+      "instanceFile": "invalid/ledger-event-batch-response.leaks-fingerprint.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/acknowledgements/0/contentFingerprint"
+    },
+    {
+      "name": "valid needs-review association template",
+      "schemaFile": "association-template.schema.json",
+      "instanceFile": "valid/association-template.needs-review.json",
+      "expectedValid": true
+    },
+    {
+      "name": "association template rejects additional properties",
+      "schemaFile": "association-template.schema.json",
+      "instanceFile": "invalid/association-template.additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/providerPrompt"
+    },
+    {
+      "name": "association template requires a fallback thread",
+      "schemaFile": "association-template.schema.json",
+      "instanceFile": "invalid/association-template.missing-fallback.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/fallbackThreadId"
+    },
+    {
+      "name": "association template rejects elevated effects",
+      "schemaFile": "association-template.schema.json",
+      "instanceFile": "invalid/association-template.elevated-effect.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/allowedEffects/0/op"
+    },
+    {
+      "name": "branch unlock rejects relationship-only fields",
+      "schemaFile": "association-template.schema.json",
+      "instanceFile": "invalid/association-template.branch-extra-field.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/allowedEffects/0/field"
+    },
+    {
+      "name": "association template rejects clock overflow",
+      "schemaFile": "association-template.schema.json",
+      "instanceFile": "invalid/association-template.clock-overflow.json",
+      "expectedValid": false,
+      "expectedCode": "schema.maximum",
+      "expectedPath": "/cooldownWorldClock"
+    },
+    {
+      "name": "valid parameterless needs-review association template",
+      "schemaFile": "association-template.schema.json",
+      "instanceFile": "valid/association-template.no-parameters.needs-review.json",
+      "expectedValid": true
+    },
+    {
+      "name": "association template rejects non-micro relationship range",
+      "schemaFile": "association-template.schema.json",
+      "instanceFile": "invalid/association-template.relationship-range-overflow.json",
+      "expectedValid": false,
+      "expectedCode": "schema.maximum",
+      "expectedPath": "/allowedEffects/0/range/1"
+    },
+    {
+      "name": "association template rejects protected relationship fields",
+      "schemaFile": "association-template.schema.json",
+      "instanceFile": "invalid/association-template.protected-relationship-field.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/allowedEffects/0/field"
+    },
+    {
+      "name": "valid association consistency pass review",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "valid/association-consistency-review.pass.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid association consistency reject review",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "valid/association-consistency-review.reject.json",
+      "expectedValid": true
+    },
+    {
+      "name": "association consistency pass requires none reason",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "invalid/association-consistency-review.pass-with-reject-reason.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/reasonCode"
+    },
+    {
+      "name": "association consistency reject forbids none reason",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "invalid/association-consistency-review.reject-with-none.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/reasonCode"
+    },
+    {
+      "name": "association consistency review rejects unknown reason",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "invalid/association-consistency-review.unknown-reason.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/reasonCode"
+    },
+    {
+      "name": "association consistency review rejects additional properties",
+      "schemaFile": "association-consistency-review.schema.json",
+      "instanceFile": "invalid/association-consistency-review.additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/detail"
+    },
+    {
+      "name": "valid primary association decision audit",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "valid/association-decision-audit.primary.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid fallback association decision audit",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "valid/association-decision-audit.fallback.json",
+      "expectedValid": true
+    },
+    {
+      "name": "association decision audit requires prompt version",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "invalid/association-decision-audit.missing-prompt-version.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/providers/0/promptVersion"
+    },
+    {
+      "name": "association decision audit requires guard results",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "invalid/association-decision-audit.missing-guard-results.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/guardResults"
+    },
+    {
+      "name": "association decision fallback audit requires reason",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "invalid/association-decision-audit.fallback-missing-reason.json",
+      "expectedValid": false,
+      "expectedCode": "schema.type",
+      "expectedPath": "/outcomeReason"
+    },
+    {
+      "name": "association decision audit rejects sensitive additional fields",
+      "schemaFile": "association-decision-audit.schema.json",
+      "instanceFile": "invalid/association-decision-audit.sensitive-additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/rawPrompt"
+    },
+    {
+      "name": "valid technical StoryThread instance",
+      "schemaFile": "story-thread.schema.json",
+      "instanceFile": "valid/story-thread.json",
+      "expectedValid": true
+    },
+    {
+      "name": "StoryThread rejects additional properties",
+      "schemaFile": "story-thread.schema.json",
+      "instanceFile": "invalid/story-thread.additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/providerPrompt"
+    },
+    {
+      "name": "StoryThread rejects effects outside L2",
+      "schemaFile": "story-thread.schema.json",
+      "instanceFile": "invalid/story-thread.elevated-effect.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/injections/0/effects/0/op"
+    },
+    {
+      "name": "StoryThread must expire at chapter end",
+      "schemaFile": "story-thread.schema.json",
+      "instanceFile": "invalid/story-thread.persists-past-chapter.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/expiresAtChapterEnd"
+    },
+    {
+      "name": "StoryThread rejects overlong generated text",
+      "schemaFile": "story-thread.schema.json",
+      "instanceFile": "invalid/story-thread.text-too-long.json",
+      "expectedValid": false,
+      "expectedCode": "schema.maxLength",
+      "expectedPath": "/injections/0/text"
+    },
+    {
+      "name": "StoryThread rejects unsafe control characters",
+      "schemaFile": "story-thread.schema.json",
+      "instanceFile": "invalid/story-thread.unsafe-control-character.json",
+      "expectedValid": false,
+      "expectedCode": "schema.pattern",
+      "expectedPath": "/injections/0/text"
+    },
+    {
+      "name": "StoryThread relationship effects reject value fields",
+      "schemaFile": "story-thread.schema.json",
+      "instanceFile": "invalid/story-thread.relationship-with-value.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/injections/0/effects/0/value"
+    },
+    {
+      "name": "StoryThread requires a thread identifier",
+      "schemaFile": "story-thread.schema.json",
+      "instanceFile": "invalid/story-thread.invalid-thread-id.json",
+      "expectedValid": false,
+      "expectedCode": "schema.pattern",
+      "expectedPath": "/threadId"
+    },
+    {
+      "name": "StoryThread requires at least one injection",
+      "schemaFile": "story-thread.schema.json",
+      "instanceFile": "invalid/story-thread.empty-injections.json",
+      "expectedValid": false,
+      "expectedCode": "schema.minItems",
+      "expectedPath": "/injections"
+    },
+    {
+      "name": "valid needs-review shot manifest",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "valid/shot-manifest.needs-review.json",
+      "expectedValid": true
+    },
+    {
+      "name": "shot manifest rejects additional properties",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.additional-property.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/providerApiKey"
+    },
+    {
+      "name": "dispatchable shot requires a first frame",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-missing-frame.json",
+      "expectedValid": false,
+      "expectedCode": "schema.type",
+      "expectedPath": "/shots/0/firstFrame"
+    },
+    {
+      "name": "reuse-only shot cannot reserve generation cost",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.reuse-nonzero-cost.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/shots/0/maximumCostMicros"
+    },
+    {
+      "name": "valid ready shot manifest",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "valid/shot-manifest.ready.json",
+      "expectedValid": true
+    },
+    {
+      "name": "blocked manifest rejects dispatchable child shot",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.root-blocked-shot-dispatch.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/shots/0/dispatchAllowed"
+    },
+    {
+      "name": "dispatchable shot rejects placeholder first frame",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-placeholder-frame.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/shots/0/firstFrame/origin"
+    },
+    {
+      "name": "dispatchable shot requires target duration",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-missing-duration.json",
+      "expectedValid": false,
+      "expectedCode": "schema.type",
+      "expectedPath": "/shots/0/targetDurationMilliseconds"
+    },
+    {
+      "name": "shot manifest requires cost currency",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.missing-currency.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/currency"
+    },
+    {
+      "name": "ready response rejects image lip sync media",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.response-ready-image-lipsync.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/responseRequirements/0/lipSyncMedia/mediaType"
+    },
+    {
+      "name": "dispatchable shot rejects image primary media",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-image-primary.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/shots/0/primaryMedia/mediaType"
+    },
+    {
+      "name": "shot frame rejects video media type",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-video-frame.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/shots/0/firstFrame/mediaType"
+    },
+    {
+      "name": "dispatchable shot rejects audio fallback",
+      "schemaFile": "shot-manifest.schema.json",
+      "instanceFile": "invalid/shot-manifest.dispatch-audio-fallback.json",
+      "expectedValid": false,
+      "expectedCode": "schema.enum",
+      "expectedPath": "/shots/0/fallbackMedia/mediaType"
+    },
+    {
+      "name": "valid preview generation batch request",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "valid/generation-batch-request.preview.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid final generation batch request",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "valid/generation-batch-request.final.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid reviewed generation batch result",
+      "schemaFile": "generation-batch-result.schema.json",
+      "instanceFile": "valid/generation-batch-result.reviewed.json",
+      "expectedValid": true
+    },
+    {
+      "name": "generation batch request rejects more than twenty shots",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "invalid/generation-batch-request.21-shots.json",
+      "expectedValid": false,
+      "expectedCode": "schema.maxItems",
+      "expectedPath": "/shotIds"
+    },
+    {
+      "name": "generation batch request rejects duplicate shots",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "invalid/generation-batch-request.duplicate-shot.json",
+      "expectedValid": false,
+      "expectedCode": "schema.uniqueItems",
+      "expectedPath": "/shotIds"
+    },
+    {
+      "name": "generation batch request rejects provider selection",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "invalid/generation-batch-request.provider.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/provider"
+    },
+    {
+      "name": "final generation batch request requires preview source",
+      "schemaFile": "generation-batch-request.schema.json",
+      "instanceFile": "invalid/generation-batch-request.final-missing-source.json",
+      "expectedValid": false,
+      "expectedCode": "schema.required",
+      "expectedPath": "/sourcePreviewBatchRef"
+    },
+    {
+      "name": "generation batch result rejects prompt leakage",
+      "schemaFile": "generation-batch-result.schema.json",
+      "instanceFile": "invalid/generation-batch-result.prompt.json",
+      "expectedValid": false,
+      "expectedCode": "schema.additionalProperties",
+      "expectedPath": "/prompt"
+    },
+    {
+      "name": "valid passed lip sync review report",
+      "schemaFile": "lip-sync-review-report.schema.json",
+      "instanceFile": "valid/lip-sync-review-report.pass.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid blocked lip sync inventory report",
+      "schemaFile": "lip-sync-review-report.schema.json",
+      "instanceFile": "valid/lip-sync-review-report.blocked.json",
+      "expectedValid": true
+    },
+    {
+      "name": "lip sync pass rejects a failed technical check",
+      "schemaFile": "lip-sync-review-report.schema.json",
+      "instanceFile": "invalid/lip-sync-review-report.pass-failed-check.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/items/0/checks/lipSyncPassed"
+    },
+    {
+      "name": "lip sync review cannot claim production readiness",
+      "schemaFile": "lip-sync-review-report.schema.json",
+      "instanceFile": "invalid/lip-sync-review-report.production-ready.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/productionReadiness"
+    },
+    {
+      "name": "valid CX-504 Addressables pack plan",
+      "schemaFile": "addressables-pack-plan.schema.json",
+      "instanceFile": "valid/addressables-pack-plan.json",
+      "expectedValid": true
+    },
+    {
+      "name": "CX-504 base client cannot be delivered as a remote pack",
+      "schemaFile": "addressables-pack-plan.schema.json",
+      "instanceFile": "invalid/addressables-pack-plan.base-remote.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/packs/0/delivery"
+    },
+    {
+      "name": "valid CX-504 Addressables patch report",
+      "schemaFile": "addressables-patch-report.schema.json",
+      "instanceFile": "valid/addressables-patch-report.json",
+      "expectedValid": true
+    },
+    {
+      "name": "Addressables patch report cannot claim Steam verification",
+      "schemaFile": "addressables-patch-report.schema.json",
+      "instanceFile": "invalid/addressables-patch-report.steam-verified.json",
+      "expectedValid": false,
+      "expectedCode": "schema.const",
+      "expectedPath": "/steamPipeVerified"
+    },
+    {
+      "name": "Addressables patch report rejects path traversal",
+      "schemaFile": "addressables-patch-report.schema.json",
+      "instanceFile": "invalid/addressables-patch-report.path-traversal.json",
+      "expectedValid": false,
+      "expectedCode": "schema.pattern",
+      "expectedPath": "/baselineBuild/files/0/relativePath"
+    },
+    {
+      "name": "valid CX-508 red mist visual bible",
+      "schemaFile": "red-mist-visual-bible.schema.json",
+      "instanceFile": "../../content/story/red-mist/red-mist-visual-bible.cx508.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid CX-516 red mist art direction",
+      "schemaFile": "red-mist-art-direction.schema.json",
+      "instanceFile": "../../content/story/red-mist/red-mist-art-direction.cx516.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid CX-517 red mist multiview candidates",
+      "schemaFile": "red-mist-multiview-candidates.schema.json",
+      "instanceFile": "../../content/story/red-mist/red-mist-multiview-candidates.cx517.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid CX-518 red mist multiview adoption",
+      "schemaFile": "red-mist-multiview-adoption.schema.json",
+      "instanceFile": "../../content/story/red-mist/red-mist-multiview-adoption.cx518.json",
+      "expectedValid": true
+    },
+    {
+      "name": "valid CX-519 red mist expression references",
+      "schemaFile": "red-mist-expression-references.schema.json",
+      "instanceFile": "../../content/story/red-mist/red-mist-expression-references.cx519.json",
+      "expectedValid": true
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.bundle.unreachable-node",
+  "entryNodeId": "fixture.node.entry",
+  "contentHash": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+  "approvalStatus": "approved",
+  "storyFacts": [],
+  "characterDefinitions": [],
+  "characterStates": [],
+  "questDefinitions": [],
+  "sceneNodes": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node.entry",
+      "displayKey": "fixture.display.entry",
+      "entryConditions": [],
+      "mediaRefs": [],
+      "choices": [],
+      "voiceIntentRefs": [],
+      "injectionPoints": [],
+      "terminal": true,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node.unreachable",
+      "displayKey": "fixture.display.unreachable",
+      "entryConditions": [],
+      "mediaRefs": [],
+      "choices": [],
+      "voiceIntentRefs": [],
+      "injectionPoints": [],
+      "terminal": true,
+      "approvalStatus": "approved"
+    }
+  ],
+  "voiceIntents": [],
+  "npcResponses": [],
+  "combatantStates": [],
+  "encounterDefinitions": [],
+  "combatResolutions": [],
+  "mediaAssets": [],
+  "generationJobs": [],
+  "saveGames": []
+}

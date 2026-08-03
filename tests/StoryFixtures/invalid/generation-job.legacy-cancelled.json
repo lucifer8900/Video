@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0.0", "id": "fixture.generation_job.legacy_cancelled",
+  "providerKey": "fixture.provider.local", "modelSnapshot": "fixture-model-snapshot",
+  "promptVersion": "fixture.prompt.v1", "seed": 203,
+  "inputHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+  "jobStatus": "cancelled", "requestedAtUtc": "2026-07-15T00:00:00Z",
+  "cost": { "amount": 0, "currency": "CNY" }
+}

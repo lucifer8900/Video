@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/generation-job.schema.json",
+  "title": "GenerationJob",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "providerKey",
+    "modelSnapshot",
+    "promptVersion",
+    "seed",
+    "inputHash",
+    "jobStatus",
+    "requestedAtUtc",
+    "cost"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "providerKey": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "modelSnapshot": {
+      "type": "string",
+      "minLength": 1
+    },
+    "promptVersion": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "seed": {
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string",
+          "minLength": 1
+        }
+      ]
+    },
+    "inputHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "jobStatus": {
+      "type": "string",
+      "default": "created",
+      "enum": [
+        "created",
+        "queued",
+        "generating",
+        "moderating",
+        "transcoding",
+        "ready",
+        "failed",
+        "expired"
+      ]
+    },
+    "requestedAtUtc": {
+      "$ref": "common.schema.json#/$defs/dateTime"
+    },
+    "completedAtUtc": {
+      "$ref": "common.schema.json#/$defs/dateTime"
+    },
+    "cost": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        }
+      }
+    },
+    "resultMediaRef": {
+      "$ref": "common.schema.json#/$defs/mediaRef"
+    },
+    "outputHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "failureCode": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "auditStatus": {
+      "$ref": "common.schema.json#/$defs/status"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "jobStatus": {
+            "const": "ready"
+          }
+        },
+        "required": [
+          "jobStatus"
+        ]
+      },
+      "then": {
+        "required": [
+          "completedAtUtc",
+          "resultMediaRef",
+          "outputHash"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "jobStatus": {
+            "const": "failed"
+          }
+        },
+        "required": [
+          "jobStatus"
+        ]
+      },
+      "then": {
+        "required": [
+          "completedAtUtc",
+          "failureCode"
+        ]
+      }
+    }
+  ]
+}

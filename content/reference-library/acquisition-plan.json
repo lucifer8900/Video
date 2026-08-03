@@ -1,0 +1,303 @@
+{
+  "schemaVersion": "1.0.0",
+  "discoveryEndpoint": "https://api.openverse.org/v1/images/",
+  "allowedLicenses": ["cc0", "pdm", "by"],
+  "commercialUseRequired": true,
+  "modificationRequired": true,
+  "minimumTotalAssets": 48,
+  "pageSize": 20,
+  "maxPagesPerCategory": 8,
+  "maxDownloadBytes": 25000000,
+  "minimumWidth": 1024,
+  "minimumHeight": 640,
+  "categories": [
+    {
+      "id": "landscape",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China mountain landscape",
+      "queries": [
+        "China Huangshan mountain landscape",
+        "China Zhangjiajie mountain landscape",
+        "China Jiuzhaigou valley landscape",
+        "China Himalaya landscape"
+      ],
+      "queryRequiredAnyTerms": [
+        ["huangshan"],
+        ["zhangjiajie"],
+        ["jiuzhaigou"],
+        ["himalaya", "tibet"]
+      ],
+      "requiredAnyTerms": ["huangshan", "zhangjiajie", "jiuzhaigou", "himalaya", "tibet", "mountain", "valley", "great wall"],
+      "excludedTerms": ["restaurant", "olympics", "london", "canada", "united states"],
+      "requireChinaEvidence": true,
+      "chinaEvidenceTerms": ["china", "huangshan", "zhangjiajie", "jiuzhaigou", "tibet", "sichuan", "yunnan"],
+      "minimumAssets": 4,
+      "referenceRoles": ["composition", "color", "lighting", "surface_detail"]
+    },
+    {
+      "id": "architecture",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China traditional timber architecture",
+      "queries": [
+        "China Foguang Temple",
+        "China Fujian tulou",
+        "China Suzhou garden pavilion",
+        "China ancient pagoda architecture"
+      ],
+      "queryRequiredAnyTerms": [
+        ["foguang temple"],
+        ["tulou"],
+        ["pavilion for watching the moon", "suzhou"],
+        ["pagoda"]
+      ],
+      "requiredAnyTerms": ["dougong", "timber", "temple", "tulou", "courtyard", "garden", "pavilion", "pagoda", "roof"],
+      "excludedTerms": ["restaurant", "olympics", "theme park", "las vegas", "tiananmen", "forbidden city", "mao", "communist", "modern office", "police station"],
+      "requireChinaEvidence": true,
+      "chinaEvidenceTerms": ["china", "chinese", "fujian", "fukien", "jiangnan", "suzhou", "hangzhou", "shanxi", "yunnan", "foguang"],
+      "minimumAssets": 4,
+      "referenceRoles": ["structure", "material", "composition", "surface_detail"]
+    },
+    {
+      "id": "plants",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China medicinal plants botanical",
+      "queries": [
+        "China tea bushes garden",
+        "China lotus flower",
+        "China orchid flower",
+        "China peony flower"
+      ],
+      "queryRequiredAnyTerms": [
+        ["tea bushes", "tea garden"],
+        ["lotus"],
+        ["orchid", "cymbidium", "paphiopedilum"],
+        ["peony"]
+      ],
+      "requiredAnyTerms": ["tea bushes", "tea garden", "lotus", "orchid", "cymbidium", "paphiopedilum", "peony"],
+      "excludedTerms": ["restaurant", "plastic", "artificial", "canada"],
+      "requireChinaEvidence": false,
+      "chinaEvidenceTerms": [],
+      "minimumAssets": 4,
+      "referenceRoles": ["anatomy", "color", "surface_detail", "composition"]
+    },
+    {
+      "id": "animals",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China wildlife animals",
+      "queries": [
+        "China giant panda wildlife",
+        "China red crowned crane wildlife",
+        "China Tibetan macaque wildlife",
+        "China takin wildlife"
+      ],
+      "queryRequiredAnyTerms": [
+        ["panda"],
+        ["red-crowned crane", "red crowned crane"],
+        ["tibetan macaque", "macaque"],
+        ["takin"]
+      ],
+      "requiredAnyTerms": ["panda", "crane", "monkey", "macaque", "leopard", "ibis", "takin"],
+      "excludedTerms": ["restaurant", "logo", "toy", "statue", "cartoon"],
+      "requireChinaEvidence": false,
+      "chinaEvidenceTerms": [],
+      "minimumAssets": 4,
+      "referenceRoles": ["anatomy", "silhouette", "pose", "surface_detail"]
+    },
+    {
+      "id": "waters",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China river lake sea coast",
+      "queries": [
+        "China Li River landscape",
+        "China West Lake water",
+        "China Yellow River landscape",
+        "China Hainan beach"
+      ],
+      "queryRequiredAnyTerms": [
+        ["li river", "lijiang", "yulong river"],
+        ["west lake", "summer palace", "kunming lake"],
+        ["yellow river"],
+        ["yalong bay", "empty beach", "holiday beach", "wuzhizhou island", "sea wave"]
+      ],
+      "requiredAnyTerms": ["river", "lake", "sea", "coast", "harbour", "harbor", "beach", "bay", "water"],
+      "excludedTerms": ["united states", "restaurant", "festival", "ice world", "malaysia", "teluk", "kuantan", "philippines", "palawan"],
+      "requireChinaEvidence": true,
+      "chinaEvidenceTerms": ["china", "li river", "west lake", "yellow river", "south china sea", "beijing", "hainan", "hong kong", "sanya", "yalong", "haikou", "wuzhizhou"],
+      "minimumAssets": 4,
+      "referenceRoles": ["composition", "lighting", "color", "surface_detail"]
+    },
+    {
+      "id": "weather",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China rain fog storm clouds weather",
+      "queries": [
+        "China Huangshan fog",
+        "China rain street",
+        "China storm clouds",
+        "China snow landscape"
+      ],
+      "queryRequiredAnyTerms": [
+        ["huangshan", "yellow mountain"],
+        ["rain", "raining", "rainy"],
+        ["storm", "storm clouds", "thunderstorm"],
+        ["snow", "snowy", "everest"]
+      ],
+      "requiredAnyTerms": ["fog", "rain", "storm", "cloud", "snow", "mist", "everest", "huangshan"],
+      "excludedTerms": ["restaurant", "olympics", "video game", "wallpaper"],
+      "requireChinaEvidence": true,
+      "chinaEvidenceTerms": ["china", "huangshan", "everest", "tibet", "yunnan", "sichuan", "hong kong"],
+      "minimumAssets": 4,
+      "referenceRoles": ["weather", "lighting", "color", "composition"]
+    },
+    {
+      "id": "astronomy",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China Milky Way",
+      "queries": [
+        "China Moon Milky Way",
+        "China lunar eclipse",
+        "China solar eclipse",
+        "China Comet Tsuchinshan-ATLAS"
+      ],
+      "queryRequiredAnyTerms": [
+        ["moon and milky way", "milky way arch"],
+        ["full moon", "lunar eclipse"],
+        ["solar eclipse", "eclipse"],
+        ["comet tsuchinshan-atlas", "comet"]
+      ],
+      "requiredAnyTerms": ["milky way", "moon", "eclipse", "star", "night sky", "comet"],
+      "excludedTerms": ["restaurant", "london", "sedona", "south korea", "united states", "theme park", "riding", "bicycle", "cyclist"],
+      "requireChinaEvidence": false,
+      "chinaEvidenceTerms": [],
+      "minimumAssets": 4,
+      "referenceRoles": ["lighting", "color", "composition", "surface_detail"]
+    },
+    {
+      "id": "people",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China people candid portrait",
+      "queries": [
+        "China woman street portrait",
+        "China Shaxi man portrait",
+        "China reading girl portrait",
+        "China smiling portrait"
+      ],
+      "queryRequiredAnyTerms": [
+        ["woman on street", "portrait woman"],
+        ["shaxi man", "portrait man"],
+        ["reading girl", "reading woman"],
+        ["smile", "smiling"]
+      ],
+      "requiredAnyTerms": ["portrait", "people", "candid", "man", "woman", "girl", "boy", "elderly", "old", "smile", "reading"],
+      "excludedTerms": ["cigarette", "smoking", "tobacco", "olympics", "poster", "statue", "wax figure", "mannequin"],
+      "requireChinaEvidence": true,
+      "chinaEvidenceTerms": ["china", "chinese", "beijing", "shanghai", "hong kong", "sichuan", "yunnan", "guangzhou"],
+      "minimumAssets": 4,
+      "referenceRoles": ["pose", "expression", "gaze", "gesture", "weight_balance"]
+    },
+    {
+      "id": "costumes_textiles",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China historical robe garment",
+      "queries": [
+        "China dragon robe",
+        "China Daoist robe",
+        "China woman apron textile",
+        "China imperial robe"
+      ],
+      "queryRequiredAnyTerms": [
+        ["dragon robe"],
+        ["daoist robe", "daoist priest's robe"],
+        ["woman's apron", "apron"],
+        ["imperial robe"]
+      ],
+      "requiredAnyTerms": ["robe", "costume", "textile", "silk", "garment", "clothing", "apron"],
+      "excludedTerms": ["restaurant", "toy", "halloween", "cosplay", "figurine", "statue", "zodiac", "theater", "theatre", "opera", "museum interior", "background"],
+      "requireChinaEvidence": true,
+      "chinaEvidenceTerms": ["china", "chinese", "qing", "tang", "ming", "song", "famen"],
+      "minimumAssets": 4,
+      "referenceRoles": ["garment_construction", "material", "color", "surface_detail"]
+    },
+    {
+      "id": "artifacts",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China bronze",
+      "queries": [
+        "China bronze vessel museum",
+        "China jade pendant museum",
+        "China celadon vessel museum",
+        "China ancient sword museum"
+      ],
+      "queryRequiredAnyTerms": [
+        ["bronze vessel", "bronze ritual"],
+        ["jade huang pendant", "jade pendant"],
+        ["celadon ram vessel", "celadon jiaodou", "china ceramics lotus vessel"],
+        ["sword", "dagger", "blade"]
+      ],
+      "requiredAnyTerms": ["bronze", "jade", "ceramic", "celadon", "dagger", "vessel", "sword", "terracotta"],
+      "excludedTerms": ["american art china company", "american", "boston", "new hampshire", "portsmouth", "restaurant", "souvenir", "replica"],
+      "requireChinaEvidence": true,
+      "chinaEvidenceTerms": ["china", "chinese", "shang", "qing", "tang", "song", "zhou", "han", "jin", "yue kiln", "ou kiln"],
+      "minimumAssets": 4,
+      "referenceRoles": ["structure", "material", "surface_detail", "silhouette"]
+    },
+    {
+      "id": "geology_caves",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China karst",
+      "queries": [
+        "China karst cave",
+        "China limestone cave",
+        "China Yunnan stone forest",
+        "China desert rock geology"
+      ],
+      "queryRequiredAnyTerms": [
+        ["karst"],
+        ["limestone cave", "cave", "cavern"],
+        ["stone forest", "shilin"],
+        ["desert", "gobi", "takla makan"]
+      ],
+      "requiredAnyTerms": ["karst", "cave", "limestone", "stone", "siltstone", "desert", "rock"],
+      "excludedTerms": ["philippines", "restaurant", "theme park", "vagina cave"],
+      "requireChinaEvidence": true,
+      "chinaEvidenceTerms": ["china", "guangxi", "yangshuo", "yunnan", "takla makan", "guilin"],
+      "minimumAssets": 4,
+      "referenceRoles": ["structure", "material", "lighting", "surface_detail"]
+    },
+    {
+      "id": "light_fog_fire",
+      "queryMatchField": "title",
+      "requireOnePerQuery": true,
+      "query": "China atmospheric light mist smoke",
+      "queries": [
+        "China lantern night",
+        "China fire flames",
+        "China Huangshan mist light",
+        "China temple incense smoke"
+      ],
+      "queryRequiredAnyTerms": [
+        ["lantern"],
+        ["burning offerings", "atavistic beacon", "blacksmith"],
+        ["sunset at huangshan", "yellow mountain", "huangshan"],
+        ["incense", "smoke"]
+      ],
+      "requiredAnyTerms": ["lantern", "candle", "flame", "fire", "burning", "mist", "fog", "smoke", "night", "light", "incense", "huangshan"],
+      "excludedTerms": ["human rights", "mao", "olympics", "london", "restaurant", "political", "air conditioner", "motorcycle"],
+      "requireChinaEvidence": true,
+      "chinaEvidenceTerms": ["china", "chinese", "beijing", "xi'an", "xian", "hong kong", "shanghai", "gobi", "huangshan"],
+      "minimumAssets": 4,
+      "referenceRoles": ["lighting", "weather", "color", "composition"]
+    }
+  ]
+}

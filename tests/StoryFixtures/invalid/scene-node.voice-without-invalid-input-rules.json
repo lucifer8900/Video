@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.node.voice_missing_reactions",
+  "displayKey": "fixture.node.voice_missing_reactions.display",
+  "entryConditions": [],
+  "mediaRefs": [],
+  "choices": [],
+  "voiceIntentRefs": [
+    "fixture.intent.primary"
+  ],
+  "injectionPoints": [],
+  "terminal": true,
+  "approvalStatus": "approved"
+}

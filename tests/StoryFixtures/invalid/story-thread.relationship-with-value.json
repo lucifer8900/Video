@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "threadId": "thr.fixture.relationship-value",
+  "templateId": "assoc.fixture.v1",
+  "playerId": "p.fixture",
+  "resolvedParams": {},
+  "injections": [{
+    "nodeId": "node.fixture",
+    "point": "node_intro",
+    "text": "[TECHNICAL_PLACEHOLDER]",
+    "effects": [{
+      "op": "relationship",
+      "targetRef": "npc.fixture",
+      "field": "trust",
+      "delta": 1,
+      "value": "clue.fixture"
+    }]
+  }],
+  "mediaRefs": [],
+  "expiresAtChapterEnd": true,
+  "auditRef": "genjob.fixture",
+  "fallbackUsed": false
+}

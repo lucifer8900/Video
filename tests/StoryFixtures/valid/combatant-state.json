@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.combatant_state.primary",
+  "entityId": "fixture.character.primary",
+  "cultivation": {
+    "realmId": "qi_refining",
+    "stage": 1,
+    "accumulation": 0,
+    "bottleneckTags": []
+  },
+  "resources": {
+    "mana": {
+      "current": 10,
+      "maximum": 10,
+      "purity": 50
+    },
+    "divineSenseLoad": {
+      "current": 0,
+      "maximum": 10
+    },
+    "body": {
+      "current": 10,
+      "maximum": 10
+    },
+    "vitalEssence": {
+      "current": 10,
+      "maximum": 10
+    },
+    "soulIntegrity": {
+      "current": 10,
+      "maximum": 10
+    }
+  },
+  "injuries": [],
+  "resistances": [
+    {
+      "vector": "physical",
+      "value": 0,
+      "sourceIds": []
+    }
+  ],
+  "loadoutIds": [
+    "fixture.loadout.primary"
+  ],
+  "retreatReserveMana": 2,
+  "exposureTags": []
+}

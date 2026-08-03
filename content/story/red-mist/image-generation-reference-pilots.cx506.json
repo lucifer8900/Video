@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0.0",
+  "cardId": "CX-506",
+  "worldId": "lingmai-ember-red-mist",
+  "referenceCatalog": "content/reference-library/catalog.json",
+  "promptRecordPath": "content/story/red-mist/image-generation-reference-pilots.cx506.md",
+  "generationPolicy": {
+    "stillImagesOnly": true,
+    "geminiOrVeoUsed": false,
+    "overwriteExistingFirstFrames": false,
+    "realPeopleIdentityReuseAllowed": false,
+    "adoptionRequiresHumanReview": true
+  },
+  "assets": [
+    {
+      "assetType": "architecture_environment",
+      "assetId": "cx506-architecture-environment-v1",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "referenceAssetIds": [
+        "ref-architecture-001-b5834f783d",
+        "ref-architecture-002-30c475224b",
+        "ref-architecture-004-5f8ba81573",
+        "ref-landscape-001-74d99e0571"
+      ],
+      "prompt": "Create a new 16:9 photoreal live-action medicinal sanctuary for the original Lingmai Ember world. Use the four photographs only for timber load paths, waterside pavilion scale, distant vertical eave rhythm and cloud-sea depth; never reproduce a real building or landmark. Build a functional three-terrace sanctuary with herb beds, irrigation, wet stone, waterfalls, three naturally integrated attendants and grand post-rain morning light. Preserve physical construction, material texture, contact shadows and cool-warm depth; forbid text, modern objects, copied landmarks, floating architecture, neon, illustration and plastic CGI.",
+      "outputPath": "unity/RedMistVerticalSlice/Assets/Art/Generated/Cx506Pilots/cx506-architecture-environment-v1.png",
+      "reviewNotes": [
+        "Timber, water court, medicinal beds and human scale read coherently.",
+        "No existing first frame is replaced; human art approval is still required."
+      ]
+    },
+    {
+      "assetType": "landscape_weather",
+      "assetId": "cx506-landscape-weather-v1",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "referenceAssetIds": [
+        "ref-landscape-002-de6242e92d",
+        "ref-landscape-003-a4f0e0224f",
+        "ref-weather-003-5e27f0f2d4",
+        "ref-waters-001-2f77906cbd"
+      ],
+      "prompt": "Generate a new 16:9 photoreal secret-garden valley using references only for sandstone geology, mineral-water optics, a real pre-storm sky and navigable karst-water perspective. Show two readable exploration routes, a distant original sanctuary gate, waterfalls, wet plants, cold rain on the left and majestic warm broken sunlight on the right. Keep supernatural effects restrained to a thin distant red-mist seam and faint pollen. Require physical terrain, water reflections, human scale and detailed shadows; forbid copied real locations, oversaturated postcard color, floating islands, giant energy effects, text, anime and plastic CGI.",
+      "outputPath": "unity/RedMistVerticalSlice/Assets/Art/Generated/Cx506Pilots/cx506-landscape-weather-v1.png",
+      "reviewNotes": [
+        "Weather-driven bright-dark contrast and route readability are successful.",
+        "The generated image contains five distant expedition figures although the verbatim prompt requested four; do not use it as a locked continuity frame."
+      ]
+    },
+    {
+      "assetType": "original_character",
+      "assetId": "cx506-original-character-v1",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "referenceAssetIds": [
+        "ref-people-003-4763a77d34",
+        "ref-people-001-6c50e4da3b",
+        "ref-costumes-textiles-002-dbb9476d1a",
+        "ref-costumes-textiles-022-wikime-8bf6f0ffbe33",
+        "ref-architecture-002-30c475224b"
+      ],
+      "prompt": "Create a new 16:9 photoreal live-action full-body still of the existing GAME-ORIGINAL celadon-clad woman scout. Real people may inform only pose, expression, skin microtexture and weight balance; never copy identity, face, age or clothing. Preserve the approved low braid, muted celadon narrow-sleeved robe, one charcoal shoulder guard and exactly one pinned pale-jade talisman. Ground her on wet stone while one hand physically steadies against a timber column in a post-rain medicinal garden. Require natural asymmetry, pores, cloth weight, complete boots, contact shadows and shared pond/eave lighting; forbid actor likeness, AI beauty skin, floating feet, modern props, text and CGI styling.",
+      "outputPath": "unity/RedMistVerticalSlice/Assets/Art/Generated/Cx506Pilots/cx506-original-character-v1.png",
+      "reviewNotes": [
+        "Face, hands, feet, cloth, column contact and environmental light pass the pilot inspection.",
+        "The casting remains intentionally polished and must receive human identity and art-direction review before adoption."
+      ]
+    },
+    {
+      "assetType": "original_spirit_creature",
+      "assetId": "cx506-original-spirit-creature-v1",
+      "generationMode": "codex_builtin_imagegen",
+      "adoptionStatus": "needs_review",
+      "referenceAssetIds": [
+        "ref-animals-004-051b9e4dcb",
+        "ref-landscape-004-aa24c63490",
+        "ref-plants-003-ca8f3ee16c",
+        "ref-light-fog-fire-003-60a5911c43"
+      ],
+      "prompt": "Create a new 16:9 photoreal wildlife-cinema still of one unnamed GAME-ORIGINAL cliff herbivore. Use the takin only for believable mass and hoof loading, the mountain only for high-altitude depth, the orchid only for environmental color and the mist photo only for backlight. Design one coherent donkey-sized mammal with four correctly jointed legs, broad split hooves, smoky celadon-gray double coat and exactly two short backward horns whose tips show restrained pale-jade mineral striation. Ground it on wet rock scenting orchids at dawn; require real anatomy, fur direction, moss compression and contact shadows; forbid dragons, antlers, wings, chimeras, neon glow, extra limbs, text, illustration and plastic CGI.",
+      "outputPath": "unity/RedMistVerticalSlice/Assets/Art/Generated/Cx506Pilots/cx506-original-spirit-creature-v1.png",
+      "reviewNotes": [
+        "The creature reads as a coherent living mountain animal before its restrained supernatural trait.",
+        "It remains unnamed and non-canonical until human world-building and art review."
+      ]
+    }
+  ]
+}

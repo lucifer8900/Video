@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/association-decision-audit.schema.json",
+  "title": "AssociationDecisionAudit",
+  "type": "object",
+  "additionalProperties": false,
+  "$defs": {
+    "reasonCode": {
+      "type": "string",
+      "enum": [
+        "none",
+        "disabled",
+        "no_candidates",
+        "approved_fallback",
+        "ranker_invalid_response",
+        "ranker_unavailable",
+        "ranker_timeout",
+        "no_valid_proposal",
+        "guard_rejected",
+        "reviewer_rejected",
+        "deadline_exceeded",
+        "state_unavailable",
+        "unknown_entity",
+        "forbidden_fact",
+        "target_dead",
+        "target_unreachable",
+        "effect_not_allowed",
+        "effect_out_of_range",
+        "cooldown_active",
+        "trigger_limit_reached",
+        "unapproved_text_variant",
+        "model_fact_conflict",
+        "model_character_conflict",
+        "model_chapter_tone_conflict",
+        "model_invalid_response",
+        "model_unavailable",
+        "model_timeout",
+        "model_review_context_changed"
+      ]
+    },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "role",
+        "providerKey",
+        "promptVersion",
+        "modelSnapshot",
+        "invoked"
+      ],
+      "properties": {
+        "role": {
+          "type": "string",
+          "enum": [
+            "ranker",
+            "reviewer"
+          ]
+        },
+        "providerKey": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "promptVersion": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "modelSnapshot": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "invoked": {
+          "type": "boolean"
+        }
+      }
+    },
+    "guardResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stage",
+        "decision",
+        "reasonCode"
+      ],
+      "properties": {
+        "stage": {
+          "type": "string",
+          "enum": [
+            "prefilter",
+            "selection",
+            "deterministic",
+            "review",
+            "signing",
+            "trigger_reservation",
+            "fallback"
+          ]
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "passed",
+            "rejected",
+            "not_run"
+          ]
+        },
+        "reasonCode": {
+          "$ref": "#/$defs/reasonCode"
+        },
+        "worldSnapshotId": {
+          "$ref": "common.schema.json#/$defs/id"
+        }
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "auditRef",
+    "threadId",
+    "inputHash",
+    "playerRefHash",
+    "chapterId",
+    "templateId",
+    "resolvedParams",
+    "providers",
+    "guardResults",
+    "candidateCount",
+    "fallbackUsed",
+    "outcomeReason",
+    "latencyMilliseconds",
+    "createdAtUtc"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "auditRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "pattern": "^genjob\\."
+        }
+      ]
+    },
+    "threadId": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "pattern": "^thr\\."
+        }
+      ]
+    },
+    "inputHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "playerRefHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "chapterId": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "pattern": "^chapter\\."
+        }
+      ]
+    },
+    "templateId": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "pattern": "^assoc\\."
+        }
+      ]
+    },
+    "resolvedParams": {
+      "type": "object",
+      "maxProperties": 16,
+      "propertyNames": {
+        "pattern": "^[A-Za-z][A-Za-z0-9_]{0,63}$"
+      },
+      "additionalProperties": {
+        "$ref": "common.schema.json#/$defs/id"
+      }
+    },
+    "providers": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/provider"
+      },
+      "contains": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "const": "ranker"
+          }
+        },
+        "required": [
+          "role"
+        ]
+      },
+      "minContains": 1,
+      "maxContains": 1
+    },
+    "guardResults": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 128,
+      "items": {
+        "$ref": "#/$defs/guardResult"
+      }
+    },
+    "candidateCount": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "fallbackUsed": {
+      "type": "boolean"
+    },
+    "outcomeReason": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/reasonCode"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "latencyMilliseconds": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 600000
+    },
+    "createdAtUtc": {
+      "$ref": "common.schema.json#/$defs/dateTime"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "fallbackUsed": {
+            "const": true
+          }
+        },
+        "required": [
+          "fallbackUsed"
+        ]
+      },
+      "then": {
+        "properties": {
+          "outcomeReason": {
+            "$ref": "#/$defs/reasonCode"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "outcomeReason": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

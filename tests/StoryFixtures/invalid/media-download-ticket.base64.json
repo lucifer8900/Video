@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0.0", "requestId": "fixture-request-ticket-base64", "mediaId": "fixture.media.base64",
+  "contentHash": "sha256:6666666666666666666666666666666666666666666666666666666666666666",
+  "downloadUrl": "https://download.example.test/media/base64.mp4?ticket=fixture", "expiresAtUtc": "2026-07-16T12:05:00Z",
+  "contentType": "video/mp4", "length": 4, "base64": "AAECAw=="
+}

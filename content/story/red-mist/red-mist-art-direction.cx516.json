@@ -1,0 +1,660 @@
+{
+  "schemaVersion": "1.0.0",
+  "cardId": "CX-516",
+  "worldId": "lingmai-ember-red-mist",
+  "approval": {
+    "status": "approved",
+    "approvedOn": "2026-08-03",
+    "decisions": [
+      "scope_six_humanoids_and_one_ink_dragon",
+      "tang_song_original_xianxia_direction",
+      "twelve_outfit_matrix",
+      "twelve_expression_reference_assets_per_humanoid",
+      "veo_lite_five_per_batch_one_per_shot_zero_retry",
+      "strip_veo_audio_and_produce_voice_and_sound_independently"
+    ]
+  },
+  "artDirection": {
+    "primaryDirection": [
+      "tang_grand_ceremonial",
+      "song_elegant_daily",
+      "original_xianxia"
+    ],
+    "tonalPrinciples": {
+      "brightMajesty": true,
+      "controlledContrast": true,
+      "noGlobalGloom": true,
+      "dayDuskNightContrast": true,
+      "physicalMaterials": true
+    },
+    "prohibitions": [
+      "no_dirty_gray",
+      "no_unmotivated_rags",
+      "no_unmotivated_wear",
+      "no_modern_leather_shoes",
+      "no_qing_clothing",
+      "no_plastic_armor",
+      "no_actor_likeness",
+      "no_exact_costume_copy",
+      "no_exact_set_copy",
+      "no_cross_work_mashup",
+      "no_global_darkness"
+    ],
+    "antiCopying": {
+      "actorLikenessAllowed": false,
+      "exactCostumeReplicationAllowed": false,
+      "exactPatternReplicationAllowed": false,
+      "exactSetReplicationAllowed": false,
+      "directCrossWorkMashupAllowed": false
+    }
+  },
+  "researchPolicy": {
+    "officialWorkPagesOnly": true,
+    "minimumWorks": 8,
+    "privateReferenceRoot": "content/reference-library/private-research/cx516",
+    "downloadedStillsTracked": false,
+    "referenceOnly": true,
+    "shipInBuild": false,
+    "identityReuse": false,
+    "sources": [
+      {
+        "workId": "work.changan_twelve_hours",
+        "title": "长安十二时辰",
+        "platform": "iQIYI",
+        "officialPageUrl": "https://www.iq.com/wiki/zh_cn/album/%E9%95%B7%E5%AE%89%E5%8D%81%E4%BA%8C%E6%99%82%E8%BE%B0-2019-19rri0v2m5",
+        "observations": ["costume", "architecture", "landscape", "lighting"],
+        "abstractFindings": [
+          "唐式仪制通过轴线、台阶、门阙和群体间距建立威仪，不复制具体布景",
+          "服装依身份用领型、袖量、腰封和材质区分，避免全员同款飘逸长袍",
+          "日光、灯火和深色室内可同框分层，阴影保留材质细节而非压成黑块"
+        ],
+        "referenceOnly": true,
+        "shipInBuild": false,
+        "identityReuse": false,
+        "exactReplicationAllowed": false
+      },
+      {
+        "workId": "work.forever_and_ever_ancient",
+        "title": "周生如故",
+        "platform": "iQIYI",
+        "officialPageUrl": "https://www.iq.com/wiki/zh_cn/album/%E5%91%A8%E7%94%9F%E5%A6%82%E6%95%85-2021-24mppdujjp9",
+        "observations": ["costume", "architecture", "lighting"],
+        "abstractFindings": [
+          "清雅日常以低饱和但非脏灰的织物层次、合体肩线和克制配饰呈现",
+          "宫室和王府通过木、石、帘、屏风的真实厚度形成可居住空间",
+          "人物情绪依眼神、下颌和呼吸变化表达，避免夸张僵硬的海报姿势"
+        ],
+        "referenceOnly": true,
+        "shipInBuild": false,
+        "identityReuse": false,
+        "exactReplicationAllowed": false
+      },
+      {
+        "workId": "work.love_between_fairy_and_devil",
+        "title": "苍兰诀",
+        "platform": "iQIYI",
+        "officialPageUrl": "https://www.iq.com/wiki/zh_cn/album/%E8%8B%8D%E5%85%B0%E8%AF%80-2022-fxzcys7jh5",
+        "observations": ["costume", "architecture", "landscape", "lighting"],
+        "abstractFindings": [
+          "仙界与异域可用轮廓、色温和材质体系区分，而非只靠整体变暗",
+          "超大宫阙需要前中后景尺度参照、云海层次和可行走平台保持真实感",
+          "幻想服装以历史结构为骨架再增加原创边缘、金属和能量纹理"
+        ],
+        "referenceOnly": true,
+        "shipInBuild": false,
+        "identityReuse": false,
+        "exactReplicationAllowed": false
+      },
+      {
+        "workId": "work.love_and_destiny",
+        "title": "宸汐缘",
+        "platform": "iQIYI",
+        "officialPageUrl": "https://www.iq.com/album/%E5%AE%B8%E6%B1%90%E7%BC%98-2019-19rrhtj1td?lang=zh_cn",
+        "observations": ["costume", "architecture", "landscape", "lighting"],
+        "abstractFindings": [
+          "神域宏大感来自留白、层级平台、远山与云气的纵深关系",
+          "礼服宽袖和披帛需要真实重量、折痕和受风逻辑，不能像塑料薄片",
+          "明亮主光配合冷色阴影可维持庄严，同时保留面部与服装纹理"
+        ],
+        "referenceOnly": true,
+        "shipInBuild": false,
+        "identityReuse": false,
+        "exactReplicationAllowed": false
+      },
+      {
+        "workId": "work.love_and_redemption",
+        "title": "琉璃",
+        "platform": "iQIYI",
+        "officialPageUrl": "https://www.iq.com/album/%E7%90%89%E7%92%83-2020-168f5kx12d1?lang=zh_cn",
+        "observations": ["costume", "architecture", "landscape", "lighting"],
+        "abstractFindings": [
+          "门派空间需同时具有修行秩序、生活功能和战斗移动路径",
+          "青年角色的日常服可采用窄袖与轻层叠，动作时保持人体轮廓清楚",
+          "法术光应照亮皮肤、布料和地面，形成共享环境光而不是悬浮贴图"
+        ],
+        "referenceOnly": true,
+        "shipInBuild": false,
+        "identityReuse": false,
+        "exactReplicationAllowed": false
+      },
+      {
+        "workId": "work.ashes_of_love",
+        "title": "香蜜沉沉烬如霜",
+        "platform": "iQIYI",
+        "officialPageUrl": "https://www.iq.com/album/%E9%A6%99%E8%9C%9C%E6%B2%89%E6%B2%89%E7%83%AC%E5%A6%82%E9%9C%9C-2018-19rrhwgpux?lang=zh_cn",
+        "observations": ["costume", "architecture", "landscape", "lighting"],
+        "abstractFindings": [
+          "花界、天界与战场应分别建立植物、石材、金属和天空色的主材语言",
+          "轻盈仙衣仍需清晰内外层、腰线与鞋履，避免无结构纱布堆叠",
+          "奇观以局部高亮、空气透视和实体前景承托，避免全屏过曝光效"
+        ],
+        "referenceOnly": true,
+        "shipInBuild": false,
+        "identityReuse": false,
+        "exactReplicationAllowed": false
+      },
+      {
+        "workId": "work.story_of_kunning_palace",
+        "title": "宁安如梦",
+        "platform": "iQIYI",
+        "officialPageUrl": "https://www.iq.com/wiki/zh_cn/album/%E5%AE%81%E5%AE%89%E5%A6%82%E6%A2%A6-2023-yg33cwbzwl",
+        "observations": ["costume", "architecture", "lighting"],
+        "abstractFindings": [
+          "正式场合通过规整肩线、织锦密度、冠饰尺度与空间礼序表达身份",
+          "反派压迫感可由站位、构图阻隔和冷暖反差表达，不依赖破烂黑衣",
+          "室内暗部需保留木纹、织物和肤色，窗光与灯光分别承担方向"
+        ],
+        "referenceOnly": true,
+        "shipInBuild": false,
+        "identityReuse": false,
+        "exactReplicationAllowed": false
+      },
+      {
+        "workId": "work.blossom",
+        "title": "九重紫",
+        "platform": "iQIYI",
+        "officialPageUrl": "https://www.iq.com/album/%E4%B9%9D%E9%87%8D%E7%B4%AB-2024-1dskq9j7h9h?lang=zh_cn",
+        "observations": ["costume", "architecture", "landscape", "lighting"],
+        "abstractFindings": [
+          "园宅日常需要廊、院、窗、植物和可触碰器物共同形成生活层次",
+          "服装配色可鲜明但控制同屏主色数量，以材质区别主次而非靠灰尘",
+          "雨夜与晨雾仍需明确可见光源、湿润反射和人物接触阴影"
+        ],
+        "referenceOnly": true,
+        "shipInBuild": false,
+        "identityReuse": false,
+        "exactReplicationAllowed": false
+      },
+      {
+        "workId": "work.till_the_end_of_the_moon",
+        "title": "长月烬明",
+        "platform": "Youku",
+        "officialPageUrl": "https://v.youku.com/v_show/id_XNTk1NTEyNjI0NA%3D%3D.html",
+        "observations": ["costume", "architecture", "landscape", "lighting"],
+        "abstractFindings": [
+          "神魔场景可保持宏大精致，以局部高反差与危险运动表达威胁",
+          "仪式服装以明确轮廓、层级金属和织物反光建立远景识别度",
+          "阵法空间必须有实体枢纽、地面反馈、照明响应和人物可交互距离"
+        ],
+        "referenceOnly": true,
+        "shipInBuild": false,
+        "identityReuse": false,
+        "exactReplicationAllowed": false
+      }
+    ]
+  },
+  "characterScope": {
+    "humanoidCharacterIds": [
+      "character.shen_yan",
+      "character.chu_mingqi",
+      "character.shi_jun",
+      "character.celadon_scout",
+      "character.cavern_ally",
+      "character.formation_spirit"
+    ],
+    "creatureIds": ["creature.ink_dragon"],
+    "expressionReferenceSet": {
+      "strategy": "reference_assets",
+      "countPerHumanoid": 12,
+      "emotionIds": [
+        "neutral",
+        "calm_warmth",
+        "restrained_joy",
+        "resolve",
+        "vigilance",
+        "suspicion",
+        "concern",
+        "grief",
+        "anger_controlled",
+        "fear_suppressed",
+        "pain",
+        "astonishment"
+      ],
+      "trainingModelPlanned": false
+    }
+  },
+  "identityDesigns": [
+    {
+      "characterId": "character.shen_yan",
+      "displayName": "沈砚",
+      "role": "male_protagonist",
+      "ageRead": "二十五岁上下",
+      "silhouette": "修长稳健、肩背舒展，日常窄袖与礼服纵向层次均保持清楚人体比例",
+      "posture": "重心沉稳而不僵硬，思考时略收下颌，行动前先以目光确认环境",
+      "faceMotion": "情绪内敛，以眼睑、呼吸、下颌和极小嘴角变化表达警觉与决断",
+      "basePalette": ["深青", "孔雀蓝", "暖象牙", "暗金"],
+      "materialLanguage": ["细密绫罗", "哑光织锦", "旧金属包边", "玉石扣件"],
+      "footwear": "黑青色布面皂靴，软皮底仅作结构不呈现代皮鞋亮面",
+      "continuityProps": ["暗金飞刃匣"],
+      "noActorLikeness": true
+    },
+    {
+      "characterId": "character.chu_mingqi",
+      "displayName": "楚明绮",
+      "role": "female_protagonist",
+      "ageRead": "二十四岁上下",
+      "silhouette": "挺拔灵动、头身比例自然，交领内层与外披形成月环般清晰轮廓",
+      "posture": "双脚受力明确，转身先由肩胯带动，战斗和对话都保持真实呼吸与重心",
+      "faceMotion": "聪慧明快但不过度表演，笑意从眼神先起，戒备时嘴角收紧而非木然",
+      "basePalette": ["月白", "石榴红", "鸦青", "银灰"],
+      "materialLanguage": ["轻绫", "暗纹织锦", "哑光银饰", "玉髓扣件"],
+      "footwear": "月白或鸦青布靴，薄底圆头并与裙摆层次一致",
+      "continuityProps": ["腰侧刚性银月环"],
+      "noActorLikeness": true
+    },
+    {
+      "characterId": "character.shi_jun",
+      "displayName": "石峻",
+      "role": "major_villain",
+      "ageRead": "三十五岁上下",
+      "silhouette": "七头半以上自然比例，宽肩直身，以厚重礼袍和阵钉形成权力轮廓而非怪异巨躯",
+      "posture": "站立近乎静止但身体持续呼吸，压迫感来自占据轴线与缓慢精确动作",
+      "faceMotion": "愤怒控制在眼神与咬肌，几乎不大喊，偶尔的浅笑应比夸张凶相更危险",
+      "basePalette": ["深绛", "苍金", "墨青", "骨白"],
+      "materialLanguage": ["厚织锦", "旧鎏金", "玄色丝绦", "石质阵纹件"],
+      "footwear": "深绛布面高帮靴，方圆头且无现代鞋跟和亮皮",
+      "continuityProps": ["短粗方截面阵钉"],
+      "noActorLikeness": true
+    },
+    {
+      "characterId": "character.celadon_scout",
+      "displayName": "青衣侦察者",
+      "role": "major_supporting",
+      "ageRead": "二十三岁上下",
+      "silhouette": "七头半自然比例，窄袖短外层利于行动，低发辫与肩部小甲片建立辨识度",
+      "posture": "膝踝松弛、前脚掌随时可转向，静止时仍有微小观察和衣料受风运动",
+      "faceMotion": "目光快速扫描后定焦，低置信信息表现为短暂停顿与轻微蹙眉而非呆站",
+      "basePalette": ["青瓷", "松石", "炭青", "淡玉"],
+      "materialLanguage": ["斜纹细布", "哑光丝绦", "轻薄青铜", "玉质听符"],
+      "footwear": "炭青布面轻靴，薄底防滑并清楚落地",
+      "continuityProps": ["淡玉听风符"],
+      "noActorLikeness": true
+    },
+    {
+      "characterId": "character.cavern_ally",
+      "displayName": "洞窟盟友",
+      "role": "general_supporting",
+      "ageRead": "二十八岁上下",
+      "silhouette": "结实灵活、层次简洁，短披与束袖适应洞穴攀行但保持干净完整",
+      "posture": "熟悉狭窄地形，移动时肩胯贴合路径，停下会自然扶壁确认震动",
+      "faceMotion": "友善建立在克制观察后，紧张时鼻翼与呼吸先变化，不使用夸张惊恐表情",
+      "basePalette": ["岩褐", "苔绿", "暖灰", "铜色"],
+      "materialLanguage": ["粗细混纺布", "哑光铜扣", "耐磨丝绦", "石珠护符"],
+      "footwear": "岩褐布面短靴，包踝软底并保留真实磨擦痕而非破烂",
+      "continuityProps": ["石珠护符"],
+      "noActorLikeness": true
+    },
+    {
+      "characterId": "character.formation_spirit",
+      "displayName": "阵灵",
+      "role": "story_character",
+      "ageRead": "超龄灵体呈二十七岁外观",
+      "silhouette": "修长端正的礼仪道袍轮廓，广袖有真实重量，层叠边缘对应阵法几何而非奇装异服",
+      "posture": "动作像礼仪与书写的结合，手腕、肘部和肩部连续带动，双足始终对应阵坛位置",
+      "faceMotion": "平静近乎无喜怒，但眼神焦点、呼吸节奏和极轻眉动证明其为活的角色",
+      "basePalette": ["暖象牙", "苍青", "淡金", "夜蓝"],
+      "materialLanguage": ["垂坠绢纱", "哑光绫罗", "细金属织线", "半透明玉片"],
+      "footwear": "暖白布履，薄底无跟并与礼袍下摆留出清楚间隙",
+      "continuityProps": ["无手持物"],
+      "noActorLikeness": true
+    }
+  ],
+  "costumePlan": [
+    {
+      "characterId": "character.shen_yan",
+      "tier": "protagonist",
+      "outfits": [
+        {
+          "outfitId": "outfit.shen_yan_qinglan_travel.v1",
+          "displayName": "青岚行衣",
+          "stage": "early",
+          "function": "daily_exploration",
+          "eraBasis": "song_daily",
+          "silhouette": "窄袖交领内衣配过膝外袍，腰封收束但不勒成现代西装线",
+          "palette": ["深青", "暖灰蓝", "象牙白"],
+          "materials": ["细斜纹布", "哑光绫", "暗铜扣"],
+          "footwear": "黑青布面皂靴",
+          "weathering": "仅有剧情合理的轻微尘土和折痕，整体干净完整",
+          "cinematicRead": "中近景可见领口与腰封层次，全身动作时袖口不遮手"
+        },
+        {
+          "outfitId": "outfit.shen_yan_xuanheng_ceremony.v1",
+          "displayName": "玄衡礼服",
+          "stage": "mid",
+          "function": "formal_ceremony",
+          "eraBasis": "tang_ceremonial",
+          "silhouette": "圆领礼袍叠肩部窄披，纵向织纹与暗金腰带建立仪制感",
+          "palette": ["孔雀蓝", "暗金", "暖象牙"],
+          "materials": ["密织锦", "绫罗内层", "旧鎏金"],
+          "footwear": "孔雀蓝布面高帮礼靴",
+          "weathering": "无磨损与污渍，仅保留自然穿着折痕",
+          "cinematicRead": "远景有清楚肩腰比例，近景以织物反光而非亮片显示等级"
+        },
+        {
+          "outfitId": "outfit.shen_yan_yaoyuan_combat.v1",
+          "displayName": "曜渊战装",
+          "stage": "late",
+          "function": "combat_crisis",
+          "eraBasis": "original_xianxia_synthesis",
+          "silhouette": "交领战袍外叠分片护肩与腰侧软甲，保留奔跑和御剑活动范围",
+          "palette": ["夜蓝", "深青", "暗金"],
+          "materials": ["高密织物", "烟熏金属", "柔韧丝绦"],
+          "footwear": "夜蓝布甲复合战靴",
+          "weathering": "只在对应战斗镜头添加可追踪的小面积灰尘或划痕",
+          "cinematicRead": "背光仍可读出面部、手和飞刃匣，不形成一团黑色轮廓"
+        }
+      ]
+    },
+    {
+      "characterId": "character.chu_mingqi",
+      "tier": "protagonist",
+      "outfits": [
+        {
+          "outfitId": "outfit.chu_mingqi_jiyue_travel.v1",
+          "displayName": "霁月游裳",
+          "stage": "early",
+          "function": "daily_exploration",
+          "eraBasis": "song_daily",
+          "silhouette": "合体交领上层配便于跨步的分片长裙，窄袖和短披保持手部清楚",
+          "palette": ["月白", "浅朱", "鸦青"],
+          "materials": ["轻绫", "细纹罗", "哑光银扣"],
+          "footwear": "月白布靴配鸦青鞋缘",
+          "weathering": "整体洁净，只允许旅行产生的轻折痕与极少尘点",
+          "cinematicRead": "月环固定腰侧且与衣料材质分离，任何镜头都不变成包裹"
+        },
+        {
+          "outfitId": "outfit.chu_mingqi_danque_ceremony.v1",
+          "displayName": "丹阙礼服",
+          "stage": "mid",
+          "function": "formal_ceremony",
+          "eraBasis": "tang_ceremonial",
+          "silhouette": "高腰礼裙与广袖外披形成庄重三角轮廓，披帛受重力并避开面部",
+          "palette": ["石榴红", "暖象牙", "淡金"],
+          "materials": ["暗纹织锦", "厚绫", "拉丝金属"],
+          "footwear": "石榴红布面礼靴",
+          "weathering": "无污渍磨损，保持礼服面料平整与自然折线",
+          "cinematicRead": "堂皇但不婚服化，远景靠红白结构而非过量首饰识别"
+        },
+        {
+          "outfitId": "outfit.chu_mingqi_chixiao_combat.v1",
+          "displayName": "赤霄战裳",
+          "stage": "late",
+          "function": "combat_crisis",
+          "eraBasis": "original_xianxia_synthesis",
+          "silhouette": "短广袖外层接窄袖内层，腰胯分片护裙提供旋转和落地空间",
+          "palette": ["深绛", "月白", "银灰"],
+          "materials": ["韧性织锦", "哑光银片", "高密丝绦"],
+          "footwear": "深绛布甲复合战靴",
+          "weathering": "战损按镜头连续性单独记录，默认版本保持完整洁净",
+          "cinematicRead": "动作中双手、腰侧月环与腿部轮廓互不遮挡并有真实惯性"
+        }
+      ]
+    },
+    {
+      "characterId": "character.shi_jun",
+      "tier": "major_villain",
+      "outfits": [
+        {
+          "outfitId": "outfit.shi_jun_cangjin_command.v1",
+          "displayName": "苍金执坛服",
+          "stage": "primary",
+          "function": "command",
+          "eraBasis": "tang_ceremonial",
+          "silhouette": "宽肩圆领厚礼袍配垂直前襟，腰部结构容纳方截面阵钉",
+          "palette": ["深绛", "苍金", "骨白"],
+          "materials": ["厚织锦", "旧鎏金", "玄色丝绦"],
+          "footwear": "深绛布面高帮靴",
+          "weathering": "权力服保持完好洁净，不以破烂或脏灰代表反派",
+          "cinematicRead": "正反派场景同样堂皇，压迫来自轴线站位和局部冷光"
+        },
+        {
+          "outfitId": "outfit.shi_jun_anyao_ritual.v1",
+          "displayName": "黯曜镇阵甲袍",
+          "stage": "secondary",
+          "function": "ritual",
+          "eraBasis": "original_xianxia_synthesis",
+          "silhouette": "礼袍外增加少量几何护片和背部窄披，保持正常头身与关节运动",
+          "palette": ["墨青", "深绛", "暗金"],
+          "materials": ["哑光金属", "厚绫", "石纹扣件"],
+          "footwear": "墨青布甲复合靴",
+          "weathering": "仅阵法反噬时出现可控局部灼痕，默认无脏污",
+          "cinematicRead": "护片不塑料化也不包成西式铠甲，阵法光真实反射到布料"
+        }
+      ]
+    },
+    {
+      "characterId": "character.celadon_scout",
+      "tier": "major_supporting",
+      "outfits": [
+        {
+          "outfitId": "outfit.celadon_scout_listening.v1",
+          "displayName": "青瓷听风衣",
+          "stage": "primary",
+          "function": "scouting",
+          "eraBasis": "song_daily",
+          "silhouette": "青瓷色窄袖长衣配及腰短外层，小型肩片不改变自然肩宽",
+          "palette": ["青瓷", "松石", "炭青"],
+          "materials": ["细斜纹布", "哑光青铜", "玉质听符"],
+          "footwear": "炭青布面轻靴",
+          "weathering": "保持整洁，仅下摆允许与路面一致的轻微尘迹",
+          "cinematicRead": "人物持续呼吸和观察，衣料受风，不再像贴在背景上的静态图"
+        },
+        {
+          "outfitId": "outfit.celadon_scout_night_patrol.v1",
+          "displayName": "玉关夜巡服",
+          "stage": "secondary",
+          "function": "covert_action",
+          "eraBasis": "original_xianxia_synthesis",
+          "silhouette": "深青窄袖内层配可拆短披和轻护腰，手腕脚踝均有清楚活动空间",
+          "palette": ["深青", "冷玉", "炭黑"],
+          "materials": ["低反光织物", "轻薄金属", "高密丝绦"],
+          "footwear": "深青布面软底轻靴",
+          "weathering": "不做破烂潜行服，仅使用低反光材质和克制局部旧化",
+          "cinematicRead": "夜景用轮廓光和环境反射分离人物，不把服装与背景压黑"
+        }
+      ]
+    },
+    {
+      "characterId": "character.cavern_ally",
+      "tier": "general_supporting",
+      "outfits": [
+        {
+          "outfitId": "outfit.cavern_ally_stone_lamp.v1",
+          "displayName": "石灯洞行衣",
+          "stage": "single",
+          "function": "cavern_travel",
+          "eraBasis": "song_daily",
+          "silhouette": "束袖中衣配过臀短披和简洁腰封，攀爬时衣摆不拖地",
+          "palette": ["岩褐", "苔绿", "暖灰"],
+          "materials": ["粗细混纺布", "哑光铜扣", "石珠护符"],
+          "footwear": "岩褐布面包踝短靴",
+          "weathering": "只有洞穴环境造成的轻微粉尘，边缘完整无撕裂",
+          "cinematicRead": "暖灯下有肤色与衣料差异，暗部仍能读出手脚和地面接触"
+        }
+      ]
+    },
+    {
+      "characterId": "character.formation_spirit",
+      "tier": "story_character",
+      "outfits": [
+        {
+          "outfitId": "outfit.formation_spirit_star_balance.v1",
+          "displayName": "星衡法礼袍",
+          "stage": "single",
+          "function": "formation_manifestation",
+          "eraBasis": "original_xianxia_synthesis",
+          "silhouette": "魏晋宋制礼仪道袍为骨架，垂坠广袖和几何缘边对应阵法秩序",
+          "palette": ["暖象牙", "苍青", "淡金", "夜蓝"],
+          "materials": ["垂坠绢纱", "哑光绫罗", "细金属织线"],
+          "footwear": "暖白薄底布履",
+          "weathering": "灵体衣装保持完整洁净，不采用怪异破布或塑料发光片",
+          "cinematicRead": "阵枢点亮时真实照亮袖褶、面部和地面，人物动作连续且有重量"
+        }
+      ]
+    }
+  ],
+  "creatureDesign": {
+    "creatureId": "creature.ink_dragon",
+    "displayName": "墨蛟",
+    "category": "original_chinese_jiao_dragon",
+    "head": "长吻龙首结合明确眉骨与颌部结构，绝非蜥蜴头",
+    "horns": "一对向后生长的短分叉蛟角，根部与颅骨连续",
+    "whiskersAndMane": "两条长须随气流运动，颈背墨银鬃毛形成连续轮廓",
+    "body": "蛇形长躯具有胸腹起伏与脊线，转身依次传递而非四足蜥蜴爬行",
+    "scales": "墨黑鳞片带青蓝和湿银边缘反光，腹鳞更宽并遵循弯曲方向",
+    "limbs": "仅四肢，每肢为中国龙式四爪，关节和抓地受力清楚",
+    "wings": "none",
+    "scaleRead": "常态长度约二十米，头部可与人物同框交流，战斗时以宫门和崖壁显示尺度",
+    "motion": "游空如水下行进，躯干波动带动须鬃，落地时四爪依次承重并产生尘雾反馈",
+    "palette": ["墨黑", "青蓝", "湿银", "暗玉"],
+    "prohibitions": ["no_lizard_anatomy", "no_wings", "no_extra_limbs", "no_western_dragon_head", "no_rubber_skin"],
+    "humanOutfitCount": 0
+  },
+  "environmentPlan": [
+    {
+      "domainId": "celestial_palaces_gates",
+      "displayName": "仙门宫阙",
+      "scaleAndStructure": "以多重山门、长阶、廊桥和主殿形成可行走轴线，并以人群和旗幡提供尺度",
+      "materials": ["暖白石", "朱木", "青瓷瓦", "旧鎏金", "玉石栏杆"],
+      "dayLook": "晴日暖光照亮主立面，冷色阴影保留木石细节",
+      "duskLook": "金色天光切过檐口，内殿灯火逐层亮起",
+      "nightLook": "月色与宫灯双光源并存，人物和道路保持可读",
+      "interactionCues": ["可开合山门", "可登长阶", "檐铃随风", "守门人物巡行"],
+      "wonderElement": "远处浮殿通过实体桥梁与云海相连而非无根漂浮"
+    },
+    {
+      "domainId": "gardens_herb_gardens",
+      "displayName": "园林药苑",
+      "scaleAndStructure": "曲廊、药畦、温泉水渠、亭台和管理小屋构成可采集可对话的生活空间",
+      "materials": ["湖石", "木廊", "青砖", "湿土", "铜质药牌"],
+      "dayLook": "晨光穿过树叶，药草色彩清楚且不呈普通荒山",
+      "duskLook": "暖霞、药炉微光与水面反射形成层次",
+      "nightLook": "月光配合灵草局部冷光，路径由灯笼和水渠标识",
+      "interactionCues": ["药草可采集", "水渠可引流", "药炉可操作", "园丁人物巡查"],
+      "wonderElement": "稀有灵植随日月开合并改变周围雾气和微光"
+    },
+    {
+      "domainId": "mountains_cloud_seas",
+      "displayName": "山水云海",
+      "scaleAndStructure": "前景山径、中景飞瀑与远景群峰分层，御剑航线穿越云海而非静态背景板",
+      "materials": ["花岗岩", "松木", "湿苔", "瀑布水雾"],
+      "dayLook": "高空晴光与云影移动形成速度和高度感",
+      "duskLook": "暖色地平线与冷色山谷雾产生明显空间分离",
+      "nightLook": "星月提供方向，山脊与云海有低亮轮廓而非全黑",
+      "interactionCues": ["御剑飞行航线", "可落脚崖台", "鸟群避让", "风向改变衣发"],
+      "wonderElement": "云海裂隙短暂显露悬空瀑布和远方仙门倒影"
+    },
+    {
+      "domainId": "caverns_subterranean_palaces",
+      "displayName": "洞府地宫",
+      "scaleAndStructure": "天然洞腔包围人工石门、祭道和地下殿室，狭窄路径与宏大空腔交替",
+      "materials": ["湿岩", "矿晶", "旧铜", "雕刻石板", "地下水"],
+      "dayLook": "洞口天光逐层衰减，内部由矿晶和火盆补光",
+      "duskLook": "外界暖光退去后矿晶冷光增强，过渡可见",
+      "nightLook": "火光、矿晶和法器构成三类局部光源，暗部保留岩壁纹理",
+      "interactionCues": ["石门机关", "回声定位", "可攀岩台", "地下水位变化"],
+      "wonderElement": "深处地宫穹顶悬浮古老水幕，倒映不同时辰天空"
+    },
+    {
+      "domainId": "formation_altars",
+      "displayName": "阵法祭坛",
+      "scaleAndStructure": "多层圆坛、实体阵枢、石柱和外环步道允许人物走近、触碰和改变阵法",
+      "materials": ["暖白石", "青铜", "玉片", "嵌金阵线"],
+      "dayLook": "日光显示完整几何结构，未激活阵线只呈真实嵌料",
+      "duskLook": "低角度天光加强浮雕，首个阵枢点亮后逐级传播",
+      "nightLook": "阵光只作动机光源并照亮人物与石面，不悬浮成二维贴图",
+      "interactionCues": ["阵枢可选择", "错误节点反馈", "石柱可旋转", "能量沿地面传播"],
+      "wonderElement": "正确组合后祭坛上方形成可穿行的立体星图穹顶"
+    },
+    {
+      "domainId": "combat_spaces",
+      "displayName": "战斗空间",
+      "scaleAndStructure": "广场、桥面、林间空地和殿内高台均预留移动、掩体、垂直攻击和镜头绕行空间",
+      "materials": ["石地", "木构", "金属器械", "可破坏陶瓦"],
+      "dayLook": "清楚方向光与材质反差保证高速动作可读",
+      "duskLook": "暖天空和冷环境光分离双方阵营而不整体压暗",
+      "nightLook": "月光、火光和法术光共同照亮接触点与运动路径",
+      "interactionCues": ["柱体掩护", "可破坏边缘", "飞剑障碍实体", "落地冲击反馈"],
+      "wonderElement": "战斗力量会短暂改变云层、阵纹和建筑悬挂物的物理状态"
+    },
+    {
+      "domainId": "weather_celestial_phenomena",
+      "displayName": "天气天象",
+      "scaleAndStructure": "风雨雷雪雾与日月星辰必须作用于场景材质、人物衣发、能见度和行动规则",
+      "materials": ["雨幕", "积雪", "湿润表面", "尘沙", "云层"],
+      "dayLook": "晴雨变化保留天空方向和地表反射，不使用统一灰滤镜",
+      "duskLook": "霞光穿透云层形成局部亮区，远景仍有空气透视",
+      "nightLook": "月相、星位和闪电分别改变照明，阴影有短暂动态反馈",
+      "interactionCues": ["风影响御剑", "雨改变地面", "雷击可预判", "雾随热源流动"],
+      "wonderElement": "灵潮到来时星轨与云层形成可导航的巨大天穹纹理"
+    },
+    {
+      "domainId": "outer_heaven_wonders",
+      "displayName": "天外奇观",
+      "scaleAndStructure": "浮陆、星河、裂界门和远古遗构以多尺度参照和可通行路径建立可信空间",
+      "materials": ["陨石", "晶体", "古金属", "能量薄雾", "星尘"],
+      "dayLook": "无传统日光时以星体和裂界门作为明确方向光源",
+      "duskLook": "多色天体余辉形成层次，但控制饱和度和光源数量",
+      "nightLook": "黑色宇域保留星尘、轮廓光与物体反射，人物绝不消失",
+      "interactionCues": ["浮石可落脚", "裂界门可进入", "星风影响轨迹", "遗构机关响应"],
+      "wonderElement": "远方倒置山河围绕星核缓慢旋转并投下可见的移动光影"
+    }
+  ],
+  "productionPolicy": {
+    "imageGenerationThisCard": false,
+    "videoGenerationThisCard": false,
+    "flow2ApiUsed": false,
+    "geminiUsed": false,
+    "veoUsed": false,
+    "overwriteExistingAssets": false,
+    "plotChanges": false,
+    "dialogueChanges": false,
+    "characterNameChanges": false,
+    "unityAdoption": false,
+    "cx514Status": "paused"
+  },
+  "futureVideoConstraints": {
+    "defaultModel": "veo_3_1_i2v_lite_landscape",
+    "networkMode": "ssh_loopback_when_enabled",
+    "maxClipsPerBatch": 5,
+    "candidatesPerShot": 1,
+    "automaticRetries": 0,
+    "stripVeoAudio": true,
+    "voiceAndSoundIndependent": true,
+    "dispatchEnabled": false
+  },
+  "markdownContract": {
+    "relativePath": "content/story/red-mist/red-mist-art-direction.cx516.md",
+    "requiredPhrases": [
+      "人工批准日期：2026-08-03",
+      "唐风宏大仪制＋宋式清雅日常＋原创仙侠",
+      "六个人形角色＋一只墨蛟",
+      "共 12 套",
+      "每名人形角色 12 种表情",
+      "8 个环境域",
+      "CX-514：暂停",
+      "本卡未生成图片或视频"
+    ]
+  },
+  "nextStep": "new_task_card_for_multiview_outfit_and_expression_assets"
+}

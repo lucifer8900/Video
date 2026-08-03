@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/character-definition.schema.json",
+  "title": "CharacterDefinition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "identity",
+    "personalityTraits",
+    "voiceProfile",
+    "visualRules"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "displayNameKey",
+        "roleTags"
+      ],
+      "properties": {
+        "displayNameKey": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "roleTags": {
+          "$ref": "common.schema.json#/$defs/stringArray"
+        }
+      }
+    },
+    "personalityTraits": {
+      "$ref": "common.schema.json#/$defs/stringArray"
+    },
+    "voiceProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profileId",
+        "languageTag",
+        "styleTags"
+      ],
+      "properties": {
+        "profileId": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "languageTag": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 35
+        },
+        "styleTags": {
+          "$ref": "common.schema.json#/$defs/stringArray"
+        }
+      }
+    },
+    "visualRules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "appearanceTags",
+        "costumeRefs"
+      ],
+      "properties": {
+        "appearanceTags": {
+          "$ref": "common.schema.json#/$defs/stringArray"
+        },
+        "costumeRefs": {
+          "$ref": "common.schema.json#/$defs/idArray"
+        },
+        "forbiddenVariationTags": {
+          "$ref": "common.schema.json#/$defs/stringArray"
+        }
+      }
+    },
+    "mediaRefs": {
+      "$ref": "common.schema.json#/$defs/idArray"
+    },
+    "approvalStatus": {
+      "$ref": "common.schema.json#/$defs/status"
+    }
+  }
+}

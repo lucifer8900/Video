@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fixture.bundle.duplicate-id",
+  "entryNodeId": "fixture.node.duplicate",
+  "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+  "approvalStatus": "approved",
+  "storyFacts": [],
+  "characterDefinitions": [],
+  "characterStates": [],
+  "questDefinitions": [],
+  "sceneNodes": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node.duplicate",
+      "displayKey": "fixture.display.duplicate.first",
+      "entryConditions": [],
+      "mediaRefs": [],
+      "choices": [],
+      "voiceIntentRefs": [],
+      "injectionPoints": [],
+      "terminal": true,
+      "approvalStatus": "approved"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "fixture.node.duplicate",
+      "displayKey": "fixture.display.duplicate.second",
+      "entryConditions": [],
+      "mediaRefs": [],
+      "choices": [],
+      "voiceIntentRefs": [],
+      "injectionPoints": [],
+      "terminal": true,
+      "approvalStatus": "approved"
+    }
+  ],
+  "voiceIntents": [],
+  "npcResponses": [],
+  "combatantStates": [],
+  "encounterDefinitions": [],
+  "combatResolutions": [],
+  "mediaAssets": [],
+  "generationJobs": [],
+  "saveGames": []
+}

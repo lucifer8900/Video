@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "1.0.0",
+  "cardId": "CX-518",
+  "worldId": "lingmai-ember-red-mist",
+  "sourceManifest": {
+    "cardId": "CX-517",
+    "path": "content/story/red-mist/red-mist-multiview-candidates.cx517.json",
+    "sha256": "2a39072d06b9b95c4cd8c8f5962204f4a31843f495fa530dfae924000b417f20",
+    "preserved": true
+  },
+  "humanReview": {
+    "approved": true,
+    "decision": "user_explicit_all",
+    "reviewedAt": "2026-08-03",
+    "scope": "all_13_cx517_candidates"
+  },
+  "adoptionPolicy": {
+    "adoptedAsReference": true,
+    "expressionGenerationAllowed": true,
+    "runtimeUse": false,
+    "shipInBuild": false,
+    "overwriteExistingAssets": false,
+    "newImageGeneration": false,
+    "videoOrAudioGeneration": false,
+    "imagegenUsed": false,
+    "flow2ApiUsed": false,
+    "geminiUsed": false,
+    "veoUsed": false,
+    "cx514Status": "paused"
+  },
+  "adoptedAssetIds": [
+    "turnaround.outfit.shen_yan_qinglan_travel.v1",
+    "turnaround.outfit.shen_yan_xuanheng_ceremony.v1",
+    "turnaround.outfit.shen_yan_yaoyuan_combat.v1",
+    "turnaround.outfit.chu_mingqi_jiyue_travel.v1",
+    "turnaround.outfit.chu_mingqi_danque_ceremony.v1",
+    "turnaround.outfit.chu_mingqi_chixiao_combat.v1",
+    "turnaround.outfit.shi_jun_cangjin_command.v1",
+    "turnaround.outfit.shi_jun_anyao_ritual.v1",
+    "turnaround.outfit.celadon_scout_listening.v1",
+    "turnaround.outfit.celadon_scout_night_patrol.v1",
+    "turnaround.outfit.cavern_ally_stone_lamp.v1",
+    "turnaround.outfit.formation_spirit_star_balance.v1",
+    "turnaround.creature.ink_dragon.v1"
+  ],
+  "assets": [
+    {
+      "assetId": "turnaround.outfit.shen_yan_qinglan_travel.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shen_yan_qinglan_travel_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2072028, "width": 1536, "height": 1024, "sha256": "48548c9b77e9e6b1225f29bda1686bb1c00ffb3c6707f92325f055a1fef481fe"}
+    },
+    {
+      "assetId": "turnaround.outfit.shen_yan_xuanheng_ceremony.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shen_yan_xuanheng_ceremony_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2237195, "width": 1536, "height": 1024, "sha256": "297b2a8d5a4c55ec2b0e9524577f57b370fa827c3cac053b31cc5a7fb92b9aa0"}
+    },
+    {
+      "assetId": "turnaround.outfit.shen_yan_yaoyuan_combat.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shen_yan_yaoyuan_combat_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2238780, "width": 1536, "height": 1024, "sha256": "154d28137fee552b14ce301231579020d8e0adfd891295816fb4e48c37f16ef9"}
+    },
+    {
+      "assetId": "turnaround.outfit.chu_mingqi_jiyue_travel.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_chu_mingqi_jiyue_travel_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2110874, "width": 1536, "height": 1024, "sha256": "5d31ff1b8026301dab1b97ab0f07cd382bdc7aa879c5d93b814a77a30f78642a"}
+    },
+    {
+      "assetId": "turnaround.outfit.chu_mingqi_danque_ceremony.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_chu_mingqi_danque_ceremony_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2289582, "width": 1536, "height": 1024, "sha256": "eedcdabd2b2ca37e1e2819d527c942889317bd4d2b2a5454c60741b10d7560e1"}
+    },
+    {
+      "assetId": "turnaround.outfit.chu_mingqi_chixiao_combat.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_chu_mingqi_chixiao_combat_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2272273, "width": 1536, "height": 1024, "sha256": "cb113776a40b1f39457eaea8a8ed230e815b3ca10cfb05e927b46e7e83a78ad5"}
+    },
+    {
+      "assetId": "turnaround.outfit.shi_jun_cangjin_command.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shi_jun_cangjin_command_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2376831, "width": 1536, "height": 1024, "sha256": "7e197fd3297c67edde2b76406b17a87e5cd72ddd3302678643d76f78c5b17698"}
+    },
+    {
+      "assetId": "turnaround.outfit.shi_jun_anyao_ritual.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shi_jun_anyao_ritual_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2208486, "width": 1536, "height": 1024, "sha256": "78e3443d95e27af6d51f645739132adbaa2460b0e0097e8d662c76bd615486f4"}
+    },
+    {
+      "assetId": "turnaround.outfit.celadon_scout_listening.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_celadon_scout_listening_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2191526, "width": 1536, "height": 1024, "sha256": "ba1c8b863ae7b04669b30f83ba425a2deba5a83c4318ce1d89b8cf4ac1f1c6e9"}
+    },
+    {
+      "assetId": "turnaround.outfit.celadon_scout_night_patrol.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_celadon_scout_night_patrol_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2238248, "width": 1536, "height": 1024, "sha256": "7e831924bec305e2bc5cebff44dcb040de344e7a74ea3a38f78995be51653fef"}
+    },
+    {
+      "assetId": "turnaround.outfit.cavern_ally_stone_lamp.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_cavern_ally_stone_lamp_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2144543, "width": 1536, "height": 1024, "sha256": "2f2bb62409afaa94823a74177af4db577247c2b46a53e072d2fd258f2c33075c"}
+    },
+    {
+      "assetId": "turnaround.outfit.formation_spirit_star_balance.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_formation_spirit_star_balance_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2160502, "width": 1536, "height": 1024, "sha256": "8d5fe879956f92d7c07525e6eb435cdf76d95782ecfd6334cc9dbb12492842ce"}
+    },
+    {
+      "assetId": "turnaround.creature.ink_dragon.v1",
+      "sourcePath": "content/visual-candidates/cx517/turnarounds/turnaround_creature_ink_dragon_v1.png",
+      "sourceAdoptionStatus": "needs_review",
+      "adoptedAsReference": true,
+      "expressionGenerationAllowed": true,
+      "runtimeUse": false,
+      "shipInBuild": false,
+      "artifact": {"mediaType": "image/png", "byteLength": 2463616, "width": 1536, "height": 1024, "sha256": "6f49fb857b203b6c6ce4a2b4a656265b6648ae9bed3dd7e79af399845b45596d"}
+    }
+  ],
+  "markdownContract": {
+    "relativePath": "content/story/red-mist/red-mist-multiview-adoption.cx518.md",
+    "listsEveryAssetAndFile": true
+  }
+}

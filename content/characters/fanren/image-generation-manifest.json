@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-13T20:33:00+08:00",
+  "repository": "https://github.com/lucifer8900/Video.git",
+  "projectRole": "Project-bound character visual-bible assets",
+  "work": "灵脉余烬",
+  "promptVersion": "lingmai-yujin-character-sheet-v2",
+  "namingLayer": "ADAPTATION-NAME",
+  "visualsRedrawnForRename": false,
+  "method": "built-in image_gen",
+  "promptFile": "content/characters/fanren/character-image-prompts.md",
+  "canonicalAssetCount": 16,
+  "status": "generated-draft-needs-human-review",
+  "validation": {
+    "allPngDecodable": true,
+    "allCanonicalFilesPresent": true,
+    "requiredLayout": "front half-body + strict side full-body + front full-body",
+    "visualReviewCompleted": true,
+    "identityAndCostumeContinuity": "passed for concept-draft use",
+    "noReadableTextOrWatermark": true,
+    "humanArtReviewRequired": true,
+    "rightsReviewRequiredBeforeCommercialUse": true
+  },
+  "revisionNotes": {
+    "fr-vil-004": "Canonical image is revision 2: horns shortened, shoulder spikes reduced, folded black banner clarified.",
+    "fr-vil-004-v1-backup": "content/characters/fanren/images/fr-vil-004-character-sheet-v1.png"
+  },
+  "assets": [
+    { "id": "FR-MAIN-M-001", "slug": "fr-main-m-001", "nameZh": "沈砚", "file": "content/characters/fanren/images/fr-main-m-001-character-sheet.png", "width": 1593, "height": 987, "bytes": 1983642, "sha256": "6a71323c9d233aee5378a2a80f28f8b7af43dcff9e8aced02d7d43cb59e0bdc7" },
+    { "id": "FR-MAIN-F-001", "slug": "fr-main-f-001", "nameZh": "楚明绮", "file": "content/characters/fanren/images/fr-main-f-001-character-sheet.png", "width": 1692, "height": 930, "bytes": 1981931, "sha256": "6b79153edeba4a344f930ee177db049e736cf860eeb8799a8b25d12e5af7392d" },
+    { "id": "FR-VIL-001", "slug": "fr-vil-001", "nameZh": "陆百草", "file": "content/characters/fanren/images/fr-vil-001-character-sheet.png", "width": 1693, "height": 929, "bytes": 2155822, "sha256": "616fa104c39f5160fcd2d28a2bb15ce58703278ded43490d3d8e074a3970085b" },
+    { "id": "FR-VIL-002", "slug": "fr-vil-002", "nameZh": "裴玄蜮", "file": "content/characters/fanren/images/fr-vil-002-character-sheet.png", "width": 1536, "height": 1024, "bytes": 2540856, "sha256": "d90d71ef9e94233e71bdac4f4015750174ce7f02e7634baf216fb0b9712a748c" },
+    { "id": "FR-VIL-003", "slug": "fr-vil-003", "nameZh": "玄冥岛主", "file": "content/characters/fanren/images/fr-vil-003-character-sheet.png", "width": 1684, "height": 934, "bytes": 2054157, "sha256": "21fee9825073278375deb723ad35a7d474e9c82a4199c776a6c761a4ea3de1c0" },
+    { "id": "FR-VIL-004", "slug": "fr-vil-004", "nameZh": "初烬魔祖", "file": "content/characters/fanren/images/fr-vil-004-character-sheet.png", "width": 1536, "height": 1024, "bytes": 2405609, "sha256": "5aef49ebe601f959475437a60bb8fa59adae8698b2784a50a5e40098cd3c31fe", "revision": 2 },
+    { "id": "FR-SUP-001", "slug": "fr-sup-001", "nameZh": "顾惊雨", "file": "content/characters/fanren/images/fr-sup-001-character-sheet.png", "width": 1536, "height": 1024, "bytes": 2317060, "sha256": "a932682375ae1d56a1250c98a0b394b63277538aabdfab6769d9974028f8cfdd" },
+    { "id": "FR-SUP-002", "slug": "fr-sup-002", "nameZh": "苏绛璃（商名：宁烟）", "file": "content/characters/fanren/images/fr-sup-002-character-sheet.png", "width": 1679, "height": 937, "bytes": 1960499, "sha256": "358c76a2af1a1645f43dd851519b2770867bda9712fed32523a84cadd4314889" },
+    { "id": "FR-SUP-003", "slug": "fr-sup-003", "nameZh": "月珞（瑶梦）", "file": "content/characters/fanren/images/fr-sup-003-character-sheet.png", "width": 1748, "height": 900, "bytes": 2020634, "sha256": "01ecd06c3703446f45f47741ab8590e0ded4672a62dabaf1e504d1dd03484126" },
+    { "id": "FR-SUP-004", "slug": "fr-sup-004", "nameZh": "太衍君", "file": "content/characters/fanren/images/fr-sup-004-character-sheet.png", "width": 1536, "height": 1024, "bytes": 2537555, "sha256": "fd57995ac76a903895d332fae721e502931bf2ad066f200ed8870761366c2f5d" },
+    { "id": "FR-MIN-001", "slug": "fr-min-001", "nameZh": "铁生", "file": "content/characters/fanren/images/fr-min-001-character-sheet.png", "width": 1536, "height": 1024, "bytes": 2589201, "sha256": "d80678252ac3869fabb50df5fa97abd1bcd95dc489d05b564a027a854520dcd9" },
+    { "id": "FR-MIN-002", "slug": "fr-min-002", "nameZh": "洛清音", "file": "content/characters/fanren/images/fr-min-002-character-sheet.png", "width": 1692, "height": 930, "bytes": 1910465, "sha256": "abc55bdfb7844ba58b83273dc7990aae0974da183ec46ab1f29af0370866a95d" },
+    { "id": "FR-MIN-003", "slug": "fr-min-003", "nameZh": "乔清倩", "file": "content/characters/fanren/images/fr-min-003-character-sheet.png", "width": 1536, "height": 1024, "bytes": 2218281, "sha256": "1dab802144157493037bd093eb64254b67a0d7a04c829015216b5e71191158a5" },
+    { "id": "FR-STORY-001", "slug": "fr-story-001", "nameZh": "尹知微", "file": "content/characters/fanren/images/fr-story-001-character-sheet.png", "width": 1672, "height": 941, "bytes": 2246906, "sha256": "171bdb2fe32ea0d77062e5c21f5b27df4aaa9cc07b94a3e62994064968db7d33" },
+    { "id": "FR-NPC-001", "slug": "fr-npc-001", "nameZh": "雾萝坳游修药农", "file": "content/characters/fanren/images/fr-npc-001-character-sheet.png", "width": 1536, "height": 1024, "bytes": 2481986, "sha256": "045e35e8b587a71d3caff52105e347309afa4c241271e9c61298b46146e6e239" },
+    { "id": "FR-NPC-002", "slug": "fr-npc-002", "nameZh": "引辰岛海舟女通译", "file": "content/characters/fanren/images/fr-npc-002-character-sheet.png", "width": 1667, "height": 944, "bytes": 2042881, "sha256": "286c580832da6b197a7abbda4dc38913467a4e949c43a7b564683e2e0e22407c" }
+  ]
+}

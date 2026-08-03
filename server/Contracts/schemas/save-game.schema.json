@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/save-game.schema.json",
+  "title": "SaveGame",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "storyBundleId",
+    "storyBundleVersion",
+    "currentNodeId",
+    "stateSnapshot",
+    "migrationVersion",
+    "savedAtUtc"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "storyBundleId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "storyBundleVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "currentNodeId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "stateSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "characterStateRefs",
+        "questStates",
+        "factFlags",
+        "worldClockMinutes",
+        "watchedMediaRefs"
+      ],
+      "properties": {
+        "characterStateRefs": {
+          "$ref": "common.schema.json#/$defs/idArray"
+        },
+        "questStates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "questId",
+              "status"
+            ],
+            "properties": {
+              "questId": {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "locked",
+                  "active",
+                  "completed",
+                  "failed",
+                  "expired"
+                ]
+              }
+            }
+          }
+        },
+        "factFlags": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        },
+        "worldClockMinutes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "watchedMediaRefs": {
+          "$ref": "common.schema.json#/$defs/idArray"
+        },
+        "pendingMediaRef": {
+          "$ref": "common.schema.json#/$defs/mediaRef"
+        },
+        "mediaCheckpointMilliseconds": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "migrationVersion": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "savedAtUtc": {
+      "$ref": "common.schema.json#/$defs/dateTime"
+    },
+    "contentHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    }
+  }
+}

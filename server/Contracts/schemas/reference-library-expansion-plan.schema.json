@@ -1,0 +1,565 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.example/schemas/reference-library-expansion-plan.schema.json",
+  "title": "CX-507 China reference expansion plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "planId",
+    "referenceOnly",
+    "shipInBuild",
+    "allowedLicenses",
+    "shortfallException",
+    "unverifiedSourcePolicy",
+    "commercialUseRequired",
+    "modificationRequired",
+    "rejectShareAlike",
+    "architectureMustExcludePeople",
+    "architecturePersonExclusionTerms",
+    "architectureSubjectExclusionTerms",
+    "minimumTotalAssets",
+    "minimumAssetsPerCategory",
+    "discoveryEndpoint",
+    "iNaturalistEndpoint",
+    "iNaturalistPlaceId",
+    "metMuseumEndpoint",
+    "metMuseumDepartmentId",
+    "clevelandMuseumEndpoint",
+    "artInstituteChicagoEndpoint",
+    "thumbnailWidth",
+    "pageSize",
+    "maxPagesPerQuery",
+    "maxDownloadBytes",
+    "minimumWidth",
+    "minimumHeight",
+    "requestDelayMilliseconds",
+    "excludedTerms",
+    "subjectEvidenceTerms",
+    "coverage"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "planId": {
+      "const": "cx507-china-visual-atlas-v1"
+    },
+    "referenceOnly": {
+      "const": true
+    },
+    "shipInBuild": {
+      "const": false
+    },
+    "allowedLicenses": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "const": "cc0"
+        },
+        {
+          "const": "pdm"
+        },
+        {
+          "const": "by"
+        }
+      ],
+      "items": false,
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "shortfallException": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowUnverifiedSource",
+        "allowReducedResolution",
+        "requiresManualReview",
+        "minimumWidth",
+        "minimumHeight",
+        "shipInBuild"
+      ],
+      "properties": {
+        "allowUnverifiedSource": { "const": true },
+        "allowReducedResolution": { "const": true },
+        "requiresManualReview": { "const": true },
+        "minimumWidth": { "type": "integer", "minimum": 320, "maximum": 799 },
+        "minimumHeight": { "type": "integer", "minimum": 180, "maximum": 599 },
+        "shipInBuild": { "const": false }
+      }
+    },
+    "unverifiedSourcePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allow", "personalUseOnly", "requiresManualReview", "shipInBuild"],
+      "properties": {
+        "allow": { "const": true },
+        "personalUseOnly": { "const": true },
+        "requiresManualReview": { "const": true },
+        "shipInBuild": { "const": false }
+      }
+    },
+    "commercialUseRequired": {
+      "const": true
+    },
+    "modificationRequired": {
+      "const": true
+    },
+    "rejectShareAlike": {
+      "const": true
+    },
+    "architectureMustExcludePeople": {
+      "const": true
+    },
+    "architecturePersonExclusionTerms": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "architectureSubjectExclusionTerms": {
+      "type": "array",
+      "minItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "minimumTotalAssets": {
+      "type": "integer",
+      "minimum": 800
+    },
+    "minimumAssetsPerCategory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "landscape",
+        "architecture",
+        "plants",
+        "animals",
+        "waters",
+        "weather",
+        "astronomy",
+        "people",
+        "costumes_textiles",
+        "artifacts",
+        "geology_caves",
+        "light_fog_fire"
+      ],
+      "properties": {
+        "landscape": { "type": "integer", "minimum": 160 },
+        "architecture": { "type": "integer", "minimum": 160 },
+        "plants": { "type": "integer", "minimum": 40 },
+        "animals": { "type": "integer", "minimum": 40 },
+        "waters": { "type": "integer", "minimum": 40 },
+        "weather": { "type": "integer", "minimum": 40 },
+        "astronomy": { "type": "integer", "minimum": 40 },
+        "people": { "type": "integer", "minimum": 40 },
+        "costumes_textiles": { "type": "integer", "minimum": 40 },
+        "artifacts": { "type": "integer", "minimum": 40 },
+        "geology_caves": { "type": "integer", "minimum": 40 },
+        "light_fog_fire": { "type": "integer", "minimum": 40 }
+      }
+    },
+    "discoveryEndpoint": {
+      "const": "https://commons.wikimedia.org/w/api.php"
+    },
+    "iNaturalistEndpoint": {
+      "const": "https://api.inaturalist.org/v1/observations"
+    },
+    "iNaturalistPlaceId": {
+      "const": 6903
+    },
+    "metMuseumEndpoint": {
+      "const": "https://collectionapi.metmuseum.org/public/collection/v1"
+    },
+    "metMuseumDepartmentId": {
+      "const": 6
+    },
+    "clevelandMuseumEndpoint": {
+      "const": "https://openaccess-api.clevelandart.org/api/artworks/"
+    },
+    "artInstituteChicagoEndpoint": {
+      "const": "https://api.artic.edu/api/v1/artworks"
+    },
+    "thumbnailWidth": {
+      "type": "integer",
+      "minimum": 1200,
+      "maximum": 4096
+    },
+    "pageSize": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 50
+    },
+    "maxPagesPerQuery": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "maxDownloadBytes": {
+      "type": "integer",
+      "minimum": 64,
+      "maximum": 50000000
+    },
+    "minimumWidth": {
+      "type": "integer",
+      "minimum": 800
+    },
+    "minimumHeight": {
+      "type": "integer",
+      "minimum": 600
+    },
+    "requestDelayMilliseconds": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5000
+    },
+    "excludedTerms": {
+      "type": "array",
+      "minItems": 10,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "subjectEvidenceTerms": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "architecture",
+        "natural",
+        "garden",
+        "landform",
+        "weather",
+        "plant",
+        "animal",
+        "astronomy",
+        "people",
+        "costume",
+        "artifact"
+      ],
+      "properties": {
+        "architecture": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "natural": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "garden": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "landform": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "weather": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "plant": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "animal": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "astronomy": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "people": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "costume": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "artifact": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provinceRegions",
+        "historicalCapitals",
+        "historicalPeriods",
+        "gardenTypes",
+        "landforms",
+        "weatherPhenomena",
+        "categorySubjects"
+      ],
+      "properties": {
+        "provinceRegions": {
+          "type": "array",
+          "minItems": 34,
+          "maxItems": 34,
+          "items": {
+            "$ref": "#/$defs/target"
+          }
+        },
+        "historicalCapitals": {
+          "type": "array",
+          "minItems": 14,
+          "items": {
+            "$ref": "#/$defs/target"
+          }
+        },
+        "historicalPeriods": {
+          "type": "array",
+          "minItems": 9,
+          "items": {
+            "$ref": "#/$defs/target"
+          }
+        },
+        "gardenTypes": {
+          "type": "array",
+          "minItems": 6,
+          "items": {
+            "$ref": "#/$defs/target"
+          }
+        },
+        "landforms": {
+          "type": "array",
+          "minItems": 16,
+          "items": {
+            "$ref": "#/$defs/target"
+          }
+        },
+        "weatherPhenomena": {
+          "type": "array",
+          "minItems": 25,
+          "items": {
+            "$ref": "#/$defs/target"
+          }
+        },
+        "categorySubjects": {
+          "type": "array",
+          "minItems": 10,
+          "maxItems": 10,
+          "items": {
+            "$ref": "#/$defs/target"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "query": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "search",
+        "category",
+        "subject"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "search": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 256
+        },
+        "category": {
+          "enum": [
+            "landscape",
+            "architecture",
+            "plants",
+            "animals",
+            "waters",
+            "weather",
+            "astronomy",
+            "people",
+            "costumes_textiles",
+            "artifacts",
+            "geology_caves",
+            "light_fog_fire"
+          ]
+        },
+        "subject": {
+          "enum": [
+            "architecture",
+            "natural",
+            "garden",
+            "landform",
+            "weather",
+            "plant",
+            "animal",
+            "astronomy",
+            "people",
+            "costume",
+            "artifact"
+          ]
+        },
+        "evidenceTerms": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 128
+          }
+        },
+        "iNaturalistTaxon": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 128
+        },
+        "iNaturalistTaxonId": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "metMuseumQuery": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 128
+        },
+        "artInstituteChicagoQuery": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 128
+        },
+        "minimumAssets": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "minimumAssets",
+        "evidenceTerms",
+        "requireEvidence",
+        "queries"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "minimumAssets": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "minimumArchitectureAssets": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 50
+        },
+        "minimumNaturalAssets": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 50
+        },
+        "evidenceTerms": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          }
+        },
+        "requireEvidence": {
+          "type": "boolean"
+        },
+        "queries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/query"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0.0",
+  "requestId": "cx306-request-expired",
+  "jobId": "f100036a-c798-4537-8700-0bb01a858b98",
+  "status": "expired",
+  "terminal": true,
+  "pollAfterMilliseconds": 0,
+  "failureCode": "generation.expired"
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "promptSafe": true,
+  "playerInputSafe": true,
+  "sourceRecorded": true,
+  "characterConsistent": false,
+  "dialogueConsistent": true,
+  "humanApproved": true,
+  "canEnterReady": true,
+  "rejectionCodes": []
+}

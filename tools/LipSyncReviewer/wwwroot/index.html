@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>逐条口型审核</title>
+  <link rel="stylesheet" href="/review.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">CX-503 · 本机离线工具</p>
+      <h1>逐条口型审核</h1>
+      <p id="scope">仅核对发音、字幕和口型；不代表版权、G2 或 production ready。</p>
+      <p id="progress" aria-live="polite">正在载入…</p>
+    </header>
+
+    <section id="blocked-panel" hidden>
+      <h2>当前阻塞项</h2>
+      <ul id="blocked-list"></ul>
+    </section>
+
+    <article id="review-card" hidden>
+      <div class="meta">
+        <span id="response-id"></span>
+        <span id="emotion"></span>
+      </div>
+      <p id="dialogue" class="subtitle"></p>
+      <p id="source-nodes" class="muted"></p>
+      <p id="issue-codes" class="muted"></p>
+
+      <div class="media-grid">
+        <section>
+          <h2>原始口型视频（保留原音轨）</h2>
+          <video id="video" controls preload="metadata"></video>
+          <p id="video-status" class="status">必须完整播放</p>
+        </section>
+        <section>
+          <h2>锁定参考音频</h2>
+          <audio id="audio" controls preload="metadata"></audio>
+          <p id="audio-status" class="status">必须完整播放</p>
+        </section>
+      </div>
+
+      <fieldset id="checks">
+        <legend>逐项核对</legend>
+        <label><input id="raw-audio" type="checkbox"> 原视频音轨未被替换，且没有错误台词被外部音频掩盖</label>
+        <label><input id="pronunciation" type="checkbox"> 发音与锁定台词一致</label>
+        <label><input id="subtitle" type="checkbox"> 字幕文字与锁定台词逐字一致</label>
+        <label><input id="lip-sync" type="checkbox"> 口型与锁定语音一致</label>
+      </fieldset>
+
+      <div class="decision-row">
+        <button id="pass" type="button">通过</button>
+        <button id="redo" type="button" class="danger">重做</button>
+      </div>
+      <p id="message" role="alert" aria-live="assertive"></p>
+    </article>
+
+    <nav>
+      <button id="previous" type="button">上一条</button>
+      <button id="next" type="button">下一条</button>
+      <button id="export" type="button">导出审核报告</button>
+    </nav>
+  </main>
+  <script src="/review.js" defer></script>
+</body>
+</html>

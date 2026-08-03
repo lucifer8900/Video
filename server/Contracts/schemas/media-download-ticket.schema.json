@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/media-download-ticket.schema.json",
+  "title": "MediaDownloadTicket",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "requestId",
+    "mediaId",
+    "contentHash",
+    "downloadUrl",
+    "expiresAtUtc",
+    "contentType",
+    "length"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "requestId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "mediaId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "contentHash": {
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "downloadUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "expiresAtUtc": {
+      "$ref": "common.schema.json#/$defs/dateTime"
+    },
+    "contentType": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9.+-]*/[a-z0-9][a-z0-9.+-]*$"
+    },
+    "length": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

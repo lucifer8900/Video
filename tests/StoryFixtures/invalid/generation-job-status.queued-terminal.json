@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0.0",
+  "requestId": "cx306-invalid-queued",
+  "jobId": "f4ad2a7b-ff3a-4704-ab32-93c10ab29bc8",
+  "status": "queued",
+  "terminal": true,
+  "pollAfterMilliseconds": 1000,
+  "failureCode": null
+}

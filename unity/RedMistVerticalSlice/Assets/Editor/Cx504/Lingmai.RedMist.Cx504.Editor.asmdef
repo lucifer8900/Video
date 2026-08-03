@@ -1,0 +1,19 @@
+{
+  "name": "Lingmai.RedMist.Cx504.Editor",
+  "rootNamespace": "Lingmai.RedMist.Cx504",
+  "references": [
+    "Unity.Addressables",
+    "Unity.Addressables.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

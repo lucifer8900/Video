@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lingmaiyujin.example/v1/combatant-state.schema.json",
+  "title": "CombatantState",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "entityId",
+    "cultivation",
+    "resources",
+    "injuries",
+    "resistances",
+    "loadoutIds",
+    "retreatReserveMana",
+    "exposureTags"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "entityId": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "cultivation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "realmId",
+        "stage",
+        "accumulation"
+      ],
+      "properties": {
+        "realmId": {
+          "type": "string",
+          "enum": [
+            "qi_refining",
+            "foundation",
+            "core_formation",
+            "nascent_soul",
+            "deity_transformation",
+            "spatial_tempering",
+            "body_integration",
+            "mahayana",
+            "tribulation"
+          ]
+        },
+        "stage": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "accumulation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "bottleneckTags": {
+          "$ref": "common.schema.json#/$defs/stringArray"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "realmId": {
+                "const": "qi_refining"
+              }
+            },
+            "required": [
+              "realmId"
+            ]
+          },
+          "then": {
+            "properties": {
+              "stage": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 13
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "realmId": {
+                "enum": [
+                  "foundation",
+                  "core_formation",
+                  "nascent_soul",
+                  "deity_transformation",
+                  "spatial_tempering",
+                  "body_integration",
+                  "mahayana"
+                ]
+              }
+            },
+            "required": [
+              "realmId"
+            ]
+          },
+          "then": {
+            "properties": {
+              "stage": {
+                "type": "string",
+                "enum": [
+                  "early",
+                  "middle",
+                  "late",
+                  "peak"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "realmId": {
+                "const": "tribulation"
+              }
+            },
+            "required": [
+              "realmId"
+            ]
+          },
+          "then": {
+            "properties": {
+              "stage": {
+                "type": "string",
+                "enum": [
+                  "preparation",
+                  "active_tribulation",
+                  "resolved"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mana",
+        "divineSenseLoad",
+        "body",
+        "vitalEssence",
+        "soulIntegrity"
+      ],
+      "properties": {
+        "mana": {
+          "$ref": "common.schema.json#/$defs/resourcePool"
+        },
+        "divineSenseLoad": {
+          "$ref": "common.schema.json#/$defs/resourcePool"
+        },
+        "body": {
+          "$ref": "common.schema.json#/$defs/resourcePool"
+        },
+        "vitalEssence": {
+          "$ref": "common.schema.json#/$defs/resourcePool"
+        },
+        "soulIntegrity": {
+          "$ref": "common.schema.json#/$defs/resourcePool"
+        }
+      }
+    },
+    "injuries": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/injury"
+      }
+    },
+    "resistances": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/resistance"
+      },
+      "uniqueItems": true
+    },
+    "loadoutIds": {
+      "$ref": "common.schema.json#/$defs/idArray"
+    },
+    "retreatReserveMana": {
+      "type": "number",
+      "minimum": 0
+    },
+    "exposureTags": {
+      "$ref": "common.schema.json#/$defs/stringArray"
+    }
+  },
+  "$defs": {
+    "resistance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "vector",
+        "value"
+      ],
+      "properties": {
+        "vector": {
+          "type": "string",
+          "enum": [
+            "physical",
+            "metal",
+            "wood",
+            "water",
+            "fire",
+            "earth",
+            "lightning",
+            "cold",
+            "poison",
+            "corpse_or_demonic_bane",
+            "soul",
+            "illusion_or_mind",
+            "space",
+            "law"
+          ]
+        },
+        "value": {
+          "type": "number",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "sourceIds": {
+          "$ref": "common.schema.json#/$defs/idArray"
+        }
+      }
+    }
+  }
+}

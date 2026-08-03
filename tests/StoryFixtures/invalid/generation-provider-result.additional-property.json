@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0.0",
+  "providerKey": "fixture.provider.video",
+  "operationId": "fixture.operation.raw_payload",
+  "status": "running",
+  "modelSnapshot": "fixture-model-snapshot",
+  "providerPayload": "must-not-cross-provider-boundary"
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "idempotencyKey": "batch.final.001",
+  "sourceManifestId": "manifest.synthetic.approved",
+  "sourceManifestContentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "targetTier": "final_quality",
+  "shotIds": [
+    "shot.001"
+  ],
+  "sourcePreviewBatchRef": "3d26e967-2afc-4eb4-8d80-ff928a3b44a8"
+}

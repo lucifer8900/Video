@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "evaluationScope": "synthetic_text_regression",
+  "productionReadiness": "not_evaluable_no_production_voice_intents",
+  "datasetId": "voice-evaluation.zh-CN.synthetic.v1",
+  "datasetSha256": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "classifierId": "local_keyword",
+  "sampleCount": 2,
+  "audioSampleCount": 0,
+  "thresholds": {
+    "minimumValidIntentAccuracy": 0.9,
+    "maximumSevereFalsePositiveRateExclusive": 0.01
+  },
+  "metrics": {
+    "overallCorrect": 2,
+    "totalSamples": 2,
+    "overallAccuracy": 1,
+    "validIntentCorrect": 1,
+    "validIntentTotal": 1,
+    "validIntentAccuracy": 1,
+    "severeFalsePositiveCount": 0,
+    "nonSevereSampleTotal": 2,
+    "severeFalsePositiveRate": 0
+  },
+  "passed": true,
+  "classes": [
+    {
+      "expectedOutcome": "matched",
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1
+    },
+    {
+      "expectedOutcome": "irrelevant",
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1
+    }
+  ],
+  "samples": [
+    {
+      "id": "voice.sample.001",
+      "nodeId": "fixture.node.primary",
+      "expectedOutcome": "matched",
+      "expectedIntentId": "fixture.intent.help",
+      "actualOutcome": "matched",
+      "actualIntentId": "fixture.intent.help",
+      "confidence": 0.95,
+      "source": "local_keyword",
+      "correct": true,
+      "severeFalsePositive": false
+    },
+    {
+      "id": "voice.sample.002",
+      "nodeId": "fixture.node.primary",
+      "expectedOutcome": "irrelevant",
+      "expectedIntentId": null,
+      "actualOutcome": "irrelevant",
+      "actualIntentId": null,
+      "confidence": 0,
+      "source": "local_keyword",
+      "correct": true,
+      "severeFalsePositive": false
+    }
+  ]
+}
