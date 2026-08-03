@@ -19,6 +19,7 @@ static async Task<int> RunAsync(string[] args)
             "validate" => Validate(args[1..]),
             "validate-visual-bible" => ValidateVisualBible(args[1..]),
             "validate-art-direction" => ValidateArtDirection(args[1..]),
+            "validate-multiview-candidates" => ValidateMultiviewCandidates(args[1..]),
             "validate-visual-anchors" => ValidateVisualAnchors(args[1..]),
             "validate-visual-anchor-correction" => ValidateVisualAnchorCorrection(args[1..]),
             "validate-visual-anchor-adoption" => ValidateVisualAnchorAdoption(args[1..]),
@@ -64,6 +65,38 @@ static int ValidateArtDirection(string[] args)
     }
 
     Console.WriteLine("CX-516 art direction valid: 8+ official works, 6 humanoids, 12 outfits, 1 ink dragon, 8 environment domains.");
+    return 0;
+}
+
+static int ValidateMultiviewCandidates(string[] args)
+{
+    var options = ParseOptions(args);
+    var manifestPath = RequiredPath(options, "--manifest");
+    var artDirectionPath = RequiredPath(options, "--art-direction");
+    var candidateRoot = RequiredPath(options, "--candidate-root");
+    var repositoryRoot = FindRepositoryRoot().FullName;
+    var schemaPath = options.TryGetValue("--schema", out var explicitSchema)
+        ? Path.GetFullPath(explicitSchema)
+        : RepositorySchema("red-mist-multiview-candidates.schema.json");
+    var diagnostics = new List<CatalogDiagnostic>();
+    diagnostics.AddRange(CatalogFile.ValidateSchema(schemaPath, manifestPath));
+    diagnostics.AddRange(MultiviewCandidateValidator.Validate(
+        manifestPath,
+        artDirectionPath,
+        candidateRoot,
+        repositoryRoot));
+    foreach (var diagnostic in diagnostics)
+    {
+        Console.WriteLine(diagnostic);
+    }
+
+    if (diagnostics.Count > 0)
+    {
+        Console.WriteLine($"CX-517 multiview candidates invalid: {diagnostics.Count} diagnostic(s).");
+        return 2;
+    }
+
+    Console.WriteLine("CX-517 multiview candidates valid: 12 outfit boards, 1 ink dragon board, all pending human review");
     return 0;
 }
 
@@ -635,6 +668,7 @@ static void PrintUsage()
     Console.WriteLine("ReferenceLibrary validate --catalog <catalog.json> --downloads-root <raw-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-visual-bible --manifest <red-mist-visual-bible.json> --catalog <catalog.json> --candidate-root <cx508-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-art-direction --manifest <red-mist-art-direction.json> --markdown <red-mist-art-direction.md> [--schema <schema.json>]");
+    Console.WriteLine("ReferenceLibrary validate-multiview-candidates --manifest <red-mist-multiview-candidates.json> --art-direction <red-mist-art-direction.json> --candidate-root <cx517-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-visual-anchors --manifest <red-mist-visual-anchors.json> --catalog <catalog.json> --candidate-root <cx509-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-visual-anchor-correction --manifest <red-mist-visual-anchor-correction.json> --catalog <catalog.json> --candidate-root <cx510-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-visual-anchor-adoption --manifest <red-mist-visual-anchor-adoption.json> --repository-root <repo> [--schema <schema.json>]");

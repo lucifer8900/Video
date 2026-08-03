@@ -1218,6 +1218,12 @@
       "schemaFile": "red-mist-art-direction.schema.json",
       "instanceFile": "../../content/story/red-mist/red-mist-art-direction.cx516.json",
       "expectedValid": true
+    },
+    {
+      "name": "valid CX-517 red mist multiview candidates",
+      "schemaFile": "red-mist-multiview-candidates.schema.json",
+      "instanceFile": "../../content/story/red-mist/red-mist-multiview-candidates.cx517.json",
+      "expectedValid": true
     }
   ]
 }
