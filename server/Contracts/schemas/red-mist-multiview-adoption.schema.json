@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.example/schemas/red-mist-multiview-adoption.schema.json",
+  "title": "Red Mist CX-518 Multiview Adoption",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "cardId",
+    "worldId",
+    "sourceManifest",
+    "humanReview",
+    "adoptionPolicy",
+    "adoptedAssetIds",
+    "assets",
+    "markdownContract"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "cardId": { "const": "CX-518" },
+    "worldId": { "const": "lingmai-ember-red-mist" },
+    "sourceManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cardId", "path", "sha256", "preserved"],
+      "properties": {
+        "cardId": { "const": "CX-517" },
+        "path": { "const": "content/story/red-mist/red-mist-multiview-candidates.cx517.json" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "preserved": { "const": true }
+      }
+    },
+    "humanReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["approved", "decision", "reviewedAt", "scope"],
+      "properties": {
+        "approved": { "const": true },
+        "decision": { "const": "user_explicit_all" },
+        "reviewedAt": { "type": "string", "format": "date" },
+        "scope": { "const": "all_13_cx517_candidates" }
+      }
+    },
+    "adoptionPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "adoptedAsReference",
+        "expressionGenerationAllowed",
+        "runtimeUse",
+        "shipInBuild",
+        "overwriteExistingAssets",
+        "newImageGeneration",
+        "videoOrAudioGeneration",
+        "imagegenUsed",
+        "flow2ApiUsed",
+        "geminiUsed",
+        "veoUsed",
+        "cx514Status"
+      ],
+      "properties": {
+        "adoptedAsReference": { "const": true },
+        "expressionGenerationAllowed": { "const": true },
+        "runtimeUse": { "const": false },
+        "shipInBuild": { "const": false },
+        "overwriteExistingAssets": { "const": false },
+        "newImageGeneration": { "const": false },
+        "videoOrAudioGeneration": { "const": false },
+        "imagegenUsed": { "const": false },
+        "flow2ApiUsed": { "const": false },
+        "geminiUsed": { "const": false },
+        "veoUsed": { "const": false },
+        "cx514Status": { "const": "paused" }
+      }
+    },
+    "adoptedAssetIds": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^turnaround\\.(outfit|creature)\\.[a-z0-9_]+\\.v[1-9][0-9]*$" }
+    },
+    "assets": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "items": { "$ref": "#/$defs/adoptedAsset" }
+    },
+    "markdownContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relativePath", "listsEveryAssetAndFile"],
+      "properties": {
+        "relativePath": { "const": "content/story/red-mist/red-mist-multiview-adoption.cx518.md" },
+        "listsEveryAssetAndFile": { "const": true }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mediaType", "byteLength", "width", "height", "sha256"],
+      "properties": {
+        "mediaType": { "const": "image/png" },
+        "byteLength": { "type": "integer", "minimum": 1 },
+        "width": { "const": 1536 },
+        "height": { "const": 1024 },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "adoptedAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assetId",
+        "sourcePath",
+        "sourceAdoptionStatus",
+        "adoptedAsReference",
+        "expressionGenerationAllowed",
+        "runtimeUse",
+        "shipInBuild",
+        "artifact"
+      ],
+      "properties": {
+        "assetId": { "type": "string", "pattern": "^turnaround\\.(outfit|creature)\\.[a-z0-9_]+\\.v[1-9][0-9]*$" },
+        "sourcePath": { "type": "string", "pattern": "^content/visual-candidates/cx517/turnarounds/[a-z0-9_]+_v[1-9][0-9]*\\.png$" },
+        "sourceAdoptionStatus": { "const": "needs_review" },
+        "adoptedAsReference": { "const": true },
+        "expressionGenerationAllowed": { "const": true },
+        "runtimeUse": { "const": false },
+        "shipInBuild": { "const": false },
+        "artifact": { "$ref": "#/$defs/artifact" }
+      }
+    }
+  }
+}

@@ -1224,6 +1224,12 @@
       "schemaFile": "red-mist-multiview-candidates.schema.json",
       "instanceFile": "../../content/story/red-mist/red-mist-multiview-candidates.cx517.json",
       "expectedValid": true
+    },
+    {
+      "name": "valid CX-518 red mist multiview adoption",
+      "schemaFile": "red-mist-multiview-adoption.schema.json",
+      "instanceFile": "../../content/story/red-mist/red-mist-multiview-adoption.cx518.json",
+      "expectedValid": true
     }
   ]
 }
