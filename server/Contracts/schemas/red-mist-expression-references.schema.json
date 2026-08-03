@@ -1,0 +1,275 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lingmai.example/schemas/red-mist-expression-references.schema.json",
+  "title": "Red Mist CX-519 Expression References",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "cardId",
+    "worldId",
+    "createdOn",
+    "sourceAdoption",
+    "generationPolicy",
+    "emotionOrder",
+    "groupDefinitions",
+    "subjects",
+    "markdownContract",
+    "reviewBoundary"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "cardId": { "const": "CX-519" },
+    "worldId": { "const": "lingmai-ember-red-mist" },
+    "createdOn": { "type": "string", "format": "date" },
+    "sourceAdoption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cardId", "path", "sha256", "expressionGenerationAllowed"],
+      "properties": {
+        "cardId": { "const": "CX-518" },
+        "path": { "const": "content/story/red-mist/red-mist-multiview-adoption.cx518.json" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "expressionGenerationAllowed": { "const": true }
+      }
+    },
+    "generationPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "imageProvider",
+        "stillImagesOnly",
+        "generationCalls",
+        "successfulOutputs",
+        "failedCalls",
+        "discardedOutputs",
+        "compositeBoardFiles",
+        "independentExpressionFiles",
+        "cropMethod",
+        "overwriteExistingAssets",
+        "runtimeUse",
+        "shipInBuild",
+        "videoOrAudioUsed",
+        "flow2ApiUsed",
+        "geminiUsed",
+        "veoUsed",
+        "cx514Status"
+      ],
+      "properties": {
+        "imageProvider": { "const": "codex_builtin_imagegen" },
+        "stillImagesOnly": { "const": true },
+        "generationCalls": { "type": "integer", "minimum": 18 },
+        "successfulOutputs": { "type": "integer", "minimum": 18 },
+        "failedCalls": { "type": "integer", "minimum": 0 },
+        "discardedOutputs": { "type": "integer", "minimum": 0 },
+        "compositeBoardFiles": { "const": 18 },
+        "independentExpressionFiles": { "const": 72 },
+        "cropMethod": { "const": "ffmpeg_crop_756x504_lanczos_to_1536x1024" },
+        "overwriteExistingAssets": { "const": false },
+        "runtimeUse": { "const": false },
+        "shipInBuild": { "const": false },
+        "videoOrAudioUsed": { "const": false },
+        "flow2ApiUsed": { "const": false },
+        "geminiUsed": { "const": false },
+        "veoUsed": { "const": false },
+        "cx514Status": { "const": "paused" }
+      }
+    },
+    "emotionOrder": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/emotionId" }
+    },
+    "groupDefinitions": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": { "$ref": "#/$defs/groupDefinition" }
+    },
+    "subjects": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": { "$ref": "#/$defs/subject" }
+    },
+    "markdownContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relativePath", "listsEveryBoardAndExpression"],
+      "properties": {
+        "relativePath": { "const": "content/story/red-mist/red-mist-expression-references.cx519.md" },
+        "listsEveryBoardAndExpression": { "const": true }
+      }
+    },
+    "reviewBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["humanReviewRequired", "automaticAdoption", "unityIntegration", "nextCard"],
+      "properties": {
+        "humanReviewRequired": { "const": true },
+        "automaticAdoption": { "const": false },
+        "unityIntegration": { "const": false },
+        "nextCard": { "const": "human_review_then_expression_adoption" }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "emotionId": {
+      "enum": [
+        "neutral",
+        "calm_warmth",
+        "restrained_joy",
+        "resolve",
+        "vigilance",
+        "suspicion",
+        "concern",
+        "grief",
+        "anger_controlled",
+        "fear_suppressed",
+        "pain",
+        "astonishment"
+      ]
+    },
+    "quadrant": { "enum": ["top_left", "top_right", "bottom_left", "bottom_right"] },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mediaType", "byteLength", "width", "height", "sha256"],
+      "properties": {
+        "mediaType": { "const": "image/png" },
+        "byteLength": { "type": "integer", "minimum": 1 },
+        "width": { "const": 1536 },
+        "height": { "const": 1024 },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "sourceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assetId", "path", "sha256"],
+      "properties": {
+        "assetId": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "pattern": "^content/visual-candidates/cx(508|509|510|517)/[a-z0-9_./-]+_v[1-9][0-9]*\\.png$" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "groupDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["group", "emotions", "quadrants"],
+      "properties": {
+        "group": { "enum": ["a", "b", "c"] },
+        "emotions": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "$ref": "#/$defs/emotionId" }
+        },
+        "quadrants": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "$ref": "#/$defs/quadrant" }
+        }
+      }
+    },
+    "board": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assetId",
+        "group",
+        "emotions",
+        "outputPath",
+        "generationMode",
+        "prompt",
+        "adoptionStatus",
+        "adopted",
+        "runtimeUse",
+        "shipInBuild",
+        "artifact"
+      ],
+      "properties": {
+        "assetId": { "type": "string", "pattern": "^expression_board\\.[a-z0-9_]+\\.group_[abc]\\.v[1-9][0-9]*$" },
+        "group": { "enum": ["a", "b", "c"] },
+        "emotions": { "type": "array", "minItems": 4, "maxItems": 4, "items": { "$ref": "#/$defs/emotionId" } },
+        "outputPath": { "type": "string", "pattern": "^content/visual-candidates/cx519/expression-boards/expression_board_[a-z0-9_]+_group_[abc]_v[1-9][0-9]*\\.png$" },
+        "generationMode": { "const": "codex_builtin_imagegen" },
+        "prompt": { "type": "string", "minLength": 200 },
+        "adoptionStatus": { "const": "needs_review" },
+        "adopted": { "const": false },
+        "runtimeUse": { "const": false },
+        "shipInBuild": { "const": false },
+        "artifact": { "$ref": "#/$defs/artifact" }
+      }
+    },
+    "crop": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "width", "height", "scaleWidth", "scaleHeight", "filter"],
+      "properties": {
+        "x": { "type": "integer", "minimum": 0 },
+        "y": { "type": "integer", "minimum": 0 },
+        "width": { "const": 756 },
+        "height": { "const": 504 },
+        "scaleWidth": { "const": 1536 },
+        "scaleHeight": { "const": 1024 },
+        "filter": { "const": "lanczos" }
+      }
+    },
+    "expression": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assetId",
+        "emotionId",
+        "outputPath",
+        "sourceBoardPath",
+        "sourceGroup",
+        "sourceQuadrant",
+        "crop",
+        "generationMode",
+        "adoptionStatus",
+        "adopted",
+        "runtimeUse",
+        "shipInBuild",
+        "reviewStatus",
+        "reviewChecks",
+        "artifact"
+      ],
+      "properties": {
+        "assetId": { "type": "string", "pattern": "^expression\\.[a-z0-9_]+\\.[a-z0-9_]+\\.v[1-9][0-9]*$" },
+        "emotionId": { "$ref": "#/$defs/emotionId" },
+        "outputPath": { "type": "string", "pattern": "^content/visual-candidates/cx519/expressions/expression_[a-z0-9_]+_[a-z0-9_]+_v[1-9][0-9]*\\.png$" },
+        "sourceBoardPath": { "type": "string", "pattern": "^content/visual-candidates/cx519/expression-boards/expression_board_[a-z0-9_]+_group_[abc]_v[1-9][0-9]*\\.png$" },
+        "sourceGroup": { "enum": ["a", "b", "c"] },
+        "sourceQuadrant": { "$ref": "#/$defs/quadrant" },
+        "crop": { "$ref": "#/$defs/crop" },
+        "generationMode": { "const": "deterministic_ffmpeg_crop" },
+        "adoptionStatus": { "const": "needs_review" },
+        "adopted": { "const": false },
+        "runtimeUse": { "const": false },
+        "shipInBuild": { "const": false },
+        "reviewStatus": { "const": "pending_human_review" },
+        "reviewChecks": { "type": "array", "minItems": 7, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "artifact": { "$ref": "#/$defs/artifact" }
+      }
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subjectId", "slug", "identityAnchor", "outfitReference", "boards", "expressions"],
+      "properties": {
+        "subjectId": { "type": "string", "pattern": "^character\\.[a-z0-9_]+$" },
+        "slug": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+        "identityAnchor": { "$ref": "#/$defs/sourceReference" },
+        "outfitReference": { "$ref": "#/$defs/sourceReference" },
+        "boards": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "$ref": "#/$defs/board" } },
+        "expressions": { "type": "array", "minItems": 12, "maxItems": 12, "items": { "$ref": "#/$defs/expression" } }
+      }
+    }
+  }
+}

@@ -1230,6 +1230,12 @@
       "schemaFile": "red-mist-multiview-adoption.schema.json",
       "instanceFile": "../../content/story/red-mist/red-mist-multiview-adoption.cx518.json",
       "expectedValid": true
+    },
+    {
+      "name": "valid CX-519 red mist expression references",
+      "schemaFile": "red-mist-expression-references.schema.json",
+      "instanceFile": "../../content/story/red-mist/red-mist-expression-references.cx519.json",
+      "expectedValid": true
     }
   ]
 }

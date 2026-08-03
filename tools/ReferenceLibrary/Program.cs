@@ -21,6 +21,7 @@ static async Task<int> RunAsync(string[] args)
             "validate-art-direction" => ValidateArtDirection(args[1..]),
             "validate-multiview-candidates" => ValidateMultiviewCandidates(args[1..]),
             "validate-multiview-adoption" => ValidateMultiviewAdoption(args[1..]),
+            "validate-expression-references" => ValidateExpressionReferences(args[1..]),
             "validate-visual-anchors" => ValidateVisualAnchors(args[1..]),
             "validate-visual-anchor-correction" => ValidateVisualAnchorCorrection(args[1..]),
             "validate-visual-anchor-adoption" => ValidateVisualAnchorAdoption(args[1..]),
@@ -130,6 +131,38 @@ static int ValidateMultiviewAdoption(string[] args)
     }
 
     Console.WriteLine("CX-518 multiview adoption valid: 13 reference anchors approved, expression generation unlocked, 0 runtime assets");
+    return 0;
+}
+
+static int ValidateExpressionReferences(string[] args)
+{
+    var options = ParseOptions(args);
+    var manifestPath = RequiredPath(options, "--manifest");
+    var sourceAdoptionPath = RequiredPath(options, "--source-adoption");
+    var assetRoot = RequiredPath(options, "--asset-root");
+    var repositoryRoot = FindRepositoryRoot().FullName;
+    var schemaPath = options.TryGetValue("--schema", out var explicitSchema)
+        ? Path.GetFullPath(explicitSchema)
+        : RepositorySchema("red-mist-expression-references.schema.json");
+    var diagnostics = new List<CatalogDiagnostic>();
+    diagnostics.AddRange(CatalogFile.ValidateSchema(schemaPath, manifestPath));
+    diagnostics.AddRange(ExpressionReferenceValidator.Validate(
+        manifestPath,
+        sourceAdoptionPath,
+        assetRoot,
+        repositoryRoot));
+    foreach (var diagnostic in diagnostics)
+    {
+        Console.WriteLine(diagnostic);
+    }
+
+    if (diagnostics.Count > 0)
+    {
+        Console.WriteLine($"CX-519 expression references invalid: {diagnostics.Count} diagnostic(s).");
+        return 2;
+    }
+
+    Console.WriteLine("CX-519 expression references valid: 6 subjects, 18 boards, 72 independent expressions, all pending human review");
     return 0;
 }
 
@@ -703,6 +736,7 @@ static void PrintUsage()
     Console.WriteLine("ReferenceLibrary validate-art-direction --manifest <red-mist-art-direction.json> --markdown <red-mist-art-direction.md> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-multiview-candidates --manifest <red-mist-multiview-candidates.json> --art-direction <red-mist-art-direction.json> --candidate-root <cx517-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-multiview-adoption --manifest <red-mist-multiview-adoption.json> --source-manifest <red-mist-multiview-candidates.json> --candidate-root <cx517-dir> [--schema <schema.json>]");
+    Console.WriteLine("ReferenceLibrary validate-expression-references --manifest <red-mist-expression-references.json> --source-adoption <red-mist-multiview-adoption.json> --asset-root <cx519-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-visual-anchors --manifest <red-mist-visual-anchors.json> --catalog <catalog.json> --candidate-root <cx509-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-visual-anchor-correction --manifest <red-mist-visual-anchor-correction.json> --catalog <catalog.json> --candidate-root <cx510-dir> [--schema <schema.json>]");
     Console.WriteLine("ReferenceLibrary validate-visual-anchor-adoption --manifest <red-mist-visual-anchor-adoption.json> --repository-root <repo> [--schema <schema.json>]");

@@ -1,0 +1,3452 @@
+{
+  "schemaVersion": "1.0.0",
+  "cardId": "CX-519",
+  "worldId": "lingmai-ember-red-mist",
+  "createdOn": "2026-08-03",
+  "sourceAdoption": {
+    "cardId": "CX-518",
+    "path": "content/story/red-mist/red-mist-multiview-adoption.cx518.json",
+    "sha256": "ddc479c41cb07b3bf2f833ab25870214d2b439f500e78a482dbe082ef44840c5",
+    "expressionGenerationAllowed": true
+  },
+  "generationPolicy": {
+    "imageProvider": "codex_builtin_imagegen",
+    "stillImagesOnly": true,
+    "generationCalls": 24,
+    "successfulOutputs": 19,
+    "failedCalls": 5,
+    "discardedOutputs": 1,
+    "compositeBoardFiles": 18,
+    "independentExpressionFiles": 72,
+    "cropMethod": "ffmpeg_crop_756x504_lanczos_to_1536x1024",
+    "overwriteExistingAssets": false,
+    "runtimeUse": false,
+    "shipInBuild": false,
+    "videoOrAudioUsed": false,
+    "flow2ApiUsed": false,
+    "geminiUsed": false,
+    "veoUsed": false,
+    "cx514Status": "paused"
+  },
+  "emotionOrder": [
+    "neutral",
+    "calm_warmth",
+    "restrained_joy",
+    "resolve",
+    "vigilance",
+    "suspicion",
+    "concern",
+    "grief",
+    "anger_controlled",
+    "fear_suppressed",
+    "pain",
+    "astonishment"
+  ],
+  "groupDefinitions": [
+    {
+      "group": "a",
+      "emotions": [
+        "neutral",
+        "calm_warmth",
+        "restrained_joy",
+        "resolve"
+      ],
+      "quadrants": [
+        "top_left",
+        "top_right",
+        "bottom_left",
+        "bottom_right"
+      ]
+    },
+    {
+      "group": "b",
+      "emotions": [
+        "vigilance",
+        "suspicion",
+        "concern",
+        "grief"
+      ],
+      "quadrants": [
+        "top_left",
+        "top_right",
+        "bottom_left",
+        "bottom_right"
+      ]
+    },
+    {
+      "group": "c",
+      "emotions": [
+        "anger_controlled",
+        "fear_suppressed",
+        "pain",
+        "astonishment"
+      ],
+      "quadrants": [
+        "top_left",
+        "top_right",
+        "bottom_left",
+        "bottom_right"
+      ]
+    }
+  ],
+  "subjects": [
+    {
+      "subjectId": "character.shen_yan",
+      "slug": "shen_yan",
+      "identityAnchor": {
+        "assetId": "identity.shen_yan.v1",
+        "path": "content/visual-candidates/cx508/identity-anchors/identity_shen_yan_v1.png",
+        "sha256": "1a0973205fac132f1f5d3c658f8921200d5ce4ca7575182a2c85ab80eb166e50"
+      },
+      "outfitReference": {
+        "assetId": "turnaround.outfit.shen_yan_qinglan_travel.v1",
+        "path": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shen_yan_qinglan_travel_v1.png",
+        "sha256": "48548c9b77e9e6b1225f29bda1686bb1c00ffb3c6707f92325f055a1fef481fe"
+      },
+      "boards": [
+        {
+          "assetId": "expression_board.shen_yan.group_a.v1",
+          "group": "a",
+          "emotions": [
+            "neutral",
+            "calm_warmth",
+            "restrained_joy",
+            "resolve"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_a_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.shen_yan. Change facial muscles only for the ordered expressions neutral, calm_warmth, restrained_joy, resolve. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2208985,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "f469de691bf78fc5fc3aea902ad8ff8af0f41b399eb773daefb06fd3f8e663b8"
+          }
+        },
+        {
+          "assetId": "expression_board.shen_yan.group_b.v1",
+          "group": "b",
+          "emotions": [
+            "vigilance",
+            "suspicion",
+            "concern",
+            "grief"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_b_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.shen_yan. Change facial muscles only for the ordered expressions vigilance, suspicion, concern, grief. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2137954,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "9a2e3c5905cd698d5e58e2808a9446a38f46514e7b0cb40a40a6bedb82b03c96"
+          }
+        },
+        {
+          "assetId": "expression_board.shen_yan.group_c.v1",
+          "group": "c",
+          "emotions": [
+            "anger_controlled",
+            "fear_suppressed",
+            "pain",
+            "astonishment"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_c_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.shen_yan. Change facial muscles only for the ordered expressions anger_controlled, fear_suppressed, pain, astonishment. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2153028,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "4386362d5c521ad8a6f7b262c7b54a54f3b09f87637320107fc64912223c4fc1"
+          }
+        }
+      ],
+      "expressions": [
+        {
+          "assetId": "expression.shen_yan.neutral.v1",
+          "emotionId": "neutral",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_neutral_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1441974,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "70fc16919076ed5208a2306b14c729e627efff01310422e79e8e75473562eef1"
+          }
+        },
+        {
+          "assetId": "expression.shen_yan.calm_warmth.v1",
+          "emotionId": "calm_warmth",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_calm_warmth_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1440172,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "4bd97c2bdbb1661119871ae0704ed7366e415f9f1d88606d2d03dc589afccfaa"
+          }
+        },
+        {
+          "assetId": "expression.shen_yan.restrained_joy.v1",
+          "emotionId": "restrained_joy",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_restrained_joy_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1440623,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "c2f0170b485d3494cabff433bef924fb323d0f05228c9621c8bae61d874ebac8"
+          }
+        },
+        {
+          "assetId": "expression.shen_yan.resolve.v1",
+          "emotionId": "resolve",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_resolve_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1441235,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "c50bab81e76e7aeebcc6fbeb350249a0d5858bfb789ee786449def3210b53505"
+          }
+        },
+        {
+          "assetId": "expression.shen_yan.vigilance.v1",
+          "emotionId": "vigilance",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_vigilance_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1381361,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "acffde126c95aa373a3f1853c083cdaa99cbb23728e27ca03dc90d438ef3fa05"
+          }
+        },
+        {
+          "assetId": "expression.shen_yan.suspicion.v1",
+          "emotionId": "suspicion",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_suspicion_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1369272,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "066f2f18d05ac1918d922ff6a1fc3526e5c23c68956eca62ac0d23f242b2bfab"
+          }
+        },
+        {
+          "assetId": "expression.shen_yan.concern.v1",
+          "emotionId": "concern",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_concern_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1371500,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "0584fd7f53f9e374511541c8d5372f1ca0970df9294b0bfa006ccc2ef395519f"
+          }
+        },
+        {
+          "assetId": "expression.shen_yan.grief.v1",
+          "emotionId": "grief",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_grief_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1366588,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "92a0746da657c7a888a6a713f86115127edf920e32466f563d9071b7ab8eb4dc"
+          }
+        },
+        {
+          "assetId": "expression.shen_yan.anger_controlled.v1",
+          "emotionId": "anger_controlled",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_anger_controlled_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1390578,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "25e5c575151af351e549d250ad76953575e05ecd45f5893cb34763e91fe7700e"
+          }
+        },
+        {
+          "assetId": "expression.shen_yan.fear_suppressed.v1",
+          "emotionId": "fear_suppressed",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_fear_suppressed_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1389443,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "3e622f93f6a0e3430650a5bdd2d057a1f3a58105061ce9e3dca47e7aaa6a3b15"
+          }
+        },
+        {
+          "assetId": "expression.shen_yan.pain.v1",
+          "emotionId": "pain",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_pain_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1376659,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "27a36b62fc74d4e1711b4153ad2271286533f803ba5971abcb798ba3814beed5"
+          }
+        },
+        {
+          "assetId": "expression.shen_yan.astonishment.v1",
+          "emotionId": "astonishment",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shen_yan_astonishment_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shen_yan_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1383465,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "86abca8828908435f4e294e36f8e6170306fa891178de2ccadcee1715551ce85"
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "character.chu_mingqi",
+      "slug": "chu_mingqi",
+      "identityAnchor": {
+        "assetId": "identity.chu_mingqi.v2",
+        "path": "content/visual-candidates/cx509/identity-anchors/identity_chu_mingqi_v2.png",
+        "sha256": "ad13ade5efe7c4451919b16ede690520de64e6ae79680e55f7a1926c6cac29ae"
+      },
+      "outfitReference": {
+        "assetId": "turnaround.outfit.chu_mingqi_jiyue_travel.v1",
+        "path": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_chu_mingqi_jiyue_travel_v1.png",
+        "sha256": "5d31ff1b8026301dab1b97ab0f07cd382bdc7aa879c5d93b814a77a30f78642a"
+      },
+      "boards": [
+        {
+          "assetId": "expression_board.chu_mingqi.group_a.v1",
+          "group": "a",
+          "emotions": [
+            "neutral",
+            "calm_warmth",
+            "restrained_joy",
+            "resolve"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_a_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.chu_mingqi. Change facial muscles only for the ordered expressions neutral, calm_warmth, restrained_joy, resolve. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2119026,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "e75ee6cf6a38c71349eb974c49d4490d45ad1acdd782b452009372df4a71c5d4"
+          }
+        },
+        {
+          "assetId": "expression_board.chu_mingqi.group_b.v1",
+          "group": "b",
+          "emotions": [
+            "vigilance",
+            "suspicion",
+            "concern",
+            "grief"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_b_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.chu_mingqi. Change facial muscles only for the ordered expressions vigilance, suspicion, concern, grief. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2101151,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "1dc43851334bbef8c612d2aebc66ec0a3f450fb5c315362d6963f716c287fe6f"
+          }
+        },
+        {
+          "assetId": "expression_board.chu_mingqi.group_c.v1",
+          "group": "c",
+          "emotions": [
+            "anger_controlled",
+            "fear_suppressed",
+            "pain",
+            "astonishment"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_c_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.chu_mingqi. Change facial muscles only for the ordered expressions anger_controlled, fear_suppressed, pain, astonishment. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2118420,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "69cfa02dc781f9f01bfe25745f7c0e7307b7b200442f8942ae91377f0cbf26c0"
+          }
+        }
+      ],
+      "expressions": [
+        {
+          "assetId": "expression.chu_mingqi.neutral.v1",
+          "emotionId": "neutral",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_neutral_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1377028,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "cecf75048df8a6d18b4e8be2d66ad96d2738f266cf33111cf882e3fa10fb4eb0"
+          }
+        },
+        {
+          "assetId": "expression.chu_mingqi.calm_warmth.v1",
+          "emotionId": "calm_warmth",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_calm_warmth_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1378300,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "2fba5552b7687960cd5642cfc0a163d2b46c0d4e56b2cdf3b061501e2ab76248"
+          }
+        },
+        {
+          "assetId": "expression.chu_mingqi.restrained_joy.v1",
+          "emotionId": "restrained_joy",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_restrained_joy_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1367659,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "3b0a496b8bca38492a51fcc8c20b37b7f72e0747738ef899b99894dd259e16bf"
+          }
+        },
+        {
+          "assetId": "expression.chu_mingqi.resolve.v1",
+          "emotionId": "resolve",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_resolve_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1373293,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "428aa5165c54579891da266e2259f3c49d348e4240ab46c1a753a3ab6e88a513"
+          }
+        },
+        {
+          "assetId": "expression.chu_mingqi.vigilance.v1",
+          "emotionId": "vigilance",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_vigilance_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1353196,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "919eeb04b1a9befb3321a8e1b1cff12cba7a19b5d092e62ba60a01dacf97b670"
+          }
+        },
+        {
+          "assetId": "expression.chu_mingqi.suspicion.v1",
+          "emotionId": "suspicion",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_suspicion_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1349069,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "115cb75375b36023865d51071afecd5d75ecd77524523a7b226c342ddc91122d"
+          }
+        },
+        {
+          "assetId": "expression.chu_mingqi.concern.v1",
+          "emotionId": "concern",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_concern_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1351756,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "4f77c1734d74d6dee23134093f80884a68f5b43bc2aecaa456e44788958104ca"
+          }
+        },
+        {
+          "assetId": "expression.chu_mingqi.grief.v1",
+          "emotionId": "grief",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_grief_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1349607,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "eb91d3200e127cb2833ee25a37bb362f515e699b819c3c51b5f6fe1309adf75c"
+          }
+        },
+        {
+          "assetId": "expression.chu_mingqi.anger_controlled.v1",
+          "emotionId": "anger_controlled",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_anger_controlled_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1366519,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "7a338f017d00794fb6fbc27eeab4996b2ee11bbb0278e02dfd2f3718d18615bd"
+          }
+        },
+        {
+          "assetId": "expression.chu_mingqi.fear_suppressed.v1",
+          "emotionId": "fear_suppressed",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_fear_suppressed_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1363437,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "b9088f923c4e9f57925e2170cd86e8a04542e2c91805c8642e3332f5028e5498"
+          }
+        },
+        {
+          "assetId": "expression.chu_mingqi.pain.v1",
+          "emotionId": "pain",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_pain_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1360816,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "89257f0a8f372029f2e1771d0f1887f4e3b2d85837c83e375127b22da7f01fd4"
+          }
+        },
+        {
+          "assetId": "expression.chu_mingqi.astonishment.v1",
+          "emotionId": "astonishment",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_chu_mingqi_astonishment_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_chu_mingqi_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1357495,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "5d2dcd99047d007400cc8d2dca03c66f357e23a571dd56fcfadd657d0c6409cd"
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "character.shi_jun",
+      "slug": "shi_jun",
+      "identityAnchor": {
+        "assetId": "identity.shi_jun.v3",
+        "path": "content/visual-candidates/cx509/identity-anchors/identity_shi_jun_v3.png",
+        "sha256": "cf29b3028d2e55a8be4cc7bf0fd2141f7426046bdcde776f47537ea35294d613"
+      },
+      "outfitReference": {
+        "assetId": "turnaround.outfit.shi_jun_cangjin_command.v1",
+        "path": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_shi_jun_cangjin_command_v1.png",
+        "sha256": "7e197fd3297c67edde2b76406b17a87e5cd72ddd3302678643d76f78c5b17698"
+      },
+      "boards": [
+        {
+          "assetId": "expression_board.shi_jun.group_a.v1",
+          "group": "a",
+          "emotions": [
+            "neutral",
+            "calm_warmth",
+            "restrained_joy",
+            "resolve"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_a_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.shi_jun. Change facial muscles only for the ordered expressions neutral, calm_warmth, restrained_joy, resolve. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2522788,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "bd568a46bef515db32404adab6b6f89e3de8c62dbd3a25de7ebc184ead60e647"
+          }
+        },
+        {
+          "assetId": "expression_board.shi_jun.group_b.v1",
+          "group": "b",
+          "emotions": [
+            "vigilance",
+            "suspicion",
+            "concern",
+            "grief"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_b_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.shi_jun. Change facial muscles only for the ordered expressions vigilance, suspicion, concern, grief. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2488442,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "a5707eecf97881252eab9fd07c22052050a226b10c962173f257eb96d71c7927"
+          }
+        },
+        {
+          "assetId": "expression_board.shi_jun.group_c.v1",
+          "group": "c",
+          "emotions": [
+            "anger_controlled",
+            "fear_suppressed",
+            "pain",
+            "astonishment"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_c_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.shi_jun. Change facial muscles only for the ordered expressions anger_controlled, fear_suppressed, pain, astonishment. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2477112,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "f79354c493e44c871d18a128d2f7e803f259942f0a6dc1ce5262b4c060358c03"
+          }
+        }
+      ],
+      "expressions": [
+        {
+          "assetId": "expression.shi_jun.neutral.v1",
+          "emotionId": "neutral",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_neutral_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1665578,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "addf4886b3a21d6ddc0228e637100dfba135a8c7d63a8195ce669de52f931642"
+          }
+        },
+        {
+          "assetId": "expression.shi_jun.calm_warmth.v1",
+          "emotionId": "calm_warmth",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_calm_warmth_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1667842,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "24ee40bf997d7c5e29985ac1167a1d741508168d79891f238c3f8bf55c88843e"
+          }
+        },
+        {
+          "assetId": "expression.shi_jun.restrained_joy.v1",
+          "emotionId": "restrained_joy",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_restrained_joy_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1652468,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "1a18272037df952216d65a70003f29ac5a0d3cf64620c960ea4847673e3631d6"
+          }
+        },
+        {
+          "assetId": "expression.shi_jun.resolve.v1",
+          "emotionId": "resolve",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_resolve_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1651990,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "b9dd0a7d24c886959ea7c06d2bf44607226a56d95fabab90a59cc822763e0a99"
+          }
+        },
+        {
+          "assetId": "expression.shi_jun.vigilance.v1",
+          "emotionId": "vigilance",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_vigilance_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1634803,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "494dfb47461cc6d1cb7ae1b7d945cf65c5ba6d995564d1b953088c3d4547c94f"
+          }
+        },
+        {
+          "assetId": "expression.shi_jun.suspicion.v1",
+          "emotionId": "suspicion",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_suspicion_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1636663,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "160acf825519aa212261d35ecc83f655da3ec3876b80f598b947ca78405e48cb"
+          }
+        },
+        {
+          "assetId": "expression.shi_jun.concern.v1",
+          "emotionId": "concern",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_concern_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1620662,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "3ecc592b7289454dd4c76a1c6ec21d0b982960f7b4bd99929419f8f1b84464f7"
+          }
+        },
+        {
+          "assetId": "expression.shi_jun.grief.v1",
+          "emotionId": "grief",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_grief_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1617004,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "778694ae655deb56686c93b299da1361da50fb24e0cfd5129ca0a7a3de91cd0c"
+          }
+        },
+        {
+          "assetId": "expression.shi_jun.anger_controlled.v1",
+          "emotionId": "anger_controlled",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_anger_controlled_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1623799,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "1aba69c006e815e852425b781ab6052a2c85f9d23544b1f07422929f46170d10"
+          }
+        },
+        {
+          "assetId": "expression.shi_jun.fear_suppressed.v1",
+          "emotionId": "fear_suppressed",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_fear_suppressed_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1623647,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "09fc658422afb427a0a308cd9e58d25563a9b02963ed3fadd459811f8ca74b28"
+          }
+        },
+        {
+          "assetId": "expression.shi_jun.pain.v1",
+          "emotionId": "pain",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_pain_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1611744,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "2ba2fb7d85e20ff20e90ba9e852edbd627d9746e02aa6a8c54e66ef49f045ff2"
+          }
+        },
+        {
+          "assetId": "expression.shi_jun.astonishment.v1",
+          "emotionId": "astonishment",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_shi_jun_astonishment_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_shi_jun_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1608795,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "b932718b31a31f2bf9d224c3d06289317e17cc05c854661b4ad2813dc25b3e84"
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "character.celadon_scout",
+      "slug": "celadon_scout",
+      "identityAnchor": {
+        "assetId": "identity.celadon_scout.v3",
+        "path": "content/visual-candidates/cx510/identity-anchors/identity_celadon_scout_v3.png",
+        "sha256": "9bd742b2affe58c78dd0b309d7e5908f88000e3c2a32309b68fac296617d2139"
+      },
+      "outfitReference": {
+        "assetId": "turnaround.outfit.celadon_scout_listening.v1",
+        "path": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_celadon_scout_listening_v1.png",
+        "sha256": "ba1c8b863ae7b04669b30f83ba425a2deba5a83c4318ce1d89b8cf4ac1f1c6e9"
+      },
+      "boards": [
+        {
+          "assetId": "expression_board.celadon_scout.group_a.v1",
+          "group": "a",
+          "emotions": [
+            "neutral",
+            "calm_warmth",
+            "restrained_joy",
+            "resolve"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_a_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.celadon_scout. Change facial muscles only for the ordered expressions neutral, calm_warmth, restrained_joy, resolve. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2208385,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "c96e1c7ea477f1cd0d04d74acb8444c1bdbf66dffd0b12ec2cf98302190412d8"
+          }
+        },
+        {
+          "assetId": "expression_board.celadon_scout.group_b.v1",
+          "group": "b",
+          "emotions": [
+            "vigilance",
+            "suspicion",
+            "concern",
+            "grief"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_b_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.celadon_scout. Change facial muscles only for the ordered expressions vigilance, suspicion, concern, grief. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2175199,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "2fe406a9bdb460cf7922c9e45698f117aa423f267f5e8489c5caeacbab257e9f"
+          }
+        },
+        {
+          "assetId": "expression_board.celadon_scout.group_c.v1",
+          "group": "c",
+          "emotions": [
+            "anger_controlled",
+            "fear_suppressed",
+            "pain",
+            "astonishment"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_c_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.celadon_scout. Change facial muscles only for the ordered expressions anger_controlled, fear_suppressed, pain, astonishment. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2224079,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "56c107dc051e7fd31393b1aa5cee37e59ed600508f257261d24ecb558915f41e"
+          }
+        }
+      ],
+      "expressions": [
+        {
+          "assetId": "expression.celadon_scout.neutral.v1",
+          "emotionId": "neutral",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_neutral_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1435999,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "fbfaaeaeaf7912d5438adc69947902cbda5efb3926645a5850d84c4e6680c7f3"
+          }
+        },
+        {
+          "assetId": "expression.celadon_scout.calm_warmth.v1",
+          "emotionId": "calm_warmth",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_calm_warmth_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1439049,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "ecf5af4e5aa1eaabd3a42d78c8b89a1717d9a26f37887fbcec4af6a4fcc1e01f"
+          }
+        },
+        {
+          "assetId": "expression.celadon_scout.restrained_joy.v1",
+          "emotionId": "restrained_joy",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_restrained_joy_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1432083,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "2272d9270dcc2f2f407d5de780888366dd61b925a08a527e4e42fa2096d4d22f"
+          }
+        },
+        {
+          "assetId": "expression.celadon_scout.resolve.v1",
+          "emotionId": "resolve",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_resolve_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1431086,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "4eeffe77540d34439771a019b2734bb0d509ff4e79043fd4c457018b22656ed3"
+          }
+        },
+        {
+          "assetId": "expression.celadon_scout.vigilance.v1",
+          "emotionId": "vigilance",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_vigilance_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1410632,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "60f928199d58f64672185eae3c845694e5e4273607e16bf23fae04b5e90904eb"
+          }
+        },
+        {
+          "assetId": "expression.celadon_scout.suspicion.v1",
+          "emotionId": "suspicion",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_suspicion_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1404322,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "43dfcf20c5d6072ec7f095744507503a00c90b6a06189fb36763d5c0586d9958"
+          }
+        },
+        {
+          "assetId": "expression.celadon_scout.concern.v1",
+          "emotionId": "concern",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_concern_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1399441,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "f8f8b65e21f185a7baab2d80378db20bad7e1c4ef994f61621a7b3dd4ce3e93b"
+          }
+        },
+        {
+          "assetId": "expression.celadon_scout.grief.v1",
+          "emotionId": "grief",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_grief_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1396268,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "3157e41b7def81b06699f17f1721bf8f3535dc9e4ed36dd286f82972d146a3af"
+          }
+        },
+        {
+          "assetId": "expression.celadon_scout.anger_controlled.v1",
+          "emotionId": "anger_controlled",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_anger_controlled_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1452146,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "7dd32d727b5e2a70de96983abd38ed81545d75315bd3e8746b934e6a1dfc6175"
+          }
+        },
+        {
+          "assetId": "expression.celadon_scout.fear_suppressed.v1",
+          "emotionId": "fear_suppressed",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_fear_suppressed_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1448235,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "12222f56b03ececd05582b07703ad251b324fe1dfb767331e44b200ba00f3901"
+          }
+        },
+        {
+          "assetId": "expression.celadon_scout.pain.v1",
+          "emotionId": "pain",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_pain_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1446239,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "e3d975c000a44e4eaab0eade0c37acdc5a33a5420b6cb49ae062b217a1d73e47"
+          }
+        },
+        {
+          "assetId": "expression.celadon_scout.astonishment.v1",
+          "emotionId": "astonishment",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_celadon_scout_astonishment_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_celadon_scout_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1444509,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "6cdbe6d4408016dfe65679af33d849cb8b3e7815fd31245a9e6e1f93c724fe98"
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "character.cavern_ally",
+      "slug": "cavern_ally",
+      "identityAnchor": {
+        "assetId": "identity.cavern_ally.v1",
+        "path": "content/visual-candidates/cx508/identity-anchors/identity_cavern_ally_v1.png",
+        "sha256": "60fa153e34eab624ba8c429274e640420778082c5d3001f38b6d73bc9d35947d"
+      },
+      "outfitReference": {
+        "assetId": "turnaround.outfit.cavern_ally_stone_lamp.v1",
+        "path": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_cavern_ally_stone_lamp_v1.png",
+        "sha256": "2f2bb62409afaa94823a74177af4db577247c2b46a53e072d2fd258f2c33075c"
+      },
+      "boards": [
+        {
+          "assetId": "expression_board.cavern_ally.group_a.v1",
+          "group": "a",
+          "emotions": [
+            "neutral",
+            "calm_warmth",
+            "restrained_joy",
+            "resolve"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_a_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.cavern_ally. Change facial muscles only for the ordered expressions neutral, calm_warmth, restrained_joy, resolve. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2265776,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "474823af95591b1fbac620a38f4ad48f8a38192a05f7c252fee57f48d046726a"
+          }
+        },
+        {
+          "assetId": "expression_board.cavern_ally.group_b.v1",
+          "group": "b",
+          "emotions": [
+            "vigilance",
+            "suspicion",
+            "concern",
+            "grief"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_b_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.cavern_ally. Change facial muscles only for the ordered expressions vigilance, suspicion, concern, grief. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2157014,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "5bd6d9485304387c4cdb9f3b24fe9bc916de506dbd9dc24d2233044906700308"
+          }
+        },
+        {
+          "assetId": "expression_board.cavern_ally.group_c.v1",
+          "group": "c",
+          "emotions": [
+            "anger_controlled",
+            "fear_suppressed",
+            "pain",
+            "astonishment"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_c_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.cavern_ally. Change facial muscles only for the ordered expressions anger_controlled, fear_suppressed, pain, astonishment. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2166102,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "5a1cb0340137021f6fd7e09790b232e44917b1343cebd5879394bc88317a5083"
+          }
+        }
+      ],
+      "expressions": [
+        {
+          "assetId": "expression.cavern_ally.neutral.v1",
+          "emotionId": "neutral",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_neutral_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1455966,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "f21e7cb5f126f4f6a7420eac769ffa071882618c7cdffab0a51619b40716266a"
+          }
+        },
+        {
+          "assetId": "expression.cavern_ally.calm_warmth.v1",
+          "emotionId": "calm_warmth",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_calm_warmth_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1452474,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "18bddf184c824b23c9c95aac03f6f6cb6fb9a6b44de75e6cd30241ed6d049293"
+          }
+        },
+        {
+          "assetId": "expression.cavern_ally.restrained_joy.v1",
+          "emotionId": "restrained_joy",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_restrained_joy_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1444079,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "cc79bade5105cf6fbd4dfba4e73d8ebfad3792f1a775d4c46a8b46f06d9dc3c4"
+          }
+        },
+        {
+          "assetId": "expression.cavern_ally.resolve.v1",
+          "emotionId": "resolve",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_resolve_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1440306,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "3916a4ad7c76983175e43c11135c724b04c490c1f3128a33b4f0c07d46185e95"
+          }
+        },
+        {
+          "assetId": "expression.cavern_ally.vigilance.v1",
+          "emotionId": "vigilance",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_vigilance_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1360980,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "93678fe9423035f993ae5a8809e2fbb734824cb6afb07afb23fb57b3345661a7"
+          }
+        },
+        {
+          "assetId": "expression.cavern_ally.suspicion.v1",
+          "emotionId": "suspicion",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_suspicion_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1353093,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "746ca6ab8aff03787b375065300f0c34ecd5c207964665b48739cfbabec24830"
+          }
+        },
+        {
+          "assetId": "expression.cavern_ally.concern.v1",
+          "emotionId": "concern",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_concern_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1350307,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "4557561b7b3c584dba7965704f4060ac3c556ba8bf0da4e74e60604a4d4415e3"
+          }
+        },
+        {
+          "assetId": "expression.cavern_ally.grief.v1",
+          "emotionId": "grief",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_grief_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1350531,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "054eba3e7f70b54160b38a5a6f7b6d0fd4e2bbe43fa4bf1464990f2f973f3d81"
+          }
+        },
+        {
+          "assetId": "expression.cavern_ally.anger_controlled.v1",
+          "emotionId": "anger_controlled",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_anger_controlled_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1366977,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "93a1bf146de8296ff46e4c7e6e28c05cc9c4793145f549029483db33769c16ee"
+          }
+        },
+        {
+          "assetId": "expression.cavern_ally.fear_suppressed.v1",
+          "emotionId": "fear_suppressed",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_fear_suppressed_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1362561,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "69493bf1582b49b133bb6fa258a4b7dc417266705b9673a9502b3b8d75c8525e"
+          }
+        },
+        {
+          "assetId": "expression.cavern_ally.pain.v1",
+          "emotionId": "pain",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_pain_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1357181,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "1b5785e40c4485820063cda4b31a9816d409f53b36a96a93ad5e6d44c022317f"
+          }
+        },
+        {
+          "assetId": "expression.cavern_ally.astonishment.v1",
+          "emotionId": "astonishment",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_cavern_ally_astonishment_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_cavern_ally_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1351917,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "be6002edef25fd8fcb8e3267fda4c78241186a3cae4df469f4ceda5afb6591dc"
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "character.formation_spirit",
+      "slug": "formation_spirit",
+      "identityAnchor": {
+        "assetId": "identity.formation_spirit.v2",
+        "path": "content/visual-candidates/cx509/identity-anchors/identity_formation_spirit_v2.png",
+        "sha256": "def223bd873b3e4b23082a2863bd2bea0e3ab5d076ceb7d64286bd49150627e2"
+      },
+      "outfitReference": {
+        "assetId": "turnaround.outfit.formation_spirit_star_balance.v1",
+        "path": "content/visual-candidates/cx517/turnarounds/turnaround_outfit_formation_spirit_star_balance_v1.png",
+        "sha256": "8d5fe879956f92d7c07525e6eb435cdf76d95782ecfd6334cc9dbb12492842ce"
+      },
+      "boards": [
+        {
+          "assetId": "expression_board.formation_spirit.group_a.v1",
+          "group": "a",
+          "emotions": [
+            "neutral",
+            "calm_warmth",
+            "restrained_joy",
+            "resolve"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_a_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.formation_spirit. Change facial muscles only for the ordered expressions neutral, calm_warmth, restrained_joy, resolve. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2205555,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "00b0272881a6e196cfb2726680851dd662837a95bed351001ddac31bc5ccc394"
+          }
+        },
+        {
+          "assetId": "expression_board.formation_spirit.group_b.v1",
+          "group": "b",
+          "emotions": [
+            "vigilance",
+            "suspicion",
+            "concern",
+            "grief"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_b_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.formation_spirit. Change facial muscles only for the ordered expressions vigilance, suspicion, concern, grief. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2179666,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "cb8850e7a44debe409a02e407ae645a1b85fb80074137cdb14b33857123c91a9"
+          }
+        },
+        {
+          "assetId": "expression_board.formation_spirit.group_c.v1",
+          "group": "c",
+          "emotions": [
+            "anger_controlled",
+            "fear_suppressed",
+            "pain",
+            "astonishment"
+          ],
+          "outputPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_c_v1.png",
+          "generationMode": "codex_builtin_imagegen",
+          "prompt": "Preserve the exact fictional identity, age, face, hair, outfit neckline, 85mm straight-on head-and-shoulders framing, high-key warm-ivory studio light and precise 2x2 layout for character.formation_spirit. Change facial muscles only for the ordered expressions anger_controlled, fear_suppressed, pain, astonishment. Keep natural pores, realistic eyelids, wet eye highlights and physical cloth. No text, labels, watermark, hands, props or extra people. No actor likeness. Avoid identity drift, age drift, clothing drift, malformed or crossed eyes, waxy skin, visible teeth, tears, injury and theatrical gestures.",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 2189583,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "808d00e1f7d907fdf71c793b4303e408616db6438388e4b7462bb4c17c738b3f"
+          }
+        }
+      ],
+      "expressions": [
+        {
+          "assetId": "expression.formation_spirit.neutral.v1",
+          "emotionId": "neutral",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_neutral_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1438785,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "673993dd3ba5b67aa04fd7e40e4ac8a3835e6fe691e654458dee92c877937a15"
+          }
+        },
+        {
+          "assetId": "expression.formation_spirit.calm_warmth.v1",
+          "emotionId": "calm_warmth",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_calm_warmth_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1436838,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "5ee93a6d33b1123c260eeec02ea1fbd02cc7438002e1014912e78c7dc8a169d1"
+          }
+        },
+        {
+          "assetId": "expression.formation_spirit.restrained_joy.v1",
+          "emotionId": "restrained_joy",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_restrained_joy_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1421603,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "81a11d657e291d4fec3bf42875480634638664fa96c0997f31c3691b1477b727"
+          }
+        },
+        {
+          "assetId": "expression.formation_spirit.resolve.v1",
+          "emotionId": "resolve",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_resolve_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_a_v1.png",
+          "sourceGroup": "a",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1441040,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "83e74092546707d6f60a69bd2bc7fe8ccf346ca87f2f296f24fb4c6b65fe5efe"
+          }
+        },
+        {
+          "assetId": "expression.formation_spirit.vigilance.v1",
+          "emotionId": "vigilance",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_vigilance_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1424674,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "86c10763815dcc63f63d672474ae79318b5108b1653122216dfc137499c79a5d"
+          }
+        },
+        {
+          "assetId": "expression.formation_spirit.suspicion.v1",
+          "emotionId": "suspicion",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_suspicion_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1419401,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "cf28d9c5fa45a3475788e75d48038953758ee225757589dce059857ef6994e09"
+          }
+        },
+        {
+          "assetId": "expression.formation_spirit.concern.v1",
+          "emotionId": "concern",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_concern_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1404740,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "4d8e985c0043f3d92afe4c81dbdeb516399439406fb2579935b4be5f1a9138d1"
+          }
+        },
+        {
+          "assetId": "expression.formation_spirit.grief.v1",
+          "emotionId": "grief",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_grief_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_b_v1.png",
+          "sourceGroup": "b",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1413635,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "7a17a65a9ae5ac8538f60965e2619f7155a93139c617680e857a41836784dd85"
+          }
+        },
+        {
+          "assetId": "expression.formation_spirit.anger_controlled.v1",
+          "emotionId": "anger_controlled",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_anger_controlled_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_left",
+          "crop": {
+            "x": 6,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1428544,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "c62931eb0d88cbbe5188f766fd78d43055fe40f85c2ce07c44442ddef72a5832"
+          }
+        },
+        {
+          "assetId": "expression.formation_spirit.fear_suppressed.v1",
+          "emotionId": "fear_suppressed",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_fear_suppressed_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "top_right",
+          "crop": {
+            "x": 774,
+            "y": 4,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1421563,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "319a351d8cc82f6da1c63d95358c790942338cd435eac07ee47f9d3919ede7cf"
+          }
+        },
+        {
+          "assetId": "expression.formation_spirit.pain.v1",
+          "emotionId": "pain",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_pain_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_left",
+          "crop": {
+            "x": 6,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1407749,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "d2ba22665db91f15900b316088c9693f8101a653c8586646083b6d97e0a5175a"
+          }
+        },
+        {
+          "assetId": "expression.formation_spirit.astonishment.v1",
+          "emotionId": "astonishment",
+          "outputPath": "content/visual-candidates/cx519/expressions/expression_formation_spirit_astonishment_v1.png",
+          "sourceBoardPath": "content/visual-candidates/cx519/expression-boards/expression_board_formation_spirit_group_c_v1.png",
+          "sourceGroup": "c",
+          "sourceQuadrant": "bottom_right",
+          "crop": {
+            "x": 774,
+            "y": 516,
+            "width": 756,
+            "height": 504,
+            "scaleWidth": 1536,
+            "scaleHeight": 1024,
+            "filter": "lanczos"
+          },
+          "generationMode": "deterministic_ffmpeg_crop",
+          "adoptionStatus": "needs_review",
+          "adopted": false,
+          "runtimeUse": false,
+          "shipInBuild": false,
+          "reviewStatus": "pending_human_review",
+          "reviewChecks": [
+            "identity_consistency",
+            "expression_readability",
+            "eye_anatomy",
+            "skin_texture",
+            "neckline_consistency",
+            "no_text_or_watermark",
+            "no_actor_likeness"
+          ],
+          "artifact": {
+            "mediaType": "image/png",
+            "byteLength": 1412723,
+            "width": 1536,
+            "height": 1024,
+            "sha256": "f263e75f892ec4b4e55efdcff6b0b22ab43c01e0952035d589559e47b3ac378a"
+          }
+        }
+      ]
+    }
+  ],
+  "markdownContract": {
+    "relativePath": "content/story/red-mist/red-mist-expression-references.cx519.md",
+    "listsEveryBoardAndExpression": true
+  },
+  "reviewBoundary": {
+    "humanReviewRequired": true,
+    "automaticAdoption": false,
+    "unityIntegration": false,
+    "nextCard": "human_review_then_expression_adoption"
+  }
+}
